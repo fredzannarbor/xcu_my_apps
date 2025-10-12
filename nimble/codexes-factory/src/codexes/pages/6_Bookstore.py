@@ -472,7 +472,7 @@ def display_catalog():
             st.markdown(f"**{get_translation(lang, 'price')}:** ${price:.2f}")
 
             # --- Action Buttons ---
-            btn_col1, btn_col2 = st.columns(2)
+            btn_col1, btn_col2, btn_col3 = st.columns(3)
 
             with btn_col1:
                 # Add to Cart / Pre-Order Button logic
@@ -507,6 +507,11 @@ def display_catalog():
                         st.warning("Cannot add to cart (missing a unique ID).")
 
             with btn_col2:
+                # Amazon link button
+                if 'amazon_url' in row and pd.notna(row['amazon_url']) and row['amazon_url']:
+                    st.link_button("Buy on Amazon", row['amazon_url'], use_container_width=True)
+
+            with btn_col3:
                 # View Details button
                 book_id = row.get('id')
                 button_key = f"view_details_{idx}"  # Use index to guarantee uniqueness
@@ -569,6 +574,10 @@ def display_book_details(book_id):
         # --- PDF Sample Link ---
         if 'PDF sample' in book and pd.notna(book['PDF sample']):
             st.link_button(get_translation(lang, "download_pdf_sample"), book['PDF sample'], use_container_width=True)
+
+        # --- Amazon Link ---
+        if 'amazon_url' in book and pd.notna(book['amazon_url']) and book['amazon_url']:
+            st.link_button("🛒 Buy on Amazon", book['amazon_url'], use_container_width=True, type="secondary")
 
     with col2:
         st.subheader(get_translation(lang, "details_header"))
