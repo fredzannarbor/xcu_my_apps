@@ -1,0 +1,28 @@
+{
+  "imprint": "Alpha Aegis",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@alphaaegis.com",
+  "branding": {
+    "tagline": "Lead your own adventure",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.alphaaegis.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Heroic adventures and leadership journeys",
+    "target_audience": "Teens inspired by leadership and heroism",
+    "competitive_advantage": "Promoting leadership skills and hero narratives",
+    "example_titles": "Rick Riordan, Sarah J. Maas type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

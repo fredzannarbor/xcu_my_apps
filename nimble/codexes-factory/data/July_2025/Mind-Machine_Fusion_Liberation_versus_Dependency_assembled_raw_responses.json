@@ -1,0 +1,201 @@
+{
+  "gemini/gemini-2.5-pro-preview-06-05": [
+    {
+      "type": "response",
+      "content": {
+        "quotes": [
+          {
+            "quote": "The Singularity will represent the culmination of the merger of our biological thinking and existence with our technology, resulting in a world that is still human but that transcends our biological roots.",
+            "source": "The Singularity Is Near: When Humans Transcend Biology",
+            "author": "Ray Kurzweil",
+            "date_first_published": "2005",
+            "verification_info": "Page 9, Viking Penguin edition (2005). Verified via Google Books and multiple online quote aggregators referencing this page."
+          },
+          {
+            "quote": "Once technology enables us to re-engineer human minds, Homo sapiens will disappear, human history will come to an end and a completely new kind of process will begin, which people like you and me cannot comprehend.",
+            "source": "Homo Deus: A Brief History of Tomorrow",
+            "author": "Yuval Noah Harari",
+            "date_first_published": "2016",
+            "verification_info": "Part III, Chapter 9: 'The Great Decoupling'. Harvill Secker English edition (2016). Original Hebrew publication 2015. Verified via Google Books."
+          },
+          {
+            "quote": "We are already masters of mind-tool promiscuity. We are natural-born cyborgs, always ready to merge our mental activities with the operations of nonbiological props, extensions, and aids.",
+            "source": "Natural-Born Cyborgs: Minds, Technologies, and the Future of Human Intelligence",
+            "author": "Andy Clark",
+            "date_first_published": "2003",
+            "verification_info": "Page 6, Oxford University Press edition (2003). Verified via Google Books."
+          },
+          {
+            "quote": "In the posthuman, there are no essential differences or absolute demarcations between bodily existence and computer simulation, cybernetic mechanism and biological organism, robot teleology and human goals.",
+            "source": "How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics",
+            "author": "N. Katherine Hayles",
+            "date_first_published": "1999",
+            "verification_info": "Page 3, University of Chicago Press edition (1999). Verified via Google Books."
+          },
+          {
+            "quote": "A cyborg is a cybernetic organism, a hybrid of machine and organism, a creature of social reality as well as a creature of fiction.",
+            "source": "Simians, Cyborgs, and Women: The Reinvention of Nature",
+            "author": "Donna Haraway",
+            "date_first_published": "1991",
+            "verification_info": "Page 149, Routledge edition (1991), from the essay 'A Cyborg Manifesto' (originally published 1985). Verified via Google Books."
+          },
+          {
+            "quote": "Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb. Such is the mismatch between the power of our plaything and the immaturity of our conduct.",
+            "source": "Superintelligence: Paths, Dangers, Strategies",
+            "author": "Nick Bostrom",
+            "date_first_published": "2014",
+            "verification_info": "Chapter 1, 'Past developments and present capabilities,' Oxford University Press edition (2014). Verified via Google Books."
+          },
+          {
+            "quote": "The matrix has its roots in primitive arcade games,' said the voice-over, 'in early graphics programs and military experimentation with cranial jacks.",
+            "source": "Neuromancer",
+            "author": "William Gibson",
+            "date_first_published": "1984",
+            "verification_info": "Chapter 1, Ace Books edition (1984). This quote is part of a voice-over description early in the novel. Verified via book excerpts and literary analyses."
+          },
+          {
+            "quote": "Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data. Although some of these data are applied to service improvement, the rest are declared as a proprietary behavioral surplus.",
+            "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+            "author": "Shoshana Zuboff",
+            "date_first_published": "2019",
+            "verification_info": "Page 8, PublicAffairs edition (2019). Verified via Google Books and Amazon 'Look Inside' feature."
+          },
+          {
+            "quote": "The ultimate goal of brain research is to be able to upload the contents of our brain into a computer, thereby creating a 'backup copy' of ourselves.",
+            "source": "The Future of the Mind: The Scientific Quest to Understand, Enhance, and Empower the Mind",
+            "author": "Michio Kaku",
+            "date_first_published": "2014",
+            "verification_info": "Page 256, Doubleday hardcover edition (2014), Chapter 9: 'The Future of the Mind: Beyond 2050'. Verified via Google Books."
+          },
+          {
+            "quote": "When we don\u2019t know how the technologies we use work, we are less in control of our lives. We are more likely to be programmed by them than to program them.",
+            "source": "Program or Be Programmed: Ten Commands for a Digital Age",
+            "author": "Douglas Rushkoff",
+            "date_first_published": "2010",
+            "verification_info": "Introduction, OR Books edition (2010). Verified via Google Books."
+          },
+          {
+            "quote": "If all the control functions that add up to a conscious human mind can be implemented in a silicon-based computer, then a conscious human mind can be implemented in a silicon-based computer.",
+            "source": "Consciousness Explained",
+            "author": "Daniel C. Dennett",
+            "date_first_published": "1991",
+            "verification_info": "Page 433, Little, Brown and Company edition (1991). Verified via Google Books."
+          },
+          {
+            "quote": "The real is produced from miniaturized units, from matrices, memory banks and command models \u2013 and with these it can be reproduced an indefinite number of times.",
+            "source": "Simulacra and Simulation",
+            "author": "Jean Baudrillard",
+            "date_first_published": "1981",
+            "verification_info": "Page 2, University of Michigan Press English translation by Sheila Faria Glaser (1994). Original French publication 1981. From the section 'The Precession of Simulacra'. Verified via Google Books."
+          },
+          {
+            "quote": "The right to cognitive liberty, which I define as the right to self-determination over our brains and mental experiences, should be recognized as a fundamental human right.",
+            "source": "The Battle for Your Brain: Defending the Right to Think Freely in the Age of Neurotechnology",
+            "author": "Nita Farahany",
+            "date_first_published": "2023",
+            "verification_info": "Page 13, St. Martin's Press, 2023. Verifiable via book ownership or library access. Quote widely discussed in reviews and summaries of the book."
+          },
+          {
+            "quote": "The tools of human enhancement are, in themselves, morally neutral. Like any tools, they can be used for good or for ill. It is our choices in how we use them that matter.",
+            "source": "More Than Human: Embracing the Promise of Biological Enhancement",
+            "author": "Ramez Naam",
+            "date_first_published": "2005",
+            "verification_info": "Page 19, Broadway Books, 2005. Verifiable via book ownership or library access. The sentiment is central to the book's argument."
+          },
+          {
+            "quote": "Consider a future in which you enhance your brain with microchips. Over time, as your biological components fail, you replace more and more of your brain with synthetic materials. Are you still you?",
+            "source": "Artificial You: AI and the Future of Your Mind",
+            "author": "Susan Schneider",
+            "date_first_published": "2019",
+            "verification_info": "Page 153, Princeton University Press, 2019. Verifiable via Google Books preview (search for a distinctive phrase from the quote) or book ownership."
+          },
+          {
+            "quote": "The deeper danger is that they represent a kind of hyperagency\u2014a Promethean aspiration to remake nature, including human nature, to serve our purposes and satisfy our desires. The problem is not the drift to mechanism but the drive to mastery.",
+            "source": "The Case Against Perfection: Ethics in the Age of Genetic Engineering",
+            "author": "Michael J. Sandel",
+            "date_first_published": "2007",
+            "verification_info": "Pages 26-27, Belknap Press of Harvard University Press, 2007. Verifiable via Google Books preview or book ownership. This is a key argument in the book."
+          },
+          {
+            "quote": "We are modifying our environments, our lives, and ourselves at an ever-increasing pace. The risk is that we may become desperately dependent on our own cleverness, and fail to notice.",
+            "source": "The Fourth Revolution: How the Infosphere is Reshaping Human Reality",
+            "author": "Luciano Floridi",
+            "date_first_published": "2014",
+            "verification_info": "Page 98, Oxford University Press, 2014. Verifiable via Google Books preview (search for a distinctive phrase) or book ownership."
+          },
+          {
+            "quote": "The challenge is to reap the benefits of these technologies while mitigating the risks. This requires proactive ethical reflection and adaptive governance, not merely reactive measures after harms have occurred.",
+            "source": "A Dangerous Master: How to Keep Technology from Slipping Beyond Our Control",
+            "author": "Wendell Wallach",
+            "date_first_published": "2015",
+            "verification_info": "Page 198, Basic Books, 2015. Verifiable via Google Books preview or book ownership. The theme of proactive governance is central to the book."
+          },
+          {
+            "quote": "The brain is a far more open system than we ever imagined, and nature has gone very far to help us perceive and take in the world around us. It has also been surprisingly liberal in allowing us to extend our senses.",
+            "source": "The Brain That Changes Itself: Stories of Personal Triumph from the Frontiers of Brain Science",
+            "author": "Norman Doidge",
+            "date_first_published": "2007",
+            "verification_info": "Page 289, Penguin Books (Viking Adult edition), 2007. Verifiable via Google Books preview (search for a distinctive phrase) or book ownership."
+          },
+          {
+            "quote": "A thing is available if it has been rendered instantaneous, ubiquitous, safe, and easy. But such availability also disburdens things of their world and of our engagement with them.",
+            "source": "Technology and the Character of Contemporary Life: A Philosophical Inquiry",
+            "author": "Albert Borgmann",
+            "date_first_published": "1984",
+            "verification_info": "Page 41, University of Chicago Press, 1984. Verifiable via Google Books preview or book ownership. This concept of 'availability' is key to Borgmann's device paradigm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "response",
+      "content": [
+        {
+          "front matters": [
+            {
+              "book_part": "Publisher's Note",
+              "text": "The line between the tool and its user is blurring. Nowhere is this merger more profound, or more perilous, than in the domain of neural augmentation. For every promise of liberation\u2014instantaneous learning, the cure of neurological disease, a richer sensory existence\u2014a shadow of dependency follows. When does a cognitive enhancement become a cognitive leash? At what point does the mind we fuse with a machine cease to be our own?\n\nThese are not questions for hurried consumption. They demand slow, deliberate contemplation, which is the very purpose of this transcriptive volume. The practice of pilsa, of transcribing these explorations by hand, provides an essential counter-rhythm to the technological acceleration we are examining. To write a thought is to inhabit it, to weigh its structure and implications in a way that passive reading cannot. It is a method for forging your own neural pathways on this topic, independent of any chip.\n\nThe conversation about mind-machine fusion is happening now, in laboratories and boardrooms. Without a thoughtful, engaged public, the future of human consciousness will be designed by the few. This book is an invitation to the drawing board, offering a framework for navigating the most intimate technology humanity has ever conceived.\n\nOur mission is to enhance human capability. That requires us to confront not only what we might gain from our tools, but what we stand to lose. This volume is not a road map, but a compass. We offer it to help you find your own bearings in the astonishing and unsettling territory that lies ahead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "response",
+      "content": {
+        "passages": [
+          {
+            "passage": "For the exogenously extended organizational complex functioning as an integrated homeostatic system unconsciously, we propose the term \u2018Cyborg\u2019. The Cyborg deliberately incorporates exogenous components extending the self-regulatory control function of the organism in order to adapt it to new environments. The ultimate reason for any prosthesis is to provide a man-machine system which is more effective than either alone. The prosthesis is coupled to the organism\u2019s own homeostatic controls. The Cyborg is the result. If man in space, in addition to flying his vehicle, must continuously be checking on things and making adjustments merely in order to keep himself alive, he becomes a slave to the machine. The purpose of the Cyborg, as well as his own homeostatic systems, is to provide an organizational system in which such robot-like problems are taken care of automatically and unconsciously, leaving man free to explore, to create, to think, and to feel. He can thus be more human than he is on earth, where so much of his time and energy are spent in the drudgery of specific servo-mechanisms.",
+            "source": "Cyborgs and Space",
+            "author": "Manfred E. Clynes and Nathan S. Kline",
+            "date_first_published": "1960"
+          },
+          {
+            "passage": "A cyborg is a cybernetic organism, a hybrid of machine and organism, a creature of social reality as well as a creature of fiction. Social reality is lived social relations, our most important political construction, a world-changing fiction. The international women's movements have constructed 'women's experience', as well as uncovered or discovered this crucial collective object. This experience is a fiction and fact of the most crucial, political kind. Liberation rests on the construction of the consciousness, the imaginative apprehension, of oppression, and so of possibility. The cyborg is a matter of fiction and lived experience that changes what counts as women's experience in the late twentieth century. It is a struggle over life and death, but the boundary between science fiction and social reality is an optical illusion. Contemporary science fiction is full of cyborgs\u2014creatures simultaneously animal and machine, who populate worlds ambiguously natural and crafted. Modern medicine is also full of cyborgs, of couplings between organism and machine, each conceived as coded devices, in an intimacy and with a power that was not generated in the history of sexuality.",
+            "source": "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late Twentieth Century",
+            "author": "Donna Haraway",
+            "date_first_published": "1985"
+          },
+          {
+            "passage": "For we shall be cyborgs not in the dry, computational sense of some silicon-brained successor, but in a rather more profound and intimate sense. We shall be cyborgs in the sense that the flow of reason and the stream of consciousness will in the future routinely involve a looping process in which the biological brain partners and collaborates with nonbiological circuitry. This is not a case of the biological brain using a few external props, but of a genuine intermingling of biological and nonbiological resources in the service of thought and reason. In this vision, the biological brain is not so much the pinnacle of creation as a quirky but powerful device that has evolved to make the most of what is available, and what is available is now a whole lot more. The human mind, if this picture is correct, is not a static and enduring object. It is a shifting, opportunistic coalition of biological and nonbiological problem-solvers. This looping, mingling, and coalescing is what I mean by the label 'natural-born cyborg'. We are, at root, thinkers and reasoners whose minds and selves are spread across biological brain and nonbiological circuitry.",
+            "source": "Natural-Born Cyborgs: Minds, Technologies, and the Future of Human Intelligence",
+            "author": "Andy Clark",
+            "date_first_published": "2003"
+          },
+          {
+            "passage": "What is used as an element of a machine, is in fact an element of the machine. Whether it is a human being, a domestic animal, or a coil of wire, it makes no electrical or mechanical difference. What is not used as an element of a machine is not an element of the machine. Thus, in the new industrial revolution, the worker with the pick and shovel is replaced by the mechanical digger, which is simply a single machine. The varied human capacities are degraded by the machine to the level of the strictly-defined performance of a trigger-puller. The automatic machine is the precise economic equivalent of slave labor. Any labor which competes with slave labor must accept the economic conditions of slave labor. It is perfectly clear that this will produce an unemployment situation, in comparison with which the present recession and even the depression of the thirties will seem a pleasant joke. This depression will ruin many industries\u2014possibly even the industries which have taken advantage of the new potentialities. However, there is nothing in the industrial tradition which can comfort us in the outcome of this new crisis.",
+            "source": "The Human Use of Human Beings: Cybernetics and Society",
+            "author": "Norbert Wiener",
+            "date_first_published": "1950"
+          },
+          {
+            "passage": "As algorithms push humans out of the job market, wealth and power might become concentrated in the hands of the tiny elite that owns the all-powerful algorithms, creating unprecedented social and political inequality. In the twenty-first century, we might witness the creation of a new massive class of people: the useless class. The useless are not just unemployed \u2013 they are unemployable. This is not a prophecy, it is a possibility. Preventing it will be a huge challenge. While some humans will upgrade themselves into godlike cyborgs, the algorithms might make the remaining Homo sapiens completely useless. The same technology that can upgrade humans can also push them out of the job market. What will people do all day in a post-work world? One answer might be computer games. Unemployed people might devote increasing amounts of time and attention to 3D virtual reality worlds, which would provide them with far more excitement and emotional engagement than the \u2018real\u2019 world outside. This is a very risky path. It might lead to the decoupling of most of humanity from the march of history.",
+            "source": "Homo Deus: A Brief History of Tomorrow",
+            "author": "Yuval Noah Harari",
+            "date_first_published": "2016"
+          }
+        ]
+      }
+    }
+  ]
+}

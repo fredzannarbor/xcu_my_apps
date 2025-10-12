@@ -1,0 +1,149 @@
+import json
+from uuid import uuid4
+
+import pandas as pd
+import streamlit as st
+
+from app.ManageUserAPIKeys import ManageUserAPIKeys
+from app.utilities.gpt3complete import presets_parser
+from app.utilities.utilities import (
+    read_markdown_file,
+    get_version_as_dict, statcounter)
+from classes.Ideas.IdeaAnalysis.IdeaThemesAnalyzer import IdeaAnalysis
+from classes.Ideas.IdeaUtilities import IdeaUtilityFunctions as iuf
+from classes.SyntheticReader.RatingUtilities import rate_ideas
+# from classes.SyntheticReader import Reader, ReaderPanels as rp, RatingUtilities as cu
+from classes.SyntheticReader.ReaderPanels import ReaderPanels
+
+api_key_manager = ManageUserAPIKeys()
+
+def check_spreadsheet_filetype(uploaded_file):
+    global ideas_df
+    if uploaded_file.type == "text/csv":
+        ideas_df = pd.read_csv(uploaded_file)
+    elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+        ideas_df = pd.read_excel(uploaded_file)
+    elif uploaded_file.type == "text/plain":
+        ideas_df = pd.read_csv(uploaded_file)
+    else:
+        st.error("You must upload a csv, spreadsheet, or text file to proceed.")
+        return
+    return ideas_df
+
+with st.sidebar:
+    st.session_state.openai_ky = api_key_manager.enter_api_key("openai")
+    st.components.v1.iframe('https://fredzannarbor.substack.com/embed', width=320, height=200, scrolling=False)
+    sidebar_message = read_markdown_file("resources/markdown/sidebar_message.md")
+    st.sidebar.markdown(sidebar_message)
+    st.sidebar.markdown("""**Operational**, no known issues""")
+    version2 = json.dumps(get_version_as_dict())
+    st.sidebar.json(version2)
+st.title("Idea Factory")
+#
+
+tab1, tab2, tab3 = st.tabs(["Expand Ideas", "Evaluate Ideas", "Build Out Ideas"])
+
+with tab1:
+    with st.form(key='eeideas'):
+        st.info("Here you can ask Nimble AIs to help you explore and elaborate ideas for new books and other projects.")
+        uploaded_file = st.file_uploader("Upload a file of ideas to explore and elaborate", type=['xlsx', 'csv', 'txt'])
+        st.form_submit_button(label='Upload')
+        newideas_df = pd.DataFrame()
+        if uploaded_file is None:
+            st.error("You must upload a file to proceed.")
+        else:
+            check_spreadsheet_filetype(uploaded_file)
+            edited_df = st.data_editor(ideas_df)
+            # move uploaded file to working directory
+            file_details = {"FileName": uploaded_file.name, "FileType": uploaded_file.type,
+                            "FileSize": uploaded_file.size}
+            st.info(file_details)
+            col1, col2 = st.columns(2)
+            num_ideas = col1.radio("Number of expansions per idea row in the dataframe", ["1", "5", "10", "20", "100"], index=0)
+            num_ideas = int(num_ideas)
+            preset_expand_this_book = col2.selectbox(options=["BookIdeaSimpleVariation", "BookIdeaExpander", "BookIdeaDramatic",  "BookIdeaMajorTwist", "BookIdeaRebootViaPremises"], index=0, label="Choose a strategy for expanding these ideas")
+            expand = st.form_submit_button(label='Expand ideas')
+            if expand:
+                edited_df.to_excel("edited_ideas.xlsx")
+                st.success("Any changes you made to the ideas dataframe have been saved to edited_ideas.xlsx.  Now ready to expand these ideas.")
+                preset_instruction = "Instructions: " + presets_parser(preset_expand_this_book)[7]
+                st.info(preset_instruction)
+                with st.spinner("Expanding ideas..."):
+                    newideas_df = iuf.ideas2moreideas(edited_df, preset_expand_this_book, "gpt-3.5-turbo", num_ideas)
+                    st.success("Ideas expanded.")
+                    tweakedideas = st.dataframe(newideas_df)
+                    newideas_df.to_excel("newideas.xlsx")
+                    st.success("New ideas saved to newideas.xlsx.")
+    if not newideas_df.empty:
+        ideafilename = "resources/ideas/newideas_" + str(uuid4())[:6] + ".csv"
+        button = st.download_button(label="Download new ideas", data=newideas_df.to_csv(), file_name=ideafilename, mime="text/csv")
+        if button:
+            st.success("New ideas downloaded, check your Downloads folder.")
+        else:
+            st.info("Click the button to download the new ideas.")
+
+
+
+
+
+with tab2:
+    st.write("On this page, you can explore how different Readers react to book ideas.")
+    with st.expander("About Synthetic Readers", expanded=True):
+        st.markdown(
+            """Synthetic Readers are AI and LLM-powered agents whose job is to simulate an individual human's experience reading a book.  They are designed to be used by authors, publishers, and readers to help them understand what makes a book work, and what makes it fail. They arrive at their recommendations by evaluating a book three ways: page by page, cumulatively, and globally.  Further details are available on the documentation pages.""")
+        st.markdown(
+            """Each Reader has a unique set of preferences and there are thousands of them.  On this page, you can use preconfigured Reader Panels to explore the different ways Readers experience ideas.""")
+
+
+    with st.expander("Choose a Reader Panel", expanded=True):
+        rp_instance = ReaderPanels()  # Assuming you wanted to create an instance of ReaderPanels
+        panel_df = rp_instance.user_interface()
+
+    with st.expander("Submit Ideas", expanded=True):
+        with st.form(key='ideas dataframe'):
+            st.markdown("""Here, you can submit idea to the Reader Panels for evaluation.""")
+            st.markdown("""The Reader Panels will evaluate your ideas one at time return a dataframe of results. In this initial version, each paragraph is evaluated on its own merits. In future, a paragraph will be evaluated in the context of the entire preceding content.""")
+            uploaded_file = st.file_uploader("Upload csv, spreadsheet, or text file", type=["csv", "xlsx", "txt"])
+            submit_button = st.form_submit_button("Upload Ideas", on_click=None, help=None)
+            if uploaded_file is not None:
+                check_spreadsheet_filetype(uploaded_file)
+
+                # move uploaded file to working directory
+                file_details = {"FileName": uploaded_file.name, "FileType": uploaded_file.type,
+                                "FileSize": uploaded_file.size}
+                st.info(file_details)
+            else:
+                st.error("You must upload a file to proceed.")
+
+    with st.expander("Evaluate the Ideas", expanded=True):
+        results_df = pd.DataFrame()
+        with st.form(key='submit to readers'):
+            n_rows = st.radio("Number of rows to evaluate", [5, "all"], index=0)
+            submitted = st.form_submit_button("Send  To Readers")
+            submit_guard = st.empty()
+            if submitted:
+                if n_rows == "all":
+                    n_rows = ideas_df.shape[0]
+                results_df = rate_ideas(ideas_df, panel_df, "EvaluateIdea", n_rows)
+                st.success(f"Completed evaluation of {results_df.shape[0]} ideas.")
+
+                filename = "Reader_Panel_results_" + str(uuid4())[:6] + ".csv"
+        if results_df.shape[0] > 0:
+            st.dataframe(results_df)
+            st.download_button("Download results", results_df.to_csv(), "Reader_Panel_results.csv", "text/csv", key="download1")
+            jobid = str(uuid4())[:6]
+            results_df.to_json("resources/ideas/Reader_panel_idea_results" + jobid + ".json", orient="records")
+            results_df.to_csv("resources/ideas/Reader_Panel_idea_results" + jobid + ".csv")
+
+with st.expander("Experimental Idea Analysis", expanded=False):
+    analysis = IdeaAnalysis("resources/ideas/Reader_Panel_idea_results.csv")
+    analysis.display_analysis(10, 20)
+    st.info('test')
+
+#
+
+with st.expander("Further information", expanded=False):
+    st.info(
+        "This is a beta feature. If you have questions, suggestions, or feedback, please contact me at the address in the sidebar.")
+
+statcounter(0, 0)

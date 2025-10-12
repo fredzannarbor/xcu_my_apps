@@ -1,0 +1,28 @@
+{
+  "imprint": "Boardroom Brilliance",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@boardroombrilliance.com",
+  "branding": {
+    "tagline": "Illuminate your boardroom brilliance",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.boardroombrilliance.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Leadership, corporate governance, and strategic decision-making",
+    "target_audience": "Board members, executives, and corporate leaders",
+    "competitive_advantage": "Expert insights into the workings of the boardroom",
+    "example_titles": "The Effective Board Member, Boardroom Dynamics"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Optimum Oasis",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@optimumoasis.com",
+  "branding": {
+    "tagline": "Your Oasis of Health",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.optimumoasis.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Nutrition, Fitness, Mental health",
+    "target_audience": "Individuals seeking comprehensive knowledge of health and wellness",
+    "competitive_advantage": "Broad coverage of health and wellness topics",
+    "example_titles": "Books on nutrition, fitness, mental health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

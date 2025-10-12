@@ -1,0 +1,28 @@
+{
+  "imprint": "Eco-centric Economics",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@eco-centriceconomics.com",
+  "branding": {
+    "tagline": "Economics for a sustainable future",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.eco-centriceconomics.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Sustainable economics, green business practices, and corporate social responsibility",
+    "target_audience": "Economists, business leaders, and environmentalists",
+    "competitive_advantage": "Innovative approaches to marrying economic success with sustainability",
+    "example_titles": "The Green Economy, Sustainable Business Strategies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

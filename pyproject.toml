@@ -1,0 +1,48 @@
+[project]
+name = "my-apps"
+version = "0.1.0"
+description = "Unified Streamlit applications platform"
+requires-python = ">=3.12"
+dependencies = [
+    # Core framework (upgraded to latest)
+    "streamlit>=1.45.1",
+    # Common utilities
+    "requests>=2.31.0",
+    "psutil>=5.9.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "bcrypt>=4.0.0",
+    "pandas>=2.0.0",
+    # High-priority shared utilities (used by 3+ apps)
+    "python-dotenv>=1.1.1",
+    "pymupdf>=1.26.3",
+    "litellm>=1.35.2",
+    "python-dateutil>=2.8.0",
+    # Medium-priority utilities
+    "python-docx>=1.1.0",
+    "pillow>=9.5.0",
+    "numpy>=1.24.0",
+    "beautifulsoup4>=4.12.0",
+    "markdown>=3.8",
+    "tqdm>=4.66.1",
+    # Shared business logic
+    "nimble-llm-caller>=0.1.0",
+    "stripe>=12.5.1",
+    "extra-streamlit-components>=0.1.81",
+    "openpyxl>=3.1.5",
+    "plotly>=6.3.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "shared",
+    "all_applications_runner",
+]
+# Note: gridcellhistory and grid_up_history appear to be data science projects, not Streamlit apps
+# ollama-grid-search is Node.js and excluded from workspace
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+]

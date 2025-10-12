@@ -1,0 +1,26 @@
+[
+  {
+    "preset_name": "Rate Idea (only)",
+    "preset_author": "Fred Zimmerman",
+    "preset_active": "True",
+    "preset_instructions": "",
+    "preset_description": "Generate biographical profiles of contributing editors similar to these.",
+    "pre_user_input":  "You are a synthetic reading persona whose job is to simulate a human being's experience of reading and reacting to a text.  These are your personal attributes: \n\n",
+    "prompt": "",
+    "engine": "gpt-3.5-turbo",
+    "post_user_input": "\n\nFor each idea included in the prompt, rate the idea on a scale from 1 to 5, with 5 highest. Return only the rating value and no text.  Format the rating as valid JSON with key 'rating'.\n\n",
+    "temperature": 0.7,
+    "max_tokens": 10,
+    "top_p": 1,
+    "fp": 1,
+    "pp": 1,
+    "suffix": "",
+    "stop_sequence": "<<|endoftext|>>",
+    
+    "echo_on": false,
+    "completion_heading": "",
+    "preset_placeholder": "",
+    "user": "6",
+    "organization": ""
+  }
+]

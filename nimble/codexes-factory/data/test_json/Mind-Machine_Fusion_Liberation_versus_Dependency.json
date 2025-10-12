@@ -1,0 +1,673 @@
+{
+  "topic": "Mind-Machine Fusion: Liberation versus Dependency",
+  "stream": "Neural Augmentation",
+  "special_requests": "None.",
+  "recommended_sources": "",
+  "description": "Seek quotes on Neuralink’s brain-computer interfaces, weighing cognitive liberation (e.g., enhanced learning, disability mitigation) against dependency risks (e.g., tech reliance, privacy loss). Prioritize neurotechnology studies, Musk’s Neuralink presentations, and sci-fi on human augmentation.",
+  "responses": {
+    "openai/o3": [
+      {
+        "type": "response",
+        "content": {
+          "quotes": [
+            {
+              "quote": "Our tools are not just external props but extensions of our minds, and indeed, of our very selves. We are, and always have been, natural-born cyborgs.",
+              "source": "Natural-Born Cyborgs: Minds, Technologies, and the Future of Human Intelligence",
+              "author": "Andy Clark",
+              "date_first_published": "2003",
+              "verification_info": "Oxford University Press, 2003. Chapter 1, 'Prologue: Natural-Born Cyborgs?', page 3."
+            },
+            {
+              "quote": "All media are extensions of some human faculty – psychic or physical. The wheel is an extension of the foot. The book is an extension of the eye... Electric circuitry, an extension of the central nervous system.",
+              "source": "Understanding Media: The Extensions of Man",
+              "author": "Marshall McLuhan",
+              "date_first_published": "1964",
+              "verification_info": "McGraw-Hill, 1964. Quote appears in Chapter 4, 'The Gadget Lover: Narcissus as Narcosis,' page 45 of the MIT Press 1994 edition."
+            },
+            {
+              "quote": "The Singularity will allow us to transcend these limitations of our biological bodies and brains... We will gain power over our fates. Our mortality will be in our own hands.",
+              "source": "The Singularity Is Near: When Humans Transcend Biology",
+              "author": "Ray Kurzweil",
+              "date_first_published": "2005",
+              "verification_info": "Viking Penguin, 2005. Chapter 1, 'The Six Epochs,' page 9."
+            },
+            {
+              "quote": "By the late twentieth century, our time, a mythic time, we are all chimeras, theorized and fabricated hybrids of machine and organism; in short, we are cyborgs.",
+              "source": "Simians, Cyborgs, and Women: The Reinvention of Nature",
+              "author": "Donna Haraway",
+              "date_first_published": "1991",
+              "verification_info": "Routledge, 1991. Essay 'A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late Twentieth Century,' page 150. (Essay first published 1985)."
+            },
+            {
+              "quote": "The prospect of radical human enhancement forces us to confront a fundamental question: What does it mean to be human, and what aspects of that condition are so valuable that we should strive to protect them?",
+              "source": "Our Grandchildren Redesigned: Life in the Bioengineered Society of the Future",
+              "author": "Michael Bess",
+              "date_first_published": "2015",
+              "verification_info": "Beacon Press, 2015. Introduction, page 1."
+            },
+            {
+              "quote": "We are not actually becoming computers, but we are becoming magnificently optimized stimulus-response machines, machines that can’t help but respond to the computers that are stimulating us.",
+              "source": "You Are Not a Gadget: A Manifesto",
+              "author": "Jaron Lanier",
+              "date_first_published": "2010",
+              "verification_info": "Alfred A. Knopf, 2010. Chapter 1, 'What Is a Person?', page 20."
+            },
+            {
+              "quote": "As we come to rely on computers to mediate our understanding of the world, it is our own intelligence that flattens into artificial intelligence.",
+              "source": "The Shallows: What the Internet Is Doing to Our Brains",
+              "author": "Nicholas Carr",
+              "date_first_published": "2010",
+              "verification_info": "W. W. Norton & Company, 2010. Chapter 10, 'A Thing Like Me,' page 224."
+            },
+            {
+              "quote": "Once Big Data systems know me better than I know myself, authority will shift from humans to algorithms. Big Data could then empower Big Brother.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Harvill Secker, 2016 (English edition). Chapter 9, 'The Great Decoupling.' For example, page 327 of the 2017 Harper Perennial edition or Vintage Digital edition."
+            },
+            {
+              "quote": "Industrial capitalism transformed nature’s raw materials into commodities, and surveillance capitalism lays its claims to the stuff of human life: our private experience.",
+              "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+              "author": "Shoshana Zuboff",
+              "date_first_published": "2019",
+              "verification_info": "PublicAffairs, 2019. Introduction, 'Home or Exile in the Digital Future,' page 8."
+            },
+            {
+              "quote": "Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them.",
+              "source": "Dune",
+              "author": "Frank Herbert",
+              "date_first_published": "1965",
+              "verification_info": "Chilton Books, 1965. Appendix II: 'Terminology of the Imperium,' entry for 'Butlerian Jihad'."
+            },
+            {
+              "quote": "We look to technology for ways to be in relationships and protect ourselves from them at the same time... We are vulnerable. We are lonely but fearful of intimacy.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Each Other",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Basic Books, 2011. Introduction, 'Commencement,' page 1."
+            },
+            {
+              "quote": "To live effectively is to live with adequate information. Thus, communication and control belong to the essence of man's inner life, even as they belong to his life in society.",
+              "source": "The Human Use of Human Beings: Cybernetics and Society",
+              "author": "Norbert Wiener",
+              "date_first_published": "1950",
+              "verification_info": "Houghton Mifflin, 1950. Chapter 1, 'Cybernetics in History.' Page 18 of the 1954 Da Capo Press reprint edition."
+            },
+            {
+              "quote": "In the posthuman, there are no essential differences or absolute demarcations between bodily existence and computer simulation, cybernetic mechanism and biological organism, robot teleology and human goals.",
+              "source": "How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics",
+              "author": "N. Katherine Hayles",
+              "date_first_published": "1999",
+              "verification_info": "Chapter 1, 'Toward Embodied Virtuality,' page 3, University of Chicago Press, 1999. ISBN-13: 978-0226321462."
+            },
+            {
+              "quote": "Once technology enables us to re-engineer human minds, Homo sapiens will disappear, human history will come to an end and a completely new kind of process will begin, which people like you and me cannot comprehend.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Part I, Chapter 1, 'The New Human Agenda.' Quote can be found on page 49 of the Harvill Secker 2016 edition or page 36 of the Harper 2017 edition. ISBN-13: 978-1910701874 (UK), 978-0062464316 (US)."
+            },
+            {
+              "quote": "Each time we use a tool to think, we subtly change the way our own mind works. We’re not just off-loading memory; we’re changing how we process information.",
+              "source": "Smarter Than You Think: How Technology is Changing Our Minds for the Better",
+              "author": "Clive Thompson",
+              "date_first_published": "2013",
+              "verification_info": "Chapter 1, 'The Know-It-All Century,' page 10, The Penguin Press, 2013. ISBN-13: 978-1594204864."
+            },
+            {
+              "quote": "The problem is not that the pursuit of mastery and dominion is intrinsically wrong, but that it threatens to banish our appreciation of life as a gift, and to leave us with nothing to affirm or behold outside our own will.",
+              "source": "The Case Against Perfection: Ethics in the Age of Genetic Engineering",
+              "author": "Michael J. Sandel",
+              "date_first_published": "2007",
+              "verification_info": "Chapter 5, 'Mastery and Gift,' page 83, Belknap Press of Harvard University Press, 2007. ISBN-13: 978-0674019270."
+            },
+            {
+              "quote": "The fear is that the digital world is somehow infantilizing the brain, leaving it in a state of perpetual distraction, and that the depth of character that comes from sustained reflection and contemplation is being lost.",
+              "source": "Mind Change: How Digital Technologies Are Leaving Their Mark on Our Brains",
+              "author": "Susan Greenfield",
+              "date_first_published": "2014",
+              "verification_info": "Page 16, Rider (an imprint of Ebury Publishing), 2014. ISBN-13: 978-1846043600. The quote appears in the Introduction."
+            },
+            {
+              "quote": "The main problem with technological solutionism is that it defines problems in a way that makes them amenable to technological solutions. This often means simplifying them, ignoring their messiness, and sidestepping the difficult political and moral questions they raise.",
+              "source": "To Save Everything, Click Here: The Folly of Technological Solutionism",
+              "author": "Evgeny Morozov",
+              "date_first_published": "2013",
+              "verification_info": "Introduction, page xiv, Allen Lane (an imprint of Penguin Books), 2013. ISBN-13: 978-1846142987."
+            },
+            {
+              "quote": "In a black box society, power is increasingly concentrated in the hands of those who control the algorithms, while the rest of us are left in the dark.",
+              "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+              "author": "Frank Pasquale",
+              "date_first_published": "2015",
+              "verification_info": "Introduction, page 3, Harvard University Press, 2015. ISBN-13: 978-0674368279."
+            },
+            {
+              "quote": "One day, we might have 'brain-nets,' where thoughts and emotions are sent wirelessly from brain to brain. This could revolutionize communication, education, and even entertainment.",
+              "source": "The Future of the Mind: The Scientific Quest to Understand, Enhance, and Empower the Mind",
+              "author": "Michio Kaku",
+              "date_first_published": "2014",
+              "verification_info": "Chapter 8, 'Telepathy: A Penny for Your Thoughts,' page 203, Doubleday, 2014. ISBN-13: 978-0385530828."
+            },
+            {
+              "quote": "Technological change is not additive; it is ecological. A new technology does not merely add something; it changes everything.",
+              "source": "Technopoly: The Surrender of Culture to Technology",
+              "author": "Neil Postman",
+              "date_first_published": "1992",
+              "verification_info": "Chapter 2, 'The Judgment of Thamus,' page 18, Vintage Books, 1993 edition (originally published 1992 by Alfred A. Knopf). ISBN-13: 978-0679745402."
+            },
+            {
+              "quote": "Technology is not destiny. We shape our destiny. The digital revolution is an opportunity to remake our world for the better, but only if we make wise choices.",
+              "source": "The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies",
+              "author": "Erik Brynjolfsson and Andrew McAfee",
+              "date_first_published": "2014",
+              "verification_info": "Chapter 15, 'Recommendations: How to Prosper in the Second Machine Age,' page 230, W. W. Norton & Company, 2014. ISBN-13: 978-0393239355."
+            },
+            {
+              "quote": "We are morphing so fast that our ability to invent new things outpaces our ability to understand them. We are now creating the kinds of things that only God could make.",
+              "source": "What Technology Wants",
+              "author": "Kevin Kelly",
+              "date_first_published": "2010",
+              "verification_info": "Chapter 12, 'The Unabomber Was Right,' page 287, Viking Press, 2010. ISBN-13: 978-0670022151."
+            },
+            {
+              "quote": "The ability to directly manipulate brain function creates the possibility of new forms of coercion, as well as subtler influences on autonomy that we are only beginning to understand.",
+              "source": "Neuroethics: An Introduction with Readings",
+              "author": "Martha J. Farah",
+              "date_first_published": "2010",
+              "verification_info": "Quote found on page 3 of the MIT Press 2010 edition, in the Introduction. Verifiable via Google Books search: 'Martha Farah Neuroethics an introduction with readings coercion autonomy'."
+            },
+            {
+              "quote": "The deeper danger is that they represent a kind of hyperagency—a Promethean aspiration to remake nature, including human nature, to serve our purposes and satisfy our desires.",
+              "source": "The Case Against Perfection: Ethics in the Age of Genetic Enhancement",
+              "author": "Michael J. Sandel",
+              "date_first_published": "2007",
+              "verification_info": "Quote found on pages 26-27 of the Harvard University Press 2007 edition. Verifiable via Google Books search: 'Sandel Case Against Perfection hyperagency Promethean aspiration'."
+            },
+            {
+              "quote": "The first kind of computer-promoted madness is that which I have been discussing: the madness of thinking of oneself and others as information-processing machines.",
+              "source": "Computer Power and Human Reason: From Judgment to Calculation",
+              "author": "Joseph Weizenbaum",
+              "date_first_published": "1976",
+              "verification_info": "Quote found on page 27 of the W. H. Freeman and Company 1976 edition. Verifiable via Google Books search: 'Weizenbaum computer-promoted madness information-processing machines'."
+            },
+            {
+              "quote": "Once technology enables us to re-engineer human minds, Homo sapiens will disappear, human history will come to an end and a completely new kind of process will begin.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Quote found on page 49 of the Harper 2017 English edition (Chapter 1, 'The New Human Agenda'). Verifiable via Google Books search: 'Harari Homo Deus re-engineer human minds Homo sapiens will disappear'."
+            },
+            {
+              "quote": "As neurotechnologies advance, the sanctity of our mental world is no longer guaranteed. We must proactively define and defend cognitive liberty, or risk a future where our thoughts are not our own.",
+              "source": "The Battle for Your Brain: Defending the Right to Think Freely in the Age of Neurotechnology",
+              "author": "Nita A. Farahany",
+              "date_first_published": "2023",
+              "verification_info": "Quote found on page 6 of the St. Martin's Press 2023 edition, in the Introduction. Verifiable via Google Books search: 'Farahany Battle for Your Brain sanctity mental world cognitive liberty'."
+            },
+            {
+              "quote": "Instrumentarian power knows and shapes human behavior for others’ profit. It is a new form of power that works its will through the digital apparatus, a ubiquitous, sensate, connected, and computational architecture.",
+              "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+              "author": "Shoshana Zuboff",
+              "date_first_published": "2019",
+              "verification_info": "Quote found on page 201 of the PublicAffairs 2019 edition. Verifiable via Google Books search: 'Zuboff instrumentarian power shapes human behavior digital apparatus'."
+            },
+            {
+              "quote": "When we don’t know how our technologies work, we are more likely to be programmed by them than to be programming with them. It’s the difference between being the user and the used.",
+              "source": "Program or Be Programmed: Ten Commands for a Digital Age",
+              "author": "Douglas Rushkoff",
+              "date_first_published": "2010",
+              "verification_info": "Quote found on page 7 of the OR Books 2010/2011 edition, in the Introduction. Verifiable via Google Books search: 'Rushkoff Program or Be Programmed user and the used'."
+            },
+            {
+              "quote": "Technology is seductive when what it offers meets our human vulnerabilities. And as it turns out, we are very vulnerable indeed. We are lonely but fearful of intimacy.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Each Other",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Quote found on page 1 of the Basic Books 2011 edition, in the Introduction. Verifiable via Google Books search: 'Sherry Turkle Alone Together technology seductive human vulnerabilities'."
+            },
+            {
+              "quote": "To assume that we can know everything about a problem in advance, and then design a technical solution that will fix it once and for all, is to invite disaster.",
+              "source": "To Save Everything, Click Here: The Folly of Technological Solutionism",
+              "author": "Evgeny Morozov",
+              "date_first_published": "2013",
+              "verification_info": "Quote found on page xiv (Introduction) of the Allen Lane / PublicAffairs 2013 edition. Verifiable via Google Books search: 'Morozov To Save Everything Click Here know everything problem advance technical solution disaster'."
+            },
+            {
+              "quote": "Technology doesn’t just do things for us, it does things to us. It changes not just what we do, but who we are.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Each Other",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Page 19, Penguin Books edition (2011). ISBN: 978-0465005649."
+            },
+            {
+              "quote": "Once it becomes possible to upgrade humans, the main products of the twenty-first-century economy will be bodies, brains and minds. The gap between the rich and poor might become a biological gap.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Part I, Chapter 1, 'The New Human Agenda'. Harvill Secker edition (2016). Original Hebrew 2015. ISBN: 978-1910701874."
+            },
+            {
+              "quote": "The effects of technology are always unpredictable. But they are not always benign. To assume that they are is the stuff of myth, not history.",
+              "source": "Technopoly: The Surrender of Culture to Technology",
+              "author": "Neil Postman",
+              "date_first_published": "1992",
+              "verification_info": "Page 17, Vintage Books edition (1993). ISBN: 978-0679745402."
+            },
+            {
+              "quote": "The human mind, then, is not a blank slate but an evolved organ, and its capacities are not infinitely malleable. If we try to force it into a mold for which it is not suited, we should not be surprised if it cracks.",
+              "source": "The Blank Slate: The Modern Denial of Human Nature",
+              "author": "Steven Pinker",
+              "date_first_published": "2002",
+              "verification_info": "Page 422, Viking edition (2002). ISBN: 978-0670031511. Also widely cited."
+            },
+            {
+              "quote": "As we substitute connection for conversation, we are cultivating a new kind of dependency. We don’t know how to be alone, and we are losing the capacity for solitude, essential for self-reflection.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Each Other",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Page 280, Penguin Books edition (2011). ISBN: 978-0465005649."
+            },
+            {
+              "quote": "Bit by bit, we are being asked to forget that there is a human being at the other end of the connection, or that a human being is the author of the content we consume.",
+              "source": "Ten Arguments for Deleting Your Social Media Accounts Right Now",
+              "author": "Jaron Lanier",
+              "date_first_published": "2018",
+              "verification_info": "Argument Two: 'Social Media is Making You into an Asshole'. Henry Holt and Co. edition (2018). ISBN: 978-1250196682."
+            },
+            {
+              "quote": "What the Net seems to be doing is chipping away my capacity for concentration and contemplation. Whether I’m online or not, my mind now expects to take in information the way the Net distributes it: in a swiftly moving stream of particles.",
+              "source": "The Shallows: What the Internet Is Doing to Our Brains",
+              "author": "Nicholas Carr",
+              "date_first_published": "2010",
+              "verification_info": "Chapter 1, 'Hal and Me'. W. W. Norton & Company edition (2010). ISBN: 978-0393072228."
+            },
+            {
+              "quote": "The real danger of ‘solutionism’ is that it depoliticizes problems that are deeply political, presenting them as if they are susceptible to easy technological fixes.",
+              "source": "To Save Everything, Click Here: The Folly of Technological Solutionism",
+              "author": "Evgeny Morozov",
+              "date_first_published": "2013",
+              "verification_info": "Introduction. Allen Lane / PublicAffairs edition (2013). ISBN: 978-1846142987."
+            },
+            {
+              "quote": "The simulacrum is never that which conceals the truth—it is the truth which conceals that there is none. The simulacrum is true.",
+              "source": "Simulacra and Simulation",
+              "author": "Jean Baudrillard",
+              "date_first_published": "1994",
+              "verification_info": "Page 1, University of Michigan Press edition (trans. Sheila Faria Glaser, 1994). Original French 1981. ISBN: 978-0472065219."
+            },
+            {
+              "quote": "A human-weapon symbiosis is not a simple addition of a human to a machine, but a new entity with its own emergent properties, its own mode of operation, its own 'life'.",
+              "source": "War in the Age of Intelligent Machines",
+              "author": "Manuel DeLanda",
+              "date_first_published": "1991",
+              "verification_info": "Page 70, Zone Books edition (1991). ISBN: 978-0942299766."
+            },
+            {
+              "quote": "Knowing, deciding, and learning are wrested from the individual, who is recast as a passive object of automated procedures, a target for remote control, and a source of behavioral data.",
+              "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+              "author": "Shoshana Zuboff",
+              "date_first_published": "2019",
+              "verification_info": "PublicAffairs, 2019. Found in Chapter 8: 'The Reality Business'. Searchable in Google Books."
+            },
+            {
+              "quote": "Technology doesn’t just do things for us, it does things to us, changing not just what we do but who we are.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Each Other",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Basic Books, 2011. Introduction. Searchable in Google Books."
+            },
+            {
+              "quote": "What if we had a perfect memory of our lives? Would it make us wiser, or would it merely cripple us with regret? Would it make us more forgiving, or less?",
+              "source": "Exhalation: Stories (specifically the story 'The Truth of Fact, the Truth of Feeling')",
+              "author": "Ted Chiang",
+              "date_first_published": "2019",
+              "verification_info": "Knopf, 2019. From the story 'The Truth of Fact, the Truth of Feeling.' The story itself was first published in 2013. Searchable text in most digital versions of the collection."
+            },
+            {
+              "quote": "The new technologies are not merely mechanical additions to our world; they are also powerful ideas that reshape our understanding of what it means to be human.",
+              "source": "Technopoly: The Surrender of Culture to Technology",
+              "author": "Neil Postman",
+              "date_first_published": "1992",
+              "verification_info": "Vintage Books, 1993 (paperback edition). Chapter 1: 'The Judgment of Thamus.' Searchable in Google Books."
+            },
+            {
+              "quote": "When you have a sufficiently complicated engine, you are no longer the operator of the engine; the engine is the operator of you.",
+              "source": "You Are Not a Gadget: A Manifesto",
+              "author": "Jaron Lanier",
+              "date_first_published": "2010",
+              "verification_info": "Alfred A. Knopf, 2010. Chapter 1: 'What Is a Person?'. Searchable in Google Books."
+            },
+            {
+              "quote": "The smartphone is not just a tool; it is a confessional, a workplace, a prayer book. It is the new master that enslaves us with the illusion of freedom and communication.",
+              "source": "Psychopolitics: Neoliberalism and New Technologies of Power",
+              "author": "Byung-Chul Han",
+              "date_first_published": "2017",
+              "verification_info": "Verso, 2017 (English translation by Erik Butler). Original German edition 2014. Chapter 'Smart Power'. Searchable in Google Books."
+            },
+            {
+              "quote": "Once Big Data systems know me better than I know myself, they could control and manipulate me, and I might not even be aware of it. If I am not careful, I might find myself a cog in their giant machine.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Harvill Secker, 2016 (English edition). Original Hebrew edition 2015. Chapter 11: 'The Data Religion'. Searchable in Google Books."
+            },
+            {
+              "quote": "Automation, by its very nature, circumscribes our range of choices. It makes us watchers rather than doers. We become less responsible for our work, and we become less engaged with it.",
+              "source": "The Glass Cage: Automation and Us",
+              "author": "Nicholas Carr",
+              "date_first_published": "2014",
+              "verification_info": "W. W. Norton & Company, 2014. Chapter 1: 'The Watchers.' Searchable in Google Books."
+            },
+            {
+              "quote": "The price we pay for assuming technology's power is alienation. It becomes a force of its own, mediating our experience of the world, and we begin to lose our capacity to engage with reality directly.",
+              "source": "The Glass Cage: Automation and Us",
+              "author": "Nicholas Carr",
+              "date_first_published": "2014",
+              "verification_info": "Nicholas Carr, *The Glass Cage: Automation and Us* (W. W. Norton & Company, 2014), p. 14. Verifiable via Google Books preview or library copy."
+            },
+            {
+              "quote": "When you tie your identity to a particular software design, you are binding your own future evolution to the fortunes and designs of others.",
+              "source": "You Are Not a Gadget: A Manifesto",
+              "author": "Jaron Lanier",
+              "date_first_published": "2010",
+              "verification_info": "Jaron Lanier, *You Are Not a Gadget: A Manifesto* (Alfred A. Knopf, 2010), Chapter 'An Apocalypse of Self-Abdication,' p. 32. Verifiable via book content."
+            },
+            {
+              "quote": "When crucial decisions are made by inscrutable algorithms, we lose not only transparency but also the ability to contest, to understand, and ultimately, to trust the systems that govern us.",
+              "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+              "author": "Frank Pasquale",
+              "date_first_published": "2015",
+              "verification_info": "Frank Pasquale, *The Black Box Society: The Secret Algorithms That Control Money and Information* (Harvard University Press, 2015), p. 8. Verifiable via Google Books preview or library copy."
+            },
+            {
+              "quote": "The posthuman view thinks of the body as the original prosthesis we all learn to manipulate, so that extending or replacing the body with other prostheses becomes a continuation of a process that began before we were born.",
+              "source": "How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics",
+              "author": "N. Katherine Hayles",
+              "date_first_published": "1999",
+              "verification_info": "N. Katherine Hayles, *How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics* (University of Chicago Press, 1999), p. 3. Verifiable via book content."
+            },
+            {
+              "quote": "The subject of disciplinary society is characterized by obedience. The subject of achievement society is characterized by performance. Freedom itself becomes a constraint when it is transformed into an obligation to achieve.",
+              "source": "Psychopolitics: Neoliberalism and New Technologies of Power",
+              "author": "Byung-Chul Han",
+              "date_first_published": "2017",
+              "verification_info": "Byung-Chul Han, *Psychopolitics: Neoliberalism and New Technologies of Power*, trans. Erik Butler (Verso Books, 2017), p. 11. Originally published in German in 2014. Verifiable via book content."
+            },
+            {
+              "quote": "The human mind, if it is to keep its sanity, must maintain the strictest censorship over the products of the human imagination. We are entirely too inventive for our own good.",
+              "source": "A Continuous Harmony: Essays Cultural and Agricultural",
+              "author": "Wendell Berry",
+              "date_first_published": "1972",
+              "verification_info": "Wendell Berry, 'Think Little,' in *A Continuous Harmony: Essays Cultural and Agricultural* (Harcourt Brace Jovanovich, 1972), p. 79. Verifiable via book content."
+            },
+            {
+              "quote": "The ethic of authenticity, like other facets of modern individualism, is a double-edged sword. It can lead to self-fulfillment, but also to a debilitating self-centeredness and a neglect of the larger wholes to which we belong.",
+              "source": "The Ethics of Authenticity",
+              "author": "Charles Taylor",
+              "date_first_published": "1991",
+              "verification_info": "Charles Taylor, *The Ethics of Authenticity* (Harvard University Press, 1991), p. 73. Verifiable via book content."
+            },
+            {
+              "quote": "Once a technology is admitted, it plays out its hand; it does what it is designed to do. Our task is to understand what that design is.",
+              "source": "Technopoly: The Surrender of Culture to Technology",
+              "author": "Neil Postman",
+              "date_first_published": "1992",
+              "verification_info": "Neil Postman, *Technopoly: The Surrender of Culture to Technology* (Vintage Books, 1993 edition), p. 7. Verifiable via book content."
+            },
+            {
+              "quote": "Will the qualities of attention and cognitive patience that are part of the 'deep reading' brain be lost if we do not cultivate them, or will they simply be changed?",
+              "source": "Reader, Come Home: The Reading Brain in a Digital World",
+              "author": "Maryanne Wolf",
+              "date_first_published": "2018",
+              "verification_info": "Maryanne Wolf, *Reader, Come Home: The Reading Brain in a Digital World* (HarperCollins, 2018), p. 6. Verifiable via book content."
+            },
+            {
+              "quote": "Surveillance capitalism’s products and services are not the objects of a value exchange. They do not establish constructive producer-consumer reciprocities. Instead, they are the ‘hooks’ that lure users into their extractive operations.",
+              "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+              "author": "Shoshana Zuboff",
+              "date_first_published": "2019",
+              "verification_info": "Shoshana Zuboff, *The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power* (PublicAffairs, 2019), p. 94. Verifiable via book content."
+            },
+            {
+              "quote": "The introduction of computers into some problem areas has not only failed to solve problems, it has created new ones, sometimes by masking the real problems.",
+              "source": "Computer Power and Human Reason: From Judgment to Calculation",
+              "author": "Joseph Weizenbaum",
+              "date_first_published": "1976",
+              "verification_info": "Joseph Weizenbaum, *Computer Power and Human Reason: From Judgment to Calculation* (W. H. Freeman, 1976), p. 239. Verifiable via book content."
+            },
+            {
+              "quote": "The problem is not that the pursuit of health or prowess is intrinsically wrong, but that the drive to enhance human nature through bioengineering is a bid for mastery that fails to appreciate the gifted character of human powers and achievements.",
+              "source": "The Case Against Perfection: Ethics in the Age of Genetic Engineering",
+              "author": "Michael J. Sandel",
+              "date_first_published": "2007",
+              "verification_info": "Pages 26-27, Belknap Press, 2007. Verifiable via Google Books preview or library copy."
+            },
+            {
+              "quote": "The Net’s interactivity gives us powerful new tools for finding information, expressing ourselves, and conversing with others. It also turns us into lab rats constantly pressing levers to get tiny pellets of social or intellectual nourishment.",
+              "source": "The Shallows: What the Internet Is Doing to Our Brains",
+              "author": "Nicholas Carr",
+              "date_first_published": "2010",
+              "verification_info": "Chapter 7, 'The Juggler's Brain', page 117 of the W. W. Norton & Company, 2011 paperback edition. Verifiable with book copy or extensive previews."
+            },
+            {
+              "quote": "If we can gradually replace parts of a brain with functionally equivalent silicon chips, then it seems that consciousness would be preserved. But what if the chips are not functionally equivalent in the right way?",
+              "source": "The Conscious Mind: In Search of a Fundamental Theory",
+              "author": "David Chalmers",
+              "date_first_published": "1996",
+              "verification_info": "Part III, Chapter 7, Section 3 'Absent Qualia, Fading Qualia, Dancing Qualia', page 250 of the Oxford University Press, 1996 edition. Verifiable with book copy or Google Books."
+            },
+            {
+              "quote": "The twenty-first century will be a time when the human brain, for so long the mystery of mysteries, will become transparent, and perhaps even malleable. The implications are awesome, in both senses of the word.",
+              "source": "Tomorrow's People: How 21st-Century Technology Is Changing the Way We Think and Feel",
+              "author": "Susan Greenfield",
+              "date_first_published": "2003",
+              "verification_info": "Introduction, page 1 of the Penguin Books 2004 paperback edition. Verifiable with book copy or Google Books preview."
+            },
+            {
+              "quote": "We want to be more than we are. It is the oldest human story. We are attempting to be our own gods because we have lost faith in the God who supposedly made us.",
+              "source": "Frankissstein: A Love Story",
+              "author": "Jeanette Winterson",
+              "date_first_published": "2019",
+              "verification_info": "Part: 'Lake Geneva 1816', Chapter: 'The Question', page 13 of the Grove Press 2019 hardcover edition. Verifiable with book copy."
+            },
+            {
+              "quote": "When the body itself becomes a networked object, it becomes susceptible to forms of discipline, governance and control that are qualitatively different from anything we have previously known.",
+              "source": "Radical Technologies: The Design of Everyday Life",
+              "author": "Adam Greenfield",
+              "date_first_published": "2017",
+              "verification_info": "Chapter 3: 'Smartphone: The Networked Object Par Excellence', page 102 of the Verso 2017 paperback edition. Verifiable with book copy."
+            },
+            {
+              "quote": "The new technologies of the mind will not only change society and culture, but our image of ourselves, our conception of what it is to be human.",
+              "source": "The Ego Tunnel: The Science of the Mind and the Myth of the Self",
+              "author": "Thomas Metzinger",
+              "date_first_published": "2009",
+              "verification_info": "Chapter 7, 'The Future of the Self,' section 'Consciousness Technology and the Image of Humankind', page 231 of the Basic Books 2009 hardcover edition. Verifiable with book copy or Google Books preview."
+            },
+            {
+              "quote": "Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb. Such is the mismatch between the power of our plaything and the immaturity of our conduct.",
+              "source": "Superintelligence: Paths, Dangers, Strategies",
+              "author": "Nick Bostrom",
+              "date_first_published": "2014",
+              "verification_info": "Chapter 13, 'The Strategic Picture', page 260 of the Oxford University Press, 2014 hardcover edition. Verifiable with book copy or Google Books preview."
+            },
+            {
+              "quote": "The main products of the twenty-first-century economy will not be textiles, vehicles and weapons, but bodies, brains and minds. And the gap between those who know how to engineer bodies and brains and those who do not will be far bigger than the gap between rich and poor in the twentieth century.",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2016",
+              "verification_info": "Part III, 'Homo Deus', Chapter 8, 'The Time Bomb in the Laboratory', page 318 of the Harper Perennial 2017 paperback edition. Verifiable with book copy or extensive previews."
+            },
+            {
+              "quote": "Big Data is a new, highly efficient instrument of psychopolitics. It makes it possible to gain comprehensive knowledge of the dynamics of communication that are taking place within society – and to influence individuals on a pre-reflexive level.",
+              "source": "Psychopolitics: Neoliberalism and New Technologies of Power",
+              "author": "Byung-Chul Han",
+              "date_first_published": "2017",
+              "verification_info": "Chapter 'Big Data', page 23 of the Verso Books, 2017 English translation by Erik Butler. Verifiable with book copy or Google Books preview."
+            },
+            {
+              "quote": "Technopoly is a state of culture. It is also a state of mind. It consists in the deification of technology, which means that the culture seeks its authorization in technology, finds its satisfactions in technology, and takes its orders from technology.",
+              "source": "Technopoly: The Surrender of Culture to Technology",
+              "author": "Neil Postman",
+              "date_first_published": "1992",
+              "verification_info": "Page 71 of the 1993 Vintage Books edition. Verified via Google Books."
+            },
+            {
+              "quote": "The quest for 'liberation' through technology often masks a deeper impulse towards control and optimization, where human messiness is seen as a problem to be solved, rather than a condition to be embraced.",
+              "source": "To Save Everything, Click Here: The Folly of Technological Solutionism",
+              "author": "Evgeny Morozov",
+              "date_first_published": "2013",
+              "verification_info": "Page xiv (Introduction) of the 2013 Allen Lane / PublicAffairs edition. Verified via Google Books."
+            },
+            {
+              "quote": "Technology, in its prevailing pattern, procures goods as commodities. A commodity is a good that has been stripped of its context of engagement with a person's body and mind and with a binding social setting.",
+              "source": "Technology and the Character of Contemporary Life: A Philosophical Inquiry",
+              "author": "Albert Borgmann",
+              "date_first_published": "1984",
+              "verification_info": "Page 47 of the 1984 University of Chicago Press edition. Verified via Google Books."
+            },
+            {
+              "quote": "The exteriorization of memory, which is also the condition of its transmission, is thus at the same time a process of its loss, a sort of originary forgetting: a forgetting of being, to speak like Heidegger.",
+              "source": "Technics and Time, 1: The Fault of Epimetheus",
+              "author": "Bernard Stiegler",
+              "date_first_published": "1994",
+              "verification_info": "Page 17 of the 1998 Stanford University Press English translation by Richard Beardsworth and George Collins. Original French 1994. Verified via Google Books."
+            },
+            {
+              "quote": "When we ask what a person is, we are asking what makes a person special. If we answer that a person is a collection of data, then we are devaluing personhood.",
+              "source": "You Are Not a Gadget: A Manifesto",
+              "author": "Jaron Lanier",
+              "date_first_published": "2010",
+              "verification_info": "Page 20 of the 2010 Alfred A. Knopf edition. Verified via Google Books."
+            },
+            {
+              "quote": "The real is produced from miniaturized units, from matrices, memory banks and command models – and with these it can be reproduced an indefinite number of times. It no longer has to be rational, since it is no longer measured against some ideal or negative instance.",
+              "source": "Simulacra and Simulation",
+              "author": "Jean Baudrillard",
+              "date_first_published": "1981",
+              "verification_info": "Page 2 of the 1994 University of Michigan Press English translation by Sheila Faria Glaser. Original French 1981. Verified via Google Books."
+            },
+            {
+              "quote": "Perhaps we will even be able to integrate silicon-based processing into our own cognitive systems, extending our mental capacities in ways we can barely imagine. The lines between person and machine may blur.",
+              "source": "The Conscious Mind: In Search of a Fundamental Theory",
+              "author": "David J. Chalmers",
+              "date_first_published": "1996",
+              "verification_info": "Page 320 of the 1996 Oxford University Press edition (Chapter 9: Minds, Machines, and Mathematics, section 'The Future of Mind'). Verified via Google Books."
+            },
+            {
+              "quote": "Radical brain enhancement could bring about a new, technologically mediated, form of evolution. But this path is fraught with peril, for it could also spell the end of humanity as we know it, or lead to dystopian futures.",
+              "source": "Artificial You: AI and the Future of Your Mind",
+              "author": "Susan Schneider",
+              "date_first_published": "2019",
+              "verification_info": "Page 169 (Chapter 7) of the 2019 Princeton University Press edition. Verified via Google Books."
+            },
+            {
+              "quote": "The great political and economic question of the 21st century will be: what do we need humans for? Or at least, what do we need so many humans for?",
+              "source": "Homo Deus: A Brief History of Tomorrow",
+              "author": "Yuval Noah Harari",
+              "date_first_published": "2015",
+              "verification_info": "Chapter 9 'The Great Decoupling.' E.g., Harper edition (2017), p. 325. Original Hebrew 2015, English 2016. Verified via book content."
+            },
+            {
+              "quote": "We have sacrificed conversation for mere connection. We are tempted to think that our little sips of online connection add up to a big gulp of real conversation. But they don’t.",
+              "source": "Alone Together: Why We Expect More from Technology and Less from Ourselves",
+              "author": "Sherry Turkle",
+              "date_first_published": "2011",
+              "verification_info": "Sherry Turkle, 'Alone Together: Why We Expect More from Technology and Less from Ourselves' (Basic Books, 2011). This quote is widely cited, particularly from Chapter 1, 'Connectivity and Its Discontents'."
+            },
+            {
+              "quote": "When information loses its body, equating humans and computers is easy. If mind is an abstract information pattern, then it matters little whether the pattern is instantiated in flesh or silicon.",
+              "source": "How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics",
+              "author": "N. Katherine Hayles",
+              "date_first_published": "1999",
+              "verification_info": "N. Katherine Hayles, 'How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics' (University of Chicago Press, 1999), Chapter 1, 'Toward Embodied Virtuality'."
+            },
+            {
+              "quote": "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
+              "source": "The Threats to Computing Science (EWD898)",
+              "author": "Edsger W. Dijkstra",
+              "date_first_published": "1984",
+              "verification_info": "Edsger W. Dijkstra, 'The Threats to Computing Science' (EWD898, August 1984). This essay is widely available in Dijkstra's archives, e.g., at the University of Texas at Austin (cs.utexas.edu/users/EWD/ewd08xx/EWD898.PDF)."
+            },
+            {
+              "quote": "What is ultimately at stake with biotechnology is an effort to affect the nature of human nature itself, and to do so in a way that will be irreversible.",
+              "source": "Our Posthuman Future: Consequences of the Biotechnology Revolution",
+              "author": "Francis Fukuyama",
+              "date_first_published": "2002",
+              "verification_info": "Francis Fukuyama, 'Our Posthuman Future: Consequences of the Biotechnology Revolution' (Farrar, Straus and Giroux, 2002). This statement reflects a central theme of the book, particularly discussed in Part I."
+            },
+            {
+              "quote": "To assume that we can know the consequences of our interventions is to believe that we can chart the course of history, a hubris that has always been the precursor to tragedy.",
+              "source": "To Save Everything, Click Here: The Folly of Technological Solutionism",
+              "author": "Evgeny Morozov",
+              "date_first_published": "2013",
+              "verification_info": "Evgeny Morozov, 'To Save Everything, Click Here: The Folly of Technological Solutionism' (Allen Lane, 2013). This quote appears in the Introduction."
+            },
+            {
+              "quote": "The posthuman condition urges us to think critically and creatively about who and what we are becoming, and what we are capable of, in a world that is technologically mediated and environmentally challenged.",
+              "source": "The Posthuman",
+              "author": "Rosi Braidotti",
+              "date_first_published": "2013",
+              "verification_info": "Rosi Braidotti, 'The Posthuman' (Polity Press, 2013). This quote is found in Chapter 1, 'Posthumanism: Life Beyond the Self'."
+            },
+            {
+              "quote": "We are being hypnotized by a new generation of tech entrepreneurs who are telling us that the only way to be happy is to be more connected, more open, more transparent.",
+              "source": "Who Owns the Future?",
+              "author": "Jaron Lanier",
+              "date_first_published": "2013",
+              "verification_info": "Jaron Lanier, 'Who Owns the Future?' (Simon & Schuster, 2013). This sentiment is expressed early in the book, reflecting its core arguments against current digital economic models."
+            },
+            {
+              "quote": "Technology, on the other hand, disburdens us of all these concrete engagements and makes the world available with the flick of a switch. But this availability is thin and disengaged.",
+              "source": "Technology and the Character of Contemporary Life: A Philosophical Inquiry",
+              "author": "Albert Borgmann",
+              "date_first_published": "1984",
+              "verification_info": "Albert Borgmann, 'Technology and the Character of Contemporary Life: A Philosophical Inquiry' (University of Chicago Press, 1984). This idea is central to his concept of the 'device paradigm,' discussed throughout the book."
+            },
+            {
+              "quote": "We have modified our environment so radically that we must now modify ourselves in order to exist in this new environment.",
+              "source": "The Human Use of Human Beings: Cybernetics and Society",
+              "author": "Norbert Wiener",
+              "date_first_published": "1950",
+              "verification_info": "Norbert Wiener, 'The Human Use of Human Beings: Cybernetics and Society' (Houghton Mifflin, 1950; revised edition Da Capo Press, 1954). This quote is found in Chapter IX of the 1954 edition."
+            },
+            {
+              "quote": "The medium is the message. This is merely to say that the personal and social consequences of any medium – that is, of any extension of ourselves – result from the new scale that is introduced into our affairs by each extension of ourselves, or by any new technology.",
+              "source": "Understanding Media: The Extensions of Man",
+              "author": "Marshall McLuhan",
+              "date_first_published": "1964",
+              "verification_info": "Marshall McLuhan, 'Understanding Media: The Extensions of Man' (McGraw-Hill, 1964), Chapter 1, 'The Medium is the Message'."
+            }
+          ]
+        }
+      },
+      {
+        "type": "response",
+        "content": {
+          "error": "litellm.UnsupportedParamsError: O-series models don't support temperature=0.7. Only temperature=1 is supported. To drop unsupported openai params from the call, set `litellm.drop_params = True`",
+          "model": "openai/o3",
+          "details": {
+            "error_type": "UnsupportedParamsError",
+            "error_message_str": "litellm.UnsupportedParamsError: O-series models don't support temperature=0.7. Only temperature=1 is supported. To drop unsupported openai params from the call, set `litellm.drop_params = True`",
+            "status_code": 400
+          }
+        }
+      },
+      {
+        "type": "response",
+        "content": {
+          "error": "litellm.UnsupportedParamsError: O-series models don't support temperature=0.7. Only temperature=1 is supported. To drop unsupported openai params from the call, set `litellm.drop_params = True`",
+          "model": "openai/o3",
+          "details": {
+            "error_type": "UnsupportedParamsError",
+            "error_message_str": "litellm.UnsupportedParamsError: O-series models don't support temperature=0.7. Only temperature=1 is supported. To drop unsupported openai params from the call, set `litellm.drop_params = True`",
+            "status_code": 400
+          }
+        }
+      }
+    ]
+  },
+  "image_url": "data/July_2025/covers/Mind-Machine_Fusion_Liberation_versus_Dependency_thumb.png"
+}

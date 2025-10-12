@@ -1,0 +1,28 @@
+{
+  "imprint": "Venus Ventures",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@venusventures.com",
+  "branding": {
+    "tagline": "Unveiling the veiled planet",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.venusventures.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Scientific, technological and exploratory aspects of Venus",
+    "target_audience": "Science enthusiasts, space geeks",
+    "competitive_advantage": "Partnerships with space agencies for Venus missions",
+    "example_titles": "Venus: The Forgotten Planet by Dr. Venus Explorer"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "VR Origin",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vrorigin.com",
+  "branding": {
+    "tagline": "The universe at your fingertips",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vrorigin.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space and science in VR",
+    "target_audience": "Space enthusiasts, science lovers",
+    "competitive_advantage": "Exploring the cosmos with VR",
+    "example_titles": "VR space documentaries, VR sci-fi novels"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

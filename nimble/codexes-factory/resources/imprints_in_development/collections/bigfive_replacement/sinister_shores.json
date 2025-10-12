@@ -1,0 +1,28 @@
+{
+  "imprint": "Sinister Shores",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sinistershores.com",
+  "branding": {
+    "tagline": "Every wave brings a new secret",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sinistershores.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Coastal Thrillers",
+    "target_audience": "Readers who love the seaside setting with a twist of suspense",
+    "competitive_advantage": "Specific focus on coastal and island mysteries",
+    "example_titles": "Books reminiscent of 'The Woman in Cabin 10', 'Shutter Island'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

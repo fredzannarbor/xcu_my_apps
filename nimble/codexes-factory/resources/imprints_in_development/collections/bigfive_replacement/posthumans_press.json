@@ -1,0 +1,28 @@
+{
+  "imprint": "PostHumans Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@posthumanspress.com",
+  "branding": {
+    "tagline": "Beyond human boundaries.",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.posthumanspress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Transhumanism and post-human evolution",
+    "target_audience": "Readers interested in exploring the next steps of human evolution",
+    "competitive_advantage": "Thoughtful exploration of post-human futures, blending philosophy with science fiction",
+    "example_titles": "Works similar to 'Altered Carbon' by Richard K. Morgan"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

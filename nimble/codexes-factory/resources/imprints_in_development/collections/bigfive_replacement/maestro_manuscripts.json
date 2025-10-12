@@ -1,0 +1,28 @@
+{
+  "imprint": "Maestro Manuscripts",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@maestromanuscripts.com",
+  "branding": {
+    "tagline": "Savor the symphony of their lives",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.maestromanuscripts.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of famous musicians and composers",
+    "target_audience": "Music lovers and students",
+    "competitive_advantage": "Deep insights into the world of music from its masters",
+    "example_titles": "Memoirs of Grammy-winning artists, legendary composers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

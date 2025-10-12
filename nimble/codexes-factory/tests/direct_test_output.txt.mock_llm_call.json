@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Based on the quotations and content in the provided book, generate a list of 5-7 creative mnemonics to help readers remember the key themes, concepts, and insights from the book's quotations. Focus specifically on the book's content, not on the art of mnemonics itself. Return as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.\n\nExample format:\n\n% Mnemonics for Key Themes in This Book\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\n\\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)\n\n\\begin{itemize}\n    \\item \\textbf{C}hallenge assumptions\n    \\item \\textbf{L}ook for evidence\n    \\item \\textbf{E}valuate alternatives\n    \\item \\textbf{A}pply reasoning\n    \\item \\textbf{R}eflect on outcomes\n\\end{itemize}\n\n[... more acronyms/expansions based on book_content]\n\nTitle: The Art of Critical Thinking\n\nDescription: A collection of thought-provoking quotes on critical thinking, reasoning, and intellectual growth.\n\nQuotations in this book:\n1. \"The important thing is not to stop questioning. Curiosity has its own reason for existing.\" - Albert Einstein, Life Magazine\n2. \"We are what we repeatedly do. Excellence, then, is not an act, but a habit.\" - Aristotle, Nicomachean Ethics\n3. \"It is the mark of an educated mind to be able to entertain a thought without accepting it.\" - Aristotle, Metaphysics\n4. \"The unexamined life is not worth living.\" - Socrates, Apology\n5. \"I think, therefore I am.\" - Ren\u00e9 Descartes, Discourse on the Method\n6. \"Doubt is not a pleasant condition, but certainty is absurd.\" - Voltaire, Letters on England\n7. \"The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.\" - Daniel J. Boorstin, The Discoverers\n8. \"Real knowledge is to know the extent of one's ignorance.\" - Confucius, The Analects\n9. \"The mind is not a vessel to be filled, but a fire to be kindled.\" - Plutarch, On Listening to Lectures\n10. \"We don't see things as they are, we see them as we are.\" - Ana\u00efs Nin, Seduction of the Minotaur\n"
+    }
+  ],
+  "params": {
+    "temperature": 0.7,
+    "max_tokens": 1000
+  }
+}

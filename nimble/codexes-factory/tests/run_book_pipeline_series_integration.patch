@@ -1,0 +1,47 @@
+--- run_book_pipeline.py	2025-07-17 18:06:00.000000000 -0400
++++ run_book_pipeline_new.py	2025-07-17 18:06:00.000000000 -0400
+@@ -29,6 +29,8 @@
+     from codexes.modules.distribution.llm_field_completer import LLMFieldCompleter
+     from codexes.modules.metadata.metadata_models import CodexMetadata
+     from codexes.modules.distribution.lsi_field_completion_reporter import LSIFieldCompletionReporter
++    from codexes.modules.distribution.series_registry import SeriesRegistry
++    from codexes.modules.distribution.series_pipeline_integration import integrate_series_with_pipeline
+     from codexes.modules.distribution.field_mapping_registry import create_enhanced_lsi_registry
+     from codexes.modules.distribution.lsi_configuration import LSIConfiguration
+ except ModuleNotFoundError:
+@@ -40,6 +42,8 @@
+     from src.codexes.modules.distribution.llm_field_completer import LLMFieldCompleter
+     from src.codexes.modules.metadata.metadata_models import CodexMetadata
+     from src.codexes.modules.distribution.lsi_field_completion_reporter import LSIFieldCompletionReporter
++    from src.codexes.modules.distribution.series_registry import SeriesRegistry
++    from src.codexes.modules.distribution.series_pipeline_integration import integrate_series_with_pipeline
+     from src.codexes.modules.distribution.field_mapping_registry import create_enhanced_lsi_registry
+     from src.codexes.modules.distribution.lsi_configuration import LSIConfiguration
+ 
+@@ -198,6 +202,15 @@
+             # Convert filtered JSON data to CodexMetadata object
+             metadata = CodexMetadata(**filtered_data)
+             
++            # Process series information from schedule
++            if args.enable_series_management:
++                logger.info("Processing series information...")
++                try:
++                    metadata = integrate_series_with_pipeline(metadata, args.series_registry, book_data=book_data.to_dict())
++                    logger.info(f"✅ Series information processed: {metadata.series_name} #{metadata.series_number}")
++                except Exception as e:
++                    logger.warning(f"Series processing failed: {e}. Proceeding without series assignment.")
++            
+             # Initialize LSI field completer if enabled
+             if config['enable_llm_completion']:
+                 logger.info("Initializing LLM field completer for enhanced metadata...")
+@@ -293,6 +306,10 @@
+                         help="Path to LSI configuration file for enhanced field mapping.")
+     parser.add_argument("--lsi-template", default="templates/LSI_ACS_header.csv",
+                         help="Path to LSI template CSV file.")
++    parser.add_argument("--enable-series-management", action="store_true",
++                        help="Enable series management for books in the schedule.")
++    parser.add_argument("--series-registry", default="data/series_registry.json",
++                        help="Path to the series registry file.")
+     parser.add_argument("--enable-llm-completion", action="store_true",
+                         help="Enable LLM-powered field completion for missing LSI metadata.")
+     parser.add_argument("--skip-lsi", action="store_true", help="Skip LSI CSV generation (Stage 4).")

@@ -1,0 +1,28 @@
+{
+  "imprint": "Sapphire Seas",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sapphireseas.com",
+  "branding": {
+    "tagline": "Sail away with love",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sapphireseas.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Nautical and pirate-themed romance",
+    "target_audience": "Readers who enjoy historical romance with maritime themes",
+    "competitive_advantage": "Romantic narratives set against the thrilling backdrop of the high seas",
+    "example_titles": "Kathleen E. Woodiwiss, Danelle Harmon"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,146 @@
+
+{
+  "assignments": {
+    "9781234561000": {
+      "isbn": "9781234561000",
+      "book_title": "Test Book",
+      "book_id": "test_1",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": null,
+      "status": "scheduled",
+      "imprint": "",
+      "publisher": "",
+      "format": "paperback",
+      "notes": "",
+      "priority": 1
+    },
+    "9781234561017": {
+      "isbn": "9781234561017",
+      "book_title": "My Test Book",
+      "book_id": "test_rebuild_1",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": null,
+      "status": "scheduled",
+      "imprint": "",
+      "publisher": "",
+      "format": "paperback",
+      "notes": "",
+      "priority": 1
+    },
+    "9781234561024": {
+      "isbn": "9781234561024",
+      "book_title": "The Complete Guide to Publishing (Revised)",
+      "book_id": "example_book_v1",
+      "scheduled_date": "2025-08-05",
+      "assigned_date": "2025-08-05T06:32:30.379331",
+      "status": "assigned",
+      "imprint": "",
+      "publisher": "",
+      "format": "paperback",
+      "notes": "Rebuild - 2025-08-05T06:32:30.379898",
+      "priority": 1
+    },
+    "9781234567890": {
+      "isbn": "9781234567890",
+      "book_title": "Manual ISBN Book",
+      "book_id": "manual_1",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": "2025-08-05T07:27:34.864898",
+      "status": "assigned",
+      "imprint": "Test Imprint",
+      "publisher": "Test Pub",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Has manual ISBN",
+      "priority": 1
+    },
+    "9780123456789": {
+      "isbn": "9780123456789",
+      "book_title": "The Art of Programming",
+      "book_id": "programming_book_1",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": "2025-08-05T07:29:23.515069",
+      "status": "assigned",
+      "imprint": "Tech Books",
+      "publisher": "My Publisher",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Manual ISBN assignment",
+      "priority": 1
+    },
+    "9780987654321": {
+      "isbn": "9780987654321",
+      "book_title": "Database Design Principles",
+      "book_id": "db_book_1",
+      "scheduled_date": "2025-01-01",
+      "assigned_date": "2025-08-05T07:29:23.515366",
+      "status": "assigned",
+      "imprint": "Tech Books",
+      "publisher": "My Publisher",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Another manual ISBN",
+      "priority": 1
+    },
+    "9780111111111": {
+      "isbn": "9780111111111",
+      "book_title": "Python for Beginners",
+      "book_id": "python_101",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": "2025-08-05T07:30:24.641116",
+      "status": "assigned",
+      "imprint": "Demo Books",
+      "publisher": "Demo Publisher",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Manual ISBN - specific requirement",
+      "priority": 1
+    },
+    "9780222222222": {
+      "isbn": "9780222222222",
+      "book_title": "Python Web Development",
+      "book_id": "python_301",
+      "scheduled_date": "2025-01-01",
+      "assigned_date": "2025-08-05T07:30:24.641342",
+      "status": "assigned",
+      "imprint": "Demo Books",
+      "publisher": "Demo Publisher",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Manual ISBN - pre-purchased",
+      "priority": 1
+    },
+    "9780333333333": {
+      "isbn": "9780333333333",
+      "book_title": "JSON Manual Book",
+      "book_id": "json_manual_1",
+      "scheduled_date": "2024-12-01",
+      "assigned_date": "2025-08-05T07:30:24.641745",
+      "status": "assigned",
+      "imprint": "JSON Books",
+      "publisher": "JSON Publisher",
+      "format": "paperback",
+      "notes": "Manual assignment from schedule. Manual ISBN from JSON",
+      "priority": 1
+    }
+  },
+  "isbn_blocks": {
+    "978_123456_1000_1999": {
+      "prefix": "978",
+      "start_number": 1000,
+      "end_number": 1999,
+      "publisher_code": "123456",
+      "imprint_code": "",
+      "total_count": 1000,
+      "used_count": 0,
+      "reserved_count": 0
+    },
+    "978_555555_8000_8099": {
+      "prefix": "978",
+      "start_number": 8000,
+      "end_number": 8099,
+      "publisher_code": "555555",
+      "imprint_code": "DEMO",
+      "total_count": 100,
+      "used_count": 0,
+      "reserved_count": 0
+    }
+  },
+  "last_updated": "2025-08-05T07:30:24.641772",
+  "version": "1.0"
+}

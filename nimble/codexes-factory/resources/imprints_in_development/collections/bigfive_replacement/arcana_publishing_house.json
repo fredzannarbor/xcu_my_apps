@@ -1,0 +1,28 @@
+{
+  "imprint": "Arcana Publishing House",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@arcanapublishinghouse.com",
+  "branding": {
+    "tagline": "Discover the Hidden Arcana",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.arcanapublishinghouse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Tarot guidebooks, divination how-to books, and tarot decks.",
+    "target_audience": "Tarot aficionados, students of the occult, spiritual explorers.",
+    "competitive_advantage": "We offer a wide range of books and materials that cover everything from the basics to advanced practices of tarot and divination. Our books are written by experienced practitioners in the field, ensuring authenticity.",
+    "example_titles": "‘The Arcana Unveiled: A Comprehensive Guide to Tarot’, ‘The Shamanic Tarot: An Indigenous Approach’"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

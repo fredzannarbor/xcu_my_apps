@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ifthen}
+% Setting up Korean font
+\newfontfamily\koreanfont{AppleMyungjo}
+% Set sans-serif font to Lulo One Bold
+\setsansfont{LuloOne-Bold.otf}[
+  Path=/Users/fred/Library/Fonts/,
+  Extension=.otf,
+  UprightFont=*,
+  BoldFont=*,
+  FontFace={b}{n}{Font=* One Bold}
+]
+
+% Custom commands with unique names to avoid conflicts
+\newcommand{\coverPageHeight}{9in}
+\newcommand{\coverPageWidth}{12.75in}
+\newcommand{\coverBookTitle}{Reason v. Chance}
+\newcommand{\coverBookAuthor}{AI Lab for Book-Lovers}
+\newcommand{\coverImprint}{xynapse traces}
+\newcommand{\coverPilsaLineOne}{필사}
+\newcommand{\coverPilsaLineTwo}{Explore the power of reason and chance with the Korean practice of transcriptive meditation.}
+\newcommand{\coverFrontCoverText}{This is a test front cover text. The book contains 100 quotations, has a bibliography, and a verification log.}
+\newcommand{\coverBackCoverText}{This is a test back cover text. The book contains 100 quotations, has a bibliography, and a verification log.}
+\newcommand{\coverTrimWidth}{6.0in}
+\newcommand{\coverTrimHeight}{9.0in}
+\newcommand{\coverSpineWidth}{0.5in}
+\newcommand{\coverBleedIn}{0.125in}
+\newcommand{\coverFrontCoverXShift}{3.25in}
+\newcommand{\coverBackCoverXShift}{-3.25in}
+\newcommand{\coverDebugMode}{true}
+\definecolor{coverbackground}{cmyk}{0.0, 0.85, 0.86, 0.0} % Saekdong (Vivid Red)
+\definecolor{white}{cmyk}{0,0,0,0}
+
+% Set geometry using command values explicitly
+\geometry{paperheight=\coverPageHeight, paperwidth=\coverPageWidth, margin=0in}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+    % Fill background with selected color
+    \fill[coverbackground] (current page.south west) rectangle (current page.north east);
+    % Spine title
+    \node[rotate=270, anchor=center, text=white, font=\sffamily\bfseries\scshape] at (current page.center) {\coverBookTitle{} -- \coverBookAuthor};
+    % Front cover content
+    \coordinate (covercenter) at ([xshift=\coverFrontCoverXShift]current page.center);
+    \node[anchor=north, text centered, text width=5in, text=white] at ([yshift={(\coverTrimHeight/2) - 1.25in}]covercenter) {{\sffamily\Huge\bfseries\scshape \coverBookTitle\par}};
+    \node[anchor=center, text centered, text width=5in, text=white] at (covercenter) {{\koreanfont\fontsize{96}{120}\selectfont\bfseries \coverPilsaLineOne\par}\vspace{0.5em}{\sffamily\large\itshape \coverPilsaLineTwo\par}};
+    \node[anchor=south, text centered, text width=5in, text=white] at ([yshift={-(\coverTrimHeight/2) + 1.25in}]covercenter) {{\sffamily\Large\bfseries\scshape \coverBookAuthor\par}\vspace{2em}{\sffamily\large\bfseries\scshape \coverImprint\par}};
+    % Back cover text    % Back cover text
+    \coordinate (backcovercenter) at ([xshift=\coverBackCoverXShift]current page.center);
+    \node[anchor=center, text width=4in, align=justify, font=\rmfamily\normalsize, text=white] at (backcovercenter) {\coverBackCoverText};
+    % Debug mode: draw boundaries
+    \ifthenelse{\equal{\coverDebugMode}{true}}{
+        \begin{scope}[font=\sffamily\tiny]
+            % Back cover text box (orange)
+            \draw[orange, thick] ([xshift=-2in, yshift=3in]backcovercenter) rectangle ([xshift=2in, yshift=-3in]backcovercenter) node[midway] {Back Cover Text Area};
+        \end{scope}
+    }{}
+\end{tikzpicture}
+\end{document}

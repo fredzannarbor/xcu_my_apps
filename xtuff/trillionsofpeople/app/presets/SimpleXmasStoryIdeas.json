@@ -1,0 +1,27 @@
+[
+    {
+        "preset_name" : "Simple Christmas Story Idea Generator",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "Describe your project in a few words:",
+        "preset_description": "Simple Idea Generator for Christmas Stories",
+        "preset_pagetype": "Launcher",
+        "pre_user_input": "",
+        "post_user_input": "\nStory ideas should be complex, moving, and surprising.",
+        "engine": "davinci-instruct-beta-v3",
+        "prompt": "Generate a list of ideas for Christmas stories related to these key phrases: ",
+        "temperature": 0.85,
+        "max_tokens": 300,
+        "top_p": 1,
+        "frequency_penalty": 0.7,
+        "presence_penalty": 0,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "Enter brief description of your project here.",
+        "user" : "37",
+        "organization" : "",
+        "preset_db" : "",
+        "preset_additional_notes" : ""
+    }
+]

@@ -1,0 +1,28 @@
+{
+  "imprint": "Blockchain Prospects",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@blockchainprospects.com",
+  "branding": {
+    "tagline": "Uncover the Potential of Blockchain",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.blockchainprospects.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Blockchain applications, cryptocurrency security, and digital ledger systems",
+    "target_audience": "Tech enthusiasts, entrepreneurs, digital security experts",
+    "competitive_advantage": "In-depth and accessible analysis of blockchain technology",
+    "example_titles": "Blockchain for Business by Joe Lubin, Securing Crypto by Charlie Lee"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

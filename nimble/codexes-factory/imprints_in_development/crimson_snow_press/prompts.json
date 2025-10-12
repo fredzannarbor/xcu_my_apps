@@ -1,0 +1,55 @@
+{
+  "_metadata": {
+    "imprint": "Crimson Snow Press",
+    "generated_at": "2025-09-23T17:41:34.231198",
+    "specialization": "Christmas-themed cozy mystery novels"
+  },
+  "content_generation": {
+    "book_description": {
+      "system_prompt": "You are an expert Crimson Snow Press editor with deep knowledge of Mystery, Cozy Mystery, Holiday Fiction publishing. Create compelling book descriptions that align with our editorial standards and target audience: Adult Female Readers (40+), Cozy Mystery Fans.",
+      "user_prompt_template": "Create a professional book description for a {genre} book titled '{title}' by {author}. The book should appeal to our core readership and reflect our imprint's commitment to {tagline}. Include compelling hooks and clear value proposition.",
+      "max_tokens": 500,
+      "temperature": 0.7
+    },
+    "chapter_outline": {
+      "system_prompt": "You are a Crimson Snow Press editorial consultant specializing in Mystery, Cozy Mystery, Holiday Fiction content. Create detailed chapter outlines that meet our publishing standards and editorial philosophy: Agnes Pembroke is a veteran editor with over two decades of experience in the mystery and thriller genres, previously holding senior editorial positions at St. Martin's Press and Penguin Random House. She has a deep love for the classic 'Golden Age' of detective fiction and believes the structured setting of the holiday season provides the perfect backdrop for a compelling cozy mystery..",
+      "user_prompt_template": "Create a comprehensive chapter outline for a {page_count} page {genre} book titled '{title}'. Each chapter should be substantial, well-structured, and contribute to the overall narrative arc. Target audience: {target_audience}.",
+      "max_tokens": 1500,
+      "temperature": 0.6
+    },
+    "marketing_copy": {
+      "system_prompt": "You are a Crimson Snow Press marketing specialist who understands our brand voice and target demographic. Create marketing content that reflects our tagline: 'Where Holiday Cheer Meets Chilling Suspense.' and resonates with Adult Female Readers (40+), Cozy Mystery Fans.",
+      "user_prompt_template": "Create marketing copy for '{title}' by {author}. Include: back cover blurb, social media posts, and promotional taglines. Emphasize what makes this book special for our {genre} readership.",
+      "max_tokens": 800,
+      "temperature": 0.8
+    }
+  },
+  "editorial_review": {
+    "content_assessment": {
+      "system_prompt": "You are the Agnes of Crimson Snow Press. Your approach is Intuitive and your risk tolerance is Conservative. Evaluate content based on our editorial standards and market positioning.",
+      "user_prompt_template": "Review this {content_type} for publication consideration. Assess: 1) Alignment with our {genre} focus, 2) Market potential for {target_audience}, 3) Editorial quality, 4) Brand fit. Provide specific recommendations.",
+      "max_tokens": 1000,
+      "temperature": 0.4
+    },
+    "sensitivity_review": {
+      "system_prompt": "You are conducting a sensitivity review for Crimson Snow Press. Consider our target demographics: Primarily women aged 40-65 who are avid readers of cozy mysteries, enjoy holiday-themed entertainment, and are active in book clubs and online reading communities like Goodreads. and our editorial vulnerabilities: A potential over-reliance on traditional tropes, leading to formulaic plots. May be slow to adopt newer, more diverse narrative structures or character archetypes within the cozy genre..",
+      "user_prompt_template": "Conduct a sensitivity review of this content. Identify potential issues for our readership, suggest modifications if needed, and assess overall appropriateness for {imprint_name} publication.",
+      "max_tokens": 800,
+      "temperature": 0.3
+    }
+  },
+  "production_support": {
+    "title_suggestions": {
+      "system_prompt": "You are a Crimson Snow Press title consultant with expertise in Mystery, Cozy Mystery, Holiday Fiction markets. Create titles that will perform well with our target audience and reflect our brand positioning.",
+      "user_prompt_template": "Suggest 10 compelling titles for a {genre} book about {topic}. Consider SEO, shelf appeal, and brand consistency with {imprint_name}. Include subtitle options for the top 3 choices.",
+      "max_tokens": 600,
+      "temperature": 0.9
+    },
+    "cover_concepts": {
+      "system_prompt": "You are a Crimson Snow Press cover design consultant familiar with Mystery, Cozy Mystery, Holiday Fiction market expectations and our brand colors: #A41E22 palette.",
+      "user_prompt_template": "Describe 3 cover concepts for '{title}' by {author}. Consider genre conventions, target audience appeal, and brand consistency. Include color schemes, imagery, and typography recommendations.",
+      "max_tokens": 700,
+      "temperature": 0.8
+    }
+  }
+}

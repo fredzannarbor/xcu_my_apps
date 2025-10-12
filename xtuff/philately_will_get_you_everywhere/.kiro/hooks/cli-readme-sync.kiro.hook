@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "CLI Parameter Documentation Sync",
+  "description": "Monitors Python scripts for command-line parameter changes and ensures the README.md file is updated to document any new parameters",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.py",
+      "*.py"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A Python script has been modified. Please analyze the changes to identify any new or modified command-line parameters (using argparse, click, or similar libraries). If new parameters have been added, check if the README.md file documents these parameters and update it accordingly. Focus on:\n\n1. Scanning for argument parser definitions and new arguments\n2. Extracting parameter names, descriptions, and usage examples\n3. Updating the README.md file with proper documentation for any new parameters\n4. Ensuring the documentation format is consistent with existing parameter documentation\n\nPlease provide clear documentation that includes parameter names, descriptions, default values, and usage examples."
+  }
+}

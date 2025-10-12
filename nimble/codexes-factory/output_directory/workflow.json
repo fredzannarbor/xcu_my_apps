@@ -1,0 +1,51 @@
+{
+  "pipeline_settings": {
+    "imprint_name": "New Literary Imprint",
+    "default_trim_size": "6x9",
+    "default_binding": "paperback",
+    "quality_level": "high",
+    "automation_level": "medium"
+  },
+  "validation_rules": {
+    "required_metadata": [
+      "title",
+      "author",
+      "isbn13",
+      "summary_long"
+    ],
+    "content_validation": {
+      "min_word_count": 10000,
+      "max_word_count": 200000,
+      "required_sections": [
+        "title_page",
+        "copyright",
+        "content"
+      ]
+    },
+    "design_validation": {
+      "font_requirements": {
+        "headline": "Serif, readable, professional",
+        "body": "Clean, readable, professional",
+        "primary_font": "Minion Pro",
+        "secondary_font": "Myriad Pro",
+        "body_font": "Minion Pro"
+      },
+      "color_requirements": {
+        "primary": "#2C3E50",
+        "secondary": "#3498DB",
+        "accent": "#E74C3C",
+        "neutral": "#F8F9FA"
+      },
+      "layout_requirements": ""
+    }
+  },
+  "automation_settings": "",
+  "quality_standards": "",
+  "distribution_config": {
+    "primary_channels": "",
+    "secondary_channels": "",
+    "international": "",
+    "digital_first": ""
+  },
+  "generated_at": "2025-08-11T03:15:49.413994"
+}

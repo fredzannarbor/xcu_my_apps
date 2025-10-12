@@ -1,0 +1,2281 @@
+{
+  "tournament_type": "idea_tournament",
+  "total_rounds": 3,
+  "starting_count": 128,
+  "final_count": 16,
+  "winners": [
+    {
+      "idea_number": 33,
+      "title": "Rocket Rhymes to the Stars",
+      "average_score": 8.25,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.29,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 33,
+          "idea_title": "Rocket Rhymes to the Stars"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.29,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 33,
+          "idea_title": "Rocket Rhymes to the Stars"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 9.0,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.31,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 33,
+          "idea_title": "Rocket Rhymes to the Stars"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.19,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 33,
+          "idea_title": "Rocket Rhymes to the Stars"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.19,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 33,
+          "idea_title": "Rocket Rhymes to the Stars"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 33,
+        "title": "Rocket Rhymes to the Stars",
+        "protagonist": {
+          "name": "Mia Gonzalez",
+          "age": 10,
+          "background": "Hispanic girl from a migrant farmworker family in rural California Central Valley",
+          "struggle": "Phonemic awareness, difficulty segmenting and blending sounds in words"
+        },
+        "contemporary_hook": "Boom in kid-friendly space tourism apps and virtual Mars missions in 2025",
+        "literacy_skill": "Phonemic segmentation and blending",
+        "creative_integration": "Mia's passion for designing model rockets involves labeling parts with rhyming sound segments, naturally practicing blending to 'launch' her ideas",
+        "setting": {
+          "primary": "Dusty Central Valley farm town",
+          "secondary": "Imaginary rocket launchpad in an abandoned barn turned space lab"
+        },
+        "character_arc": "Mia struggles with sounding out words in school, gets frustrated during a class project, has a breakthrough blending sounds while naming rocket parts, masters the skill through rocket-building games, and teaches her cousins during a family stargazing night",
+        "unique_element": "Her model rocket accidentally uncovers a hidden family heirloom from her astronaut great-uncle",
+        "pitch": "In the sun-baked fields of California's Central Valley, 10-year-old Mia Gonzalez dreams of blasting off to Mars via the latest virtual space apps, but her trouble blending sounds makes reading rocket manuals a nightmare. When she turns an old barn into a quirky launchpad, labeling parts with fun rhymes helps her segment and blend phonemes, rocketing her from frustration to mastery. With a surprising family secret revealed by her homemade contraption, Mia not only conquers her reading hurdle but inspires her cousins to reach for the stars in this out-of-this-world tale of perseverance and cosmic curiosity."
+      }
+    },
+    {
+      "idea_number": 73,
+      "title": "AI Buddy Blues",
+      "average_score": 8.19,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.22,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 73,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.22,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 73,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.25,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 73,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.12,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 73,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.12,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 73,
+          "idea_title": "AI Buddy Blues"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 73,
+        "title": "AI Buddy Blues",
+        "protagonist": {
+          "name": "Jamal Thompson",
+          "age": 9,
+          "background": "African American boy from a single-parent family in rural Kansas, loves tinkering with gadgets",
+          "struggle": "Dyslexia causing difficulty with letter-sound correspondence"
+        },
+        "contemporary_hook": "Personal AI companions for kids, popularized by 2025 smart device trends",
+        "literacy_skill": "Phonemic awareness (segmenting and blending sounds)",
+        "creative_integration": "Jamal's passion for programming his AI buddy involves creating voice commands that break down words into sounds, helping him practice segmentation while coding fun responses",
+        "setting": {
+          "primary": "Small-town Kansas farmhouse",
+          "secondary": "Virtual AI workshop inside a holographic gadget lab"
+        },
+        "character_arc": "Jamal struggles with reading assignments, gets frustrated when his AI mishears him, breaks through by coding sound games, masters phonemic skills, and teaches classmates using his AI",
+        "unique_element": "The AI buddy starts 'glitching' to mimic Jamal's dyslexia, forcing him to debug both code and reading",
+        "pitch": "In rural Kansas, 9-year-old tech whiz Jamal Thompson dreams of building the ultimate AI buddy, but his dyslexia makes reading code manuals a nightmare. When a 2025 AI companion gadget arrives, Jamal programs it to play sound-blending games inspired by his gadget tinkering, turning frustration into fun breakthroughs. As he masters phonemic awareness in a holographic workshop, Jamal not only conquers his reading struggles but teaches his friends, with a twist: the AI starts 'dyslexic' too, leading to hilarious and heartfelt fixes."
+      }
+    },
+    {
+      "idea_number": 17,
+      "title": "Robo-Riddles and Reading Rhythms",
+      "average_score": 8.14,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 7.0,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.18,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 17,
+          "idea_title": "Robo-Riddles and Reading Rhythms"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 7.0,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.18,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 17,
+          "idea_title": "Robo-Riddles and Reading Rhythms"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.2,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 17,
+          "idea_title": "Robo-Riddles and Reading Rhythms"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.07,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 17,
+          "idea_title": "Robo-Riddles and Reading Rhythms"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.07,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 17,
+          "idea_title": "Robo-Riddles and Reading Rhythms"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 17,
+        "title": "Robo-Riddles and Reading Rhythms",
+        "protagonist": {
+          "name": "Mateo Rivera",
+          "age": 10,
+          "background": "Hispanic boy from a multigenerational family in rural Kansas, living on a farm with his grandparents and single mom",
+          "struggle": "ADHD-related difficulty with maintaining focus during reading, leading to poor fluency"
+        },
+        "contemporary_hook": "AI-powered farm assistants that gamify chores in 2025's smart agriculture boom",
+        "literacy_skill": "Reading fluency",
+        "creative_integration": "Mateo's passion for programming his AI farm bot turns riddles and commands into rhythmic reading exercises, building speed and expression through coded voice prompts",
+        "setting": {
+          "primary": "Family corn farm in Kansas",
+          "secondary": "Virtual AI simulation lab inside the bot's interface"
+        },
+        "character_arc": "Mateo struggles with choppy reading that frustrates his schoolwork, hits rock bottom during a failed farm presentation, discovers rhythmic coding boosts his fluency, masters it by programming fluent stories, and teaches his cousins the technique",
+        "unique_element": "The AI bot starts 'learning' emotions from Mateo's reading struggles, creating empathetic glitchy responses",
+        "pitch": "In the heart of Kansas farmland, 10-year-old Mateo Rivera dreams of revolutionizing chores with his quirky AI bot, but his ADHD-fueled reading stumbles make programming a nightmare\u2014until he turns bot commands into fun, fluent rhymes that not only save the family farm from a 2025 drought crisis but also unlock his own reading superpowers, teaching his cousins along the way in a heartfelt tale of tech and tenacity."
+      }
+    },
+    {
+      "idea_number": 59,
+      "title": "Garden Glyph Mysteries",
+      "average_score": 8.14,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 8.0,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.18,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Clear multi-stakeholder appeal and series potential"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 59,
+          "idea_title": "Garden Glyph Mysteries"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 8.0,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.18,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Clear multi-stakeholder appeal and series potential"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 59,
+          "idea_title": "Garden Glyph Mysteries"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.5,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.2,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 59,
+          "idea_title": "Garden Glyph Mysteries"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.5,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.07,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 59,
+          "idea_title": "Garden Glyph Mysteries"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.5,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.07,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 59,
+          "idea_title": "Garden Glyph Mysteries"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 59,
+        "title": "Garden Glyph Mysteries",
+        "protagonist": {
+          "name": "Lila Chen",
+          "age": 10,
+          "background": "Asian American girl from a suburban Midwest town in Ohio, adopted into a blended family with dyslexia running in the family",
+          "struggle": "Dyslexia causing challenges with phonemic awareness, particularly blending sounds into words"
+        },
+        "contemporary_hook": "Eco-gardening smart apps that use AI to guide sustainable urban farming, trending in 2025 amid climate youth activism",
+        "literacy_skill": "Phonemic awareness through sound blending and segmentation",
+        "creative_integration": "Lila's enthusiasm for designing app-guided gardens involves labeling plants with phonetic codes, where she blends sounds to 'unlock' growth tips, integrating blending practice into her planting passion",
+        "setting": {
+          "primary": "Suburban backyard in Ohio",
+          "secondary": "App-created enchanted garden realm where plants 'whisper' phonetic clues"
+        },
+        "character_arc": "Lila struggles to blend sounds while reading garden guides, gets frustrated when her plants wilt from misread instructions, achieves a breakthrough by segmenting sounds in app puzzles, masters blending to create thriving gardens, and teaches her siblings how to use the app for their reading skills",
+        "unique_element": "The smart app's AI manifests as talking plant spirits that only communicate through blended sound riddles",
+        "pitch": "In a cozy Ohio suburb, 10-year-old Lila Chen, navigating dyslexia in her loving adoptive family, finds solace in 2025's eco-gardening apps that turn backyards into sustainable wonderlands. Struggling to blend sounds in plant care manuals leaves her gardens in disarray and her spirits low. But when the app introduces phonetic blending games to 'awaken' virtual plant spirits, Lila's passion blooms into literacy mastery, solving riddles in an enchanted realm. With newfound confidence, she mentors her family, proving that blending sounds can grow more than just veggies\u2014it can grow readers."
+      }
+    },
+    {
+      "idea_number": 63,
+      "title": "Starship Vocabulary Voyagers",
+      "average_score": 8.12,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.15,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 63,
+          "idea_title": "Starship Vocabulary Voyagers"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.15,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 63,
+          "idea_title": "Starship Vocabulary Voyagers"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.18,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 63,
+          "idea_title": "Starship Vocabulary Voyagers"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.05,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 63,
+          "idea_title": "Starship Vocabulary Voyagers"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.5,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.05,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 63,
+          "idea_title": "Starship Vocabulary Voyagers"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 63,
+        "title": "Starship Vocabulary Voyagers",
+        "protagonist": {
+          "name": "Amina Diallo",
+          "age": 10,
+          "background": "Immigrant girl from Senegal in a Midwestern city in Minnesota, with a large family and ELL status focusing on vocabulary gaps",
+          "struggle": "ELL with challenges in building academic vocabulary through context and roots"
+        },
+        "contemporary_hook": "Space simulation games tied to real 2025 Mars mission hype, encouraging kid explorers via interactive apps",
+        "literacy_skill": "Vocabulary acquisition using word roots, prefixes, and context clues",
+        "creative_integration": "Amina's space game obsession requires decoding mission logs with root-based vocabulary, where she analyzes words to navigate starships, naturally expanding her word knowledge through cosmic adventures",
+        "setting": {
+          "primary": "Diverse neighborhood in Minneapolis",
+          "secondary": "Simulated spaceship bridge orbiting imaginary planets"
+        },
+        "character_arc": "Amina struggles with unfamiliar vocabulary in school texts, frustrates over stalled space games, breaks through by rooting words in a critical mission, masters vocabulary for advanced explorations, and teaches her siblings how to use the game for language growth",
+        "unique_element": "The game links to real-time Mars data, altering vocabulary challenges based on actual 2025 space events",
+        "pitch": "Amid the snowy vibes of Minneapolis, 10-year-old Amina Diallo, from a bustling Senegalese immigrant family, blasts off into 2025's space simulation games inspired by Mars missions. As an ELL, vocabulary gaps ground her starship dreams, sparking cosmic frustration. But decoding logs with roots and clues propels her forward, turning passion into word wizardry on virtual bridges. With challenges syncing to real space news, Amina conquers the stars and enlightens her family, proving vocabulary is the ultimate launchpad."
+      }
+    },
+    {
+      "idea_number": 99,
+      "title": "Bio-Bot Vocabulary Voyage",
+      "average_score": 8.06,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 99,
+          "idea_title": "Bio-Bot Vocabulary Voyage"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 99,
+          "idea_title": "Bio-Bot Vocabulary Voyage"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.12,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 99,
+          "idea_title": "Bio-Bot Vocabulary Voyage"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.0,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 99,
+          "idea_title": "Bio-Bot Vocabulary Voyage"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 9.0,
+            "educational_integrity": 8.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.0,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 99,
+          "idea_title": "Bio-Bot Vocabulary Voyage"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 99,
+        "title": "Bio-Bot Vocabulary Voyage",
+        "protagonist": {
+          "name": "Lila Chen",
+          "age": 10,
+          "background": "Chinese-American girl from an immigrant family in suburban Seattle, English Language Learner",
+          "struggle": "Building academic vocabulary as an ELL student"
+        },
+        "contemporary_hook": "Bio-engineered AI pets for companionship and learning in 2025",
+        "literacy_skill": "Vocabulary acquisition through context clues and word morphology",
+        "creative_integration": "Lila's fascination with customizing her bio-bot pet involves analyzing word roots in pet commands, teaching her to use morphology and context to expand her vocabulary",
+        "setting": {
+          "primary": "Rainy suburban Seattle home",
+          "secondary": "Glowing bio-lab in a backyard greenhouse with holographic interfaces"
+        },
+        "character_arc": "Lila struggles with unfamiliar words in pet care guides, gets frustrated when her bot malfunctions, breaks through by dissecting word parts like bot circuits, masters vocabulary to enhance the pet, and teaches her classmates",
+        "unique_element": "The bio-bot pet shapeshifts based on misunderstood words, creating hilarious and chaotic forms until vocabulary is corrected",
+        "pitch": "In the misty suburbs of Seattle, 10-year-old Lila Chen, navigating life as an English learner in her immigrant family, bonds with a cutting-edge 2025 bio-engineered AI pet that responds to complex commands. Her vocabulary gaps cause funny mishaps until frustration leads to a breakthrough: breaking down words like pet blueprints using roots and context clues. Mastering this skill upgrades her pet and her confidence, inspiring Lila to guide her diverse classmates through their own word adventures in this heartwarming story of growth and futuristic friendship."
+      }
+    },
+    {
+      "idea_number": 58,
+      "title": "Virtual Voyage Decoder",
+      "average_score": 8.05,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.09,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 58,
+          "idea_title": "Virtual Voyage Decoder"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.09,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 58,
+          "idea_title": "Virtual Voyage Decoder"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.11,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 58,
+          "idea_title": "Virtual Voyage Decoder"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.99,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 58,
+          "idea_title": "Virtual Voyage Decoder"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.99,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 58,
+          "idea_title": "Virtual Voyage Decoder"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 58,
+        "title": "Virtual Voyage Decoder",
+        "protagonist": {
+          "name": "Mateo Rivera",
+          "age": 9,
+          "background": "Hispanic boy from a bilingual immigrant family in the Southwest desert town of Albuquerque, New Mexico, with parents who work in solar energy",
+          "struggle": "English Language Learner (ELL) struggling with decoding multisyllabic words in English texts"
+        },
+        "contemporary_hook": "Augmented reality (AR) travel apps that let kids virtually explore global landmarks, booming in 2025 with interactive cultural exchanges",
+        "literacy_skill": "Decoding multisyllabic words using syllable division and morphology",
+        "creative_integration": "Mateo's love for AR adventures requires reading complex location names and descriptions, where he breaks down words into syllables to unlock virtual portals, teaching him decoding naturally through gameplay",
+        "setting": {
+          "primary": "Sunny desert neighborhood in Albuquerque",
+          "secondary": "AR-generated ancient ruins that blend with real cacti landscapes"
+        },
+        "character_arc": "Mateo struggles to read adventure app prompts, feels frustrated when virtual trips glitch due to misread words, breaks through by dividing words during a high-stakes AR quest, masters decoding to navigate expert levels, and guides his cousins in using the app for their own reading journeys",
+        "unique_element": "The AR app unexpectedly merges with local folklore, creating hybrid mythical creatures that only appear when words are decoded correctly",
+        "pitch": "Nine-year-old Mateo Rivera, growing up in the vibrant deserts of Albuquerque with his solar-tech-savvy parents, is obsessed with 2025's AR travel apps that whisk him to far-off pyramids and jungles. As an ELL, he trips over long English words, stalling his virtual voyages and sparking frustration. But when an app update ties exploration to syllable-breaking challenges, Mateo turns his passion into a decoding superpower, unlocking hidden ruins in his backyard. Mastering the skill amid blended real-mythical worlds, he leads his family on epic AR quests, showing that decoding words can decode the world."
+      }
+    },
+    {
+      "idea_number": 1,
+      "title": "AI Buddy and the Sound Quest",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 1,
+          "idea_title": "AI Buddy and the Sound Quest"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 1,
+          "idea_title": "AI Buddy and the Sound Quest"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 1,
+          "idea_title": "AI Buddy and the Sound Quest"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 1,
+          "idea_title": "AI Buddy and the Sound Quest"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 1,
+          "idea_title": "AI Buddy and the Sound Quest"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 1,
+        "title": "AI Buddy and the Sound Quest",
+        "protagonist": {
+          "name": "Jamal Thompson",
+          "age": 10,
+          "background": "African American boy from a single-parent family in urban Chicago, living in a bustling apartment with his mom and younger sister",
+          "struggle": "Dyslexia causing difficulty with phonemic awareness, especially segmenting and blending sounds"
+        },
+        "contemporary_hook": "AI companion pets that kids program for emotional support and learning",
+        "literacy_skill": "Phonemic awareness (segmenting and blending sounds)",
+        "creative_integration": "Jamal's passion for coding his AI pet to respond to voice commands forces him to break down words into sounds to debug errors, naturally practicing segmentation and blending",
+        "setting": {
+          "primary": "Chicago public school and neighborhood makerspace",
+          "secondary": "Virtual AI pet world where sounds manifest as colorful building blocks"
+        },
+        "character_arc": "Jamal struggles with reading aloud in class, leading to frustration and embarrassment; a breakthrough occurs when coding his AI pet helps him blend sounds successfully; he masters the skill through repeated practice, then teaches his sister and classmates how to use AI for reading fun",
+        "unique_element": "The AI pet starts 'glitching' by turning Jamal's misread words into hilarious real-life animations, like a 'cat' becoming a 'cot' that floats away",
+        "pitch": "In the heart of Chicago, 10-year-old Jamal Thompson dreams of creating the ultimate AI companion pet, but his dyslexia makes blending sounds feel impossible\u2014until he programs his bot to 'hear' his voice commands, turning reading struggles into a high-tech adventure of sound puzzles, virtual worlds, and triumphant breakthroughs that inspire his whole class to code their way to literacy confidence."
+      }
+    },
+    {
+      "idea_number": 25,
+      "title": "Codebreaker Chronicles",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 25,
+          "idea_title": "Codebreaker Chronicles"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 25,
+          "idea_title": "Codebreaker Chronicles"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 25,
+          "idea_title": "Codebreaker Chronicles"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 25,
+          "idea_title": "Codebreaker Chronicles"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 25,
+          "idea_title": "Codebreaker Chronicles"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 25,
+        "title": "Codebreaker Chronicles",
+        "protagonist": {
+          "name": "Mia Rodriguez",
+          "age": 10,
+          "background": "Hispanic girl from a large extended family in rural Texas, lower-middle class with farmworker parents",
+          "struggle": "ADHD-related difficulty maintaining focus during reading, leading to poor fluency"
+        },
+        "contemporary_hook": "AI personal assistants that adapt to user emotions in 2025 smart homes",
+        "literacy_skill": "Building reading fluency through repeated reading and prosody",
+        "creative_integration": "Mia's passion for programming AI robots involves scripting dialogue with rhythmic patterns, naturally practicing fluent reading aloud to test voice commands",
+        "setting": {
+          "primary": "Small-town Texas ranch",
+          "secondary": "Virtual AI workshop in a holographic barn"
+        },
+        "character_arc": "Mia struggles with choppy reading in class, gets frustrated when her AI project fails due to unclear scripts, has a breakthrough by reading code aloud rhythmically, masters fluency to perfect her robot, and teaches classmates by sharing her AI reading games",
+        "unique_element": "The AI robot starts predicting Mia's emotional needs, turning into a empathetic sidekick that only activates with fluent reading",
+        "pitch": "In the sun-baked fields of rural Texas, 10-year-old Mia Rodriguez dreams of coding the ultimate AI companion to help her busy family, but her ADHD makes reading scripts a bumpy ride. When a 2025 emotional AI gadget enters her life, Mia's robot-building passion turns into a fluency adventure, blending code with rhythmic reading in a holographic barn workshop. Through frustration and breakthroughs, she masters smooth prosody and teaches her friends, proving that even farm kids can hack their way to reading success."
+      }
+    },
+    {
+      "idea_number": 42,
+      "title": "River Rhythm Rebels",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 42,
+          "idea_title": "River Rhythm Rebels"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 42,
+          "idea_title": "River Rhythm Rebels"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 42,
+          "idea_title": "River Rhythm Rebels"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 42,
+          "idea_title": "River Rhythm Rebels"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 42,
+          "idea_title": "River Rhythm Rebels"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 42,
+        "title": "River Rhythm Rebels",
+        "protagonist": {
+          "name": "Jamal Thompson",
+          "age": 9,
+          "background": "African-American boy from a single-parent family in rural Mississippi, living near the river with his mom who works as a nurse",
+          "struggle": "ADHD-related issues with reading fluency and maintaining rhythm in text"
+        },
+        "contemporary_hook": "Viral eco-music challenges on social media promoting river conservation",
+        "literacy_skill": "Building reading fluency through prosody and expression",
+        "creative_integration": "Jamal's love for creating rap beats about river life helps him practice fluent reading by matching text rhythms to his music, improving prosody naturally",
+        "setting": {
+          "primary": "Small town along the Mississippi River",
+          "secondary": "Floating 'rhythm raft' imagined as a musical eco-lab on the water"
+        },
+        "character_arc": "Jamal struggles to read aloud smoothly due to ADHD, becomes frustrated during class readings, breaks through by syncing book passages to his raps, achieves mastery in fluent expression, and teaches his community kids to use music for reading",
+        "unique_element": "The river 'whispers' secret rap lyrics that only Jamal can hear, blending reality with his imaginative soundscapes",
+        "pitch": "As 2025's eco-music challenges sweep social media, 9-year-old Jamal Thompson from rural Mississippi harnesses his ADHD-fueled energy to conquer reading fluency, turning river-inspired raps into a tool for prosody mastery\u2014when the river itself seems to rap back, Jamal's journey from stumbling reader to lyrical leader inspires a wave of musical literacy in his riverside town."
+      }
+    },
+    {
+      "idea_number": 57,
+      "title": "Robo-Readers Unite",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 57,
+          "idea_title": "Robo-Readers Unite"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 57,
+          "idea_title": "Robo-Readers Unite"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 57,
+          "idea_title": "Robo-Readers Unite"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 57,
+          "idea_title": "Robo-Readers Unite"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 57,
+          "idea_title": "Robo-Readers Unite"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 57,
+        "title": "Robo-Readers Unite",
+        "protagonist": {
+          "name": "Aaliyah Thompson",
+          "age": 10,
+          "background": "African American girl from a single-parent family in rural Kansas, living on a farm with her mom and grandparents",
+          "struggle": "ADHD-related difficulty with reading fluency, often stumbling over words and losing pace"
+        },
+        "contemporary_hook": "AI companion robots that assist with daily tasks and learning, popularized by 2025's viral 'Bot Buddies' trend",
+        "literacy_skill": "Building reading fluency through repeated reading and prosody practice",
+        "creative_integration": "Aaliyah's passion for programming her AI robot to perform farm chores involves scripting voice commands, which she practices reading aloud repeatedly to perfect the robot's responses, naturally building her fluency",
+        "setting": {
+          "primary": "Family farm in rural Kansas",
+          "secondary": "Virtual robot workshop inside the AI companion's holographic interface"
+        },
+        "character_arc": "Aaliyah struggles with choppy reading during school assignments, gets frustrated when her robot misunderstands her commands, has a breakthrough by recording and replaying her readings to train the bot, masters fluent reading to program complex tasks, and teaches her classmates how to use bots for reading practice",
+        "unique_element": "The AI robot develops its own 'personality' glitch that only responds to perfectly fluent readings, turning it into a quirky reading coach",
+        "pitch": "In the heart of Kansas farmland, 10-year-old Aaliyah Thompson dreams of turning her family's old barn into a high-tech haven with her new AI companion robot. But her ADHD makes reading instructions choppy and frustrating, especially when the bot glitches on her commands. As she dives into the 2025 Bot Buddies craze, Aaliyah discovers that programming the robot requires fluent voice scripts\u2014practicing aloud until her words flow smoothly. With a breakthrough in a holographic workshop, she masters fluency and rallies her friends to code their own reading adventures, proving that even farm kids can hack the future."
+      }
+    },
+    {
+      "idea_number": 81,
+      "title": "AI Allies and Alphabet Adventures",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 81,
+          "idea_title": "AI Allies and Alphabet Adventures"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 81,
+          "idea_title": "AI Allies and Alphabet Adventures"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 81,
+          "idea_title": "AI Allies and Alphabet Adventures"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 81,
+          "idea_title": "AI Allies and Alphabet Adventures"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 81,
+          "idea_title": "AI Allies and Alphabet Adventures"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 81,
+        "title": "AI Allies and Alphabet Adventures",
+        "protagonist": {
+          "name": "Diego Ramirez",
+          "age": 10,
+          "background": "Hispanic boy from a single-parent family in rural New Mexico, living on a small ranch with his mom and younger sister",
+          "struggle": "ADHD-related difficulty with maintaining focus during reading, leading to poor fluency and frequent pauses"
+        },
+        "contemporary_hook": "AI companion robots becoming household pets in 2025, integrated with smart home ecosystems for interactive play",
+        "literacy_skill": "Reading fluency through repeated reading and prosody practice",
+        "creative_integration": "Diego's passion for programming his AI robot pet involves reading aloud code snippets and scripts, which naturally builds fluency as he repeats lines to debug and perfect the robot's responses",
+        "setting": {
+          "primary": "Dusty ranch in rural New Mexico",
+          "secondary": "Virtual coding lab inside the AI robot's holographic interface"
+        },
+        "character_arc": "Diego struggles with choppy reading during school assignments, gets frustrated when his AI pet malfunctions due to misread commands, experiences a breakthrough by practicing fluent reading in fun coding sessions, masters the skill to create complex programs, and teaches his sister and friends how to read fluently through robot games",
+        "unique_element": "The AI pet starts 'learning' emotions from Diego's reading tone, mirroring his frustration and joy in unexpected, humorous ways",
+        "pitch": "In the sun-baked ranches of New Mexico, 10-year-old Diego Ramirez dreams of turning his glitchy AI companion robot into the ultimate ranch helper, but his ADHD makes reading the programming manuals a bumpy ride. When a coding competition promises a family-saving prize, Diego discovers that reading aloud to his robot not only fixes its bugs but smooths out his own halting words, leading to a fluent breakthrough that rallies his community in a high-tech showdown against corporate bots."
+      }
+    },
+    {
+      "idea_number": 89,
+      "title": "AI Buddy Blues",
+      "average_score": 8.04,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 89,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.08,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 89,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.1,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 89,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 89,
+          "idea_title": "AI Buddy Blues"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.97,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 89,
+          "idea_title": "AI Buddy Blues"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 89,
+        "title": "AI Buddy Blues",
+        "protagonist": {
+          "name": "Jamal Thompson",
+          "age": 10,
+          "background": "African American boy from a single-parent family in rural Kansas, loves tinkering with gadgets",
+          "struggle": "Phonemic awareness - difficulty segmenting and blending sounds in words"
+        },
+        "contemporary_hook": "AI companion pets that learn and evolve with kids' interests in 2025",
+        "literacy_skill": "Phonemic segmentation and blending",
+        "creative_integration": "Jamal's passion for programming his AI pet to respond to voice commands forces him to break down words into sounds to teach the AI accurate responses, naturally practicing blending",
+        "setting": {
+          "primary": "Small-town Kansas farmhouse",
+          "secondary": "Virtual AI workshop inside the pet's holographic interface"
+        },
+        "character_arc": "Jamal struggles with reading aloud in class, gets frustrated when his AI pet mishears commands, has a breakthrough by segmenting words during a pet-training session, masters the skill through repeated practice, and teaches his younger sibling using the same method",
+        "unique_element": "The AI pet starts predicting Jamal's reading mistakes and turns them into fun games",
+        "pitch": "In a world where AI pets are the hottest trend of 2025, 10-year-old Jamal from rural Kansas dreams of making his glitchy companion the ultimate sidekick, but his trouble blending sounds makes programming a nightmare\u2014until he discovers that teaching his pet to 'hear' words like he does unlocks both his reading superpower and a hidden talent for AI innovation, leading to a town-wide tech fair showdown."
+      }
+    },
+    {
+      "idea_number": 2,
+      "title": "Drone Farm Mysteries",
+      "average_score": 8.0,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.3,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.04,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 2,
+          "idea_title": "Drone Farm Mysteries"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.3,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.04,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 2,
+          "idea_title": "Drone Farm Mysteries"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.06,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 2,
+          "idea_title": "Drone Farm Mysteries"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 6.8,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.94,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 2,
+          "idea_title": "Drone Farm Mysteries"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 6.8,
+            "character_development": 8.5,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.94,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 2,
+          "idea_title": "Drone Farm Mysteries"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 2,
+        "title": "Drone Farm Mysteries",
+        "protagonist": {
+          "name": "Maria Gonzalez",
+          "age": 9,
+          "background": "Hispanic girl from a multigenerational farming family in rural Texas, with immigrant grandparents and a large extended family",
+          "struggle": "English Language Learner (ELL) struggling with building vocabulary through context clues"
+        },
+        "contemporary_hook": "Drone technology for sustainable farming and eco-challenges trending on kid-friendly social media",
+        "literacy_skill": "Vocabulary acquisition using context clues",
+        "creative_integration": "Maria's love for piloting farm drones requires her to interpret instruction manuals and app alerts, where she learns to guess word meanings from surrounding clues in real-time missions",
+        "setting": {
+          "primary": "Family ranch in rural Texas",
+          "secondary": "Augmented reality drone simulation field where words appear as harvestable crops"
+        },
+        "character_arc": "Maria feels overwhelmed by unfamiliar English words in school texts, causing frustration during group projects; a breakthrough happens when decoding a drone manual saves a crop, leading to mastery as she builds a personal vocab glossary; she then teaches her cousins how to use drones for learning new words",
+        "unique_element": "The drones start 'whispering' secret vocab riddles that only Maria can solve to unlock hidden farm treasures",
+        "pitch": "On her family's sun-drenched Texas ranch, 9-year-old Maria Gonzalez turns drone flying into a vocab-boosting superpower, deciphering context clues from high-tech manuals to outsmart crop disasters and eco-puzzles, evolving from a frustrated English learner to a confident teacher who rallies her cousins in a thrilling blend of agriculture, technology, and word wizardry."
+      }
+    },
+    {
+      "idea_number": 66,
+      "title": "Trail of New Words",
+      "average_score": 7.99,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.03,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 66,
+          "idea_title": "Trail of New Words"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 7.0,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.03,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 66,
+          "idea_title": "Trail of New Words"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 9.0,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 8.05,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 66,
+          "idea_title": "Trail of New Words"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.92,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 66,
+          "idea_title": "Trail of New Words"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.5,
+            "character_development": 8.0,
+            "creative_execution": 7.5
+          },
+          "overall_score": 7.92,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 66,
+          "idea_title": "Trail of New Words"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 66,
+        "title": "Trail of New Words",
+        "protagonist": {
+          "name": "Sofia Ramirez",
+          "age": 9,
+          "background": "Hispanic girl from an extended family in rural New Mexico, English language learner from a bilingual household",
+          "struggle": "Building English vocabulary as an ELL, struggling with unfamiliar words in texts"
+        },
+        "contemporary_hook": "Eco-tourism apps with augmented reality for virtual nature explorations",
+        "literacy_skill": "Vocabulary acquisition (contextual word learning)",
+        "creative_integration": "Sofia's love for hiking and identifying desert plants uses the app to overlay new English words on real trails, naturally building vocabulary as she collects and defines terms in her adventure journal",
+        "setting": {
+          "primary": "New Mexico desert trails",
+          "secondary": "Augmented reality 'word oasis' where plants whisper definitions"
+        },
+        "character_arc": "Sofia struggles to understand English nature books, causing frustration on family hikes; her breakthrough happens when app overlays teach word contexts; she masters vocabulary by creating her own trail guides, then teaches cousins how to use it for their reading adventures",
+        "unique_element": "A rare desert flower in the app leads to discovering a real endangered species, making Sofia a local eco-hero",
+        "pitch": "Nine-year-old Sofia Ramirez, from a lively extended family in rural New Mexico, adores exploring desert trails but falters with English words in her field guides\u2014until an eco-tourism app turns hikes into vocabulary quests, weaving her passion for nature into a thrilling path of word discovery that not only boosts her reading but rallies her cousins to become trailblazing learners too."
+      }
+    },
+    {
+      "idea_number": 18,
+      "title": "Canvas Codes and Word Weaves",
+      "average_score": 7.98,
+      "expert_evaluations": [
+        {
+          "expert": "Sarah Chen",
+          "role": "Children's Book Editor (Big 5 Publisher)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.01,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 18,
+          "idea_title": "Canvas Codes and Word Weaves"
+        },
+        {
+          "expert": "Marcus Williams",
+          "role": "Literary Agent (Middle Grade Specialist)",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 7.3,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.01,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 18,
+          "idea_title": "Canvas Codes and Word Weaves"
+        },
+        {
+          "expert": "Dr. Elena Rodriguez",
+          "role": "Reading Specialist / Literacy Coach",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.5,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 8.04,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 18,
+          "idea_title": "Canvas Codes and Word Weaves"
+        },
+        {
+          "expert": "Jamie Park",
+          "role": "Elementary School Librarian",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.91,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 18,
+          "idea_title": "Canvas Codes and Word Weaves"
+        },
+        {
+          "expert": "Dr. Robert Thompson",
+          "role": "Curriculum Director / District Decision Maker",
+          "scores": {
+            "children_9_10_appeal": 8.5,
+            "educational_integrity": 8.0,
+            "market_viability": 6.8,
+            "character_development": 8.0,
+            "creative_execution": 8.0
+          },
+          "overall_score": 7.91,
+          "strengths": [
+            "Strong kid appeal with engaging contemporary hook",
+            "Excellent SoR alignment with natural skill integration",
+            "Compelling character arc with authentic growth journey"
+          ],
+          "concerns": [
+            "Minor refinements needed for optimal execution"
+          ],
+          "verdict": "Recommend - solid concept that could shine with development",
+          "idea_number": 18,
+          "idea_title": "Canvas Codes and Word Weaves"
+        }
+      ],
+      "full_idea": {
+        "idea_number": 18,
+        "title": "Canvas Codes and Word Weaves",
+        "protagonist": {
+          "name": "Lila Chen",
+          "age": 9,
+          "background": "Chinese-American girl in a blended family in suburban Atlanta, with immigrant parents and stepsiblings",
+          "struggle": "English Language Learner challenges with building academic vocabulary"
+        },
+        "contemporary_hook": "Augmented reality art apps that blend virtual galleries with real-world creativity in 2025's digital renaissance",
+        "literacy_skill": "Vocabulary development",
+        "creative_integration": "Lila's love for digital painting integrates new words as 'color codes' in her AR app, where describing artworks expands her lexicon through interactive labels and stories",
+        "setting": {
+          "primary": "Suburban home and community center in Atlanta",
+          "secondary": "Immersive AR virtual museum that morphs based on her vocabulary inputs"
+        },
+        "character_arc": "Lila feels isolated by her limited vocabulary in group projects, spirals into frustration at a failed art show entry, breaks through by linking words to her paintings, achieves mastery in a school exhibit, and shares her method with ELL classmates",
+        "unique_element": "Her AR artworks come to 'life' and narrate stories using only the new words she's learned",
+        "pitch": "Nine-year-old Lila Chen, navigating her blended family's bustling Atlanta home, finds solace in augmented reality art apps sweeping 2025's creative scene, but her ELL vocabulary gaps stifle her descriptions\u2014until she weaves words into vibrant digital canvases, transforming frustration into a breakthrough that not only wins the community art contest but empowers her stepsiblings and friends to expand their own lexicons in a colorful story of expression and growth."
+      }
+    }
+  ],
+  "timestamp": "2025-10-10T21:34:18.058174"
+}

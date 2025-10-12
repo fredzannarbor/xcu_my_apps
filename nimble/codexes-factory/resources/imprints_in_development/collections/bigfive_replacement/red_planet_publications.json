@@ -1,0 +1,28 @@
+{
+  "imprint": "Red Planet Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@redplanetpublications.com",
+  "branding": {
+    "tagline": "Explore Mars from your armchair",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.redplanetpublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Scientific and technical aspects of Mars colonization",
+    "target_audience": "Science enthusiasts, tech geeks",
+    "competitive_advantage": "Works closely with NASA and SpaceX for firsthand information",
+    "example_titles": "Mars: The Next Frontier by Dr. John Space"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "The Art of Programming",
+    "book_id": "programming_book_1",
+    "scheduled_date": "2024-12-01",
+    "isbn": "9780123456789",
+    "imprint": "Tech Books",
+    "publisher": "My Publisher",
+    "format": "paperback",
+    "priority": 1,
+    "notes": "Manual ISBN assignment"
+  },
+  {
+    "title": "Web Development Guide",
+    "book_id": "web_book_1",
+    "scheduled_date": "2024-12-15",
+    "isbn": "",
+    "imprint": "Tech Books",
+    "publisher": "My Publisher",
+    "format": "hardcover",
+    "priority": 2,
+    "notes": "Auto-assign ISBN"
+  },
+  {
+    "title": "Database Design Principles",
+    "book_id": "db_book_1",
+    "scheduled_date": "2025-01-01",
+    "isbn": "9780987654321",
+    "imprint": "Tech Books",
+    "publisher": "My Publisher",
+    "format": "paperback",
+    "priority": 1,
+    "notes": "Another manual ISBN"
+  }
+]

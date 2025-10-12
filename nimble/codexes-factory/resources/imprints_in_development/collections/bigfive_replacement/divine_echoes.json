@@ -1,0 +1,28 @@
+{
+  "imprint": "Divine Echoes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@divineechoes.com",
+  "branding": {
+    "tagline": "Speak to the Spirit World",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.divineechoes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Specialty tarot decks, oracle cards, and fortune telling books.",
+    "target_audience": "Spiritualists, psychics, and enthusiasts of the esoteric and occult.",
+    "competitive_advantage": "We offer unique, artistically designed tarot and oracle decks that can't be found anywhere else. Our publications are designed to enthrall and engage with readers on a profound level.",
+    "example_titles": "‘The Ethereal Oracle Deck’, ‘Fortune Telling for Modern Mystics’"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

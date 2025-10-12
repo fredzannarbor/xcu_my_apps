@@ -1,0 +1,28 @@
+{
+  "imprint": "VirusVault Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@virusvaultimprint.com",
+  "branding": {
+    "tagline": "Delving into the invisible enemy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.virusvaultimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Virology, infectious diseases, epidemic prevention",
+    "target_audience": "Health-conscious readers, medical students, public health officials",
+    "competitive_advantage": "Offering timely insights into the world of viruses and disease control",
+    "example_titles": "Virus: An Illustrated Guide, Epidemics: History's Silent Killers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

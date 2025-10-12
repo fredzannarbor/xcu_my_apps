@@ -1,0 +1,28 @@
+{
+  "imprint": "Cybernetic Chronicles",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cyberneticchronicles.com",
+  "branding": {
+    "tagline": "The Future of Work Starts Here",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cyberneticchronicles.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Future of work, AI, and emerging technologies in remote work",
+    "target_audience": "Tech-savvy professionals and futurists",
+    "competitive_advantage": "Forward-looking content on the future of remote work",
+    "example_titles": "Titles like 'AI and the Remote Workforce'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

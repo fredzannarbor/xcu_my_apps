@@ -1,0 +1,28 @@
+{
+  "imprint": "Plume & Parchment",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@plumeandparchment.com",
+  "branding": {
+    "tagline": "Crafted with care, read with pleasure",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.plumeandparchment.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Artful literary fiction with an emphasis on craft",
+    "target_audience": "Readers who appreciate the craft of writing",
+    "competitive_advantage": "Celebrates the artistry of writing in all its forms",
+    "example_titles": "Annie Dillard, Michael Ondaatje"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

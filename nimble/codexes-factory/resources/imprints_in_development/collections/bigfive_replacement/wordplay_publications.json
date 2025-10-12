@@ -1,0 +1,28 @@
+{
+  "imprint": "WordPlay Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@wordplaypublications.com",
+  "branding": {
+    "tagline": "Where words come to play!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.wordplaypublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Word games such as word search, anagrams, cryptograms and word ladders",
+    "target_audience": "Word game enthusiasts, language educators and learners",
+    "competitive_advantage": "Specializes in unique and creative word games, emphasizing both entertainment and educational value",
+    "example_titles": "Anagram Masterpieces by David L. Hoyt, Cryptogram Challenges by Mark Danna"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

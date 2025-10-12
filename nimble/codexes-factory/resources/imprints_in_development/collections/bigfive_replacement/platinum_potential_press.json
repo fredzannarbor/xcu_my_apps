@@ -1,0 +1,28 @@
+{
+  "imprint": "Platinum Potential Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@platinumpotentialpress.com",
+  "branding": {
+    "tagline": "Unlock your platinum potential",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.platinumpotentialpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Business potential, talent management, and leadership",
+    "target_audience": "Business leaders, HR professionals, and talent managers",
+    "competitive_advantage": "Expert strategies to unlock business potential and talent",
+    "example_titles": "Unlocking Business Potential, Talent Management for Success"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

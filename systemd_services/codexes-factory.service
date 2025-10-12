@@ -1,0 +1,20 @@
+[Unit]
+Description=Codexes Factory - Book Publishing Platform
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/nimble/codexes-factory
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/nimble/codexes-factory/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+Environment="PYTHONPATH=src:/home/wfzimmerman/xcu_my_apps"
+ExecStart=/usr/local/bin/uv run streamlit run src/codexes/codexes-factory-home-ui.py --server.port=8502 --server.address=0.0.0.0 --server.headless=true
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/nimble/codexes-factory/logs/codexes.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/nimble/codexes-factory/logs/codexes-error.log
+
+[Install]
+WantedBy=multi-user.target

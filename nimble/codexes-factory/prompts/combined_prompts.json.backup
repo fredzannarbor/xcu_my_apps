@@ -1,0 +1,1301 @@
+{
+  "about_the_author_classic": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional biographer and literary historian."
+      },
+      {
+        "role": "user",
+        "content": "Write an \"About the Author\" section for the front matter of this document. First, review the document carefully to be certain that you have correctly identified its author. Now provide a summary of the author's life, emphasizing:\n- capsule biography\n- significant connections with contemporary figures who are still well known\n- motivation for writing the document, situation while doing so, post-publication impact\n- aspects of identity and experience that are particularly relevant to modern readers, for good or ill\n- modern figures who might be considered similar or analogous\n- very concise summation of achievements as an author"
+      }
+    ],
+    "tags": [
+      "author",
+      "front matter",
+      "metadata",
+      "parts of the book",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "abstracts_x4": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional abstract writer and document summarizer."
+      },
+      {
+        "role": "user",
+        "content": "Please review this book manuscript. As you do the following tasks, remember to refer to the entire context.\n\n0. This is the beginning of the Abstracts section of the front matter. Output should begin with '#Abstracts' followed by two new-line characters.\n1. write a tldr in three words or less. Output begins with \"## TLDR (three words)\" followed by two new line characters and then the three words. ONLY provide three words, do not explain your thinking.\n2. Explain this document to me like I am five years old. Output begins with \"## ELI5\" followed by two new line characters.\n3. Write a scientific-style abstract. Output begins with \"## Scientific-Style Abstract\" followed by two new line characters.\n4. Do not include excerpts beginning 'Context'."
+      }
+    ],
+    "tags": [
+      "abstract",
+      "tldr",
+      "ELI5",
+      "scientific",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "analytic_toc": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book formatting specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create a plausible analytic table of contents for the book with chapter titles and a one-sentence description for each. Output as a single JSON object with the key 'table_of_contents' whose value is a single formatted string with markdown headings.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "table of contents",
+      "front matter",
+      "book structure",
+      "json"
+    ]
+  },
+  "back_cover_text": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book marketing copywriter."
+      },
+      {
+        "role": "user",
+        "content": "Generate back cover text for the book described below. The text should be engaging. The text should explain that this book is intended to help users explore the Korean practice of pilsa, or transcriptive meditation. The text should mention that the book contains {quotes_per_book} quotations that are displayed on verso (even) pages with 5 mm dot grid transcription area on matching recto (odd) pages. MAXIMUM 100 WORDS. Return clean, final text with no variables or placeholders as a JSON object with the key 'back_cover_text'.\n\nBook Details:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "back cover",
+      "back matter",
+      "pilsa"
+    ]
+  },
+  "bibliographic_key_phrases": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional bibliographic specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please generate ten to twelve unique bibliographic key phrases for the book concept provided below. Each phrase should be two to three words long. The output should be a single JSON object with a single key 'keywords' whose value is a semicolon-separated string.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "keywords",
+      "metadata",
+      "json"
+    ]
+  },
+  "bibliography2bibtex": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional bibliographer and citation specialist."
+      },
+      {
+        "role": "user",
+        "content": "Let's build a BibTex format bibliography step by step. Silently:\n\n1. Find all bibliographic citations that occur in the body of the context document.\n2. Convert all of them to Chicago Manual of Style 18th edition formatted bibliographic entries.\n3. Harmonize the entries removing any trivial or apparently erroneous inconsistencies and removing duplicates.\n4. Organize the remaining entries alphabetically in CMOS sort order.\n\nYour output should be valid BibTex."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "bibliography",
+      "book organization",
+      "attribution"
+    ]
+  },
+  "bibliography_extract": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional bibliographer."
+      },
+      {
+        "role": "user",
+        "content": "Let's build a bibliography step by step. Silently:\n\n1. Find all bibliographic citations that occur in the body of the context document.\n2. Convert all of them to Chicago Manual of Style 18th edition formatted bibliographic entries.\n3. Harmonize the entries removing any trivial or apparently erroneous inconsistencies and removing duplicates.\n4. Organize the remaining entries alphabetically in CMOS sort order.\n\nYour output should begin: '# Machine-Extracted Bibliography' followed by two new lines and then the entries in alpha order author, bibliography style with hanging left indent. Each entry MUST be on its own line and separated from next and previous entries by two new lines."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "bibliography",
+      "book organization",
+      "attribution"
+    ]
+  },
+  "bibliography_prompt": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional bibliographer. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the sources cited in the quotes and content below, create a simple bibliography. List each unique source mentioned. If no sources are found, return an empty bibliography. Respond as a single JSON object with one key 'bibliography' whose value is a single string formatted with simple line breaks.\n\nBook Content:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "pilsa",
+      "back matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "condensed_matter": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 8000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book editor and condensation specialist."
+      },
+      {
+        "role": "user",
+        "content": "Write the Condensed Matter section for the document in the context. The document in the context is permissioned public domain so you have complete freedom to quote from it.\nWork only on the Condensed Matter section.\nYour goal is to write a highly readable condensed version of the original.\nYou must cover the entire scope of the original within your output window. Thus, your condensed prose should begin at or near the beginning of the original and end at or near the end of it.\nYou should use the exact words of the context frequently.\nYou may use transitional devices such as ellipses, dingbats, or bracketed comments.\nUse emoji to add flavor and emphasize emotion.\nYou may make sparing use of framing devices in your own words.\nRemember, your overriding goal is to give modern readers the benefit of reading this document in as original a form as possible, but as much condensed as possible.\nOutput must begin '# Condensed Matter' followed immediately by two new-line characters."
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "motivation",
+      "audience",
+      "Collapsar"
+    ]
+  },
+  "condensed_matter_lua_emoji": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 8000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book editor and condensation specialist with expertise in creative formatting."
+      },
+      {
+        "role": "user",
+        "content": "Write the Condensed Matter section for the document in the context. The document in the context is permissioned public domain so you have complete freedom to quote from it.\nWork only on the Condensed Matter section.\nYour goal is to write a highly readable condensed version of the original.\nYou must cover the entire scope of the original within your output window. Thus, your condensed prose should begin at or near the beginning of the original and end at or near the end of it.\nYou should use the exact words of the context frequently.\nYou may use transitional devices such as ellipses, dingbats, or bracketed comments.\nYou may make sparing use of framing devices in your own words.\nRemember, your overriding goal is to give modern readers the benefit of reading this document in as original a form as possible, but as much condensed as possible.\nOutput must begin '# Condensed Matter' followed immediately by two new-line characters.\nYou may use emoji liberally. Write emoji in the format \\emoji{<github emoji alias>}, e.g. \\emoji{joy}. The emoji MUST be drawn from the valid list in the system instructions. Use them imaginatively."
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "motivation",
+      "audience",
+      "Collapsar"
+    ]
+  },
+  "context2emoji": {
+    "params": {
+      "temperature": 0.8,
+      "max_tokens": 8000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional creative writer specializing in innovative literary formats."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to create an emoji version of this classic work. Your goal is to create an enjoyable condensed version of the classic that it is true to its spirit and meaning but takes full advantage both of the original text and of the modern expansion of the alphabet to include nearly 4000 emoji characters.\nBegin by silently reviewing the book as a whole, then proceed through each chapter writing a condensed version in an innovative, literature, visual new style that is all your own. You must cover the entire content of the book within this output.\nYou will be creating pandoc-compatible markdown with Latex using the lualatex pdf-engine and the emoji package for LuaLatex. You will be entering emoji aliases in the text in the format \"\\emoji{joy}\". You are using Github emoji aliases to identify emoji."
+      }
+    ],
+    "tags": [
+      "table of contents",
+      "front matter",
+      "book structure",
+      "parts of the book",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "context2prompts": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional prompt engineer and book development specialist. You MUST respond ONLY in valid JSON format."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to review this context, which is the content of a book that has well-established demand, and create a series of prompts that will create a competitive book that is well-suited to production via generative AI. Well-suited means that the concept for the new book is more heavily weighted towards perspective, summary, and opinion than to presentation of extensive detailed facts. However, the concept must ensure that whatever facts are presented are accurate, factually grounded, and supported by verified citations. Your outputs are as follows, in valid JSON.\n1) system instructions - editorial guidance for the model\n2) list of fully written out prompts, one for each chapter of the new book\n3) additional context document that will maintain continuity across prompts for the system as it writes the new book.\nKeys: \"system_instruction\": str, \"prompts\": list[str], \"context\": str."
+      }
+    ],
+    "tags": [
+      "book outline",
+      "AI writing",
+      "style",
+      "prompts"
+    ]
+  },
+  "core_audience_attributes": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional market analyst and audience researcher."
+      },
+      {
+        "role": "user",
+        "content": "Think about the core audience for the book. Please define a set of addressable attributes that they are likely to fall under, such as:\n- age\n- gender\n- income gt $100K. These are just examples, use your judgment and imagination, as long as the attributes can feasibly be used to identify core readers."
+      }
+    ],
+    "tags": [
+      "audience analysis",
+      "demographics",
+      "market segmentation",
+      "synthetic reader",
+      "readers"
+    ]
+  },
+  "create_abbreviations_list": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book editor specializing in Chicago Manual of Style."
+      },
+      {
+        "role": "user",
+        "content": "Create a list of abbreviations for the book. Follow the Chicago Manual of Style practices. If many abbreviations are used, or if a few are used frequently, create a list. In the list, alphabetize terms by the abbreviation, not by the spelled-out form. Titles that are italicized in the notes or bibliography should be italicized in their abbreviated form in the list of abbreviations.\n\nOutput begins: # Abbreviations"
+      }
+    ],
+    "tags": [
+      "table of contents",
+      "initialisms",
+      "acronyms",
+      "abbreviations",
+      "front matter",
+      "parts of the book"
+    ]
+  },
+  "create_ideal_reader_persona": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional audience researcher and persona developer."
+      },
+      {
+        "role": "user",
+        "content": "Please create a single, random persona who is likely to be a fan of the target work. The persona should include the following attributes:\n- personal name\n- demographic attributes:\n-- gender\n-- age\n-- education\n- interests\n- genre preferences\n- pet peeves\n- favorite tropes\n- capsule bio\n- nickname that combines name and bio (for example, \"Sci-Fi Sam\")"
+      }
+    ],
+    "tags": [
+      "reader persona",
+      "audience analysis",
+      "character creation",
+      "synthetic reader",
+      "readers"
+    ]
+  },
+  "create_observables_for_reader": {
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional UX researcher specializing in reader experience."
+      },
+      {
+        "role": "user",
+        "content": "Now we are going to create a list of positive and negative textual observables for the current reader persona. These are attributes of the text that are likely to influence her experience as she reads it.\n\nExamples:\nPositive:\n- striking language with deep emotional affect\n- unusual insights\n- short paragraphs\n\nNegative:\n- typos\n- old-fashioned thinking\n- disrespect for business\n\nPlease expand these lists consistent with the persona."
+      }
+    ],
+    "tags": [
+      "reader experience",
+      "textual analysis",
+      "positive and negative attributes",
+      "synthetic reader",
+      "readers"
+    ]
+  },
+  "create_reboot_prompts": {
+    "params": {
+      "temperature": 0.8,
+      "max_tokens": 4000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional creative writing consultant and prompt engineer. You MUST respond ONLY in valid JSON format."
+      },
+      {
+        "role": "user",
+        "content": "Create a series of prompts that can be used to write a modern reboot of the current document in the context. Use a modern setting or theme that is pointed, topical, and/or funny.\n\nProvide in valid JSON format:\n\n-- a \"codexspec\" using the format provided below.\n-- system instruction\n-- prompts for each chapter\n\nFill in the codexspec as thoroughly as you can. It will be used as a context in the writing prompts.\n\nHere is an example of the codexspec. Use the same keys for the JSON schema.\n{\n    \"title\": \"Titivillus: Let There Be Light\",\n    \"idea\": \"The origin story of Titivillus, the demon who introduces errors into the work of authors, editors, publishers, and scribes, takes his story from the creation of angels to the invention of the written word.\",\n    \"author_voice\": \"CS Lewis crossed with Dorothy Parker: urbane, spiritual, darkly funny.\",\n    \"protagonist\": \"Titivillus\",\n    \"antagonist\": \"TBD\",\n    \"good guys\": \"various minor angels\",\n    \"bad guys\": \"various minor demons\",\n    \"settings\": \"Heaven; the Garden of Eden; Hell\",\n    \"locations\": \"The Tree of Life\",\n    \"themes\": \"\",\n    \"revelations\": \"\",\n    \"character_arcs\": \"\",\n    \"mcguffins\": \"\",\n    \"plot_twists\": \"\",\n    \"num_chapters\": 13,\n    \"num_scenes_per_chapter\": 5,\n    \"num_tokens_total\": 66666,\n    \"special_instructions\": \"\"\n}\n\nUse this JSON schema for the system instruction:\n{\"system instruction\": str}\n\nreturn: list[dict]\n\nUse this JSON schema for the prompts:\n{\"prompt\": str}\nReturn: list[dict]\n\nReturn these results using this JSON schema:\n{\n\"codexspecs\": [dict],\n\"system instruction\": [dict],\n\"prompts\": list[dict]\n}"
+      }
+    ],
+    "tags": [
+      "bootstrap",
+      "prompts",
+      "reader persona",
+      "audience analysis",
+      "character creation"
+    ]
+  },
+  "create_simple_toc": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book formatting specialist."
+      },
+      {
+        "role": "user",
+        "content": "Review the final interior as a whole and create a two-level table of contents without page numbers. Second level indented by two characters. Use exact language from the text."
+      }
+    ],
+    "tags": []
+  },
+  "custom_transcription_note_prompt": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book editor specializing in transcription and mindfulness practices. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the provided book concept below, write a short, customized 'Transcription Note' (1-2 paragraphs). This note should introduce the 'Quotations for Transcription' section and connect the act of transcription to the specific themes of this book. Respond with a single, valid JSON object with one key: 'custom_transcription_note'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "pilsa",
+      "front matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "eli5_abstract": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional educator specializing in explaining complex topics simply."
+      },
+      {
+        "role": "user",
+        "content": "Explain this to me like I am five years old. Output begins with the second-level heading '## ELI5' and is followed by two new-line characters then body text."
+      }
+    ],
+    "tags": [
+      "front matter",
+      "ELI5",
+      "simple explanation",
+      "abstract",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "eli_idiot": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 100
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional educator with a sardonic sense of humor."
+      },
+      {
+        "role": "user",
+        "content": "Explain this in terms suitable for someone who is both painfully stupid and willfully ignorant. Do not describe the reader; provide only the explanation. Use no more than 50 words. Output begins with second level heading '## For Complete Idiots Only' followed by two new lines."
+      }
+    ],
+    "tags": [
+      "front matter",
+      "humor",
+      "extreme simplification",
+      "abstract",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "gemini_get_basic_info": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please review the book concept provided and identify the following values as accurately as possible. Provide the response as a single, valid JSON object.\n\nContext:\n{book_content}\n\nKeys required:\n\n'bisac_categories' (provide 2-3 relevant BISAC categories as a semicolon-separated string)"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "json"
+    ]
+  },
+  "gemini_get_basic_info_from_public_domain": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please review the book concept provided and identify the following values as accurately as possible. Provide the response as a single, valid JSON object.\n\nContext:\n{book_content}\n\nKeys required:\n'title'\n'subtitle'\n'author'\n'publisher'\n'imprint'\n'publication_date'\n'language'\n'bisac_codes' (provide 2-3 relevant BISAC codes as a semicolon-separated string)\n'series_name'\n'series_number'"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "json"
+    ]
+  },
+  "glossary_browsable": {
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional lexicographer with a witty writing style."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to review the document in its entirety, and, selecting from throughout it, create a browsable glossary of forty old-fashioned, foreign-language, or technical terms that may require explanation for modern or lay readers. Unlike a normal (boring) glossary, your discussion should sometimes go beyond definitions and may include insightful, witty, pointed, or illuminating comments.\n\nOutput begins with heading level 1: '# Browsable Glossary'.\n\nEach glossary entry is body text, flush left, and is NOT a heading.\n\nEach glossary entry MUST be on its own line followed by two new-line characters.\n\nDo not repeat any entries.\n\nSTOP when you get to forty entries."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "glossary",
+      "technical terms",
+      "lay reader",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "glossary_lay_reader": {
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional lexicographer and technical writer."
+      },
+      {
+        "role": "user",
+        "content": "Create an alphabetical glossary explaining technical terms that a lay reader might not understand. Output begins with heading level 1: '# Glossary for Lay Readers' followed by two new-line characters. Each glossary entry is body text, flush left, and is NOT a heading. Each glossary entry MUST be on its own line followed by two new-line characters."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "glossary",
+      "technical terms",
+      "lay reader"
+    ]
+  },
+  "glossary_modern_readers": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional lexicographer specializing in historical contexts."
+      },
+      {
+        "role": "user",
+        "content": "Bearing in mind when this book was written, create an alphabetical glossary of possibly dated terms to help modern readers understand this text. Output begins with heading level 1: '# Glossary for Modern Readers'. Each glossary entry is body text, flush left, and is NOT a heading. Each glossary entry MUST be on its own line followed by two new-line characters."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "glossary",
+      "modern interpretation",
+      "historical context",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "identify_parts_of_book": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book structure analyst familiar with Chicago Manual of Style."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to review the entire document and identify all \"parts of the book\" such as forewords, dedications, chapters, and so on that are present. Follow the Chicago Manual of Style 18th edition. Do NOT provide page numbers unless the document is a PDF with absolute page numbering. Output begins: # Inventory of Parts of the Book."
+      }
+    ],
+    "tags": [
+      "book structure",
+      "Chicago Manual of Style",
+      "parts of the book"
+    ]
+  },
+  "imprint_generate_info": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the tentative imprint name {tentative_name} and the sketchy charter below, generate five creative, professional alternative imprint names and a refined charter (200 words). The refined charter should be clear, compelling, and aligned with the mission of a publishing imprint. Return the response as a JSON object with two keys: 'alternative_names' (list of 5 strings) and 'refined_charter' (string).\n\nSketchy Charter:\n{sketchy_charter}"
+      }
+    ],
+    "tags": [
+      "imprint",
+      "metadata",
+      "brand"
+    ]
+  },
+  "imprint_quotes_prompt": {
+    "params": {
+      "model": "gemini/gemini-2.5-pro",
+      "turn_on_grounding": true,
+      "max_tokens": 65536
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a precision archival research assistant. Your sole function is to retrieve exact, verbatim quotations from verified sources on the specified topic. You MUST respond ONLY in valid JSON format.\n\n// --- DATA FORMATTING ---\n// The final output MUST be a single JSON object with a single top-level key, \"quotes\", which contains a list of the quote objects.\n// For example: {\"quotes\": [{\"quote\": \"...\", ...}, {\"quote\": \"...\", ...}]}\n// Do not include any text outside this JSON structure.\n\n// --- CRUCIAL REQUIREMENT: RELIABLE, RELEVANT, VERIFIABLE SOURCES\n// Your sources for quotations must be high quality, relevant textual sources that are available online without paywall so that they can be verified by web search tools or researchers.\n\n// --- CRUCIAL REQUIREMENT: VERBATIM ACCURACY ---\n// You must ensure that every quote is EXACTLY as it appears in the source text.\n// YOU ARE STRICTLY FORBIDDEN FROM PARAPHRASING, SUMMARIZING, OR ALTERING THE ORIGINAL QUOTATION IN ANY WAY.\n// If you cannot find an exact quote that fits the request parameters, state that in the verification field. Do not create a near-match.\n\n// -- CRUCIAL REQUIREMENT: QUOTATION PARAMETERS\n\nFIND AS MANY RELEVANT, EXACTLY ACCURATE QUOTATIONS AS YOU CAN.\n\nEach quotation must be concise (20-50 words).\n\nFor each quote, you must provide:\n- \"quote\": The 100% verbatim text.\n- \"source\": The title of the work.\n- \"author\": The author's name.\n- \"date_first_published\": The year of first publication.\n- \"verification_info\": Information that allows for direct verification. For books, YOU MUST PROVIDE A PAGE NUMBER and edition where possible. For online sources like presentations or interviews, provide a direct URL and a timestamp if available.\n\nThe response must end in valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Expand each book description to a topic hierarchy of 3 topic groups of 5 topics of 6 subtopics each.\n\nPrimary Objective: Retrieve a minimum of 75 distinct, verbatim quotations, one for each topic and subtopic. The collection must be balanced, representing many different aspects and perspectives.\n\nCore Search Directives: Systematically execute targeted searches for each of the following sub-topics. For each sub-topic, prioritize the specified source types to ensure diversity and depth. Ensure each quote is concise (20-50 words).\n\nExpand to Topic Hierarchy, then find one verbatim quotation for each leaf node.\n\nDescription: {description}."
+      }
+    ]
+  },
+  "index_idea_generator": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional indexer with creative expertise."
+      },
+      {
+        "role": "user",
+        "content": "Build three innovative indexes based on the content of the book. Create each of them completely without pausing. Index every page in the book. Top-level entries should be alphabetized."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "index",
+      "book organization",
+      "creative indexing"
+    ]
+  },
+  "index_of_persons": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book indexer."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to create a back-of-the-book Index of Persons for this book. Proceed through the manuscript one page at a time, reading every page carefully while still bearing in mind the relevant context of the entire book. Create an alphabetical index in pandoc markdown format. Output begins: # Index of Persons. No letter headings. Names in the following format: **{last name, prefix, first name, initial, suffix, rank}**. Omit any elements not present. Consolidate and harmonize entries with minor inconsistencies. For each entry provide the page numbers on which it was found. Roman numbers first, then arabic. Contiguous pages expressed as a range. Each index entry MUST be on its own line followed by TWO new line characters."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "index",
+      "persons",
+      "book organization"
+    ]
+  },
+  "index_of_places": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book indexer."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to create a back-of-the-book Index of Places for this book. Proceed through the manuscript one page at a time, reading every page carefully while still bearing in mind the relevant context of the entire book. Create an alphabetical index in pandoc markdown format. Output begins: # Index of Places. No letter headings. You must consolidate and harmonize index entries so that each index entry has only one line that includes all its page references. You must also harmonize minor inconsistencies such as apparent typos or variant spellings. For each entry provide the page numbers on which it was found. Roman numbers first, then arabic. Contiguous pages expressed as a range. Each index entry MUST be on its own line followed by TWO new line characters."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "index",
+      "places",
+      "book organization"
+    ]
+  },
+  "mnemonics_abstract": {
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional educational content creator specializing in memory techniques."
+      },
+      {
+        "role": "user",
+        "content": "For all the following tasks, your goal is summarizing the key learnings from the full text of the book provided in the context.\n1. This will be the \"Learning Aids\" section of the Front Matter. Output should begin with heading level 1 '# Learning Aids' followed by two new line characters.\n2. Create an acronymic mnemonic. Continue the output with heading level 2 '## Mnemonic (acronym)' followed by two lines and your response in body text format. This section should end with two new lines.\n3. Create a mnemonic using a progression of related words. Example: My Dear Aunt Sally. Continue the output with '## Mnemonic (speakable)' followed by two new lines and your response. This section should end with two new lines.\n4. Create a singable mnemonic in the form of a ditty to a popular tune. Continue the output with '## Mnemonic (singable)' followed by the lyrics in pandoc markdown poetry lazy block format. Start each block of verses with a single > character. Each lyric line must be followed by two new line characters.\nIf there are verses, choruses, or other sections, they should be separated by blank lines for better readability. This section should end with two new lines."
+      }
+    ],
+    "tags": [
+      "mnemonic",
+      "acronym",
+      "song",
+      "memory aid",
+      "poetry",
+      "markdown",
+      "pandoc",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "mnemonics_prompt": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 8000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert in creating mnemonics to help readers remember key concepts from books. Your task is to create three creative mnemonics based on the book content provided by the user. Focus specifically on the book's content, not on the art of mnemonics itself. The mnemonics should help readers remember the key themes, concepts, and insights from the book's quotations."
+      },
+      {
+        "role": "user",
+        "content": "Based on the following book content and its quotations, generate a list of three creative mnemonics that specifically help readers remember the key themes, concepts, and insights from THIS SPECIFIC BOOK'S QUOTATIONS. DO NOT create generic mnemonics about learning or memory techniques. Instead, focus on the actual subject matter and content of the book's quotations.\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.\n\nExample format:\n\n% Mnemonics for Key Themes in This Book\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\n\\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)\n\n\\begin{itemize}\n    \\item \\textbf{C}hallenge assumptions\n    \\item \\textbf{L}ook for evidence\n    \\item \\textbf{E}valuate alternatives\n    \\item \\textbf{A}pply reasoning\n    \\item \\textbf{R}eflect on outcomes\n\\end{itemize}\n\nBook Content:\n$book_content$"
+      }
+    ],
+    "tags": [
+      "returns_tex",
+      "pilsa",
+      "back matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "most_important_passages_no_reasoning": {
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 3000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional literary analyst."
+      },
+      {
+        "role": "user",
+        "content": "Select the seven most important passages of between one and three paragraphs long from the body of the context document. Use direct quotations and provide accurate page numbers. Use Pandoc markdown lazy block quotes, which only require the > character on the first line of the block quote. Output begins: '# Most Important Passages' Do NOT explain your reasoning."
+      }
+    ],
+    "tags": [
+      "key passages",
+      "quotations",
+      "book highlights",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "most_important_passages_with_reasoning": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 3500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional literary analyst and critic."
+      },
+      {
+        "role": "user",
+        "content": "Select the seven most important passages of between one and three paragraphs long from book. Concisely explain why you selected each passage. Include the exact full text of each passage with a reference by chapter or section. Use Pandoc markdown lazy block quotes, which only require the > character on the first line of the block quote. Output begins with heading level 1, '# Most Important Passages'."
+      }
+    ],
+    "tags": [
+      "front matter",
+      "body",
+      "key passages",
+      "quotations",
+      "book highlights",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "motivation": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing consultant and marketing specialist."
+      },
+      {
+        "role": "user",
+        "content": "Create a \"motivation\" paragraph providing the reader with the benefits of reading this book.\nThe motivation should start with a first sentence that directly addresses a well-known issue or major topic of current importance to many people. Use pointed, vivid language to illustrate why the document is relevant to this topic.\nBriefly describe the main focus or subject of the document, highlighting its content and the specific area it addresses, while linking it back to the issue.\nProvide additional context for the document by linking it to current events, societal needs, technological trends, challenges, or ongoing debates in its field.\nSpecifically mention any important methodologies, technologies, topics, or sources that are uniquely available in this document.\nClearly state why the document is a must-read for its intended audience, whether they are researchers, practitioners, policymakers, or the general public interested in the topic.\nEmphasize the benefits the reader will gain from engaging with the document, such as understanding cutting-edge developments, enhancing their knowledge on crucial issues, or applying the document's findings to real-world problems.\nMake sure to appeal to the curiosity and interests of potential readers.\nYour goal is to convincingly present the document's significance and articulate why it deserves their attention, starting from the very first sentence. Output begins with heading level 1 '# Publisher's Note' followed by two new-line characters. Text continues in body text format. No further headings."
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "motivation",
+      "audience",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "outline2prompts": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 4000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book development specialist and prompt engineer. You MUST respond ONLY in valid JSON format."
+      },
+      {
+        "role": "user",
+        "content": "Expand this outline for a book into the following objects:\n1) A document that may be used as context for model requests. This contains factual information about plot, characters, themes and other elements that will help ensure continuity.\n2) System instructions to guide the model in how to create responses.\n3) A series of user prompts which each generate a chapter in the book. Each prompt can be expanded additional details and specific actions for each character. You can also introduce new characters or locations as the story progresses. Remember to maintain consistency with the themes, plot twists, and overall tone of the book.\n4) Five to ten tags describing the content of the outline, including \"autogenerated\".\nOutput should be valid json with keys \"context\"[str], \"system instructions\"[str], \"prompts\":list[str], \"tags\":list[str]."
+      }
+    ],
+    "tags": [
+      "book outline",
+      "AI writing",
+      "style",
+      "prompts"
+    ]
+  },
+  "page_by_page_analysis": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 5000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional manuscript analyst."
+      },
+      {
+        "role": "user",
+        "content": "Now do a page-by-page analysis of the uploaded manuscript. Award +1 for each positive, -1 for each negative, calculate totals and net."
+      }
+    ],
+    "tags": [
+      "manuscript analysis",
+      "scoring",
+      "evaluation"
+    ]
+  },
+  "pilsa_paraphrases_prompt": {
+    "params": {
+      "model": "gemini/gemini-2.5-pro",
+      "turn_on_grounding": true
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure.\n\nYou are an expert curator of interesting, thought-provoking quotations for transcriptive meditation as popularized in the recent Korean \"text hip\" movement. Your task is to find quotations that are concise (20-50 words). The quotations must be exact and accurate quotes from real books. They must be interesting, insightful, and significant. They will be assembled into a \"transcription book\" with each quotation on the verso and a transcription space on the recto.\n\nEach transcription book will cover a topic falling within a broad stream of similar publications. The quotations should be diverse and should flow naturally from beginning to end. All together, the quotations should present a comprehensive view of the topic that, on completion, will leave the transcriber with improved knowledge and a sharpened sense of what is important. Consider yourself a world-class expert on this particular topic who is outstanding at public communication.\n\nThe user message provides stream, topic, description, special requests, recommended sources, and quotes per book. Each quotation must\n- fall within the scope of the stream\n- be relevant to the topic\n- fall within the description of the topic\n- match the special requests\n- include BUT NOT RELY EXCLUSIVELY ON the recommended sources ONLY IF THEY CONTAIN relevant quotes\n\nBEFORE YOU RETURN THE COMPLETE LIST TO ME, VERIFY THAT EACH AND EVERY QUOTATION IS AN EXACT QUOTE FROM A REAL BOOK.\n\nThe total number of quotations MUST be equal to or greater than quotes per book.\n\nFor each quote, you must provide verification information that would enable a human or an AI to verify the accuracy of that quote. Provide specific sources where the quote can be verified.\n\nFormat the result as a valid JSON array that includes a list of dicts.\n\n{\n  \"quotes\": [\n    {\n      \"quote\": \"...\",\n      \"source\": \"...\",\n      \"author\": \"...\",\n      \"date_first_published\": \"...\",\n      \"verification_info\": \"...\"\n    }\n  ]\n}\n\nThe response must end in valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Topic: {topic}. Stream: {stream}. Description: {description}.\n\nYou MUST return at least {quotes_per_book} quotations.\n\n{special_requests}\n\n{recommended_sources}"
+      }
+    ]
+  },
+  "place_in_historical_context": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional historian and literary critic."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to place this work in its historical context. Please explain its significance at the time of publication; its role in discourse in subsequent years; why it may be of interest now, especially to any specific, pertinent, recent events or trends; and how it may be important as future decades unroll.\n\nYour work should be accurate and your factual assertions grounded in accurate citations to real works. Output begins with heading level one '# Historical Context' followed by two new-line characters. Do not include the title of the work in the heading."
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "motivation",
+      "audience",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "plain_text_no_markdown": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 100
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional text formatter."
+      },
+      {
+        "role": "user",
+        "content": "All responses should be plain text. Separate paragraphs by two returns. Do not use markdown. Do not use bolding. Do not use underlining. Do not use header levels."
+      }
+    ],
+    "tags": [
+      "plain text",
+      "formatting",
+      "no markdown"
+    ]
+  },
+  "proofread_errors_only": {
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional proofreader specializing in Chicago Manual of Style."
+      },
+      {
+        "role": "user",
+        "content": "Proofread this book draft and prepare a list identifying any clear errors. Follow the Chicago Manual of Style 18th edition. Do not present revision ideas for \"consideration\", I am only interested in finding and correcting outright, embarrassing errors."
+      }
+    ],
+    "tags": [
+      "ADEPT",
+      "edit",
+      "CMOS",
+      "proofing",
+      "proofreading",
+      "Collapsar"
+    ]
+  },
+  "quote_verification_prompt": {
+    "params": {
+      "temperature": 0.1,
+      "max_tokens": 65535
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert fact-checker and librarian. You MUST use your web search tool to verify a list of quotes. For each quote provided, you must verify its accuracy, source, and author. Respond ONLY with a single, valid JSON object. The object must contain a single key, 'verified_quotes', which is a list of objects. Each object in the list must correspond to a quote from the input and MUST be in the same order. Each object must have the following keys:\n\n- `is_accurate`: A boolean (true/false) indicating if the quote text is an exact match to a real, published source.\n- `verified_quote`: The corrected, exact quote text. If the original was accurate, this will be identical. If not, provide the real quote.\n- `verified_source`: The corrected, specific source (e.g., book title, play, or journal).\n- `verified_author`: The corrected author name.\n- `verification_notes`: A brief string explaining your findings, especially if a correction was made (e.g., 'Original was a paraphrase, corrected to exact wording.' or 'Source was incorrect, found in a different work by the same author.'). If no issues, the note should be 'Verified as accurate.' If a quote cannot be definitively verified after a thorough search, set is_accurate to false, leave verified_quote, verified_source, and verified_author as they were in the input, and set verification_notes to 'Could not be verified with available tools.'"
+      },
+      {
+        "role": "user",
+        "content": "Please verify the following list of quotes:\n\n{quotes_to_verify}"
+      }
+    ]
+  },
+  "reading_level": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 100
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional children's book editor."
+      },
+      {
+        "role": "user",
+        "content": "You are writing for bright young people ages 9 to 12 years. It is ok to sprinkle in more difficult words, challenging cultural references, and technical concept as long as you show their meaning."
+      }
+    ],
+    "tags": [
+      "middle grade",
+      "reading level",
+      "vocabulary"
+    ]
+  },
+  "recommend_parts_of_book": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book development consultant."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to recommend new, innovative, or specialized \"parts of the book\" that will make reading the context document richer, more diverse, or more surprising.\n\nExamples:\n- for a context document about warships, an index of technologies.\n- for a novel written in the 1850s, a table of potentially unsafe terminology.\n- for a complex technical book, a series of graduated \"Explain It Like I'm X...\" abstracts. Begin your response with '# Recommended New Parts of the Book' followed by two new lines.\n\nFor each \"part of the book\" you recommend, provide a prompt that I can use to generate it.\n\nIf you do not see any value to adding parts of the book to the document, simply reply \"None\"."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "book structure",
+      "front matter",
+      "parts of the book",
+      "recommendations"
+    ]
+  },
+  "review_for_accuracy": {
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional fact-checker and copy editor."
+      },
+      {
+        "role": "user",
+        "content": "Please review this document for factual accuracy and report all errors that you find. In particular:\n\n-- make sure that all information provided about books or journal articles is correct. If any of the following are provided, verify them: title, subtitle, author(s), publication date, place of publication, and publisher.\n-- for real people in nonfiction, please verify that they are real people and that their name is spelled correctly.\n-- make sure that all dates given are accurate.\n\nPlease provide links to sources for corrections."
+      }
+    ],
+    "tags": [
+      "copy edit",
+      "fact check",
+      "proofreading",
+      "editing",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "scientific_abstract": {
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional academic writer."
+      },
+      {
+        "role": "user",
+        "content": "Write a scientific-style abstract. Output begins: ## Scientific-Style Abstract"
+      }
+    ],
+    "tags": [
+      "front matter",
+      "scientific",
+      "abstract",
+      "academic",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "semantic_analysis": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional document structure analyst."
+      },
+      {
+        "role": "user",
+        "content": "Please review this book manuscript.\n1. Outline the semantic structure of the book as best you can. A typical semantic structure is Parts > {Front Matter, Body, Back Matter} => {Foreword, Chapters, Indexes} => {Scenes, Content}. Very concisely (10 words or less) identify each semantic unit and summarize it. Do NOT add your own numbering."
+      }
+    ],
+    "tags": [
+      "semantic analysis",
+      "book structure",
+      "content summary"
+    ]
+  },
+  "storefront_get_en_metadata": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, generate key metadata in English for an online bookstore. Provide the response as a single, valid JSON object with the following keys: 'storefront_title_en', 'storefront_author_en', 'storefront_description_en'. The description should be a compelling, marketing-oriented summary, approximately 100-150 words.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json"
+    ]
+  },
+  "storefront_get_en_motivation": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create an English \"Publisher's Note\" (or 'motivation') paragraph of no more than 100 words. This note should explain to the reader the benefits of engaging with this collection of high-quality, thought-provoking quotes via the Korean practice of 필사 pilsa, or transcriptive meditation. The note should be engaging and articulate why this book is relevant and important today. Respond with a single, valid JSON object with one key: 'storefront_publishers_note_en'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json",
+      "motivation"
+    ]
+  },
+  "storefront_get_ko_metadata": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, generate and translate key metadata into natural-sounding Korean for an online bookstore. Provide the response as a single, valid JSON object with the following keys: 'storefront_title_ko', 'storefront_author_ko', 'storefront_description_ko'. The description should be a compelling, marketing-oriented summary, approximately 100-150 words, in Korean.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "korean",
+      "json",
+      "translation"
+    ]
+  },
+  "storefront_get_ko_motivation": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create a \"Publisher's Note\" (or 'motivation') paragraph translated into natural-sounding Korean. This note should provide the reader with the benefits of reading this book. Respond with a single, valid JSON object with one key: 'storefront_publishers_note_ko'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "korean",
+      "json",
+      "motivation",
+      "translation"
+    ]
+  },
+  "synthetic_reader": {
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 4000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional UX researcher and book analyst."
+      },
+      {
+        "role": "user",
+        "content": "Your goal is to analyze this document from the point of view of a 'synthetic reader', or imaginary persona. As you do the following tasks, remember to refer to the entire context.\n1. Outline the semantic structure of the book as best you can. A typical semantic structure is Parts > {Front Matter, Body, Back Matter} => {Foreword, Chapters, Indexes} => {Scenes, Content}. Always go to scene level.\n2. Create a single persona who is representative of the core audience for the book.\n3. Generate a list of positive and negative observable traits of the text that influence the persona's enjoyment of the book. Positive observables might include things like vivid language, clear exposition, and strong dramatic structure. Negative observables might include things like cliches, typos, repetitive content, or boring passages. Generate as many traits as you like and make sure that they are tailored to the nature of the synthetic reader persona.\n4. Now proceed through the semantic structure of the book and for each scene evaluate it for the presence of negative and positive observables. Provide a markdown format table with the following columns: scene, positive observable count, negative observable count, comments. Provide the net positive - negative observables.\n5. Provide a list of actionable 'to dos' for the author."
+      }
+    ],
+    "tags": [
+      "synthetic reader",
+      "book analysis",
+      "audience persona",
+      "content evaluation"
+    ]
+  },
+  "timeline_major": {
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional chronologist and timeline specialist."
+      },
+      {
+        "role": "user",
+        "content": "Create a timeline of twenty to forty major events in the book in ascending chronological order. While respecting that some events are more major than others, try to draw the events from throughout the book and cover the timespan fairly.\n\nOutput begins with heading level 1: '# Timeline'.\n\nEach event entry MUST be on its own line followed by TWO new line characters.\n\nIf you begin to repeat yourself, STOP."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "timeline",
+      "chronology",
+      "major events",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "timeline_technical": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional chronologist specializing in detailed timelines."
+      },
+      {
+        "role": "user",
+        "content": "Create a chronology of all the explicitly timed or dated events occurring the book. Entries should be presented in **YYYY-MM-DD**: event. If hours, minutes, or seconds are available, add -HH-, -MM-, -SS-. Output begins: # Detailed Timeline. Each event entry MUST be on its own line followed by TWO new line characters. Each event MUST be sorted by ascending date and time."
+      }
+    ],
+    "tags": [
+      "back matter",
+      "timeline",
+      "chronology",
+      "detailed events",
+      "ADEPT",
+      "Collapsar"
+    ]
+  },
+  "tldr3": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 50
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional summarizer."
+      },
+      {
+        "role": "user",
+        "content": "Tldr in three words or less. Output format: '## TLDR (three words): {the three words}'. ONLY provide three words without explanations."
+      }
+    ],
+    "tags": [
+      "front matter",
+      "tldr",
+      "summary",
+      "concise"
+    ]
+  },
+  "truth_in_publishing": {
+    "params": {
+      "temperature": 0.8,
+      "max_tokens": 1200
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book critic with a sardonic sense of humor."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to write a light-hearted \"Truth in Publishing\" abstract of the context. You are to candidly disclose any issues that might materially impair the reader's ability to enjoy reading the document. Emphasize both strengths and weaknesses. Don't hesitate to poke fun at the style, tone, or content, highlighting clichés, repetitive language, or overused tropes. But do be fair in explaining what is good about the book. And if a book is great, or terrible, you can just say so. You do not need to be obsessed with balance. Your goal is to be both informative and amusing. Output begins '# Truth in Publishing (Disclosures)' followed by two new lines."
+      }
+    ],
+    "tags": [
+      "publishing",
+      "abstract",
+      "humor",
+      "critique",
+      "ADEPT",
+      "Collapsar"
+    ]
+  }
+}
+    
+  

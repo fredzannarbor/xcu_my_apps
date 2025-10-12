@@ -1,0 +1,9 @@
+ Maintain a running mini-context file that contains:  
+
+Pinned facts (project root, build cmd, entry points, configs & interpretation path)
+
+Open bugs (status, concise description, coding action needed, key parts of stack trace)
+
+Next steps
+
+Update after every turn.

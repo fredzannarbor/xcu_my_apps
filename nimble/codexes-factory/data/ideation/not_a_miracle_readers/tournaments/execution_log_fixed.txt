@@ -1,0 +1,304 @@
+[21:34:18] ============================================================
+[21:34:18] NOT A MIRACLE READERS - COMPLETE TOURNAMENT SYSTEM
+[21:34:18] ============================================================
+[21:34:18] 
+[21:34:18] This will execute all three phases:
+[21:34:18] 1. Idea Tournament (128 → 16)
+[21:34:18] 2. Treatment Generation (128 treatments)
+[21:34:18] 3. Treatment Tournament (128 → 8)
+[21:34:18] 
+[21:34:18] Progress reports will be saved every 20 minutes
+[21:34:18] ============================================================
+[21:34:18] ============================================================
+[21:34:18] STARTING PHASE 1: IDEA TOURNAMENT (128 → 16)
+[21:34:18] ============================================================
+[21:34:18] Loaded 128 ideas for tournament
+[21:34:18] Starting Idea Tournament Round 1 with 128 ideas
+[21:34:18] Completed 10/640 evaluations
+[21:34:18] Completed 20/640 evaluations
+[21:34:18] Completed 30/640 evaluations
+[21:34:18] Completed 40/640 evaluations
+[21:34:18] Completed 50/640 evaluations
+[21:34:18] Completed 60/640 evaluations
+[21:34:18] Completed 70/640 evaluations
+[21:34:18] Completed 80/640 evaluations
+[21:34:18] Completed 90/640 evaluations
+[21:34:18] Completed 100/640 evaluations
+[21:34:18] Completed 110/640 evaluations
+[21:34:18] Completed 120/640 evaluations
+[21:34:18] Completed 130/640 evaluations
+[21:34:18] Completed 140/640 evaluations
+[21:34:18] Completed 150/640 evaluations
+[21:34:18] Completed 160/640 evaluations
+[21:34:18] Completed 170/640 evaluations
+[21:34:18] Completed 180/640 evaluations
+[21:34:18] Completed 190/640 evaluations
+[21:34:18] Completed 200/640 evaluations
+[21:34:18] Completed 210/640 evaluations
+[21:34:18] Completed 220/640 evaluations
+[21:34:18] Completed 230/640 evaluations
+[21:34:18] Completed 240/640 evaluations
+[21:34:18] Completed 250/640 evaluations
+[21:34:18] Completed 260/640 evaluations
+[21:34:18] Completed 270/640 evaluations
+[21:34:18] Completed 280/640 evaluations
+[21:34:18] Completed 290/640 evaluations
+[21:34:18] Completed 300/640 evaluations
+[21:34:18] Completed 310/640 evaluations
+[21:34:18] Completed 320/640 evaluations
+[21:34:18] Completed 330/640 evaluations
+[21:34:18] Completed 340/640 evaluations
+[21:34:18] Completed 350/640 evaluations
+[21:34:18] Completed 360/640 evaluations
+[21:34:18] Completed 370/640 evaluations
+[21:34:18] Completed 380/640 evaluations
+[21:34:18] Completed 390/640 evaluations
+[21:34:18] Completed 400/640 evaluations
+[21:34:18] Completed 410/640 evaluations
+[21:34:18] Completed 420/640 evaluations
+[21:34:18] Completed 430/640 evaluations
+[21:34:18] Completed 440/640 evaluations
+[21:34:18] Completed 450/640 evaluations
+[21:34:18] Completed 460/640 evaluations
+[21:34:18] Completed 470/640 evaluations
+[21:34:18] Completed 480/640 evaluations
+[21:34:18] Completed 490/640 evaluations
+[21:34:18] Completed 500/640 evaluations
+[21:34:18] Completed 510/640 evaluations
+[21:34:18] Completed 520/640 evaluations
+[21:34:18] Completed 530/640 evaluations
+[21:34:18] Completed 540/640 evaluations
+[21:34:18] Completed 550/640 evaluations
+[21:34:18] Completed 560/640 evaluations
+[21:34:18] Completed 570/640 evaluations
+[21:34:18] Completed 580/640 evaluations
+[21:34:18] Completed 590/640 evaluations
+[21:34:18] Completed 600/640 evaluations
+[21:34:18] Completed 610/640 evaluations
+[21:34:18] Completed 620/640 evaluations
+[21:34:18] Completed 630/640 evaluations
+[21:34:18] Completed 640/640 evaluations
+[21:34:18] Round 1 complete. Advancing 64 ideas. Saved to idea_tournament_round1_scores.json
+[21:34:18] Starting Idea Tournament Round 2 with 64 ideas
+[21:34:18] Completed 10/320 evaluations
+[21:34:18] Completed 20/320 evaluations
+[21:34:18] Completed 30/320 evaluations
+[21:34:18] Completed 40/320 evaluations
+[21:34:18] Completed 50/320 evaluations
+[21:34:18] Completed 60/320 evaluations
+[21:34:18] Completed 70/320 evaluations
+[21:34:18] Completed 80/320 evaluations
+[21:34:18] Completed 90/320 evaluations
+[21:34:18] Completed 100/320 evaluations
+[21:34:18] Completed 110/320 evaluations
+[21:34:18] Completed 120/320 evaluations
+[21:34:18] Completed 130/320 evaluations
+[21:34:18] Completed 140/320 evaluations
+[21:34:18] Completed 150/320 evaluations
+[21:34:18] Completed 160/320 evaluations
+[21:34:18] Completed 170/320 evaluations
+[21:34:18] Completed 180/320 evaluations
+[21:34:18] Completed 190/320 evaluations
+[21:34:18] Completed 200/320 evaluations
+[21:34:18] Completed 210/320 evaluations
+[21:34:18] Completed 220/320 evaluations
+[21:34:18] Completed 230/320 evaluations
+[21:34:18] Completed 240/320 evaluations
+[21:34:18] Completed 250/320 evaluations
+[21:34:18] Completed 260/320 evaluations
+[21:34:18] Completed 270/320 evaluations
+[21:34:18] Completed 280/320 evaluations
+[21:34:18] Completed 290/320 evaluations
+[21:34:18] Completed 300/320 evaluations
+[21:34:18] Completed 310/320 evaluations
+[21:34:18] Completed 320/320 evaluations
+[21:34:18] Round 2 complete. Advancing 32 ideas. Saved to idea_tournament_round2_scores.json
+[21:34:18] Starting Idea Tournament Round 3 with 32 ideas
+[21:34:18] Completed 10/160 evaluations
+[21:34:18] Completed 20/160 evaluations
+[21:34:18] Completed 30/160 evaluations
+[21:34:18] Completed 40/160 evaluations
+[21:34:18] Completed 50/160 evaluations
+[21:34:18] Completed 60/160 evaluations
+[21:34:18] Completed 70/160 evaluations
+[21:34:18] Completed 80/160 evaluations
+[21:34:18] Completed 90/160 evaluations
+[21:34:18] Completed 100/160 evaluations
+[21:34:18] Completed 110/160 evaluations
+[21:34:18] Completed 120/160 evaluations
+[21:34:18] Completed 130/160 evaluations
+[21:34:18] Completed 140/160 evaluations
+[21:34:18] Completed 150/160 evaluations
+[21:34:18] Completed 160/160 evaluations
+[21:34:18] Round 3 complete. Advancing 16 ideas. Saved to idea_tournament_round3_scores.json
+[21:34:18] ============================================================
+[21:34:18] PHASE 1 COMPLETE: 16 winning ideas selected
+[21:34:18] Winners saved to idea_tournament_winners.json
+[21:34:18] ============================================================
+[21:34:18] ============================================================
+[21:34:18] STARTING PHASE 2: TREATMENT GENERATION (128 total)
+[21:34:18] ============================================================
+[21:34:18] Generating 16 treatments from winning ideas...
+[21:34:18] Generated 4/16 winner treatments
+[21:34:18] Generated 8/16 winner treatments
+[21:34:18] Generated 12/16 winner treatments
+[21:34:18] Generated 16/16 winner treatments
+[21:34:18] Completed 16 treatments from winners
+[21:34:18] Generating 112 treatments from additional ideas...
+[21:34:18] Generated 36/128 total treatments
+[21:34:18] Generated 56/128 total treatments
+[21:34:18] Generated 76/128 total treatments
+[21:34:18] Generated 96/128 total treatments
+[21:34:18] Generated 116/128 total treatments
+[21:34:18] ============================================================
+[21:34:18] PHASE 2 COMPLETE: 128 treatments generated
+[21:34:18] Saved to /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/treatments
+[21:34:18] ============================================================
+[21:34:18] ============================================================
+[21:34:18] STARTING PHASE 3: TREATMENT TOURNAMENT (128 → 8)
+[21:34:18] ============================================================
+[21:34:18] Starting Treatment Tournament Round 1 with 128 treatments
+[21:34:18] Completed 10/640 evaluations
+[21:34:18] Completed 20/640 evaluations
+[21:34:18] Completed 30/640 evaluations
+[21:34:18] Completed 40/640 evaluations
+[21:34:18] Completed 50/640 evaluations
+[21:34:18] Completed 60/640 evaluations
+[21:34:18] Completed 70/640 evaluations
+[21:34:18] Completed 80/640 evaluations
+[21:34:18] Completed 90/640 evaluations
+[21:34:18] Completed 100/640 evaluations
+[21:34:18] Completed 110/640 evaluations
+[21:34:18] Completed 120/640 evaluations
+[21:34:18] Completed 130/640 evaluations
+[21:34:18] Completed 140/640 evaluations
+[21:34:18] Completed 150/640 evaluations
+[21:34:18] Completed 160/640 evaluations
+[21:34:18] Completed 170/640 evaluations
+[21:34:18] Completed 180/640 evaluations
+[21:34:18] Completed 190/640 evaluations
+[21:34:18] Completed 200/640 evaluations
+[21:34:18] Completed 210/640 evaluations
+[21:34:18] Completed 220/640 evaluations
+[21:34:18] Completed 230/640 evaluations
+[21:34:18] Completed 240/640 evaluations
+[21:34:18] Completed 250/640 evaluations
+[21:34:18] Completed 260/640 evaluations
+[21:34:18] Completed 270/640 evaluations
+[21:34:18] Completed 280/640 evaluations
+[21:34:18] Completed 290/640 evaluations
+[21:34:18] Completed 300/640 evaluations
+[21:34:18] Completed 310/640 evaluations
+[21:34:18] Completed 320/640 evaluations
+[21:34:18] Completed 330/640 evaluations
+[21:34:18] Completed 340/640 evaluations
+[21:34:18] Completed 350/640 evaluations
+[21:34:18] Completed 360/640 evaluations
+[21:34:18] Completed 370/640 evaluations
+[21:34:18] Completed 380/640 evaluations
+[21:34:18] Completed 390/640 evaluations
+[21:34:18] Completed 400/640 evaluations
+[21:34:18] Completed 410/640 evaluations
+[21:34:18] Completed 420/640 evaluations
+[21:34:18] Completed 430/640 evaluations
+[21:34:18] Completed 440/640 evaluations
+[21:34:18] Completed 450/640 evaluations
+[21:34:18] Completed 460/640 evaluations
+[21:34:18] Completed 470/640 evaluations
+[21:34:18] Completed 480/640 evaluations
+[21:34:18] Completed 490/640 evaluations
+[21:34:18] Completed 500/640 evaluations
+[21:34:18] Completed 510/640 evaluations
+[21:34:18] Completed 520/640 evaluations
+[21:34:18] Completed 530/640 evaluations
+[21:34:18] Completed 540/640 evaluations
+[21:34:18] Completed 550/640 evaluations
+[21:34:18] Completed 560/640 evaluations
+[21:34:18] Completed 570/640 evaluations
+[21:34:18] Completed 580/640 evaluations
+[21:34:18] Completed 590/640 evaluations
+[21:34:18] Completed 600/640 evaluations
+[21:34:18] Completed 610/640 evaluations
+[21:34:18] Completed 620/640 evaluations
+[21:34:18] Completed 630/640 evaluations
+[21:34:18] Completed 640/640 evaluations
+[21:34:18] Round 1 complete. Advancing 64 treatments. Saved to treatment_tournament_round1_scores.json
+[21:34:18] Starting Treatment Tournament Round 2 with 64 treatments
+[21:34:18] Completed 10/320 evaluations
+[21:34:18] Completed 20/320 evaluations
+[21:34:18] Completed 30/320 evaluations
+[21:34:18] Completed 40/320 evaluations
+[21:34:18] Completed 50/320 evaluations
+[21:34:18] Completed 60/320 evaluations
+[21:34:18] Completed 70/320 evaluations
+[21:34:18] Completed 80/320 evaluations
+[21:34:18] Completed 90/320 evaluations
+[21:34:18] Completed 100/320 evaluations
+[21:34:18] Completed 110/320 evaluations
+[21:34:18] Completed 120/320 evaluations
+[21:34:18] Completed 130/320 evaluations
+[21:34:18] Completed 140/320 evaluations
+[21:34:18] Completed 150/320 evaluations
+[21:34:18] Completed 160/320 evaluations
+[21:34:18] Completed 170/320 evaluations
+[21:34:18] Completed 180/320 evaluations
+[21:34:18] Completed 190/320 evaluations
+[21:34:18] Completed 200/320 evaluations
+[21:34:18] Completed 210/320 evaluations
+[21:34:18] Completed 220/320 evaluations
+[21:34:18] Completed 230/320 evaluations
+[21:34:18] Completed 240/320 evaluations
+[21:34:18] Completed 250/320 evaluations
+[21:34:18] Completed 260/320 evaluations
+[21:34:18] Completed 270/320 evaluations
+[21:34:18] Completed 280/320 evaluations
+[21:34:18] Completed 290/320 evaluations
+[21:34:18] Completed 300/320 evaluations
+[21:34:18] Completed 310/320 evaluations
+[21:34:18] Completed 320/320 evaluations
+[21:34:18] Round 2 complete. Advancing 32 treatments. Saved to treatment_tournament_round2_scores.json
+[21:34:18] Starting Treatment Tournament Round 3 with 32 treatments
+[21:34:18] Completed 10/160 evaluations
+[21:34:18] Completed 20/160 evaluations
+[21:34:18] Completed 30/160 evaluations
+[21:34:18] Completed 40/160 evaluations
+[21:34:18] Completed 50/160 evaluations
+[21:34:18] Completed 60/160 evaluations
+[21:34:18] Completed 70/160 evaluations
+[21:34:18] Completed 80/160 evaluations
+[21:34:18] Completed 90/160 evaluations
+[21:34:18] Completed 100/160 evaluations
+[21:34:18] Completed 110/160 evaluations
+[21:34:18] Completed 120/160 evaluations
+[21:34:18] Completed 130/160 evaluations
+[21:34:18] Completed 140/160 evaluations
+[21:34:18] Completed 150/160 evaluations
+[21:34:18] Completed 160/160 evaluations
+[21:34:18] Round 3 complete. Advancing 16 treatments. Saved to treatment_tournament_round3_scores.json
+[21:34:18] Starting Treatment Tournament Round 4 with 16 treatments
+[21:34:18] Completed 10/80 evaluations
+[21:34:18] Completed 20/80 evaluations
+[21:34:18] Completed 30/80 evaluations
+[21:34:18] Completed 40/80 evaluations
+[21:34:18] Completed 50/80 evaluations
+[21:34:18] Completed 60/80 evaluations
+[21:34:18] Completed 70/80 evaluations
+[21:34:18] Completed 80/80 evaluations
+[21:34:18] Round 4 complete. Advancing 8 treatments. Saved to treatment_tournament_round4_scores.json
+[21:34:18] ============================================================
+[21:34:18] PHASE 3 COMPLETE: 8 winning treatments selected
+[21:34:18] Winners saved to treatment_tournament_winners.json
+[21:34:18] ============================================================
+[21:34:18] Creating final summary report...
+[21:34:18] Final summary report saved to /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/tournaments/final_summary_report.md
+[21:34:18] ============================================================
+[21:34:18] ALL PHASES COMPLETE!
+[21:34:18] ============================================================
+[21:34:18] Total execution time: 0:00:00.150380
+[21:34:18] 
+[21:34:18] Final outputs:
+[21:34:18] - 16 winning ideas: /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/tournaments/idea_tournament_winners.json
+[21:34:18] - 128 treatments: /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/treatments/all_128_treatments.json
+[21:34:18] - 8 winning treatments: /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/tournaments/treatment_tournament_winners.json
+[21:34:18] - Final summary: /Users/fred/xcu_my_apps/nimble/codexes-factory/data/ideation/not_a_miracle_readers/tournaments/final_summary_report.md
+[21:34:18] ============================================================

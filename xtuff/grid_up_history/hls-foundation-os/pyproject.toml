@@ -1,0 +1,20 @@
+[project]
+name = "hls-foundation-os"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch",
+    "torchvision",
+    "transformers",
+    "accelerate",
+    "numpy",
+    "opencv-python",
+    "earthengine-api",
+    "pandas",
+    "nltk",
+    "huggingface_hub",
+    "requests",
+    "rasterio",
+]

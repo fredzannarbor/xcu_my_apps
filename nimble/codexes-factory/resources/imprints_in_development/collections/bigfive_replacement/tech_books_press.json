@@ -1,0 +1,162 @@
+{
+  "_config_info": {
+    "description": "Tech Books Press imprint configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "parent_publisher": "Academic Publishers Inc."
+  },
+  
+  "imprint": "Tech Books Press",
+  "publisher": "Academic Publishers Inc.",
+  "contact_email": "editorial@techbookspress.com",
+  
+  "branding": {
+    "logo_path": "logos/tech_books_press_logo.png",
+    "brand_colors": {
+      "primary": "#1E3A8A",
+      "secondary": "#10B981"
+    },
+    "tagline": "Advancing Technical Knowledge",
+    "website": "https://www.techbookspress.com"
+  },
+  
+  "publishing_focus": {
+    "primary_genres": ["Computer Science", "Engineering", "Mathematics", "Data Science"],
+    "target_audience": "Technical Professionals and Students",
+    "specialization": "Technical and programming books",
+    "languages": ["eng"]
+  },
+  
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "7x10",
+    "territorial_rights": "World",
+    "returnability": "Yes",
+    "audience": "Professional/Technical",
+    "country_of_origin": "US"
+  },
+  
+  "pricing_defaults": {
+    "us_wholesale_discount": "45",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "45",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "200"
+  },
+  
+  "distribution_settings": {
+    "lightning_source_account": "",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "12",
+    "order_type_eligibility": "POD"
+  },
+  
+  "metadata_defaults": {
+    "bisac_category_preferences": ["COM000000", "TEC000000", "MAT000000"],
+    "thema_subject_preferences": ["UB", "TBC", "PBW"],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Technical Editor"
+    },
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+  
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{title}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/tech_books"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  
+  "marketing_defaults": {
+    "review_quote_policy": "required",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@techbookspress",
+      "linkedin": "tech-books-press",
+      "github": "techbookspress"
+    }
+  },
+  
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "Tech Books Press",
+    "stamped_text_right": "",
+    "lsi_special_category": "",
+    "metadata_contact_dictionary": "Tech Books Editorial",
+    "publisher_reference_id": "TBP",
+    "flex_fields": {
+      "lsi_flexfield1": "Technical",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "pricing_multiplier": 0.78,
+      "exchange_rate": 0.78
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "pricing_multiplier": 0.91,
+      "exchange_rate": 0.91
+    },
+    "CA": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.35
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "pricing_multiplier": 1.48,
+      "exchange_rate": 1.48
+    }
+  },
+  
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "workflow@techbookspress.com",
+    "backup_configurations": true,
+    "llm_completion_enabled": true,
+    "computed_fields_enabled": true
+  }
+}

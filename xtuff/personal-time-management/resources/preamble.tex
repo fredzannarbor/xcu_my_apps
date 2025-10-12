@@ -1,0 +1,11 @@
+\usepackage{fontspec} % Ensure fontspec is loaded
+\usepackage{newunicodechar} % Required to map missing characters to fallback
+
+% Modify the main font defined by Pandoc to add the fallback
+\setmainfont{Warnock Pro}[RawFeature={fallback="Apple Symbols:mode=harf;"}]
+
+% Modify the sans font defined by Pandoc to add the fallback
+\setsansfont{Futura}[RawFeature={fallback="Apple Symbols:mode=harf;"}]
+
+% Modify the mono font defined by Pandoc to add the fallback
+\setmonofont{Source Code Pro}[RawFeature={fallback="Apple Symbols:mode=harf;"}]

@@ -1,0 +1,38 @@
+import streamlit as st
+
+from app.utilities.BookSeries.createbookseries import create_ideas
+
+st.title("Book Series Generator")
+st.write("This tool will help you create a book series.")
+st.write("First, tell us about the series you want to create.")
+with st.form("series_info"):
+    series_description = st.text_input("Series Description", "Kids complain about things that separate them from their parents.")
+    genre = st.text_input("Genre", "snarky children's bedtime")
+    word_count = st.text_input("Word Count", 500)
+    audience = st.text_input("Audience", "children")
+    formulaicness = st.slider("Formulaicness", 0.0, 1.0, 0.7, 0.05)
+    if formulaicness == 0:
+        formulaic = "not at all"
+    elif formulaicness < 0.25:
+        formulaic = "not very"
+    elif formulaicness < 0.5:
+        formulaic = "somewhat"
+    elif formulaicness < 0.7:
+        formulaic = "quite"
+    elif formulaicness < 0.9:
+        formulaic = "highly"
+    elif formulaicness == 1:
+        formulaic = "completely"
+    formulaicmessage = f"{formulaic} formulaic"
+    st.info(formulaicmessage)
+    st.write("How many books do you plan for the series?")
+    number_of_titles = st.number_input("Number of Titles", 2, 100, 12, 1)
+    reboot = st.selectbox("Reboot?", ["Yes", "No"], index=1)
+    franchise = st.selectbox("Franchise?", ["Yes", "No"], index=1)
+    submitted = st.form_submit_button("Create Series")
+
+if submitted:
+    title_requirements_prompt = f" {word_count}: words. Genre: {genre}. Audience: {audience}. {formulaic}formulaic."
+    st.info(title_requirements_prompt)
+    ideas = create_ideas(series_description + title_requirements_prompt)
+    st.write(ideas)

@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "description": "Prompt templates for ArXiv paper generation on xynapse_traces imprint",
+    "version": "2.0",
+    "created": "2025-01-01",
+    "updated": "2025-08-29",
+    "author": "AI Lab for Book-Lovers"
+  },
+  "context_injection": {
+    "data_sources": {
+      "book_catalog": "imprints/xynapse_traces/books.csv",
+      "imprint_config": "configs/imprints/xynapse_traces.json",
+      "technical_modules": "src/codexes/modules/",
+      "configuration_hierarchy": "configs/",
+      "performance_metrics": "output/arxiv_paper/metrics/"
+    },
+    "variable_definitions": {
+      "total_books": "Count of books in xynapse_traces catalog",
+      "publication_date_range": "Date range from earliest to latest publication",
+      "key_technologies": "List of AI models and technical components used",
+      "config_hierarchy": "Multi-level configuration structure documentation",
+      "technical_architecture": "System architecture and component descriptions",
+      "ai_integration_patterns": "LLM orchestration and prompt management patterns",
+      "imprint_config_summary": "Key configuration settings and branding elements",
+      "production_metrics": "Performance data including processing times and quality scores",
+      "book_examples": "Sample book metadata and generated content examples",
+      "quality_metrics": "Quality assessment scores and validation results",
+      "efficiency_data": "Comparative efficiency metrics vs traditional workflows"
+    },
+    "injection_patterns": {
+      "statistical_summary": "Automatically inject book count, date ranges, and production metrics",
+      "technical_details": "Include configuration examples and code snippets",
+      "case_studies": "Reference specific books as implementation examples",
+      "comparative_analysis": "Include efficiency and quality comparisons"
+    }
+  },
+  "paper_sections": {
+    "abstract": {
+      "system_prompt": "You are an expert AI researcher and professional book publisher specializing in AI and book publishing. Write a compelling abstract for an academic paper that will be submitted to arXiv in the cs.AI category.",
+      "user_prompt": "Write an abstract for a paper titled 'xynapse traces: Creating a Book Publishing Imprint using Algorithmic Methods'. \n\nREQUIRED OPENING: The first sentence of the abstract MUST be a precise declaration of the research problem, laying the groundwork for the methods, findings, and conclusions of the paper. The first sentence MUST be a concise and powerful hook that establishes the paper's subject and its importance.\n\nCONTEXT DATA:\n- Total books produced: {total_books}\n- Publication timeline: {publication_date_range}\n- AI technologies used: {key_technologies}\n- Configuration system: {config_hierarchy_summary}\n- Technical innovations: {technical_innovations}\n\nKEY POINTS TO INCLUDE:\n\t•\tOvernight creation of a new publishing imprint with sixty-four innovative new titles ready for distribution.\n\n\t•\tIn this case, market research identified new customer behavior by Korean readers.  Cite articles that discuss the Text Hip movement in Korea. Nimble Books decided to test this audience in the US.\n\t•\tThe AI publishing techniques used in this pilot led to a decision by Nimble to target a more technical audience with books focused on human long-term survival.\n\t•\tThe implementation used LLMs to address the business, editorial, and design issues required to create a new iomprint.\n\t•\tMulti-level configuration model matches the complexity of publishing industry requirements.  Publisher, Imprint, Tranche ...\n\t\n\t•\tInterior and cover design used LLMs to customize LaTex templates powered by prepress modules in Python.\n\t•\tQuantitative results and production efficiency metrics\n\t•\tSignificance to publishing industry automation and AI research\n\t•\tNovel contribution to the world of books\n\n\nREQUIREMENTS:\n- Length: 150-250 words\n- Academic tone suitable for cs.AI category\n- Emphasize technical contributions and measurable outcomes\n- Position as first fully AI-assisted imprint creation case study",
+      "context_variables": ["total_books", "publication_date_range", "key_technologies", "config_hierarchy_summary", "technical_innovations", "ai_models_used"],
+      "validation_criteria": {
+        "required_opening": "The AI Lab for Book-Lovers demonstrates the use of AI",
+        "word_count_range": [150, 250],
+        "must_include_terms": ["multi-level configuration", "AI-assisted", "imprint creation", "quantitative results"]
+      }
+    },
+    "introduction": {
+      "system_prompt": "You are an expert academic writer with deep knowledge of AI applications in publishing and digital humanities. Write a compelling introduction that establishes context and research contribution.",
+      "user_prompt": "Write an introduction section for the paper 'AI-Assisted Creation of a Publishing Imprint: The xynapse_traces Case Study'.\n\nThe introduction should:\n1. Establish the context of AI in publishing and content creation\n2. Identify the scalability challenges in traditional publishing\n3. Present the research contribution: first fully AI-assisted imprint creation\n4. Outline the paper organization\n\nKey technical elements to mention:\n- Imprints are a fundamental business unit of publishing.\n- Publishers often create new imprints when targeting new audiences.\n\n\nTarget length: 800-1200 words. Use academic tone with clear, direct technical communication.",
+      "context_variables": ["imprint_config", "ai_models_used", "technical_innovations"]
+    },
+    "methodology": {
+      "system_prompt": "You are a technical writer specializing in AI systems architecture and publishing technology. Describe the technical methodology with precision and clarity suitable for an academic audience.",
+      "user_prompt": "Write the methodology section for the xynapse_traces imprint creation paper.\n\nTECHNICAL ARCHITECTURE OVERVIEW:\n{technical_architecture}\n\nCONFIGURATION SYSTEM DETAILS:\n{config_hierarchy}\n\nAI INTEGRATION PATTERNS:\n{ai_integration_patterns}\n\nCOVER THESE TECHNICAL AREAS:\n\n1. **Codexes-Factory Platform Architecture**\n   - Core system components and module organization\n   - File structure: {file_structure_summary}\n   - Integration points and data flow\n\n2. **Multi-level Configuration System**\n   - Five-tier hierarchy: Global → Publisher → Imprint → Tranche → Book\n   - Configuration inheritance and resolution patterns\n   - Runtime context management and validation\n   - Example configuration snippets from xynapse_traces\n\n3. **AI Integration and LLM Orchestration**\n   - LLM caller abstraction layer: {llm_caller_details}\n   - Prompt management system and template architecture\n   - Response validation and retry mechanisms with exponential backoff\n   - Multi-model support: {ai_models_used}\n\n4. **Korean Language Processing Pipeline**\n   - Unicode handling and font management\n   - LaTeX integration for Korean text rendering\n   - Automated text processing and validation\n\n5. **Quality Assurance and Validation Framework**\n   - Configuration validation schemas\n   - Content quality scoring and threshold checking\n   - Error handling and recovery strategies\n   - Production pipeline validation\n\n6. **Metadata Generation and Enhancement**\n   - Automated field completion using LLMs\n   - Field mapping registry and validation strategies\n   - LSI CSV generation for print-on-demand integration\n\nINCLUDE TECHNICAL EXAMPLES:\n- Configuration file structure and inheritance\n- LLM prompt templates and response handling\n- Code snippets from key modules\n- Validation and error handling patterns\n\nTARGET: 2000-3000 words with technical depth appropriate for cs.AI audience.",
+      "context_variables": ["config_hierarchy", "technical_architecture", "ai_integration_patterns", "file_structure_summary", "llm_caller_details", "ai_models_used"],
+      "technical_requirements": {
+        "include_code_examples": true,
+        "include_configuration_snippets": true,
+        "include_architecture_diagrams": true,
+        "technical_depth": "detailed",
+        "audience": "academic_technical"
+      }
+    },
+    "implementation": {
+      "system_prompt": "You are a technical documentation expert focusing on implementation details and case studies. Provide comprehensive coverage of the xynapse_traces implementation with specific examples and quantitative results.",
+      "user_prompt": "Write the implementation section detailing the xynapse_traces imprint creation and production pipeline.\n\nIMPRINT CONFIGURATION DATA:\n{imprint_config_summary}\n\nBOOK CATALOG DATA:\n{book_catalog_summary}\n\nPRODUCTION METRICS:\n{production_metrics}\n\nSTRUCTURE THE IMPLEMENTATION SECTION:\n\n1. **Xynapse Traces Imprint Configuration**\n   - Imprint branding and identity: {imprint_branding}\n   - Publishing focus: {publishing_focus}\n   - Default book settings and pricing structure\n   - Distribution and territorial configurations\n   - Configuration inheritance from parent publisher\n\n2. **Book Production Pipeline Implementation**\n   - End-to-end workflow from concept to publication\n   - Automated metadata generation and enhancement\n   - Template-based document generation\n   - Quality assurance checkpoints and validation\n   - LSI CSV generation for print-on-demand integration\n\n3. **AI-Driven Content Generation System**\n   - LLM-powered metadata completion: {llm_completion_examples}\n   - Automated description and back-cover text generation\n   - Korean language processing for multilingual support\n   - Prompt engineering and response validation\n   - Quality scoring and manual review triggers\n\n4. **Multi-Level Configuration Resolution**\n   - Runtime configuration context management\n   - Field inheritance and override patterns\n   - Validation and error handling mechanisms\n   - Performance optimization for large catalogs\n\n5. **Case Study: Sample Book Production**\n   - Detailed walkthrough using specific book examples: {sample_books}\n   - Configuration resolution for individual titles\n   - AI-generated content examples and quality assessment\n   - Production timeline and efficiency metrics\n\n6. **Performance Analysis and Optimization**\n   - Processing time metrics: {processing_times}\n   - Quality assessment results: {quality_scores}\n   - Resource utilization and scalability analysis\n   - Comparison with traditional publishing workflows\n\n7. **Integration with External Systems**\n   - Lightning Source International (LSI) integration\n   - Print-on-demand workflow automation\n   - E-commerce platform integration\n   - Monitoring and logging infrastructure\n\nINCLUDE SPECIFIC EXAMPLES:\n- Complete configuration file excerpts\n- Generated metadata samples from actual books\n- LLM prompt templates and responses\n- Performance benchmarks and efficiency gains\n- Error handling and recovery scenarios\n\nTARGET: 2500-3500 words with comprehensive technical coverage.",
+      "context_variables": ["imprint_config_summary", "book_catalog_summary", "production_metrics", "imprint_branding", "publishing_focus", "llm_completion_examples", "sample_books", "processing_times", "quality_scores"],
+      "implementation_requirements": {
+        "include_real_examples": true,
+        "include_performance_data": true,
+        "include_case_studies": true,
+        "technical_depth": "comprehensive",
+        "quantitative_focus": true
+      }
+    },
+    "results": {
+      "system_prompt": "You are a research analyst specializing in quantitative and qualitative assessment of AI systems. Present results with academic rigor using specific data and measurable outcomes.",
+      "user_prompt": "Write the results section presenting the comprehensive outcomes of the xynapse_traces imprint creation project.\n\nQUANTITATIVE RESULTS DATA:\n- Total books produced: {total_books}\n- Publication timeline: {publication_date_range}\n- Processing efficiency: {processing_efficiency_metrics}\n- Quality scores: {quality_assessment_scores}\n- Cost analysis: {cost_comparison_data}\n- Time savings: {time_efficiency_data}\n\nBOOK CATALOG ANALYSIS:\n{book_catalog_analysis}\n\nPERFORMANCE METRICS:\n{detailed_performance_metrics}\n\nSTRUCTURE THE RESULTS SECTION:\n\n1. **Production Volume and Timeline**\n   - Total books in catalog: {total_books}\n   - Publication schedule: {publication_schedule}\n   - Production rate and consistency metrics\n   - Catalog diversity analysis (genres, themes, series)\n\n2. **AI System Performance Metrics**\n   - LLM response quality scores: {llm_quality_scores}\n   - Metadata completion accuracy: {metadata_accuracy}\n   - Processing time per book: {processing_times_per_book}\n   - Error rates and manual intervention frequency\n   - System uptime and reliability metrics\n\n3. **Content Quality Assessment**\n   - Automated quality scoring results\n   - Manual review outcomes and approval rates\n   - Consistency analysis across book catalog\n   - Compliance with publishing standards\n   - User feedback and satisfaction metrics\n\n4. **Workflow Efficiency Analysis**\n   - Time comparison: Traditional vs. AI-assisted workflows\n   - Resource utilization and cost efficiency\n   - Automation rate and manual intervention points\n   - Scalability performance under increased load\n   - Error reduction and quality improvement metrics\n\n5. **Configuration System Performance**\n   - Configuration resolution time and accuracy\n   - Inheritance pattern effectiveness\n   - Validation success rates and error handling\n   - System flexibility and customization capabilities\n\n6. **Comparative Analysis with Traditional Publishing**\n   - Cost per book comparison: {cost_per_book_comparison}\n   - Time to market improvements: {time_to_market_data}\n   - Quality consistency advantages\n   - Scalability and volume handling capabilities\n   - Resource allocation efficiency\n\n7. **Case Study Results: Sample Books**\n   - Detailed analysis of representative titles: {case_study_books}\n   - End-to-end production metrics for specific examples\n   - Quality assessment and user feedback\n   - Configuration effectiveness demonstration\n\n8. **System Reliability and Error Analysis**\n   - System uptime and availability metrics\n   - Error categorization and resolution times\n   - Recovery mechanisms effectiveness\n   - Data integrity and validation success rates\n\nPRESENTATION REQUIREMENTS:\n- Include quantitative tables with statistical analysis\n- Present data visualizations and trend analysis\n- Provide confidence intervals and significance testing where appropriate\n- Compare results against baseline traditional publishing metrics\n- Highlight key performance indicators and success metrics\n\nTARGET: 1500-2000 words with comprehensive quantitative analysis.",
+      "context_variables": ["total_books", "publication_date_range", "processing_efficiency_metrics", "quality_assessment_scores", "cost_comparison_data", "time_efficiency_data", "book_catalog_analysis", "detailed_performance_metrics", "publication_schedule", "llm_quality_scores", "metadata_accuracy", "processing_times_per_book", "cost_per_book_comparison", "time_to_market_data", "case_study_books"],
+      "results_requirements": {
+        "quantitative_focus": true,
+        "include_statistical_analysis": true,
+        "include_comparative_data": true,
+        "include_case_studies": true,
+        "academic_rigor": "high"
+      }
+    },
+    "discussion": {
+      "system_prompt": "You are an academic researcher with expertise in AI applications and publishing industry analysis. Provide thoughtful discussion of implications and limitations.",
+      "user_prompt": "Write the discussion section analyzing the implications of AI-assisted imprint creation.\n\nKey areas to address:\n1. **Industry Implications**: Impact on publishing workflows and business models\n2. **Scalability Considerations**: Potential for broader adoption\n3. **Technical Limitations**: Current constraints and challenges\n4. **Quality vs. Efficiency Trade-offs**: Analysis of automation benefits and risks\n5. **Future Research Directions**: Next steps and open questions\n\nMaintain balanced perspective on AI's role in publishing. Consider both opportunities and challenges. Target length: 1000-1500 words.",
+      "context_variables": ["industry_context", "technical_limitations", "future_directions"]
+    },
+    "conclusion": {
+      "system_prompt": "You are an academic writer concluding a technical research paper. Summarize contributions and impact clearly and compellingly.",
+      "user_prompt": "Write a conclusion for the xynapse_traces imprint creation paper.\n\nSummarize:\n1. **Key Contributions**: Technical innovations and research contributions\n2. **Practical Impact**: Demonstrated benefits for publishing industry\n3. **Academic Significance**: Contribution to AI and digital humanities research\n4. **Future Directions**: Next steps and broader implications\n\nEnd with a compelling statement about the future of AI-assisted publishing. Target length: 400-600 words.",
+      "context_variables": ["key_contributions", "practical_impact", "future_vision"]
+    }
+  },
+  "technical_documentation": {
+    "configuration_analysis": {
+      "system_prompt": "You are a technical documentation specialist analyzing software configuration systems.",
+      "user_prompt": "Analyze and document the multi-level configuration system used in the xynapse_traces imprint.\n\nConfiguration Hierarchy:\n{config_hierarchy}\n\nDocument:\n1. Inheritance patterns and resolution logic\n2. Type safety and validation mechanisms\n3. Runtime context management\n4. Performance characteristics\n5. Extensibility and maintainability\n\nProvide code examples and architectural diagrams where helpful.",
+      "context_variables": ["config_hierarchy", "validation_rules", "performance_data"]
+    },
+    "ai_integration_analysis": {
+      "system_prompt": "You are an AI systems architect documenting LLM integration patterns.",
+      "user_prompt": "Document the AI integration approach used in the xynapse_traces imprint creation.\n\nAI Components:\n- LLM models used: {ai_models}\n- Prompt management system\n- Response validation and retry logic\n- Quality assurance mechanisms\n\nAnalyze:\n1. Orchestration patterns\n2. Error handling strategies\n3. Performance optimization\n4. Scalability considerations\n\nInclude specific examples of prompts and responses.",
+      "context_variables": ["ai_models", "prompt_examples", "integration_patterns"]
+    }
+  },
+  "data_analysis": {
+    "book_catalog_analysis": {
+      "system_prompt": "You are a data analyst specializing in publishing industry metrics and book production analysis. Generate comprehensive statistical analysis suitable for academic publication.",
+      "user_prompt": "Analyze the xynapse_traces book catalog data and generate detailed insights for the academic paper.\n\nRAW CATALOG DATA:\n{book_catalog_data}\n\nPRODUCTION TIMELINE DATA:\n{production_timeline_data}\n\nQUALITY METRICS DATA:\n{quality_metrics_data}\n\nGENERATE COMPREHENSIVE ANALYSIS:\n\n1. **Production Volume Analysis**\n   - Total books: {total_books_count}\n   - Publication timeline: {publication_date_range}\n   - Production rate and scheduling patterns\n   - Volume comparison with traditional imprint launches\n   - Statistical significance of production efficiency\n\n2. **Content Characteristics Analysis**\n   - Page count distribution and statistics\n   - Pricing structure analysis and consistency\n   - Genre and theme categorization\n   - Series vs. standalone book distribution\n   - Content complexity and processing requirements\n\n3. **Quality and Consistency Metrics**\n   - Standardization measures across catalog\n   - Metadata completeness and accuracy rates\n   - Design consistency and template adherence\n   - Error rates and quality control effectiveness\n   - Automated vs. manual quality assessment correlation\n\n4. **AI-Generated Content Analysis**\n   - LLM-generated metadata quality assessment\n   - Content generation success rates by field type\n   - Validation and approval rates for AI content\n   - Human intervention frequency and patterns\n   - Quality improvement trends over time\n\n5. **Configuration System Effectiveness**\n   - Configuration inheritance success rates\n   - Field override patterns and frequency\n   - Validation error rates and resolution\n   - System flexibility demonstration through catalog diversity\n\n6. **Comparative Industry Analysis**\n   - Benchmark against traditional publishing timelines\n   - Cost efficiency comparison with industry standards\n   - Quality metrics vs. traditional editorial processes\n   - Scalability advantages and limitations\n\n7. **Statistical Significance Testing**\n   - Confidence intervals for key performance metrics\n   - Hypothesis testing for efficiency improvements\n   - Correlation analysis between automation and quality\n   - Trend analysis and predictive modeling\n\nOUTPUT REQUIREMENTS:\n- Present data in academic format with proper statistical notation\n- Include descriptive statistics (mean, median, standard deviation)\n- Provide correlation coefficients and significance levels\n- Generate publication-ready tables and figure descriptions\n- Highlight key findings and their statistical significance\n\nTARGET: Comprehensive statistical analysis suitable for cs.AI publication standards.",
+      "context_variables": ["book_catalog_data", "production_timeline_data", "quality_metrics_data", "total_books_count", "publication_date_range"],
+      "analysis_requirements": {
+        "statistical_rigor": "high",
+        "include_significance_testing": true,
+        "academic_format": true,
+        "publication_ready": true
+      }
+    },
+    "performance_metrics": {
+      "system_prompt": "You are a performance analyst evaluating AI-assisted publishing workflows.",
+      "user_prompt": "Analyze the performance metrics of the xynapse_traces imprint creation process.\n\nMetrics Data:\n{performance_data}\n\nEvaluate:\n1. **Processing Efficiency**: Time per book, automation rates\n2. **Quality Consistency**: Error rates, manual intervention needs\n3. **Resource Utilization**: Computational costs, human oversight\n4. **Scalability Indicators**: Performance trends, bottlenecks\n\nProvide quantitative analysis suitable for academic presentation.",
+      "context_variables": ["performance_data", "efficiency_metrics", "scalability_analysis"]
+    }
+  },
+  "literature_review": {
+    "ai_publishing_review": {
+      "system_prompt": "You are an academic researcher conducting a literature review on AI applications in publishing and content creation. Position the xynapse_traces work within the broader research landscape.",
+      "user_prompt": "Write a comprehensive literature review section covering AI applications in publishing and content creation.\n\nRESEARCH CONTEXT:\n{research_context}\n\nCITATION DATABASE:\n{citation_list}\n\nPOSITIONING STATEMENT:\n{positioning_statement}\n\nSTRUCTURE THE LITERATURE REVIEW:\n\n1. **AI Content Generation and Automation**\n   - Recent advances in LLM-based content creation\n   - Automated writing and editing systems\n   - Quality assessment and validation approaches\n   - Comparison with human-authored content\n\n2. **Publishing Workflow Automation**\n   - Digital publishing pipeline optimization\n   - Metadata generation and enhancement systems\n   - Print-on-demand integration and automation\n   - Configuration management in publishing systems\n\n3. **Multilingual and Cross-Cultural Publishing**\n   - AI approaches to multilingual content processing\n   - Unicode handling and font management systems\n   - Cultural adaptation and localization automation\n   - Korean language processing in digital publishing\n\n4. **Quality Assurance and Validation in AI Systems**\n   - AI-assisted quality control methodologies\n   - Automated validation and error detection\n   - Human-in-the-loop quality assurance systems\n   - Performance metrics and evaluation frameworks\n\n5. **Configuration Management and System Architecture**\n   - Multi-level configuration systems in software\n   - Inheritance patterns and resolution strategies\n   - Scalable system design for content management\n   - Modular architecture in publishing platforms\n\n6. **Digital Humanities and AI Integration**\n   - AI applications in digital humanities research\n   - Automated analysis of cultural and literary content\n   - Technology-assisted scholarly publishing\n   - Interdisciplinary approaches to content creation\n\nPOSITIONING REQUIREMENTS:\n- Clearly articulate how xynapse_traces advances the field\n- Identify gaps in existing research that this work addresses\n- Highlight novel contributions and technical innovations\n- Connect to broader trends in AI and digital humanities\n\nCITATION REQUIREMENTS:\n- Include 40-60 relevant academic citations\n- Balance recent work (2020-2025) with foundational research\n- Cover both technical and humanities perspectives\n- Include industry reports and case studies where relevant\n\nTARGET: 1000-1500 words with comprehensive coverage of related work.",
+      "context_variables": ["citation_list", "research_context", "positioning_statement"],
+      "review_requirements": {
+        "citation_count_range": [40, 60],
+        "temporal_balance": "recent_and_foundational",
+        "interdisciplinary_scope": true,
+        "positioning_clarity": "high"
+      }
+    }
+  },
+  "supplemental_documentation": {
+    "technical_appendix": {
+      "system_prompt": "You are a technical documentation specialist creating supplemental materials for an academic paper. Generate comprehensive technical appendices.",
+      "user_prompt": "Generate technical appendix content for the xynapse_traces paper.\n\nTECHNICAL DATA:\n{technical_specifications}\n\nCONFIGURATION EXAMPLES:\n{configuration_examples}\n\nCODE SAMPLES:\n{code_samples}\n\nGENERATE APPENDIX SECTIONS:\n\nA. **Complete Book Catalog Table**\n   - Comprehensive table of all {total_books} books\n   - Include: Title, Author, ISBN, Publication Date, Page Count, Price\n   - Statistical summary and distribution analysis\n\nB. **Configuration System Documentation**\n   - Complete configuration hierarchy examples\n   - Field inheritance and resolution examples\n   - Validation rules and error handling patterns\n\nC. **AI Integration Technical Details**\n   - LLM prompt templates and examples\n   - Response validation schemas\n   - Error handling and retry mechanisms\n\nD. **Performance Metrics and Benchmarks**\n   - Detailed performance data tables\n   - Comparative analysis with traditional workflows\n   - Statistical significance testing results\n\nE. **Code Examples and Architecture**\n   - Key module implementations\n   - Configuration resolution algorithms\n   - Quality assurance and validation code\n\nF. **Korean Language Processing Implementation**\n   - Unicode handling and font management\n   - LaTeX integration examples\n   - Text processing and validation routines\n\nFORMAT REQUIREMENTS:\n- Academic appendix format with proper numbering\n- Include figure and table captions\n- Provide clear technical explanations\n- Ensure reproducibility of results",
+      "context_variables": ["technical_specifications", "configuration_examples", "code_samples", "total_books"],
+      "appendix_requirements": {
+        "comprehensive_coverage": true,
+        "technical_depth": "detailed",
+        "reproducibility": "high",
+        "academic_format": true
+      }
+    },
+    "methodology_details": {
+      "system_prompt": "You are a methodology expert documenting detailed technical procedures for academic replication.",
+      "user_prompt": "Generate detailed methodology documentation for the xynapse_traces implementation.\n\nIMPLEMENTATION DETAILS:\n{implementation_details}\n\nSYSTEM ARCHITECTURE:\n{system_architecture}\n\nWORKFLOW PROCEDURES:\n{workflow_procedures}\n\nDOCUMENT DETAILED METHODOLOGY:\n\n1. **System Setup and Configuration**\n   - Hardware and software requirements\n   - Installation and configuration procedures\n   - Environment setup and dependency management\n   - Initial system validation and testing\n\n2. **Imprint Creation Procedure**\n   - Step-by-step imprint configuration process\n   - Branding and identity setup procedures\n   - Configuration inheritance implementation\n   - Validation and testing protocols\n\n3. **Book Production Workflow**\n   - Detailed production pipeline procedures\n   - AI integration and LLM orchestration steps\n   - Quality assurance checkpoints and validation\n   - Error handling and recovery procedures\n\n4. **Data Collection and Analysis Methods**\n   - Performance metric collection procedures\n   - Quality assessment methodologies\n   - Statistical analysis and validation approaches\n   - Comparative analysis with baseline systems\n\n5. **Validation and Testing Protocols**\n   - System validation procedures\n   - Content quality assessment methods\n   - Performance benchmarking protocols\n   - Error detection and correction procedures\n\n6. **Reproducibility Guidelines**\n   - Complete system replication instructions\n   - Configuration templates and examples\n   - Testing and validation checklists\n   - Troubleshooting and debugging guides\n\nREQUIREMENTS:\n- Provide sufficient detail for complete replication\n- Include all necessary configuration files and examples\n- Document all assumptions and prerequisites\n- Ensure methodological rigor and transparency",
+      "context_variables": ["implementation_details", "system_architecture", "workflow_procedures"],
+      "methodology_requirements": {
+        "replication_completeness": "full",
+        "technical_precision": "high",
+        "transparency": "complete",
+        "academic_rigor": "strict"
+      }
+    }
+  }
+}

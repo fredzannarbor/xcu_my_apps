@@ -1,0 +1,75 @@
+\documentclass[6x9]{memoir}
+
+% New Literary Imprint Template
+% Generated on 2025-08-11
+% Optimized for professional print production
+
+% Typography settings
+\usepackage{fontspec}
+\setmainfont{Minion Pro}
+\setsansfont{Futura}
+
+% Color definitions for CMYK printing
+\usepackage[cmyk]{xcolor}
+\definecolor{primarycolor}{cmyk}{0.45,0.22,0.00,0.69}
+\definecolor{secondarycolor}{cmyk}{0.76,0.31,0.00,0.14}
+\definecolor{accentcolor}{cmyk}{0.00,0.67,0.74,0.09}
+
+% Professional printing settings
+\usepackage{microtype}  % Improved typography
+\usepackage{graphicx}   % Graphics support
+
+% Layout settings
+\setlrmarginsandblock{0.75in}{0.75in}{*}
+\setulmarginsandblock{0.75in}{0.75in}{*}
+\checkandfixthelayout
+
+% Chapter styling
+\chapterstyle{default}
+\renewcommand{\chaptitlefont}{\Large\sffamily\color{primarycolor}}
+
+% Header/footer styling
+\pagestyle{ruled}
+\makeevenhead{ruled}{\sffamily\color{secondarycolor}\leftmark}{}{\sffamily\color{secondarycolor}\thepage}
+\makeoddhead{ruled}{\sffamily\color{secondarycolor}\thepage}{}{\sffamily\color{secondarycolor}\rightmark}
+
+% Custom commands for New Literary Imprint
+\newcommand{\imprintname}{New Literary Imprint}
+\newcommand{\imprintmission}{To publish exceptional literature that connects with readers.}
+
+% Book-specific commands (to be set when using the template)
+\newcommand{\booktitle}{[BOOK TITLE]}
+\newcommand{\bookauthor}{[AUTHOR NAME]}
+\newcommand{\bookyear}{\the\year}
+
+\begin{document}
+
+% Title page
+\begin{titlingpage}
+\centering
+{\Huge\sffamily\color{primarycolor} \booktitle}\\[2cm]
+{\Large\sffamily \bookauthor}\\[1cm]
+{\large\sffamily\color{secondarycolor} \imprintname}
+\end{titlingpage}
+
+% Copyright page
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+{\small
+Copyright \copyright\ \bookyear\ \bookauthor\\[0.5cm]
+Published by \imprintname\\
+\imprintmission\\[0.5cm]
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher.
+}
+
+% Table of contents
+\clearpage
+\tableofcontents
+
+% Main content
+\mainmatter
+
+% Content will be inserted here
+
+\end{document}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Raven's Kiss",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@raven'skiss.com",
+  "branding": {
+    "tagline": "Love where you least expect it",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.raven'skiss.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Dark romance",
+    "target_audience": "Readers who love exploring the darker side of love and passion",
+    "competitive_advantage": "Offering a distinct blend of romance and dark themes",
+    "example_titles": "Anna Zaires, Pepper Winters"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

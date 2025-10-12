@@ -1,0 +1,28 @@
+{
+  "imprint": "Nippon Narratives",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@nipponnarratives.com",
+  "branding": {
+    "tagline": "Unfolding Japan's finest webtoon tales",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.nipponnarratives.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Classic and contemporary manga webtoons across all genres",
+    "target_audience": "Manga lovers and those new to the genre, aged 15 and above",
+    "competitive_advantage": "Our dedicated manga team possesses deep knowledge of the genre, enabling us to select and translate high-quality content that resonates globally",
+    "example_titles": "Titles like 'Naruto' and 'One Piece'; authors similar to Fujiko F. Fujio"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

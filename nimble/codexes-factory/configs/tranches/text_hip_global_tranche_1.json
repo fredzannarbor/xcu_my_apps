@@ -1,0 +1,42 @@
+{
+  "_config_info": {
+    "description": "Configuration for Text Hip Global imprint",
+    "version": "1.0",
+    "last_updated": "2025-09-26",
+    "config_type": "tranche_specific"
+  },
+  "display_name": "Text Hip Global - Contemporary Focus",
+  "description": "Modern and contemporary titles with global perspective",
+  "tranche_info": {
+    "tranche_id": "text-hip-global-tranche-1",
+    "tranche_name": "Text Hip Global Tranche 1",
+    "tranche_description": "Contemporary global perspective titles",
+    "book_count": 25,
+    "target_month": "Mar 2026",
+    "target_year": "2026"
+  },
+  "publisher": "Nimble Books LLC",
+  "imprint": "text_hip_global",
+  "lightning_source_account": "6024045",
+  "cover_submission_method": "FTP",
+  "text_block_submission_method": "FTP",
+  "rendition_booktype": "POD: 6 x 9 in or 229 x 152 mm Perfect Bound WHITE",
+  "carton_pack_quantity": "",
+  "order_type_eligibility": "POD",
+  "language_code": "eng",
+  "country_of_origin": "US",
+  "territorial_rights": "World",
+  "returnability": "Yes",
+  "binding_type": "paperback",
+  "interior_color": "BW",
+  "interior_paper": "Standard 70 perfect",
+  "trim_size": "6x9",
+  "cover_type": "matte",
+  "default_price": "22.99",
+  "currency": "USD",
+  "us_wholesale_discount": "40",
+  "uk_wholesale_discount": "40",
+  "eu_wholesale_discount": "40",
+  "ca_wholesale_discount": "40",
+  "au_wholesale_discount": "40"
+}

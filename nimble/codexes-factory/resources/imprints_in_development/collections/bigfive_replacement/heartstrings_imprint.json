@@ -1,0 +1,28 @@
+{
+  "imprint": "Heartstrings Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@heartstringsimprint.com",
+  "branding": {
+    "tagline": "Tales that touch the heart",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.heartstringsimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Emotionally touching contemporary romance",
+    "target_audience": "Readers who enjoy stories filled with deep emotion and personal growth",
+    "competitive_advantage": "Stories that delve into human emotions, providing a deep, relatable reading experience",
+    "example_titles": "Jojo Moyes, Emily Giffin"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

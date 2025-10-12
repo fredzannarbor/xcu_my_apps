@@ -1,0 +1,28 @@
+{
+  "imprint": "StellarFrontier Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@stellarfrontierpress.com",
+  "branding": {
+    "tagline": "Journey beyond the stars.",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.stellarfrontierpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space opera and galaxy-spanning adventures",
+    "target_audience": "Readers with passion for epic interstellar narratives",
+    "competitive_advantage": "A unique blend of science and storytelling to create captivating space operas",
+    "example_titles": "Works similar to 'Dune' by Frank Herbert or 'Foundation' by Isaac Asimov"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

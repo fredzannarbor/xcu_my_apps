@@ -1,0 +1,28 @@
+{
+  "imprint": "CivicScape",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@civicscape.com",
+  "branding": {
+    "tagline": "Strengthen Your Civic Muscle",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.civicscape.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Civic participation, activism, and grassroots movements",
+    "target_audience": "Activists, community organisers, and concerned citizens",
+    "competitive_advantage": "Focus on activism and civic participation",
+    "example_titles": "Activists, community organisers, and social scientists"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Flashpoint Fictions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@flashpointfictions.com",
+  "branding": {
+    "tagline": "Stories that Ignite!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.flashpointfictions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Thrillers, Action/Adventure, Spy Novels",
+    "target_audience": "Mature readers seeking high-stakes action",
+    "competitive_advantage": "Highly immersive, intricately plotted narratives",
+    "example_titles": "Tom Clancy, Lee Child, James Patterson"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

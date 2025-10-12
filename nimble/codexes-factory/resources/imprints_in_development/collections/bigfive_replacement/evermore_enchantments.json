@@ -1,0 +1,28 @@
+{
+  "imprint": "Evermore Enchantments",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@evermoreenchantments.com",
+  "branding": {
+    "tagline": "Fall under the spell of love",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.evermoreenchantments.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Magical realism with elements of romance",
+    "target_audience": "Readers who enjoy a blend of magical realism and romance",
+    "competitive_advantage": "We blend enchanting narratives with elements of romance, offering a unique reading experience",
+    "example_titles": "Comparable to works by Alice Hoffman or Laura Esquivel"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

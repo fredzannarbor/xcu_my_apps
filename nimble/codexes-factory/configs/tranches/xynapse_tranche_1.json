@@ -1,0 +1,99 @@
+{
+  "_config_info": {
+    "description": "Configuration for xynapse traces Tranche 1",
+    "version": "1.1",
+    "last_updated": "2025-07-30",
+    "config_type": "tranche_specific"
+  },
+  "tranche_info": {
+    "tranche_id": "xynapse-tranche-1",
+    "tranche_name": "xynapse traces Tranche 1",
+    "tranche_description": "First tranche of xynapse traces books",
+    "book_count": 69,
+    "target_month": "Seo 2025",
+    "target_year": "2025"
+  },
+  "publisher": "Nimble Books LLC",
+  "imprint": "xynapse_traces",
+  "lightning_source_account": "6024045",
+  "cover_submission_method": "FTP",
+  "text_block_submission_method": "FTP",
+  "rendition_booktype": "POD: 6 x 9 in or 229 x 152 mm Perfect Bound WHITE",
+  "carton_pack_quantity": "",
+  "order_type_eligibility": "POD",
+  "language_code": "eng",
+  "country_of_origin": "US",
+  "territorial_rights": "World",
+  "returnability": "Yes - Destroy",
+  "binding_type": "paperback",
+  "interior_color": "BW",
+  "interior_paper": "Standard 70 perfect",
+  "cover_type": "matte",
+  "edition_number": "1",
+  "edition_description": "First Edition",
+  "audience": "General Adult",
+  "required_bisac_subject": "SELF-HELP / Journaling",
+  "us_wholesale_discount": "40",
+  "uk_wholesale_discount": "40",
+  "eu_wholesale_discount": "40",
+  "ca_wholesale_discount": "40",
+  "au_wholesale_discount": "40",
+  "trim_size": "6x9",
+  "page_count": "200",
+  "spine_width": "0.5",
+  "weight_lbs": "0",
+  "custom_trim_width_inches": "0",
+  "custom_trim_height_inches": "0",
+  "contributor_one_role": "A",
+  "field_overrides": {
+    "Series Name": "Transcriptive Meditation",
+    "Contributor One BIO": "The AI Lab for Book-Lovers is the organizational author credited for works created by humans using AI tools developed by Fred Zimmerman.",
+    "Contributor One Affiliations": "The AI Lab for Book-Lovers is operated by Nimble Books LLC.",
+    "Contributor One Location": "Ann Arbor, Michigan, USA",
+    "Contributor One Location Type Code": "04",
+    "Contributor One Prior Work": "The AI Lab for Book-Lovers has been publishing books using AI since 2021.",
+    "annotation_boilerplate": " This book is part of the Transcriptive Meditation series, exploring the intersection of technology, society, and human potential through mindful analysis and reflection."
+  },
+  "fonts": {
+            "body": "Adobe Caslon Pro",
+            "heading": "Adobe Caslon Pro",
+            "korean": "Apple Myungjo",
+            "quotations": "Adobe Caslon Pro",
+            "mnemonics": "Adobe Caslon Pro"
+        },
+  "append_fields": [
+    "annotation_boilerplate"
+  ],
+  "file_path_templates": {
+    "interior": "{imprint}_build/interior/{title_slug}_interior.pdf",
+    "cover": "{imprint}_build/covers/{title_slug}_cover.pdf"
+  },
+  "field_exclusions": [
+    "Metadata Contact Dictionary",
+    "Parent ISBN"
+  ],
+  "series_info": {
+    "series_name": "Transcriptive Meditation",
+    "series_description": "A series using high-tech content to stimulate mindful reflection with transcriptive practices."
+  },
+  "table_of_contents_template": "Publisher's Note\nForeword\nGlossary of Pilsa Terms\nQuotations for Transcription\nSelection and Verification\nMnemonics\nBibliography",
+    "storefront_author_en": "AI Lab for Book-Lovers",
+  "file_paths": {
+    "marketing_image_template": "{imprint}_build/covers/{title_safe}_front_cover.png",
+    "interior_path_template": "{imprint}_build/interior/{title_safe}_interior.pdf",
+    "cover_path_template": "{imprint}_build/covers/{title_safe}_cover.pdf"
+  },
+  "blank_fields": [
+    "US-Ingram-Only* Suggested List Price (mode 2)",
+    "US-Ingram-Only* Wholesale Discount % (Mode 2)",
+    "US - Ingram - GAP * Suggested List Price (mode 2)",
+    "US - Ingram - GAP * Wholesale Discount % (Mode 2)",
+    "SIBI - EDUC - US * Suggested List Price (mode 2)",
+    "SIBI - EDUC - US * Wholesale Discount % (Mode 2)"
+  ],
+  "llm_config": {
+    "model": "gemini/gemini-2.5-pro",
+    "temperature": 0.7,
+    "max_tokens": 65535
+  }
+}

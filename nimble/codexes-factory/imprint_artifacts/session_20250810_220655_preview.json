@@ -1,0 +1,58 @@
+{
+  "imprint_name": "New Literary Imprint",
+  "tagline": "Stories That Matter",
+  "mission_statement": "To publish exceptional literature that connects with readers.",
+  "primary_genres": [
+    "Non-fiction",
+    "Biographical",
+    "Educational",
+    "Life Skills",
+    "STEAM"
+  ],
+  "target_audience": "Children aged 8 to 12 years old, aspiring to be avid readers and future-focused individuals who make wise life choices.",
+  "design_preview": {
+    "color_palette": {
+      "primary": "#2C3E50",
+      "secondary": "#3498DB",
+      "accent": "#E74C3C",
+      "neutral": "#F8F9FA"
+    },
+    "typography": {
+      "headline": "Serif, readable, professional",
+      "body": "Clean, readable, professional",
+      "primary_font": "Minion Pro",
+      "secondary_font": "Myriad Pro",
+      "body_font": "Minion Pro"
+    },
+    "cover_art_direction": "Modern, clean design with strong typography"
+  },
+  "marketing_summary": {
+    "target_platforms": [
+      "Goodreads"
+    ],
+    "promotional_activities": [
+      "Author reading events",
+      "Book club partnerships",
+      "Review campaigns",
+      "Social media contests",
+      "Literary award submissions",
+      "Influencer collaborations"
+    ]
+  },
+  "validation_status": {
+    "is_valid": false,
+    "overall_score": 0.0,
+    "issues": [],
+    "category_scores": {},
+    "recommendations": [],
+    "auto_fixes_available": [],
+    "validated_at": "2025-08-10T22:06:55.133132",
+    "summary": {
+      "total_issues": 0,
+      "errors": 0,
+      "warnings": 0,
+      "info": 0
+    }
+  },
+  "completeness_percentage": 100.0
+}

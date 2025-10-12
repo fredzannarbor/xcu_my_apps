@@ -1,0 +1,229 @@
+/.env
+/output/*
+/output/collection_summary.md
+/output/master_stamp_inventory.csv
+/output/test.csv
+/olderstamps/Commemorative Plates/IMG_1136.jpeg
+/olderstamps/Commemorative Plates/IMG_1137.jpeg
+/olderstamps/Commemorative Plates/IMG_1138.jpeg
+/olderstamps/Commemorative Plates/IMG_1139.jpeg
+/olderstamps/Commemorative Plates/IMG_1140.jpeg
+/olderstamps/Commemorative Plates/IMG_1141.jpeg
+/olderstamps/Commemorative Plates/IMG_1142.jpeg
+/olderstamps/Commemorative Plates/IMG_1143.jpeg
+/olderstamps/Commemorative Plates/IMG_1144.jpeg
+/olderstamps/Commemorative Plates/IMG_1145.jpeg
+/olderstamps/Commemorative Plates/IMG_1146.jpeg
+/olderstamps/Commemorative Plates/IMG_1147.jpeg
+/olderstamps/Commemorative Plates/IMG_1148.jpeg
+/olderstamps/Commemorative Plates/IMG_1149.jpeg
+/olderstamps/Commemorative Plates/IMG_1150.jpeg
+/olderstamps/Commemorative Plates/IMG_1151.jpeg
+/olderstamps/Commemorative Plates/IMG_1152.jpeg
+/olderstamps/Commemorative Plates/IMG_1153.jpeg
+/olderstamps/Commemorative Plates/IMG_1154.jpeg
+/olderstamps/Commemorative Plates/IMG_1155.jpeg
+/olderstamps/Commemorative Plates/IMG_1156.jpeg
+/olderstamps/Commemorative Plates/IMG_1157.jpeg
+/olderstamps/Commemorative Plates/IMG_1158.jpeg
+/olderstamps/Commemorative Plates/IMG_1159.jpeg
+/olderstamps/Commemorative Plates/IMG_1160.jpeg
+/olderstamps/Commemorative Plates/IMG_1161.jpeg
+/olderstamps/Commemorative Plates/IMG_1162.jpeg
+/olderstamps/Commemorative Plates/IMG_1163.jpeg
+/olderstamps/Commemorative Plates/IMG_1164.jpeg
+/olderstamps/Commemorative Plates/IMG_1165.jpeg
+/olderstamps/Commemorative Plates/IMG_1166.jpeg
+/olderstamps/Commemorative Plates/IMG_1167.jpeg
+/olderstamps/Commemorative Plates/IMG_1168.jpeg
+/olderstamps/Commemorative Plates/IMG_1169.jpeg
+/olderstamps/Commemorative Plates/IMG_1170.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1205.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1206.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1207.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1208.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1209.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1210.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1211.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1212.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1213.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1214.jpeg
+/olderstamps/Guernsey_Jersey_Isle_of_Man/IMG_1215.jpeg
+/olderstamps/Guernsey_modern/IMG_1216.jpeg
+/olderstamps/Guernsey_modern/IMG_1217.jpeg
+/olderstamps/Guernsey_modern/IMG_1218.jpeg
+/olderstamps/Guernsey_modern/IMG_1219.jpeg
+/olderstamps/Guernsey_modern/IMG_1220.jpeg
+/olderstamps/Guernsey_modern/IMG_1221.jpeg
+/olderstamps/Guernsey_modern/IMG_1222.jpeg
+/olderstamps/Guernsey_modern/IMG_1223.jpeg
+/olderstamps/Guernsey_modern/IMG_1225.jpeg
+/olderstamps/Guernsey_modern/IMG_1236.jpeg
+/olderstamps/Guernsey_modern/IMG_1237.jpeg
+/olderstamps/Guernsey_modern/IMG_1238.jpeg
+/olderstamps/Guernsey_modern/IMG_1239.jpeg
+/olderstamps/Guernsey_modern/IMG_1240.jpeg
+/olderstamps/Guernsey_modern/IMG_1241.jpeg
+/olderstamps/Guernsey_modern/IMG_1242.jpeg
+/olderstamps/Guernsey_modern/IMG_1243.jpeg
+/olderstamps/Isle of Man/IMG_1172.jpeg
+/olderstamps/Isle of Man/IMG_1173.jpeg
+/olderstamps/Isle of Man/IMG_1174.jpeg
+/olderstamps/Isle of Man/IMG_1175.jpeg
+/olderstamps/Isle of Man/IMG_1176.jpeg
+/olderstamps/Isle of Man/IMG_1177.jpeg
+/olderstamps/Isle of Man/IMG_1178.jpeg
+/olderstamps/Isle of Man/IMG_1179.jpeg
+/olderstamps/Isle of Man/IMG_1180.jpeg
+/olderstamps/Isle of Man/IMG_1181.jpeg
+/olderstamps/Isle of Man/IMG_1182.jpeg
+/olderstamps/Isle of Man/IMG_1183.jpeg
+/olderstamps/Isle of Man/IMG_1184.jpeg
+/olderstamps/Isle of Man/IMG_1186.jpeg
+/olderstamps/Isle of Man/IMG_1187.jpeg
+/olderstamps/Isle of Man/IMG_1188.jpeg
+/olderstamps/Isle of Man/IMG_1189.jpeg
+/olderstamps/Isle of Man/IMG_1190.jpeg
+/olderstamps/Isle of Man/IMG_1191.jpeg
+/olderstamps/Isle of Man/IMG_1193.jpeg
+/olderstamps/Isle of Man/IMG_1194.jpeg
+/olderstamps/Isle of Man/IMG_1195.jpeg
+/olderstamps/Isle of Man/IMG_1196.jpeg
+/olderstamps/Isle of Man/IMG_1197.jpeg
+/olderstamps/Isle of Man/IMG_1198.jpeg
+/oldstamps/Commemorative Plates/IMG_1131.jpeg
+/oldstamps/Commemorative Plates/IMG_1132.jpeg
+/oldstamps/Isle of Man/IMG_1172.jpeg
+/oldstamps/Isle of Man/IMG_1173.jpeg
+/oldstamps/Isle of Man/IMG_1174.jpeg
+/oldstamps/Isle of Man/IMG_1175.jpeg
+/stamps/Commemorative Plates/IMG_1131.jpeg
+/stamps/Commemorative Plates/IMG_1132.jpeg
+/stamps/Commemorative Plates/IMG_1133.jpeg
+/stamps/Commemorative Plates/IMG_1134.jpeg
+/stamps/Commemorative Plates/IMG_1135.jpeg
+/stamps/Commemorative Plates/IMG_1136.jpeg
+/stamps/Commemorative Plates/IMG_1137.jpeg
+/stamps/Commemorative Plates/IMG_1138.jpeg
+/stamps/Commemorative Plates/IMG_1139.jpeg
+/stamps/Commemorative Plates/IMG_1140.jpeg
+/stamps/Commemorative Plates/IMG_1141.jpeg
+/stamps/Commemorative Plates/IMG_1142.jpeg
+/stamps/Commemorative Plates/IMG_1143.jpeg
+/stamps/Commemorative Plates/IMG_1144.jpeg
+/stamps/Commemorative Plates/IMG_1145.jpeg
+/stamps/Commemorative Plates/IMG_1146.jpeg
+/stamps/Commemorative Plates/IMG_1147.jpeg
+/stamps/Commemorative Plates/IMG_1148.jpeg
+/stamps/Commemorative Plates/IMG_1149.jpeg
+/stamps/Commemorative Plates/IMG_1150.jpeg
+/stamps/Commemorative Plates/IMG_1151.jpeg
+/stamps/Commemorative Plates/IMG_1152.jpeg
+/stamps/Commemorative Plates/IMG_1153.jpeg
+/stamps/Commemorative Plates/IMG_1154.jpeg
+/stamps/Commemorative Plates/IMG_1155.jpeg
+/stamps/Commemorative Plates/IMG_1156.jpeg
+/stamps/Commemorative Plates/IMG_1157.jpeg
+/stamps/Commemorative Plates/IMG_1158.jpeg
+/stamps/Commemorative Plates/IMG_1159.jpeg
+/stamps/Commemorative Plates/IMG_1160.jpeg
+/stamps/Commemorative Plates/IMG_1161.jpeg
+/stamps/Commemorative Plates/IMG_1162.jpeg
+/stamps/Commemorative Plates/IMG_1163.jpeg
+/stamps/Commemorative Plates/IMG_1164.jpeg
+/stamps/Commemorative Plates/IMG_1165.jpeg
+/stamps/Commemorative Plates/IMG_1166.jpeg
+/stamps/Commemorative Plates/IMG_1167.jpeg
+/stamps/Commemorative Plates/IMG_1168.jpeg
+/stamps/Commemorative Plates/IMG_1169.jpeg
+/stamps/Commemorative Plates/IMG_1170.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1205.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1206.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1207.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1208.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1209.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1210.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1211.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1212.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1213.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1214.jpeg
+/stamps/Guernsey_Jersey_Isle_of_Man/IMG_1215.jpeg
+/stamps/Guernsey_modern/IMG_1216.jpeg
+/stamps/Guernsey_modern/IMG_1217.jpeg
+/stamps/Guernsey_modern/IMG_1218.jpeg
+/stamps/Guernsey_modern/IMG_1219.jpeg
+/stamps/Guernsey_modern/IMG_1220.jpeg
+/stamps/Guernsey_modern/IMG_1221.jpeg
+/stamps/Guernsey_modern/IMG_1222.jpeg
+/stamps/Guernsey_modern/IMG_1223.jpeg
+/stamps/Guernsey_modern/IMG_1225.jpeg
+/stamps/Guernsey_modern/IMG_1236.jpeg
+/stamps/Guernsey_modern/IMG_1237.jpeg
+/stamps/Guernsey_modern/IMG_1238.jpeg
+/stamps/Guernsey_modern/IMG_1239.jpeg
+/stamps/Guernsey_modern/IMG_1240.jpeg
+/stamps/Guernsey_modern/IMG_1241.jpeg
+/stamps/Guernsey_modern/IMG_1242.jpeg
+/stamps/Guernsey_modern/IMG_1243.jpeg
+/stamps/Isle of Man/IMG_1172.jpeg
+/stamps/Isle of Man/IMG_1173.jpeg
+/stamps/Isle of Man/IMG_1174.jpeg
+/stamps/Isle of Man/IMG_1175.jpeg
+/stamps/Isle of Man/IMG_1176.jpeg
+/stamps/Isle of Man/IMG_1177.jpeg
+/stamps/Isle of Man/IMG_1178.jpeg
+/stamps/Isle of Man/IMG_1179.jpeg
+/stamps/Isle of Man/IMG_1180.jpeg
+/stamps/Isle of Man/IMG_1181.jpeg
+/stamps/Isle of Man/IMG_1182.jpeg
+/stamps/Isle of Man/IMG_1183.jpeg
+/stamps/Isle of Man/IMG_1184.jpeg
+/stamps/Isle of Man/IMG_1186.jpeg
+/stamps/Isle of Man/IMG_1187.jpeg
+/stamps/Isle of Man/IMG_1188.jpeg
+/stamps/Isle of Man/IMG_1189.jpeg
+/stamps/Isle of Man/IMG_1190.jpeg
+/stamps/Isle of Man/IMG_1191.jpeg
+/stamps/Isle of Man/IMG_1193.jpeg
+/stamps/Isle of Man/IMG_1194.jpeg
+/stamps/Isle of Man/IMG_1195.jpeg
+/stamps/Isle of Man/IMG_1196.jpeg
+/stamps/Isle of Man/IMG_1197.jpeg
+/stamps/Isle of Man/IMG_1198.jpeg
+/stamps/Miscellaneous/IMG_1245.JPG
+/stamps/Miscellaneous/IMG_1246.JPG
+/stamps/Miscellaneous/IMG_1247.JPG
+/stamps/Miscellaneous/IMG_1248.JPG
+/stamps/Miscellaneous/IMG_1249.JPG
+/stamps/Miscellaneous/IMG_1250.JPG
+/stamps/Miscellaneous/IMG_1251.JPG
+/stamps/Miscellaneous/IMG_1252.JPG
+/stamps/Miscellaneous/IMG_1253.JPG
+/stamps/Miscellaneous/IMG_1254.JPG
+/stamps/Miscellaneous/IMG_1255.JPG
+/stamps/Miscellaneous/IMG_1256.JPG
+/stamps/Miscellaneous/IMG_1257.JPG
+/stamps/Miscellaneous/IMG_1258.JPG
+/stamps/Miscellaneous/IMG_1259.JPG
+/stamps/Miscellaneous/IMG_1260.JPG
+/stamps/Miscellaneous/IMG_1261.JPG
+/stamps/Miscellaneous/IMG_1262.JPG
+/stamps/Miscellaneous/IMG_1263.JPG
+/stamps/Miscellaneous/IMG_1264.JPG
+/stamps/Miscellaneous/IMG_1265.JPG
+/stamps/Miscellaneous/IMG_1266.JPG
+/stamps/Miscellaneous/IMG_1267.JPG
+/stamps/Miscellaneous/IMG_1268.JPG
+/stamps/Miscellaneous/IMG_1269.JPG
+/stamps/Miscellaneous/IMG_1270.JPG
+/stamps/Miscellaneous/IMG_1271.JPG
+/stamps/Miscellaneous/IMG_1272.JPG
+/stamps/Miscellaneous/IMG_1273.JPG
+/stamps/Miscellaneous/IMG_1274.JPG
+/stamps/Miscellaneous/IMG_1275.JPG
+/stamps/Miscellaneous/IMG_1276.JPG
+/stamps/Miscellaneous/IMG_1277.JPG
+/stamps/Miscellaneous/IMG_1278.JPG
+/stamps/Miscellaneous/IMG_1279.JPG
+/stamps/Miscellaneous/IMG_1280.JPG
+\n# Ignore private data directory\nprivate_data/

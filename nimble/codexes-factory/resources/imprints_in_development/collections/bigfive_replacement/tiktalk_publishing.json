@@ -1,0 +1,28 @@
+{
+  "imprint": "TikTalk Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@tiktalkpublishing.com",
+  "branding": {
+    "tagline": "Make Every Second Count",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.tiktalkpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "TikTok marketing, viral content creation",
+    "target_audience": "TikTok influencers, marketers targeting Gen Z",
+    "competitive_advantage": "Expertise on maximizing impact in TikTok's unique ecosystem.",
+    "example_titles": "TikTok marketing strategies, viral content creation guides"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,24 @@
+[
+    {
+        "preset_name" : "Synopsis Creator",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_description": "Creates 5-10 loglines",
+        "preset_instructions": "Run silently from command line. Optionally add preset_user_input to specify genre, topic, or attachments.",
+        "preset_placeholder": "Enter genre or topic here.",
+        "pre_user_input": "Please create a plot synopsis for a motion picture screenplay based on the following logline. Logline: ",
+        "prompt" : "",
+        "post_user_input": "\nSynopsis:",
+        "engine": "davinci-instruct-beta",
+        "temperature": 0.9,
+        "max_tokens": 250,
+        "top_p": 1,
+        "fp": 0.5,
+        "pp": 0.5,
+        "stop_sequence": "\n",
+        "echo_on": "False",
+        "completion_heading": "",
+        "user":"testing",
+        "organization" : "org-M5QFZNLlE3ZfLaRw2vPc79n2"
+        }
+]

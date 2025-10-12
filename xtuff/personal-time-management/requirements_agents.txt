@@ -1,0 +1,17 @@
+# Persistent Agents Dependencies
+openai>=1.0.0     # LLM integration for document analysis and expert overview
+python-dotenv>=1.0.0  # Environment variable management
+
+# PDF Generation Requirements:
+# - pandoc (system dependency) - Install from https://pandoc.org/installing.html
+# - LaTeX distribution with LuaLaTeX (for PDF generation via pandoc):
+#   - On macOS: brew install --cask mactex
+#   - On Ubuntu/Debian: sudo apt-get install texlive-luatex texlive-fonts-extra
+#   - On Windows: Install MiKTeX or TeX Live (full installation)
+# - Recommended fonts for best typography:
+#   - Minion Pro (primary text font)
+#   - Myriad Pro (sans-serif font)
+#   - Source Code Pro (monospace font)
+#   - Fallback: Times New Roman, Arial, and system monospace fonts
+#
+# Note: If pandoc is not available, reports will be generated as text files

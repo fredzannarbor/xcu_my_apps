@@ -1,0 +1,418 @@
+{
+  "_template_info": {
+    "description": "Configuration for Text Hip Global imprint",
+    "version": "1.0",
+    "last_updated": "2024-07-19",
+    "usage": "Imprint-specific configuration for Text Hip Global"
+  },
+  "_required_fields": {
+    "imprint": "Name of the imprint/brand",
+    "publisher": "Parent publisher name",
+    "contact_email": "Primary contact email for the imprint"
+  },
+  "_optional_fields": {
+    "description": "All fields below are optional and will inherit from publisher or global defaults if not specified"
+  },
+  "imprint": "Text Hip Global",
+  "publisher": "Veridian Press",
+  "contact_email": "editorial@texthipglobal.com",
+  "branding": {
+    "logo_path": "logos/text_hip_global_logo.png",
+    "brand_colors": {
+      "primary": "#005B5C",
+      "secondary": "#D8C3A5"
+    },
+    "tagline": "Words Without Borders",
+    "website": "https://www.texthipglobal.com"
+  },
+  "fonts": {
+    "body": "Minion Pro",
+    "heading": "Avenir Next",
+    "korean": "Apple Myungjo",
+    "quotations": "Minion Pro Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Contemporary Fiction",
+      "Literary Fiction",
+      "Translation",
+      "Cultural Studies"
+    ],
+    "target_audience": "Culturally-curious global readers, academics, and students of literature and social sciences",
+    "specialization": "Translated works and contemporary fiction from underrepresented regions and non-Western perspectives",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "cream",
+    "cover_type": "matte",
+    "trim_size": "5.5x8.5",
+    "territorial_rights": "World",
+    "returnability": "Yes"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "45",
+    "uk_wholesale_discount": "45",
+    "eu_wholesale_discount": "45",
+    "ca_wholesale_discount": "45",
+    "au_wholesale_discount": "45",
+    "default_markup_percentage": "120"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "paperback",
+    "carton_pack_quantity": "20",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "FIC019000",
+      "SOC052000",
+      "SOC002010",
+      "FIC043000"
+    ],
+    "thema_subject_preferences": [
+      "FBA",
+      "JBSJ",
+      "DNBT"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Translator"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{author_lastname}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/text_hip_global"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "required",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@texthipglobal",
+      "facebook": "TextHipGlobal",
+      "instagram": "@texthipglobal"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "Literary Fiction",
+    "metadata_contact_dictionary": "Text Hip Global Editorial",
+    "flex_fields": {
+      "lsi_flexfield1": "Translation",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "workflow@texthipglobal.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Dr. Elena Vance",
+    "persona_bio": "Former professor of Comparative Literature at a major university, with two decades of experience in academic and literary publishing. An expert in postcolonial theory and translation studies.",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Collaborative",
+    "preferred_topics": "Narratives from the Global South, diaspora literature, experimental fiction, and works in translation that challenge Western literary norms.",
+    "target_demographics": "Literary prize readers, university students and faculty, members of diaspora communities, and avid readers of world literature.",
+    "vulnerabilities": "Potential over-emphasis on academic merit over commercial viability. May have blind spots regarding mainstream marketing trends."
+  },
+  "wizard_configuration": {
+    "name": "Text Hip Global",
+    "charter": "Amplifying diverse voices in global literature by publishing contemporary fiction, translations, and cultural studies from underrepresented perspectives.",
+    "imprint_type": "Literary & Cultural Publishing",
+    "genres": [
+      "Contemporary Fiction",
+      "Translation",
+      "Cultural Studies",
+      "Literary Fiction"
+    ],
+    "book_format": "5.5 x 8.5 in Paperback",
+    "price_point": 18.99,
+    "page_count": 280,
+    "catalog_size": 8,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting",
+    "enabled_types": [
+      "standard",
+      "oral_history",
+      "reference"
+    ],
+    "specialized_requirements": {
+      "interior_design_notes": "A flexible grid is required to accommodate sidebars for cultural context, extensive footnotes, and potential parallel-text layouts. Generous margins are crucial for glossaries or contextual notes.",
+      "template_customizations": "Templates must support translator’s notes, glossaries of culturally-specific terms, comprehensive bibliographies, indexes, and clear speaker identification for interview formats.",
+      "typesetting_considerations": "Requires robust OpenType fonts with extensive character sets for diacritics and non-Latin scripts. A clear typographic hierarchy for main text, notes, and glossaries is essential for legibility across languages."
+    },
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional book layout with chapters",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "oral_history": [
+          "oral history",
+          "interview",
+          "testimony",
+          "spoken",
+          "conversation"
+        ],
+        "puzzle": [
+          "puzzle",
+          "sudoku",
+          "crossword",
+          "brain teaser",
+          "logic",
+          "game"
+        ],
+        "cookbook": [
+          "recipe",
+          "cooking",
+          "cuisine",
+          "cookbook",
+          "culinary",
+          "kitchen"
+        ],
+        "poetry": [
+          "poetry",
+          "poems",
+          "verse",
+          "sonnet",
+          "haiku",
+          "lyrical"
+        ],
+        "reference": [
+          "reference",
+          "dictionary",
+          "encyclopedia",
+          "handbook",
+          "manual",
+          "guide",
+          "glossary"
+        ],
+        "textbook": [
+          "textbook",
+          "curriculum",
+          "academic",
+          "educational",
+          "course",
+          "study"
+        ],
+        "journal": [
+          "journal",
+          "diary",
+          "reflection",
+          "daily",
+          "log",
+          "personal"
+        ],
+        "workbook": [
+          "workbook",
+          "exercises",
+          "practice",
+          "worksheets",
+          "activities",
+          "assignments"
+        ]
+      }
+    },
+    "specialized_templates": {
+      "oral_history": {
+        "name": "Oral History",
+        "description": "Formatted for interview-style content with speaker identification",
+        "template_requirements": [
+          "speaker_tags",
+          "timestamp_markers",
+          "question_answer_format"
+        ],
+        "formatting_rules": {
+          "speaker_name": "bold_at_paragraph_start",
+          "question_format": "italic_or_bold_q_prefix",
+          "answer_format": "regular_text_with_indent",
+          "section_breaks": "topic_or_time_based",
+          "quote_preservation": "verbatim_with_markers"
+        }
+      },
+      "reference": {
+        "name": "Reference Work",
+        "description": "Structured for reference materials with indexes, glossaries, and bibliographies.",
+        "template_requirements": [
+          "alphabetical_entries",
+          "cross_referencing",
+          "index_generation",
+          "bibliography_formatting"
+        ],
+        "formatting_rules": {
+          "entry_heading": "bold_with_separator",
+          "cross_reference_link": "see_also_italicized",
+          "index_page_numbers": "standard_with_ranges",
+          "bibliography_style": "chicago_author_date",
+          "glossary_terms": "bold_followed_by_definition"
+        }
+      }
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "standard",
+        "oral_history",
+        "reference"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Balancing literary readability with academic and multilingual complexity. The design must amplify the author's voice, not obscure it with overly complex structures.",
+        "interior_layout_notes": "Implement a flexible grid system to accommodate sidebars for cultural context, extensive footnotes/endnotes, and potential parallel-text layouts for translations. A generous margin for glossaries or contextual notes is crucial.",
+        "typesetting_requirements": "Primary requirement is the use of robust OpenType fonts with extensive character sets, including full support for diacritics and potentially non-Latin scripts. Legibility across different languages is paramount. A clear typographic hierarchy for main text, notes, headings, and glossaries is essential.",
+        "functional_elements": "System for handling translator’s notes, glossaries of culturally-specific terms, comprehensive bibliographies, and indexes. Speaker identification for interview segments must be clear and consistent.",
+        "reader_interaction_model": "Readers will engage in both linear reading (for fiction) and non-linear, reference-based interaction (for cultural studies and translations). The design must facilitate easy navigation between main text, translator’s notes, and glossaries without disrupting the reading flow."
+      },
+      "reasoning": "The imprint's focus on Translation and Cultural Studies necessitates layouts beyond the standard. These genres require robust systems for handling multilingual typography, translator's notes, academic references (indexes, glossaries), and interview formats. The selected CodexTypes provide the necessary structural flexibility to present this complex content clearly and effectively, fulfilling the mission to amplify diverse voices without compromising reader experience."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": true,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": true,
+      "on_schedule": true,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [
+        "Journal of World Literature",
+        "Translation Studies",
+        "Publishing Research Quarterly"
+      ],
+      "paper_types": [
+        "case_study",
+        "industry_analysis"
+      ],
+      "default_paper_type": "industry_analysis",
+      "target_word_count": 7500,
+      "citation_style": "mla",
+      "include_quantitative_analysis": true
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "postcolonial literature trends",
+        "translation theory in practice",
+        "challenges in publishing diverse voices",
+        "market reception of non-Western narratives"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": true,
+        "include_production_metrics": false,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/text_hip_global",
+      "file_naming": "thg_paper_{date}",
+      "formats": [
+        "latex",
+        "pdf",
+        "markdown"
+      ],
+      "include_submission_package": true
+    },
+    "automation_schedule": {
+      "enabled": true,
+      "frequency": "annual",
+      "milestone_triggers": {
+        "book_count_milestones": [
+          10,
+          25,
+          50
+        ],
+        "revenue_milestones": [],
+        "time_milestones": [
+          "2_years"
+        ]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "gemini/gemini-2.5-pro"
+      ],
+      "temperature": 0.8,
+      "max_tokens": 4000,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "Text Hip Global Editorial Board",
+      "institutional_affiliation": "Veridian Press",
+      "contact_email": "research@texthipglobal.com",
+      "co_author_llm": true
+    },
+    "validation_criteria": {
+      "min_word_count": 6000,
+      "max_word_count": 10000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "methodology",
+        "results",
+        "discussion",
+        "conclusion"
+      ],
+      "require_quantitative_data": true,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-09-23T00:35:38.706259",
+    "model_used": "gemini/gemini-2.5-pro",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

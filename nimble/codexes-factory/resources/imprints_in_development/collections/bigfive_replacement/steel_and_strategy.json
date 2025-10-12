@@ -1,0 +1,28 @@
+{
+  "imprint": "Steel & Strategy",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@steelandstrategy.com",
+  "branding": {
+    "tagline": "Where Steel Meets Strategy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.steelandstrategy.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical and contemporary military strategy, tactical analysis, evolution of warfare technology",
+    "target_audience": "Students and teachers of military history, strategy game enthusiasts, military strategy professionals",
+    "competitive_advantage": "Focuses on the intellectual aspect of warfare, including the evolution of strategy, providing a fresh perspective in the genre",
+    "example_titles": "Book series on the evolution of military strategy, in-depth analyses of ancient warfare tactics"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

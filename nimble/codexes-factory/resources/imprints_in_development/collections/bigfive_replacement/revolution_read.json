@@ -1,0 +1,28 @@
+{
+  "imprint": "Revolution Read",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@revolutionread.com",
+  "branding": {
+    "tagline": "Discover revolutions that shaped history",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.revolutionread.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Revolution history, rebellion, social change",
+    "target_audience": "Readers interested in revolutions and radical changes",
+    "competitive_advantage": "Revolution Read specializes in stories of revolt and radical change",
+    "example_titles": "Books on the French Revolution, American Revolution, Arab Spring"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

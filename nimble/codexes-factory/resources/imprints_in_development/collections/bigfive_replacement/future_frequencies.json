@@ -1,0 +1,28 @@
+{
+  "imprint": "Future Frequencies",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@futurefrequencies.com",
+  "branding": {
+    "tagline": "Tune Into Tomorrow",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.futurefrequencies.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Science Fiction, Dystopian, Post-Apocalyptic",
+    "target_audience": "Futurists and fans of speculative fiction",
+    "competitive_advantage": "Innovative concepts, forward-thinking themes",
+    "example_titles": "George Orwell, Isaac Asimov, Octavia Butler"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

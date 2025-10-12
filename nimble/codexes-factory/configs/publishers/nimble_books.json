@@ -1,0 +1,291 @@
+{
+  "_config_info": {
+    "description": "Nimble Books LLC publisher configuration",
+    "version": "2.0",
+    "last_updated": "2024-07-18",
+    "config_type": "publisher"
+  },
+  
+  "publisher": "Nimble Books LLC",
+  "contact_email": "info@nimblebooks.com",
+  "lightning_source_account": "6024045",
+  
+  "company_info": {
+    "legal_name": "Nimble Books LLC",
+    "founded_year": "2005",
+    "headquarters": "Ann Arbor, Michigan, USA",
+    "website": "https://www.nimblebooks.com",
+    "phone": "+1-734-426-4210",
+    "tax_id": "XX-XXXXXXX"
+  },
+  
+  "business_model": {
+    "publishing_type": "Independent",
+    "distribution_model": "Print-on-Demand",
+    "primary_markets": ["US", "UK", "CA", "AU", "EU"],
+    "business_focus": "Academic and Professional Publishing",
+    "annual_titles": "100-200"
+  },
+  
+  "default_settings": {
+    "language_code": "eng",
+    "country_of_origin": "US",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "cover_type": "matte",
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+  
+  "pricing_strategy": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "100",
+    "pricing_model": "competitive"
+  },
+  
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD",
+    "preferred_printer": "Lightning Source"
+  },
+  
+  "quality_standards": {
+    "min_resolution_dpi": "300",
+    "color_profile": "CMYK",
+    "pdf_version": "PDF/X-1a",
+    "bleed_requirements": "0.125 inches",
+    "spine_calculation_method": "automatic"
+  },
+  
+  "metadata_standards": {
+    "required_fields": [
+      "title", "author", "isbn13", "publication_date",
+      "bisac_category", "summary", "page_count"
+    ],
+    "preferred_bisac_depth": 3,
+    "require_thema_subjects": false,
+    "require_age_range": false,
+    "require_contributor_bio": true
+  },
+  
+  "lsi_account_settings": {
+    "account_number": "6024045",
+    "account_type": "Standard",
+    "billing_contact": "billing@nimblebooks.com",
+    "technical_contact": "tech@nimblebooks.com",
+    "ftp_credentials": {
+      "username": "nimblebooks",
+      "server": "ftp.lightningsource.com",
+      "directory": "/incoming"
+    }
+  },
+  
+  "workflow_preferences": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_emails": [
+      "workflow@nimblebooks.com",
+      "production@nimblebooks.com"
+    ],
+    "backup_configurations": true,
+    "audit_trail": true
+  },
+  
+  "branding_defaults": {
+    "logo_path": "logos/nimble_books_logo.png",
+    "brand_colors": {
+      "primary": "#2E5984",
+      "secondary": "#8DB4E2"
+    },
+    "default_fonts": {
+      "title": "Minion Pro Bold",
+      "body": "Minion Pro",
+      "caption": "Myriad Pro"
+    }
+  },
+  
+  "marketing_settings": {
+    "default_marketing_copy": "Published by Nimble Books LLC",
+    "social_media_handles": {
+      "twitter": "@nimblebooks",
+      "facebook": "NimbleBooks",
+      "linkedin": "nimble-books"
+    },
+    "press_contact": "press@nimblebooks.com",
+    "review_copy_policy": "Available upon request"
+  },
+  
+  "legal_settings": {
+    "copyright_notice": "© {year} Nimble Books LLC. All rights reserved.",
+    "legal_disclaimer": "Standard publishing disclaimer",
+    "privacy_policy_url": "https://www.nimblebooks.com/privacy",
+    "terms_of_service_url": "https://www.nimblebooks.com/terms"
+  },
+  
+  "integration_settings": {
+    "erp_system": "Custom",
+    "crm_system": "Custom",
+    "accounting_system": "QuickBooks",
+    "inventory_management": "Automated",
+    "api_endpoints": {},
+    "webhook_urls": []
+  },
+  
+  "legacy_compatibility": {
+    "publisher_name": "Nimble Books LLC",
+    "defaults": {
+      "publisher": "Nimble Books LLC",
+      "lightning_source_account": "6024045",
+      "cover_submission_method": "FTP",
+      "text_block_submission_method": "FTP",
+      "rendition_booktype": "Perfect Bound",
+      "carton_pack_quantity": "1",
+      "territorial_rights": "World",
+      "returnability": "Yes-Destroy",
+      "order_type_eligibility": "POD",
+      "edition_number": "1",
+      "edition_description": "First Edition",
+      "language": "eng",
+      "country_of_origin": "US",
+      "us_wholesale_discount": "40",
+      "uk_wholesale_discount": "40",
+      "eu_wholesale_discount": "40"
+    },
+    "field_overrides": {}
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes-Destroy",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0,
+      "tax_rate": "0.0",
+      "shipping_class": "domestic"
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "GBP",
+      "pricing_multiplier": 0.79,
+      "exchange_rate": 0.78,
+      "tax_rate": "20.0",
+      "shipping_class": "international"
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "EUR",
+      "pricing_multiplier": 0.85,
+      "exchange_rate": 0.91,
+      "tax_rate": "19.0",
+      "shipping_class": "international"
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "CAD",
+      "pricing_multiplier": 1.25,
+      "exchange_rate": 1.35,
+      "tax_rate": "5.0",
+      "shipping_class": "north_america"
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "AUD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.48,
+      "tax_rate": "10.0",
+      "shipping_class": "international"
+    },
+    "GC": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USBR1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USDE1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USRU1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USPL1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USKR1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USCN1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USIN1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USJP2": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "UAEUSD": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "US-Ingram-Only": {
+      "wholesale_discount_percent": "",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "US-Ingram-GAP": {
+      "wholesale_discount_percent": "",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "SIBI-EDUC-US": {
+      "wholesale_discount_percent": "",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    }
+  }
+}

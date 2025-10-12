@@ -1,0 +1,22 @@
+{
+  "imprint_name": "nimble_ultra",
+  "imprint_intro": "Nimble Ultra  publishes high-quality books.",
+  "prompt_keys": [
+    "gemini_get_basic_info",
+    "bibliographic_key_phrases",
+    "storefront_get_en_metadata",
+    "imprint_quotes_prompt",
+    "mnemonics_prompt",
+    "bibliography_prompt",
+    "back_cover_text"
+  ],
+  "reprompt_keys": [
+    "mnemonics_prompt"
+  ],
+  "_metadata": {
+    "imprint": "Nimble Ultra",
+    "generated_at": "2025-09-26T06:36:10.978510",
+    "specialization": "Cold War operations, signals intelligence (SIGINT), declassified commission reports, and the history of covert action.",
+    "extracted_from_oneshot": true
+  }
+}

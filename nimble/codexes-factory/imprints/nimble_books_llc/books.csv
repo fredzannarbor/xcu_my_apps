@@ -1,0 +1,4 @@
+id,title_en,title_ko,author_en,author_ko,description_en,description_ko,price,image_url
+1,The Great Novel,위대한 소설,Jane Doe,제인 도,An epic tale of adventure and discovery.,모험과 발견의 서사시.,29.99,https://via.placeholder.com/150/0000FF/FFFFFF?Text=Book1
+2,History of Time,시간의 역사,John Smith,존 스미스,A journey through the ages.,시대를 통한 여정.,24.99,https://via.placeholder.com/150/FF0000/FFFFFF?Text=Book2
+3,Poetry Collection,시 모음집,Emily Brown,에밀리 브라운,A collection of heartfelt poems.,진심이 담긴 시 모음.,19.99,https://via.placeholder.com/150/00FF00/FFFFFF?Text=Book3

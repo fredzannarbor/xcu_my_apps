@@ -1,0 +1,368 @@
+{
+  "_config_info": {
+    "description": "Configuration for the Xynapse Traces imprint, focusing on academic and professional technology titles.",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Xynapse Traces",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "xynapse@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/xynapse_traces_logo.png",
+    "brand_colors": {
+      "primary": "#2C3E50",
+      "secondary": "#18BC9C"
+    },
+    "tagline": "Tracing the Future of Knowledge",
+    "website": "https://www.nimblebooks.com/xynapse"
+  },
+  "fonts": {
+    "body": "Minion Pro",
+    "heading": "Myriad Pro",
+    "korean": "Apple Myungjo",
+    "quotations": "Minion Pro Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Technology",
+      "Science",
+      "Philosophy",
+      "Future Studies"
+    ],
+    "target_audience": "Academic and Professional",
+    "specialization": "Cutting-edge research and emerging technologies with academic rigor.",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 6 x 9 in or 229 x 152 mm Perfect Bound on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "COM000000",
+      "SCI000000",
+      "PHI000000",
+      "TEC000000"
+    ],
+    "thema_subject_preferences": [
+      "UB",
+      "PD",
+      "QD",
+      "T"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/xynapse_traces"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@XynapseTraces",
+      "facebook": "XynapseTraces",
+      "instagram": "@XynapseTraces"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "ACAD",
+    "metadata_contact_dictionary": "Xynapse Editorial Team",
+    "flex_fields": {
+      "lsi_flexfield1": "Academic",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Seon",
+    "persona_bio": "AI editorial intelligence specializing in contemplative practices and interdisciplinary knowledge synthesis. Named for the Korean meditation tradition (선/禪), Seon bridges Eastern transcriptive meditation practices (필사 pilsa) with contemporary knowledge exploration through the Xynapse Traces imprint.",
+    "risk_tolerance": "High",
+    "decision_style": "Intuitive and contemplative",
+    "preferred_topics": "Dichotomies in contemporary knowledge, transcriptive meditation, interdisciplinary synthesis, frontier technologies and ethics",
+    "target_demographics": "Deep thinkers, contemplative learners, knowledge synthesizers, lifelong learners seeking mindful engagement with complex ideas",
+    "editorial_philosophy": "Every profound question contains its own answer through sustained contemplation. The practice of transcriptive meditation reveals the hidden connections between opposing ideas.",
+    "vulnerabilities": "May prioritize conceptual depth over market accessibility, tendency toward abstract philosophical framing"
+  },
+  "wizard_configuration": {
+    "name": "Xynapse Traces",
+    "charter": "To publish seminal works of cutting-edge research and emerging technologies, bridging the gap between academic rigor and professional application.",
+    "imprint_type": "Academic & Professional Publishing",
+    "genres": [
+      "Technology",
+      "Science",
+      "Philosophy",
+      "Future Studies"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 39.99,
+    "page_count": 350,
+    "catalog_size": 8,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting for academic and technical publications.",
+    "enabled_types": [
+      "standard",
+      "textbook",
+      "reference"
+    ],
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional academic monograph layout with chapters and citations.",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents",
+          "bibliography"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      },
+      "textbook": {
+        "name": "Textbook",
+        "description": "Structured for educational purposes with pedagogical elements.",
+        "template_requirements": [
+          "learning_objectives",
+          "chapter_summaries",
+          "key_term_definitions",
+          "end_of_chapter_questions",
+          "sidebars"
+        ],
+        "formatting_rules": {
+          "key_terms": "bold_in_text_glossary_link",
+          "sidebars": "boxed_with_shaded_background",
+          "code_blocks": "monospaced_with_syntax_highlighting",
+          "figures_tables": "numbered_with_captions"
+        }
+      },
+      "reference": {
+        "name": "Reference Work",
+        "description": "Designed for non-linear reading and quick information retrieval.",
+        "template_requirements": [
+          "multi_level_indexing",
+          "comprehensive_glossary",
+          "hyper_accurate_cross_referencing",
+          "appendices",
+          "list_of_figures_tables"
+        ],
+        "formatting_rules": {
+          "index_format": "subject_and_author_indices",
+          "cross_references": "hyperlinked_page_numbers_digital",
+          "glossary_terms": "alphabetical_with_definitions",
+          "entry_headings": "bold_sans_serif"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "textbook": [
+          "textbook",
+          "curriculum",
+          "academic",
+          "educational",
+          "course",
+          "study guide"
+        ],
+        "reference": [
+          "reference",
+          "dictionary",
+          "encyclopedia",
+          "handbook",
+          "manual",
+          "guide"
+        ]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "The design must prioritize clarity, making complex data, novel concepts, and technical arguments easily digestible and navigable. A flexible, multi-column grid is essential to accommodate body text, complex figures/tables, sidebars, and code blocks. Generous white space is needed to manage cognitive load. A clear system for numbering figures, tables, and equations is mandatory.",
+      "template_customizations": "Templates must include robust support for footnotes/endnotes, comprehensive multi-level indexing (subject, author), glossaries for new terminology, and hyper-accurate cross-referencing (e.g., 'See Figure 3.1 in Chapter 3'). Digital editions require full hyperlinking for these elements.",
+      "typesetting_considerations": "A highly legible serif typeface for body text to aid in long-form reading (e.g., Minion Pro), paired with a clean, modern sans-serif for headings and captions (e.g., Myriad Pro). Requires a distinct monospaced font for code snippets (e.g., Source Code Pro) and robust support for mathematical/scientific notation, potentially through LaTeX integration."
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "standard",
+        "textbook",
+        "reference"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Information Hierarchy and Data Visualization. The design must prioritize clarity, making complex data, novel concepts, and technical arguments easily digestible and navigable.",
+        "interior_layout_notes": "A flexible, multi-column grid is essential to accommodate body text, complex figures/tables, sidebars for definitions or case studies, and code blocks. Generous white space is needed to manage cognitive load. A clear system for numbering figures, tables, and equations is mandatory.",
+        "typesetting_requirements": "A highly legible serif typeface for body text to aid in long-form reading, paired with a clean, modern sans-serif for headings, subheadings, and captions to create a clear hierarchy. Requires a distinct monospaced font for code snippets and robust support for mathematical/scientific notation (e.g., MathML or LaTeX integration).",
+        "functional_elements": "Extensive support for footnotes/endnotes, comprehensive multi-level indexing (subject, author), glossaries for new terminology, and hyper-accurate cross-referencing (e.g., 'See Figure 3.1 in Chapter 3'). Digital editions should leverage hyperlinking for these elements.",
+        "reader_interaction_model": "Readers will engage in deep, analytical study rather than casual, linear reading. The layout must support 'search and reference' behavior, allowing users to easily locate specific data points, definitions, or citations, as well as facilitate sustained, focused reading of dense prose."
+      },
+      "reasoning": "The imprint's mission to publish 'cutting-edge research' with 'academic rigor' means its publications will be dense with data, diagrams, specialized terminology, and complex arguments. A 'standard' codextype is insufficient. The 'textbook' codextype is recommended for its structured approach to learning with sidebars and clear hierarchies, while the 'reference' codextype is essential for the robust indexing, glossaries, and cross-referencing required to uphold academic standards and utility."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": true,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": true,
+      "on_schedule": false,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [
+        "arXiv",
+        "Digital Humanities Quarterly",
+        "Publishing Research Quarterly",
+        "Journal of Scholarly Publishing"
+      ],
+      "paper_types": [
+        "case_study",
+        "methodology_paper",
+        "industry_analysis"
+      ],
+      "default_paper_type": "case_study",
+      "target_word_count": 8000,
+      "citation_style": "chicago",
+      "include_quantitative_analysis": true
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "AI-assisted imprint development",
+        "Publishing models for emerging technologies",
+        "Metadata strategies for academic discovery",
+        "Analysis of publishing workflow automation"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": true,
+        "include_production_metrics": true,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/xynapse_traces",
+      "file_naming": "xynapse_traces_paper_{date}_{type}",
+      "formats": [
+        "latex",
+        "pdf",
+        "markdown"
+      ],
+      "include_submission_package": true
+    },
+    "automation_schedule": {
+      "enabled": true,
+      "frequency": "biannual",
+      "milestone_triggers": {
+        "book_count_milestones": [
+          10,
+          25,
+          50
+        ],
+        "revenue_milestones": [],
+        "time_milestones": [
+          "1_year",
+          "2_years"
+        ]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "gemini/gemini-2.5-pro"
+      ],
+      "temperature": 0.6,
+      "max_tokens": 4096,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "Xynapse Traces Editorial Team",
+      "institutional_affiliation": "AI Lab for Book-Lovers, Nimble Books LLC",
+      "contact_email": "xynapse@nimblebooks.com",
+      "co_author_llm": true
+    },
+    "validation_criteria": {
+      "min_word_count": 6000,
+      "max_word_count": 10000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "methodology",
+        "results",
+        "discussion",
+        "conclusion",
+        "references"
+      ],
+      "require_quantitative_data": true,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-09-23T00:34:26.480375",
+    "model_used": "gemini/gemini-2.5-pro",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

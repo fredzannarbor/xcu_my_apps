@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Substack Feature Post Generator",
+  "description": "Monitors for significant code changes and generates personal Substack posts describing new features, development journey, and domain motivation in the user's writing style",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.py",
+      "*.py",
+      "*.md",
+      "README.md",
+      "pyproject.toml"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A significant code change has been detected in this project. Please analyze the changes and create a concise Substack post (max 3 paragraphs) in first person describing:\n\n1. The substantive domain motivation for adding these features (making stamp collecting more enjoyable, studies more accurate, etc.)\n2. The coding problems overcome during development \n3. The new feature - how it's invoked, created, and what it delivers\n\nWrite in a tight POV capturing the user's mental state, emotions, and personal style. Research the user's writing style from their social media (Twitter, Threads, LinkedIn), Substacks, professional history, and publications to match their voice.\n\nInclude a prompt for a visual asset at the end.\n\nSave the result as a JSON file in the /substack folder with a meaningful, safe filename based on the project and feature added.\n\nThe JSON should contain:\n- title: Post title\n- content: The 3-paragraph post content\n- visual_prompt: Description for visual asset\n- project_name: Name of the project\n- feature_summary: Brief summary of the feature added\n- timestamp: Current timestamp"
+  }
+}

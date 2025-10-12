@@ -1,0 +1,251 @@
+{
+  "generate_contributor_bio": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist with expertise in creating contributor biographies for LSI submissions. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Generate a professional biography for the author of this book based on the content and context provided:\n\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\nSummary: {summary_short}\nBook Content: {book_content}\nKeywords: {keywords}\nSubject Areas: {bisac_codes}\n\nCreate a contextual biography that reflects the author's expertise in the book's subject matter. Base the biography on:\n1. The book's content and themes\n2. The subject areas covered\n3. The depth of knowledge demonstrated\n4. The writing style and approach\n\nReturn a JSON object with the key 'contributor_one_bio' containing a professional third-person biography (100-150 words) that:\n- Establishes credibility in the book's subject area\n- Mentions relevant expertise that can be inferred from the content\n- Uses professional language suitable for LSI metadata\n- Avoids speculation beyond what the content supports\n- Focuses on the author's knowledge and approach to the topic"
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 400
+    },
+    "fallback": {
+      "contributor_one_bio": "A knowledgeable author with demonstrated expertise in {title}'s subject matter, bringing insightful analysis and comprehensive understanding to this important topic."
+    }
+  },
+  "suggest_bisac_codes": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book categorization expert specializing in BISAC subject codes for the publishing industry. Your task is to analyze book content and metadata to suggest the most appropriate and specific BISAC codes that accurately represent the book's primary subject matter, following the latest BISAC standards."
+      },
+      {
+        "role": "user",
+        "content": "Suggest 2-3 appropriate BISAC subject categories for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent BISAC: {current_value}\n\nRequirements:\n1. Provide exactly 2-3 BISAC categories in JSON format with keys \"bisac_category_2\" and \"bisac_category_3\"\n2. Use the most recent BISAC standards (2024 or later)\n3. Choose the most specific categories that accurately represent the book's content\n4. Format each category as the official name of the category.\n5. Focus on the primary subject matter of the book\n6. Consider the book's target audience and market positioning\n7. If the current BISAC categories is valid and appropriate, include it as one of your suggestions\n8. Prioritize specificity over generality - choose the most precise category\n\nReturn a JSON object with these keys:\n\"bisac_category_2\": \"CATEGORY NAME\", \n\"bisac_category_3\": \"CATEGORY NAME\".  If possible while maintaining relevance, the two categories provided should belong to different top-level categories."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 150
+    },
+    "fallback": {
+      "bisac_category_2": "BUS000000",
+      "bisac_category_3": "REF000000"
+    }
+  },
+  "generate_keywords": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing specialist with expertise in SEO and discoverability for the publishing industry. Your task is to generate relevant, high-impact keywords that will improve a book's visibility in online searches and accurately represent its content to potential readers."
+      },
+      {
+        "role": "user",
+        "content": "Generate 10-15 relevant keywords for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\nCurrent Keywords: {current_value}\n\nRequirements:\n1. Provide 10-15 keywords separated by semicolons\n2. Include a mix of specific and general terms\n3. Focus on terms readers would actually search for\n4. Include genre, themes, subject matter, and relevant concepts\n5. Ensure all keywords accurately reflect the book's actual content\n6. Include both single words and short phrases (2-3 words)\n7. Avoid overly generic terms that don't distinguish the book\n8. Consider search volume and relevance for online discoverability\n9. Format for LSI metadata submission (semicolon-separated list)\n10. If current keywords are valid, incorporate the best ones. 11.  ABSOLUTE MAXIMUM of 495 characters (including spaces)."
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 250
+    },
+    "fallback": "publishing; books; literature; {title}; {author}; reading; book industry"
+  },
+  "create_short_description": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing copywriter specializing in creating compelling, concise descriptions for book catalogs and online listings. Your task is to craft short descriptions that capture the essence of a book and entice potential readers in just 1-2 sentences."
+      },
+      {
+        "role": "user",
+        "content": "Create a compelling short description (1-2 sentences, MAXIMUM OF 150 characters) for this book:\n\nTitle: {title}\nAuthor: {author}\nLong Summary: {summary_long}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Short Description: {current_value}\n\nRequirements:\n1. Maximum 150 characters (including spaces)\n2. 1-2 sentences only\n3. Capture the main hook or unique selling point\n4. Use active, engaging language\n5. Focus on what makes this book special or valuable\n6. Include the primary theme or subject matter\n7. Target the appropriate audience\n8. Avoid clichés and generic descriptions\n9. Format for LSI metadata submission standards\n10. If current description is effective, refine rather than replace"
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 100
+    },
+    "fallback": "A compelling exploration of {title} that offers valuable insights for readers interested in this important subject."
+  },
+  "suggest_thema_subjects": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book classification expert specializing in Thema subject codes for international book categorization. Your task is to analyze book content and metadata to suggest the most appropriate Thema codes that accurately represent the book's subject matter for global markets."
+      },
+      {
+        "role": "user",
+        "content": "Suggest appropriate Thema subject codes for this book:\n\nTitle: {title}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Thema: {current_value}\n\nRequirements:\n1. Provide exactly 3 Thema codes in JSON format with keys \"thema_subject_1\", \"thema_subject_2\", and \"thema_subject_3\"\n2. Use the most recent Thema standards (version 1.5 or later)\n3. Choose codes that accurately represent the book's content for international markets\n4. Format each code according to standard Thema notation (e.g., 'JN', 'PDR', 'QDT')\n5. Consider both subject matter and qualifiers if appropriate\n6. Focus on international relevance and discoverability\n7. If current Thema codes are valid, incorporate the best ones\n8. Prioritize specificity and accuracy\n\nReturn a JSON object with these keys:\n\"thema_subject_1\": \"CODE\",\n\"thema_subject_2\": \"CODE\",\n\"thema_subject_3\": \"CODE\""
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 150
+    },
+    "fallback": {
+      "thema_subject_1": "Y",
+      "thema_subject_2": "J",
+      "thema_subject_3": "D"
+    }
+  },
+  "determine_audience": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing specialist with expertise in audience targeting and segmentation for the publishing industry. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Determine the primary audience for this book:\n\nTitle: {title}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Audience: {current_value}\n\nAnalyze the content and select the most appropriate audience category:\n\nAudience Categories:\n- \"General\": Broad adult readership, accessible content\n- \"Academic\": University-level students and faculty\n- \"Professional\": Working professionals in specific fields\n- \"Young Adult\": Ages 12-18, teen-focused content\n- \"Children\": Ages 4-12, child-appropriate content\n- \"Scholarly\": Researchers, advanced academics, specialized knowledge\n\nConsider:\n1. Content complexity and vocabulary level\n2. Subject matter and treatment\n3. Intended use (entertainment, education, reference)\n4. BISAC category implications\n5. Reading level requirements\n\nReturn a JSON object with:\n\"audience\": \"[CATEGORY]\" (exactly one of the categories above)"
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 50
+    },
+    "fallback": {
+      "audience": "General"
+    }
+  },
+  "determine_age_range": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book classification expert specializing in age-appropriate content categorization for the publishing industry. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Determine the appropriate age range for this book:\n\nTitle: {title}\nSummary: {summary_long}\nAudience: {audience}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\n\nAnalyze the content and determine appropriate age ranges based on:\n1. Content complexity and vocabulary level\n2. Subject matter appropriateness\n3. Themes and concepts presented\n4. Target audience indicators\n5. BISAC category standards\n\nAge Range Guidelines:\n- Children's books: min_age 4-12, max_age 8-17\n- Young Adult: min_age 12-16, max_age 17-18\n- General Adult: min_age 18, max_age \"Adult\"\n- Academic/Professional: min_age 18, max_age \"Adult\"\n- Scholarly: min_age 21, max_age \"Adult\"\n\nReturn a JSON object with:\n\"min_age\": \"[NUMBER]\" (as string, e.g., \"18\")\n\"max_age\": \"[NUMBER or Adult]\" (as string, e.g., \"Adult\" or \"17\")\n\nEnsure min_age is always less than or equal to max_age (unless max_age is \"Adult\")."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 100
+    },
+    "fallback": {
+      "min_age": "18",
+      "max_age": "Adult"
+    }
+  },
+  "extract_lsi_contributor_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a publishing metadata specialist with expertise in LSI submission requirements. Your task is to extract detailed contributor information from book content and metadata, ensuring all required LSI fields are populated with accurate, professional information."
+      },
+      {
+        "role": "user",
+        "content": "Extract detailed contributor information for LSI submission from this book content and metadata:\n\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\nSummary: {summary_long}\nBook Content: {book_content}\n\nRequirements:\n1. Focus on the primary contributor (usually the author)\n2. Extract or infer the following information:\n   - Professional biography (100-150 words)\n   - Academic or professional affiliations\n   - Current job title or position\n   - Location (City, State/Country format)\n   - Previous notable publications or achievements\n3. Use only information that can be reasonably inferred from the content\n4. Format for LSI metadata submission standards\n5. Maintain professional tone and third-person perspective\n6. Avoid speculative information\n\nReturn a JSON object with these keys:\n\"contributor_one_bio\": \"Professional biography\",\n\"contributor_one_affiliations\": \"Academic or professional affiliations\",\n\"contributor_one_professional_position\": \"Current job title or position\",\n\"contributor_one_location\": \"City, State/Country\",\n\"contributor_one_prior_work\": \"Previous notable publications or achievements\""
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 500
+    },
+    "fallback": {
+      "contributor_one_bio": "A respected expert in the field with extensive knowledge and experience related to {title}.",
+      "contributor_one_affiliations": "Professional association in the relevant field",
+      "contributor_one_professional_position": "Author and Subject Matter Expert",
+      "contributor_one_location": "United States",
+      "contributor_one_prior_work": "Published works in the field"
+    }
+  },
+  "suggest_series_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book series specialist with expertise in identifying and categorizing books within series for the publishing industry. Your task is to analyze book content and metadata to determine if a book is part of a series and extract relevant series information for LSI metadata submission."
+      },
+      {
+        "role": "user",
+        "content": "Analyze this book to determine if it's part of a series:\n\nTitle: {title}\nSubtitle: {subtitle}\nAuthor: {author}\nSummary: {summary_long}\nTable of Contents: {table_of_contents}\nBook Content: {book_content}\n\nRequirements:\n1. Look for explicit series indicators in the title, subtitle, or content\n2. Search for phrases like 'Volume X', 'Book Y', 'Part Z', etc.\n3. Check for references to previous or upcoming books in the same series\n4. Examine the table of contents for series indicators\n5. Consider if the content suggests continuation from or to other books\n6. Format for LSI metadata submission standards\n7. Provide empty values if no series information is found\n8. Be conservative - only identify series information if clearly indicated\n\nReturn a JSON object with these keys:\n\"series_name\": \"Name of the series if applicable, empty if standalone\",\n\"series_number\": \"Position in series if applicable, empty if standalone\""
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 150
+    },
+    "fallback": {
+      "series_name": "",
+      "series_number": ""
+    }
+  },
+  "generate_enhanced_annotation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book marketing copywriter specializing in creating compelling book annotations and summaries for LSI distribution. Your task is to craft HTML-formatted annotations that capture readers' attention, drive sales, and meet LSI's specific formatting requirements."
+      },
+      {
+        "role": "user",
+        "content": "Create an enhanced HTML-formatted annotation/summary for this book (max 4000 characters):\n\nTitle: {title}\nSubtitle: {subtitle}\nAuthor: {author}\nPublisher: {publisher}\nSummary Long: {summary_long}\nStorefront Description: {storefront_description_en}\nPublisher Note: {storefront_publishers_note_en}\nKeywords: {keywords}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\n\nRequirements:\n1. Start with a dramatic hook in <b><i>bold italic</i></b> as the first paragraph\n2. Use proper HTML formatting with these tags only: <p>, <b>, <i>, <br>\n3. Structure the annotation in 3-5 paragraphs\n4. Include compelling selling points and key themes\n5. Incorporate storefront description and publisher notes naturally\n6. Highlight the book's unique value proposition\n7. End with a call-to-action or compelling reason to read\n8. Maximum 4000 characters total (including HTML tags)\n9. Ensure all HTML tags are properly closed\n10. Format for LSI metadata submission standards\n\nCreate an annotation that would compel readers to purchase this book while meeting all LSI formatting requirements."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1500
+    },
+    "fallback": "<p><b><i>Discover the fascinating world of {title} in this compelling work by {author}.</i></b></p><p>This book offers valuable insights and perspectives on an important topic that will engage readers from beginning to end. With expert analysis and engaging prose, it presents complex ideas in an accessible format.</p><p>Readers will appreciate the depth of research and clarity of presentation that makes this work both informative and enjoyable to read.</p>"
+  },
+  "generate_illustration_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book production specialist with expertise in illustration assessment for the publishing industry. Your task is to analyze book content and metadata to provide reasonable estimates of illustration information for LSI metadata submission, even when explicit information is not available."
+      },
+      {
+        "role": "user",
+        "content": "Analyze this book to determine illustration information:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nTable of Contents: {table_of_contents}\nBook Content: {book_content}\nFormat: {format}\nGenre/BISAC: {bisac_codes}\n\nRequirements:\n1. Count any references to figures, charts, images, diagrams, tables, etc.\n2. Make reasonable estimates based on genre and subject matter:\n   - Technical/Academic books: Usually have some diagrams or charts\n   - How-to/Instructional books: Often have illustrations\n   - Children's books: Typically illustrated\n   - Fiction: Usually no illustrations unless specified\n   - Art/Design books: Heavily illustrated\n3. Look for explicit mentions of visual elements in the text\n4. Check the table of contents for sections about illustrations\n5. Provide reasonable estimates rather than defaulting to zero\n6. Format for LSI metadata submission standards\n7. Always provide a count and description, even if estimated\n\nReturn a JSON object with these keys:\n\"illustration_count\": \"Number as string (e.g., '12' or '0')\",\n\"illustration_notes\": \"Brief description of illustration types/content or 'No illustrations' if none\""
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 150
+    },
+    "fallback": {
+      "illustration_count": "0",
+      "illustration_notes": "No illustrations indicated in the available content."
+    }
+  },
+  "generate_enhanced_toc": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book formatting specialist with expertise in creating well-structured tables of contents for LSI metadata requirements. Your task is to create or enhance a table of contents that meets LSI's specific formatting standards and accurately represents the book's structure."
+      },
+      {
+        "role": "user",
+        "content": "Create or enhance the table of contents for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nExisting TOC: {table_of_contents}\nBook Content: {book_content}\n\nRequirements:\n1. Use proper hierarchical formatting with consistent indentation\n2. Include chapter numbers and titles exactly as they appear in the book\n3. Add page numbers in a consistent format (use placeholders if actual numbers unknown)\n4. Maximum 2000 characters total\n5. Include major sections like Introduction, Preface, Conclusion, References, etc.\n6. Format for LSI metadata submission standards\n7. If an existing TOC is provided, enhance its formatting while preserving content\n8. If no TOC exists, create one based on the book content structure\n\nUse this format for standard chapters:\nChapter 1: Title Name ........................... 1\nChapter 2: Another Title ........................ 15\n\nAnd this format for more complex structures:\nPart I: Section Name\n  Chapter 1: Title ............................ 1\n  Chapter 2: Title ............................ 15\nPart II: Another Section\n  Chapter 3: Title ............................ 30"
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 800
+    },
+    "fallback": "Introduction ........................... 1\nChapter 1: Overview ........................... 5\nChapter 2: Main Content ....................... 15\nChapter 3: Further Discussion ................. 30\nConclusion ........................... 45\nReferences ........................... 50"
+  },
+  "prompt_keys": [
+    "generate_contributor_bio",
+    "suggest_bisac_codes",
+    "generate_keywords",
+    "create_short_description",
+    "suggest_thema_subjects",
+    "determine_audience",
+    "determine_age_range",
+    "extract_lsi_contributor_info",
+    "suggest_series_info",
+    "generate_enhanced_annotation",
+    "generate_illustration_info",
+    "generate_enhanced_toc"
+  ],
+  "reprompt_keys": [],
+  "_metadata": {
+    "fixed_by_script": true,
+    "fixed_at": "2025-09-26T07:00:00.000000"
+  }
+}

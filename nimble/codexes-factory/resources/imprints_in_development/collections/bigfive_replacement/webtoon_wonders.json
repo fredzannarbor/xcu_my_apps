@@ -1,0 +1,28 @@
+{
+  "imprint": "Webtoon Wonders",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@webtoonwonders.com",
+  "branding": {
+    "tagline": "Discover the undiscovered in web comics",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.webtoonwonders.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Web comics from independent and emerging artists, across various genres",
+    "target_audience": "Web comic fans who enjoy discovering new talent, aged 13 and above",
+    "competitive_advantage": "We scout for and nurture promising comic artists, offering fresh and diverse content not available elsewhere",
+    "example_titles": "Titles similar to 'Sarah's Scribbles' and 'Questionable Content'; artists akin to Sarah Andersen"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

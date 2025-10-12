@@ -1,0 +1,28 @@
+{
+  "imprint": "Senior Savvy Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@seniorsavvypublications.com",
+  "branding": {
+    "tagline": "Embrace the Digital Age, at Any Age",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.seniorsavvypublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Guides to smartphones, computers, social media, and emerging tech",
+    "target_audience": "Seniors wanting to understand and use technology",
+    "competitive_advantage": "Our tech guides are written in clear, accessible language for seniors",
+    "example_titles": "The Senior's Guide to Facebook, Navigating the Internet"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

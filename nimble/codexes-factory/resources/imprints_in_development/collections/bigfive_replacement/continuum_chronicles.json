@@ -1,0 +1,28 @@
+{
+  "imprint": "Continuum Chronicles",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@continuumchronicles.com",
+  "branding": {
+    "tagline": "Experience History, One Chapter at a Time",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.continuumchronicles.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical, biographical and documentary series",
+    "target_audience": "History enthusiasts and documentary lovers",
+    "competitive_advantage": "In-depth, factual storytelling with a historical perspective",
+    "example_titles": "The Last Kingdom, Band of Brothers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Streamline Strategy",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@streamlinestrategy.com",
+  "branding": {
+    "tagline": "Streamline Your Success",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.streamlinestrategy.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Social media management, process optimization",
+    "target_audience": "Social media managers, digital marketers",
+    "competitive_advantage": "Expertise in process optimization for social media management.",
+    "example_titles": "Social media management guides, process optimization strategies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

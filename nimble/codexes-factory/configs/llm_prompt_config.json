@@ -1,0 +1,24 @@
+{
+  "subtitle_generation": {
+    "model": "gpt-4o-mini",
+    "max_tokens": 50,
+    "temperature": 0.7,
+    "timeout_seconds": 30,
+    "retry_attempts": 3,
+    "retry_delay_seconds": 1,
+    "system_prompt": "You are an expert book editor specializing in creating concise, compelling subtitles for academic and educational publications.",
+    "prompt_template": "Create a new, shorter subtitle for this book that captures the essence of the original but fits within {char_limit} characters.\n\nBook Title: {title}\nSubject/Topic: {subject}\nOriginal Subtitle: {original_subtitle}\nCharacter Limit: {char_limit}\n\nRequirements:\n- Must be {char_limit} characters or fewer\n- Should capture the key concept from the original subtitle\n- Should be engaging and descriptive\n- Should fit the academic/educational tone of xynapse traces books\n- Do not include quotation marks in your response\n\nNew Subtitle:",
+    "validation": {
+      "max_response_length": 100,
+      "required_fields": ["title", "subject", "original_subtitle", "char_limit"],
+      "fallback_strategy": "truncate_original"
+    }
+  },
+  "error_handling": {
+    "log_level": "INFO",
+    "log_llm_requests": true,
+    "log_llm_responses": true,
+    "fallback_on_error": true,
+    "max_fallback_attempts": 2
+  }
+}

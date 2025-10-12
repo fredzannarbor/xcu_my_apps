@@ -1,0 +1,28 @@
+{
+  "imprint": "Stitch & Thread Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@stitchandthreadpress.com",
+  "branding": {
+    "tagline": "Weaving creativity into every stitch!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.stitchandthreadpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Knitting and sewing patterns, how-to guides, and technique manuals.",
+    "target_audience": "Home crafters, professional seamstresses and knitters, DIY enthusiasts.",
+    "competitive_advantage": "Our publications are meticulously edited, ensuring clear, easy-to-follow patterns and instructions. Our diverse range caters to every skill level.",
+    "example_titles": "Comprehensive guides to knitting stitches, tailored sewing patterns for fashion enthusiasts, author types like experienced crafters and DIY bloggers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

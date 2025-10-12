@@ -1,0 +1,192 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arxiv-writer"
+version = "0.1.0"
+description = "A standalone package for AI-assisted academic paper generation in arXiv format"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "AI Lab for Book-Lovers", email = "contact@ailabforbooklovers.com"}
+]
+maintainers = [
+    {name = "AI Lab for Book-Lovers", email = "contact@ailabforbooklovers.com"}
+]
+keywords = ["arxiv", "academic-papers", "ai", "llm", "latex", "research"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Markup :: LaTeX",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "litellm>=1.72.0",
+    "python-dotenv>=1.1.0",
+    "pandas>=2.3.0",
+    "pydantic>=2.0.0",
+    "jinja2>=3.1.0",
+    "click>=8.0.0",
+    "tenacity>=8.2.0",
+    "PyYAML>=6.0.1",
+    "requests>=2.32.0",
+    "typing-extensions>=4.0.0; python_version<'3.10'"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=24.0.0",
+    "mypy>=1.8.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0.0"
+]
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=2.0.0",
+    "myst-parser>=2.0.0"
+]
+latex = [
+    "PyMuPDF>=1.26.0"
+]
+all = [
+    "arxiv-writer[dev,docs,latex]"
+]
+
+[project.urls]
+Homepage = "https://github.com/ailabforbooklovers/arxiv-writer"
+Documentation = "https://arxiv-writer.readthedocs.io"
+Repository = "https://github.com/ailabforbooklovers/arxiv-writer"
+Issues = "https://github.com/ailabforbooklovers/arxiv-writer/issues"
+Changelog = "https://github.com/ailabforbooklovers/arxiv-writer/blob/main/CHANGELOG.md"
+
+[project.scripts]
+arxiv-writer = "arxiv_writer.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/arxiv_writer"]
+exclude = [
+    "**/__pycache__",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/.pytest_cache",
+    "**/test_*",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/templates",
+    "/examples",
+    "/tests",
+    "/docs",
+    "/README.md",
+    "/LICENSE",
+    "/CHANGELOG.md",
+    "/pyproject.toml"
+]
+exclude = [
+    "**/__pycache__",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/.pytest_cache",
+    "**/htmlcov",
+    "**/.coverage",
+    "**/coverage.xml",
+    "**/*.log"
+]
+
+[tool.hatch.version]
+path = "src/arxiv_writer/__init__.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=arxiv_writer",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml"
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests"
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod"
+]

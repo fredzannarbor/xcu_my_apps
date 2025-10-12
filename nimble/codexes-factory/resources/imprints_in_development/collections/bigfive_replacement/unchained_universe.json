@@ -1,0 +1,28 @@
+{
+  "imprint": "Unchained Universe",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@unchaineduniverse.com",
+  "branding": {
+    "tagline": "Break the Chains, Embrace the Universe",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.unchaineduniverse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Global mobility, immigration, and location independence in remote work",
+    "target_audience": "Digital nomads and global remote workers",
+    "competitive_advantage": "Focus on global mobility and location independence",
+    "example_titles": "Guides like 'Planet Earth: Your Remote Office Guide'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

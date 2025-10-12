@@ -1,0 +1,28 @@
+{
+  "imprint": "Vlogger's Vault",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vlogger'svault.com",
+  "branding": {
+    "tagline": "Unlock Your Vlogging Potential",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vlogger'svault.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Vlogging, content creation, YouTube marketing",
+    "target_audience": "Aspiring vloggers, content creators",
+    "competitive_advantage": "Practical advice and strategies for successful vlogging.",
+    "example_titles": "Vlogging guidebooks, YouTube marketing strategies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

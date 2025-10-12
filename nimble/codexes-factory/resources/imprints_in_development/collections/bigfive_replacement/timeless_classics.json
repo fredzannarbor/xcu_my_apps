@@ -1,0 +1,28 @@
+{
+  "imprint": "Timeless Classics",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@timelessclassics.com",
+  "branding": {
+    "tagline": "Relive the classics",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.timelessclassics.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Reviving and republishing classic literary fiction",
+    "target_audience": "Readers who appreciate classic literature",
+    "competitive_advantage": "Brings classic literature to modern audiences",
+    "example_titles": "F. Scott Fitzgerald, Virginia Woolf"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

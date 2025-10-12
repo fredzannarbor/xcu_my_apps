@@ -1,0 +1,28 @@
+{
+  "imprint": "Homestead Haven",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@homesteadhaven.com",
+  "branding": {
+    "tagline": "Your Guide to a Self-Sufficient Life",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.homesteadhaven.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Homesteading, small-scale farming, and self-sufficiency.",
+    "target_audience": "People interested in homesteading, self-sufficiency, and living off the land.",
+    "competitive_advantage": "Our focus on practical homesteading techniques and self-sufficiency sets us apart in the agricultural publishing sector.",
+    "example_titles": "Titles like 'Homesteading Handbook', 'The Self-Sufficient Life', or authors like Laura Ingalls Wilder."
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

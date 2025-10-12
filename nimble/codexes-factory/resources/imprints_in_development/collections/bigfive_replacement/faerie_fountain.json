@@ -1,0 +1,28 @@
+{
+  "imprint": "Faerie Fountain",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@faeriefountain.com",
+  "branding": {
+    "tagline": "Dip into the magic of the fey",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.faeriefountain.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Urban fantasy centered on faeries and magical beings",
+    "target_audience": "Fans of magical beings in contemporary settings",
+    "competitive_advantage": "We specialize in faerie-themed narratives, filling an underserved niche",
+    "example_titles": "Comparable to works by Holly Black or Julie Kagawa"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

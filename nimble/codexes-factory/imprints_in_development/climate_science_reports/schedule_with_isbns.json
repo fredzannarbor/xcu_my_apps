@@ -1,0 +1,630 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "Schedule",
+      "books": [
+        {
+          "title": "Martian Self-Reliance: Alone vs. Aided",
+          "description": "Search for quotes on establishing a self-reliant Mars colony, exploring isolationist strategies (e.g., local resource production, independent governance) versus reliance on Earth (e.g., supply missions, expertise). Include space exploration plans, astrobiology papers, and sci-fi on colony resilience.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883646",
+          "isbn_assigned_date": "2025-08-26T18:54:20.880446"
+        },
+        {
+          "title": "Mind-Machine Fusion: Free or Dependent?",
+          "description": "Seek quotes on brain-computer interfaces, weighing cognitive liberation (e.g., enhanced learning, disability mitigation) against dependency risks (e.g., tech reliance, privacy loss). Prioritize neurotechnology studies, expert presentations, and sci-fi on human augmentation.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883653",
+          "isbn_assigned_date": "2025-08-26T18:54:20.887388"
+        },
+        {
+          "title": "Global Renewables: Scale vs. Scarcity",
+          "description": "Find quotes about the global expansion of renewable energy, focusing on the tension between scaling solar and wind globally versus resource scarcity and other scaling challenges.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883660",
+          "isbn_assigned_date": "2025-08-26T18:54:20.894670"
+        },
+        {
+          "title": "Internet for All: Access for All?",
+          "description": "Collect quotes on global internet access missions, emphasizing inclusive access (e.g., underserved regions, affordability) versus barriers (e.g., cost, infrastructure). Include telecom research, project updates, and fiction on digital equity.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883677",
+          "isbn_assigned_date": "2025-08-26T18:54:20.901842"
+        },
+        {
+          "title": "Subterranean Cities: Gain vs. Pain",
+          "description": "Search for quotes on underground urban solutions, weighing efficiency (e.g., reduced congestion, space optimization) against feasibility challenges (e.g., construction costs, safety). Prioritize urban engineering studies, tunneling plans, and fiction on future cities.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883684",
+          "isbn_assigned_date": "2025-08-26T18:54:20.908790"
+        },
+        {
+          "title": "AI-Driven Science: Speed versus Safety",
+          "description": "Seek quotes on AIâ€™s acceleration of scientific discovery, exploring rapid advancements (e.g., physics breakthroughs, medical research) versus safety concerns (e.g., ethical risks, errors). Include AI research papers, mission statements, and sci-fi on AI science.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883691",
+          "isbn_assigned_date": "2025-08-26T18:54:20.915728"
+        },
+        {
+          "title": "Streamlined Governance: Fast vs. Fair",
+          "description": "Find quotes on AI-driven government reforms, weighing agile processes (e.g., automation, cost-cutting) against oversight needs (e.g., accountability, fairness). Focus on public administration research, reform proposals, and fiction on bureaucratic reform.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883707",
+          "isbn_assigned_date": "2025-08-26T18:54:20.922629"
+        },
+        {
+          "title": "Free Speech Platforms: Free vs. Safe",
+          "description": "Collect quotes on free speech platforms, exploring open discourse (e.g., diverse perspectives, truth-seeking) versus regulatory needs (e.g., combating misinformation). Prioritize communication studies, platform posts, and fiction on digital freedom.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883714",
+          "isbn_assigned_date": "2025-08-26T18:54:20.929787"
+        },
+        {
+          "title": "Birth Rate Boost: Policy vs. Freedom",
+          "description": "Search for quotes on AI-driven pronatal strategies, focusing on policy incentives (e.g., subsidies, healthcare) versus individual freedom (e.g., personal choice, privacy). Include demographic studies, pronatal comments, and fiction on population growth.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883721",
+          "isbn_assigned_date": "2025-08-26T18:54:20.936584"
+        },
+        {
+          "title": "Visionary Drive: Passion versus Peril",
+          "description": "Seek quotes on relentless ambition, exploring passionate innovation (e.g., groundbreaking ventures) versus personal perils (e.g., stress, isolation). Focus on psychology texts, leadership interviews, and fiction on visionary leadership.",
+          "stream": "Resilience and Vision",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883738",
+          "isbn_assigned_date": "2025-08-26T18:54:20.943734"
+        },
+        {
+          "title": "Industry Shifts: Progress vs. Pain",
+          "description": "Find quotes on disruptive technologies (e.g., electric vehicles, space exploration), weighing innovative progress (e.g., new markets) against instability (e.g., economic disruption, job losses). Include innovation studies, expert comments, and fiction on tech upheaval.",
+          "stream": "Technological Disruption",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883745",
+          "isbn_assigned_date": "2025-08-26T18:54:20.950705"
+        },
+        {
+          "title": "Martian Commerce: Local vs. Galactic",
+          "description": "Collect quotes on building Martian markets, exploring local economies (e.g., resource-based trade) versus interplanetary commerce (e.g., Earth-Mars trade routes). Prioritize economic studies, space economic plans, and sci-fi on space trade.",
+          "stream": "Space Economy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883752",
+          "isbn_assigned_date": "2025-08-26T18:54:20.957967"
+        },
+        {
+          "title": "Mars Governance: Self-Rule vs. Control",
+          "description": "Search for quotes on governing Mars, focusing on autonomous systems (e.g., independent laws, local councils) versus Earth oversight (e.g., UN treaties, corporate influence). Include political science texts, governance views, and sci-fi on extraterrestrial politics.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883769",
+          "isbn_assigned_date": "2025-08-26T18:54:20.965242"
+        },
+        {
+          "title": "Cognitive Upgrades: Need vs. Want",
+          "description": "Seek quotes on cognitive enhancements, exploring necessary applications (e.g., medical treatments) versus luxury upgrades (e.g., elective boosts). Prioritize neuroethics papers, expert talks, and sci-fi on brain enhancement ethics.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883776",
+          "isbn_assigned_date": "2025-08-26T18:54:20.972205"
+        },
+        {
+          "title": "Battery Revolution: Power vs. Problems",
+          "description": "Find quotes on battery technology, weighing revolutionary advancements (e.g., new chemistries, scalability) against constraints (e.g., supply chain, costs). Focus on materials science papers, battery announcements, and fiction on energy breakthroughs.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883783",
+          "isbn_assigned_date": "2025-08-26T18:54:20.979409"
+        },
+        {
+          "title": "Satellite Networks: Durable vs. Risky",
+          "description": "Collect quotes on satellite infrastructure, emphasizing durability (e.g., orbital resilience, redundancy) versus risks (e.g., collisions, cyberattacks). Include aerospace engineering studies, project updates, and sci-fi on satellite networks.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883790",
+          "isbn_assigned_date": "2025-08-26T18:54:20.986235"
+        },
+        {
+          "title": "Tunnel Viability: Speed vs. Stability",
+          "description": "Search for quotes on tunneling projects, focusing on speed benefits (e.g., rapid construction, transport) versus stability concerns (e.g., seismic risks, costs). Prioritize geotechnical research, tunneling goals, and fiction on urban infrastructure.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883806",
+          "isbn_assigned_date": "2025-08-26T18:54:20.993366"
+        },
+        {
+          "title": "AI Precision: Accuracy versus Error",
+          "description": "Seek quotes on AI precision in scientific applications, exploring high accuracy (e.g., predictive models) versus error risks (e.g., data bias, miscalculations). Include machine learning papers, AI comments, and sci-fi on AI reliability.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883813",
+          "isbn_assigned_date": "2025-08-26T18:54:21.000179"
+        },
+        {
+          "title": "Open Government: Open vs. Safe",
+          "description": "Find quotes on AI-driven government transparency, weighing open access (e.g., public data, accountability) against security needs (e.g., classified information). Focus on governance studies, transparency initiatives, and fiction on transparent rule.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883820",
+          "isbn_assigned_date": "2025-08-26T18:54:21.007149"
+        },
+        {
+          "title": "Knowledge Networks: Unite vs. Divide",
+          "description": "Collect quotes on knowledge-sharing platforms, exploring cohesive global networks (e.g., shared insights) versus divisive outcomes (e.g., polarized communities). Prioritize social media research, platform posts, and fiction on digital unity.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883837",
+          "isbn_assigned_date": "2025-08-26T18:54:21.014370"
+        },
+        {
+          "title": "Fertility Optimization: AI vs. Nature",
+          "description": "Search for quotes on AI-driven fertility solutions, focusing on technological advancements (e.g., genetic screening, IVF) versus natural processes (e.g., traditional conception). Include reproductive health studies, pronatal views, and fiction on human reproduction.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883844",
+          "isbn_assigned_date": "2025-08-26T18:54:21.021120"
+        },
+        {
+          "title": "Bold Leadership: Inspire vs. Push",
+          "description": "Seek quotes on leadership approaches, exploring inspirational vision (e.g., motivating teams) versus high-pressure demands (e.g., intense workloads). Focus on leadership psychology, expert interviews, and fiction on transformative leaders.",
+          "stream": "Resilience and Vision",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883851",
+          "isbn_assigned_date": "2025-08-26T18:54:21.028065"
+        },
+        {
+          "title": "Tech Adoption: Speed vs. Skepticism",
+          "description": "Find quotes on adopting new technologies (e.g., EVs, neural implants), weighing rapid momentum (e.g., consumer uptake) versus skepticism (e.g., safety concerns). Include technology diffusion studies, expert comments, and fiction on tech integration.",
+          "stream": "Technological Disruption",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883868",
+          "isbn_assigned_date": "2025-08-26T18:54:21.035060"
+        },
+        {
+          "title": "Space Markets: Innovation vs. Control",
+          "description": "Collect quotes on developing space economies, focusing on innovative markets (e.g., space tourism, mining) versus regulatory control (e.g., international laws). Prioritize economic papers, space economic plans, and sci-fi on space commerce.",
+          "stream": "Space Economy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883875",
+          "isbn_assigned_date": "2025-08-26T18:54:21.042127"
+        },
+        {
+          "title": "Radiation Barriers: Safe vs. Exposed",
+          "description": "Search for quotes on shielding Mars colonists from cosmic radiation, focusing on protective technologies (e.g., shielding materials, habitats) versus exposure risks (e.g., health impacts). Include space medicine papers, safety plans, and sci-fi on space survival.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883882",
+          "isbn_assigned_date": "2025-08-26T18:54:21.049566"
+        },
+        {
+          "title": "Implant Safety: Assured vs. Unsure",
+          "description": "Seek quotes on neural implant safety, exploring assurances (e.g., rigorous testing, biocompatibility) versus uncertainties (e.g., long-term effects). Prioritize medical device studies, safety comments, and sci-fi on neural tech risks.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883899",
+          "isbn_assigned_date": "2025-08-26T18:54:21.056563"
+        },
+        {
+          "title": "Solar Expansion: All-In vs. Balanced",
+          "description": "Find quotes on solar energy expansion, weighing dominance (e.g., widespread adoption, cost declines) versus balanced energy mixes (e.g., wind, hydro). Focus on renewable energy studies, solar strategies, and eco-fiction on solar power.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883905",
+          "isbn_assigned_date": "2025-08-26T18:54:21.063564"
+        },
+        {
+          "title": "Knowledge Access: Free vs. Restricted",
+          "description": "Collect quotes on global knowledge access, exploring free access (e.g., open education) versus restrictions (e.g., government censorship). Include information policy studies, connectivity goals, and fiction on knowledge dissemination.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883912",
+          "isbn_assigned_date": "2025-08-26T18:54:21.070637"
+        },
+        {
+          "title": "Underground Planning: Strong vs. Open",
+          "description": "Search for quotes on underground urban designs, focusing on resilience (e.g., disaster-proofing) versus accessibility challenges (e.g., public access, costs). Prioritize urban planning research, infrastructure plans, and fiction on subterranean cities.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883929",
+          "isbn_assigned_date": "2025-08-26T18:54:21.077665"
+        },
+        {
+          "title": "AI Governance: Freedom vs. Constraint",
+          "description": "Seek quotes on AI development governance, exploring freedom for innovation (e.g., open research) versus constraints (e.g., ethical regulations). Include AI ethics papers, governance views, and sci-fi on AI oversight.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883936",
+          "isbn_assigned_date": "2025-08-26T18:54:21.084729"
+        },
+        {
+          "title": "Policy Automation: Efficient vs. Equal",
+          "description": "Find quotes on AI-driven policy automation, weighing efficiency gains (e.g., streamlined decisions) against equity concerns (e.g., biased algorithms). Focus on policy analysis studies, automation comments, and fiction on automated governance.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883943",
+          "isbn_assigned_date": "2025-08-26T18:54:21.091808"
+        },
+        {
+          "title": "Truth Platforms: Objective vs. Biased",
+          "description": "Collect quotes on truth-seeking platforms, exploring objective verification (e.g., AI fact-checking) versus human biases (e.g., subjective moderation). Prioritize information science studies, platform posts, and fiction on truth platforms.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883950",
+          "isbn_assigned_date": "2025-08-26T18:54:21.099116"
+        },
+        {
+          "title": "Family Support: Data vs. Intuition",
+          "description": "Search for quotes on AI-driven family planning support, focusing on data-driven tools (e.g., fertility tracking) versus intuitive approaches (e.g., cultural traditions). Include health tech studies, pronatal views, and fiction on family dynamics.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883967",
+          "isbn_assigned_date": "2025-08-26T18:54:21.105649"
+        },
+        {
+          "title": "Risk Endurance: Bold vs. Cautious",
+          "description": "Seek quotes on risk-taking mindsets, exploring innovative leaps (e.g., bold ventures) versus cautious restraint (e.g., risk mitigation). Focus on entrepreneurship studies, expert interviews, and fiction on risk-driven leadership.",
+          "stream": "Resilience and Vision",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883974",
+          "isbn_assigned_date": "2025-08-26T18:54:21.112764"
+        },
+        {
+          "title": "Market Evolution: Slow vs. Sudden",
+          "description": "Find quotes on market transformations, weighing gradual evolution (e.g., incremental adoption) versus radical shifts (e.g., industry overhaul). Include business studies, expert comments, and fiction on market disruption.",
+          "stream": "Technological Disruption",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883981",
+          "isbn_assigned_date": "2025-08-26T18:54:21.119840"
+        },
+        {
+          "title": "Orbital Systems: Public vs. Private",
+          "description": "Collect quotes on space infrastructure development, exploring private systems (e.g., commercial satellites) versus public investments (e.g., government stations). Prioritize aerospace economics, space plans, and sci-fi on orbital economies.",
+          "stream": "Space Economy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608883998",
+          "isbn_assigned_date": "2025-08-26T18:54:21.126852"
+        },
+        {
+          "title": "Planetary Remaking: Possible vs. Right",
+          "description": "Search for quotes on terraforming Mars, focusing on feasible engineering (e.g., atmospheric thickening) versus ethical concerns (e.g., ecological impacts). Include planetary science papers, terraforming comments, and sci-fi on planetary transformation.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884001",
+          "isbn_assigned_date": "2025-08-26T18:54:21.134406"
+        },
+        {
+          "title": "AI-Human Synergy: Help or Hinder?",
+          "description": "Seek quotes on human-AI integration, exploring collaborative synergy (e.g., enhanced cognition) versus control risks (e.g., AI dominance). Prioritize AI integration studies, expert vision, and sci-fi on human-AI dynamics.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884018",
+          "isbn_assigned_date": "2025-08-26T18:54:21.141763"
+        },
+        {
+          "title": "Energy Access: Equity vs. Exclusion",
+          "description": "Find quotes on energy solutions, focusing on equitable access (e.g., affordable renewables) versus exclusionary barriers (e.g., high costs). Focus on energy justice studies, sustainability goals, and eco-fiction on energy equity.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884025",
+          "isbn_assigned_date": "2025-08-26T18:54:21.148816"
+        },
+        {
+          "title": "Digital Gaps: Closing vs. Widening",
+          "description": "Collect quotes on efforts to close digital divides, exploring connectivity gains (e.g., rural access) versus risks of widening gaps (e.g., cost barriers). Include digital divide research, connectivity plans, and fiction on connectivity challenges.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884032",
+          "isbn_assigned_date": "2025-08-26T18:54:21.155800"
+        },
+        {
+          "title": "Hyperloop Viability: Dream vs. Dollars",
+          "description": "Search for quotes on hyperloop projects, focusing on visionary potential (e.g., high-speed travel) versus economic challenges (e.g., funding, scalability). Prioritize transport economics, hyperloop plans, and fiction on futuristic transport.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884049",
+          "isbn_assigned_date": "2025-08-26T18:54:21.162689"
+        },
+        {
+          "title": "Scientific AI: Leap vs. Step",
+          "description": "Seek quotes on scientific AI, exploring breakthrough discoveries (e.g., new theories) versus incremental progress (e.g., refined models). Include scientific computing papers, AI goals, and sci-fi on AI-driven science.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884056",
+          "isbn_assigned_date": "2025-08-26T18:54:21.169385"
+        },
+        {
+          "title": "Service Automation: Fast vs. Human",
+          "description": "Find quotes on AI-driven public service automation, weighing speed (e.g., efficient delivery) versus human elements (e.g., empathy, judgment). Focus on public service studies, automation comments, and fiction on automated services.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884063",
+          "isbn_assigned_date": "2025-08-26T18:54:21.176210"
+        },
+        {
+          "title": "Online Discourse: All Views vs. Echoes",
+          "description": "Collect quotes on discourse platforms, exploring diverse engagement (e.g., global voices) versus polarization risks (e.g., echo chambers). Prioritize discourse analysis, platform posts, and fiction on online communities.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884070",
+          "isbn_assigned_date": "2025-08-26T18:54:21.183294"
+        },
+        {
+          "title": "Population Growth: Right vs. Now",
+          "description": "Search for quotes on AI-driven pronatalism, focusing on ethical growth strategies (e.g., voluntary incentives) versus urgent pressures (e.g., demographic decline). Include ethics studies, pronatal views, and fiction on population ethics.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884094",
+          "isbn_assigned_date": "2025-08-26T18:54:21.189881"
+        },
+        {
+          "title": "Setback Recovery: Bounce Back or Fail",
+          "description": "Seek quotes on recovery from failures, exploring resilience (e.g., project recoveries) versus risks of defeat (e.g., financial strain). Focus on resilience psychology, failure narratives, and fiction on overcoming setbacks.",
+          "stream": "Resilience and Vision",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884100",
+          "isbn_assigned_date": "2025-08-26T18:54:21.196756"
+        },
+        {
+          "title": "Tech Ethics: Progress versus Duty",
+          "description": "Find quotes on technological advancements, weighing progress (e.g., innovation leaps) against ethical duties (e.g., societal impact). Include tech ethics studies, expert comments, and fiction on technological responsibility.",
+          "stream": "Technological Disruption",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884117",
+          "isbn_assigned_date": "2025-08-26T18:54:21.203694"
+        },
+        {
+          "title": "Space Tourism: For All or a Few?",
+          "description": "Collect quotes on space tourism, exploring opportunities (e.g., public access) versus elitist barriers (e.g., high costs). Prioritize tourism economics, space tourism plans, and sci-fi on space travel.",
+          "stream": "Space Economy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884124",
+          "isbn_assigned_date": "2025-08-26T18:54:21.210500"
+        },
+        {
+          "title": "Advanced Propulsion: Fast vs. Safe",
+          "description": "Search for quotes on next-generation space propulsion (e.g., nuclear, plasma drives), focusing on speed benefits (e.g., faster missions) versus safety concerns (e.g., radiation risks). Include propulsion physics papers, space R&D, and sci-fi on interstellar travel.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884131",
+          "isbn_assigned_date": "2025-08-26T18:54:21.217755"
+        },
+        {
+          "title": "Brain Plasticity: Growth vs. Limits",
+          "description": "Seek quotes on neuroplasticity applications, exploring cognitive potential (e.g., learning enhancements) versus biological limits (e.g., neural capacity). Prioritize neuroscience studies, expert comments, and sci-fi on brain adaptability.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884148",
+          "isbn_assigned_date": "2025-08-26T18:54:21.224528"
+        },
+        {
+          "title": "Grid Modernization: One Grid or Many?",
+          "description": "Find quotes on grid upgrades, weighing centralized systems (e.g., large-scale grids) versus distributed models (e.g., microgrids). Focus on grid engineering studies, grid plans, and fiction on energy infrastructure.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884155",
+          "isbn_assigned_date": "2025-08-26T18:54:21.231621"
+        },
+        {
+          "title": "Satellite Privacy: Connect vs. Track",
+          "description": "Collect quotes on satellite privacy implications, exploring access benefits (e.g., global connectivity) versus surveillance risks (e.g., data tracking). Include privacy studies, satellite comments, and fiction on digital surveillance.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884162",
+          "isbn_assigned_date": "2025-08-26T18:54:21.238831"
+        },
+        {
+          "title": "Tunnel Ecology: Green Tunnels or Harm?",
+          "description": "Search for quotes on tunneling, focusing on sustainable benefits (e.g., reduced surface impact) versus ecological disruptions (e.g., construction impacts). Prioritize environmental engineering, tunneling plans, and fiction on urban ecology.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884179",
+          "isbn_assigned_date": "2025-08-26T18:54:21.246078"
+        },
+        {
+          "title": "AI Openness: Sharing versus Secrecy",
+          "description": "Seek quotes on AI development approaches, exploring open sharing (e.g., public algorithms) versus proprietary secrecy (e.g., competitive advantage). Include open-source AI studies, AI comments, and sci-fi on AI transparency.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884186",
+          "isbn_assigned_date": "2025-08-26T18:54:21.253197"
+        },
+        {
+          "title": "Budget Optimization: Cuts vs. Care",
+          "description": "Find quotes on AI-driven budget cuts, weighing savings (e.g., reduced waste) versus service impacts (e.g., reduced access). Focus on fiscal policy studies, budget proposals, and fiction on public finance.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884193",
+          "isbn_assigned_date": "2025-08-26T18:54:21.259996"
+        },
+        {
+          "title": "Knowledge Equity: For All or the Few?",
+          "description": "Collect quotes on knowledge democratization, exploring universal access (e.g., open platforms) versus elitist barriers (e.g., expertise gaps). Prioritize education policy studies, platform posts, and fiction on knowledge access.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884209",
+          "isbn_assigned_date": "2025-08-26T18:54:21.267100"
+        },
+        {
+          "title": "Reproductive Equity: Access vs. Cost",
+          "description": "Search for quotes on AI-driven reproductive technologies, focusing on equitable access (e.g., affordable fertility tools) versus cost barriers (e.g., high-tech expenses). Include health equity studies, pronatal views, and fiction on reproductive access.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884216",
+          "isbn_assigned_date": "2025-08-26T18:54:21.274077"
+        },
+        {
+          "title": "Ethical Ambition: Dream vs. Duty",
+          "description": "Seek quotes on ambitious goals, exploring visionary innovation (e.g., space, AI) versus ethical responsibilities (e.g., societal impacts). Focus on ethics studies, leadership interviews, and fiction on visionary ethics.",
+          "stream": "Resilience and Vision",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884223",
+          "isbn_assigned_date": "2025-08-26T18:54:21.281239"
+        },
+        {
+          "title": "Economic Shifts: Growth versus Loss",
+          "description": "Find quotes on economic disruptions, weighing growth (e.g., new industries) versus losses (e.g., job displacement). Include labor economics, expert comments, and fiction on economic transformation.",
+          "stream": "Technological Disruption",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884230",
+          "isbn_assigned_date": "2025-08-26T18:54:21.288225"
+        },
+        {
+          "title": "Resource Extraction: Riches vs. Right",
+          "description": "Collect quotes on space resource extraction (e.g., asteroid mining), exploring wealth creation (e.g., economic growth) versus ethical concerns (e.g., space environment). Prioritize space economics, space plans, and sci-fi on resource mining.",
+          "stream": "Space Economy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884247",
+          "isbn_assigned_date": "2025-08-26T18:54:21.295351"
+        },
+        {
+          "title": "Martian Markets: Free or Funded?",
+          "description": "Search for quotes on Martian economic systems, focusing on independent markets (e.g., local trade) versus Earth subsidies (e.g., financial support). Include economic modeling papers, space economic views, and sci-fi on Martian economies.",
+          "stream": "Interplanetary Ambition",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884254",
+          "isbn_assigned_date": "2025-08-26T18:54:21.302320"
+        },
+        {
+          "title": "Memory Enhancement: Recall vs. Rewrite",
+          "description": "Seek quotes on memory augmentation, exploring accurate recall (e.g., therapeutic uses) versus alteration risks (e.g., false memories). Prioritize cognitive science studies, expert comments, and sci-fi on memory manipulation.",
+          "stream": "Neural Augmentation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884261",
+          "isbn_assigned_date": "2025-08-26T18:54:21.309055"
+        },
+        {
+          "title": "Net-Zero Goals: Achievable vs. Ideal",
+          "description": "Find quotes on net-zero ambitions, weighing realistic timelines (e.g., achievable reductions) versus idealistic goals (e.g., full decarbonization). Focus on climate policy studies, sustainability plans, and eco-fiction on climate targets.",
+          "stream": "Sustainable Energy",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884278",
+          "isbn_assigned_date": "2025-08-26T18:54:21.316167"
+        },
+        {
+          "title": "Connectivity Economics: Cost vs. Gain",
+          "description": "Collect quotes on satellite internet economic models, exploring affordable access (e.g., low-cost plans) versus profitability (e.g., infrastructure costs). Include telecom economics, pricing strategies, and fiction on connectivity economics.",
+          "stream": "Global Connectivity",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884285",
+          "isbn_assigned_date": "2025-08-26T18:54:21.323059"
+        },
+        {
+          "title": "High-Speed Tunnels: Fast vs. Risky",
+          "description": "Search for quotes on high-speed tunnels, focusing on innovative transport (e.g., hyperloop speed) versus risks (e.g., safety, costs). Prioritize transport engineering, tunnel plans, and fiction on high-speed travel.",
+          "stream": "Urban Infrastructure",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884292",
+          "isbn_assigned_date": "2025-08-26T18:54:21.330083"
+        },
+        {
+          "title": "Medical AI: Healing vs. Enhancement",
+          "description": "Seek quotes on medical AI applications, exploring healing (e.g., diagnostics, treatments) versus elective enhancements (e.g., cognitive boosts). Include medical AI studies, health goals, and sci-fi on medical technology.",
+          "stream": "Artificial Intelligence",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884308",
+          "isbn_assigned_date": "2025-08-26T18:54:21.337423"
+        },
+        {
+          "title": "Regulatory Streamlining: Fast vs. Safe",
+          "description": "Find quotes on AI-driven regulatory reforms, weighing freedom for innovation (e.g., reduced rules) versus safety protections (e.g., public welfare). Focus on regulatory studies, reform comments, and fiction on deregulation.",
+          "stream": "Government Efficiency",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884315",
+          "isbn_assigned_date": "2025-08-26T18:54:21.344124"
+        },
+        {
+          "title": "Platform Integrity: Trust or Trickery?",
+          "description": "Collect quotes on platform integrity, exploring trust-building (e.g., transparent algorithms) versus manipulation risks (e.g., biased content). Prioritize platform studies, platform posts, and fiction on digital trust.",
+          "stream": "Collective Knowledge",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884322",
+          "isbn_assigned_date": "2025-08-26T18:54:21.351484"
+        },
+        {
+          "title": "Population Health: Data vs. Tradition",
+          "description": "Search for quotes on AI-driven population health, focusing on optimization (e.g., genetic health, longevity) versus traditional approaches (e.g., natural wellness). Include public health studies, pronatal views, and fiction on human health.",
+          "stream": "Pronatal Innovation",
+          "imprint": "xynapse_traces",
+          "format": "paperback",
+          "isbn13": "9781608884339",
+          "isbn_assigned_date": "2025-08-26T18:54:21.358363"
+        }
+      ]
+    }
+  ]
+}

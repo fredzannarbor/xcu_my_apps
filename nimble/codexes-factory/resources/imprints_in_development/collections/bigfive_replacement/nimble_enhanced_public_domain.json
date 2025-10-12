@@ -1,0 +1,165 @@
+{
+  "_config_info": {
+    "version": "1.0",
+    "imprint": "Nimble Enhanced Public Domain",
+    "created_at": "2025-09-06T20:57:51.575323",
+    "updated_at": "2025-09-06T20:57:51.576377",
+    "template_name": "default",
+    "parent_configs": []
+  },
+  "imprint": "Nimble Enhanced Public Domain",
+  "publisher": "Nimble Books LLC",
+  "language_code": "eng",
+  "territorial_rights": "World",
+  "binding_type": "paperback",
+  "edition_number": "1",
+  "edition_description": "First Edition",
+  "contact_email": "nepd@nimblebooks.com",
+  "primary_genres": [
+    "Literature",
+    "Philosophy",
+    "History",
+    "Science"
+  ],
+  "target_audience": "General Adult, Students, Educators",
+  "specialization": "AI-enhanced public domain classics",
+  "copyright_status": "public_domain_enhanced",
+  "licensing": "CC BY-SA 4.0 for enhancements",
+  "_entry_metadata": {
+    "imprint": {
+      "key": "imprint",
+      "value": "Nimble Enhanced Public Domain",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575470",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "publisher": {
+      "key": "publisher",
+      "value": "Nimble Books LLC",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575483",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "language_code": {
+      "key": "language_code",
+      "value": "eng",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575474",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "territorial_rights": {
+      "key": "territorial_rights",
+      "value": "World",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575475",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "binding_type": {
+      "key": "binding_type",
+      "value": "paperback",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575476",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "edition_number": {
+      "key": "edition_number",
+      "value": "1",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575478",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "edition_description": {
+      "key": "edition_description",
+      "value": "First Edition",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.575479",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "contact_email": {
+      "key": "contact_email",
+      "value": "nepd@nimblebooks.com",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576372",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "primary_genres": {
+      "key": "primary_genres",
+      "value": [
+        "Literature",
+        "Philosophy",
+        "History",
+        "Science"
+      ],
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576373",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "target_audience": {
+      "key": "target_audience",
+      "value": "General Adult, Students, Educators",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576374",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "specialization": {
+      "key": "specialization",
+      "value": "AI-enhanced public domain classics",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576375",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "copyright_status": {
+      "key": "copyright_status",
+      "value": "public_domain_enhanced",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576376",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "licensing": {
+      "key": "licensing",
+      "value": "CC BY-SA 4.0 for enhancements",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-06T20:57:51.576377",
+      "modified_by": "system",
+      "is_locked": false
+    }
+  }
+}

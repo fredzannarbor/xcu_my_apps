@@ -1,0 +1,3 @@
+title,book_id,scheduled_date,isbn,imprint,publisher,format,priority,notes
+Example Book Title,example_book_1,2024-12-01,9781234567890,My Imprint,My Publisher,paperback,1,Example notes
+Another Book (Auto ISBN),example_book_2,2024-12-15,,My Imprint,My Publisher,hardcover,2,Will get auto-assigned ISBN

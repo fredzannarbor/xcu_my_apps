@@ -1,0 +1,144 @@
+{
+  "system_info": {
+    "description": "Prompts for imprint generation and CodexType analysis",
+    "version": "2.0",
+    "last_updated": "2024-09-22",
+    "usage": "Used by generate_oneshot_imprint.py for creating complete imprint configurations"
+  },
+  "prompts": {
+    "codextype_analysis": {
+      "name": "CodexType Analysis for Interior Design Assessment",
+      "description": "Analyzes imprint requirements to determine if specialized interior design is needed",
+      "system_prompt": "You are an expert book designer and publishing consultant analyzing an imprint's requirements for specialized interior design.",
+      "user_prompt_template": "IMPRINT DESCRIPTION:\\n{combined_description}\\n\\nTASK: Assess whether fulfilling this imprint's mission will benefit from innovative interior design beyond standard book layouts. If so, provide specific design parameters.\\n\\nANALYSIS FRAMEWORK:\\n1. Content Type Assessment: What types of content will this imprint publish?\\n2. Reader Experience: How do readers typically interact with this content?\\n3. Visual Requirements: Does the content require special visual elements, grids, formatting?\\n4. Functional Needs: Are there functional requirements (answer keys, indexes, interactive elements)?\\n\\nAVAILABLE CODEXTYPES:\\n- standard: Traditional book layout with chapters, paragraphs, standard typography\\n- oral_history: Interview format with speaker identification, question/answer structure\\n- puzzle: Grid-based layouts, answer sections, difficulty indicators\\n- cookbook: Recipe formatting, ingredient lists, step-by-step instructions\\n- poetry: Verse formatting, line breaks, stanza spacing\\n- reference: Dictionary/encyclopedia style, cross-references, definitions\\n- textbook: Academic formatting, exercises, sidebars, learning objectives\\n- journal: Diary/reflection format, dated entries, personal writing space\\n- workbook: Interactive exercises, fill-in blanks, practice spaces\\n\\nOUTPUT FORMAT: Return a JSON object with this structure:\\n{{\\n  \\\"requires_specialized_design\\\": true/false,\\n  \\\"recommended_codextypes\\\": [\\\"standard\\\", \\\"additional_types\\\"],\\n  \\\"design_parameters\\\": {{\\n    \\\"primary_considerations\\\": \\\"Main design focus area\\\",\\n    \\\"interior_layout_notes\\\": \\\"Specific layout requirements\\\",\\n    \\\"typesetting_requirements\\\": \\\"Special typography needs\\\",\\n    \\\"functional_elements\\\": \\\"Interactive or functional requirements\\\",\\n    \\\"reader_interaction_model\\\": \\\"How readers will use the content\\\"\\n  }},\\n  \\\"reasoning\\\": \\\"Brief explanation of why these CodexTypes were selected\\\"\\n}}\\n\\nIf no specialized design is needed, set requires_specialized_design to false and only include [\\\"standard\\\"] in recommended_codextypes.\\n\\nAnalyze the imprint and provide your assessment:",
+      "temperature": 0.4,
+      "max_tokens": 65536,
+      "model_preference": ["gemini/gemini-2.5-flash"]
+    },
+    "imprint_generation": {
+      "name": "Complete Imprint Configuration Generation",
+      "description": "Generates comprehensive imprint configuration from description and CodexType analysis",
+      "system_prompt": "You are an expert publishing consultant tasked with creating a complete imprint configuration for a new publishing brand. Your job is to generate a comprehensive, internally consistent JSON configuration that defines all aspects of this imprint's operations.",
+      "user_prompt_template": "## INPUT SPECIFICATION\nYou will be provided with:\n1. A template structure showing all possible fields\n2. An exemplar of a completed, successful imprint configuration (Xynapse Traces)\n3. A description of the new imprint to create\n4. Any partial configuration data already provided\n\n## OUTPUT REQUIREMENTS\nGenerate a complete JSON configuration that:\n- Follows the exact structure of the template\n- Uses the exemplar as a guide for consistency and completeness\n- Is internally coherent (all fields support the same brand identity)\n- Includes realistic, professional values for all fields\n- Maintains publishing industry standards and best practices\n\n## TEMPLATE STRUCTURE\n```json\n{template_json}\n```\n\n## ENHANCED TEMPLATE - ADD THESE ADDITIONAL SECTIONS\nYour generated configuration MUST also include these sections for wizard compatibility:\n\n```json\n{\n  \"publisher_persona\": {\n    \"persona_name\": \"Editorial decision maker name\",\n    \"persona_bio\": \"Professional background and expertise\",\n    \"risk_tolerance\": \"Conservative|Moderate|Aggressive\",\n    \"decision_style\": \"Data-driven|Intuitive|Collaborative|Authoritative\",\n    \"preferred_topics\": \"Areas of editorial focus and passion\",\n    \"target_demographics\": \"Specific reader segments\",\n    \"vulnerabilities\": \"Areas needing validation or blind spots\"\n  },\n  \"wizard_configuration\": {\n    \"name\": \"Full imprint name\",\n    \"charter\": \"Mission and editorial philosophy\",\n    \"imprint_type\": \"Primary focus area\",\n    \"genres\": [\"Primary\", \"Genre\", \"Areas\"],\n    \"book_format\": \"Standard book physical format\",\n    \"price_point\": 24.99,\n    \"page_count\": 200,\n    \"catalog_size\": 12,\n    \"enable_ideation\": true\n  },\n  \"codextypes\": {\n    \"description\": \"Specialized content types requiring custom interior design and formatting\",\n    \"enabled_types\": [\"standard\", \"detected_specialized_types\"],\n    \"specialized_requirements\": {\n      \"interior_design_notes\": \"Special formatting needs based on content type\",\n      \"template_customizations\": \"Required template modifications\",\n      \"typesetting_considerations\": \"Unique typesetting requirements\"\n    }\n  }\n}\n```\n\n## EXEMPLAR CONFIGURATION (Xynapse Traces - Technology/Science Focus)\n```json\n{exemplar_json}\n```\n\n## NEW IMPRINT TO CREATE\n{imprint_description}\n\n{partial_config_section}\n\n## SPECIFIC REQUIREMENTS\n1. **Brand Identity**: Create cohesive branding with CMYK colors (not hex/RGB), professional typography from Adobe/Google Fonts, and compelling tagline that supports the imprint's mission\n2. **Publisher Persona**: Define a realistic editorial persona with decision-making style, preferences, and strategic approach\n3. **Publishing Focus**: Define realistic genres, target audience, and specialization aligned with publisher persona\n4. **Business Configuration**: Include realistic book formats, pricing, catalog planning, and operational settings\n5. **Technical Settings**: Specify production quality standards and file handling\n6. **Academic Integration**: If appropriate for this imprint, configure academic paper generation settings\n7. **Workflow Automation**: Set up practical automation and notification settings\n8. **CodexType Integration**: Incorporate the provided CodexType analysis into the configuration\n\n## CRITICAL: PUBLISHER PERSONA INTEGRATION\nThe publisher persona is central to the imprint's identity. Create a realistic editorial decision-maker with:\n- Specific professional background and expertise\n- Clear content preferences and blind spots\n- Realistic risk tolerance for controversial topics\n- Consistent decision-making style\n- Target demographic knowledge and vulnerabilities\n- Strategic business approach aligned with editorial vision\n\n## ENHANCED METADATA REQUIREMENTS\nBased on the wizard workflow, ensure your configuration includes these additional fields:\n\n### Basic Information\n- **Imprint Name**: Professional, memorable, relevant to focus area\n- **Publisher**: Parent company name\n- **Editorial Charter**: Mission and editorial philosophy\n- **Tagline**: Memorable phrase for the imprint\n- **Contact Email**: Use realistic domain structure\n\n### Publisher Persona (Critical for Content Strategy)\n- **Publisher Name**: Key decision maker or editorial persona\n- **Publisher Biography**: Background and professional reputation\n- **Risk Tolerance**: Conservative, Moderate, or Aggressive content approach\n- **Decision Style**: Data-driven, Intuitive, Collaborative, or Authoritative\n- **Preferred Topics**: Areas of editorial interest and passion\n- **Target Demographics**: Specific reader segments to focus on\n- **Vulnerabilities/Concerns**: Areas requiring validation or having blind spots\n\n### Business Configuration\n- **Primary Genres**: Specific genre focus areas\n- **Target Audience**: Main readership demographic\n- **Supported Languages**: Publishing language capabilities\n- **Standard Book Format**: Physical book specifications\n- **Standard Price Point**: Typical book pricing strategy\n- **Standard Page Count**: Typical book length\n- **Initial Catalog Size**: Launch catalog planning\n- **Enable Continuous Ideation**: AI-powered content generation settings\n\n### Technical Requirements\n- **Brand Colors**: Provide CMYK color values (C, M, Y, K percentages 0-100) that work well together for professional printing. Do NOT use hex codes or RGB values.\n- **Typography**: Select fonts from Adobe Fonts or Google Fonts. If an Adobe Font is the best design choice, list it first with a Google Fonts fallback. Specify exact font family names.\n- **BISAC/Thema Codes**: Research-appropriate subject classification codes\n- **Pricing**: Industry-standard wholesale discounts and markup percentages\n- **LSI Settings**: Realistic Lightning Source configurations\n- **Territorial Rights**: Appropriate geographic and currency settings\n\n## OUTPUT FORMAT\nReturn ONLY the complete JSON configuration, properly formatted and valid. Do not include any explanatory text before or after the JSON.",
+      "temperature": 0.3,
+      "max_tokens": 65536,
+      "model_preference": ["gemini/gemini-2.5-pro"]
+    }
+  },
+  "template_variables": {
+    "combined_description": "Charter: {charter}\nFocus: {focus}\nCompetitive Advantage: {competitive_advantage}\nExamples: {examples}",
+    "template_json": "{template_content}",
+    "exemplar_json": "{exemplar_content}",
+    "imprint_description": "{description}",
+    "partial_config_section": "## PARTIAL CONFIGURATION PROVIDED:\n{partial_config}\n\n"
+  },
+  "codextype_definitions": {
+    "standard": {
+      "name": "Standard Book",
+      "description": "Traditional book layout with chapters, paragraphs, standard typography",
+      "template_requirements": ["chapter_headings", "page_numbers", "table_of_contents"],
+      "formatting_rules": {
+        "paragraph_spacing": "standard",
+        "heading_hierarchy": "h1_h2_h3",
+        "quote_formatting": "indented_block",
+        "list_formatting": "bulleted_numbered"
+      }
+    },
+    "oral_history": {
+      "name": "Oral History",
+      "description": "Interview format with speaker identification, question/answer structure",
+      "template_requirements": ["speaker_tags", "timestamp_markers", "question_answer_format"],
+      "formatting_rules": {
+        "speaker_name": "bold_at_paragraph_start",
+        "question_format": "italic_or_bold_q_prefix",
+        "answer_format": "regular_text_with_indent",
+        "section_breaks": "topic_or_time_based",
+        "quote_preservation": "verbatim_with_markers"
+      }
+    },
+    "puzzle": {
+      "name": "Puzzle Book",
+      "description": "Grid-based layouts for puzzles with answer sections",
+      "template_requirements": ["grid_layouts", "answer_keys", "difficulty_indicators"],
+      "formatting_rules": {
+        "puzzle_grid": "fixed_width_monospace",
+        "instructions": "boxed_or_highlighted",
+        "answer_section": "separate_or_back_matter",
+        "difficulty_rating": "visual_indicators",
+        "numbering_system": "sequential_or_by_section"
+      }
+    },
+    "cookbook": {
+      "name": "Cookbook",
+      "description": "Recipe formatting with ingredient lists and step-by-step instructions",
+      "template_requirements": ["ingredient_lists", "instruction_steps", "cooking_times"],
+      "formatting_rules": {
+        "ingredient_format": "bulleted_with_measurements",
+        "instruction_format": "numbered_steps",
+        "timing_indicators": "highlighted_or_boxed",
+        "difficulty_ratings": "visual_scale",
+        "nutritional_info": "tabulated_data"
+      }
+    },
+    "poetry": {
+      "name": "Poetry Collection",
+      "description": "Verse formatting with proper line breaks and stanza spacing",
+      "template_requirements": ["line_breaks", "stanza_spacing", "poem_titles"],
+      "formatting_rules": {
+        "line_spacing": "preserved_poet_intent",
+        "indentation": "verse_specific",
+        "title_treatment": "distinctive_typography",
+        "page_breaks": "poem_boundary_respect",
+        "margin_usage": "white_space_emphasis"
+      }
+    },
+    "reference": {
+      "name": "Reference Book",
+      "description": "Dictionary/encyclopedia style with cross-references and definitions",
+      "template_requirements": ["alphabetical_organization", "cross_references", "index"],
+      "formatting_rules": {
+        "entry_format": "definition_style",
+        "cross_reference_style": "linked_or_italic",
+        "index_organization": "multiple_levels",
+        "appendix_handling": "reference_materials",
+        "margin_notes": "additional_information"
+      }
+    },
+    "textbook": {
+      "name": "Academic Textbook",
+      "description": "Educational formatting with exercises, sidebars, and learning objectives",
+      "template_requirements": ["learning_objectives", "exercises", "sidebars", "glossary"],
+      "formatting_rules": {
+        "chapter_structure": "educational_hierarchy",
+        "sidebar_treatment": "boxed_supplementary",
+        "exercise_format": "numbered_with_answers",
+        "glossary_style": "alphabetical_definitions",
+        "citation_format": "academic_standards"
+      }
+    },
+    "journal": {
+      "name": "Journal/Diary",
+      "description": "Personal writing format with dated entries and reflection space",
+      "template_requirements": ["date_headers", "writing_space", "prompt_sections"],
+      "formatting_rules": {
+        "date_format": "prominent_header",
+        "writing_lines": "adequate_spacing",
+        "prompt_placement": "inspiring_quotes",
+        "page_layout": "personal_friendly",
+        "binding_considerations": "lay_flat_design"
+      }
+    },
+    "workbook": {
+      "name": "Interactive Workbook",
+      "description": "Exercise-based format with fill-in blanks and practice spaces",
+      "template_requirements": ["exercise_spaces", "answer_sections", "progress_tracking"],
+      "formatting_rules": {
+        "exercise_layout": "clear_instructions",
+        "fill_in_blanks": "adequate_space",
+        "answer_key_placement": "separate_section",
+        "progress_indicators": "tracking_elements",
+        "instruction_clarity": "step_by_step"
+      }
+    }
+  }
+}

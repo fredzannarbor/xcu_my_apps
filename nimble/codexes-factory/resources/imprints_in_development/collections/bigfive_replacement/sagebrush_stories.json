@@ -1,0 +1,28 @@
+{
+  "imprint": "Sagebrush Stories",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sagebrushstories.com",
+  "branding": {
+    "tagline": "Stories as Rich as Life Itself",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sagebrushstories.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Regional fiction, memoirs, historical nonfiction",
+    "target_audience": "Seniors interested in American culture and history",
+    "competitive_advantage": "We focus on the regional and historical experiences of seniors",
+    "example_titles": "Memoirs of a Dust Bowl Survivor, The Real Wild West: Stories from the Frontier"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

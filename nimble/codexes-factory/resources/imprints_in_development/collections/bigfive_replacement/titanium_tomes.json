@@ -1,0 +1,28 @@
+{
+  "imprint": "Titanium Tomes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@titaniumtomes.com",
+  "branding": {
+    "tagline": "Strength in Storytelling",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.titaniumtomes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Inspirational Fiction, Historical Fiction, Bestsellers",
+    "target_audience": "Readers seeking powerful, moving narratives",
+    "competitive_advantage": "Evocative writing, profound themes, unforgettable characters",
+    "example_titles": "Richard Paul Evans, Khaled Hosseini, Alice Walker"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

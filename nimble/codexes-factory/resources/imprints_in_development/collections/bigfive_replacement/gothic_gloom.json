@@ -1,0 +1,28 @@
+{
+  "imprint": "Gothic Gloom",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@gothicgloom.com",
+  "branding": {
+    "tagline": "Dark tales, darker secrets",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.gothicgloom.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Gothic Mysteries",
+    "target_audience": "Readers who love atmospheric, haunting narratives",
+    "competitive_advantage": "Revitalizing the largely untapped genre of gothic mystery",
+    "example_titles": "Books like 'The Thirteenth Tale', 'Rebecca'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

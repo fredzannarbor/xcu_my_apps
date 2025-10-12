@@ -1,0 +1,20 @@
+[Unit]
+Description=Agentic Social Server
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/xtuff/agentic_social_server
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/xtuff/agentic_social_server/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+Environment="PYTHONPATH=src:/home/wfzimmerman/xcu_my_apps"
+ExecStart=/usr/local/bin/uv run python app.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/xtuff/agentic_social_server/logs/social.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/xtuff/agentic_social_server/logs/social-error.log
+
+[Install]
+WantedBy=multi-user.target

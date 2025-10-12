@@ -1,0 +1,28 @@
+{
+  "imprint": "HardTech Books",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@hardtechbooks.com",
+  "branding": {
+    "tagline": "Reality meets fiction.",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.hardtechbooks.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Hard science fiction",
+    "target_audience": "Science lovers and speculative fiction enthusiasts",
+    "competitive_advantage": "Deeply researched content that merges science and fiction seamlessly",
+    "example_titles": "Arthur C. Clarke or Greg Egan type novels"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

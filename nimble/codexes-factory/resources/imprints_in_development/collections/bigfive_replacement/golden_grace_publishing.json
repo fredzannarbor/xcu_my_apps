@@ -1,0 +1,28 @@
+{
+  "imprint": "Golden Grace Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@goldengracepublishing.com",
+  "branding": {
+    "tagline": "Ageless Wisdom for the Soul",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.goldengracepublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Inspirational works, spiritual memoirs, theological exploration",
+    "target_audience": "Seniors seeking spiritual growth and understanding",
+    "competitive_advantage": "Our books explore the deep spiritual questions and experiences of aging",
+    "example_titles": "Falling Upward by Richard Rohr, The Gift of Years by Joan Chittister"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

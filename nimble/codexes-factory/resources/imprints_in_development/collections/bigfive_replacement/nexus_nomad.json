@@ -1,0 +1,28 @@
+{
+  "imprint": "Nexus Nomad",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@nexusnomad.com",
+  "branding": {
+    "tagline": "Building Bridges in a Virtual World",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.nexusnomad.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Networking, community building, and social aspects of remote work",
+    "target_audience": "Digital nomads seeking connection and community",
+    "competitive_advantage": "Focus on networking and community in remote work",
+    "example_titles": "Handbooks like 'Networking for Digital Nomads'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

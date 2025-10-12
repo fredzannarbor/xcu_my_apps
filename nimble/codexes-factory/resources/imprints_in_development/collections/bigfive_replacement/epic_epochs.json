@@ -1,0 +1,28 @@
+{
+  "imprint": "Epic Epochs",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@epicepochs.com",
+  "branding": {
+    "tagline": "Epochs that shaped our world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.epicepochs.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Period-specific history, world history",
+    "target_audience": "Readers interested in specific periods in history",
+    "competitive_advantage": "Epic Epochs offers comprehensive coverage of distinct historical periods",
+    "example_titles": "Books on the Middle Ages, the Victorian era, the Cold War"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

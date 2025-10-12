@@ -1,0 +1,28 @@
+{
+  "imprint": "Soulful Synergy",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@soulfulsynergy.com",
+  "branding": {
+    "tagline": "Synergize Your Soul",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.soulfulsynergy.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mind-body connection, Spiritual health, Mental health",
+    "target_audience": "Individuals interested in spiritual health and wellness",
+    "competitive_advantage": "Unique focus on the spiritual aspects of health and wellness",
+    "example_titles": "Books on mind-body connection, spiritual health, mental health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

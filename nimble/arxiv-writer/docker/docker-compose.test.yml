@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # Test with Python 3.8
+  test-py38:
+    build:
+      context: ..
+      dockerfile: docker/test.Dockerfile
+      target: test
+    image: arxiv-writer:test-py38
+    volumes:
+      - ../dist:/app/dist:ro
+      - ../tests:/app/tests:ro
+    environment:
+      - PYTHONPATH=/app/src
+    command: python -m pytest tests/ -v --tb=short
+
+  # Test with Python 3.12
+  test-py312:
+    build:
+      context: ..
+      dockerfile: docker/test.Dockerfile
+      target: test
+    image: arxiv-writer:test-py312
+    volumes:
+      - ../dist:/app/dist:ro
+      - ../tests:/app/tests:ro
+    environment:
+      - PYTHONPATH=/app/src
+    command: python -m pytest tests/ -v --tb=short
+
+  # Production-like test
+  production-test:
+    build:
+      context: ..
+      dockerfile: docker/test.Dockerfile
+      target: production-test
+    image: arxiv-writer:production-test
+    volumes:
+      - ../dist:/app:ro
+    command: sh -c "arxiv-writer --help && python -c 'import arxiv_writer; print(\"Production test passed\")'"
+
+  # Security scan
+  security-scan:
+    image: python:3.11-slim
+    volumes:
+      - ..:/app:ro
+    working_dir: /app
+    command: sh -c "
+      pip install safety bandit semgrep &&
+      safety check --json --output /tmp/safety-report.json &&
+      bandit -r src -f json -o /tmp/bandit-report.json &&
+      semgrep --config=auto src --json --output=/tmp/semgrep-report.json
+    "
+
+  # CLI integration test
+  cli-test:
+    build:
+      context: ..
+      dockerfile: docker/test.Dockerfile
+      target: base
+    volumes:
+      - ../examples:/app/examples:ro
+    command: sh -c "
+      arxiv-writer --help &&
+      arxiv-writer --version &&
+      python -c 'from arxiv_writer.cli.main import main; print(\"CLI import successful\")'
+    "

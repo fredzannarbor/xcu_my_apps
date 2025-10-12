@@ -1,0 +1,43 @@
+{
+  "id": "snapshot_20250822_015416_de945091",
+  "timestamp": "2025-08-22T01:54:16.888877",
+  "description": "Before batch transform to synopsis",
+  "objects": [
+    {
+      "uuid": "deb2b50f-2bdf-404a-81f9-39f95daaf40b",
+      "title": "Space Station Mystery",
+      "content": "When the main computer on a space station starts malfunctioning, the crew discovers it's not a technical glitch but something more sinister.",
+      "object_type": "logline",
+      "word_count": 22,
+      "genre": "Science Fiction",
+      "target_audience": "Adult"
+    },
+    {
+      "uuid": "93ed1160-35fd-4839-a577-6c82172bc3e7",
+      "title": "The Magical Forest Adventure",
+      "content": "A young girl discovers a hidden portal in her grandmother's garden that leads to a magical forest where talking animals need her help to save their world from an ancient curse.",
+      "object_type": "idea",
+      "word_count": 31,
+      "genre": "Fantasy",
+      "target_audience": "Middle Grade"
+    },
+    {
+      "uuid": "e31c8720-c544-436c-b211-1b925ac2357f",
+      "title": "The Last Library",
+      "content": "In a post-apocalyptic world where books are banned, a young librarian secretly preserves the last remaining collection of human knowledge.",
+      "object_type": "idea",
+      "word_count": 20,
+      "genre": "Dystopian",
+      "target_audience": "Young Adult"
+    },
+    {
+      "uuid": "9fa9e3d3-0842-4834-9edf-2ed71a573230",
+      "title": "The Magical Forest Adventure",
+      "content": "Title: The Enchanted Forest: The Curse of the Whispering Woods\n\nSynopsis:\n\nTwelve-year-old Emily, a quiet, introverted girl, is sent to live with her eccentric grandmother, Agnes, for the summer while her parents are away on a business trip. Emily is not thrilled about spending her entire summer in the countryside, away from her friends, her city life and her technology. However, little does she know, this summer will change her life forever.\n\nOne day, while exploring her grandmother's mysterious garden, Emily stumbles upon a hidden stone portal, covered in ivy and age-old moss. With curiosity getting the better of her, she steps through the stone arch and finds herself in an enchanting, magical forest, filled with lush greenery, sparkling streams, and talking animals. This forest, known as the Whispering Woods, is a secret world that exists parallel to the human realm.\n\nThe Whispering Woods, however, are not as serene as they seem. It is plagued by an ancient curse that is slowly draining the life out of the forest, turning vibrant trees into lifeless wood and the once chatty animals into silent, fearful creatures. The curse was cast by an evil sorceress, who was banished from the forest centuries ago but vowed to take revenge. \n\nUpon Emily's arrival, the animals, led by a wise old owl named Ophelia and a brave squirrel named Nutty, reveal an ancient prophecy that speaks of a human child who will save their world from the looming darkness. They believe Emily is the one mentioned in the prophecy. At first, Emily is reluctant, fearing she is not brave or strong enough for such a task. But the animals’ faith in her and her growing love for the Whispering Woods motivate her to accept the challenge.\n\nTogether with Ophelia, Nutty, and a bunch of other quirky animal companions, Emily embarks on a treacherous journey across the forest, solving riddles, braving dangerous trials, and discovering her latent magical abilities. Along the way, Emily learns about the importance of courage, friendship, and believing in oneself. \n\nMeanwhile, Emily's grandmother, Agnes, who is, in fact, a guardian of the portal and has been watching over Emily's journey, provides guidance and protection from afar, ensuring that the connection between the two realms remains stable.\n\nIn the climactic finale, Emily confronts the vengeful sorceress, using her newfound magic and her friends' support to lift the curse, restore the Whispering Woods to its former glory, and bring back peace and harmony among its inhabitants.\n\n\"The Enchanted Forest: The Curse of the Whispering Woods\" is a magical adventure that explores the themes of bravery, friendship, and self-discovery, aiming to inspire and entertain middle-grade readers.",
+      "object_type": "synopsis",
+      "word_count": 440,
+      "genre": "Fantasy",
+      "target_audience": "Middle Grade"
+    }
+  ]
+}

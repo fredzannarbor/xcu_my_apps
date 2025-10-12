@@ -1,0 +1,25 @@
+[
+  {
+    "preset_name": "Book Idea Expander",
+    "preset_author": "Fred Zimmerman",
+    "preset_active": "True",
+    "preset_instructions": "",
+    "preset_description": "Generate biographical profiles of contributing editors similar to these.",
+    "pre_user_input": "Book idea: ",
+    "prompt": "",
+    "engine": "gpt-3.5-turbo",
+    "post_user_input": "Generate eight significant variations on this book idea.  Output must be a valid Python list of eight double-quoted strings, each separated by a comma.",
+    "temperature": 0.3,
+    "max_tokens": 500,
+    "top_p": 1,
+    "fp": 1,
+    "pp": 1,
+    "suffix": "",
+    "stop_sequence": "<<|endoftext|>>",
+    "echo_on": false,
+    "completion_heading": "",
+    "preset_placeholder": ".",
+    "user": "6",
+    "organization": ""
+  }
+]

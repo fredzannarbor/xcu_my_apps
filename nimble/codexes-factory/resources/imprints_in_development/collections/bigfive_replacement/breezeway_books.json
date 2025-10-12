@@ -1,0 +1,28 @@
+{
+  "imprint": "BreezeWay Books",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@breezewaybooks.com",
+  "branding": {
+    "tagline": "Where the Wind Takes the Story",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.breezewaybooks.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Wind/Storm-based climate fiction",
+    "target_audience": "Readers interested in storms, wind power, and weather extremes",
+    "competitive_advantage": "Unique focus on the drama and power of wind and storms in climate scenarios",
+    "example_titles": "Sebastian Junger, Zora Neale Hurston"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

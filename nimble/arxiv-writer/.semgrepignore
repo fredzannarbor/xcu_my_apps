@@ -1,0 +1,16 @@
+# Semgrep ignore patterns
+tests/
+docs/
+examples/
+*.md
+*.rst
+*.txt
+*.yml
+*.yaml
+__pycache__/
+*.pyc
+.git/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml

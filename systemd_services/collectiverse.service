@@ -1,0 +1,19 @@
+[Unit]
+Description=Collectiverse - AGI-proof Collecting Platform
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/xtuff/collectiverse
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/xtuff/collectiverse/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/local/bin/uv run streamlit run app.py --server.port=8503 --server.address=127.0.0.1 --server.headless=true
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/xtuff/collectiverse/logs/collectiverse.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/xtuff/collectiverse/logs/collectiverse-error.log
+
+[Install]
+WantedBy=multi-user.target

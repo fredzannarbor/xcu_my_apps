@@ -1,0 +1,42 @@
+{
+  "_config_info": {
+    "description": "Configuration for Nimble Books LLC main imprint",
+    "version": "1.0",
+    "last_updated": "2025-09-26",
+    "config_type": "tranche_specific"
+  },
+  "display_name": "Nimble Books LLC - Main Imprint",
+  "description": "Primary publishing imprint for general titles",
+  "tranche_info": {
+    "tranche_id": "nimble-books-tranche-1",
+    "tranche_name": "Nimble Books LLC Tranche 1",
+    "tranche_description": "General publishing tranche for main imprint",
+    "book_count": 50,
+    "target_month": "Dec 2025",
+    "target_year": "2025"
+  },
+  "publisher": "Nimble Books LLC",
+  "imprint": "nimble_books_llc",
+  "lightning_source_account": "6024045",
+  "cover_submission_method": "FTP",
+  "text_block_submission_method": "FTP",
+  "rendition_booktype": "POD: 6 x 9 in or 229 x 152 mm Perfect Bound WHITE",
+  "carton_pack_quantity": "",
+  "order_type_eligibility": "POD",
+  "language_code": "eng",
+  "country_of_origin": "US",
+  "territorial_rights": "World",
+  "returnability": "Yes - Destroy",
+  "binding_type": "paperback",
+  "interior_color": "BW",
+  "interior_paper": "Standard 70 perfect",
+  "trim_size": "6x9",
+  "cover_type": "matte",
+  "default_price": "24.99",
+  "currency": "USD",
+  "us_wholesale_discount": "40",
+  "uk_wholesale_discount": "40",
+  "eu_wholesale_discount": "40",
+  "ca_wholesale_discount": "40",
+  "au_wholesale_discount": "40"
+}

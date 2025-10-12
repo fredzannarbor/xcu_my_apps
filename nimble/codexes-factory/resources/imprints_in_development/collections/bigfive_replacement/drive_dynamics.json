@@ -1,0 +1,28 @@
+{
+  "imprint": "Drive Dynamics",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@drivedynamics.com",
+  "branding": {
+    "tagline": "Turbocharge your life",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.drivedynamics.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Motivation, career advancement, leadership",
+    "target_audience": "Young professionals, entrepreneurs",
+    "competitive_advantage": "Action-oriented, practical advice from industry leaders",
+    "example_titles": "Startup success stories, leadership lessons"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

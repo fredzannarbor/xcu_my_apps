@@ -1,0 +1,15 @@
+python run_book_pipeline.py \
+--imprint xynapse_traces \
+--schedule-file data/books.csv \
+--model "gemini/gemini-2.5-flash" \
+--verifier-model "gemini/gemini-2.5-pro" \
+--tranche "xynapse_tranche_1" \
+--max-books 1 \
+--base-dir "output/xynapse_traces_test_run" \
+--catalog-file "output/xynapse_traces_test_run/catalog.csv" \
+--lsi-config "configs/lsi/default_lsi_config.json" \
+--enable-llm-completion \
+--enable-isbn-assignment \
+--debug-cover \
+--report-formats "html,csv,json,markdown" \
+--verbose

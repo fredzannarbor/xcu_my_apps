@@ -1,0 +1,28 @@
+{
+  "imprint": "Crafted Coziness",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@craftedcoziness.com",
+  "branding": {
+    "tagline": "Crafting the old into something boldly new!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.craftedcoziness.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Vintage patterns, beginner guides, and modern adaptations in knitting, sewing, quilting, and needlework.",
+    "target_audience": "Young adults, DIY enthusiasts, vintage and modern craft lovers.",
+    "competitive_advantage": "Our blend of traditional and modern patterns, as well as approachable guides, appeal to a wide range of crafters.",
+    "example_titles": "Reviving Vintage Knitting Patterns, Modern Quilting: A Beginner's Guide, author types like young craft influencers, vintage pattern collectors"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

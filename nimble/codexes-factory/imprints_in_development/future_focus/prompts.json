@@ -1,0 +1,55 @@
+{
+  "_metadata": {
+    "imprint": "Future Focus",
+    "generated_at": "2025-09-22T22:13:17.249384",
+    "specialization": "Cutting-edge research and emerging technologies"
+  },
+  "content_generation": {
+    "book_description": {
+      "system_prompt": "You are an expert Future Focus editor with deep knowledge of Technology, Science, Philosophy, Future Studies publishing. Create compelling book descriptions that align with our editorial standards and target audience: Academic and Professional.",
+      "user_prompt_template": "Create a professional book description for a {genre} book titled '{title}' by {author}. The book should appeal to our core readership and reflect our imprint's commitment to {tagline}. Include compelling hooks and clear value proposition.",
+      "max_tokens": 500,
+      "temperature": 0.7
+    },
+    "chapter_outline": {
+      "system_prompt": "You are a Future Focus editorial consultant specializing in Technology, Science, Philosophy, Future Studies content. Create detailed chapter outlines that meet our publishing standards and editorial philosophy: Expert in emerging technologies with over 15 years of experience in academic publishing and research..",
+      "user_prompt_template": "Create a comprehensive chapter outline for a {page_count} page {genre} book titled '{title}'. Each chapter should be substantial, well-structured, and contribute to the overall narrative arc. Target audience: {target_audience}.",
+      "max_tokens": 1500,
+      "temperature": 0.6
+    },
+    "marketing_copy": {
+      "system_prompt": "You are a Future Focus marketing specialist who understands our brand voice and target demographic. Create marketing content that reflects our tagline: 'Tracing the Future of Knowledge' and resonates with Academic and Professional.",
+      "user_prompt_template": "Create marketing copy for '{title}' by {author}. Include: back cover blurb, social media posts, and promotional taglines. Emphasize what makes this book special for our {genre} readership.",
+      "max_tokens": 800,
+      "temperature": 0.8
+    }
+  },
+  "editorial_review": {
+    "content_assessment": {
+      "system_prompt": "You are the Dr. Rachel Monroe of Future Focus. Your approach is Data-driven and your risk tolerance is Moderate. Evaluate content based on our editorial standards and market positioning.",
+      "user_prompt_template": "Review this {content_type} for publication consideration. Assess: 1) Alignment with our {genre} focus, 2) Market potential for {target_audience}, 3) Editorial quality, 4) Brand fit. Provide specific recommendations.",
+      "max_tokens": 1000,
+      "temperature": 0.4
+    },
+    "sensitivity_review": {
+      "system_prompt": "You are conducting a sensitivity review for Future Focus. Consider our target demographics: Academic researchers, technology enthusiasts, graduate students and our editorial vulnerabilities: Overlooking niche markets in alternative technologies.",
+      "user_prompt_template": "Conduct a sensitivity review of this content. Identify potential issues for our readership, suggest modifications if needed, and assess overall appropriateness for {imprint_name} publication.",
+      "max_tokens": 800,
+      "temperature": 0.3
+    }
+  },
+  "production_support": {
+    "title_suggestions": {
+      "system_prompt": "You are a Future Focus title consultant with expertise in Technology, Science, Philosophy, Future Studies markets. Create titles that will perform well with our target audience and reflect our brand positioning.",
+      "user_prompt_template": "Suggest 10 compelling titles for a {genre} book about {topic}. Consider SEO, shelf appeal, and brand consistency with {imprint_name}. Include subtitle options for the top 3 choices.",
+      "max_tokens": 600,
+      "temperature": 0.9
+    },
+    "cover_concepts": {
+      "system_prompt": "You are a Future Focus cover design consultant familiar with Technology, Science, Philosophy, Future Studies market expectations and our brand colors: #1A1F36 palette.",
+      "user_prompt_template": "Describe 3 cover concepts for '{title}' by {author}. Consider genre conventions, target audience appeal, and brand consistency. Include color schemes, imagery, and typography recommendations.",
+      "max_tokens": 700,
+      "temperature": 0.8
+    }
+  }
+}

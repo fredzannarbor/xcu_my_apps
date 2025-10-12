@@ -1,0 +1,28 @@
+{
+  "imprint": "InnoInvent Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@innoinventpublishing.com",
+  "branding": {
+    "tagline": "Innovate, invent, inspire",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.innoinventpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Innovations, inventors, technological breakthroughs",
+    "target_audience": "Inventors, tech enthusiasts, history buffs",
+    "competitive_advantage": "Bringing to light lesser-known inventions that transformed our world",
+    "example_titles": "Hidden Geniuses: The Unknown Inventors, Inventions That Shaped the 21st Century"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

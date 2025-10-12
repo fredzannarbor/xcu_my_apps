@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: Renaissance of Democracies",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: In 2040, the world is in the midst of a resurgence of open democracies led by the United States and its allies. Rapid technological advancements fostered by public-private partnerships in the United States and other democratic societies are transforming the global economy, raising incomes, and improving the quality of life for millions around the globe. The rising tide of economic growth and technological achievement enables responses to global challenges, eases societal divisions, and renews public trust in democratic institutions. In contrast, years of increasing societal controls and monitoring in China and Russia have stifled innovation as leading scientists and entrepreneurs have sought asylum in the United States and Europe.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0,
+        "pp": 0,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

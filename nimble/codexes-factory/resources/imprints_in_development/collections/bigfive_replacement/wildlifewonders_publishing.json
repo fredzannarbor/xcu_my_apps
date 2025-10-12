@@ -1,0 +1,28 @@
+{
+  "imprint": "WildlifeWonders Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@wildlifewonderspublishing.com",
+  "branding": {
+    "tagline": "Unleash the wild",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.wildlifewonderspublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Wildlife biology, animal behavior, conservation",
+    "target_audience": "Animal lovers, conservationists, outdoor enthusiasts",
+    "competitive_advantage": "Inspiring love for wildlife through engaging narratives and stunning visuals",
+    "example_titles": "The Secret Lives of Elephants, Birds of the World: A Photographic Journey"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

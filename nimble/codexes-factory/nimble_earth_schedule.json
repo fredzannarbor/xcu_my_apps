@@ -1,0 +1,26 @@
+{
+  "publisher": "Nimble Earth",
+  "imprint": "climate_science_reports",
+  "schedule_version": "1.0",
+  "created_date": "2025-01-03",
+  "publishing_schedule": [
+    {
+      "month": "September",
+      "year": "2025",
+      "books": [
+        {
+          "title": "Alternative AR7s: Example 1",
+          "description": "Comprehensive assessment of adaptation to climate change.",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Earth",
+          "imprint": "climate_science_reports",
+          "stream": "Climate Policy",
+          "isbn": "9781234567801",
+          "format": "paperback",
+          "priority": 1,
+          "estimated_pages": 320
+        }
+      ]
+    }
+  ]
+}

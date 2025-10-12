@@ -1,0 +1,54 @@
+{
+  "series": [
+    {
+      "id": "cab2d362-9120-48b9-a0ff-f00f66b27d87",
+      "name": "Future Debates",
+      "publisher_id": "Nimble Books LLC",
+      "multi_publisher": false,
+      "creation_date": "2025-07-17T22:57:34.507377",
+      "last_updated": "2025-07-17T22:57:34.507379",
+      "description": null
+    },
+    {
+      "id": "f26f0f37-2207-4925-9ce6-c1c31eae3083",
+      "name": "Space Exploration",
+      "publisher_id": "Nimble Books LLC",
+      "multi_publisher": false,
+      "creation_date": "2025-07-17T22:57:34.509566",
+      "last_updated": "2025-07-17T22:57:34.509566",
+      "description": null
+    }
+  ],
+  "series_books": [
+    {
+      "series_id": "cab2d362-9120-48b9-a0ff-f00f66b27d87",
+      "book_id": "203673fd-b6bb-4078-8ecd-35f375fc0493",
+      "sequence_number": 1,
+      "addition_date": "2025-07-17T22:57:34.507936"
+    },
+    {
+      "series_id": "cab2d362-9120-48b9-a0ff-f00f66b27d87",
+      "book_id": "a9be15d1-0238-46d4-8597-98c577193590",
+      "sequence_number": 2,
+      "addition_date": "2025-07-17T22:57:34.508555"
+    },
+    {
+      "series_id": "cab2d362-9120-48b9-a0ff-f00f66b27d87",
+      "book_id": "6fc7e038-aedf-491e-8bc2-49385860440d",
+      "sequence_number": 3,
+      "addition_date": "2025-07-17T22:57:34.509015"
+    },
+    {
+      "series_id": "cab2d362-9120-48b9-a0ff-f00f66b27d87",
+      "book_id": "2c1a98c7-c0fd-4765-8016-f39cb582998a",
+      "sequence_number": 4,
+      "addition_date": "2025-07-17T22:57:34.509291"
+    },
+    {
+      "series_id": "f26f0f37-2207-4925-9ce6-c1c31eae3083",
+      "book_id": "159f1b6d-9bd8-455f-a1ae-945fd385431f",
+      "sequence_number": 1,
+      "addition_date": "2025-07-17T22:57:34.509742"
+    }
+  ]
+}

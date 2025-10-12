@@ -1,0 +1,28 @@
+{
+  "imprint": "Past Perspectives",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pastperspectives.com",
+  "branding": {
+    "tagline": "See history through new eyes",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pastperspectives.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Social history, cultural history, oral histories",
+    "target_audience": "Readers interested in everyday life in the past",
+    "competitive_advantage": "Past Perspectives brings often-overlooked stories to the fore",
+    "example_titles": "The Making of the English Working Class, oral histories of the civil rights movement"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

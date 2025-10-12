@@ -1,0 +1,44 @@
+{
+  "_export_info": {
+    "exported_at": "2025-08-02T23:53:51.120172",
+    "exported_from": "Streamlit UI",
+    "version": "1.0"
+  },
+  "configuration": {
+    "publisher": "nimble_books",
+    "imprint": "xynapse_traces",
+    "tranche": "",
+    "schedule_file": "UploadedFile(file_id='b3be1bd6-33b6-4bae-8eff-2e7ebe306ed8', name='schedule.json', type='application/json', size=71378, _file_urls=file_id: \"b3be1bd6-33b6-4bae-8eff-2e7ebe306ed8\"\nupload_url: \"/_stcore/upload_file/8fb6e627-978f-40cb-a540-946b5dfe70b1/b3be1bd6-33b6-4bae-8eff-2e7ebe306ed8\"\ndelete_url: \"/_stcore/upload_file/8fb6e627-978f-40cb-a540-946b5dfe70b1/b3be1bd6-33b6-4bae-8eff-2e7ebe306ed8\"\n)",
+    "model": "gemini/gemini-2.5-flash",
+    "verifier_model": "gemini/gemini-2.5-pro",
+    "start_stage": 1,
+    "end_stage": 4,
+    "max_books": 1,
+    "begin_with_book": 1,
+    "end_with_book": 0,
+    "quotes_per_book": 90,
+    "only_run_prompts": "",
+    "skip_lsi": false,
+    "enable_llm_completion": true,
+    "enable_isbn_assignment": true,
+    "lsi_config": "",
+    "lsi_template": "templates/LSI_ACS_header.csv",
+    "report_formats": [
+      "html",
+      "csv",
+      "markdown"
+    ],
+    "legacy_reports": false,
+    "model_params_file": "resources/json/model_params.json",
+    "catalog_file": "data/books.csv",
+    "base_dir": "",
+    "debug_cover": false,
+    "leave_build_dirs": true,
+    "catalog_only": false,
+    "skip_catalog": false,
+    "terse_log": false,
+    "no_litellm_log": true,
+    "show_prompt_logs": false,
+    "verbose": false
+  }
+}

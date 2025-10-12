@@ -1,0 +1,67 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "July 2025",
+      "books": [
+        {
+          "stream": "Classics",
+          "title": "Napoleon for the 21st Century"
+        },
+        {
+          "stream": "Modern Culture",
+          "title": "Harvard, Standard-Bearer for Freedom?"
+        },
+        {
+          "stream": "Science & Politics",
+          "title": "Tough-minded Adaptation to Climate Change"
+        },
+        {
+          "stream": "Self-Help",
+          "title": "After the American Civil War: Reconstruction or Reconciliation?"
+        }
+      ]
+    },
+    {
+      "month": "August 2025",
+      "books": [
+        {
+          "stream": "Classics",
+          "title": "Transcribing the American Civil War: Meditative Passages from Classic Literature"
+        },
+        {
+          "stream": "Modern Culture",
+          "title": "Transcribing Postapocalyptic Shows: Meditative Passages from Modern Culture"
+        },
+        {
+          "stream": "Science & Politics",
+          "title": "Transcribing Adaptation: Meditative Passages for Reflection and Action"
+        },
+        {
+          "stream": "Self-Help",
+          "title": "Transcribing Replacing the News: Meditative Passages for a Calmer Mind"
+        }
+      ]
+    },
+    {
+      "month": "September 2025",
+      "books": [
+        {
+          "stream": "Classics",
+          "title": "Transcribing Reconstruction: Meditative Passages from Classic Literature"
+        },
+        {
+          "stream": "Modern Culture",
+          "title": "Transcribing True Crime Podcasts: Meditative Passages from Modern Culture"
+        },
+        {
+          "stream": "Science & Politics",
+          "title": "Transcribing MAGA: Meditative Passages for Reflection and Action"
+        },
+        {
+          "stream": "Self-Help",
+          "title": "Transcribing Vibe Coding: Meditative Passages for Personal Alignment"
+        }
+      ]
+      }
+  ]
+}

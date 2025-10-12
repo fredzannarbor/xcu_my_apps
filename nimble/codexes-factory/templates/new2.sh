@@ -1,0 +1,1 @@
+sudo tlmgr install lua-uni-algos

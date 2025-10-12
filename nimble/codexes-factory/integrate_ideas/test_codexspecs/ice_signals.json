@@ -1,0 +1,95 @@
+{
+  "book_idea": "A 9-year-old boy from near Dexter, Michigan, joins the University Lowbrow Astronomers Club, uses their Peach Mountain radio telescope, and connects online with the Chinese team at Zhongshan Station to fix signals from the new 'Three Gorges Antarctic Eye' in 2025.",
+  "author_voice": "Energetic, friendly, and inspiring, blending astronomy and teamwork to excite 9-12 year-olds about science and global friendship.",
+  "protagonist": {
+    "name": "Noah Hayes",
+    "age": 9,
+    "description": "A 4th-grader from a farm near Dexter, Michigan, a bright and hands-on kid who loves building models and stargazing. He’s gutsy but shy about speaking up."
+  },
+  "antagonist": {
+    "name": "Signal Mix-Up",
+    "description": "Scrambled radio waves between Peach Mountain and the Antarctic telescope, risking a big discovery and testing Noah’s skills."
+  },
+  "cast_of_characters": [
+    {
+      "name": "Mr. Jim Forrester",
+      "role": "Lowbrow Club Mentor",
+      "description": "60-year-old retired engineer, warm and patient, guides Noah at Peach Mountain."
+    },
+    {
+      "name": "Chen Wei",
+      "role": "Zhongshan Tech",
+      "description": "29-year-old kind engineer, chats with Noah online from China."
+    },
+    {
+      "name": "Emma Clark",
+      "role": "Noah’s Best Friend",
+      "description": "9-year-old lively farm girl, joins Noah at the club and loves puzzles."
+    },
+    {
+      "name": "Mr. Dan Hayes",
+      "role": "Noah’s Dad",
+      "description": "42-year-old farmer, gruff but proud, fixes tractors with Noah."
+    },
+    {
+      "name": "Mrs. Lisa Hayes",
+      "role": "Noah’s Mom",
+      "description": "40-year-old baker, gentle and curious, asks Noah about stars."
+    },
+    {
+      "name": "Grandpa Ray",
+      "role": "Family Elder",
+      "description": "72-year-old ex-radio operator, tells Noah about old signals."
+    },
+    {
+      "name": "Dr. Liu Mei",
+      "role": "Zhongshan Astronomer",
+      "description": "44-year-old serious scientist, needs Noah’s help from afar."
+    },
+    {
+      "name": "Tommy Hayes",
+      "role": "Noah’s Little Brother",
+      "description": "7-year-old pesky shadow, messes with Noah’s gear."
+    }
+  ],
+  "locations": [
+    "Dexter, Michigan area (Noah’s farm and school, a quiet rural spot)",
+    "Peach Mountain Observatory (Lowbrow Club’s radio telescope site, 4 miles from Dexter)",
+    "Virtual Zhongshan Station link (Noah’s screen connecting to Antarctica)"
+  ],
+  "plot_points": [
+    "Opening Scene: Noah builds a model rocket on his farm porch, April 4, 2025.",
+    "Inciting Incident: Grandpa Ray takes Noah to a Lowbrow Club night, where he hears odd radio static.",
+    "First Plot Point: Noah tunes the Peach Mountain radio telescope, catching a faint Antarctic signal.",
+    "Midpoint Reversal: The signal ties to the new 'Three Gorges Antarctic Eye,' but it’s all jumbled.",
+    "Second Pinch Point: Zhongshan’s team emails for help as a storm hits, and Noah steps up.",
+    "Low Point: Noah’s tweak garbles the signal worse, and he fears he’s blown it.",
+    "Second Plot Point: Noah and Emma spot a rhythm in the static late at night.",
+    "Climactic Sequence: Noah links with Chen Wei online, clearing the signal for a starry find."
+  ],
+  "themes": [
+    "Astronomy for All: Kids can explore the sky with simple tools.",
+    "Friends Across the World: Tech connects people far apart.",
+    "Trying Again: Mess-ups lead to learning, not quitting.",
+    "Small Towns, Big Dreams: Where you’re from doesn’t limit you.",
+    "Nature and Tech Together: Listening to the universe helps us understand it."
+  ],
+  "revelations": [
+    "Noah discovers the mixed-up signals reveal a distant star flare, inspiring him to bridge Peach Mountain and Zhongshan for science."
+  ],
+  "character_arcs": [
+    {
+      "character": "Noah Hayes",
+      "arc": "From quiet tinkerer to confident connector, finding his voice through radio waves."
+    },
+    {
+      "character": "Mr. Jim Forrester",
+      "arc": "From club guide to proud teacher, seeing Noah shine with the telescope."
+    }
+  ],
+  "num_chapters": 16,
+  "num_scenes_per_chapter": 5,
+  "num_words": 40000,
+  "special_instructions": "Set it in April 2025 after the telescope’s April 3 launch. Keep radio tech and astronomy easy for 9-12 year-olds, focusing on fun, teamwork, and a Michigan-to-Antarctica link.",
+  "book_so_far": ""
+}

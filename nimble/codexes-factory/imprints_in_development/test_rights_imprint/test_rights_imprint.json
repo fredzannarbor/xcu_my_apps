@@ -1,0 +1,50 @@
+{
+  "imprint": "Test Rights Imprint",
+  "publisher": "Test Publisher",
+  "contact_email": "test@example.com",
+  "branding": {
+    "tagline": "Test Rights",
+    "brand_colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "website": "test.com"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Technology"
+    ],
+    "target_audience": "Test Audience",
+    "specialization": "Test Specialization"
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "trim_size": "6x9"
+  },
+  "fonts": {
+    "body": "Times New Roman",
+    "heading": "Times New Roman"
+  },
+  "publisher_persona": {
+    "persona_name": "Test Rights Imprint Editorial Team",
+    "persona_bio": "Professional editorial team focused on Technology publishing",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Collaborative",
+    "preferred_topics": "Technology",
+    "target_demographics": "Test Audience",
+    "vulnerabilities": "Ensuring content quality and market fit"
+  },
+  "wizard_configuration": {
+    "name": "Test Rights Imprint",
+    "charter": "Publishing excellent Technology content",
+    "imprint_type": "Technology",
+    "genres": [
+      "Technology"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 24.99,
+    "page_count": 200,
+    "catalog_size": 12,
+    "enable_ideation": true
+  }
+}

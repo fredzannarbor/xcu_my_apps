@@ -1,0 +1,28 @@
+{
+  "imprint": "Green Harvest Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@greenharvestpress.com",
+  "branding": {
+    "tagline": "Seed Your Future with Knowledge",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.greenharvestpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Organic farming, permaculture, and sustainability.",
+    "target_audience": "Farmers, gardeners and environmental enthusiasts interested in sustainable farming techniques.",
+    "competitive_advantage": "Our imprint specializes in sustainable farming methods, which are becoming increasingly important due to climate change and environmental concerns.",
+    "example_titles": "Titles like 'The Organic Farmer's Handbook', 'Permaculture Principles' or authors like Michael Pollan."
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

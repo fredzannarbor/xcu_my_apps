@@ -1,0 +1,4 @@
+title,book_id,scheduled_date,isbn,imprint,publisher,format,priority,notes
+Book One,book_1,2024-12-01,9781111111111,Imprint A,Publisher A,paperback,1,First file
+Book Two Updated,book_2,2024-12-20,9782222222222,Imprint B,Publisher B,ebook,1,Updated from second file
+Book Three,book_3,2025-01-01,,Imprint B,Publisher B,paperback,3,New book from second file

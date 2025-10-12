@@ -1,0 +1,28 @@
+{
+  "imprint": "Zenith Zone",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@zenithzone.com",
+  "branding": {
+    "tagline": "Reach your zenith",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.zenithzone.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Personal growth, motivation, self-improvement",
+    "target_audience": "Peak performers, goal-setters, achievers",
+    "competitive_advantage": "High-performance strategies, expert advice",
+    "example_titles": "Peak performance playbook, goal-setting guide"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

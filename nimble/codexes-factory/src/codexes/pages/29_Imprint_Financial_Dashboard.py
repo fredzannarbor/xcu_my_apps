@@ -1,0 +1,90 @@
+"""
+Imprint Financial Dashboard Page
+
+Comprehensive financial reporting and analysis by imprint using the
+integrated imprints and finance modules.
+"""
+
+import logging
+import streamlit as st
+import sys
+
+sys.path.insert(0, '/Users/fred/xcu_my_apps')
+
+# Import following current patterns
+try:
+    from codexes.modules.finance.leo_bloom.ui.ImprintFinancialDashboard import show_imprint_financial_dashboard
+    from codexes.core.logging_config import get_logging_manager
+
+    # Set up logging
+    logging_manager = get_logging_manager()
+    logging_manager.setup_logging()
+    logger = logging.getLogger(__name__)
+except ModuleNotFoundError:
+    try:
+        from src.codexes.modules.finance.leo_bloom.ui.ImprintFinancialDashboard import show_imprint_financial_dashboard
+        from src.codexes.core.logging_config import get_logging_manager
+
+        # Set up logging
+        logging_manager = get_logging_manager()
+        logging_manager.setup_logging()
+        logger = logging.getLogger(__name__)
+    except ModuleNotFoundError:
+        # Fallback
+        import logging
+        logging.basicConfig(level=logging.INFO)
+        logger = logging.getLogger(__name__)
+
+        def show_imprint_financial_dashboard():
+            st.error("❌ Imprint Financial Dashboard module not available")
+            st.info("Please ensure the finance and imprints modules are properly installed")
+
+# Set page configuration
+st.set_page_config(
+    page_title="Imprint Financial Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+def main():
+    """Main function for the Imprint Financial Dashboard page."""
+    try:
+        # Show the dashboard
+        show_imprint_financial_dashboard()
+
+    except Exception as e:
+        st.error(f"❌ Error loading Imprint Financial Dashboard: {e}")
+        logger.error(f"Error in Imprint Financial Dashboard page: {e}")
+
+        # Fallback content
+        st.title("📊 Imprint Financial Dashboard")
+        st.warning("The imprint financial dashboard is currently unavailable.")
+
+        with st.expander("💡 Expected Features", expanded=True):
+            st.markdown("""
+            This dashboard provides:
+
+            **📈 Individual Imprint Analysis**
+            - Revenue and sales metrics by imprint
+            - Top-performing titles
+            - Configuration and settings view
+
+            **🔍 Comparative Analysis**
+            - Side-by-side imprint comparison
+            - Performance rankings
+            - Territorial presence mapping
+
+            **📋 Portfolio Overview**
+            - All imprints summary table
+            - Portfolio-wide statistics
+            - Revenue and units aggregation
+
+            **⚙️ Export & Configuration**
+            - Excel report generation
+            - Data export capabilities
+            - Integration status monitoring
+            """)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,11 @@
+{
+  "display_name": "Sample Tranche Configuration",
+  "description": "A sample tranche configuration for testing",
+  "imprint": "xynapse_traces",
+  "publisher": "nimble_books",
+  "contributor_one": "Sample Author",
+  "language": "en",
+  "market": "US",
+  "created_date": "2025-01-01",
+  "version": "1.0"
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "GeekGuru Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@geekgurupress.com",
+  "branding": {
+    "tagline": "Feed your geek",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.geekgurupress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Science trivia, tech trends, quirky facts",
+    "target_audience": "Geeks, trivia buffs, lifelong learners",
+    "competitive_advantage": "Curating unique and captivating content for the insatiably curious",
+    "example_titles": "101 Science Facts You Didn't Know, The Geek's Guide to the Galaxy"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

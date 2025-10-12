@@ -1,0 +1,28 @@
+{
+  "imprint": "Cabinet Chronicle",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cabinetchronicle.com",
+  "branding": {
+    "tagline": "Unlock the Cabinet",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cabinetchronicle.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Executive governance, decision-making, and impact",
+    "target_audience": "Policy makers, political enthusiasts, and students",
+    "competitive_advantage": "Insider views into executive decision-making",
+    "example_titles": "Political scientists, journalists, and former cabinet members"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

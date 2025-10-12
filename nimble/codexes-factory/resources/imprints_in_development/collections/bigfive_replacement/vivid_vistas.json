@@ -1,0 +1,28 @@
+{
+  "imprint": "Vivid Vistas",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vividvistas.com",
+  "branding": {
+    "tagline": "Journey to the Extraordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vividvistas.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Travel Fiction, Adventure, Exotic Thrillers",
+    "target_audience": "Adventurous readers craving escapism",
+    "competitive_advantage": "Rich, cinematic narratives that span the globe",
+    "example_titles": "Clive Cussler, Wilbur Smith, Dan Brown"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

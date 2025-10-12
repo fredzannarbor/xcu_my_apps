@@ -1,0 +1,28 @@
+{
+  "imprint": "Diverse Den",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@diverseden.com",
+  "branding": {
+    "tagline": "Discover diversity in history",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.diverseden.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Ethnic history, LGBTQ+ history, cultural studies",
+    "target_audience": "Readers looking for diverse historical narratives",
+    "competitive_advantage": "Diverse Den highlights underrepresented voices in history",
+    "example_titles": "Books on civil rights movements, histories of marginalized communities"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

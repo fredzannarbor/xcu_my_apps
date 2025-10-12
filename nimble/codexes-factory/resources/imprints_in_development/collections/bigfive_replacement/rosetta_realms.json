@@ -1,0 +1,28 @@
+{
+  "imprint": "Rosetta Realms",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@rosettarealms.com",
+  "branding": {
+    "tagline": "Unlock the code of imagination",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.rosettarealms.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy literature featuring unique languages and codes",
+    "target_audience": "Readers who enjoy deciphering languages and solving puzzles",
+    "competitive_advantage": "Our focus on intricate languages and ciphers provides a unique interactive reading experience",
+    "example_titles": "Comparable to works by J.R.R. Tolkien or Suzanne Collins"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

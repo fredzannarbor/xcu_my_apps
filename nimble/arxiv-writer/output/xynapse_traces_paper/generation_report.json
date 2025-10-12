@@ -1,0 +1,71 @@
+{
+  "paper_content": "",
+  "sections": {},
+  "generation_summary": {
+    "total_sections": 0,
+    "total_word_count": 0,
+    "generation_time": null,
+    "models_used": [],
+    "quality_score": 0.0
+  },
+  "context_summary": {
+    "sources_collected": [
+      "codexes_factory_xynapse_traces"
+    ],
+    "collection_timestamp": "2025-09-01T10:14:33.260556",
+    "total_context_size": 6492
+  },
+  "output_files": [],
+  "imprint_info": {
+    "imprint_name": "Xynapse Traces",
+    "workspace_root": ".",
+    "configuration_used": {
+      "workspace_root": ".",
+      "imprint": "Xynapse Traces",
+      "output_directory": "output/arxiv_papers",
+      "llm_config": {
+        "default_model": "gemini/gemini-2.0-flash-exp",
+        "available_models": [
+          "google/gemini-2.0-flash-exp",
+          "google/gemini-pro-1.5",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "openai/gpt-4-turbo",
+          "xai/grok-beta"
+        ]
+      },
+      "template_config": {
+        "template_file": "templates/default_prompts.json",
+        "section_order": [
+          "abstract",
+          "introduction",
+          "related_work",
+          "methodology",
+          "results",
+          "discussion",
+          "conclusion",
+          "references"
+        ]
+      },
+      "validation_config": {
+        "enabled": true,
+        "strict_mode": false,
+        "quality_thresholds": {
+          "min_word_count": 500,
+          "max_word_count": 8000,
+          "readability_score": 0.7,
+          "coherence_score": 0.8,
+          "citation_count": 10,
+          "section_balance": 0.6,
+          "technical_depth": 0.7,
+          "academic_tone": 0.8
+        }
+      },
+      "context_config": {
+        "collect_book_catalog": true,
+        "collect_imprint_config": true,
+        "collect_technical_architecture": true,
+        "collect_performance_metrics": true
+      }
+    }
+  }
+}

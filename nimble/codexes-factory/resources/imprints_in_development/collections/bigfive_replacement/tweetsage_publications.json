@@ -1,0 +1,28 @@
+{
+  "imprint": "TweetSage Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@tweetsagepublications.com",
+  "branding": {
+    "tagline": "Tweet Smart, Grow Fast",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.tweetsagepublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Twitter marketing, social listening",
+    "target_audience": "Business owners, social media managers",
+    "competitive_advantage": "Expert guidance on leveraging Twitter for business growth.",
+    "example_titles": "Twitter marketing strategies, social listening guides"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

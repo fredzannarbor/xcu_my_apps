@@ -1,0 +1,28 @@
+{
+  "imprint": "Vocal Vignettes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vocalvignettes.com",
+  "branding": {
+    "tagline": "Tiny tales, big impact",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vocalvignettes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Flash fiction and micro-stories with podcast elements",
+    "target_audience": "Flash fiction fans and busy readers",
+    "competitive_advantage": "Quick reads with deep podcast discussions for on-the-go readers",
+    "example_titles": "Joyce Carol Oates, Lydia Davis"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

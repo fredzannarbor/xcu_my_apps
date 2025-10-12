@@ -1,0 +1,35 @@
+Based on the quotations and content in the provided book, generate a list of 5-7 creative mnemonics to help readers remember the key themes, concepts, and insights from the book's quotations. Focus specifically on the book's content, not on the art of mnemonics itself. Return as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \documentclass, \begin{document}, or \end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.
+
+Example format:
+
+% Mnemonics for Key Themes in This Book
+\chapter*{Mnemonics}
+\addcontentsline{toc}{chapter}{Mnemonics}
+
+\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)
+
+\begin{itemize}
+    \item \textbf{C}hallenge assumptions
+    \item \textbf{L}ook for evidence
+    \item \textbf{E}valuate alternatives
+    \item \textbf{A}pply reasoning
+    \item \textbf{R}eflect on outcomes
+\end{itemize}
+
+[... more acronyms/expansions based on book_content]
+
+Title: The Art of Critical Thinking
+
+Description: A collection of thought-provoking quotes on critical thinking, reasoning, and intellectual growth.
+
+Quotations in this book:
+1. "The important thing is not to stop questioning. Curiosity has its own reason for existing." - Albert Einstein, Life Magazine
+2. "We are what we repeatedly do. Excellence, then, is not an act, but a habit." - Aristotle, Nicomachean Ethics
+3. "It is the mark of an educated mind to be able to entertain a thought without accepting it." - Aristotle, Metaphysics
+4. "The unexamined life is not worth living." - Socrates, Apology
+5. "I think, therefore I am." - René Descartes, Discourse on the Method
+6. "Doubt is not a pleasant condition, but certainty is absurd." - Voltaire, Letters on England
+7. "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge." - Daniel J. Boorstin, The Discoverers
+8. "Real knowledge is to know the extent of one's ignorance." - Confucius, The Analects
+9. "The mind is not a vessel to be filled, but a fire to be kindled." - Plutarch, On Listening to Lectures
+10. "We don't see things as they are, we see them as we are." - Anaïs Nin, Seduction of the Minotaur

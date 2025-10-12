@@ -1,0 +1,28 @@
+{
+  "imprint": "Token Tribune",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@tokentribune.com",
+  "branding": {
+    "tagline": "Tokenize Your World",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.tokentribune.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Token economics, tokenization strategies, utility tokens",
+    "target_audience": "Blockchain entrepreneurs, token creators, crypto enthusiasts",
+    "competitive_advantage": "Comprehensive coverage of tokenization strategies and economics",
+    "example_titles": "Token Economy by Brendan Blumer, Utility Token Utopia by Dan Larimer"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Crescent Crime",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@crescentcrime.com",
+  "branding": {
+    "tagline": "Intrigue at its Best",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.crescentcrime.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Crime, Detective Stories, Noir Fiction",
+    "target_audience": "Fans of suspenseful, intricate crime stories",
+    "competitive_advantage": "Gritty realism, complex characters, gripping plots",
+    "example_titles": "Ian Rankin, Raymond Chandler, Patricia Cornwell"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Lead The Way",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@leadtheway.com",
+  "branding": {
+    "tagline": "Lead the way to success",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.leadtheway.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Leadership, team management, and organizational development",
+    "target_audience": "Leaders at all levels, team managers, HR professionals",
+    "competitive_advantage": "Practical, real-world leadership strategies and solutions",
+    "example_titles": "Leading Teams to Success, The New Leadership Paradigm"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

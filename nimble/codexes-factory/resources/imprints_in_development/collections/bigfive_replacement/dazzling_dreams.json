@@ -1,0 +1,28 @@
+{
+  "imprint": "Dazzling Dreams",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@dazzlingdreams.com",
+  "branding": {
+    "tagline": "Dare to Dream",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.dazzlingdreams.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy, Magical Realism, Science Fiction",
+    "target_audience": "Fans of imaginative, dreamlike narratives",
+    "competitive_advantage": "Inventive world-building, fantastical elements, dreamy prose",
+    "example_titles": "Neil Gaiman, Haruki Murakami, Terry Pratchett"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

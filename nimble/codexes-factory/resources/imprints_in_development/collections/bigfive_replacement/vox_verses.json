@@ -1,0 +1,28 @@
+{
+  "imprint": "Vox Verses",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@voxverses.com",
+  "branding": {
+    "tagline": "Hear the rhythm, feel the words",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.voxverses.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Poetry compilations with accompanying audio content",
+    "target_audience": "Poetry lovers and spoken word enthusiasts",
+    "competitive_advantage": "Unique poetry performances and interviews with poets",
+    "example_titles": "Amanda Gorman, Robert Frost"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Cosmic Chronicles",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cosmicchronicles.com",
+  "branding": {
+    "tagline": "Revisit the cosmic past",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cosmicchronicles.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical accounts and analysis of space exploration",
+    "target_audience": "History buffs, educators, space enthusiasts",
+    "competitive_advantage": "Access to historical archives and experts",
+    "example_titles": "Space Race: The Untold Story by Space Historian"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

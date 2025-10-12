@@ -1,0 +1,306 @@
+\documentclass[11pt, twoside]{memoir}
+\normalsize
+
+% --- Page Geometry ---
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*}
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{.875in}{.875in}{*}
+\setulmarginsandblock{0.75in}{*}{1} % Sets upper margin to 0.75in, lower to 1in (calculated)
+
+\setheadfoot{24pt}{24pt}
+\setlength{\headdrop}{2pt}
+\setlength{\headsep}{12pt} % Base headsep
+% Ensure headsep is positive
+\addtolength{\headsep}{0.05in} % Positive adjustment
+\checkandfixthelayout[nearest] % Apply layout changes, preserving other settings
+
+% --- Font Setup ---
+\usepackage{fontspec}
+\setmainfont{Adobe Caslon Pro}
+\setsansfont{Neulis Sans}
+
+% --- Logo Font Definition ---
+% Logo font from system: Zapfino
+\newfontfamily\logofont{Zapfino}
+
+% --- Korean Font Setup ---
+\usepackage{luatexko}
+\newfontfamily\koreanfont{Apple Myungjo}
+\directlua{
+  luatexko.hangulfont = "Apple Myungjo"
+}
+
+% Define a command to easily switch to Korean text
+\newcommand{\korean}[1]{{\koreanfont #1}}
+
+% --- Other Useful Packages ---
+\usepackage{microtype}
+\SetExtraKerning
+  {encoding = *}
+  {
+    — = {-25, -25},  % em-dash
+    – = {-25, -25}   % en-dash
+  }
+
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{multicol} % Required for glossary two-column layout
+\usepackage{layouts} % Already included for debugging
+\usepackage{ifoddpage}
+\usepackage{eso-pic}
+
+% --- Transcription Instruction System ---
+% Counter for tracking main matter recto pages
+\newcounter{mainmatterrecto}
+\setcounter{mainmatterrecto}{0}
+
+% Counter for cycling through transcription notes
+\newcounter{transcriptioncycle}
+\setcounter{transcriptioncycle}{0}
+
+% Array of transcription notes
+\newcommand{\gettranscriptionnote}[1]{%
+    \ifcase#1\relax
+        Consider the meaning of the words as you write.\or
+        Breathe deeply before you begin the next line.\or
+        Notice the rhythm and flow of the sentence.\or
+        Focus on the shape of each letter.\or
+        Reflect on one new idea this passage sparked.\or
+        Consider the meaning of the words as you write.% Cycle back
+    \fi
+}
+
+% Boolean to track if we're in main matter
+\newif\ifinmainmatter
+\inmainmatterfalse
+
+% System to add transcription notes to every 8th recto page in main matter
+\AddToShipoutPictureFG*{%
+    \ifinmainmatter
+        \checkoddpage
+        \ifoddpage
+            \stepcounter{mainmatterrecto}%
+            \ifnum\value{mainmatterrecto}=8\relax
+                \put(\LenToUnit{0.5\paperwidth}, \LenToUnit{1in + 0.5in}){%
+                    \makebox[0pt][c]{%
+                        \parbox{\textwidth}{%
+                            \centering
+                            {\itshape \gettranscriptionnote{\value{transcriptioncycle}}}%
+                        }%
+                    }%
+                }%
+                \stepcounter{transcriptioncycle}%
+                \ifnum\value{transcriptioncycle}>4\relax
+                    \setcounter{transcriptioncycle}{0}%
+                \fi
+                \setcounter{mainmatterrecto}{0}% Reset recto counter
+            \fi
+        \fi
+    \fi
+}
+\usepackage{calc}
+\usepackage{footnote}
+\usepackage{luaquotes}
+
+% --- Hyphenation Fixes ---
+\sloppy
+\emergencystretch=1em
+\tolerance=1000
+\pretolerance=150
+
+% --- Table of Contents Styling ---
+\newcommand{\tocheadfont}{\Huge\sffamily\scshape}
+\renewcommand{\cftpartfont}{\Large\bfseries}
+\renewcommand{\cftchapterfont}{\bfseries}
+
+% --- Custom Commands for Book Content ---
+
+% Command to clear to verso page (even page number)
+\newcommand{\cleartoverso}{%
+    \clearpage
+    \ifodd\value{page}%
+        \hbox{}\newpage
+    \fi
+}
+
+% Defines the formatting for quotes on the verso pages.
+\newcommand{\formattedquote}[1]{%
+  \parbox{0.85\textwidth}{%
+    \itshape\fontsize{16}{20}\selectfont
+    \raggedright #1%
+  }%
+}
+
+% --- Watermark System (TikZ-free) ---
+\newcommand{\watermarkfile}{}
+\newcommand{\watermarkopacity}{0.08}
+\newcommand{\watermarkscale}{0.75}
+
+\newcommand{\setwatermarkimage}[1]{%
+    \renewcommand{\watermarkfile}{#1}%
+}
+
+% Enhanced Debug Commands
+\let\oldmainmatter\mainmatter
+\renewcommand{\mainmatter}{%
+    \oldmainmatter
+    \inmainmattertrue
+    \setcounter{mainmatterrecto}{0}%
+}
+
+\let\oldbackmatter\backmatter
+\renewcommand{\backmatter}{%
+    \oldbackmatter
+    \inmainmatterfalse
+}
+
+% Check if we should show watermark on this page
+\newif\ifshouldshowwatermark
+\shouldshowwatermarkfalse
+
+% Transcription instructions are now handled by the main system above
+
+\newcommand{\checkwatermarkpage}{%
+    \shouldshowwatermarkfalse
+    \ifinmainmatter
+        \stepcounter{mainmatterrecto}%
+        \ifnum\value{mainmatterrecto}=8\relax
+            \shouldshowwatermarktrue
+            \setcounter{mainmatterrecto}{0}% Reset counter
+        \fi
+    \fi
+}
+
+\newcommand{\placewatermark}{%
+    \ifshouldshowwatermark
+        % Place transcription instruction at top of page
+        \put(\LenToUnit{0.5\paperwidth}, \LenToUnit{\paperheight - 1.5in}){%
+            \makebox[0pt][c]{%
+                \parbox{0.8\textwidth}{%
+                    \centering
+                    {\itshape \gettranscriptionnote{\value{transcriptioncycle}}}%
+                }%
+            }%
+        }%
+        % Also place watermark if file exists
+        \ifx\watermarkfile\empty
+        \else
+            \IfFileExists{\watermarkfile}{%
+                \put(\LenToUnit{0.5\paperwidth-0.5\watermarkscale\paperwidth},%
+                     \LenToUnit{0.5\paperheight-0.5\watermarkscale\paperheight}){%
+                    \makebox(0,0)[c]{%
+                        \includegraphics[width=\watermarkscale\paperwidth,opacity=\watermarkopacity]{\watermarkfile}%
+                    }%
+                }%
+            }{}%
+        \fi
+    \fi
+}
+
+% This adds the watermark to every odd page (recto) if checkwatermarkpage allows it.
+\AddToShipoutPictureBG*{%
+    \checkoddpage
+    \ifoddpage
+        \checkwatermarkpage
+        \placewatermark
+    \fi
+}
+
+% Dot Grid Transcription Page Command
+\newcommand{\dotgridpath}{dotgrid.png} % pilsa_prepress.py ensures this is in the build dir
+
+% MODIFIED: Redesigned to guarantee content fits on a single page.
+\newcommand{\dotgridtranscription}[1]{%
+    \newpage
+    \thispagestyle{empty}
+    \begin{center} % Center the whole block horizontally
+    \vspace*{\fill} % Push the block down from the top
+    \begin{minipage}{0.9\textwidth} % A container for the content
+        \centering % Center content inside the minipage
+        \IfFileExists{\dotgridpath}{%
+            \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{\dotgridpath}%
+        }{%
+            [Dot Grid Page - Image Not Found]%
+        }\par
+        \vspace{1em}
+        \small\sffamily #1
+    \end{minipage}
+    \vspace*{\fill} % Balance the top fill to center vertically
+    \end{center}
+}
+
+% --- Page Style Setup ---
+\newcommand*{\headerstrut}{\vphantom{ypg}} % Ensures consistent header baseline
+\makepagestyle{mypagestyle}
+
+% Define a custom command for the imprint name in header
+\newcommand{\imprintheader}{\logofont\small\headerstrut\vphantom{yptg} xynapse traces}
+
+% Define header and footer width to extend beyond text block
+\newlength{\extendedwidth}
+\setlength{\extendedwidth}{\textwidth}
+\addtolength{\extendedwidth}{0.5in} % Add 0.25" on each side (0.5" total)
+
+% Define header and footer positions for odd and even pages
+\newlength{\oddheaderposition}
+\setlength{\oddheaderposition}{-0.25in} % Shift right by 0.25" for odd pages
+
+\newlength{\evenheaderposition}
+\setlength{\evenheaderposition}{-0.5in} % Shift left by 0.25" for even pages (0.5" total shift)
+
+% Set up headers for odd and even pages with extended width
+\makeoddhead{mypagestyle}{}{}{\hspace{\oddheaderposition}\makebox[\extendedwidth][r]{\imprintheader}}
+\makeevenhead{mypagestyle}{\hspace{\evenheaderposition}\makebox[\extendedwidth][l]{\small\headerstrut\textit{\thetitle}}}{}{}
+
+% Set up footers (page numbers) with extended width
+\makeoddfoot{mypagestyle}{}{}{\hspace{\oddheaderposition}\makebox[\extendedwidth][r]{\thepage}}
+\makeevenfoot{mypagestyle}{\hspace{\evenheaderposition}\makebox[\extendedwidth][l]{\thepage}}{}{}
+
+% Apply this style to all pages
+\pagestyle{mypagestyle}
+
+% Make sure chapter pages also use this style (instead of plain)
+\aliaspagestyle{chapter}{mypagestyle}
+\aliaspagestyle{cleared}{mypagestyle}
+\aliaspagestyle{part}{mypagestyle}
+
+\newcommand{\frontmatterfont}{\rmfamily}
+
+\usepackage{indentfirst}
+
+% --- Document Start ---
+\begin{document}
+
+% --- Frontmatter Inputs ---
+\frontmatter
+% Use serif font with Korean support for front matter
+\frontmatterfont
+\input{title_page.tex}
+\input{copyright_page.tex}
+\input{table_of_contents.tex}
+\input{publishers_note.tex}
+\IfFileExists{foreword.tex}{\input{foreword.tex}}{}
+\IfFileExists{glossary.tex}{\input{glossary.tex}}{}
+
+% --- Mainmatter Inputs ---
+\mainmatter
+\input{transcription_note.tex}
+
+% Try to include main_content if the file exists
+\IfFileExists{quotations.tex}{\input{quotations.tex}}{}
+
+% --- Backmatter Inputs ---
+\backmatter
+% Use serif font with Korean support for back matter
+\frontmatterfont
+% These files are generated by pilsa_prepress.py if content exists
+\IfFileExists{mnemonics.tex}{\input{mnemonics.tex}}{}
+\IfFileExists{verification_log.tex}{\input{verification_log.tex}}{}
+\IfFileExists{bibliography.tex}{\input{bibliography.tex}}{}
+\IfFileExists{verification_protocol.tex}{\input{verification_protocol.tex}}{}
+\end{document}

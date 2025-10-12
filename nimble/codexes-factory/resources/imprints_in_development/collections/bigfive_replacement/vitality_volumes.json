@@ -1,0 +1,28 @@
+{
+  "imprint": "Vitality Volumes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vitalityvolumes.com",
+  "branding": {
+    "tagline": "Live Well, Age Well",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vitalityvolumes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Health and wellness guides, inspirational stories",
+    "target_audience": "Health-conscious seniors",
+    "competitive_advantage": "Our health and wellness content is tailored specifically for seniors",
+    "example_titles": "The Blue Zones by Dan Buettner, Younger Next Year by Chris Crowley and Henry Lodge"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

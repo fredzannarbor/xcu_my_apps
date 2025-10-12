@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Series Detail",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "D",
+        "preset_description": "Series sell.  You should always be thinking about your book as a potential series.",
+        "pre_user_input": "From the given book title, generate a list of titles for sequels. Title: ",
+        "prompt": "",
+        "post_user_input": "\nEach title should be on its own line.",
+        "preset_additional_notes": "",
+        "engine": "curie-instruct-beta",
+        "temperature": 0.9,
+        "max_tokens": 240,
+        "top_p": 1,
+        "fp": 1,
+        "pp": 0.5,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "Enter brief description of your project here.",
+        "user" : "6",
+        "organization" : ""
+    }
+]

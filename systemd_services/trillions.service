@@ -1,0 +1,20 @@
+[Unit]
+Description=Trillions of People
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/xtuff/trillionsofpeople
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/xtuff/trillionsofpeople/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+Environment="PYTHONPATH=src:/home/wfzimmerman/xcu_my_apps"
+ExecStart=/usr/local/bin/uv run streamlit run trillionsofpeople.py --server.port=8504 --server.address=127.0.0.1 --server.headless=true
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/xtuff/trillionsofpeople/logs/trillions.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/xtuff/trillionsofpeople/logs/trillions-error.log
+
+[Install]
+WantedBy=multi-user.target

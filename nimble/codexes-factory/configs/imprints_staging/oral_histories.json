@@ -1,0 +1,445 @@
+{
+  "_template_info": {
+    "description": "Configuration for the Oral Histories imprint",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "usage": "Imprint-specific configuration for Oral Histories"
+  },
+  "imprint": "Oral Histories",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "editorial@oralhistoriespress.com",
+  "branding": {
+    "logo_path": "logos/oral_histories_logo.png",
+    "brand_colors": {
+      "primary": "#2E251B",
+      "secondary": "#EAE0D1"
+    },
+    "tagline": "As if you were there.",
+    "website": "https://www.oralhistoriespress.com"
+  },
+  "fonts": {
+    "body": "Minion Pro",
+    "heading": "Avenir Next",
+    "korean": "Apple Myungjo",
+    "quotations": "Minion Pro Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publisher_persona": {
+    "persona_name": "Dr. Elara Vance",
+    "persona_bio": "Former university archivist and oral historian with a Ph.D. in Social Anthropology. Dr. Vance has dedicated her career to preserving overlooked narratives and pioneering new methods for historical storytelling. She believes that empathy is the key to understanding the past and future.",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Collaborative",
+    "preferred_topics": "Untold stories, marginalized voices, historical 'what-ifs', the human element in large-scale events, plausible futures.",
+    "target_demographics": "Readers of literary fiction, narrative non-fiction, and thoughtful speculative fiction. Individuals interested in history, sociology, and psychology. Podcast listeners who enjoy deep-dive narrative series.",
+    "vulnerabilities": "A potential bias towards academic rigor over commercial appeal. May underestimate market reaction to reinterpretations of sensitive historical or religious events. Relies heavily on the quality of AI narrative synthesis, requiring constant validation."
+  },
+  "wizard_configuration": {
+    "name": "Oral Histories",
+    "charter": "Synthetic oral histories of real and fictional people, places, and events. Focus on sparsely documented real events, apocryphal or mythical events, alternate universes, and possible future events.",
+    "imprint_type": "Narrative Non-Fiction & Speculative History",
+    "genres": [
+      "Historical Fiction",
+      "Alternate History",
+      "Creative Non-Fiction",
+      "Speculative Fiction"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 22.99,
+    "page_count": 320,
+    "catalog_size": 8,
+    "enable_ideation": true
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Historical Fiction",
+      "Alternate History",
+      "Speculative Fiction",
+      "Creative Non-Fiction"
+    ],
+    "target_audience": "General Adult",
+    "specialization": "Immersive, multi-vocal narratives and synthetic oral histories",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "cream",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 6 x 9 in or 229 x 152 mm",
+    "carton_pack_quantity": "24",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "FIC014000",
+      "FIC028080",
+      "FIC032000",
+      "HIS037000"
+    ],
+    "thema_subject_preferences": [
+      "FH",
+      "FM",
+      "1D"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{title_short}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/oral_histories"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@OralHistories",
+      "facebook": "OralHistoriesPress",
+      "instagram": "@OralHistoriesPress"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "",
+    "metadata_contact_dictionary": "Oral Histories Editorial",
+    "publisher_reference_id": "OHP",
+    "flex_fields": {
+      "lsi_flexfield1": "Synthetic Oral History",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "workflow@oralhistoriespress.com",
+    "backup_configurations": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting",
+    "enabled_types": [
+      "oral_history",
+      "reference",
+      "textbook",
+      "standard"
+    ],
+    "specialized_requirements": {
+      "interior_design_notes": "Design must establish a clear 'archival' feel, differentiating multiple speakers, editorial notes, and contextual artifacts (maps, diagrams). Core layout is 'oral_history' with clear speaker IDs, supported by sidebars and insets for contextual information.",
+      "template_customizations": "Requires 'Dramatis Personae' in front matter, and a comprehensive index and glossary in back matter. Must support internal cross-referencing between testimonies.",
+      "typesetting_considerations": "Requires a versatile font family. Use a readable serif for body text and a contrasting sans-serif for speaker IDs, headings, and sidebars. Critical typographic differentiation needed for narrator, speakers, editorial notes, timestamps, and 'found text' excerpts."
+    },
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional book layout with chapters",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "oral_history": [
+          "oral history",
+          "interview",
+          "testimony",
+          "spoken",
+          "conversation"
+        ],
+        "puzzle": [
+          "puzzle",
+          "sudoku",
+          "crossword",
+          "brain teaser",
+          "logic",
+          "game"
+        ],
+        "cookbook": [
+          "recipe",
+          "cooking",
+          "cuisine",
+          "cookbook",
+          "culinary",
+          "kitchen"
+        ],
+        "poetry": [
+          "poetry",
+          "poems",
+          "verse",
+          "sonnet",
+          "haiku",
+          "lyrical"
+        ],
+        "reference": [
+          "reference",
+          "dictionary",
+          "encyclopedia",
+          "handbook",
+          "manual",
+          "guide"
+        ],
+        "textbook": [
+          "textbook",
+          "curriculum",
+          "academic",
+          "educational",
+          "course",
+          "study"
+        ],
+        "journal": [
+          "journal",
+          "diary",
+          "reflection",
+          "daily",
+          "log",
+          "personal"
+        ],
+        "workbook": [
+          "workbook",
+          "exercises",
+          "practice",
+          "worksheets",
+          "activities",
+          "assignments"
+        ]
+      }
+    },
+    "specialized_templates": {
+      "oral_history": {
+        "name": "Oral History",
+        "description": "Formatted for interview-style content with speaker identification",
+        "template_requirements": [
+          "speaker_tags",
+          "timestamp_markers",
+          "question_answer_format"
+        ],
+        "formatting_rules": {
+          "speaker_name": "bold_sans_serif_at_paragraph_start",
+          "question_format": "italic_serif",
+          "answer_format": "regular_serif_text",
+          "section_breaks": "topic_or_speaker_based",
+          "quote_preservation": "verbatim_with_markers"
+        }
+      },
+      "puzzle": {
+        "name": "Puzzle Book",
+        "description": "Grid-based layouts for puzzles with answer sections",
+        "template_requirements": [
+          "grid_layouts",
+          "answer_keys",
+          "difficulty_indicators"
+        ],
+        "formatting_rules": {
+          "puzzle_grid": "fixed_width_monospace",
+          "instructions": "boxed_or_highlighted",
+          "answer_section": "separate_or_back_matter",
+          "difficulty_rating": "visual_indicators",
+          "numbering_system": "sequential_or_by_section"
+        }
+      }
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "oral_history",
+        "reference",
+        "textbook",
+        "standard"
+      ],
+      "design_parameters": {
+        "primary_considerations": "To establish a clear, navigable information hierarchy that enhances narrative immersion and an 'archival' or 'documentary' feel. The design must legibly differentiate between multiple speakers, editorial notes, and supplemental context.",
+        "interior_layout_notes": "A robust grid system is required to accommodate primary interview text, marginalia, footnotes, and inset 'artifacts' (e.g., maps, diagrams, timelines, or facsimiles of documents). The core layout should be based on the 'oral_history' format, with clear, consistent speaker identification (e.g., bolded name, small caps, or a dedicated column). Sidebars and full-page spreads will be needed for contextual information derived from the 'textbook' codextype.",
+        "typesetting_requirements": "A versatile and legible font family with multiple weights is essential. A serif face for the main body text will aid readability, while a contrasting sans-serif can be used for speaker IDs, headings, and sidebars. Typographic differentiation is critical for: narrator/interviewer questions, individual speaker voices, editorial annotations [in brackets], timestamps/locations, and 'found text' excerpts which may use a different typeface entirely (e.g., a monospace or script font).",
+        "functional_elements": "Front matter should include a 'Dramatis Personae' (List of Interviewees). Back matter must include a comprehensive index and potentially a glossary of terms, drawing from the 'reference' codextype. A system for internal cross-referencing (e.g., 'See testimony of X, p. 114') should be established to guide readers through interconnected narratives.",
+        "reader_interaction_model": "The reader is not just consuming a linear story; they are exploring a curated archive. The design must support both linear reading and non-linear investigation, allowing the reader to easily jump between the primary narrative and supporting contextual materials (maps, glossaries, timelines, index)."
+      },
+      "reasoning": "The imprint's core product—synthetic oral histories of complex events—cannot be effectively rendered using a 'standard' codextype alone. The multi-vocal nature of the content absolutely requires the 'oral_history' format for basic legibility. Furthermore, to build the credible, immersive worlds described in the charter (mythical, alternate history, future), the contextual and navigational tools from 'reference' (indexes, glossaries) and 'textbook' (maps, timelines, sidebars) codextypes are essential. The design itself becomes a key part of the storytelling, framing the text as a serious historical document."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": true,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": true,
+      "on_schedule": false,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [
+        "Digital Humanities Quarterly",
+        "Journal of Popular Culture",
+        "Publishing Research Quarterly"
+      ],
+      "paper_types": [
+        "methodology_paper",
+        "case_study",
+        "literary_analysis"
+      ],
+      "default_paper_type": "methodology_paper",
+      "target_word_count": 7500,
+      "citation_style": "chicago",
+      "include_quantitative_analysis": false
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "Synthetic oral history methodology",
+        "AI in creative non-fiction",
+        "Narrative construction for empathetic engagement",
+        "Publishing in under-developed genres"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": false,
+        "include_production_metrics": true,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": true,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/oral_histories",
+      "file_naming": "oral_histories_paper_{date}_{type}",
+      "formats": [
+        "latex",
+        "pdf",
+        "markdown"
+      ],
+      "include_submission_package": true
+    },
+    "automation_schedule": {
+      "enabled": true,
+      "frequency": "annual",
+      "milestone_triggers": {
+        "book_count_milestones": [
+          5,
+          15,
+          30
+        ],
+        "revenue_milestones": [],
+        "time_milestones": [
+          "1_year",
+          "2_years"
+        ]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "gemini/gemini-2.5-pro"
+      ],
+      "temperature": 0.8,
+      "max_tokens": 4000,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "Oral Histories Editorial Team",
+      "institutional_affiliation": "AI Lab for Book-Lovers, Nimble Books LLC",
+      "contact_email": "research@oralhistoriespress.com",
+      "co_author_llm": true
+    },
+    "validation_criteria": {
+      "min_word_count": 5000,
+      "max_word_count": 9000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "methodology",
+        "case_study_analysis",
+        "discussion",
+        "conclusion"
+      ],
+      "require_quantitative_data": false,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes-Destroy",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "GBP",
+      "pricing_multiplier": 0.8
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "EUR",
+      "pricing_multiplier": 0.9
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "CAD",
+      "pricing_multiplier": 1.3
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "AUD",
+      "pricing_multiplier": 1.4
+    }
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-09-23T00:36:58.236707",
+    "model_used": "gemini/gemini-2.5-pro",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

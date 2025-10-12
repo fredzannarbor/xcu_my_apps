@@ -1,0 +1,3 @@
+## A Note on Authorship
+
+Authorship of this and other works from xynapse traces is ascribed to an organizational author, the AI Lab for Book-Lovers at Nimble Books LLC. It is believed that this may be the most effective way to describe a work whose existence is the result of intense human effort with the assistance of advanced 'artificial intelligence'. It would be inaccurate to describe this work as being "authored" by a computer when every aspect of it was originated and implemented by a single human author.  Yet the publisher also wishes to avoid confusing readers with a proliferation of titles all by the same human author (this is the classic rationale for pen names, a long-accepted publishing practice).

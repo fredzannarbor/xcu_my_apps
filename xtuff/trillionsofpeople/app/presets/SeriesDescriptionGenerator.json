@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Series Detail",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "D",
+        "preset_description": "Series sell.  You should always be thinking about your book as a potential series.",
+        "pre_user_input": "From the given book title and description, generate the content for the series description page. Title and description: ",
+        "prompt": "",
+        "post_user_input": "\nThe description should make the reader curious to try all or some of the books in the series..",
+        "preset_additional_notes": "",
+        "engine": "davinci-instruct-beta",
+        "temperature": 0.85,
+        "max_tokens": 600,
+        "top_p": 1,
+        "fp": 0.7,
+        "pp": 0.5,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "Enter brief description of your project here.",
+        "user" : "6",
+        "organization" : ""
+    }
+]

@@ -1,0 +1,36 @@
+# TrillionsOfPeople Configuration File
+# This file uses TOML format: https://toml.io/
+# Copy this file to config.toml and customize as needed
+
+[trillions_of_people]
+
+# API Keys (can also be set via environment variables with TRILLIONS_ prefix)
+# Uncomment and set your API keys below:
+# openai_api_key = "sk-your-openai-key-here"
+# anthropic_api_key = "sk-ant-your-anthropic-key-here"
+# replicate_api_key = "r8_your-replicate-key-here"
+
+# Default settings for person generation
+default_country = "Random"  # Use "Random" for random countries, or specify a country name/code
+default_year = 2100         # Default year for person generation
+max_people_per_request = 5  # Maximum number of people to generate in one request (1-1000)
+
+# Feature toggles
+enable_image_generation = true   # Enable face image generation
+enable_telemetry = false        # Enable anonymous usage telemetry
+
+# Directories and paths
+data_directory = "data"  # Directory for storing data files (relative to project root)
+
+# Logging configuration
+log_level = "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# Performance and reliability settings
+cache_ttl = 3600        # Cache time-to-live in seconds (0 to disable caching)
+request_timeout = 30    # Request timeout in seconds (1-300)
+max_retries = 3         # Maximum number of retries for failed requests (0-10)
+
+# Security Notes:
+# - Keep this file secure and don't commit API keys to version control
+# - Set file permissions to 600 (owner read/write only) for better security
+# - Use environment variables for API keys in production environments

@@ -1,0 +1,28 @@
+{
+  "imprint": "SocialSeer Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@socialseerpress.com",
+  "branding": {
+    "tagline": "See Beyond the Likes",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.socialseerpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Social media analytics, sentiment analysis",
+    "target_audience": "Data scientists, marketers, brand managers",
+    "competitive_advantage": "In-depth analysis and actionable data insights.",
+    "example_titles": "Books on data-driven social media marketing, sentiment analysis"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

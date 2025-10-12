@@ -1,0 +1,28 @@
+{
+  "imprint": "Capital Perspective",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@capitalperspective.com",
+  "branding": {
+    "tagline": "Unlock the Power of Politics",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.capitalperspective.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Political analysis, commentary, and current events",
+    "target_audience": "Politicians, political science students, and enthusiasts",
+    "competitive_advantage": "In-depth analysis from renowned political experts",
+    "example_titles": "Established political journalists, academics, or commentators"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

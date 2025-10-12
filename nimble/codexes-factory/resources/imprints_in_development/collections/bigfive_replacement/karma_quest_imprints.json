@@ -1,0 +1,28 @@
+{
+  "imprint": "Karma Quest Imprints",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@karmaquestimprints.com",
+  "branding": {
+    "tagline": "Your spiritual journey starts here",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.karmaquestimprints.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Karma, spiritual development, and the laws of the universe",
+    "target_audience": "Spiritual seekers and those interested in karma and the universe's laws",
+    "competitive_advantage": "Guidance from renowned spiritual gurus, with a strong focus on karmic laws and spiritual development",
+    "example_titles": "Books like 'The Seat of the Soul' or authors like Gary Zukav"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

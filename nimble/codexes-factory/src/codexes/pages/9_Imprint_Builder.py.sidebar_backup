@@ -1,0 +1,25 @@
+import streamlit as st
+import sys
+from pathlib import Path
+
+# Add paths for imports
+sys.path.insert(0, '/Users/fred/my-apps')
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from codexes.modules.imprint_builder.streamlit_ui import render_imprint_builder_page
+from shared.ui import render_unified_sidebar
+
+# Page configuration
+st.set_page_config(
+    page_title="Streamlined Imprint Builder",
+    page_icon="🏢",
+    layout="wide"
+)
+
+render_unified_sidebar(
+    app_name="Codexes Factory - Imprint Builder",
+    nav_items=[]
+)
+
+# Render the new streamlined imprint builder interface
+render_imprint_builder_page()

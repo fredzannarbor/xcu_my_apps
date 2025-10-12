@@ -1,0 +1,25 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Test imprint",
+      "output_file": "configs/test_imprints/test_imprint.json",
+      "codextypes": [
+        "reference",
+        "textbook",
+        "workbook"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Precision typography for complex content (code, formulas, diagrams), hierarchical information structure, rapid information retrieval, and clear instruction flow.",
+        "interior_layout_notes": "A highly modular and flexible grid system is essential to accommodate varying content types: text, code blocks, tables, figures, warnings, tips, and exercises. Distinct visual cues (e.g., color, iconography, specific typography) for different content functions (notes, warnings, examples). Clear visual hierarchy for headings and subheadings. Ample whitespace to prevent visual fatigue and aid comprehension. Consistent layout for sidebars, callouts, and multi-column elements where appropriate.",
+        "typesetting_requirements": "Extensive use of specialized typography: precise kerning, leading, and tracking for technical terms and formulas; dedicated monospace fonts for code blocks (with optional syntax highlighting for digital versions); robust support for mathematical equations (e.g., MathML, LaTeX rendering) ensuring correct baseline alignment and symbol sizing; custom bullet points or numbered lists for procedural instructions; consistent styling for cross-references and index entries. Font choices must prioritize legibility for dense technical information.",
+        "functional_elements": "Comprehensive, multi-level index; detailed glossary of technical terms; appendices for supplementary data or reference tables; clear, nested Table of Contents; running heads/feet that indicate current chapter/section for easy navigation; robust system for internal cross-referencing (e.g., 'See Chapter 3' or 'Figure 4.5 on page X'). For manuals, dedicated sections for exercises, practice problems, and potentially answer keys or troubleshooting guides.",
+        "reader_interaction_model": "Readers will predominantly engage in targeted information retrieval (looking up specific facts, definitions, or procedures), sequential instruction following (for technical tasks or software usage), and in-depth study/comprehension of complex topics. The design must facilitate quick scanning, efficient navigation between related topics, and sustained focus on detailed content. Readers often use these books as tools for learning, problem-solving, and professional development."
+      },
+      "success": true
+    }
+  ],
+  "output_directory": "configs/test_imprints"
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Rubicon Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@rubiconpress.com",
+  "branding": {
+    "tagline": "Cross the Rubicon, discover the extraordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.rubiconpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Groundbreaking, boundary-pushing literary fiction",
+    "target_audience": "Adventurous readers seeking fresh, unconventional narratives",
+    "competitive_advantage": "Bold and daring narratives that challenge convention",
+    "example_titles": "George Saunders, Marlon James"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

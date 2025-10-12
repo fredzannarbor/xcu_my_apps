@@ -1,0 +1,194 @@
+{
+  "_template_info": {
+    "description": "Template for publisher-specific configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "usage": "Copy this template and customize for each publisher"
+  },
+  
+  "_required_fields": {
+    "publisher": "BigFiveReplacement",
+    "contact_email": "bigfive@nimblebooks.com",
+    "lightning_source_account": "LSI account number"
+  },
+  
+  "_optional_fields": {
+    "description": "All fields below are optional and will inherit from global defaults if not specified"
+  },
+  
+  "publisher": "TEMPLATE_PUBLISHER_NAME",
+  "contact_email": "contact@template-publisher.com",
+  "lightning_source_account": "LSI000000",
+  
+  "company_info": {
+    "legal_name": "BigFiveReplacement LLC",
+    "founded_year": "2025",
+    "headquarters": "Ann Arbor, Michigan, USA",
+    "website": "https://www.nimblebooks.com",
+    "phone": "+1-555-123-4567",
+    "tax_id": "XX-XXXXXXX"
+  },
+  
+  "business_model": {
+    "publishing_type": "Conglomerate",
+    "distribution_model": "Traditional",
+    "primary_markets": ["US", "UK", "CA"],
+    "business_focus": "General Publishing",
+    "annual_titles": "150000"
+  },
+  
+  "default_settings": {
+    "language_code": "eng",
+    "country_of_origin": "US",
+    "territorial_rights": "World",
+    "returnability": "Yes",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "cover_type": "matte"
+  },
+  
+  "pricing_strategy": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "35",
+    "eu_wholesale_discount": "35",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "100",
+    "pricing_model": "competitive"
+  },
+  
+  "distribution_settings": {
+    "lightning_source_account": "LSI000000",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "paperback",
+    "carton_pack_quantity": "24",
+    "order_type_eligibility": "POD",
+    "preferred_printer": "Lightning Source"
+  },
+  
+  "quality_standards": {
+    "min_resolution_dpi": "300",
+    "color_profile": "CMYK",
+    "pdf_version": "PDF/X-1a",
+    "bleed_requirements": "0.125 inches",
+    "spine_calculation_method": "automatic"
+  },
+  
+  "metadata_standards": {
+    "required_fields": [
+      "title", "author", "isbn13", "publication_date",
+      "bisac_category", "summary", "page_count"
+    ],
+    "preferred_bisac_depth": 3,
+    "require_thema_subjects": false,
+    "require_age_range": false,
+    "require_contributor_bio": true
+  },
+  
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "USD",
+      "exchange_rate": 1.0,
+      "tax_rate": "0.0",
+      "shipping_class": "standard"
+    },
+    "UK": {
+      "wholesale_discount_percent": "35",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "exchange_rate": 0.78,
+      "tax_rate": "20.0",
+      "shipping_class": "international"
+    },
+    "EU": {
+      "wholesale_discount_percent": "35",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "exchange_rate": 0.91,
+      "tax_rate": "19.0",
+      "shipping_class": "international"
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "exchange_rate": 1.35,
+      "tax_rate": "5.0",
+      "shipping_class": "north_america"
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "exchange_rate": 1.48,
+      "tax_rate": "10.0",
+      "shipping_class": "international"
+    }
+  },
+  
+  "lsi_account_settings": {
+    "account_number": "LSI000000",
+    "account_type": "Standard",
+    "billing_contact": "billing@template-publisher.com",
+    "technical_contact": "tech@template-publisher.com",
+    "ftp_credentials": {
+      "username": "template_publisher",
+      "server": "ftp.lightningsource.com",
+      "directory": "/incoming"
+    }
+  },
+  
+  "workflow_preferences": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_emails": [
+      "workflow@template-publisher.com",
+      "production@template-publisher.com"
+    ],
+    "backup_configurations": true,
+    "audit_trail": true
+  },
+  
+  "branding_defaults": {
+    "logo_path": "logos/template_publisher_logo.png",
+    "brand_colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "default_fonts": {
+      "title": "Arial Bold",
+      "body": "Times New Roman",
+      "caption": "Arial"
+    }
+  },
+  
+  "marketing_settings": {
+    "default_marketing_copy": "Published by TEMPLATE_PUBLISHER_NAME",
+    "social_media_handles": {
+      "twitter": "@template_publisher",
+      "facebook": "TemplatePublisher",
+      "linkedin": "template-publisher"
+    },
+    "press_contact": "press@template-publisher.com",
+    "review_copy_policy": "Available upon request"
+  },
+  
+  "legal_settings": {
+    "copyright_notice": "© {year} TEMPLATE_PUBLISHER_NAME. All rights reserved.",
+    "legal_disclaimer": "Standard publishing disclaimer",
+    "privacy_policy_url": "https://www.template-publisher.com/privacy",
+    "terms_of_service_url": "https://www.template-publisher.com/terms"
+  },
+  
+  "integration_settings": {
+    "erp_system": "None",
+    "crm_system": "None",
+    "accounting_system": "QuickBooks",
+    "inventory_management": "Manual",
+    "api_endpoints": {},
+    "webhook_urls": []
+  }
+}

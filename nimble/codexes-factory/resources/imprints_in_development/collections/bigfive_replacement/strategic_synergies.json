@@ -1,0 +1,28 @@
+{
+  "imprint": "Strategic Synergies",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@strategicsynergies.com",
+  "branding": {
+    "tagline": "Unleash the power of synergy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.strategicsynergies.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Business strategy, mergers and acquisitions, and corporate synergy",
+    "target_audience": "Business strategists, executives, and consultants",
+    "competitive_advantage": "Strategic insights to leverage corporate synergies for growth",
+    "example_titles": "The Art of M&A, Creating Corporate Synergies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

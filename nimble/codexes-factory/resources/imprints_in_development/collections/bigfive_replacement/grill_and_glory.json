@@ -1,0 +1,28 @@
+{
+  "imprint": "Grill and Glory",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@grillandglory.com",
+  "branding": {
+    "tagline": "Master the Flame, Taste the Glory",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.grillandglory.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "BBQ, grilling, outdoor cooking",
+    "target_audience": "BBQ lovers, outdoor cooks, grill masters",
+    "competitive_advantage": "Specialized in BBQ and grilling techniques",
+    "example_titles": "The Big BBQ Book, Grill Master's Guide"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

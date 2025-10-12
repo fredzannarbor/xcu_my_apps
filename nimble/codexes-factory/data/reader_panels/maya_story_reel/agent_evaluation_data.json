@@ -1,0 +1,6855 @@
+{
+  "book_title": "Maya's Story Reel",
+  "book_description": "\nMAYA'S STORY REEL - A Contemporary Children's Book About Literacy and AI\n\nTARGET AUDIENCE: Children ages 9-10, especially struggling readers and their families\n\nPREMISE:\nMaya Chan, a 4th grader, creates viral POV rescue videos using Sora AI but struggles with reading.\nWith the help of SoRogue (an AI companion) and her supportive mom learning about the Science of Reading,\nMaya discovers how to bridge her creative talents with phonics through \"Phonics Rescue Reels.\"\n\nKEY THEMES:\n- Self-awareness and emotional regulation for children\n- Growth mindset for families\n- Science of Reading / Structured Literacy\n- Creative use of AI as a learning tool\n- Literacy and mental health connection\n\nCONTEMPORARY HOOK: Sora POV storytelling integrated with phonics instruction\n\nCHAPTER OVERVIEW:\nChapter 1: The Dolphin Dash and the Tricky Words - Maya bursts with excitement about her latest viral Sora POV video, 'POV: You're a brave girl swimmer caught in a raging riptide, and a clever female dolphin flips you onto her back to safety while you...\nChapter 2: The 'Silent Reading' Storm - During silent reading, Maya pretends to comprehend, shame building as words blur. Ms. Albright checks in gently. Evening, Mom spots the unopened folder, probing homework. Maya deflects, but SoRogue te...\nChapter 3: The Hidden Rescue - Homework words blur; Mom helps with sounds, but Maya snaps in frustration, retreating. Mom guiltily recalls her struggles. In her room, Maya vents to SoRogue, who quotes Toni Morrison\u2014'If there's a bo...\n\nEDUCATIONAL VALUE:\n- Demonstrates phonics concepts through engaging narratives\n- Shows how technology can support (not replace) literacy instruction\n- Addresses reading anxiety and builds confidence\n- Models parent learning alongside child\n\nTOTAL CHAPTERS: 11\nTARGET WORD COUNT: 11000 words\n",
+  "book_logline": "A viral video creator discovers how AI can help unlock reading through creative phonics rescue stories",
+  "panels": {
+    "children_9_10": [
+      {
+        "name": "Advanced Reader Aria #1",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #2",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #3",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #4",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #5",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #6",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #7",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #8",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #9",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #10",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #11",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #12",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #13",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #14",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #15",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #16",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #17",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #18",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #19",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Advanced Reader Aria #20",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 6,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "science",
+            "animals",
+            "mysteries"
+          ],
+          "personality_traits": [
+            "curious",
+            "confident reader",
+            "loves complex stories"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #1",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #2",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #3",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #4",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #5",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #6",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #7",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #8",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #9",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #10",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #11",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #12",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #13",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #14",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #15",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #16",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #17",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #18",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #19",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Reluctant Reader Ryan #20",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 1,
+            "reading_level": "below grade level"
+          },
+          "interests": [
+            "video games",
+            "sports",
+            "technology"
+          ],
+          "personality_traits": [
+            "frustrated with reading",
+            "visual learner",
+            "prefers action"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #1",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #2",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #3",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #4",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #5",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #6",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #7",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #8",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #9",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #10",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #11",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #12",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #13",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #14",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #15",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #16",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #17",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #18",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #19",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Grade Level Grace #20",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 3,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "friends",
+            "school",
+            "animals"
+          ],
+          "personality_traits": [
+            "likes relatable stories",
+            "social",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #1",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #2",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #3",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #4",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #5",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #6",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #7",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #8",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #9",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #10",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #11",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #12",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #13",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #14",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #15",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #16",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #17",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #18",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #19",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Savvy Tara #20",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 4,
+            "reading_level": "at grade level"
+          },
+          "interests": [
+            "coding",
+            "AI",
+            "video creation",
+            "TikTok"
+          ],
+          "personality_traits": [
+            "creative",
+            "digital native",
+            "likes modern stories"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #1",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #2",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #3",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #4",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #5",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #6",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #7",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #8",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #9",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #10",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #11",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #12",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #13",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #14",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #15",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #16",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #17",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #18",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #19",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      },
+      {
+        "name": "Animal Lover Alex #20",
+        "characteristics": {
+          "age_range": "9-10",
+          "reading_level": "varies",
+          "preferred_genres": [
+            "Adventure",
+            "Humor",
+            "Contemporary",
+            "Animals"
+          ],
+          "reading_habits": {
+            "books_per_month": 5,
+            "reading_level": "above grade level"
+          },
+          "interests": [
+            "animals",
+            "nature",
+            "rescues"
+          ],
+          "personality_traits": [
+            "compassionate",
+            "loves animal stories",
+            "visual thinker"
+          ]
+        }
+      }
+    ],
+    "parents": [
+      {
+        "name": "Concerned Parent Carmen #1",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #2",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #3",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #4",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #5",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #6",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #7",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #8",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #9",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #10",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #11",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #12",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #13",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #14",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #15",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #16",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #17",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #18",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #19",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Concerned Parent Carmen #20",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 2
+          },
+          "priorities": [
+            "literacy development",
+            "reduces screen time",
+            "builds confidence"
+          ],
+          "personality_traits": [
+            "worried about reading struggles",
+            "supportive",
+            "seeks solutions"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #1",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #2",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #3",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #4",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #5",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #6",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #7",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #8",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #9",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #10",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #11",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #12",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #13",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #14",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #15",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #16",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #17",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #18",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #19",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Tech-Positive Parent Taylor #20",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "modern learning",
+            "tech integration",
+            "engagement"
+          ],
+          "personality_traits": [
+            "open to AI tools",
+            "values innovation",
+            "growth mindset"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #1",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #2",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #3",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #4",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #5",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #6",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #7",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #8",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #9",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #10",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #11",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #12",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #13",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #14",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #15",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #16",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #17",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #18",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #19",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Traditional Parent Pat #20",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 4
+          },
+          "priorities": [
+            "phonics instruction",
+            "proven methods",
+            "fundamentals"
+          ],
+          "personality_traits": [
+            "skeptical of tech",
+            "values classics",
+            "concerned about quality"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #1",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #2",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #3",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #4",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #5",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #6",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #7",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #8",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #9",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #10",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #11",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #12",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #13",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #14",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #15",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #16",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #17",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #18",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #19",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      },
+      {
+        "name": "Diverse Family Parent Dana #20",
+        "characteristics": {
+          "age_range": "30-45",
+          "role": "parent",
+          "concerns": [
+            "child literacy",
+            "screen time",
+            "educational value"
+          ],
+          "reading_habits": {
+            "buys_books_per_month": 3
+          },
+          "priorities": [
+            "representation",
+            "cultural relevance",
+            "character diversity"
+          ],
+          "personality_traits": [
+            "seeks inclusive stories",
+            "values authenticity",
+            "community-minded"
+          ]
+        }
+      }
+    ],
+    "reading_experts": [
+      {
+        "name": "Science of Reading Expert Dr. Sarah #1",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #2",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #3",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #4",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #5",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #6",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #7",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #8",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #9",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Science of Reading Expert Dr. Sarah #10",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "structured literacy",
+          "experience": "15+ years",
+          "priorities": [
+            "phonics instruction",
+            "evidence-based",
+            "systematic approach"
+          ],
+          "personality_traits": [
+            "data-driven",
+            "rigorous",
+            "advocates for proven methods"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #1",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #2",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #3",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #4",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #5",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #6",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #7",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #8",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #9",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Elementary Teacher Ms. Thompson #10",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "classroom application",
+          "experience": "10 years",
+          "priorities": [
+            "student engagement",
+            "practical tools",
+            "differentiation"
+          ],
+          "personality_traits": [
+            "student-centered",
+            "innovative",
+            "empathetic"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #1",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #2",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #3",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #4",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #5",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #6",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #7",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #8",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #9",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "Reading Specialist Rita #10",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "intervention",
+          "experience": "20 years",
+          "priorities": [
+            "struggling readers",
+            "multisensory methods",
+            "confidence building"
+          ],
+          "personality_traits": [
+            "patient",
+            "creative",
+            "solution-oriented"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #1",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #2",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #3",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #4",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #5",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #6",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #7",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #8",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #9",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "EdTech Specialist Ethan #10",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "technology integration",
+          "experience": "8 years",
+          "priorities": [
+            "digital literacy",
+            "AI in education",
+            "modern learning"
+          ],
+          "personality_traits": [
+            "forward-thinking",
+            "practical",
+            "balanced approach"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #1",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #2",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #3",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #4",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #5",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #6",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #7",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #8",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #9",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      },
+      {
+        "name": "Literacy Coach Laura #10",
+        "characteristics": {
+          "age_range": "35-65",
+          "role": "reading_expert",
+          "expertise": [
+            "literacy",
+            "education",
+            "child development"
+          ],
+          "specialization": "professional development",
+          "experience": "12 years",
+          "priorities": [
+            "teacher support",
+            "family engagement",
+            "whole-child approach"
+          ],
+          "personality_traits": [
+            "collaborative",
+            "holistic",
+            "mentor-minded"
+          ]
+        }
+      }
+    ],
+    "purchasing": [
+      {
+        "name": "Principal Peterson #1",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #2",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #3",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #4",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #5",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #6",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #7",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #8",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #9",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Principal Peterson #10",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "elementary principal",
+          "priorities": [
+            "student achievement",
+            "parent satisfaction",
+            "budget efficiency"
+          ],
+          "personality_traits": [
+            "practical",
+            "results-oriented",
+            "community-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #1",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #2",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #3",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #4",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #5",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #6",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #7",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #8",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #9",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Curriculum Director Chen #10",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "district curriculum director",
+          "priorities": [
+            "alignment to standards",
+            "evidence-based",
+            "scalability"
+          ],
+          "personality_traits": [
+            "analytical",
+            "thorough",
+            "quality-focused"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #1",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #2",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #3",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #4",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #5",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #6",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #7",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #8",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #9",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Librarian Linda #10",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "school librarian",
+          "priorities": [
+            "reading engagement",
+            "diverse collection",
+            "accessibility"
+          ],
+          "personality_traits": [
+            "book lover",
+            "inclusive",
+            "student advocate"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #1",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #2",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #3",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #4",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #5",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #6",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #7",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #8",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #9",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      },
+      {
+        "name": "Special Ed Coordinator Sam #10",
+        "characteristics": {
+          "age_range": "40-60",
+          "role": "decision_maker",
+          "responsibilities": [
+            "budget",
+            "curriculum",
+            "student outcomes"
+          ],
+          "position": "special education coordinator",
+          "priorities": [
+            "accommodations",
+            "intervention tools",
+            "struggling readers"
+          ],
+          "personality_traits": [
+            "equity-minded",
+            "supportive",
+            "practical"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Pulse Point",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pulsepoint.com",
+  "branding": {
+    "tagline": "Feel the pulse",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pulsepoint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Romantic and suspenseful YA",
+    "target_audience": "Teens who delight in romantic suspense",
+    "competitive_advantage": "Unique blend of romance and suspense genres",
+    "example_titles": "Kiera Cass, Stephanie Perkins type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

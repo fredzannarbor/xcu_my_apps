@@ -1,0 +1,28 @@
+{
+  "imprint": "Anime Attic",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@animeattic.com",
+  "branding": {
+    "tagline": "Relive your favourite animes, page by page",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.animeattic.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Adaptations of anime series into webtoon format",
+    "target_audience": "Anime fans, predominantly teens and young adults",
+    "competitive_advantage": "Our unique collaborations with anime studios enable us to create faithful adaptations that resonate with fans",
+    "example_titles": "Titles based on animes like 'Attack on Titan' and 'My Hero Academia'; authors similar to Hajime Isayama"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

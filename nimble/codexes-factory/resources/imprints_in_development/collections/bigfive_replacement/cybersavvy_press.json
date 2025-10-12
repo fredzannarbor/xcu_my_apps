@@ -1,0 +1,28 @@
+{
+  "imprint": "CyberSavvy Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cybersavvypress.com",
+  "branding": {
+    "tagline": "Shaping the digital citizens of tomorrow",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cybersavvypress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Cybersecurity, data privacy, digital rights",
+    "target_audience": "Digital natives and privacy-conscious readers",
+    "competitive_advantage": "Leading readers through the evolving digital landscape",
+    "example_titles": "The Ethical Hacker, Your Data, Your Rights"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

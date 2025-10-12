@@ -1,0 +1,28 @@
+{
+  "imprint": "Sip & Savor",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sipandsavor.com",
+  "branding": {
+    "tagline": "Elevate Each Bite with Every Sip",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sipandsavor.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Wine and food pairing, cocktail recipes, sommelier guides",
+    "target_audience": "Wine lovers, food pairing enthusiasts, bartenders",
+    "competitive_advantage": "Unique focus on food and beverage pairings",
+    "example_titles": "The Sommelier's Table, Mixology & Cuisine"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

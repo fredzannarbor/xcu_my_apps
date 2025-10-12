@@ -1,0 +1,28 @@
+{
+  "imprint": "BioFiction House",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@biofictionhouse.com",
+  "branding": {
+    "tagline": "The Future is Wild",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.biofictionhouse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biodiversity-based climate fiction",
+    "target_audience": "Readers interested in biodiversity and speculative fiction",
+    "competitive_advantage": "Unique blend of biodiversity science and speculative fiction",
+    "example_titles": "Paolo Bacigalupi, Margaret Atwood"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

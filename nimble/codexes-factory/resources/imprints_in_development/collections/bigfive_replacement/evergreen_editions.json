@@ -1,0 +1,28 @@
+{
+  "imprint": "Evergreen Editions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@evergreeneditions.com",
+  "branding": {
+    "tagline": "Books that Stand the Test of Time",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.evergreeneditions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Classics, curated collections, annotated editions",
+    "target_audience": "Senior literature lovers and lifelong learners",
+    "competitive_advantage": "Our editions include special features for aging readers, like larger print and annotations",
+    "example_titles": "Pride and Prejudice: Annotated for the 21st Century, The Complete Works of William Shakespeare: Large Print Edition"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,70 @@
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: book_builder_cookie
+credentials:
+  usernames:
+    admin:
+      email: admin@nimblebooks.com
+      name: Admin
+      password: hotdogtoy
+      role: admin
+      subscription_tier: premium
+    jsmith:
+      email: jsmith@example.com
+      name: John Smith
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: user
+      subscription_tier: free
+    publictest:
+      email: fred@nimblebooks.com
+      name: public test account
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: public
+      subscription_tier: free
+    rroe:
+      email: rroe@example.com
+      name: Rebecca Roe
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: subscriber
+      subscription_tier: basic
+    top:
+      email: top@nimblebooks.com
+      name: Fred
+      password: $2b$12$X5o9mn/Q85ADWlTCvFcU3Ouk.ROU150ua68jLet2vX1qKlA4rzmla
+      role: admin
+      subscription_tier: premium
+    johndoe:
+      email: johndoe@example.com
+      name: John Doe
+      password: $2b$12$unVh54tuSXTM8ljJfv4pHOLfDa6OuAvIctV0P3TYcyJEnAoc5wCpK
+      role: user
+      subscription_tier: free
+    basicbob:
+      email: basicbob@example.com
+      name: Basic Bob
+      password: $2b$12$1qUxi8V5C0IBbuhGF1WbBeoihisS6olhoJgEtuymbaagoti34qhZW
+      role: user
+      subscription_tier: basic
+    priscilla:
+      email: priscilla@example.com
+      name: Priscilla Premium
+      password: $2b$12$HTV.KudY5pnWuoejWGSqDu8ToZ.J4819JY.OlS5TK7m2sk8QlRFve
+      role: user
+      subscription_tier: premium
+    xtraxtuff:
+      email: xtraxtuff@example.com
+      name: Xtra Xtuff
+      password: $2b$12$okMraS4hkJ4ej3cwC3nkVOSNFh0/oD0Q9N8sqLSAQxTBvXL.MuxVS
+      role: user
+      subscription_tier: basic
+      app_access:
+        - xtuff_ai
+imprints:
+- admin
+- axis_and_allies
+- iraq_2025
+- iraq_2025
+pre-authorized:
+  emails:
+  - wfzimmerman@gmail.com

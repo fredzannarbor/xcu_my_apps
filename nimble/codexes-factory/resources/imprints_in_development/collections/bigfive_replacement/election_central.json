@@ -1,0 +1,28 @@
+{
+  "imprint": "Election Central",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@electioncentral.com",
+  "branding": {
+    "tagline": "Your Ballot Box Breakdown",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.electioncentral.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Election coverage, analysis, and predictions",
+    "target_audience": "Voters, political activists, and campaigners",
+    "competitive_advantage": "Comprehensive, unbiased election coverage",
+    "example_titles": "Political analysts and campaign strategists"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

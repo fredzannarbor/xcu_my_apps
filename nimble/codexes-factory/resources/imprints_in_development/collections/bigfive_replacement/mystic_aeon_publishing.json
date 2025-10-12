@@ -1,0 +1,28 @@
+{
+  "imprint": "Mystic Aeon Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mysticaeonpublishing.com",
+  "branding": {
+    "tagline": "Unlock the Universe's Secrets",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mysticaeonpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Tarot cards, divination books, and astrology guides.",
+    "target_audience": "Tarot beginners and experts, spiritual seekers, astrology enthusiasts",
+    "competitive_advantage": "Our materials are insightful and educational, bridging the gap between beginner and expert tarot users with comprehensive guides.",
+    "example_titles": "‘The Comprehensive Guide to Tarot Reading’, ‘Astrology: A Path to Enlightenment’"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

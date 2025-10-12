@@ -1,0 +1,262 @@
+import streamlit as st
+import pandas as pd
+import yaml
+import bcrypt
+import sys
+from pathlib import Path
+from typing import Dict, Any, List
+
+sys.path.insert(0, '/Users/fred/my-apps')
+
+from yaml.loader import SafeLoader
+from shared.ui import render_unified_sidebar
+
+# --- Page Configuration ---
+st.set_page_config(layout="wide", page_title="Admin Dashboard")
+
+render_unified_sidebar(
+    app_name="Codexes Factory - Admin Dashboard",
+    nav_items=[]
+)
+
+# --- Path Configuration ---
+# This pathing assumes the script is run from the project's root directory
+# via `streamlit run src/codexes/codexes-factory-home-ui.py`.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+CONFIG_PATH = PROJECT_ROOT / "resources" / "yaml" / "config.yaml"
+
+# --- Translation ---
+# A minimal translation dictionary for this standalone page.
+translations = {
+    "en": {
+        "admin_title": "👑 Admin Dashboard",
+        "admin_welcome": "Welcome to the admin area, {name}.",
+        "permission_denied": "You do not have permission to view this page. Please log in as an admin.",
+        "config_not_found": f"Admin configuration file not found at `{CONFIG_PATH}`. Please create it from the example.",
+        "config_load_error": "Error loading `config.yaml`: {e}",
+        "config_save_error": "Failed to save `config.yaml`: {e}",
+        "tab_dashboard": "Dashboard",
+        "tab_user_mgmt": "User Management",
+        "dashboard_header": "System Dashboard",
+        "dashboard_info": "This area is under construction. Future dashboards will show:",
+        "dashboard_item1": "- System health and resource usage",
+        "dashboard_item2": "- User activity and sign-ups",
+        "dashboard_item3": "- Sales and revenue metrics",
+        "dashboard_item4": "- API usage statistics",
+        "user_mgmt_header": "User Management",
+        "user_config_invalid": "User configuration is missing or invalid in `config.yaml`.",
+        "edit_user_header": "Edit or Add a New User",
+        "username_label": "Username (must be unique)",
+        "username_help": "Enter an existing username to edit, or a new one to add.",
+        "name_label": "Full Name",
+        "email_label": "Email Address",
+        "password_label": "New Password",
+        "password_help": "Leave blank to keep the existing password. This will be hashed automatically.",
+        "role_label": "Role",
+        "save_button": "Save User",
+        "save_user_success": "User '{username}' saved successfully.",
+        "save_user_error": "Failed to save user. Check logs.",
+        "username_required_error": "Username is required to add or edit a user.",
+        "delete_user_header": "Delete User",
+        "delete_select_user": "Select user to delete",
+        "delete_button": "Delete User Permanently",
+        "delete_warning_self": "You cannot delete your own account.",
+        "delete_select_warning": "Please select a user to delete.",
+        "delete_success": "User '{username}' has been deleted.",
+        "delete_confirmation": "Are you sure you want to delete user '{username}'? This cannot be undone."
+    },
+    "ko": {
+        "admin_title": "👑 관리자 대시보드",
+        "admin_welcome": "{name}님, 관리자 페이지에 오신 것을 환영합니다.",
+        "permission_denied": "이 페이지를 볼 권한이 없습니다. 관리자로 로그인해주세요.",
+        "config_not_found": f"관리자 설정 파일(`{CONFIG_PATH}`)을 찾을 수 없습니다. 예제 파일을 바탕으로 생성해주세요.",
+        "config_load_error": "`config.yaml` 로드 오류: {e}",
+        "config_save_error": "`config.yaml` 저장 실패: {e}",
+        "tab_dashboard": "대시보드",
+        "tab_user_mgmt": "사용자 관리",
+        "dashboard_header": "시스템 대시보드",
+        "dashboard_info": "이 영역은 현재 개발 중입니다. 향후 대시보드에 표시될 내용:",
+        "dashboard_item1": "- 시스템 상태 및 리소스 사용량",
+        "dashboard_item2": "- 사용자 활동 및 가입 현황",
+        "dashboard_item3": "- 판매 및 수익 지표",
+        "dashboard_item4": "- API 사용 통계",
+        "user_mgmt_header": "사용자 관리",
+        "user_config_invalid": "`config.yaml`의 사용자 설정이 없거나 잘못되었습니다.",
+        "edit_user_header": "사용자 수정 또는 추가",
+        "username_label": "사용자 이름 (고유해야 함)",
+        "username_help": "수정하려면 기존 사용자 이름을, 추가하려면 새 사용자 이름을 입력하세요.",
+        "name_label": "전체 이름",
+        "email_label": "이메일 주소",
+        "password_label": "새 비밀번호",
+        "password_help": "기존 비밀번호를 유지하려면 비워두세요. 자동으로 해시 처리됩니다.",
+        "role_label": "역할",
+        "save_button": "사용자 저장",
+        "save_user_success": "'{username}' 사용자가 성공적으로 저장되었습니다.",
+        "save_user_error": "사용자 저장에 실패했습니다. 로그를 확인하세요.",
+        "username_required_error": "사용자를 추가하거나 수정하려면 사용자 이름이 필요합니다.",
+        "delete_user_header": "사용자 삭제",
+        "delete_select_user": "삭제할 사용자 선택",
+        "delete_button": "사용자 영구 삭제",
+        "delete_warning_self": "자신의 계정은 삭제할 수 없습니다.",
+        "delete_select_warning": "삭제할 사용자를 선택해주세요.",
+        "delete_success": "'{username}' 사용자가 삭제되었습니다.",
+        "delete_confirmation": "사용자 '{username}'을(를) 정말로 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+    }
+}
+
+
+def T(key: str, **kwargs) -> str:
+    """Shorthand for getting a translated string."""
+    lang = st.session_state.get('language', 'en')
+    return translations.get(lang, {}).get(key, f"[{key}]").format(**kwargs)
+
+
+# --- Helper Functions ---
+
+@st.cache_resource
+def load_user_config() -> Dict[str, Any]:
+    """Loads the user configuration file."""
+    if not CONFIG_PATH.is_file():
+        st.error(T("config_not_found"))
+        st.stop()
+    try:
+        with open(CONFIG_PATH, 'r') as f:
+            return yaml.load(f, Loader=SafeLoader)
+    except Exception as e:
+        st.error(T("config_load_error", error=e))
+        st.stop()
+
+
+def save_user_config(config: Dict[str, Any]):
+    """Saves the user configuration file."""
+    try:
+        with open(CONFIG_PATH, 'w') as f:
+            yaml.dump(config, f, default_flow_style=False)
+        st.cache_resource.clear()  # Clear cache to force reload on next run
+        return True
+    except Exception as e:
+        st.error(T("config_save_error", error=e))
+        return False
+
+
+# --- UI Components ---
+
+def user_management_tab():
+    """UI for managing users."""
+    st.subheader(T("user_mgmt_header"))
+
+    config = load_user_config()
+    if not config or 'credentials' not in config or 'usernames' not in config:
+        st.warning(T("user_config_invalid"))
+        return
+
+    users = config['credentials']['usernames']
+    user_data = [
+        {"username": username, **details}
+        for username, details in users.items()
+    ]
+    df_users = pd.DataFrame(user_data).drop(columns=['password'], errors='ignore')
+    st.dataframe(df_users, use_container_width=True, hide_index=True)
+
+    st.divider()
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader(T("edit_user_header"))
+        with st.form("user_form"):
+            username = st.text_input(T("username_label"), help=T("username_help"))
+
+            # Pre-fill form if editing an existing user
+            existing_user = users.get(username, {}) if username else {}
+
+            name = st.text_input(T("name_label"), value=existing_user.get("name", ""))
+            email = st.text_input(T("email_label"), value=existing_user.get("email", ""))
+            password = st.text_input(T("password_label"), type="password", help=T("password_help"))
+
+            roles = ["user", "subscriber", "admin"]
+            current_role_index = roles.index(existing_user.get("role", "user")) if existing_user else 0
+            role = st.selectbox(T("role_label"), options=roles, index=current_role_index)
+
+            submitted = st.form_submit_button(T("save_button"))
+
+            if submitted:
+                if not username:
+                    st.error(T("username_required_error"))
+                else:
+                    new_user_data = {
+                        "name": name,
+                        "email": email,
+                        "role": role,
+                    }
+                    if password:
+                        hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+                        new_user_data["password"] = hashed_pw
+                    else:  # Keep old password if it exists
+                        new_user_data["password"] = existing_user.get("password", "")
+
+                    config['credentials']['usernames'][username] = new_user_data
+
+                    if save_user_config(config):
+                        st.success(T("save_user_success", username=username))
+                        st.rerun()
+
+    with col2:
+        st.subheader(T("delete_user_header"))
+        # Prevent admin from deleting themselves
+        user_list = [u for u in users.keys() if u != st.session_state['username']]
+        user_to_delete = st.selectbox(T("delete_select_user"), options=[""] + sorted(user_list))
+
+        if user_to_delete:
+            if st.button(T("delete_button"), type="primary", use_container_width=True):
+                if user_to_delete:
+                    # Final confirmation
+                    if st.session_state.get('confirm_delete') == user_to_delete:
+                        del config['credentials']['usernames'][user_to_delete]
+                        if save_user_config(config):
+                            st.success(T("delete_success", username=user_to_delete))
+                            st.session_state['confirm_delete'] = None  # Reset confirmation
+                            st.rerun()
+                    else:
+                        st.session_state['confirm_delete'] = user_to_delete
+                        st.warning(T("delete_confirmation", username=user_to_delete))
+                        # Use experimental_rerun to show the warning immediately
+                        st.rerun()
+                else:
+                    st.warning(T("delete_select_warning"))
+
+
+def main():
+    """Main function to render the Admin Dashboard page."""
+    st.set_page_config(page_title="Admin Dashboard", layout="wide")
+
+    # Ensure session state is initialized for this page
+    if 'language' not in st.session_state:
+        st.session_state.language = 'en'
+
+    st.title(T("admin_title"))
+
+    # --- Access Control Gate ---
+    # This check relies on the main `codexes-factory-home-ui.py` to have set the user's role.
+    if st.session_state.get("user_role") != "admin":
+        st.error(T("permission_denied"))
+        st.stop()
+
+    st.write(T("admin_welcome", name=st.session_state.get("name", "Admin")))
+
+    tab1, tab2 = st.tabs([T("tab_dashboard"), T("tab_user_mgmt")])
+
+    with tab1:
+        st.header(T("dashboard_header"))
+        st.info(T("dashboard_info"))
+        st.markdown(T("dashboard_item1"))
+        st.markdown(T("dashboard_item2"))
+        st.markdown(T("dashboard_item3"))
+        st.markdown(T("dashboard_item4"))
+
+    with tab2:
+        user_management_tab()
+
+
+if __name__ == "__main__":
+    main()

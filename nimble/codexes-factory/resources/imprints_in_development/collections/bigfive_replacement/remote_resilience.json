@@ -1,0 +1,28 @@
+{
+  "imprint": "Remote Resilience",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@remoteresilience.com",
+  "branding": {
+    "tagline": "Resilience Refined",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.remoteresilience.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Building resilience, stress management, and personal growth in remote work",
+    "target_audience": "Remote workers addressing burnout and stress",
+    "competitive_advantage": "Expertise in resilience and mental health in remote work",
+    "example_titles": "Books like 'Finding Balance in the Virtual World'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

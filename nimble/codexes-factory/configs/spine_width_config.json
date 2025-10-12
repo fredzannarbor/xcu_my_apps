@@ -1,0 +1,58 @@
+{
+  "spine_width_calculation": {
+    "lookup_file_path": "resources/SpineWidthLookup.xlsx",
+    "default_paper_type": "Standard perfect 70",
+    "fallback_width_inches": 0.25,
+    "cache_lookup_data": true,
+    "validation": {
+      "min_width_inches": 0.0625,
+      "max_width_inches": 2.0,
+      "page_correlation_factor": {
+        "min_multiplier": 0.0005,
+        "max_multiplier": 0.008
+      },
+      "warn_on_unusual_values": true,
+      "fail_on_extreme_values": false
+    },
+    "distribution": {
+      "update_metadata": true,
+      "update_cover_generator": true,
+      "metadata_field": "spine_width_in",
+      "cover_generator_method": "set_spine_width"
+    },
+    "error_handling": {
+      "log_calculation_errors": true,
+      "log_validation_warnings": true,
+      "use_fallback_on_error": true,
+      "retry_on_file_error": false
+    }
+  },
+  "paper_types": {
+    "Standard perfect 70": {
+      "description": "Standard 70gsm perfect bound paper",
+      "thickness_factor": 1.0,
+      "recommended": true
+    },
+    "Standard Color 50 Perfect": {
+      "description": "Standard 50gsm color perfect bound paper",
+      "thickness_factor": 0.8,
+      "recommended": false
+    },
+    "Premium 80 Perfect": {
+      "description": "Premium 80gsm perfect bound paper",
+      "thickness_factor": 1.2,
+      "recommended": false
+    }
+  },
+  "lookup_file_format": {
+    "expected_columns": ["Pages", "SpineWidth"],
+    "sheet_names_are_paper_types": true,
+    "fallback_extensions": [".xlsx", ".xls"],
+    "data_validation": {
+      "pages_column_type": "integer",
+      "spine_width_column_type": "float",
+      "require_ascending_pages": true,
+      "require_positive_spine_widths": true
+    }
+  }
+}

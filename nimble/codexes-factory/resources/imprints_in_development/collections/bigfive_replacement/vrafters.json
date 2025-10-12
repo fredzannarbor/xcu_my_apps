@@ -1,0 +1,28 @@
+{
+  "imprint": "VRafters",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vrafters.com",
+  "branding": {
+    "tagline": "Dive into a world of imagination",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vrafters.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Children's and YA literature in VR",
+    "target_audience": "Children and young adults",
+    "competitive_advantage": "Specializing in VR content for young readers",
+    "example_titles": "VR fairy tales, interactive VR YA novels"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

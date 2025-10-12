@@ -1,0 +1,28 @@
+{
+  "imprint": "Virtual Vanguard",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@virtualvanguard.com",
+  "branding": {
+    "tagline": "Pioneering Remote Work Wisdom",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.virtualvanguard.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Virtual team management, communication, and collaboration",
+    "target_audience": "Managers and team leaders of remote teams",
+    "competitive_advantage": "Cutting-edge strategies for managing virtual teams",
+    "example_titles": "Guidebooks like 'Managing Without Borders'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

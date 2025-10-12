@@ -1,0 +1,28 @@
+{
+  "imprint": "AcademicAdept",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@academicadept.com",
+  "branding": {
+    "tagline": "Academic Excellence in Two Tongues",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.academicadept.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Bilingual Spanish-English textbooks and academic publications",
+    "target_audience": "Students, educators, and researchers seeking bilingual academic resources",
+    "competitive_advantage": "We bridge the gap between Spanish and English in academia, offering quality bilingual resources spanning various subjects for students and educators.",
+    "example_titles": "Spanish-English textbooks in various subjects, bilingual academic journals, bilingual reference books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

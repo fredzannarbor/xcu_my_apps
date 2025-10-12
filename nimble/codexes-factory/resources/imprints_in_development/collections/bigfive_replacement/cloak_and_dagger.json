@@ -1,0 +1,28 @@
+{
+  "imprint": "Cloak & Dagger",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cloakanddagger.com",
+  "branding": {
+    "tagline": "Secrets have a price",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cloakanddagger.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Spy Thrillers",
+    "target_audience": "Fans of espionage and international intrigue",
+    "competitive_advantage": "Exclusively dedicated to spy thrillers",
+    "example_titles": "Similar to the works of John le Carré or Tom Clancy"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

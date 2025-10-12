@@ -1,0 +1,29 @@
+This is the response to your DSAR requested on June 26, 2022.
+
+Once you have downloaded the JSON file containing your personal data, here’s how to open the file using Chrome:
+1. Open the file to extract (unzip) the JSON files
+2. Open the Chrome web browser
+3. Under the File menu, select Open File
+4. Navigate to the folder containing the JSON files, select one, and select the open button
+
+If you’d prefer to use Firefox, you can do so following these steps:
+1. Open the file to extract (unzip) the JSON files
+2. Open the Firefox web browser
+3. Under the File menu, select open
+4. Navigate to the folder containing the JSON files, select one, and select the open button
+5. If you see an error, click on the Raw Data tab to view your data (the Raw Data tab should be just above the error message, next to JSON)
+
+LOG_DESCRIPTION
+* ras_logs_user_logins_by_day.json: This tracks the dates when the user used Goodreads features in KindleApps [Fire, e-reader, iOS]
+* ras_request_logs_current.json: This tracks the history of user navigation actions of Goodreads specific features in Kindle apps [kindle e-reader, kindle fire and kindle for ios].
+* request_logs_user_logins_by_hour.json: This tracks the hour and dates when the user used Goodreads site, Goodreads iOS app, Goodreads Android app
+* ras_request_logs_archive_2018.json: This tracks the history of user navigation actions of Goodreads specific features in Kindle apps [kindle e-reader, kindle fire and kindle for ios]. This contains data from year 2018 only
+* request_logs_current.json: This tracks the history of user navigation actions on Goodreads site, Goodreads iOS app, Goodreads Android app
+* request_logs_archive_activity_2018.json: This tracks the history of user navigation actions on Goodreads site, Goodreads iOS app, Goodreads Android app for the year 2018
+* request_logs_archive_activity_2019.json: This tracks the history of user navigation actions on Goodreads site, Goodreads iOS app, Goodreads Android app for the year 2019
+* request_logs_archive_activity_2020.json: This tracks the history of user navigation actions on Goodreads site, Goodreads iOS app, Goodreads Android app for the year 2020
+* track_book_origins.json: This tracks where you clicked Want to Read for a particular book
+* request_logs_user_logins_by_day.json: This tracks the dates when the user used Goodreads site, Goodreads iOS app, Goodreads Android app.
+
+If you have further queries about Goodreads, please visit https://help.goodreads.com/.
+Our Privacy Notice can be found at: https://www.goodreads.com/about/privacy.

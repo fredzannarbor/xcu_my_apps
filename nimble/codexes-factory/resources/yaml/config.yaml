@@ -1,0 +1,63 @@
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: book_builder_cookie
+registration:
+  enabled: true
+  default_role: user
+credentials:
+  usernames:
+    admin:
+      email: admin@nimblebooks.com
+      name: Admin
+      password: hotdogtoy
+      role: admin
+    jsmith:
+      email: jsmith@example.com
+      name: John Smith
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: user
+    publictest:
+      email: fred@nimblebooks.com
+      name: public test account
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: public
+    rroe:
+      email: rroe@example.com
+      name: Rebecca Roe
+      password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
+      role: subscriber
+    top:
+      email: top@nimblebooks.com
+      name: Fred
+      password: $2b$12$X5o9mn/Q85ADWlTCvFcU3Ouk.ROU150ua68jLet2vX1qKlA4rzmla
+      role: admin
+    test_user:
+      name: Fred Zimmerman
+      email: wfzimmerman@gmail.com
+      password: $2b$12$Sfc9WTlWzu1n.elRWndznemwm9GNTnBq1NSbf6rQ2Frha0LIAitH.
+      role: user
+    wfz:
+      name: Fred Zimmerman
+      email: wfz@nimblebooks.com
+      password: $2b$12$BDoqY4NrmzypkZdjkWzZJ.POb3oGbxqf.SP5UnImHjA.zLWvCOeAe
+      role: user
+      subscription_tier: free
+      subscription_status: inactive
+      created_at: '2025-10-09T03:11:48.657504'
+    fredz:
+      name: Fred Zimmerman
+      email: fredz@nimblebooks.com
+      password: $2b$12$2Y39Tvr2fvxZTfpzH6Eioer1V5Etg5dU7tZZ.nO.PFRtok1dP8OQ6
+      role: user
+      subscription_tier: free
+      subscription_status: inactive
+      created_at: '2025-10-09T03:19:54.780336'
+imprints:
+- admin
+- axis_and_allies
+- iraq_2025
+- iraq_2025
+pre-authorized:
+  emails:
+  - wfzimmerman@gmail.com

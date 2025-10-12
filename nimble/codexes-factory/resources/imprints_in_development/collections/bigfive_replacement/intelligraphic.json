@@ -1,0 +1,28 @@
+{
+  "imprint": "IntelliGraphic",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@intelligraphic.com",
+  "branding": {
+    "tagline": "Illustrating the future of storytelling",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.intelligraphic.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "AI-enhanced graphic novels and comics",
+    "target_audience": "Graphic novel fans and technology enthusiasts",
+    "competitive_advantage": "Blend of AI tech and graphic storytelling",
+    "example_titles": "Graphic novels with AI-generated illustrations, Interactive comics"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

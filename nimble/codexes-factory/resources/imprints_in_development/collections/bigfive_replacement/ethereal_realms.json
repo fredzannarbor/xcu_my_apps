@@ -1,0 +1,28 @@
+{
+  "imprint": "Ethereal Realms",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@etherealrealms.com",
+  "branding": {
+    "tagline": "Step Into the Extraordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.etherealrealms.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Epic fantasy, Urban fantasy, Paranormal",
+    "target_audience": "Fantasy fans craving immersive world-building",
+    "competitive_advantage": "Innovative, daring and diverse fantasy worlds",
+    "example_titles": "George R.R. Martin, J.K. Rowling, Neil Gaiman"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=AI Social Server - xtuff.ai
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/xtuff/agentic_social_server
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/xtuff/agentic_social_server
+ExecStart="uv run streamlit run /usr/bin/python app.py"
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

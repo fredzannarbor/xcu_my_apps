@@ -1,0 +1,28 @@
+{
+  "imprint": "InstaGrowth Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@instagrowthpublishing.com",
+  "branding": {
+    "tagline": "Go Viral. Grow Your Business. ",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.instagrowthpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Social media strategy, Instagram marketing",
+    "target_audience": "Small to mid-sized businesses, marketers",
+    "competitive_advantage": "Real-world case studies, success stories, and strategies.",
+    "example_titles": "Instagram marketing guides, case studies of successful businesses"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

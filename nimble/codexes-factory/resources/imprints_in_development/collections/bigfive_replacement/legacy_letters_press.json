@@ -1,0 +1,28 @@
+{
+  "imprint": "Legacy Letters Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@legacyletterspress.com",
+  "branding": {
+    "tagline": "Your Story, Your Legacy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.legacyletterspress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoir writing guides, family history resources",
+    "target_audience": "Seniors wanting to record their life stories",
+    "competitive_advantage": "Our guides make memoir writing accessible and enjoyable for seniors",
+    "example_titles": "Writing Your Legacy by Richard Campbell and Cheryl Svensson, The Family History Workbook"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

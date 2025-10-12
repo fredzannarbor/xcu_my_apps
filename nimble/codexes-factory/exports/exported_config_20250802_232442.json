@@ -1,0 +1,47 @@
+{
+  "_export_info": {
+    "exported_at": "2025-08-02T23:24:42.595306",
+    "exported_from": "Streamlit UI",
+    "version": "1.0"
+  },
+  "configuration": {
+    "publisher": "",
+    "imprint": "",
+    "tranche": "",
+    "schedule_file": "UploadedFile(file_id='11c63c6b-6971-40fe-80c7-0381eb4d599b', name='schedule.json', type='application/json', size=71378, _file_urls=file_id: \"11c63c6b-6971-40fe-80c7-0381eb4d599b\"\nupload_url: \"/_stcore/upload_file/fb69a49a-54c7-4089-92a6-cff5cc3e0202/11c63c6b-6971-40fe-80c7-0381eb4d599b\"\ndelete_url: \"/_stcore/upload_file/fb69a49a-54c7-4089-92a6-cff5cc3e0202/11c63c6b-6971-40fe-80c7-0381eb4d599b\"\n)",
+    "model": "gemini/gemini-2.5-flash",
+    "verifier_model": "gemini/gemini-2.5-pro",
+    "start_stage": 1,
+    "end_stage": 4,
+    "max_books": 1,
+    "begin_with_book": 9,
+    "end_with_book": 0,
+    "quotes_per_book": 90,
+    "only_run_prompts": "",
+    "skip_lsi": false,
+    "enable_llm_completion": true,
+    "enable_isbn_assignment": true,
+    "lsi_config": "",
+    "lsi_template": "templates/LSI_ACS_header.csv",
+    "report_formats": [
+      "html",
+      "csv",
+      "markdown"
+    ],
+    "legacy_reports": false,
+    "model_params_file": "resources/json/model_params.json",
+    "catalog_file": "data/books.csv",
+    "base_dir": "",
+    "debug_cover": false,
+    "leave_build_dirs": true,
+    "catalog_only": false,
+    "skip_catalog": false,
+    "max_retries": 5,
+    "base_delay": 1.0,
+    "max_delay": 60.0,
+    "terse_log": false,
+    "no_litellm_log": true,
+    "show_prompt_logs": false,
+    "verbose": false
+  }
+}

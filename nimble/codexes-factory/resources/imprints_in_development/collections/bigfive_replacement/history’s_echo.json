@@ -1,0 +1,28 @@
+{
+  "imprint": "History’s Echo",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@history’secho.com",
+  "branding": {
+    "tagline": "Experience history like never before",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.history’secho.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical fiction and time travel",
+    "target_audience": "Teens with a passion for history and culture",
+    "competitive_advantage": "Focus on historical accuracy and immersive storytelling",
+    "example_titles": "Elizabeth Wein, Ruta Sepetys type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

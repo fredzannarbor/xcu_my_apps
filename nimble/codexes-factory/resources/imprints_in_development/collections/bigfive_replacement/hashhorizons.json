@@ -1,0 +1,28 @@
+{
+  "imprint": "HashHorizons",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@hashhorizons.com",
+  "branding": {
+    "tagline": "Blockchain Beyond Borders",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.hashhorizons.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Social impact of blockchain, ethical considerations, blockchain in governance",
+    "target_audience": "Social scientists, policymakers, ethical thinkers",
+    "competitive_advantage": "Unique intersection of blockchain technology and social issues",
+    "example_titles": "Blockchain and Society by Nick Szabo, Crypto Ethics by Hal Finney"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

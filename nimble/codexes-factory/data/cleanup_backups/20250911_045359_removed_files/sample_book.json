@@ -1,0 +1,69 @@
+{
+  "title": "The Art of Critical Thinking",
+  "description": "A collection of thought-provoking quotes on critical thinking, reasoning, and intellectual growth.",
+  "author": "AI Lab for Book-Lovers",
+  "publisher": "Nimble Books LLC",
+  "imprint": "xynapse traces",
+  "quotes": [
+    {
+      "quote": "The important thing is not to stop questioning. Curiosity has its own reason for existing.",
+      "author": "Albert Einstein",
+      "source": "Life Magazine",
+      "date_first_published": "1955"
+    },
+    {
+      "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      "author": "Aristotle",
+      "source": "Nicomachean Ethics",
+      "date_first_published": "350 BCE"
+    },
+    {
+      "quote": "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+      "author": "Aristotle",
+      "source": "Metaphysics",
+      "date_first_published": "350 BCE"
+    },
+    {
+      "quote": "The unexamined life is not worth living.",
+      "author": "Socrates",
+      "source": "Apology",
+      "date_first_published": "399 BCE"
+    },
+    {
+      "quote": "I think, therefore I am.",
+      "author": "René Descartes",
+      "source": "Discourse on the Method",
+      "date_first_published": "1637"
+    },
+    {
+      "quote": "Doubt is not a pleasant condition, but certainty is absurd.",
+      "author": "Voltaire",
+      "source": "Letters on England",
+      "date_first_published": "1734"
+    },
+    {
+      "quote": "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
+      "author": "Daniel J. Boorstin",
+      "source": "The Discoverers",
+      "date_first_published": "1983"
+    },
+    {
+      "quote": "Real knowledge is to know the extent of one's ignorance.",
+      "author": "Confucius",
+      "source": "The Analects",
+      "date_first_published": "500 BCE"
+    },
+    {
+      "quote": "The mind is not a vessel to be filled, but a fire to be kindled.",
+      "author": "Plutarch",
+      "source": "On Listening to Lectures",
+      "date_first_published": "100 CE"
+    },
+    {
+      "quote": "We don't see things as they are, we see them as we are.",
+      "author": "Anaïs Nin",
+      "source": "Seduction of the Minotaur",
+      "date_first_published": "1961"
+    }
+  ]
+}

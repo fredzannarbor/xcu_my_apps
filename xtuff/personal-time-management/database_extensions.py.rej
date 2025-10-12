@@ -1,0 +1,25 @@
+@@ -454,8 +437,8 @@
+         try:
+             if counter_name:
+                 cursor.execute('''
+-                    SELECT counter_name, date, count, timestamp
+-                    FROM behavior_counters
++                    SELECT date, count, timestamp
++                    FROM behavior_counters 
+                     WHERE counter_name = ?
+                     ORDER BY date DESC
+                     LIMIT ?
+@@ -473,10 +456,9 @@
+             if counter_name:
+                 return [
+                     {
+-                        'counter_name': row[0],
+-                        'date': row[1],
+-                        'count': row[2],
+-                        'timestamp': row[3]
++                        'date': row[0],
++                        'count': row[1],
++                        'timestamp': row[2]
+                     }
+                     for row in results
+                 ]

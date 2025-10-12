@@ -1,0 +1,44 @@
+[Unit]
+Description=Launching Streamlit App
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfz/codexes-factory
+ExecStart=/home/wfz/codexes-factory/.venv/bin/streamlit run /home/wfz/codexes-factory/src/codexes/codexes-factory-home-ui.py
+Restart=always
+RestartSec=10
+StartLimitIntervalSec=60
+StartLimitBurst=5
+Environment="PATH=/home/wfz/codexes-factory/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="STRIPE_PUBLISHABLE_KEY=pk_live_51HSpP0EkhPBoRSztV4Jrw1XMxm6EunLFus2Z9bYSfOTUoGv1eWbapEsTZxknBuAXDaR7ZKskzZYLaNhSLvKpeDvG00P2jeveZ7"
+Environment="STRIPE_SECRET_KEY=sk_test_51HSpP0EkhPBoRSztQiBMFo1YZODqiFmrIeBDV1XWi8KB2OFSniKlWUTBICfHV5kAFlXALU4NrTf1VfC876AoAez000ODzn5pz5"
+Environment="STRIPE_ENDPOINT_SECRET=whsec_24IjnqX7ObGjj5p7cVVpGUKPxc3nCGle"
+Environment="STRIPE_PRICE_ID=basic"
+Environment="STRIPE_PRICE_ID_2=price_1IqvlKEkhPBoRSzt4dhPWoi7"
+Environment="OPENAI_CONFIG=/Users/fred/bin/nimble/openai/starter/openai.cfg"
+Environment="OPENAI_API_KEY=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"
+Environment="OPENAI_USER_ID_FOR_SAFETY_TRACKING=6"
+Environment="HELICONE_API_KEY=sk-helicone-fptsgha-mpve5nq-q6socei-vvweoxq"
+Environment="ENC_PASSWORD=YouWillNeverGuessThisSecretKey32"
+Environment="ENC_NONCE=nonsensical"
+Environment="STORAGE=SQLITE"
+Environment="SQLITE_DB_PATH=./db"
+Environment="SQLITE_DB=restore.db"
+Environment="URI_SQLITE_DB=db/restore.db"
+Environment="MAIL_USERNAME=wfz@nimblebooks.com"
+Environment="MAIL_PASSWORD=dhVN7i6V70rP"
+Environment="FILE_ROOT=/home/wfz/codexes-factory/"
+Environment="FORTUNE_BIN=/usr/games/fortune"
+Environment="FORTUNE_DATABASE=quiller"
+Environment="FORTUNE_FLAG=''"
+Environment="MNEMONIC=fossil lava stamp earth memory girl card helmet october fuel sadness velvet"
+Environment="ALEPH_ALPHA_API_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2MDEsInJvbGUiOiJDbGllbnQiLCJjcmVhdGVkIjoxNjUwODU1OTkwMDgzMzM0ODA4fQ.iib2RfCtBVXuS7xRyT7u-K218KeZpjxRnII5PelVd5o"
+Environment="ZOTERO_LIBRARY_ID=8920562"
+Environment="ZOTERO_LIBRARY_TYPE=user"
+Environment="ZOTERO_API_KEY=ZDOIGuNQrOfrCxuFPjvETA3f"
+
+[Install]
+WantedBy=multi-user.target

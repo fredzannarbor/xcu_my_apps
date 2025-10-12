@@ -1,0 +1,19 @@
+[Unit]
+Description=Resume & Contact - fredzannarbor.com
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/xtuff/resume-site
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/xtuff/resume-site/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/local/bin/uv run streamlit run app.py --server.port=8508 --server.address=127.0.0.1 --server.headless=true
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/xtuff/resume-site/logs/resume.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/xtuff/resume-site/logs/resume-error.log
+
+[Install]
+WantedBy=multi-user.target

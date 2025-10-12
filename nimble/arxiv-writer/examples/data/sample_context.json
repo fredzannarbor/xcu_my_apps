@@ -1,0 +1,30 @@
+{
+  "title": "AI-Assisted Academic Paper Generation: A Case Study",
+  "authors": ["John Doe", "Jane Smith"],
+  "abstract": "This paper presents a novel approach to automated academic paper generation using large language models.",
+  "keywords": ["AI", "academic writing", "automation", "NLP"],
+  "research_domain": "Computer Science",
+  "methodology": "Mixed methods approach combining quantitative analysis and qualitative case studies",
+  "key_findings": [
+    "AI-assisted writing can improve productivity by 40%",
+    "Quality metrics remain comparable to human-written papers",
+    "Template-based approaches show better consistency"
+  ],
+  "datasets": [
+    {
+      "name": "Academic Papers Corpus",
+      "size": "10,000 papers",
+      "domain": "Computer Science"
+    }
+  ],
+  "technical_details": {
+    "models_used": ["GPT-4", "Claude-3"],
+    "frameworks": ["LiteLLM", "Pydantic"],
+    "languages": ["Python", "LaTeX"]
+  },
+  "results": {
+    "generation_time": "15 minutes average",
+    "word_count_range": "3000-8000 words",
+    "quality_score": "8.5/10"
+  }
+}

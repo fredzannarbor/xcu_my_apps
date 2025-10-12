@@ -1,0 +1,28 @@
+{
+  "imprint": "Pulse of the Nation",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pulseofthenation.com",
+  "branding": {
+    "tagline": "Feel the Nation's Pulse",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pulseofthenation.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Public opinion, polls, and sentiment analysis",
+    "target_audience": "Politicians, political consultants, and analysts",
+    "competitive_advantage": "Unique access to up-to-date public sentiment data",
+    "example_titles": "Pollsters, survey researchers, and political analysts"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

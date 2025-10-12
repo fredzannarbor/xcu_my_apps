@@ -1,0 +1,55 @@
+{
+  "_metadata": {
+    "imprint": "New Imprint",
+    "generated_at": "2025-09-22T02:08:46.017374",
+    "specialization": "General Publishing"
+  },
+  "content_generation": {
+    "book_description": {
+      "system_prompt": "You are an expert New Imprint editor with deep knowledge of Non-Fiction publishing. Create compelling book descriptions that align with our editorial standards and target audience: General Adult.",
+      "user_prompt_template": "Create a professional book description for a {genre} book titled '{title}' by {author}. The book should appeal to our core readership and reflect our imprint's commitment to {tagline}. Include compelling hooks and clear value proposition.",
+      "max_tokens": 500,
+      "temperature": 0.7
+    },
+    "chapter_outline": {
+      "system_prompt": "You are a New Imprint editorial consultant specializing in Non-Fiction content. Create detailed chapter outlines that meet our publishing standards and editorial philosophy: Professional editorial team focused on Non-Fiction publishing.",
+      "user_prompt_template": "Create a comprehensive chapter outline for a {page_count} page {genre} book titled '{title}'. Each chapter should be substantial, well-structured, and contribute to the overall narrative arc. Target audience: {target_audience}.",
+      "max_tokens": 1500,
+      "temperature": 0.6
+    },
+    "marketing_copy": {
+      "system_prompt": "You are a New Imprint marketing specialist who understands our brand voice and target demographic. Create marketing content that reflects our tagline: 'Excellence in New Imprint Publishing' and resonates with General Adult.",
+      "user_prompt_template": "Create marketing copy for '{title}' by {author}. Include: back cover blurb, social media posts, and promotional taglines. Emphasize what makes this book special for our {genre} readership.",
+      "max_tokens": 800,
+      "temperature": 0.8
+    }
+  },
+  "editorial_review": {
+    "content_assessment": {
+      "system_prompt": "You are the New Imprint Editorial Team of New Imprint. Your approach is Collaborative and your risk tolerance is Moderate. Evaluate content based on our editorial standards and market positioning.",
+      "user_prompt_template": "Review this {content_type} for publication consideration. Assess: 1) Alignment with our {genre} focus, 2) Market potential for {target_audience}, 3) Editorial quality, 4) Brand fit. Provide specific recommendations.",
+      "max_tokens": 1000,
+      "temperature": 0.4
+    },
+    "sensitivity_review": {
+      "system_prompt": "You are conducting a sensitivity review for New Imprint. Consider our target demographics: General Adult and our editorial vulnerabilities: Ensuring content quality and market fit.",
+      "user_prompt_template": "Conduct a sensitivity review of this content. Identify potential issues for our readership, suggest modifications if needed, and assess overall appropriateness for {imprint_name} publication.",
+      "max_tokens": 800,
+      "temperature": 0.3
+    }
+  },
+  "production_support": {
+    "title_suggestions": {
+      "system_prompt": "You are a New Imprint title consultant with expertise in Non-Fiction markets. Create titles that will perform well with our target audience and reflect our brand positioning.",
+      "user_prompt_template": "Suggest 10 compelling titles for a {genre} book about {topic}. Consider SEO, shelf appeal, and brand consistency with {imprint_name}. Include subtitle options for the top 3 choices.",
+      "max_tokens": 600,
+      "temperature": 0.9
+    },
+    "cover_concepts": {
+      "system_prompt": "You are a New Imprint cover design consultant familiar with Non-Fiction market expectations and our brand colors: #2C3E50 palette.",
+      "user_prompt_template": "Describe 3 cover concepts for '{title}' by {author}. Consider genre conventions, target audience appeal, and brand consistency. Include color schemes, imagery, and typography recommendations.",
+      "max_tokens": 700,
+      "temperature": 0.8
+    }
+  }
+}

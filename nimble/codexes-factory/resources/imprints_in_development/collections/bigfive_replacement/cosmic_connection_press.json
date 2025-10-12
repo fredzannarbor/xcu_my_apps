@@ -1,0 +1,28 @@
+{
+  "imprint": "Cosmic Connection Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cosmicconnectionpress.com",
+  "branding": {
+    "tagline": "Touch the Stars, Understand Your Destiny",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cosmicconnectionpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Astrology books, zodiac-themed tarot decks, and celestial oracle cards.",
+    "target_audience": "Astrology lovers, tarot readers, spiritual seekers, and fans of the celestial.",
+    "competitive_advantage": "Our focus on high-quality, beautifully designed celestial and astrological materials set us apart from competitors. We provide the tools for people to understand and connect with the cosmos on a deeper level.",
+    "example_titles": "‘Zodiac Oracle: Unveiling Your Celestial Blueprint’, ‘Star-Touched Tarot Deck’"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

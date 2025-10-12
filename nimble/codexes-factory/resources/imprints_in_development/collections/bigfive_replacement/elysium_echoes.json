@@ -1,0 +1,28 @@
+{
+  "imprint": "Elysium Echoes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@elysiumechoes.com",
+  "branding": {
+    "tagline": "Journey beyond reality",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.elysiumechoes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Epic fantasy with a philosophical bent",
+    "target_audience": "Mature readers seeking thought-provoking fantasy tales",
+    "competitive_advantage": "We focus on tales that challenge and expand the reader's worldview, fostering deeper engagement",
+    "example_titles": "Comparable to works by Ursula K. Le Guin or China Miéville"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

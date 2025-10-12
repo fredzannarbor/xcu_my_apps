@@ -1,0 +1,28 @@
+{
+  "imprint": "Patriot Pages",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@patriotpages.com",
+  "branding": {
+    "tagline": "Stories of Valor, Voices of Veterans",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.patriotpages.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Personal narratives from war veterans, inspiring stories of wartime resilience, and accounts of homefront support",
+    "target_audience": "Veterans and their families, students of history, readers interested in personal narratives",
+    "competitive_advantage": "Gives a voice to the often overlooked personal narratives of war, from veterans to families on the homefront",
+    "example_titles": "Memoirs of war veterans, narratives of resistance fighters, accounts of homefront heroes"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

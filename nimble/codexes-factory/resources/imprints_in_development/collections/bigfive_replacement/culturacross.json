@@ -1,0 +1,28 @@
+{
+  "imprint": "CulturaCross",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@culturacross.com",
+  "branding": {
+    "tagline": "Crossing Cultures, Connecting Worlds",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.culturacross.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Bilingual Spanish-English memoirs, travelogues, and cultural explorations",
+    "target_audience": "Travel enthusiasts, culture seekers, and bilingual readers interested in intercultural experiences",
+    "competitive_advantage": "Our insightful, authentic narratives offer readers immersive journeys across cultures, fostering understanding and appreciation of diverse perspectives.",
+    "example_titles": "Memoirs by bilingual authors, Spanish-English translations of travel literature, cultural guides to Spanish-speaking countries"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

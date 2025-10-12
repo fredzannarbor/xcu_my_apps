@@ -1,0 +1,19 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "July",
+      "year": "2025",
+      "books": [
+        {
+          "title": "Why Hippopotamuses Are Terrifying.",
+          "description": "A collection of thought-provoking quotes on Africa's most dangerous creature.",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "xynapse traces",
+          "stream": "Philosophy"
+  ]
+}
+        ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Ethereal Emporium",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@etherealemporium.com",
+  "branding": {
+    "tagline": "Discover the extraordinary in the ordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.etherealemporium.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Urban fantasy featuring unusual occupations and settings",
+    "target_audience": "Readers intrigued by the supernatural hidden within everyday life",
+    "competitive_advantage": "We specialize in stories set in unusual occupations or settings, offering a fresh perspective in urban fantasy",
+    "example_titles": "Comparable to works by Charlaine Harris or Benedict Jacka"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Outpost Originals",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@outpostoriginals.com",
+  "branding": {
+    "tagline": "Think Ahead, Think Remote",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.outpostoriginals.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Thought leadership, disruptive ideas, and visionary concepts in remote work",
+    "target_audience": "Thought leaders and visionaries in remote work",
+    "competitive_advantage": "Fresh, disruptive ideas in remote work",
+    "example_titles": "Books like 'Disrupting Distance: The Future of Work'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "imprint_name": "Not a Miracle Readers",
+  "version": "1.0",
+  "created_date": "2025-10-10",
+  "based_on": "Maya's Story Reel - High-Volume Reader Panel Analysis (7.89/10 from 270 evaluations)",
+
+  "imprint_philosophy": {
+    "core_mission": "Create engaging middle-grade fiction that seamlessly integrates Science of Reading principles with contemporary hooks and character-driven narratives",
+    "educational_foundation": "Science of Reading (SoR) - evidence-based reading instruction emphasizing phonics, phonemic awareness, fluency, vocabulary, and comprehension",
+    "target_audience": "Children aged 9-12 (primarily 9-10), families, educators, reading specialists",
+    "market_positioning": "Multi-functional: classroom adoption, home reading, reading intervention, reluctant reader engagement"
+  },
+
+  "required_story_elements": {
+    "educational_integration": {
+      "primary_skill": "One specific reading/literacy skill (phonics patterns, comprehension strategies, fluency techniques, vocabulary building)",
+      "skill_progression": "Natural arc from struggle → frustration → breakthrough → practice → mastery → teaching others",
+      "integration_method": "Creative activity that protagonist loves naturally teaches the academic skill (e.g., video creation teaches phonics, podcast production teaches vocabulary)",
+      "explicit_instruction": "Include moments of direct, systematic teaching (mentor/teacher/AI companion explaining concepts)",
+      "evidence_base": "All educational content must align with established SoR research and methods"
+    },
+
+    "protagonist_requirements": {
+      "age_range": "9-10 years old",
+      "diversity": "Varied ethnic, cultural, socioeconomic, family structure, learning profile backgrounds",
+      "core_struggle": "Specific reading/literacy challenge that is destigmatized and normalized",
+      "personality": "Relatable, flawed, growing - not perfect or one-dimensional",
+      "passion": "One creative/contemporary interest they deeply care about (separate from academics)",
+      "dual_journey": "External plot (creative goal) + internal arc (skill mastery + self-awareness/confidence)"
+    },
+
+    "contemporary_hook": {
+      "definition": "Current cultural phenomenon or technology that 9-10 year olds in 2025 find exciting and relevant",
+      "examples": [
+        "AI-powered video creation (Sora, POV content)",
+        "Podcast production and storytelling",
+        "Game design and modding",
+        "Digital art and animation",
+        "Social media content creation (age-appropriate)",
+        "Coding and robotics",
+        "Music production and remixing",
+        "Photography and visual storytelling",
+        "Virtual world building",
+        "Science experiments and maker culture"
+      ],
+      "requirements": [
+        "Must be genuinely current (not dated references)",
+        "Should connect to protagonist's creative passion",
+        "Needs to provide natural vehicle for skill integration",
+        "Must appeal across demographic groups",
+        "Should feel aspirational but achievable"
+      ],
+      "integration_pattern": "Contemporary hook is NOT a gimmick - it's the protagonist's authentic passion that becomes the bridge to academic skill development"
+    },
+
+    "character_growth_arcs": {
+      "protagonist_skill_arc": [
+        "Initial struggle with specific literacy skill (with emotional impact)",
+        "Frustration and avoidance behaviors",
+        "Discovery of connection between passion and skill",
+        "Breakthrough moment (small but meaningful)",
+        "Deliberate practice integrated with creative work",
+        "Mastery demonstration through creative achievement",
+        "Teaching/sharing knowledge with others"
+      ],
+      "protagonist_emotional_arc": [
+        "Self-awareness development (for children)",
+        "Growth mindset cultivation",
+        "Confidence building through evidence",
+        "Community connection and contribution",
+        "Identity formation (reader + creator)"
+      ],
+      "parallel_adult_arc": {
+        "character_type": "Parent, teacher, or mentor",
+        "starting_belief": "Fixed mindset or limiting beliefs about learning",
+        "journey": "Learns alongside protagonist, shifts perspective",
+        "resolution": "Models growth mindset for family audience",
+        "purpose": "Provides secondary theme for adult readers"
+      }
+    },
+
+    "quirky_engaging_settings": {
+      "primary_setting": "Realistic contemporary location (school, home, community space)",
+      "secondary_setting": "Imaginative/unique space connected to contemporary hook (virtual world, creative lab, special program)",
+      "setting_requirements": [
+        "Relatable to diverse readers (not exclusive to one socioeconomic group)",
+        "Provides opportunities for both struggle and triumph",
+        "Allows for meaningful peer interactions",
+        "Supports educational integration naturally",
+        "Has unique or quirky elements that make it memorable"
+      ],
+      "examples": [
+        "Brooklyn classroom + Sora virtual video world (Maya)",
+        "Community makerspace + podcast studio",
+        "School library + game design lab",
+        "Home kitchen + food science YouTube channel",
+        "Public park + nature photography project"
+      ]
+    },
+
+    "supporting_characters": {
+      "mentor_guide": {
+        "types": ["Teacher", "Librarian", "AI companion", "Older student", "Family member", "Community expert"],
+        "role": "Provides explicit instruction, encouragement, and growth mindset modeling",
+        "personality": "Warm, knowledgeable, patient, with own quirks and interests",
+        "ai_companion_option": {
+          "if_used": "Should have distinct personality and voice",
+          "knowledge_base": "Quotes diverse, accessible literature (not overly academic)",
+          "function": "Scaffolds learning, provides encouragement, adds humor",
+          "example": "SoRogue (Maya) - science nerd AI quoting diverse female authors"
+        }
+      },
+      "antagonist_or_obstacle": {
+        "types": ["External pressure (testing, principal)", "Peer misunderstanding", "Time constraints", "Resource limitations", "Internal doubt"],
+        "requirements": [
+          "NOT villainous - should have understandable motivations",
+          "Creates meaningful stakes without being mean-spirited",
+          "Ideally resolved through understanding rather than defeat",
+          "Should relate to real pressures kids face"
+        ],
+        "example": "Dr. Thorne (Maya) - principal tracking rogue AIs, needs backstory/motivation"
+      },
+      "peer_group": {
+        "diversity": "Varied backgrounds, interests, learning profiles",
+        "roles": "Friends, collaborators, initial skeptics who become supporters",
+        "purpose": "Show different paths to learning, normalize struggles, create community"
+      }
+    },
+
+    "narrative_structure": {
+      "format": "11 chapters, approximately 11,000 total words (~1,000 words per chapter)",
+      "pacing": "Balance between action/excitement and reflective/learning moments",
+      "chapter_pattern": [
+        "Ch 1: Introduce protagonist, struggle, contemporary passion, inciting incident",
+        "Ch 2-3: Establish problem, show impact of struggle, introduce mentor/guide",
+        "Ch 4-5: Discovery of connection between passion and skill, initial resistance",
+        "Ch 6-7: Breakthrough and commitment to practice (midpoint)",
+        "Ch 8-9: Progress with setbacks, deepening skill and confidence",
+        "Ch 10: Stakes rise, pressure builds toward final demonstration",
+        "Ch 11: Resolution showing mastery through creative achievement, teaching others"
+      ],
+      "chapter_requirements": {
+        "setting_details": "Specific, vivid, multi-sensory descriptions",
+        "skill_focus_integration": "How this chapter advances the literacy skill development",
+        "contemporary_hook_usage": "How the current cultural element appears and matters",
+        "emotional_beats": "Clear emotional journey within the chapter",
+        "chapter_purpose": "What this chapter accomplishes for plot and character"
+      }
+    }
+  },
+
+  "evaluation_criteria": {
+    "children_9_10_appeal": {
+      "weight": 30,
+      "factors": [
+        "Protagonist relatability and authenticity",
+        "Contemporary hook relevance and excitement",
+        "Pacing and action balance",
+        "Humor and emotional resonance",
+        "Ending satisfaction"
+      ]
+    },
+    "educational_integrity": {
+      "weight": 25,
+      "factors": [
+        "Science of Reading alignment",
+        "Skill progression logic and accuracy",
+        "Natural integration (not preachy or forced)",
+        "Evidence-based methods",
+        "Clear learning outcomes"
+      ]
+    },
+    "market_viability": {
+      "weight": 20,
+      "factors": [
+        "Multi-stakeholder appeal (children, parents, educators, decision makers)",
+        "Competitive differentiation from existing titles",
+        "Series potential and scalability",
+        "Classroom adoption potential",
+        "Parent purchase likelihood"
+      ]
+    },
+    "character_development": {
+      "weight": 15,
+      "factors": [
+        "Protagonist growth arc clarity and authenticity",
+        "Supporting character depth",
+        "Emotional journey resonance",
+        "Growth mindset modeling",
+        "Diverse representation"
+      ]
+    },
+    "creative_execution": {
+      "weight": 10,
+      "factors": [
+        "Originality of contemporary hook application",
+        "Setting uniqueness and memorability",
+        "Narrative voice strength",
+        "Plot structure effectiveness",
+        "Resolution satisfaction"
+      ]
+    }
+  },
+
+  "tournament_parameters": {
+    "idea_tournament": {
+      "total_ideas": 128,
+      "evaluation_stage": "High-level concept only (1 paragraph pitch)",
+      "panel_size": 5,
+      "panel_composition": "Children's publishing experts (editors, agents, literacy specialists)",
+      "scoring_focus": ["Concept originality", "Educational potential", "Market appeal", "Character promise", "Contemporary hook strength"],
+      "output": "Top 16 ideas advance to treatment development"
+    },
+    "treatment_tournament": {
+      "total_treatments": 128,
+      "evaluation_stage": "Expanded outline (3-5 pages with chapter summaries)",
+      "panel_size": 5,
+      "panel_composition": "Children's publishing experts (editors, agents, literacy specialists)",
+      "scoring_focus": ["Educational integration quality", "Character arc development", "Plot structure", "Series potential", "Execution feasibility"],
+      "output": "Top 8 treatments advance to full outline development"
+    },
+    "expert_panel_personas": [
+      {
+        "role": "Children's Book Editor (Big 5 Publisher)",
+        "expertise": "Market trends, acquisition decisions, series development",
+        "perspective": "Commercial viability + literary quality"
+      },
+      {
+        "role": "Literary Agent (Middle Grade Specialist)",
+        "expertise": "Author platform, pitch effectiveness, publisher fit",
+        "perspective": "Saleability + author voice potential"
+      },
+      {
+        "role": "Reading Specialist / Literacy Coach",
+        "expertise": "Science of Reading, intervention strategies, educational standards",
+        "perspective": "Educational integrity + classroom applicability"
+      },
+      {
+        "role": "Elementary School Librarian",
+        "expertise": "Child engagement, diversity, curriculum alignment, reluctant readers",
+        "perspective": "Kid appeal + practical classroom/library use"
+      },
+      {
+        "role": "Curriculum Director / District Decision Maker",
+        "expertise": "Adoption criteria, budget allocation, evidence requirements",
+        "perspective": "Scalability + measurable outcomes + cost-effectiveness"
+      }
+    ]
+  },
+
+  "idea_generation_prompts": {
+    "idea_pitch_template": "Generate a one-paragraph pitch for a Not a Miracle Readers book that includes: (1) Protagonist name, age, background, and specific reading struggle, (2) Contemporary hook/passion, (3) Quirky setting, (4) The creative activity that will teach the literacy skill, (5) The specific literacy skill being taught, (6) The emotional/character growth arc, (7) One unique twist or memorable element.",
+
+    "diversity_requirements": [
+      "Ethnic/cultural diversity (varied backgrounds, not tokenization)",
+      "Family structure diversity (single parent, two moms, grandparent-raised, blended, etc.)",
+      "Learning profile diversity (dyslexia, ADHD, ELL, late bloomer, specific skill gaps)",
+      "Socioeconomic diversity (urban, suburban, rural; various income levels)",
+      "Geographic diversity (different regions, not just coastal cities)",
+      "Interest diversity (STEM, arts, sports, nature, technology, making, etc.)"
+    ],
+
+    "contemporary_hook_rotation": "Ensure 128 ideas use varied contemporary hooks (not all AI/video). Examples: podcast production, game design, digital art, coding, music creation, photography, science experiments, robotics, virtual worlds, social media content, animation, etc.",
+
+    "literacy_skill_coverage": [
+      "Phonics patterns (consonant blends, vowel teams, silent letters, etc.)",
+      "Phonemic awareness (sound manipulation, rhyming, segmenting)",
+      "Fluency (phrasing, expression, rate, accuracy)",
+      "Vocabulary (morphology, context clues, academic language)",
+      "Comprehension strategies (visualization, questioning, summarizing, inferring)",
+      "Written expression (sentence structure, organization, voice)"
+    ]
+  },
+
+  "treatment_development_prompts": {
+    "treatment_template": "For the winning idea, create a 3-5 page treatment that includes: (1) Book Overview (premise, themes, target age, word count), (2) Protagonist Profile (detailed background, personality, struggle, passion, growth arc), (3) Supporting Characters (mentor, peers, antagonist/obstacle, parallel adult arc), (4) Setting Description (primary and secondary settings with sensory details), (5) Contemporary Hook Integration (how it works in the story, why kids will care), (6) Educational Integration Plan (specific skill, progression, teaching moments, creative activity connection), (7) Chapter-by-Chapter Summary (11 chapters with key events, skill development, emotional beats), (8) Series Potential (how this could expand to more books).",
+
+    "quality_standards": [
+      "Educational content must be accurate and evidence-based (fact-check phonics progressions, SoR methods)",
+      "Character voices must be authentic to age (test against real 9-10 year old speech patterns)",
+      "Contemporary hooks must be current (verify 2025 relevance)",
+      "Settings must be vivid and memorable (specific sensory details)",
+      "Pacing must balance action and reflection (approximately 60/40 split)",
+      "Emotional arcs must be earned (show the work, not just tell the transformation)",
+      "Endings must be satisfying but not overly tidy (allow for growth continuation)"
+    ]
+  },
+
+  "success_patterns_from_maya": {
+    "what_worked_universally": [
+      "Phonics Rescue Reels concept (creative integration of skill practice)",
+      "Sora/AI contemporary hook (genuinely exciting to kids in 2025)",
+      "Mom's parallel growth mindset journey (appeals to family audience)",
+      "Destigmatization of reading struggles (normalizes challenges)",
+      "SoRogue AI companion personality (humor + guidance)",
+      "Evidence-based ending (Maya demonstrates real progress)"
+    ],
+    "what_needs_improvement_lessons": [
+      "Antagonist depth (Dr. Thorne too one-dimensional - give clear motivations)",
+      "Literary quotes accessibility (simplify references, use kid-lit authors)",
+      "Phonics progression logic (follow developmental sequences, not random order)",
+      "Pacing in resolution (don't rush final chapters)",
+      "Chapter differentiation (avoid repetitive scenes in middle chapters)",
+      "Balance educational content (50% kids said 'too much phonics focus' - integrate more naturally)"
+    ],
+    "stakeholder_specific_appeals": {
+      "children_9_10": "Contemporary hook must be genuinely cool, pacing must have action, protagonist must feel real (not preachy)",
+      "parents": "Growth mindset modeling, evidence-based approach, family conversation starters, screen time balance addressed",
+      "reading_experts": "SoR accuracy, intervention potential, diverse representation, supplementary materials available",
+      "purchasing_decision_makers": "Evidence base, scalability, measurable outcomes, multi-context utility (classroom + intervention + library)"
+    }
+  },
+
+  "output_specifications": {
+    "idea_format": {
+      "title": "Working title (can be placeholder)",
+      "protagonist": "Name, age, background, specific struggle",
+      "contemporary_hook": "Current cultural element",
+      "literacy_skill": "Specific SoR-aligned skill",
+      "creative_integration": "How passion teaches skill",
+      "setting": "Primary and secondary locations",
+      "character_arc": "Emotional/skill growth journey",
+      "unique_element": "One memorable twist or feature",
+      "pitch": "One compelling paragraph"
+    },
+    "treatment_format": {
+      "sections": [
+        "Book Overview",
+        "Protagonist Profile",
+        "Supporting Characters",
+        "Setting Description",
+        "Contemporary Hook Integration",
+        "Educational Integration Plan",
+        "Chapter-by-Chapter Summary (11 chapters)",
+        "Series Potential"
+      ],
+      "length": "3-5 pages (1,500-2,500 words)",
+      "tone": "Professional pitch document for publishing stakeholders"
+    }
+  },
+
+  "validation_checklist": {
+    "before_tournament_evaluation": [
+      "[ ] Educational content fact-checked by literacy expert",
+      "[ ] Contemporary hooks verified as current in 2025",
+      "[ ] Protagonist ages and voices authentic to 9-10 year olds",
+      "[ ] Diversity representation is respectful and non-tokenizing",
+      "[ ] Phonics/SoR progressions follow evidence-based sequences",
+      "[ ] Settings are vivid and memorable",
+      "[ ] Character arcs are complete and earned",
+      "[ ] All ideas/treatments include required elements from spec",
+      "[ ] Format matches output specifications",
+      "[ ] No duplicative concepts across the 128 entries"
+    ]
+  },
+
+  "metadata": {
+    "spec_author": "Claude Code",
+    "reverse_engineered_from": [
+      "Maya's Story Reel complete outline (11 chapters, 11,000 words)",
+      "Multi-model feedback synthesis (Claude, GPT-4o, Gemini, Grok)",
+      "High-volume reader panel results (270 evaluations, 7.89/10 overall)"
+    ],
+    "intended_use": [
+      "Generate 128 book ideas for Idea Tournament",
+      "Develop 128 treatments for Treatment Tournament",
+      "Guide full outline development for winning concepts",
+      "Ensure consistency across Not a Miracle Readers series",
+      "Provide framework for author collaboration and co-authorship"
+    ],
+    "next_steps": [
+      "Generate 128 diverse book ideas using this spec",
+      "Create expert panel personas for tournament evaluation",
+      "Run Idea Tournament (128 → 16 winners)",
+      "Develop 128 treatments (including 16 winning ideas + 112 new concepts)",
+      "Run Treatment Tournament (128 → 8 winners)",
+      "Advance top 8 to full outline development with high-volume reader panels"
+    ]
+  }
+}

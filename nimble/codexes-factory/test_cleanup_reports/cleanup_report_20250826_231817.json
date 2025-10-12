@@ -1,0 +1,265 @@
+{
+  "session_info": {
+    "cleanup_session_id": "cleanup_20250826_231817",
+    "start_time": "2025-08-26 23:18:17.792842",
+    "end_time": "2025-08-26 23:18:17.794460",
+    "total_operations": 4,
+    "successful_operations": 3,
+    "failed_operations": 1,
+    "files_moved": 1,
+    "files_deleted": 1,
+    "directories_created": 1,
+    "directories_removed": 1,
+    "backup_ids": [],
+    "validation_results": {
+      "timestamp": "2025-08-26T23:18:17.794438",
+      "total_tests": 6,
+      "passed_tests": 5,
+      "failed_tests": 1,
+      "warnings": 3,
+      "overall_success": false,
+      "test_results": [
+        {
+          "test_name": "import_validation",
+          "success": true,
+          "message": "All critical imports working correctly",
+          "warnings": [
+            "Non-critical module import issue: optional_module"
+          ]
+        },
+        {
+          "test_name": "configuration_validation",
+          "success": true,
+          "message": "All configuration files loaded successfully",
+          "warnings": []
+        },
+        {
+          "test_name": "file_reference_validation",
+          "success": false,
+          "message": "Found broken file references",
+          "warnings": [
+            "Reference to moved file in old_script.py"
+          ],
+          "errors": [
+            "Broken reference: old_path/missing_file.json"
+          ]
+        },
+        {
+          "test_name": "script_validation",
+          "success": true,
+          "message": "All critical scripts validated successfully",
+          "warnings": []
+        },
+        {
+          "test_name": "directory_structure_validation",
+          "success": true,
+          "message": "Directory structure is correct",
+          "warnings": [
+            "Unexpected directory: temp_folder"
+          ]
+        },
+        {
+          "test_name": "functionality_preservation",
+          "success": true,
+          "message": "All functionality preserved",
+          "warnings": [
+            "LLM integration warning: API key not configured"
+          ]
+        }
+      ]
+    }
+  },
+  "operations": [
+    {
+      "operation_id": "move_001",
+      "operation_type": "move",
+      "source_path": "test_file.py",
+      "destination_path": "tests/test_file.py",
+      "timestamp": "2025-08-26 23:18:17.794417",
+      "success": true,
+      "message": "Moved test file to tests directory",
+      "backup_id": null,
+      "files_affected": [
+        "test_file.py"
+      ],
+      "references_updated": [
+        "src/main.py",
+        "docs/README.md"
+      ]
+    },
+    {
+      "operation_id": "delete_001",
+      "operation_type": "delete",
+      "source_path": "exported_config_20240101_120000.json",
+      "destination_path": null,
+      "timestamp": "2025-08-26 23:18:17.794420",
+      "success": true,
+      "message": "Deleted temporary exported config file",
+      "backup_id": null,
+      "files_affected": [
+        "exported_config_20240101_120000.json"
+      ],
+      "references_updated": []
+    },
+    {
+      "operation_id": "merge_001",
+      "operation_type": "merge",
+      "source_path": "config",
+      "destination_path": "configs",
+      "timestamp": "2025-08-26 23:18:17.794421",
+      "success": true,
+      "message": "Merged config directory into configs",
+      "backup_id": null,
+      "files_affected": [
+        "config/app.json",
+        "config/db.json"
+      ],
+      "references_updated": [
+        "src/app.py",
+        "src/database.py"
+      ]
+    },
+    {
+      "operation_id": "move_002",
+      "operation_type": "move",
+      "source_path": "locked_file.py",
+      "destination_path": "src/locked_file.py",
+      "timestamp": "2025-08-26 23:18:17.794423",
+      "success": false,
+      "message": "Failed to move file: Permission denied",
+      "backup_id": null,
+      "files_affected": [],
+      "references_updated": []
+    }
+  ],
+  "directory_changes": [
+    {
+      "change_type": "created",
+      "path": "tests/integration",
+      "old_path": null,
+      "new_path": null,
+      "reason": "Created directory for integration tests",
+      "files_count": 0
+    },
+    {
+      "change_type": "removed",
+      "path": "old_docs",
+      "old_path": null,
+      "new_path": null,
+      "reason": "Removed obsolete documentation directory",
+      "files_count": 5
+    },
+    {
+      "change_type": "moved",
+      "path": "docs/api",
+      "old_path": "api_docs",
+      "new_path": "docs/api",
+      "reason": "Moved API documentation to docs directory",
+      "files_count": 12
+    },
+    {
+      "change_type": "merged",
+      "path": "configs",
+      "old_path": "config",
+      "new_path": "configs",
+      "reason": "Merged config directory into configs",
+      "files_count": 8
+    }
+  ],
+  "final_structure": {
+    "type": "directory",
+    "children": {
+      "cleanup_reports": {
+        "type": "directory",
+        "children": {
+          "cleanup_20250826_231817_initial_snapshot.json": {
+            "type": "file",
+            "size": 2443
+          }
+        }
+      },
+      "configs": {
+        "type": "directory",
+        "children": {
+          "config.json": {
+            "type": "file",
+            "size": 33
+          }
+        }
+      },
+      "data": {
+        "type": "directory",
+        "children": {
+          "sample.csv": {
+            "type": "file",
+            "size": 29
+          }
+        }
+      },
+      "docs": {
+        "type": "directory",
+        "children": {
+          "README.md": {
+            "type": "file",
+            "size": 28
+          }
+        }
+      },
+      "logs": {
+        "type": "directory",
+        "children": {
+          "app.log": {
+            "type": "file",
+            "size": 26
+          }
+        }
+      },
+      "prompts": {
+        "type": "directory",
+        "children": {
+          "sample.json": {
+            "type": "file",
+            "size": 33
+          }
+        }
+      },
+      "src": {
+        "type": "directory",
+        "children": {
+          "codexes": {
+            "type": "directory",
+            "children": {
+              "core": {
+                "type": "directory",
+                "children": {
+                  "test_module.py": {
+                    "type": "file",
+                    "size": 45
+                  }
+                }
+              },
+              "modules": {
+                "type": "directory",
+                "children": {
+                  "test_feature.py": {
+                    "type": "file",
+                    "size": 49
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "tests": {
+        "type": "directory",
+        "children": {
+          "test_example.py": {
+            "type": "file",
+            "size": 35
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "book_title": "Maya's Story Reel",
+  "total_chapters": 11,
+  "target_word_count": 11000,
+  "outline_metadata": {
+    "protagonist_name": "Maya Chan",
+    "primary_theme": "Self-awareness (for children)",
+    "secondary_theme": "Growth mindset (for families)",
+    "contemporary_hook": "Sora POV storytelling",
+    "b_plot_antagonist": "Thorn (security AI model that prioritizes engagement over learning)",
+    "key_relationships": "SoRogue (helpful AI) vs Thorn (engagement-focused AI), with Maya, Mom, and Ms. Allright navigating the intersection"
+  },
+  "introductory_guidance": {
+    "creative_considerations": [
+      "Maintain Thorn as the AI security/engagement antagonist throughout; all former 'principal' references have been replaced.",
+      "Follow the correct phonics sequence: ch/sh \u2192 ea \u2192 igh, ensuring consistency across chapters.",
+      "Preserve the emotional arc: Chapters 1\u20136 show Animals Rescuing Children (dependence to safety); Chapters 7\u201311 show Children Rescuing Animals (agency and mastery).",
+      "Simplify or adapt literary quotes to suit ages 9\u201310 while keeping thematic intent intact."
+    ],
+    "learning_and_theme_considerations": [
+      "Preserve an empathy-first tone in all Sora prompts; keep under 45 words and focus on courage, care, and connection.",
+      "Use present tense and sensory language in every POV story to maintain immersive Sora-style realism.",
+      "Ensure contrast between SoRogue (learning ally) and Thorn (engagement manipulator) is dramatized but not caricatured.",
+      "Each chapter should demonstrate incremental literacy or emotional-growth skills aligned with structured literacy goals."
+    ]
+  },
+  "sorogue_prompts": "Included from integrated version (11 ARC + 11 CRA prompts).",
+  "thorn_interventions": "Included from integrated version (11 detailed interventions).",
+  "chapters": "All 11 chapters from integrated outline, already cleaned and ready for drafting."
+}

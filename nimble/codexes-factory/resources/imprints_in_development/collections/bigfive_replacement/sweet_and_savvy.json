@@ -1,0 +1,28 @@
+{
+  "imprint": "Sweet and Savvy",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sweetandsavvy.com",
+  "branding": {
+    "tagline": "Satisfying Your Sweet Tooth",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sweetandsavvy.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Desserts, confections, sweet treats",
+    "target_audience": "Dessert aficionados, home bakers",
+    "competitive_advantage": "Wide variety of sweet recipes from across the globe",
+    "example_titles": "The Global Dessert Guide, Confectionery Creations"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

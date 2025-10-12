@@ -1,0 +1,28 @@
+{
+  "imprint": "Narrative Nexus",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@narrativenexus.com",
+  "branding": {
+    "tagline": "Your Nexus to New Worlds",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.narrativenexus.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy, sci-fi, and adventure series",
+    "target_audience": "Young adult and adult fantasy readers",
+    "competitive_advantage": "Diverse, imaginative world-building in continuous narratives",
+    "example_titles": "George R.R. Martin's Game of Thrones, Philip Pullman's His Dark Materials"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

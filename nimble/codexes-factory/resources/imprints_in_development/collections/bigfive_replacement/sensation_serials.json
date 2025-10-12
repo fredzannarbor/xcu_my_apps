@@ -1,0 +1,28 @@
+{
+  "imprint": "Sensation Serials",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sensationserials.com",
+  "branding": {
+    "tagline": "Feel the Sensation of Continuity",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sensationserials.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Romance, drama, and mystery series",
+    "target_audience": "Romance and Drama fans",
+    "competitive_advantage": "In-depth character development and cliffhanger endings",
+    "example_titles": "Bridgerton, Sherlock Holmes"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

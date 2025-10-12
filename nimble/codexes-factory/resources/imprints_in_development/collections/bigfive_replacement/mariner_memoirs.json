@@ -1,0 +1,28 @@
+{
+  "imprint": "Mariner Memoirs",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@marinermemoirs.com",
+  "branding": {
+    "tagline": "Sail the seas of history",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.marinermemoirs.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of sailors and maritime explorers",
+    "target_audience": "Readers interested in maritime history and exploration",
+    "competitive_advantage": "Unparalleled coverage of the world of seafaring and exploration",
+    "example_titles": "Autobiographies of famous sailors, sea explorers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

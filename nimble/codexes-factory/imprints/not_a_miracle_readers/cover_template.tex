@@ -1,0 +1,248 @@
+% Cover template for Not A Miracle Readers early chapter books
+\documentclass[12pt]{article}
+
+% This template creates a full-bleed book cover for early readers (8.5x8.5 format)
+% It is populated and compiled by the Python script.
+
+% Required packages
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ifthen}
+
+% Font setup for Not A Miracle Readers
+% Using Lexend for maximum readability and Science of Reading alignment
+\setmainfont{Lexend}[
+    Scale=1.0,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+\setsansfont{Lexend}[
+    Scale=1.0,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+\setmonofont{Atkinson Hyperlegible}[
+    Scale=0.95,
+]
+
+\newfontfamily\booktitlefont{Lexend}[
+    Scale=1.2,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+\newfontfamily\imprintfont{Lexend}[
+    Scale=1.0,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+
+% --- These values are replaced by the Python script ---
+\newcommand{\coverPageHeight}{9in}
+\newcommand{\coverPageWidth}{12.125in}
+\newcommand{\coverBookTitle}{Maya's Rescue Code}
+\newcommand{\coverBookAuthor}{Not A Miracle Team}
+\newcommand{\coverImprint}{Not A Miracle Readers}
+\newcommand{\coverTargetAge}{Ages 9-10}
+
+% Structural placeholders
+\newcommand{\coverBookSubtitleChunk}{}
+\newcommand{\coverDrawBarcode}{}
+
+% Dimensional placeholders
+\newcommand{\coverTrimWidth}{6in}
+\newcommand{\coverTrimHeight}{9in}
+\newcommand{\coverSpineWidth}{0.125in}
+\newcommand{\coverBleedIn}{0.125in}
+\newcommand{\coverFrontCoverXShift}{3.0625in}
+\newcommand{\coverBackCoverXShift}{-3.0625in}
+\newcommand{\coverBackCoverText}{Back cover text goes here.}
+\newcommand{\coverDebugMode}{false}
+% --- End of replaceable values ---
+
+% Define brand colors for Not A Miracle Readers
+\definecolor{miracleblue}{RGB}{52, 152, 219}
+\definecolor{miraclelightblue}{RGB}{174, 214, 241}
+\definecolor{miracleorange}{RGB}{230, 126, 34}
+\definecolor{miraclegreen}{RGB}{46, 204, 113}
+\definecolor{miraclegray}{RGB}{127, 140, 141}
+\definecolor{coverbackground}{RGB}{236, 240, 241}
+\definecolor{covertext}{RGB}{44, 62, 80}
+\definecolor{spinetext}{RGB}{255, 255, 255}
+
+% Set the exact page dimensions for the full cover spread
+\geometry{
+    paperheight=\coverPageHeight,
+    paperwidth=\coverPageWidth,
+    margin=0in
+}
+
+% Prevent page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+    % Background
+    \fill[coverbackground] (current page.south west) rectangle (current page.north east);
+
+    % Spine with bright color
+    \coordinate (spineleft) at ([xshift=-0.5*\coverSpineWidth]current page.center);
+    \coordinate (spineright) at ([xshift=0.5*\coverSpineWidth]current page.center);
+    \fill[miracleblue] (spineleft) rectangle ([shift={(0,\coverPageHeight)}]spineright);
+
+    % Spine text
+    \node[
+        rotate=270,
+        anchor=center,
+        text=spinetext,
+        font=\booktitlefont\small
+    ] at (current page.center) {\coverBookTitle};
+
+    % --- Front Cover Content ---
+    \coordinate (covercenter) at ([xshift=\coverFrontCoverXShift]current page.center);
+
+    % Add colorful accent shapes for visual interest
+    \fill[miraclelightblue, opacity=0.3] ([xshift=-3in, yshift=2.5in]covercenter) circle (1.5in);
+    \fill[miracleorange, opacity=0.3] ([xshift=2.5in, yshift=-2in]covercenter) circle (1.2in);
+    \fill[miraclegreen, opacity=0.3] ([xshift=-2in, yshift=-2.5in]covercenter) circle (1in);
+
+    % Top decorative bar
+    \fill[miracleblue] ([xshift=-4in, yshift=3.75in]covercenter) rectangle ([xshift=4in, yshift=4in]covercenter);
+
+    % Age indicator in top bar
+    \node[
+        anchor=north east,
+        text=white,
+        font=\imprintfont\small\bfseries
+    ] at ([xshift=3.8in, yshift=3.9in]covercenter) {\coverTargetAge};
+
+    % Title - large, friendly, colorful
+    \node[
+        anchor=north,
+        text width=7in,
+        text centered,
+        text=miracleblue,
+        font=\booktitlefont\Huge\bfseries
+    ] at ([yshift=3.3in]covercenter) {
+        \coverBookTitle
+    };
+
+    % Subtitle if provided
+    \node[
+        anchor=north,
+        text width=7in,
+        text centered,
+        text=miraclegray,
+        font=\imprintfont\large
+    ] at ([yshift=2.4in]covercenter) {
+        \coverBookSubtitleChunk
+    };
+
+    % Central illustration placeholder with colorful frame
+    \node[
+        anchor=center,
+        inner sep=0pt
+    ] at ([yshift=0.3in]covercenter) {
+        \begin{tikzpicture}
+            \draw[line width=6pt, miracleblue] (0,0) rectangle (6in, 4in);
+            \fill[white] (0.1in, 0.1in) rectangle (5.9in, 3.9in);
+            \node[text=miraclegray, font=\imprintfont\large] at (3in, 2in) {[Cover Illustration]};
+        \end{tikzpicture}
+    };
+
+    % Author
+    \node[
+        anchor=south,
+        text width=7in,
+        text centered,
+        text=covertext,
+        font=\imprintfont\Large
+    ] at ([yshift=-3.3in]covercenter) {
+        by \coverBookAuthor
+    };
+
+    % Bottom decorative bar with imprint
+    \fill[miracleblue] ([xshift=-4in, yshift=-4in]covercenter) rectangle ([xshift=4in, yshift=-3.75in]covercenter);
+
+    \node[
+        anchor=center,
+        text=white,
+        font=\imprintfont\large\bfseries
+    ] at ([yshift=-3.875in]covercenter) {
+        \coverImprint
+    };
+
+    % --- Back Cover ---
+    \coverDrawBarcode
+
+    \coordinate (backcovercenter) at ([xshift=\coverBackCoverXShift]current page.center);
+
+    % Back cover decorative elements
+    \fill[miraclelightblue, opacity=0.3] ([xshift=2in, yshift=2in]backcovercenter) circle (1.2in);
+    \fill[miracleorange, opacity=0.3] ([xshift=-2.2in, yshift=-1.8in]backcovercenter) circle (1in);
+
+    % Back cover text box with border
+    \node[
+        anchor=north,
+        text width=6.5in,
+        align=left,
+        font=\imprintfont\normalsize,
+        text=covertext,
+        inner sep=15pt,
+        draw=miracleblue,
+        line width=2pt,
+        fill=white,
+        rounded corners=5pt
+    ] at ([yshift=3.5in]backcovercenter) {
+        \coverBackCoverText
+    };
+
+    % Not A Miracle branding on back
+    \node[
+        anchor=south,
+        text=miracleblue,
+        font=\imprintfont\small\bfseries
+    ] at ([yshift=-3.8in]backcovercenter) {
+        Reading is not magic—it's a skill we can learn!
+    };
+
+    % Debug mode (optional)
+    \ifthenelse{\equal{\coverDebugMode}{true}}{
+        \begin{scope}[
+            font=\sffamily\tiny,
+            every node/.style={
+                fill=white,
+                fill opacity=0.8,
+                text opacity=1.0,
+                inner sep=2pt,
+                align=left
+            }
+        ]
+            % Trim box
+            \coordinate (trim_top_left) at ([xshift={-0.5*\coverSpineWidth - \coverTrimWidth}, yshift=0.5*\coverTrimHeight]current page.center);
+            \coordinate (trim_bottom_right) at ([xshift={0.5*\coverSpineWidth + \coverTrimWidth}, yshift=-0.5*\coverTrimHeight]current page.center);
+            \draw[blue, thick, dashed] (trim_top_left) rectangle (trim_bottom_right) node[pos=0.01, anchor=north west] {Trim Box};
+
+            % Spine guides
+            \draw[green, thick] (spineleft) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Left};
+            \draw[green, thick] (spineright) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Right};
+
+            % Bleed box
+            \draw[red, thick, dotted] (current page.north west) rectangle (current page.south east) node[pos=0.01, anchor=north west] {Bleed Box};
+        \end{scope}
+    }{}
+
+\end{tikzpicture}
+\end{document}

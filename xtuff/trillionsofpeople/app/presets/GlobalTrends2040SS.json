@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: Separate Silos",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: In 2040, the world is fragmented into several economic and security blocs of varying size and strength, centered on the United States, China, the European Union, Russia, and a few regional powers, and focused on self-sufficiency, resiliency, and defense. Information flows within separate cyber-sovereign enclaves, supply chains are reoriented, and international trade is disrupted. Vulnerable developing countries are caught in the middle with some on the verge of becoming failed states. Global problems, notably climate change, are spottily addressed, if at all.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0.5,
+        "pp": 0.3,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

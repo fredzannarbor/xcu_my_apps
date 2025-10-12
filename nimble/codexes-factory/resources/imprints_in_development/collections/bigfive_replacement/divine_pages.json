@@ -1,0 +1,28 @@
+{
+  "imprint": "Divine Pages",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@divinepages.com",
+  "branding": {
+    "tagline": "Turning the page to a closer walk with God",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.divinepages.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Christian literature, Biblical fiction, Spiritual growth",
+    "target_audience": "Readers looking for a deeper understanding and connection to God through literature that expands on Biblical stories and principles",
+    "competitive_advantage": "Our unique blend of creative storytelling and adherence to Biblical truths sets us apart. Our comprehensive approach to Christian literature enables readers to engage with their faith in a new and exciting way.",
+    "example_titles": "Authors like C.S. Lewis, Ted Dekker; Titles like 'Mere Christianity', 'The Circle Series'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

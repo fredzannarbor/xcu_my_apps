@@ -1,0 +1,20 @@
+[Unit]
+Description=Fred's Unified App Runner - Master Dashboard
+After=network.target
+Wants=app-runner-manager.service
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/app-runner
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/app-runner
+ExecStart=/usr/bin/python3 -c "import streamlit.web.cli as stcli; import sys; sys.argv = ['streamlit', 'run', 'main.py', '--server.port=8500', '--server.address=127.0.0.1']; stcli.main()"
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

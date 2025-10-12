@@ -1,0 +1,28 @@
+{
+  "imprint": "Zest Zenith",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@zestzenith.com",
+  "branding": {
+    "tagline": "Zest Up Your Health",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.zestzenith.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fitness, High-energy diets, Mental health",
+    "target_audience": "Individuals seeking to improve their energy levels and fitness",
+    "competitive_advantage": "Energetic and passionate approach to health and fitness",
+    "example_titles": "Fitness guides, high-energy diet books, mental health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

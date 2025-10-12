@@ -1,0 +1,28 @@
+{
+  "imprint": "Legacy Lane",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@legacylane.com",
+  "branding": {
+    "tagline": "Where life stories become legacies",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.legacylane.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies, memoirs, influential figures history",
+    "target_audience": "Readers interested in influential individuals in history",
+    "competitive_advantage": "Legacy Lane offers in-depth biographical accounts that inspire and motivate",
+    "example_titles": "Biographies of world leaders, memoirs of freedom fighters"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

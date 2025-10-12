@@ -1,0 +1,28 @@
+{
+  "imprint": "InsightfulAI",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@insightfulai.com",
+  "branding": {
+    "tagline": "Empowering insights, one algorithm at a time",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.insightfulai.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "AI-driven data journalism and infographics",
+    "target_audience": "Data scientists, journalists, tech professionals",
+    "competitive_advantage": "Expertise in AI-enhanced data journalism",
+    "example_titles": "Data-driven investigative journalism books, AI-powered infographics"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

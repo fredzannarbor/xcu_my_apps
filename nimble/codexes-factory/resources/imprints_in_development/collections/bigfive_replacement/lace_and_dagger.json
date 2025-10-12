@@ -1,0 +1,28 @@
+{
+  "imprint": "Lace & Dagger",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@laceanddagger.com",
+  "branding": {
+    "tagline": "Where love meets adventure",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.laceanddagger.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Romantic action and adventure",
+    "target_audience": "Readers who enjoy action-packed stories with a strong romantic core",
+    "competitive_advantage": "Dynamic, action-filled plots matched with intense romantic relationships",
+    "example_titles": "Romance novels akin to the style of 'Outlander' series"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

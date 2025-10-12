@@ -1,0 +1,28 @@
+{
+  "imprint": "Luminous Living",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@luminousliving.com",
+  "branding": {
+    "tagline": "Illuminate Your Life",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.luminousliving.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Healthy lifestyle, Personal growth, Stress management",
+    "target_audience": "Individuals looking for advice on creating a healthier lifestyle",
+    "competitive_advantage": "Practical, actionable advice for improving health and wellbeing",
+    "example_titles": "Books on lifestyle changes, personal growth, and stress relief"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

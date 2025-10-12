@@ -1,0 +1,18 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "August 2025",
+      "books": [
+        {
+          "stream": "Glossary Fix Test",
+          "title": "Glossary Fix Verification",
+          "description": "Testing the multicols package fix for glossary formatting",
+          "author": "Test Author",
+          "isbn13": "978-0-123456-78-9",
+          "special_requests": "",
+          "recommended_sources": ""
+        }
+      ]
+    }
+  ]
+}

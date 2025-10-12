@@ -1,0 +1,28 @@
+{
+  "imprint": "History Harmony",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@historyharmony.com",
+  "branding": {
+    "tagline": "History Comes Alive!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.historyharmony.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical fiction and biographical series",
+    "target_audience": "History buffs and avid learners",
+    "competitive_advantage": "Educational and entertaining, bringing past events to life",
+    "example_titles": "The Tudors, The Crown"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

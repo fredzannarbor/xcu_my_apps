@@ -1,0 +1,408 @@
+{
+  "book_title": "Omar's Boba Brain Boost",
+  "total_chapters": 10,
+  "target_word_count": 10600,
+  "outline_metadata": {
+    "protagonist_name": "Omar Hassan",
+    "primary_theme": "Diagnostic and responsive teaching (understanding)",
+    "secondary_theme": "Emotional regulation (for families)",
+    "contemporary_hook": "Viral boba tea recipe challenge"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_title": "The Bubble Tea Brainstorm",
+      "estimated_word_count": 900,
+      "setting_details": "Omar's vibrant home kitchen in Los Angeles, then his 4th-grade classroom at Echo Park Elementary, and finally the family's bustling boba tea shop, all on a sunny afternoon.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mama",
+        "Baba",
+        "Mr. Davies",
+        "Classmates"
+      ],
+      "plot_summary": "Omar is in his element, meticulously measuring ingredients and whisking flavors for his 'Desert Oasis' boba tea, hoping to win a viral recipe challenge. His passion for precision shines as he envisions his recipe going global. However, the scene shifts to his classroom where a reading task quickly dampens his spirits. Struggling with a new word, Omar guesses wildly, then his face flushes with frustration, leading to a small emotional outburst that Mr. Davies subtly observes. Later, at the family boba shop, Omar is unusually quiet, his earlier joy replaced by a withdrawn mood that his busy parents notice with concern.",
+      "emotional_beats": "Omar experiences intense joy and focus while cooking, contrasting sharply with his rapid descent into frustration, embarrassment, and anger during reading. His parents feel loving but slightly distracted concern, sensing something is off.",
+      "skill_focus_integration": "This chapter introduces Omar's lack of emotional self-management and reading resilience when faced with decoding challenges. His frustration highlights the link between reading difficulties and mental well-being.",
+      "contemporary_hook_usage": "Omar's ambitious attempt to create a viral boba tea recipe for a challenge is the central contemporary hook, showcasing his creative drive and providing a stark contrast to his struggles.",
+      "dialogue_highlights": [
+        "Omar (to himself, stirring): 'Just a whisper of rosewater\u2026 perfect! This will be the next big thing!'",
+        "Mr. Davies (gently): 'Take your time, Omar. What sounds do you hear?'",
+        "Mama (to Baba, whispering): 'Omar is so quiet today, habibi. Is something wrong?'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar passionately experiments with boba ingredients in his home kitchen, dreaming of viral success."
+        },
+        {
+          "scene_number": 2,
+          "description": "In the classroom, Omar struggles intensely with a challenging reading passage, culminating in a visible outburst of frustration."
+        },
+        {
+          "scene_number": 3,
+          "description": "Omar helps out at the boba shop after school, unusually sullen and quiet, prompting his parents' worried observations."
+        }
+      ],
+      "chapter_purpose": "To establish Omar's vibrant personality and passion, introduce his core problem (reading struggle), and immediately show his emotional reaction to it, while hinting at his parents' loving but potentially anxious involvement.",
+      "foreshadowing_elements": "Mr. Davies' keen observation of Omar's specific struggle hints at a diagnostic approach. The parents' hushed worry foreshadows their anxiety becoming a central theme.",
+      "cliffhanger_or_transition": "Omar deflects his parents' questions about his quiet mood, leaving them with unspoken concern and suggesting deeper, unaddressed issues beneath his surface."
+    },
+    {
+      "chapter_number": 2,
+      "chapter_title": "The Tricky Word Trap",
+      "estimated_word_count": 1060,
+      "setting_details": "Echo Park Elementary classroom during a small-group reading session, and Omar's home living room after school, on a weekday afternoon.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mr. Davies",
+        "Mama",
+        "Baba",
+        "Classmates"
+      ],
+      "plot_summary": "Mr. Davies leads a small reading group, introducing a decodable text focused on specific vowel patterns. Omar tries hard, but gets stuck on a word containing a challenging vowel team ('ea'). He guesses 'drea-mee' instead of 'dream,' then feels a familiar wave of self-consciousness and shuts down. Mr. Davies calmly notes Omar's difficulty with that specific sound, a clear diagnostic observation. Later, Omar brings home a reading worksheet with several incorrect answers, particularly around similar vowel patterns. His parents, seeing the low score, exchange worried glances, sparking their first noticeable wave of anxiety about his academic performance.",
+      "emotional_beats": "Omar's initial hope to succeed quickly turns to anxiety and embarrassment as he struggles, followed by a sense of relief at Mr. Davies' calm, non-judgmental support. His parents experience growing worry and a subtle shift in their demeanor, moving from concern to palpable stress.",
+      "skill_focus_integration": "This chapter explicitly shows Mr. Davies employing a diagnostic approach, identifying Omar's specific decoding challenges (e.g., vowel teams) rather than just noting general 'struggle.' It also introduces the beginning of parental anxiety, a key element of the B-plot, highlighting their difficulty with emotional regulation concerning school performance.",
+      "contemporary_hook_usage": "Omar briefly thinks about the viral boba challenge, wishing he could spend his time perfecting recipes instead of wrestling with tricky words, emphasizing his disengagement from reading.",
+      "dialogue_highlights": [
+        "Mr. Davies: 'It's okay, Omar. Many words have tricky vowel teams. Let's look at that 'ea' sound together. What are the two main sounds 'ea' can make?'",
+        "Mama (holding the worksheet): 'What's this score, habibi? Is everything alright in reading? Is it getting harder?'",
+        "Omar (muttering): 'It's fine. Just... tricky words.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "During a reading group, Omar encounters a challenging word and struggles, prompting Mr. Davies' diagnostic intervention."
+        },
+        {
+          "scene_number": 2,
+          "description": "Mr. Davies makes a mental note about Omar's specific decoding issue, indicating his responsive teaching approach."
+        },
+        {
+          "scene_number": 3,
+          "description": "Omar shows his parents a disappointing reading worksheet, leading to their visible concern and initial anxious reactions."
+        }
+      ],
+      "chapter_purpose": "To deepen the understanding of Omar's specific reading difficulty and Mr. Davies' diagnostic method, while clearly establishing the parents' growing anxiety as a secondary plot line.",
+      "foreshadowing_elements": "Mr. Davies' precise observation of Omar's 'ea' sound difficulty sets up the A-plot's focus on structured literacy. The parents' escalating anxiety hints at future challenges in their emotional regulation.",
+      "cliffhanger_or_transition": "Omar's parents are seen late that night, their voices hushed with concern as they discuss his reading struggles, their worry a tangible presence in the quiet house."
+    },
+    {
+      "chapter_number": 3,
+      "chapter_title": "A Recipe for Worry",
+      "estimated_word_count": 1050,
+      "setting_details": "The bustling hallway of Echo Park Elementary, Mr. Davies' classroom after school, and Omar's bedroom, all on a Tuesday afternoon.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mr. Davies",
+        "Mama",
+        "Baba"
+      ],
+      "plot_summary": "Mr. Davies sends home a general notice about upcoming parent-teacher conferences, subtly emphasizing the school's 'Science of Reading' approach and its reliance on diagnostic assessments to tailor instruction. Omar, already sensitive about his reading, feels a knot of worry about what his parents will hear. At home, Omar tries to lose himself in his boba recipe notebook, sketching new designs for his viral challenge entry, but thoughts of reading keep intruding. His parents, after reading the school notice, express their concern directly to Omar, their well-meaning words unintentionally adding significant pressure, making Omar feel the heavy weight of their expectations.",
+      "emotional_beats": "Omar experiences a growing sense of dread and anxiety, feeling overwhelmed by the pressure from school and now home. His parents, though supportive, project their own stress onto him, causing Omar to feel misunderstood and burdened.",
+      "skill_focus_integration": "This chapter highlights the critical communication aspect of diagnostic teaching (A-plot) and further illustrates Omar's internal struggle with self-awareness and self-management regarding his reading challenges. It also deepens the B-plot by showing how parental anxiety directly impacts Omar's emotional state.",
+      "contemporary_hook_usage": "Omar uses brainstorming new boba ingredients and visualizing the viral challenge as a coping mechanism to escape his mounting reading worries, showcasing his preferred world versus his academic struggles.",
+      "dialogue_highlights": [
+        "Mr. Davies' note (narrated): 'We believe in a diagnostic and responsive approach, tailoring instruction to each child's unique needs through ongoing assessments.'",
+        "Mama: 'We just want you to do your best, Omar. Reading is so important for everything, habibi.'",
+        "Omar (internal thought): 'Why can't reading be like cooking? I understand cooking. It makes sense.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Mr. Davies prepares parent communication, and Omar becomes aware of the upcoming conferences and their implications."
+        },
+        {
+          "scene_number": 2,
+          "description": "Omar attempts to focus on his boba recipe at home, but his mind is consumed by anxieties about reading and the upcoming parent-teacher meeting."
+        },
+        {
+          "scene_number": 3,
+          "description": "Omar's parents discuss the school notice and their concerns with him, inadvertently increasing his stress levels."
+        }
+      ],
+      "chapter_purpose": "To formally introduce the school's communication about its 'Science of Reading' approach and explicitly link parental anxiety to Omar's emotional distress, setting the stage for the parents' own arc.",
+      "foreshadowing_elements": "The mention of 'Science of Reading' and diagnostic assessments solidifies the A-plot's direction. The parents' increasing anxiety is now a clear and present challenge for the B-plot, hinting at their need for emotional regulation.",
+      "cliffhanger_or_transition": "Omar clutches his boba recipe notebook, wishing with all his might that he could invent a 'reading potion' to solve his problems instead of a new boba flavor, feeling utterly helpless."
+    },
+    {
+      "chapter_number": 4,
+      "chapter_title": "The Parent-Teacher Brew",
+      "estimated_word_count": 1060,
+      "setting_details": "Mr. Davies' brightly decorated classroom during a parent-teacher conference, and Omar's quiet living room at home, on a Thursday evening.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mama",
+        "Baba",
+        "Mr. Davies"
+      ],
+      "plot_summary": "Omar's parents attend their conference with Mr. Davies, who calmly and clearly explains Omar's specific decoding challenges, showing them examples from assessment data that pinpoint his difficulty with certain vowel teams like 'ai' and 'ay.' He describes the school's structured literacy approach and how instruction is tailored to these exact needs. Omar's parents listen intently, but despite Mr. Davies' reassuring tone, their anxiety about 'scores' and the fear of Omar 'falling behind' still simmers beneath their polite expressions. They struggle to fully internalize the diagnostic details, prioritizing the outcome over the process.",
+      "emotional_beats": "Mr. Davies' calm and factual explanation contrasts with the parents' internal struggle, a mix of initial relief at his supportive tone and persistent underlying worry about their son's future. Omar, waiting at home, feels apprehension about what his parents are learning.",
+      "skill_focus_integration": "A-plot: Mr. Davies exemplifies diagnostic and responsive teaching, providing concrete evidence of Omar's specific learning hurdles. B-plot: The parents' difficulty fully accepting the 'growth mindset' and their struggle with emotional regulation in the face of academic concerns become evident.",
+      "contemporary_hook_usage": "Omar, at home, imagines his boba recipe winning the challenge as a way to 'make his parents proud' and divert attention from his reading struggles, demonstrating his desire for external validation.",
+      "dialogue_highlights": [
+        "Mr. Davies: 'Omar is showing difficulty with vowel teams like 'ai' and 'ay.' Our assessments show he's strong in initial sounds, but needs explicit, systematic practice here, which we're providing in small groups.'",
+        "Mama: 'But will he catch up, Mr. Davies? We don't want him to struggle, you know, for his future.'",
+        "Baba: 'We just want what's best, and reading is so foundational.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar's parents meet with Mr. Davies, who explains Omar's specific reading difficulties and the school's structured literacy approach."
+        },
+        {
+          "scene_number": 2,
+          "description": "Omar waits anxiously at home, imagining the worst-case scenarios of the conference."
+        },
+        {
+          "scene_number": 3,
+          "description": "Parents return, attempting to relay the information to Omar, but their lingering anxiety is palpable, clouding their message."
+        }
+      ],
+      "chapter_purpose": "To formally introduce the 'Science of Reading' principles to the parents and highlight their initial difficulty in accepting a diagnostic approach over their anxiety about 'results' and 'catching up.'",
+      "foreshadowing_elements": "Mr. Davies suggests specific home activities to support Omar, which the parents might struggle to implement calmly. Their continued focus on 'catching up' rather than 'process' hints at future pressure on Omar.",
+      "cliffhanger_or_transition": "Omar overhears his parents discussing his 'reading problem' in hushed, worried tones late into the night, making him feel like an unsolvable puzzle, rather than a child capable of learning."
+    },
+    {
+      "chapter_number": 5,
+      "chapter_title": "Too Many Bubbles",
+      "estimated_word_count": 1070,
+      "setting_details": "The school classroom during independent work, and Omar's dining table at home, later that week.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mr. Davies",
+        "Classmates",
+        "Mama",
+        "Baba"
+      ],
+      "plot_summary": "Back in class, Omar is given targeted practice materials \u2013 decodable texts specifically designed to reinforce the vowel teams Mr. Davies identified. He tries, but the internal pressure from his parents' recent anxiety, combined with his existing frustration, makes him guess wildly, shutting down faster than before. He begins to actively dislike reading. At home, his parents, trying their best to 'help' as Mr. Davies suggested, ask him to read more often. However, their underlying anxiety translates into constant scrutiny, making their 'help' feel like relentless pressure. This leads to more frequent and intense emotional outbursts from Omar, escalating the tension in the household.",
+      "emotional_beats": "Omar experiences increasing frustration, anger, and a pervasive sense of failure, which turns into outright dislike for reading. His parents' well-intentioned efforts backfire, leading to their own increased stress and Omar's explosive reactions, creating a negative feedback loop.",
+      "skill_focus_integration": "Omar's struggle with emotional self-management and perseverance intensifies, directly impacting his 'reading resilience.' The parents' continued struggle with emotional regulation and patience inadvertently sabotages their efforts to support him, illustrating the B-plot's core challenge.",
+      "contemporary_hook_usage": "Omar observes a classmate confidently discussing their boba recipe idea, feeling a pang of inadequacy and jealousy. He wishes he could pour all his energy into his boba challenge, a stark contrast to his current reading misery.",
+      "dialogue_highlights": [
+        "Omar (to himself, slamming his pencil down): 'Another 'ea' word! Why do they all look the same? It's impossible!'",
+        "Mama: 'Did you read for twenty minutes, habibi? Show us what you're working on, we want to help you practice.'",
+        "Omar (shouting): 'NO! Just leave me alone! I HATE READING!'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar works with targeted decodable texts in class, but the pressure causes him to struggle more than usual."
+        },
+        {
+          "scene_number": 2,
+          "description": "An intense emotional outburst from Omar during a forced reading session at home, leaving his parents shocked."
+        },
+        {
+          "scene_number": 3,
+          "description": "Omar's parents have a worried and distressed discussion after his outburst, realizing their current approach isn't working."
+        }
+      ],
+      "chapter_purpose": "To escalate both Omar's reading struggle (A-plot) and the negative impact of parental anxiety (B-plot), demonstrating the counterproductive nature of well-meaning but emotionally unregulated support.",
+      "foreshadowing_elements": "The parents' distress after Omar's outburst suggests they are nearing a turning point. Mr. Davies also notices Omar's increased emotional fragility in class, indicating the problem is pervasive.",
+      "cliffhanger_or_transition": "Omar runs to his room, slamming the door, leaving his parents looking at each other across the dining table, bewildered and distressed, the silence heavy with their failure."
+    },
+    {
+      "chapter_number": 6,
+      "chapter_title": "A Calming Concoction",
+      "estimated_word_count": 1060,
+      "setting_details": "The quiet boba shop after closing hours, and a community room at Echo Park Elementary during an evening workshop, a few days after Omar's outburst.",
+      "characters_present": [
+        "Mama",
+        "Baba",
+        "Workshop Leader",
+        "Omar (briefly)"
+      ],
+      "plot_summary": "Deeply concerned and disheartened after Omar's emotional outburst, his parents reflect on their own reactions. Mama remembers Mr. Davies mentioning parent workshops. They decide to attend one titled 'Supporting Your Child with Reading: The Science of Reading at Home,' facilitated by a school literacy specialist. The workshop focuses not only on practical strategies like using multisensory tools but also heavily on parental emotional regulation, patience, and fostering a 'growth mindset.' They absorb the message that reading is a learned skill and that their calm, consistent support is crucial, beginning to grasp the importance of their own emotional state.",
+      "emotional_beats": "Parents experience guilt and self-reflection, leading to a proactive decision to seek help. They move from initial skepticism at the workshop to a growing sense of understanding, hope, and determination to change their approach.",
+      "skill_focus_integration": "B-plot: The parents begin their journey of developing emotional regulation, empathy, and a growth mindset. They learn about practical resources for families and the 'Science of Reading' principles, understanding the importance of consistency between home and school.",
+      "contemporary_hook_usage": "Omar is briefly shown sketching boba designs, but his usual enthusiasm is muted, reflecting the ongoing tension. The parents' decision to attend the workshop is driven by wanting to help him regain his creative spark.",
+      "dialogue_highlights": [
+        "Mama (to Baba): 'Maybe we're pushing him too hard, Baba. Our worry isn't helping him, it's making it worse.'",
+        "Workshop Leader: 'Learning to read is not natural for all children. It's a skill that is taught and learned. Your role is to celebrate effort, not just achievement, and manage your own stress to create a calm learning environment.'",
+        "Baba: 'A growth mindset... I see. Like when we learned to perfect our tapioca.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar's parents discuss his outburst, realizing their own anxiety is negatively impacting him."
+        },
+        {
+          "scene_number": 2,
+          "description": "Parents attend a 'Science of Reading' workshop, learning about structured literacy and parental emotional regulation."
+        },
+        {
+          "scene_number": 3,
+          "description": "Parents return home with new insights and a slightly calmer, more resolute demeanor, ready to try new strategies."
+        }
+      ],
+      "chapter_purpose": "To mark a significant turning point in the B-plot, showing the parents proactively seeking help and beginning their own character arc of understanding and self-improvement, directly integrating practical 'Science of Reading' principles for families.",
+      "foreshadowing_elements": "The parents decide to implement new strategies at home, hinting at a positive shift in Omar's learning environment. Omar will soon notice a change in their approach.",
+      "cliffhanger_or_transition": "Mama and Baba look at Omar's closed bedroom door, a new resolve in their eyes. 'Tomorrow,' Mama whispers, 'we try a new recipe for support.'"
+    },
+    {
+      "chapter_number": 7,
+      "chapter_title": "The Quiet Reading Corner",
+      "estimated_word_count": 1070,
+      "setting_details": "Omar's transformed bedroom at home with a new quiet reading space, and the classroom during small-group instruction, over the following week.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mama",
+        "Baba",
+        "Mr. Davies"
+      ],
+      "plot_summary": "Omar's parents put their workshop learnings into practice. They designate a cozy, quiet reading corner in his room and offer decodable texts provided by Mr. Davies, focusing on the specific vowel teams Omar struggles with. Crucially, they practice emotional regulation, using calm voices, showing immense patience, and celebrating Omar's effort rather than just accuracy. Omar, initially wary, slowly responds to this less stressful, more supportive environment. In class, Mr. Davies observes a subtle but significant improvement in Omar's focus during reading group and a noticeable decrease in his emotional outbursts, a testament to the home-school consistency.",
+      "emotional_beats": "Omar's initial suspicion and resistance gradually give way to cautious hope, a glimmer of confidence, and a sense of safety. His parents demonstrate sustained effort, patience, and a growing sense of calm, feeling empowered by their new approach.",
+      "skill_focus_integration": "A-plot: Omar begins to exhibit reading resilience and improved emotional self-management in the face of challenges. B-plot: The parents successfully apply emotional regulation and patience, creating a truly supportive learning environment, reinforcing the 'importance of consistency' between home and school.",
+      "contemporary_hook_usage": "Omar finds a moment of peace in his new reading corner to sketch out a new, intricate boba tea topping idea, symbolizing how this newfound calm allows his creativity to flow in other areas.",
+      "dialogue_highlights": [
+        "Baba: 'Just five minutes today, habibi. And it's okay if you don't know a word, we'll sound it out together, remember? Effort is what matters.'",
+        "Omar (internal thought): 'It feels... different. Less scary. Like they're on my team.'",
+        "Mr. Davies (to Omar): 'Omar, I noticed you really stuck with that 'ou' word today, even when it was tough. That's great perseverance!'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Parents create a dedicated, quiet reading space for Omar and introduce new, low-pressure reading routines."
+        },
+        {
+          "scene_number": 2,
+          "description": "An improved, calmer reading session at home where Omar shows tentative progress and less frustration."
+        },
+        {
+          "scene_number": 3,
+          "description": "Mr. Davies observes Omar's positive behavioral changes and improved focus in the classroom, noting the impact of home support."
+        }
+      ],
+      "chapter_purpose": "To demonstrate the positive impact of the parents' newly acquired emotional regulation on Omar's reading resilience and his emotional state, showing the powerful effect of a consistent, supportive home and school environment.",
+      "foreshadowing_elements": "Omar starts to understand his specific reading challenges better, which will be crucial for the upcoming assessment. The boba challenge deadline is mentioned as approaching, adding another layer of external pressure.",
+      "cliffhanger_or_transition": "Omar successfully decodes a challenging word with a vowel team he previously struggled with, a small but significant victory that leaves him with a rare, genuine smile, just as a big school-wide reading assessment is announced."
+    },
+    {
+      "chapter_number": 8,
+      "chapter_title": "The Boba Challenge Deadline",
+      "estimated_word_count": 1060,
+      "setting_details": "Echo Park Elementary classroom during morning announcements, and Omar's kitchen at home, over a tense week.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mr. Davies",
+        "Classmates",
+        "Mama",
+        "Baba"
+      ],
+      "plot_summary": "Mr. Davies announces a significant school-wide reading assessment, and Omar feels a surge of his old anxiety. He views it as a 'test' of his worth, rather than a diagnostic tool to inform instruction. Simultaneously, the deadline for the viral boba recipe challenge is rapidly approaching, creating a dual pressure. Omar struggles to balance his passion for perfecting his boba with his renewed worries about reading. At home, his parents try desperately to remain calm and supportive, but the impending assessment causes their own anxiety to resurface. They actively use their learned strategies to manage their stress, but it's a real test of their new emotional regulation skills.",
+      "emotional_beats": "Omar experiences renewed fear, self-doubt, and internal conflict between his two passions. His parents engage in a palpable internal struggle to maintain calm, demonstrating their growth in emotional regulation under pressure, though it is clearly difficult.",
+      "skill_focus_integration": "A-plot: Omar grapples with confidence and self-awareness under heightened pressure, testing his nascent reading resilience. B-plot: The parents actively practice emotional regulation under significant stress, illustrating the ongoing nature of their growth mindset and the challenge of patience.",
+      "contemporary_hook_usage": "The viral boba challenge becomes a major source of distraction and pressure for Omar, highlighting his intense desire for success in one area while battling deep-seated anxieties in another, amplifying the conflict.",
+      "dialogue_highlights": [
+        "Omar (internal thought): 'What if I can't read the words on the test? What if I fail again, even after all this practice?'",
+        "Mama (to Baba, quietly, taking a deep breath): 'It's hard, isn't it? To not worry. But we have to stay calm for him. He needs us to be strong.'",
+        "Mr. Davies: 'Remember, this assessment helps me understand how best to support your reading journey.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Mr. Davies announces the school-wide assessment, triggering Omar's internal panic and self-doubt."
+        },
+        {
+          "scene_number": 2,
+          "description": "Omar attempts to work on his boba recipe, but he's visibly distracted and overwhelmed by reading worries."
+        },
+        {
+          "scene_number": 3,
+          "description": "Parents discuss their anxiety about the upcoming assessment, actively using coping strategies to manage their own stress and maintain a calm front for Omar."
+        }
+      ],
+      "chapter_purpose": "To significantly raise the stakes for both the A-plot (Omar's reading assessment) and the B-plot (parental emotional regulation), demonstrating that growth isn't linear and that challenges will test new skills.",
+      "foreshadowing_elements": "Omar still associates reading assessments with 'failure,' setting up a crucial internal conflict. The assessment will provide Mr. Davies with more specific data, leading to further responsive teaching.",
+      "cliffhanger_or_transition": "Omar stares at the blank assessment sheet, his heart pounding like a drum, a crucial boba ingredient forgotten in his recipe notebook, feeling the weight of expectation crash down."
+    },
+    {
+      "chapter_number": 9,
+      "chapter_title": "The Perfect Blend",
+      "estimated_word_count": 1060,
+      "setting_details": "The quiet classroom during the assessment, Mr. Davies' office, and Omar's home, all on a significant day.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mr. Davies",
+        "Mama",
+        "Baba"
+      ],
+      "plot_summary": "During the reading assessment, Omar encounters a particularly challenging word with a vowel team he knows he struggles with. Instead of shutting down or guessing wildly, he pauses, takes a deep breath, and remembers Mr. Davies' explicit teaching and his parents' calm encouragement. He applies a strategy: segmenting sounds, trying different vowel pronunciations, and blending. He doesn't get every word perfectly, but he perseveres through the entire test, demonstrating remarkable reading resilience. Later, Mr. Davies reviews the assessment, noting Omar's improved use of decoding strategies and significantly reduced frustration. He communicates this positive diagnostic feedback to Omar's parents, emphasizing Omar's immense effort and growth in specific areas. Omar's parents are genuinely proud and relieved, their understanding of the diagnostic process now solid.",
+      "emotional_beats": "Omar experiences an intense internal struggle, followed by a surge of quiet determination, focus, and ultimately, a powerful sense of accomplishment and pride. Mr. Davies feels satisfaction at seeing his teaching bear fruit. The parents feel profound relief, joy, and validated understanding.",
+      "skill_focus_integration": "A-plot: Omar demonstrates perseverance, self-management, and effective use of decoding strategies, embodying 'reading resilience.' B-plot: The parents' practiced emotional regulation allows them to fully understand and celebrate Omar's effort and the diagnostic feedback, solidifying their growth mindset.",
+      "contemporary_hook_usage": "Feeling a true sense of accomplishment and renewed focus after the assessment, Omar returns to his boba recipe with confidence, finally perfecting a key ingredient that had previously eluded him.",
+      "dialogue_highlights": [
+        "Omar (internal thought, focused): 'Wait, 'ea' can sound like 'ee' or 'eh'\u2026 let me try 'ee' first. D-r-ea-m! Dream! Yes!'",
+        "Mr. Davies (to parents): 'Omar didn't get a perfect score, but his *approach* to challenging words has dramatically improved. He used his strategies, and his frustration was minimal. That's huge progress, diagnostically speaking.'",
+        "Baba: 'We knew you could do it, habibi. We are so proud of your effort, your perseverance.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar takes the reading assessment, consciously applying learned strategies and demonstrating resilience."
+        },
+        {
+          "scene_number": 2,
+          "description": "Mr. Davies reviews Omar's assessment, noting significant progress in strategy use and emotional regulation."
+        },
+        {
+          "scene_number": 3,
+          "description": "Mr. Davies communicates positive diagnostic feedback to Omar's parents, highlighting his growth."
+        },
+        {
+          "scene_number": 4,
+          "description": "Parents celebrate Omar's effort and progress at home, their relief palpable."
+        }
+      ],
+      "chapter_purpose": "To bring the A-plot to its climax, showing Omar's internal and external growth in applying diagnostic learning and demonstrating reading resilience. It also solidifies the parents' understanding and acceptance of the diagnostic approach.",
+      "foreshadowing_elements": "Omar's increased confidence and focus will directly impact his presentation for the upcoming boba challenge.",
+      "cliffhanger_or_transition": "Omar, filled with a true sense of achievement, puts the final, confident touches on his viral boba recipe, ready to present it to the world, feeling a blend of excitement and readiness."
+    },
+    {
+      "chapter_number": 10,
+      "chapter_title": "A Sweet Victory",
+      "estimated_word_count": 1050,
+      "setting_details": "The bustling school assembly hall where the boba challenge presentations are held, and the lively family boba shop, a few days later.",
+      "characters_present": [
+        "Omar Hassan",
+        "Mama",
+        "Baba",
+        "Mr. Davies",
+        "Classmates",
+        "Judges (minor)",
+        "Customers"
+      ],
+      "plot_summary": "Omar stands confidently before the school assembly, presenting his 'Desert Oasis' boba tea for the viral recipe challenge. He speaks clearly and passionately, explaining his unique flavors and meticulous process. While he doesn't win first place, he receives an honorable mention and enthusiastic praise for his creativity and presentation. The true victory is his newfound confidence, which now extends beyond cooking. Later, at the family boba shop, he helps a customer read a complicated menu item aloud, demonstrating his improved decoding skills effortlessly. His parents watch him, their hearts full of pride, knowing they've learned not just how to support his reading, but how to manage their own emotions to foster his overall well-being and growth.",
+      "emotional_beats": "Omar experiences quiet pride, confidence, and a sense of belonging. His parents feel deep satisfaction, understanding, and immense pride in their son's holistic growth. Mr. Davies looks on with a knowing, approving smile.",
+      "skill_focus_integration": "A-plot: Omar fully embodies confidence and reading resilience, applying his decoding skills naturally. B-plot: Parents have fully integrated emotional regulation and a supportive growth mindset, seeing their child's progress as a solvable puzzle and understanding the profound 'link between literacy and mental health'.",
+      "contemporary_hook_usage": "The boba challenge provides a celebratory and public context for Omar's overall growth, allowing him to shine in an area he loves, which is now supported by his newfound confidence from his reading journey.",
+      "dialogue_highlights": [
+        "Omar (presenting): 'My 'Desert Oasis' boba has layers of sweet date syrup and creamy almond milk, with a delicate hint of rosewater, inspired by my heritage.'",
+        "Customer: 'Oh, what's this one called? 'Pistachio Paradise'?' Omar (reading clearly): 'P-I-S-T-A-C-H-I-O. Pistachio Paradise!'",
+        "Mama (to Baba, squeezing his hand): 'He's not just reading words anymore, habibi. He's reading himself. And we're all learning to read ourselves, too.'"
+      ],
+      "scene_breakdown": [
+        {
+          "scene_number": 1,
+          "description": "Omar confidently presents his boba recipe at the school's viral challenge assembly."
+        },
+        {
+          "scene_number": 2,
+          "description": "The challenge results are announced, and Omar receives an honorable mention, feeling proud of his effort."
+        },
+        {
+          "scene_number": 3,
+          "description": "Omar helps a customer read the boba shop menu, demonstrating his improved reading fluency and confidence."
+        },
+        {
+          "scene_number": 4,
+          "description": "Omar's parents reflect on their shared journey, recognizing their growth in supporting him."
+        }
+      ],
+      "chapter_purpose": "To provide a satisfying resolution for both the A-plot (Omar's reading journey) and the B-plot (his parents' emotional regulation). It showcases Omar's holistic growth and the family's transformed dynamic, delivering the core thematic message of understanding and support.",
+      "foreshadowing_elements": "None, this chapter serves as the resolution.",
+      "cliffhanger_or_transition": "The story ends on a note of gentle resolution, with Omar happily serving boba, his family smiling, knowing they have built a strong foundation for his future learning and well-being."
+    }
+  ]
+}

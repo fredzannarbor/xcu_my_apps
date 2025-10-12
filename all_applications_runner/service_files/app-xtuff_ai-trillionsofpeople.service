@@ -1,0 +1,19 @@
+[Unit]
+Description=TrillionsOfPeople.Info - xtuff.ai
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/trillionsofpeople
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/trillionsofpeople
+ExecStart=/usr/bin/python3 -m streamlit run  main.py --server.port=8504
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

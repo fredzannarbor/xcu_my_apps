@@ -1,0 +1,28 @@
+{
+  "imprint": "Shadow Box",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@shadowbox.com",
+  "branding": {
+    "tagline": "Discover the darkness within",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.shadowbox.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Dark fantasy and gothic fiction",
+    "target_audience": "Teens who enjoy darker, edgier narratives",
+    "competitive_advantage": "Catering to the market's growing taste for darker YA",
+    "example_titles": "Holly Black, Leigh Bardugo type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

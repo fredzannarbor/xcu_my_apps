@@ -1,0 +1,28 @@
+{
+  "imprint": "CryptoPioneer Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cryptopioneerpress.com",
+  "branding": {
+    "tagline": "Forge the Future of Finance",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cryptopioneerpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Blockchain technology, cryptocurrency trading, and digital finance trends",
+    "target_audience": "Blockchain developers, cryptocurrency traders, financial analysts",
+    "competitive_advantage": "Exclusive focus on cutting-edge cryptocurrency trends and technology",
+    "example_titles": "Blockchain Basics by Satoshi Nakamoto, Crypto King by Vitalik Buterin"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

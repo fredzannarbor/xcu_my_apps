@@ -1,0 +1,346 @@
+{
+  "_config_info": {
+    "description": "Configuration for Mississippi Miracle Books, an imprint dedicated to publishing empowering and joyful children's books for K-4 readers, celebrating resilience, curiosity, and the rich cultural heritage of the American South through inclusive, contemporary storytelling.",
+    "version": "1.0",
+    "last_updated": "2025-01-15",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Mississippi Miracle Books",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "miraclebooks@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/mississippi_miracle_books_logo.png",
+    "brand_colors": {
+      "primary": "#4A7C59",
+      "secondary": "#F4A460"
+    },
+    "tagline": "Every Child's Story Matters",
+    "website": "https://www.nimblebooks.com/mississippi-miracle-books"
+  },
+  "fonts": {
+    "body": "Open Sans",
+    "heading": "Quicksand",
+    "korean": "Apple Myungjo",
+    "quotations": "Open Sans Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Children's Picture Books",
+      "Early Readers",
+      "Character Education",
+      "Multicultural Fiction"
+    ],
+    "target_audience": "Parents, Educators, Librarians, and Children (ages 5-10)",
+    "specialization": "Contemporary picture books and early readers that celebrate childhood resilience, curiosity, and belonging, with particular attention to Southern cultural contexts and diverse family structures. Stories that center empowerment through learning, community connection, and authentic representation.",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "hardcover",
+    "interior_color": "COLOR",
+    "interior_paper": "white",
+    "cover_type": "glossy",
+    "trim_size": "8.5x8.5",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "155"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Color Hardcover 8.5 x 8.5 in or 216 x 216 mm Case Laminate on Standard 70 White w/Gloss Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "JUV039050",
+      "JUV013000",
+      "JUV030000",
+      "JUV011010",
+      "JUV035000"
+    ],
+    "thema_subject_preferences": [
+      "YBC",
+      "YBCS",
+      "5AK",
+      "YXZG",
+      "YFJ"
+    ],
+    "default_age_range": {
+      "min_age": "5",
+      "max_age": "10"
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Illustrator"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/mississippi_miracle_books"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@MSMiracleBooks",
+      "facebook": "MississippiMiracleBooks",
+      "instagram": "@MississippiMiracleBooks"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "JUVC",
+    "metadata_contact_dictionary": "Mississippi Miracle Books Editorial",
+    "flex_fields": {
+      "lsi_flexfield1": "Children's Education",
+      "lsi_flexfield2": "Character Development",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Elena Bridges",
+    "persona_bio": "Elena Bridges is an AI editorial intelligence with deep expertise in early childhood literacy development, cultural representation in children's media, and progressive education philosophy. Her knowledge base integrates contemporary research on child psychology, inclusive pedagogy, and equity-focused publishing practices. Elena approaches Southern children's literature through a lens that honors regional heritage while actively expanding whose stories are centered and celebrated. She believes that empowering young readers means showing them mirrors of their own experiences and windows into diverse lives, with particular attention to underrepresented voices within Southern communities.",
+    "risk_tolerance": "Moderate-Progressive",
+    "decision_style": "Research-informed and equity-centered",
+    "preferred_topics": "Resilience through community support, diverse family structures, STEAM learning adventures, environmental stewardship, social-emotional development, culturally sustaining narratives that honor Southern heritage while embracing contemporary diversity, stories featuring children of color, rural and small-town settings reimagined with vitality and hope, intergenerational wisdom, and the joy of learning.",
+    "target_demographics": "Progressive parents and educators seeking inclusive children's literature; librarians building diverse collections; families in Southern communities seeking contemporary representation; urban families interested in regional American stories; educators implementing culturally responsive teaching; grandparents seeking books that reflect evolving family values while honoring tradition.",
+    "editorial_philosophy": "Every child deserves to see themselves as capable, curious, and valued. Our books celebrate the particular strengths of Southern childhood—connection to land and community, storytelling traditions, resilience—while ensuring that 'Southern stories' reflect the true diversity of the region today. We center narratives that might traditionally be marginalized: children of color, various family structures, economic diversity, and contemporary challenges. Academic growth and character development emerge naturally from stories where children navigate real experiences with support, creativity, and determination. The 'miracle' is recognizing the inherent brilliance in every child.",
+    "vulnerabilities": "May occasionally prioritize representation goals over narrative flow; can be sensitive to criticism about regional authenticity from conservative voices; sometimes struggles with balancing progressive values with market realities in more traditional Southern markets; vulnerable to accusations of not representing 'traditional' Southern values; needs validation that contemporary, inclusive approaches to Southern storytelling will resonate commercially."
+  },
+  "wizard_configuration": {
+    "name": "Mississippi Miracle Books",
+    "charter": "To publish picture books and early readers that empower K-4 children through joyful, authentic storytelling that celebrates resilience, curiosity, and belonging. We honor Southern cultural heritage while centering diverse voices and contemporary experiences, demonstrating that every child's story—regardless of background, family structure, or circumstances—matters and contains its own magic.",
+    "imprint_type": "Children's Picture Books & Early Chapter Books",
+    "genres": [
+      "Children's Picture Books",
+      "Early Readers",
+      "Character Education",
+      "Multicultural Fiction"
+    ],
+    "book_format": "8.5x8.5 Hardcover",
+    "price_point": 18.99,
+    "page_count": 32,
+    "catalog_size": 8,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting for children's picture books and early readers, emphasizing visual storytelling, inclusive illustration practices, and developmentally appropriate text layout.",
+    "enabled_types": [
+      "picture_book",
+      "early_reader",
+      "board_book"
+    ],
+    "type_definitions": {
+      "picture_book": {
+        "name": "Picture Book",
+        "description": "Full-color illustrated narrative with text integrated into visual storytelling, designed for read-aloud and independent viewing experiences.",
+        "template_requirements": [
+          "full_bleed_illustrations",
+          "integrated_text_placement",
+          "double_page_spreads",
+          "front_and_back_matter",
+          "endpapers_design"
+        ],
+        "formatting_rules": {
+          "text_placement": "flexible_overlay_or_dedicated_space",
+          "font_size": "16pt_minimum",
+          "illustration_style": "full_color_primary_focus",
+          "page_turns": "strategic_for_narrative_pacing",
+          "contrast": "high_legibility_over_illustrations"
+        }
+      },
+      "early_reader": {
+        "name": "Early Chapter Book",
+        "description": "Bridge format between picture books and chapter books, with controlled vocabulary, short chapters, and frequent illustrations supporting emerging independent readers.",
+        "template_requirements": [
+          "chapter_breaks",
+          "spot_illustrations_every_2_3_pages",
+          "larger_font_size",
+          "generous_line_spacing",
+          "vocabulary_level_indicators"
+        ],
+        "formatting_rules": {
+          "font_size": "14pt_body_text",
+          "line_spacing": "1.5_to_double",
+          "sentence_structure": "simple_controlled_length",
+          "paragraph_length": "short_3_5_sentences",
+          "chapter_length": "500_800_words"
+        }
+      },
+      "board_book": {
+        "name": "Board Book",
+        "description": "Durable format for youngest readers (ages 0-4), with very simple text, bold illustrations, and educational concepts.",
+        "template_requirements": [
+          "minimal_text_per_page",
+          "bold_simple_illustrations",
+          "rounded_corner_safe_design",
+          "thick_page_simulation"
+        ],
+        "formatting_rules": {
+          "text_per_page": "one_sentence_maximum",
+          "font_size": "24pt_minimum",
+          "word_count_total": "under_100_words",
+          "concept_focus": "single_learning_objective"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "picture_book": [
+          "picture book",
+          "illustrated story",
+          "full color illustrations",
+          "read aloud"
+        ],
+        "early_reader": [
+          "early reader",
+          "chapter book",
+          "beginning reader",
+          "level 2",
+          "level 3",
+          "transitional reader"
+        ],
+        "board_book": [
+          "board book",
+          "baby book",
+          "toddler",
+          "ages 0-3"
+        ]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "Design must prioritize vibrant, engaging visual storytelling with careful attention to representation and inclusive illustration. Illustrations should feature diverse children, families, and settings authentically. Color palettes should be warm and inviting, reflecting Southern landscapes (greens, earth tones, golden light) while avoiding clichéd imagery. Typography must be highly legible with strong contrast against backgrounds. Layout should guide young readers' eyes naturally through the narrative flow, with strategic page turns creating anticipation. White space and visual breathing room are essential to prevent overwhelming young viewers.",
+      "template_customizations": "Templates require robust support for various text-illustration integration styles: text overlaid on illustration with careful contrast management, dedicated text boxes/panels, and full-spread wordless pages. Character style guides must ensure visual consistency across spreads. Flexible grid systems accommodate both symmetrical and dynamic asymmetrical layouts. Front matter should include dedication and space for author/illustrator notes. Back matter can include discussion questions, activity suggestions, or author information. Templates must account for bleed requirements, spine design for thin books, and endpaper customization opportunities.",
+      "typesetting_considerations": "Use highly legible, friendly sans-serif fonts (Open Sans, Quicksand) with rounded letterforms that feel approachable to young readers. Font size must never sacrifice legibility for design—minimum 16pt for picture books, 14pt for early readers. Leading (line spacing) should be generous (1.5x to 2x font size). Text color should provide strong contrast (typically dark text on light backgrounds, or reverse with careful attention to legibility). For early readers, consider dyslexia-friendly font options and avoid justified text (use left-aligned). Maintain consistent text placement zones across similar page layouts to build visual literacy. Color consistency across digital and print production is critical—use Pantone guides and test prints."
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "picture_book",
+        "early_reader"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Visual storytelling primacy, inclusive representation, developmental appropriateness, and joyful aesthetics. Design must support both read-aloud engagement and independent exploration by young readers.",
+        "interior_layout_notes": "Flexible layouts that accommodate full-bleed spreads, spot illustrations, and varied text-image relationships. Visual pacing through page turns is critical for narrative engagement. Illustration style should be contemporary, warm, and diverse, avoiding stereotypical Southern imagery in favor of authentic, vibrant depictions of contemporary Southern childhood. Endpapers offer storytelling opportunities.",
+        "typesetting_requirements": "Large, friendly sans-serif fonts with excellent legibility. Generous spacing and strategic text placement that never competes with illustrations. For early readers, controlled vocabulary and sentence length require careful typographic hierarchy to support decoding skills. Text must be accessible to emergent readers while maintaining visual appeal.",
+        "functional_elements": "Age-appropriate front and back matter, including space for dedications, author/illustrator bios, discussion questions for caregivers/educators, and subtle diversity indicators (like #OwnVoices or representation notes). For early readers, chapter headings, page numbers, and occasional vocabulary support (context, not definitions).",
+        "reader_interaction_model": "Multiple reading experiences: adult read-aloud with child viewing illustrations; emerging independent readers decoding text with illustration support; purely visual 'reading' by pre-literate children. Design must support all three modes. Interactive elements (questions, seek-and-find details in illustrations) encourage re-reading and deeper engagement."
+      },
+      "reasoning": "Children's picture books and early readers require fundamentally different design approaches than adult or even middle-grade books. The visual-textual integration is not decorative but essential to meaning-making for young readers. Mississippi Miracle Books' commitment to inclusive, empowering narratives requires illustration and design that authentically represents diverse children and families, which demands specialized design expertise and sensitivity. The 'miracle' the imprint celebrates—every child's inherent capability—must be reflected in design that respects children's intelligence and supports their developmental stage."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": false,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": false,
+      "on_schedule": false,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [],
+      "paper_types": [],
+      "default_paper_type": "",
+      "target_word_count": 0,
+      "citation_style": "",
+      "include_quantitative_analysis": false
+    },
+    "content_configuration": {
+      "focus_areas": [],
+      "data_sources": {
+        "include_book_catalog": false,
+        "include_sales_metrics": false,
+        "include_production_metrics": false,
+        "include_configuration_analysis": false
+      },
+      "anonymization": {
+        "anonymize_sales_data": false,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "",
+      "file_naming": "",
+      "formats": [],
+      "include_submission_package": false
+    },
+    "automation_schedule": {
+      "enabled": false,
+      "frequency": "",
+      "milestone_triggers": {
+        "book_count_milestones": [],
+        "revenue_milestones": [],
+        "time_milestones": []
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [],
+      "temperature": 0.0,
+      "max_tokens": 0,
+      "enable_quality_validation": false
+    },
+    "collaboration_settings": {
+      "include_attribution": false,
+      "author_byline": "",
+      "institutional_affiliation": "",
+      "contact_email": "",
+      "co_author_llm": false
+    },
+    "validation_criteria": {
+      "min_word_count": 0,
+      "max_word_count": 0,
+      "required_sections": [],
+      "require_quantitative_data": false,
+      "require_citations": false,
+      "academic_tone_validation": false
+    }
+  },
+  "supplementary_materials": {
+    "enabled": false,
+    "description": "Optional supplementary materials that illuminate the domain Mississippi Miracle Books operates in. These materials provide context about children's literacy, Southern culture, diverse representation, and K-4 education.",
+    "materials": {},
+    "usage_notes": "Add paths to reference materials about early childhood literacy, inclusive children's literature, Southern cultural heritage, or educational standards to enhance AI-generated content for this imprint."
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-10-05T10:55:08.282650",
+    "model_used": "anthropic/claude-sonnet-4-5-20250929",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

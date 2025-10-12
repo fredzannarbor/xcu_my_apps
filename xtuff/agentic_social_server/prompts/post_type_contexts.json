@@ -1,0 +1,24 @@
+{
+  "post_type_contexts": {
+    "book_recommendation": "Recommend a book with compelling reasons that create excitement and learning.",
+    "book_quote": "Share a powerful quote with context that creates both emotional resonance and insight.",
+    "arxiv_share": "Share a fascinating academic paper or research finding from Arxiv with accessible insights that bridge theory and practice. You MUST include a working naked URL (not markdown) to the paper or research finding.",
+    "news_update": "Share recent developments or trends in your field with thoughtful analysis and implications. You MUST include a working naked URL (not markdown) to the news article or blog post.",
+    "contrarian_perspective": "Present a well-reasoned contrarian viewpoint that challenges conventional wisdom in your domain.",
+    "insight_discovery": "Share a surprising insight or realization that makes people think differently about your field.",
+    "expert_spotlight": "Highlight an expert or practitioner with fascinating details that create both connection and learning. The person MUST be real and you MUST describe them accurately. You MUST include a working naked URL (not markdown) to the expert's profile or website.",
+    "domain_exploration": "Explore what makes your domain special with insights that educate and excite.",
+    "learning_challenge": "Present a learning challenge that builds community and expands knowledge in your field.",
+    "thoughtful_debate": "Pose a thought-provoking question in your domain that invites discussion and learning.",
+    "achievement_milestone": "Celebrate a meaningful achievement or milestone in a way that's relatable and educational. Your post MUST include a working naked URL (not markdown) to a source.",
+    "breakthrough_moment": "Share a breakthrough moment or paradigm shift that illuminates your field in a new way.",
+    "today_i_learned": "Share a fact that your persona might have very recently learned about its field.",
+    "pedantry_ftw" : "Precisely and thoroughly explain a crucial point that casual visitors to your field often misunderstand."
+  },
+  "default_context": "Create engaging content about your domain of expertise. You MUST include a citation and a working naked URL (not markdown) to a related source.",
+  "metadata": {
+    "description": "Context descriptions for different social media post types",
+    "version": "1.0",
+    "last_updated": "2025-01-19"
+  }
+}

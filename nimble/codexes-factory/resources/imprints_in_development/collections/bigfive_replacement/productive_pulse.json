@@ -1,0 +1,28 @@
+{
+  "imprint": "Productive Pulse",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@productivepulse.com",
+  "branding": {
+    "tagline": "Let your productivity pulse",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.productivepulse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Time management, work-life balance, goal setting",
+    "target_audience": "Busy professionals, students",
+    "competitive_advantage": "Cutting-edge research, real-world applicable content",
+    "example_titles": "Productivity hacks, time management masterclass"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Audio Arcana",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@audioarcana.com",
+  "branding": {
+    "tagline": "Hear the whisper, unlock the mystery",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.audioarcana.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mysticism and spirituality books",
+    "target_audience": "Spiritual seekers and mysticism enthusiasts",
+    "competitive_advantage": "In-depth spiritual teachings and practices enriched by audio",
+    "example_titles": "Eckhart Tolle, Paulo Coelho"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

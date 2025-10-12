@@ -1,0 +1,28 @@
+{
+  "imprint": "Baker's Bliss",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@baker'sbliss.com",
+  "branding": {
+    "tagline": "Bake the World a Sweeter Place",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.baker'sbliss.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Baking recipes, techniques, dessert cookbooks",
+    "target_audience": "Home bakers, dessert lovers",
+    "competitive_advantage": "Depth and variety in baking-specific content",
+    "example_titles": "Artisan Bread at Home, The Ultimate Cake Cookbook"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

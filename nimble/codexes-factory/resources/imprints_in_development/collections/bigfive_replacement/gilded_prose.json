@@ -1,0 +1,28 @@
+{
+  "imprint": "Gilded Prose",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@gildedprose.com",
+  "branding": {
+    "tagline": "Gold-standard narratives for the discerning reader",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.gildedprose.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Contemporary and historical literary fiction",
+    "target_audience": "Fans of award-winning literary fiction",
+    "competitive_advantage": "Exclusive focus on literary fiction guarantees high quality",
+    "example_titles": "Kazuo Ishiguro, Ian McEwan"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

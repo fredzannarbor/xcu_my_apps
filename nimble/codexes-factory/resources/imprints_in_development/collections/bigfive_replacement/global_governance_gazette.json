@@ -1,0 +1,28 @@
+{
+  "imprint": "Global Governance Gazette",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@globalgovernancegazette.com",
+  "branding": {
+    "tagline": "Navigate the World of Governance",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.globalgovernancegazette.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "International institutions, treaties, and regulations",
+    "target_audience": "Policy makers, diplomats, and international studies students",
+    "competitive_advantage": "Focus on global governance issues",
+    "example_titles": "Diplomats, international relations scholars, and policy advisors"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

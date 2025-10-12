@@ -1,0 +1,28 @@
+{
+  "imprint": "Purpose Pathway",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@purposepathway.com",
+  "branding": {
+    "tagline": "Pathway to purpose",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.purposepathway.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Purpose finding, motivation, personal growth",
+    "target_audience": "Purpose seekers, life enthusiasts",
+    "competitive_advantage": "In-depth content, expert guidance",
+    "example_titles": "Finding your purpose, living with intent"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

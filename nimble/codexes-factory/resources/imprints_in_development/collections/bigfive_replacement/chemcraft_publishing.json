@@ -1,0 +1,28 @@
+{
+  "imprint": "ChemCraft Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@chemcraftpublishing.com",
+  "branding": {
+    "tagline": "Ignite curiosity, fuel knowledge",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.chemcraftpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Chemistry, material science, chemical reactions",
+    "target_audience": "Chemistry students and enthusiasts, science teachers",
+    "competitive_advantage": "Making complex chemistry concepts comprehensible and fun",
+    "example_titles": "The Alchemist's Cookbook: Exploring Chemical Reactions, Material Science: The Building Blocks of Life"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

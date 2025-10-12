@@ -1,0 +1,28 @@
+{
+  "imprint": "Culinary Kindergarten",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@culinarykindergarten.com",
+  "branding": {
+    "tagline": "Raise a Foodie",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.culinarykindergarten.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Children's cookbooks, family cooking, nutrition for kids",
+    "target_audience": "Parents, educators, children",
+    "competitive_advantage": "Focus on cooking education for children",
+    "example_titles": "Kids in the Kitchen, Healthy Bites for Little Tykes"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

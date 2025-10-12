@@ -1,0 +1,28 @@
+{
+  "imprint": "Heritage House",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@heritagehouse.com",
+  "branding": {
+    "tagline": "Every heritage has a history",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.heritagehouse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Ethnic history, women's history, LGBTQ+ history",
+    "target_audience": "Readers looking for diverse stories",
+    "competitive_advantage": "Heritage House celebrates diversity and inclusivity in history",
+    "example_titles": "Histories of marginalized groups, biographies of notable women"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

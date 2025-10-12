@@ -1,0 +1,28 @@
+{
+  "imprint": "Science Scribes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sciencescribes.com",
+  "branding": {
+    "tagline": "Science through the lives of its masters",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sciencescribes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of scientists from various fields",
+    "target_audience": "Science enthusiasts, students, and educators",
+    "competitive_advantage": "Comprehensive coverage of the world of science through its key figures",
+    "example_titles": "Biographies of Nobel Prize-winning scientists, inventors"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

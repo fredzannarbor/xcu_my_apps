@@ -1,0 +1,25 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Warships & Navies",
+      "output_file": "configs/expanded_imprints/warships_and_navies.json",
+      "codextypes": [
+        "standard",
+        "reference",
+        "textbook"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Clarity, precision, and accessibility of complex technical data and historical visuals. The design must facilitate deep study, research, and cross-referencing for enthusiasts and historians.",
+        "interior_layout_notes": "A flexible, multi-column grid system is essential to integrate narrative text with a high volume of diverse visual elements (blueprints, schematics, maps, photographs) and data tables. Utilize generous margins or dedicated full-page spreads for critical, detailed illustrations. Implement sidebars or call-out boxes for technical specifications, definitions, historical context, or specific data points. Ensure clear visual hierarchy through distinct heading styles and effective use of white space to prevent visual clutter.",
+        "typesetting_requirements": "Employ a highly legible serif typeface for body text, capable of sustaining long reading periods. Complement with a clear, potentially condensed sans-serif for technical data within tables, captions, and diagrams to maximize readability in confined spaces. Distinct, readable typefaces for headings and subheadings. Robust use of emphasis (bold, italics, small caps) for ship names, technical terms, and foreign phrases. Footnotes/endnotes require consistent and clear styling.",
+        "functional_elements": "A comprehensive, multi-level index is critical, including ship names, technical specifications, battles, locations, and personnel. An exhaustive glossary of naval terminology is mandatory. Appendices for tabular data (e.g., ship classes, dimensions, armaments, chronologies). Explicit internal cross-references within the text (e.g., 'See Figure 3.2', 'Refer to Appendix B'). High-resolution image asset management for accurate reproduction of historical and technical drawings.",
+        "reader_interaction_model": "Readers will engage in detailed study, research, and information extraction. They will frequently navigate non-linearly, cross-referencing between text, illustrations, tables, index, and glossary. The design must support quick information retrieval and allow for meticulous examination of technical details and historical data."
+      },
+      "success": true
+    }
+  ],
+  "output_directory": "configs/expanded_imprints"
+}

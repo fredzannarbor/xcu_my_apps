@@ -1,0 +1,61 @@
+{
+  "imprint_name": "New Literary Imprint",
+  "generated_at": "2025-08-11T03:15:49.411841",
+  "artifacts": {
+    "templates": {
+      "status": "success",
+      "files_generated": [
+        "template.tex",
+        "cover.tex",
+        "styles.sty",
+        "commands.sty"
+      ],
+      "compilation_test": {
+        "success": true,
+        "message": "All template files present and non-empty"
+      },
+      "output_directory": "output_directory/templates"
+    },
+    "prompts": {
+      "status": "success",
+      "prompts_generated": 5,
+      "output_file": "output_directory/prompts.json"
+    },
+    "configs": {
+      "status": "success",
+      "configs_generated": [
+        "imprint.json",
+        "lsi_config.json",
+        "pipeline_config.json",
+        "distribution_config.json"
+      ],
+      "output_directory": "output_directory/configs"
+    },
+    "workflow": {
+      "status": "success",
+      "output_file": "output_directory/workflow.json"
+    },
+    "documentation": {
+      "status": "error",
+      "error": "'str' object has no attribute 'get'"
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "validation": {
+    "overall_valid": true,
+    "template_validation": {
+      "valid": true,
+      "issues": []
+    },
+    "config_validation": {
+      "valid": true,
+      "issues": []
+    },
+    "prompt_validation": {
+      "valid": true,
+      "issues": []
+    },
+    "issues": []
+  }
+}

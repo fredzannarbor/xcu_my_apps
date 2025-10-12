@@ -1,0 +1,28 @@
+{
+  "imprint": "Mind Matter",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mindmatter.com",
+  "branding": {
+    "tagline": "Explore the minds that understood the mind",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mindmatter.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of important figures in psychology",
+    "target_audience": "Psychology students and enthusiasts",
+    "competitive_advantage": "Detailed coverage of the world of psychology from its key figures",
+    "example_titles": "Biographies of pioneering psychologists, philosophers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

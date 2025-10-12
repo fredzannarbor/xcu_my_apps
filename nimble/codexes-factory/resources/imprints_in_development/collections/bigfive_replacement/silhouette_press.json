@@ -1,0 +1,28 @@
+{
+  "imprint": "Silhouette Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@silhouettepress.com",
+  "branding": {
+    "tagline": "Shadows and depth in every story",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.silhouettepress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Psychological literary fiction",
+    "target_audience": "Readers fascinated by the human mind",
+    "competitive_advantage": "Deep psychological exploration sets our titles apart",
+    "example_titles": "Paula Hawkins, Gillian Flynn"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

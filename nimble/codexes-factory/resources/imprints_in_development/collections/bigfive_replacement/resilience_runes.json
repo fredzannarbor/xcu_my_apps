@@ -1,0 +1,28 @@
+{
+  "imprint": "Resilience Runes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@resiliencerunes.com",
+  "branding": {
+    "tagline": "Strength in stories",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.resiliencerunes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Novels featuring resilient protagonists",
+    "target_audience": "Teens seeking inspiration and motivation",
+    "competitive_advantage": "Uplifting narratives about overcoming adversity",
+    "example_titles": "Laurie Halse Anderson, Gayle Forman type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

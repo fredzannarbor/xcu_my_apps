@@ -1,0 +1,28 @@
+{
+  "imprint": "Frontline Finance",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@frontlinefinance.com",
+  "branding": {
+    "tagline": "Finance for the frontline",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.frontlinefinance.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Financial management, investment, and banking",
+    "target_audience": "Financial managers, investors, and executives",
+    "competitive_advantage": "Practical financial guidance for competitive advantage",
+    "example_titles": "Finance for Managers, The Investor's Guide"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

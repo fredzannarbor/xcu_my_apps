@@ -1,0 +1,28 @@
+{
+  "imprint": "Goblin's Gold Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@goblin'sgoldpress.com",
+  "branding": {
+    "tagline": "Embark on a quest for literary gold",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.goblin'sgoldpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "High fantasy with a focus on treasure hunts and quests",
+    "target_audience": "Fans of adventure-driven, quest-centered narratives",
+    "competitive_advantage": "We deliver engaging narratives that combine fantasy with thrilling treasure hunts",
+    "example_titles": "Comparable to works by J.R.R. Tolkien or Andrzej Sapkowski"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

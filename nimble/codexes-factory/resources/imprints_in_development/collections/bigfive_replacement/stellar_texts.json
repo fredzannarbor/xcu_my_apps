@@ -1,0 +1,28 @@
+{
+  "imprint": "Stellar Texts",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@stellartexts.com",
+  "branding": {
+    "tagline": "Rights and wrongs in the cosmos",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.stellartexts.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space law, political and ethical discussions",
+    "target_audience": "Lawyers, politicians, philosophers, general public",
+    "competitive_advantage": "In-depth analysis on the legal and ethical implications",
+    "example_titles": "Space Law: Uncharted Territory by Judge Ray Mars"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,34 @@
+.env
+.venv
+__pycache__/
+*.py[cod]
+*$py.class
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/personal-financial-management.iml
+/old_ud.json
+/.idea/inspectionProfiles/profiles_settings.xml
+/ud.json
+/.idea/vcs.xml
+
+# add standard python .gitignore patterns
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+ENV*/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Python egg files
+*.egg
+*.egg-info/

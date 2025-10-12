@@ -1,0 +1,28 @@
+{
+  "imprint": "Mythos Matrix",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mythosmatrix.com",
+  "branding": {
+    "tagline": "Delve into the fabric of fantasy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mythosmatrix.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy stories built on mythology and folklore",
+    "target_audience": "Readers with an interest in mythology and tales of old, reimagined",
+    "competitive_advantage": "We leverage the timeless appeal of folklore and mythology in a modern context",
+    "example_titles": "Comparable to works by Rick Riordan or Madeline Miller"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

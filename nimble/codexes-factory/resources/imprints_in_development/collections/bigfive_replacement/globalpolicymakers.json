@@ -1,0 +1,28 @@
+{
+  "imprint": "GlobalPolicyMakers",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@globalpolicymakers.com",
+  "branding": {
+    "tagline": "Navigate the World Stage with Confidence",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.globalpolicymakers.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "International relations, diplomacy, and policy",
+    "target_audience": "Policy makers, diplomats, and international studies students",
+    "competitive_advantage": "World-class experts in international politics",
+    "example_titles": "Former diplomats, international relations scholars, and policy advisors"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

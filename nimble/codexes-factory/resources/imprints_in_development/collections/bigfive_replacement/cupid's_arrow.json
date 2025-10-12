@@ -1,0 +1,28 @@
+{
+  "imprint": "Cupid's Arrow",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cupid'sarrow.com",
+  "branding": {
+    "tagline": "Love as it happens",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cupid'sarrow.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Contemporary romance for the modern reader",
+    "target_audience": "Women aged 18-45 who enjoy contemporary romance",
+    "competitive_advantage": "Fresh perspectives on modern love, focusing on diverse settings and characters",
+    "example_titles": "Nicholas Sparks, Colleen Hoover"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

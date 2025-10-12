@@ -1,0 +1,186 @@
+\documentclass[14pt, oneside]{memoir}
+
+% --- Page Geometry for Early Readers (6x9 Portrait - Standard Chapter Book) ---
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*}
+\settrims{0pt}{0pt}
+
+% Generous margins for young readers
+\setlrmarginsandblock{0.75in}{0.75in}{*}
+\setulmarginsandblock{0.75in}{0.75in}{*}
+
+\setheadfoot{18pt}{18pt}
+\setlength{\headdrop}{2pt}
+\setlength{\headsep}{12pt}
+\checkandfixthelayout[nearest]
+
+% --- Font Setup for Early Readers ---
+\usepackage{fontspec}
+% Lexend: Designed specifically for reading accessibility and dyslexia-friendly
+% Features wider letterforms, generous spacing, and low visual noise
+% Proven to improve reading proficiency for children with reading challenges
+% Using variable font with explicit weight specifications
+\setmainfont{Lexend}[
+    Scale=1.0,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+\setsansfont{Lexend}[
+    Scale=1.0,
+    Ligatures=TeX,
+    FontFace={bx}{n}{Font=Lexend, Weight=700},
+    BoldFont=Lexend,
+    BoldFeatures={FakeWeight=1.5}
+]
+% Atkinson Hyperlegible: High-contrast monospace for code/mnemonics
+% Designed by Braille Institute for maximum legibility
+\setmonofont{Atkinson Hyperlegible}[
+    Scale=0.95,
+]
+
+% --- Typography for Early Readers ---
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{etoolbox}
+
+% Define brand colors
+\definecolor{miracleblue}{RGB}{52, 152, 219}
+\definecolor{miraclegray}{RGB}{127, 140, 141}
+
+% --- Line Spacing for Early Readers (1.5-2x) ---
+\linespread{1.75} % 1.75x line spacing for readability
+
+% --- Paragraph Formatting ---
+\setlength{\parindent}{0.3in} % Small indent for chapter books
+\setlength{\parskip}{0pt} % No extra space between paragraphs
+
+% --- Chapter Styling for Early Readers ---
+\usepackage{indentfirst} % Indent first paragraph of chapters
+
+% Custom chapter style
+\makechapterstyle{earlyreader}{%
+    \renewcommand{\chapterheadstart}{\vspace*{0.5in}}
+    \renewcommand{\printchaptername}{}
+    \renewcommand{\chapternamenum}{}
+    \renewcommand{\printchapternum}{%
+        \begin{center}
+        {\Huge\sffamily\color{miracleblue}\thechapter}
+        \end{center}
+    }
+    \renewcommand{\afterchapternum}{\par\vspace{0.2in}}
+    \renewcommand{\printchaptertitle}[1]{%
+        \begin{center}
+        {\LARGE\sffamily\color{miracleblue}##1}
+        \end{center}
+    }
+    \renewcommand{\afterchaptertitle}{\par\vspace{0.5in}}
+}
+\chapterstyle{earlyreader}
+
+% --- Page Style Setup ---
+\makepagestyle{earlyreaderstyle}
+
+% Define title command for headers (will be set by title page)
+\newcommand{\thetitle}{Maya's Rescue Code}
+
+% Simple headers and footers
+\makeoddhead{earlyreaderstyle}{}{}{\small\sffamily\color{miraclegray}\thetitle}
+\makeevenhead{earlyreaderstyle}{\small\sffamily\color{miraclegray}\thetitle}{}{}
+
+\makeoddfoot{earlyreaderstyle}{}{\small\thepage}{}
+\makeevenfoot{earlyreaderstyle}{}{\small\thepage}{}
+
+\pagestyle{earlyreaderstyle}
+\aliaspagestyle{chapter}{earlyreaderstyle}
+\aliaspagestyle{cleared}{earlyreaderstyle}
+
+% Plain style for front matter
+\makepagestyle{frontmatterstyle}
+\makeoddfoot{frontmatterstyle}{}{\small\thepage}{}
+\makeevenfoot{frontmatterstyle}{}{\small\thepage}{}
+
+% --- Table of Contents Styling ---
+\renewcommand{\cftchapterfont}{\sffamily\bfseries}
+\renewcommand{\cftchapterpagefont}{\sffamily}
+
+% --- Custom Commands for Early Reader Content ---
+
+% Command for illustration placeholders
+\newcommand{\illustrationplaceholder}[1]{%
+    \begin{center}
+    \fcolorbox{miraclegray}{white}{%
+        \parbox{4in}{%
+            \vspace{2.5in}
+            \begin{center}
+            {\sffamily\color{miraclegray}\small [Illustration: #1]}
+            \end{center}
+            \vspace{0.1in}
+        }%
+    }
+    \end{center}
+    \vspace{0.3in}
+}
+
+% Command for mnemonic boxes (using Source Code Pro)
+\newcommand{\mnemonicbox}[2]{%
+    \vspace{0.2in}
+    \begin{center}
+    \fcolorbox{miracleblue}{white}{%
+        \parbox{4.5in}{%
+            \begin{center}
+            {\sffamily\large\color{miracleblue}#1}\\[0.1in]
+            {\ttfamily\normalsize #2}
+            \end{center}
+        }%
+    }
+    \end{center}
+    \vspace{0.2in}
+}
+
+% Command for discussion questions
+\newcommand{\discussionquestion}[1]{%
+    \noindent{\sffamily\color{miracleblue}\textbf{Q:}} #1
+    \vspace{0.15in}
+}
+
+% --- Hyphenation Settings ---
+\tolerance=2000
+\emergencystretch=10pt
+\hyphenpenalty=300
+\widowpenalty=10000
+\clubpenalty=10000
+
+% --- Document Start ---
+\begin{document}
+
+% --- Frontmatter ---
+\frontmatter
+\pagestyle{frontmatterstyle}
+
+\IfFileExists{title_page.tex}{\input{title_page.tex}}{}
+\IfFileExists{copyright_page.tex}{\input{copyright_page.tex}}{}
+\IfFileExists{dedication.tex}{\input{dedication.tex}}{}
+\IfFileExists{table_of_contents.tex}{\input{table_of_contents.tex}}{}
+\IfFileExists{introduction.tex}{\input{introduction.tex}}{}
+
+% --- Mainmatter ---
+\mainmatter
+\pagestyle{earlyreaderstyle}
+
+% Input chapter files - these will be generated by prepress.py
+\IfFileExists{chapters.tex}{\input{chapters.tex}}{}
+
+% --- Backmatter ---
+\backmatter
+\pagestyle{frontmatterstyle}
+
+\IfFileExists{discussion_questions.tex}{\input{discussion_questions.tex}}{}
+\IfFileExists{about_the_author.tex}{\input{about_the_author.tex}}{}
+\IfFileExists{about_science_of_reading.tex}{\input{about_science_of_reading.tex}}{}
+
+\end{document}

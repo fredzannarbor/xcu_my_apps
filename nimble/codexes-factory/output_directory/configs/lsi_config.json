@@ -1,0 +1,17 @@
+{
+  "imprint_name": "New Literary Imprint",
+  "default_values": {
+    "publisher": "New Literary Imprint",
+    "imprint": "New Literary Imprint",
+    "series": "",
+    "binding": "paperback",
+    "trim_size": "6x9",
+    "interior_color": "black_white",
+    "cover_finish": "matte"
+  },
+  "field_mappings": {
+    "description_long": "Use marketing prompts for compelling descriptions",
+    "bisac_categories": "Focus on Inspirational Non-Fiction, Biographical, Educational (STEAM), Personal Development",
+    "keywords": "Generate based on genre and audience"
+  }
+}

@@ -1,0 +1,53 @@
+%% Section Template
+%% Use this as a reference for section formatting
+
+\section{Section Title}
+\label{sec:section_label}
+
+Section content goes here. Use proper LaTeX formatting:
+
+\begin{itemize}
+    \item Bullet points for lists
+    \item Use \textbf{bold} and \textit{italic} formatting
+    \item Reference figures with \autoref{fig:label}
+    \item Reference tables with \autoref{tab:label}
+    \item Reference sections with \autoref{sec:label}
+\end{itemize}
+
+\subsection{Subsection Title}
+\label{subsec:subsection_label}
+
+Subsection content.
+
+\subsubsection{Subsubsection Title}
+
+Subsubsection content (use sparingly).
+
+%% Code listing example
+\begin{lstlisting}[style=pythonstyle,caption={Python code example},label=lst:python_example]
+def example_function():
+    return "Hello, World!"
+\end{lstlisting}
+
+%% Figure example
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/example_figure.pdf}
+    \caption{Example figure caption.}
+    \label{fig:example_figure}
+\end{figure}
+
+%% Table example
+\begin{table}[htbp]
+    \centering
+    \caption{Example table caption.}
+    \label{tab:example_table}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        Item & Value 1 & Value 2 \\
+        \midrule
+        Row 1 & 123 & 456 \\
+        Row 2 & 789 & 012 \\
+        \bottomrule
+    \end{tabular}
+\end{table}

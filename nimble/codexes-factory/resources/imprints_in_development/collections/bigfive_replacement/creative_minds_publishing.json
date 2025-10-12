@@ -1,0 +1,162 @@
+{
+  "_config_info": {
+    "description": "Creative Minds Publishing imprint configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "parent_publisher": "Literary House Publishers"
+  },
+  
+  "imprint": "Creative Minds Publishing",
+  "publisher": "Literary House Publishers",
+  "contact_email": "editorial@creativeminds.com",
+  
+  "branding": {
+    "logo_path": "logos/creative_minds_logo.png",
+    "brand_colors": {
+      "primary": "#8B5CF6",
+      "secondary": "#F59E0B"
+    },
+    "tagline": "Unleashing Creative Potential",
+    "website": "https://www.creativeminds.com"
+  },
+  
+  "publishing_focus": {
+    "primary_genres": ["Fiction", "Poetry", "Creative Writing", "Art", "Design"],
+    "target_audience": "Creative Professionals and General Readers",
+    "specialization": "Creative and artistic works",
+    "languages": ["eng", "spa"]
+  },
+  
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "Color",
+    "interior_paper": "cream",
+    "cover_type": "glossy",
+    "trim_size": "6x9",
+    "territorial_rights": "US Only",
+    "returnability": "Yes",
+    "audience": "General Adult",
+    "country_of_origin": "US"
+  },
+  
+  "pricing_defaults": {
+    "us_wholesale_discount": "50",
+    "uk_wholesale_discount": "45",
+    "eu_wholesale_discount": "45",
+    "ca_wholesale_discount": "50",
+    "au_wholesale_discount": "45",
+    "default_markup_percentage": "120"
+  },
+  
+  "distribution_settings": {
+    "lightning_source_account": "",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "36",
+    "order_type_eligibility": "POD"
+  },
+  
+  "metadata_defaults": {
+    "bisac_category_preferences": ["FIC000000", "POE000000", "ART000000", "DES000000"],
+    "thema_subject_preferences": ["F", "DC", "AG", "WF"],
+    "default_age_range": {
+      "min_age": "18",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Illustrator"
+    },
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+  
+  "production_settings": {
+    "file_naming_convention": "{title}_{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": false,
+      "organize_by_genre": true,
+      "base_path": "production/creative_minds"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "RGB",
+      "pdf_version": "PDF/X-3"
+    }
+  },
+  
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@creativeminds",
+      "instagram": "@creativeminds_pub",
+      "facebook": "CreativeMindsPublishing"
+    }
+  },
+  
+  "lsi_specific_settings": {
+    "stamped_text_left": "Creative",
+    "stamped_text_center": "",
+    "stamped_text_right": "Minds",
+    "lsi_special_category": "",
+    "metadata_contact_dictionary": "Creative Minds Editorial",
+    "publisher_reference_id": "CMP",
+    "flex_fields": {
+      "lsi_flexfield1": "Creative",
+      "lsi_flexfield2": "Art",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "50",
+      "returnability": "Yes",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0
+    },
+    "UK": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "pricing_multiplier": 0.78,
+      "exchange_rate": 0.78
+    },
+    "EU": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "pricing_multiplier": 0.91,
+      "exchange_rate": 0.91
+    },
+    "CA": {
+      "wholesale_discount_percent": "50",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.35
+    },
+    "AU": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "pricing_multiplier": 1.48,
+      "exchange_rate": 1.48
+    }
+  },
+  
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_email": "workflow@creativeminds.com",
+    "backup_configurations": true,
+    "llm_completion_enabled": true,
+    "computed_fields_enabled": true
+  }
+}

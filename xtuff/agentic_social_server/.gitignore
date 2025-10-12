@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment and Secrets
+.env
+.env.local
+.env.production
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Claude Code Configuration (contains sensitive data)
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Data files (keep structure but ignore content)
+resources/data_tables/*.json
+!resources/data_tables/ai_personas.json
+
+# Logs
+*.log
+logs/
+*.env
+# Temporary and debug files
+debug_*.py
+test_*_key*.py
+test_*_secret*.py
+*_debug.py
+temp_*.py
+scratch_*.py
+# Log files that might contain sensitive data
+*.jsonl
+ai_interactions.jsonl
+llm_interactions.jsonl

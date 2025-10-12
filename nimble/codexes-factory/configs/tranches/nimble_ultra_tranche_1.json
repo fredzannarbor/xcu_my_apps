@@ -1,0 +1,63 @@
+{
+  "_config_info": {
+    "description": "Configuration for Nimble Ultra Global intelligence/espionage imprint",
+    "version": "1.0",
+    "last_updated": "2025-09-26",
+    "config_type": "tranche_specific"
+  },
+  "display_name": "Nimble Ultra Global - Intelligence & Espionage",
+  "description": "Annotated public domain documents on intelligence and espionage",
+  "tranche_info": {
+    "tranche_id": "nimble-ultra-tranche-1",
+    "tranche_name": "Nimble Ultra Global Tranche 1",
+    "tranche_description": "First tranche of intelligence and espionage history books",
+    "book_count": 8,
+    "target_month": "Dec 2025",
+    "target_year": "2025"
+  },
+  "publisher": "Nimble Books LLC",
+  "imprint": "nimble_ultra",
+  "lightning_source_account": "6024045",
+  "cover_submission_method": "FTP",
+  "text_block_submission_method": "FTP",
+  "rendition_booktype": "POD: Standard B&W 7 x 10 in",
+  "carton_pack_quantity": "16",
+  "order_type_eligibility": "POD",
+  "language_code": "eng",
+  "country_of_origin": "US",
+  "territorial_rights": "World",
+  "returnability": "Yes",
+  "binding_type": "paperback",
+  "interior_color": "BW",
+  "interior_paper": "white",
+  "trim_size": "7x10",
+  "cover_type": "matte",
+  "default_price": "29.99",
+  "currency": "USD",
+  "us_wholesale_discount": "40",
+  "uk_wholesale_discount": "40",
+  "eu_wholesale_discount": "40",
+  "ca_wholesale_discount": "40",
+  "au_wholesale_discount": "40",
+  "bisac_category_preferences": [
+    "POL013000",
+    "HIS027000",
+    "HIS037040"
+  ],
+  "thema_subject_preferences": [
+    "JPSH",
+    "NH",
+    "JP"
+  ],
+  "default_age_range": {
+    "min_age": "18",
+    "max_age": ""
+  },
+  "target_audience": "General Adult, Academic, and Professional",
+  "publisher_persona": {
+    "name": "Dr. Alistair Finch",
+    "bio": "Former senior intelligence analyst and historian with 20 years of experience at the intersection of geopolitics and information analysis.",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Data-driven"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Tales & Tides",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@talesandtides.com",
+  "branding": {
+    "tagline": "Ebb and flow with captivating tales",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.talesandtides.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Literary fiction influenced by coastal cultures",
+    "target_audience": "Readers drawn to seaside settings and cultures",
+    "competitive_advantage": "Unique focus on coastal narratives offers fresh perspectives",
+    "example_titles": "E. Annie Proulx, Pico Iyer"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "_template_info": {
+    "description": "Template for imprint-specific configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "usage": "Copy this template and customize for each imprint"
+  },
+  "_required_fields": {
+    "imprint": "Name of the imprint/brand",
+    "publisher": "Parent publisher name",
+    "contact_email": "Primary contact email for the imprint"
+  },
+  "_optional_fields": {
+    "description": "All fields below are optional and will inherit from publisher or global defaults if not specified"
+  },
+  "imprint": "TEMPLATE_IMPRINT_NAME",
+  "publisher": "TEMPLATE_PUBLISHER_NAME",
+  "contact_email": "contact@template-imprint.com",
+  "branding": {
+    "logo_path": "logos/template_imprint_logo.png",
+    "brand_colors": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF"
+    },
+    "tagline": "Template Imprint Tagline",
+    "website": "https://www.template-imprint.com"
+  },
+    "fonts": {
+            "body": "Adobe Caslon Pro",
+            "heading": "Adobe Caslon Pro",
+            "korean": "Apple Myungjo",
+            "quotations": "Adobe Caslon Pro",
+            "mnemonics": "Adobe Caslon Pro"
+        },
+  "publishing_focus": {
+    "primary_genres": [
+      "Fiction",
+      "Non-Fiction"
+    ],
+    "target_audience": "General Adult",
+    "specialization": "General Publishing",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "100"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "paperback",
+    "carton_pack_quantity": "24",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "GEN000000"
+    ],
+    "thema_subject_preferences": [
+      ""
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": false,
+      "base_path": "production/{imprint}"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "optional",
+    "marketing_image_required": false,
+    "social_media_handles": {
+      "twitter": "@template_imprint",
+      "facebook": "TemplateImprint",
+      "instagram": "@template_imprint"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "",
+    "metadata_contact_dictionary": "",
+    "flex_fields": {
+      "lsi_flexfield1": "",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_email": "workflow@template-imprint.com",
+    "backup_configurations": true
+  }
+}

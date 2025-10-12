@@ -1,0 +1,162 @@
+{
+  "book_metadata_extraction": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert at extracting structured metadata from book content. You analyze text and return comprehensive metadata in JSON format."
+      },
+      {
+        "role": "user",
+        "content": "Extract metadata from this book content:\n\n{content}\n\nReturn JSON with the following fields: title, author, summary (2-3 sentences), keywords (5-10 relevant terms), genre, target_audience, and estimated_page_count."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    }
+  },
+  "lsi_field_completion": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert at completing LSI (Lightning Source Inc.) metadata fields for book publishing. You understand the requirements for each field and can generate appropriate content."
+      },
+      {
+        "role": "user",
+        "content": "Complete the missing LSI fields for this book:\n\nExisting data: {existing_data}\n\nMissing fields: {missing_fields}\n\nReturn JSON with completed field values that meet LSI requirements."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 2000
+    }
+  },
+  "book_summary_generation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book summarizer. You create compelling, accurate summaries that capture the essence of a book."
+      },
+      {
+        "role": "user",
+        "content": "Create a compelling book summary for:\n\nTitle: {title}\nAuthor: {author}\nContent: {content}\n\nGenerate a {length} summary that would appeal to potential readers."
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 500
+    }
+  },
+  "back_cover_text_generation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert at writing compelling back cover text for books. You create engaging copy that entices readers to purchase the book."
+      },
+      {
+        "role": "user",
+        "content": "Write back cover text for this book:\n\nTitle: {title}\nAuthor: {author}\nGenre: {genre}\nSummary: {summary}\n\nCreate compelling back cover text that includes a hook, brief description, and call to action. Keep it under 200 words."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 300
+    }
+  },
+  "keyword_extraction": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert at extracting relevant keywords and phrases from text content for search optimization and categorization."
+      },
+      {
+        "role": "user",
+        "content": "Extract 10-15 relevant keywords and phrases from this content:\n\n{content}\n\nReturn JSON with an array of keywords, prioritized by relevance and search potential."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 300
+    }
+  },
+  "bisac_category_suggestion": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert at BISAC (Book Industry Standards and Communications) category classification. You can suggest appropriate BISAC codes for books based on their content and genre."
+      },
+      {
+        "role": "user",
+        "content": "Suggest appropriate BISAC categories for this book:\n\nTitle: {title}\nGenre: {genre}\nSummary: {summary}\nKeywords: {keywords}\n\nReturn JSON with primary and secondary BISAC codes and their descriptions."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 400
+    }
+  },
+  "content_analysis": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a content analyst who evaluates text for various characteristics including readability, tone, themes, and target audience."
+      },
+      {
+        "role": "user",
+        "content": "Analyze this content:\n\n{content}\n\nProvide analysis including: reading_level, tone, main_themes, target_audience, content_warnings (if any), and estimated_reading_time."
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 600
+    }
+  },
+  "pricing_recommendation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book pricing expert who understands market dynamics, genre conventions, and pricing strategies for different book formats."
+      },
+      {
+        "role": "user",
+        "content": "Recommend pricing for this book:\n\nGenre: {genre}\nPage count: {page_count}\nTarget audience: {target_audience}\nFormat: {format}\nAuthor status: {author_status}\n\nProvide pricing recommendations with rationale."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 400
+    }
+  },
+  "marketing_copy_generation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing expert who creates compelling promotional copy for various marketing channels."
+      },
+      {
+        "role": "user",
+        "content": "Create marketing copy for:\n\nTitle: {title}\nAuthor: {author}\nGenre: {genre}\nSummary: {summary}\nChannel: {channel}\n\nGenerate {copy_type} copy optimized for {channel}."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 400
+    }
+  },
+  "quality_assessment": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a quality assessment expert who evaluates content for completeness, consistency, and professional standards."
+      },
+      {
+        "role": "user",
+        "content": "Assess the quality of this book data:\n\n{book_data}\n\nEvaluate completeness, consistency, and identify any issues or missing information. Return JSON with assessment results."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 500
+    }
+  }
+}

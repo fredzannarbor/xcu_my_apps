@@ -1,0 +1,201 @@
+% Text Hip Global Cover Template - Pilsa Transcriptive Meditation Books
+\documentclass[12pt]{article}
+
+% This template creates a full-bleed book cover for Text Hip Global.
+% It combines traditional Korean aesthetics with modern 2026 color trends.
+
+% Required packages
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usepackage{luaquotes}
+
+\newfontfamily\honkfont{Tillana}[
+    BoldFont=Tillana ExtraBold
+    % ExtraBoldFont=Tillana ExtraBold
+]
+
+% Backup fonts
+\newfontfamily\koreanfont{AppleMyungjo}
+\newcommand{\korean}[1]{{\koreanfont #1}}
+
+% --- Text Hip Global Color Palette (Korean Traditional + 2026 Trends) ---
+% Traditional Korean colors
+%\definecolor{hanbok-red}{RGB}{199, 44, 72}        % Traditional red
+%\definecolor{dancheong-blue}{RGB}{0, 61, 165}     % Traditional blue
+%\definecolor{hanji-cream}{RGB}{245, 240, 228}     % Traditional paper
+%\definecolor{bamboo-green}{RGB}{61, 89, 65}       % Traditional green
+
+% 2026 trend colors (bright and modern)
+\definecolor{cosmic-coral}{RGB}{255, 127, 80}     % Trending warm coral
+\definecolor{electric-lime}{RGB}{204, 255, 0}     % Vibrant lime
+\definecolor{neo-purple}{RGB}{147, 112, 219}      % Modern purple
+\definecolor{digital-mint}{RGB}{152, 255, 152}    % Fresh mint
+\definecolor{sunset-orange}{RGB}{255, 165, 0}     % Warm orange
+\definecolor{cyber-pink}{RGB}{255, 20, 147}       % Bold pink
+
+% --- Replaceable values (populated by Python script) ---
+\newcommand{\coverPageHeight}{9in}
+\newcommand{\coverPageWidth}{12in}
+\newcommand{\coverBookTitle}{Mindful Transcription}
+\newcommand{\coverBookAuthor}{Text Hip Global}
+\newcommand{\coverImprint}{Text Hip Global}
+\newcommand{\coverTopImage}{placeholder-mindfulness-tool.jpg} % Placeholder for mindfulness tool image
+
+% Structural placeholders
+\newcommand{\coverBookSubtitleChunk}{}
+\newcommand{\coverDrawBarcode}{}
+
+% Layout measurements
+\newcommand{\coverTrimWidth}{6.0in}
+\newcommand{\coverTrimHeight}{9.0in}
+\newcommand{\coverSpineWidth}{0.5in}
+\newcommand{\coverBleedIn}{0.125in}
+\newcommand{\coverFrontCoverXShift}{3.25in}
+\newcommand{\coverDebugMode}{false}
+\newcommand{\coverBackCoverXShift}{-3.25in}
+\newcommand{\coverBackCoverText}{Back cover text about pilsa transcriptive meditation goes here.}
+
+% Dynamic hybrid background color (will be replaced by Python)
+\definecolor{coverbackground}{RGB}{147, 112, 219} % Default: neo-purple
+\definecolor{covertext}{RGB}{255, 255, 255} % White text for contrast
+\definecolor{covertextoutline}{RGB}{0, 0, 0} % Black outline for readability
+\definecolor{spinetext}{RGB}{255, 255, 255}
+
+% Set exact page dimensions
+\geometry{
+    paperheight=\coverPageHeight,
+    paperwidth=\coverPageWidth,
+    margin=0in
+}
+
+% Prevent page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+    \begin{tikzpicture}[remember picture, overlay]
+
+        % Gradient background using hybrid palette
+        \shade[
+            top color=coverbackground,
+            bottom color=coverbackground!80!black
+        ] (current page.south west) rectangle (current page.north east);
+
+        % Spine text
+        \node[
+            rotate=270,
+            anchor=center,
+            text=spinetext,
+            font=\honkfont\large
+        ] at (current page.center) {\coverBookTitle};
+
+        % --- Front Cover Content ---
+        \coordinate (covercenter) at ([xshift=\coverFrontCoverXShift]current page.center);
+
+        % Define content area anchors
+        \coordinate (topanchor) at ([yshift={(\coverTrimHeight/2) - 0.75in}]covercenter);
+        \coordinate (titleanchor) at ([yshift={(\coverTrimHeight/2) - 2.5in}]covercenter);
+        \coordinate (bottomanchor) at ([yshift={-(\coverTrimHeight/2) + 1.0in}]covercenter);
+
+        % --- TOP IMAGE PLACEHOLDER (Mindfulness Tool) ---
+        \node[
+            anchor=north,
+            inner sep=0pt
+        ] at (topanchor) {
+            \IfFileExists{\coverTopImage}{
+                \includegraphics[width=4in, height=1.5in, keepaspectratio]{\coverTopImage}
+            }{
+            % Placeholder box for mindfulness tool image
+                \tikz{
+                    \draw[draw=white, thick, rounded corners=5pt]
+                    (0,0) rectangle (4,1.5);
+                    \node[white, font=\honkfont\small] at (2,0.75) {Mindfulness Tool Image};
+                }
+            }
+        };
+
+        % --- TITLE (Honk font with outline) ---
+        \node[
+            anchor=north,
+            text centered,
+            text width=4.5in
+        ] at (titleanchor) {
+
+            % Main title text on top
+    {\color{covertext}\honkfont\fontsize{40}{48}\selectfont\bfseries \coverBookTitle\par}
+    \coverBookSubtitleChunk
+
+        };
+
+
+        % --- BOTTOM TEXT (Author & Imprint in Honk) ---
+        \node[
+            anchor=south,
+            text centered,
+            text width=4.5in
+        ] at (bottomanchor) {
+
+            \resizebox{3in}{!}{{\color{covertext}\honkfont\bfseries \coverBookAuthor}}\par
+            \vspace{1em}
+            % Imprint with outline
+
+            \resizebox{2.5in}{!}{{\color{covertext}\honkfont\bfseries \coverImprint}}\par
+        };
+        % --- Back Cover ---
+        \coverDrawBarcode
+        \coordinate (backcovercenter) at ([xshift=\coverBackCoverXShift]current page.center);
+
+        % Back cover text
+        \node[
+            anchor=center,
+            text width=4in,
+            align=justify,
+            font=\honkfont\normalsize,
+            color=covertext
+        ] at (backcovercenter) {\coverBackCoverText};
+
+        % --- DEBUG MODE (Optional) ---
+        \ifthenelse{\equal{\coverDebugMode}{true}}{
+            \begin{scope}[
+                font=\sffamily\tiny,
+                every node/.style={
+                    fill=white,
+                    fill opacity=0.8,
+                    text opacity=1.0,
+                    inner sep=2pt,
+                    align=left
+                }
+            ]
+                % Debug guides
+                \coordinate (spineleft) at ([xshift=-0.5*\coverSpineWidth]current page.center);
+                \coordinate (spineright) at ([xshift=0.5*\coverSpineWidth]current page.center);
+                \coordinate (trim_top_left) at ([xshift={-0.5*\coverSpineWidth - \coverTrimWidth}, yshift=0.5*\coverTrimHeight]current page.center);
+                \coordinate (trim_bottom_right) at ([xshift={0.5*\coverSpineWidth + \coverTrimWidth}, yshift=-0.5*\coverTrimHeight]current page.center);
+
+                % Spine guides
+                \draw[green, thick] (spineleft) -- ++(0, \coverPageHeight)
+                node[midway, sloped, anchor=south] {Spine Left};
+                \draw[green, thick, dashed] (current page.center) -- ++(0, \coverPageHeight)
+                node[midway, sloped, anchor=south] {Spine Center};
+                \draw[green, thick] (spineright) -- ++(0, \coverPageHeight)
+                node[midway, sloped, anchor=south] {Spine Right};
+
+                % Trim guides
+                \draw[blue, thick, dashed] (trim_top_left) rectangle (trim_bottom_right);
+
+                % Text Hip Global branding debug
+                \node[anchor=north west] at (current page.north west) {
+                    \textbf{Text Hip Global Cover}\\
+                    Hybrid Korean-Modern Palette\\
+                    Honk Typography
+                };
+            \end{scope}
+        }{}
+
+    \end{tikzpicture}
+
+\end{document}

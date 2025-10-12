@@ -1,0 +1,180 @@
+{
+  "organizations": {
+    "xtuff_ai": {
+      "name": "xtuff.ai",
+      "description": "Preseed \"AI stuff \\n Fred Zimmerman, Founder\"",
+      "apps": {
+        "personal_time_management": {
+          "name": "Daily Engine",
+          "port": 8509,
+          "path": "/home/wfz/my-apps/xtuff/personal-time-management",
+          "entry": "daily_engine.py",
+          "description": "Life automation system with SaaS project advancement and habit tracking",
+          "auth_level": "public",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "uv run streamlit run daily_engine.py --server.port=8509",
+          "public_visible": true,
+          "minimum_role": "anonymous",
+          "subscription_tier": "free",
+          "domain_name": "dailyengine.xtuff.ai"
+        },
+        "agentic_social_server": {
+          "name": "Social Xtuff",
+          "port": 8501,
+          "path": "/home/wfz/my-apps/xtuff/agentic_social_server",
+          "entry": "app.py",
+          "description": "AI-powered social media platform with neurochemical optimization",
+          "auth_level": "public",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "uv run python app.py",
+          "environment": {
+            "PYTHONPATH": "src"
+          },
+          "public_visible": true,
+          "minimum_role": "registered",
+          "subscription_tier": "free",
+          "domain_name": "social.xtuff.ai"
+        },
+        "text_to_feed_api": {
+          "name": "Text-to-Feed API",
+          "port": 59312,
+          "path": "/home/wfz/my-apps/xtuff/agentic_social_server",
+          "entry": "api_server.py",
+          "description": "FastAPI server for converting text submissions to social media posts",
+          "auth_level": "public",
+          "status": "development",
+          "health_endpoint": "/health",
+          "startup_command": "uv run python api_server.py",
+          "environment": {
+            "PYTHONPATH": "src"
+          },
+          "public_visible": false,
+          "minimum_role": "admin",
+          "subscription_tier": "free",
+          "domain_name": "api.xtuff.ai"
+        },
+        "collectiverse": {
+          "name": "Collectiverse",
+          "port": 8503,
+          "path": "/home/wfz/my-apps/xtuff/collectiverse",
+          "entry": "app.py",
+          "description": "AGI-proof collecting platform",
+          "auth_level": "subscriber",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "streamlit run app.py --server.port=8503",
+          "public_visible": true,
+          "minimum_role": "registered",
+          "subscription_tier": "free",
+          "domain_name": "collectiverse.xtuff.ai"
+        },
+        "trillionsofpeople": {
+          "name": "TrillionsOfPeople.Info",
+          "port": 8504,
+          "path": "/home/wfz/my-apps/xtuff/trillionsofpeople",
+          "entry": "trillionsofpeople.py",
+          "description": "A row for each of the 118 billion people who have ever lived",
+          "auth_level": "public",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "uv run streamlit run trillionsofpeople.py --server.port=8504",
+          "public_visible": true,
+          "minimum_role": "anonymous",
+          "subscription_tier": "free",
+          "domain_name": "trillionsofpeople.info"
+        },
+        "altdoge": {
+          "name": "altDOGE",
+          "port": 8505,
+          "path": "/home/wfz/altDOGE",
+          "entry": "cfr_document_analyzer/streamlit_app.py",
+          "description": "Alternative cryptocurrency analysis",
+          "auth_level": "subscriber",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "streamlit run cfr_document_analyzer/streamlit_app.py --server.port=8505",
+          "public_visible": true,
+          "minimum_role": "registered",
+          "subscription_tier": "free",
+          "domain_name": "altdoge.xtuff.ai"
+        }
+      }
+    },
+    "nimble_books": {
+      "name": "Nimble Books LLC",
+      "description": "Book publishing and creation tools",
+      "apps": {
+        "codexes_factory": {
+          "name": "Codexes Factory",
+          "port": 8502,
+          "path": "/home/wfz/my-apps/nimble/codexes-factory",
+          "entry": "src/codexes/codexes-factory-home-ui.py",
+          "description": "Book publishing and catalog management platform",
+          "auth_level": "subscriber",
+          "status": "production",
+          "health_endpoint": "/",
+          "startup_command": "uv run streamlit run src/codexes/codexes-factory-home-ui.py --server.port=8502",
+          "environment": {
+            "PYTHONPATH": "src"
+          },
+          "public_visible": true,
+          "minimum_role": "registered",
+          "subscription_tier": "free",
+          "domain_name": "codexes.nimblebooks.com"
+        },
+        "max_bialystok": {
+          "name": "Max Bialystok Financial",
+          "port": 8506,
+          "path": "/home/wfz/my-apps/nimble/codexes-factory",
+          "entry": "max_bialystok_home.py",
+          "description": "Financial analysis software for book publishers - inspired by 'The Producers'",
+          "auth_level": "subscriber",
+          "status": "development",
+          "health_endpoint": "/",
+          "startup_command": "uv run streamlit run max_bialystok_home.py --server.port=8506",
+          "environment": {
+            "PYTHONPATH": "src"
+          },
+          "public_visible": false,
+          "minimum_role": "subscriber",
+          "subscription_tier": "basic",
+          "domain_name": "maxb.nimblebooks.com"
+        }
+      }
+    },
+    "personal": {
+      "name": "fredzannarbor.com",
+      "description": "Personal and professional presence",
+      "apps": {
+        "resume": {
+          "name": "Resume & Contact",
+          "port": 8508,
+          "path": "/home/wfz/resume-site",
+          "entry": "app.py",
+          "description": "Personal resume and contact information",
+          "auth_level": "public",
+          "status": "production",
+          "health_endpoint": "/",
+          "startup_command": "uv run streamlit run app.py --server.port=8508",
+          "public_visible": true,
+          "minimum_role": "anonymous",
+          "subscription_tier": "free",
+          "domain_name": "fredzannarbor.com"
+        }
+      }
+    }
+  },
+  "global_settings": {
+    "auth_service_url": "http://localhost:8502/auth",
+    "master_port": 8500,
+    "health_check_interval": 120,
+    "auto_restart": false,
+    "log_level": "INFO",
+    "production_domain": "xtuff.ai",
+    "ssl_enabled": false,
+    "reverse_proxy": "apache",
+    "deployment_method": "manual_git"
+  }
+}

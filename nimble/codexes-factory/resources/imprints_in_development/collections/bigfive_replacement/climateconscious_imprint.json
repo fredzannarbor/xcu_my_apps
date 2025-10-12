@@ -1,0 +1,28 @@
+{
+  "imprint": "ClimateConscious Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@climateconsciousimprint.com",
+  "branding": {
+    "tagline": "Change the climate, change the world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.climateconsciousimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Climate science, global warming, climate policies",
+    "target_audience": "Eco-conscious readers, policy makers",
+    "competitive_advantage": "Unparalleled expertise in climate and environmental issues",
+    "example_titles": "Climate Change: The Science, Solutions for a Warming Planet"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

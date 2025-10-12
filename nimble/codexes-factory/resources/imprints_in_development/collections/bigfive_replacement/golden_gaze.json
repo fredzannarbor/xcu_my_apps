@@ -1,0 +1,28 @@
+{
+  "imprint": "Golden Gaze",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@goldengaze.com",
+  "branding": {
+    "tagline": "Love is love",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.goldengaze.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "LGBTQ+ romance",
+    "target_audience": "Readers seeking romantic narratives featuring LGBTQ+ characters",
+    "competitive_advantage": "Highlighting diverse voices and experiences in the realm of romance",
+    "example_titles": "Santino Hassell, Roan Parrish"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

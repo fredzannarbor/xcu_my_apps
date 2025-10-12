@@ -1,0 +1,28 @@
+{
+  "imprint": "Mortal Masquerades",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mortalmasquerades.com",
+  "branding": {
+    "tagline": "Behind every mask, a mystery",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mortalmasquerades.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Socialite Thrillers",
+    "target_audience": "Readers fascinated by high society scandals and secrets",
+    "competitive_advantage": "Focus on the thrilling side of the upper crust",
+    "example_titles": "Authors like Dominick Dunne, Truman Capote"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

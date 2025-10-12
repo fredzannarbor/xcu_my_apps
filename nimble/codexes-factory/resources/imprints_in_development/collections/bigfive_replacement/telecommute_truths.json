@@ -1,0 +1,28 @@
+{
+  "imprint": "Telecommute Truths",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@telecommutetruths.com",
+  "branding": {
+    "tagline": "Truths of the Telecommute",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.telecommutetruths.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Real-life experiences, challenges, and solutions in remote work",
+    "target_audience": "New remote workers and veterans alike",
+    "competitive_advantage": "Real-life experiences in remote work",
+    "example_titles": "Books like 'Untold Stories of the Remote Revolution'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

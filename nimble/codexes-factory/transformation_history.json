@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": "2025-08-22T01:53:53.197827",
+    "type": "single",
+    "source_file": "test_cli_sample.json",
+    "output_file": "test_cli_sample_transformed.json",
+    "source_type": "idea",
+    "target_type": "synopsis",
+    "source_title": "The Magical Forest Adventure",
+    "result_title": "The Magical Forest Adventure",
+    "approach": "planning",
+    "parameter": "expand",
+    "success": true,
+    "snapshot_id": null,
+    "quality_score": 0.75
+  },
+  {
+    "timestamp": "2025-08-22T01:54:51.763745",
+    "type": "batch",
+    "input_pattern": "test_cli_sample*.json",
+    "target_type": "synopsis",
+    "total_files": 4,
+    "successful": 4,
+    "failed": 0,
+    "approach": "planning",
+    "parameter": "expand",
+    "parallel": true,
+    "quality_enabled": true,
+    "snapshot_id": "snapshot_20250822_015416_de945091",
+    "output_dir": "batch_output",
+    "results": [
+      {
+        "index": 0,
+        "input_file": "test_cli_sample2.json",
+        "output_file": "batch_output/test_cli_sample2_to_synopsis.json",
+        "source_title": "Space Station Mystery",
+        "source_type": "logline",
+        "target_type": "synopsis",
+        "success": true,
+        "quality_score": 0.75
+      },
+      {
+        "index": 1,
+        "input_file": "test_cli_sample.json",
+        "output_file": "batch_output/test_cli_sample_to_synopsis.json",
+        "source_title": "The Magical Forest Adventure",
+        "source_type": "idea",
+        "target_type": "synopsis",
+        "success": true,
+        "quality_score": 0.75
+      },
+      {
+        "index": 2,
+        "input_file": "test_cli_sample3.json",
+        "output_file": "batch_output/test_cli_sample3_to_synopsis.json",
+        "source_title": "The Last Library",
+        "source_type": "idea",
+        "target_type": "synopsis",
+        "success": true,
+        "quality_score": 0.75
+      },
+      {
+        "index": 3,
+        "input_file": "test_cli_sample_transformed.json",
+        "output_file": "batch_output/test_cli_sample_transformed_to_synopsis.json",
+        "source_title": "The Magical Forest Adventure",
+        "source_type": "synopsis",
+        "target_type": "synopsis",
+        "success": true,
+        "quality_score": 0.9000000000000001
+      }
+    ]
+  }
+]

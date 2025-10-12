@@ -1,0 +1,44 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# macOS
+.DS_Store
+
+# Database files
+*.db
+*.db-journal
+
+# Environment files
+.env
+.env_backups/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs and temporary files
+logs/
+*.log
+*.jsonl
+
+# Git history backups (monorepo conversion)
+.git_history_exports/
+
+# Configuration with secrets
+config/
+
+# Claude local commands
+.claude/
+
+# Large data directories (archives, philately)
+nimble/archives/
+xtuff/philately_will_get_you_everywhere/private_data/
+xtuff/philately_will_get_you_everywhere/stamps/

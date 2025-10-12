@@ -1,0 +1,28 @@
+{
+  "imprint": "SurrealVR",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@surrealvr.com",
+  "branding": {
+    "tagline": "Embrace the extraordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.surrealvr.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Science fiction and fantasy in VR",
+    "target_audience": "Sci-fi and fantasy fans",
+    "competitive_advantage": "Specializing in immersive genre fiction",
+    "example_titles": "VR space operas, VR fantasy epics"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Brainy Business",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@brainybusiness.com",
+  "branding": {
+    "tagline": "Get brainy about business",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.brainybusiness.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Business intelligence, smart strategies, and decision making",
+    "target_audience": "Business strategists, managers, and intelligence professionals",
+    "competitive_advantage": "Smart strategies and insights to outsmart competition",
+    "example_titles": "Business Intelligence for Dummies, Winning with Data"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

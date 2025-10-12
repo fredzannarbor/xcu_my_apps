@@ -1,0 +1,28 @@
+{
+  "imprint": "Trailblazer Triumph",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@trailblazertriumph.com",
+  "branding": {
+    "tagline": "Triumph as a trailblazer",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.trailblazertriumph.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Motivation, leadership, personal growth",
+    "target_audience": "Leaders, entrepreneurs, go-getters",
+    "competitive_advantage": "Leadership insights, practical strategies",
+    "example_titles": "Leadership lessons, motivation mastery"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

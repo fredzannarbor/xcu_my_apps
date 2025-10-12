@@ -1,0 +1,28 @@
+{
+  "imprint": "Needlepoint Nook",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@needlepointnook.com",
+  "branding": {
+    "tagline": "Needlepoint knowledge at the tip of your fingers!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.needlepointnook.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Needlework patterns, technique guides, material guides, and artist spotlights.",
+    "target_audience": "Needlework hobbyists, professionals, art teachers, and art students.",
+    "competitive_advantage": "Specializing in needlework allows us to delve deeper into the subject, providing expert insights, unique patterns, and comprehensive guides.",
+    "example_titles": "Innovative needlepoint patterns, guides to various needlework techniques, author types like renowned needlework artists, teachers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

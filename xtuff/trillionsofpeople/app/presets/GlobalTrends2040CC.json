@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: Competitive Coexistence",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: In 2040, the United States and China have prioritized economic growth and restored a robust trading relationship, but this economic interdependence exists alongside competition over political influence, governance models, technological dominance, and strategic advantage. The risk of major war is low, and international cooperation and technological innovation make global problems manageable over the near term for advanced economies, but longer term climate challenges remain.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0,
+        "pp": 0,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

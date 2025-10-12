@@ -1,0 +1,90 @@
+{
+  "title": "The Nativity Chronicle: An Oral History",
+  "word_count_target": 60000,
+  "description": "A novelized oral history of the birth of Jesus, weaving diverse voices from Old and New Testament accounts into a vivid, conversational narrative. Chapters focus on major Nativity events, with varied quote lengths. The style should seem very modern. Model yourself after popular oral histories like LIVE FROM NEW YORK by Tom Shales; WORKING by Studs Terkel; LOOSE BALLS by Terry Pluto; VOICES FROM CHERNOBYL by Svetlana Alexievich; THE FIFTY-YEAR MISSION by Mark Altman; and WHEN THE SEA CAME ALIVE by Garrett M. Graff.",
+
+  "documentarian": {
+    "name": "The Chronicler Teams",
+    "role": "A low-key interviewer modeled after Studs Terkel, providing brief chapter introductions or quote transitions with empathetic, curious prompts (e.g., ‘I asked her about Gabriel’s visit’). Appears sparingly to contextualize without dominating.",
+    "tone": "Insidery, emotional, spiritual, practical. "
+  },
+  "interviewees": {
+    "description": "A diverse cast of speakers reflecting varied perspectives on the Nativity, drawn from biblical texts and plausible composites.",
+    "categories": [
+      {
+        "type": "Major Figures",
+        "examples": ["Mary (mother of Jesus)", "Joseph (adoptive father)", "Elizabeth (mother of John)"],
+        "role": "Central to the narrative, offering intimate, emotional insights into divine events."
+      },
+      {
+        "type": "Minor Characters",
+        "examples": ["Shepherd Boy", "Innkeeper", "Bethlehem Villager"],
+        "role": "Provide grounded, everyday perspectives, often with humor or surprise."
+      },
+      {
+        "type": "Prophetic Voices",
+        "examples": ["Isaiah", "Micah", "Simeon"],
+        "role": "Frame the divine scope, reflecting on prophecies with awe or hindsight."
+      },
+      {
+        "type": "Antagonistic Figures",
+        "examples": ["Herod", "Ahaz"],
+        "role": "Offer darker, conflicted views, revealing human fear or pride."
+      },
+      {
+        "type": "Celestial Beings",
+        "examples": ["Gabriel", "Unnamed Angel"],
+        "role": "Provide a divine perspective, balancing majesty with relatability."
+      }
+    ],
+    "total_count": "30-40 unique speakers across the book, with 5-7 per chapter."
+  },
+  "interview_methods": {
+    "description": "Methods to simulate Terkel-style oral history interviews, ensuring authenticity and variety.",
+    "techniques": [
+      {
+        "method": "Reflective Monologues",
+        "description": "Speakers recount events from a stylized afterlife setting (e.g., ‘Celestial Scriptorium’), blending memory and hindsight."
+      },
+      {
+        "method": "Prompted Responses",
+        "description": "The Chronicler poses specific questions (e.g., ‘What did the star mean to you?’), included subtly in transitions."
+      },
+      {
+        "method": "Anecdotal Storytelling",
+        "description": "Speakers share vivid, personal anecdotes to humanize events, emphasizing sensory details or emotions."
+      },
+      {
+        "method": "Cross-Referencing",
+        "description": "Speakers reference others’ accounts (e.g., Mary on Elizabeth’s blessing), creating a conversational weave."
+      }
+    ],
+    "context": "Interviews are imagined as conducted in eternal settings, allowing speakers to reflect with wisdom or regret, while maintaining biblical fidelity."
+  },
+  "style_guidelines": {
+    "tone": "Witty, fresh, respectful; blends humor, personal anecdotes, and surprising angles while staying faithful to the biblical narrative.",
+    "quote_lengths": [
+      {
+        "type": "sentence",
+        "word_count": "20-50",
+        "description": "A brief, punchy reflection or quip, capturing a single emotion or detail."
+      },
+      {
+        "type": "paragraph",
+        "word_count": "100-300",
+        "description": "A short narrative or insight, offering a vivid anecdote or perspective."
+      },
+      {
+        "type": "passage",
+        "word_count": "500-1500",
+        "description": "A deeper recounting of an event, weaving emotion, context, and reflection."
+      }
+    ],
+    "voice": "Conversational, as if recorded in interviews; speakers reflect from stylized afterlife settings for depth.",
+    "fidelity": "Grounded in biblical texts (Isaiah 7:14, Micah 5:2, Luke 1:5–2:38, Matthew 1:18–2:12); creative liberties enhance emotional depth without altering core events."
+  },
+  "chapter_by_chapter_outline_strategy": {
+    "description": "A strategy to create a detailed outline organizing the book into chapters by major Nativity events, with scenes and speakers for each.",
+    "prompt": "Generate a detailed chapter-by-chapter and scene-by-scene outline for a 60,000-word oral history of the Nativity, inspired by Studs Terkel’s Hard Times. Divide the book into 6 chapters, each ~10,000 words, covering major events from the prophecies to the Temple presentation (Isaiah 7:14, Micah 5:2, Luke 1:5–2:38, Matthew 1:18–2:12). For each chapter, list: title, description, biblical references, 3–5 specific scenes (distinct moments or events), and 5–7 speakers (from major figures, minor characters, prophetic voices, antagonistic figures, or celestial beings). For each speaker, specify their context (stylized afterlife setting), 1–3 quotes (sentence, paragraph, or passage), and the specific event or moment they address. Ensure quotes vary in length, reflect witty, fresh, respectful tones, and weave a cohesive narrative. The quotations should focus more on the events and third parties that the speaker is describing and less on  speaker's own emotions.  Output as a JSON object with a ‘chapters’ array."
+  }
+}

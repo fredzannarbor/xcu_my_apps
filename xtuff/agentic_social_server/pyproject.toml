@@ -1,0 +1,107 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-social-server"
+version = "1.0.0"
+description = "AI-powered social media platform with 4-factor neurochemical optimization for book lovers"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Nimble Research Collective", email = "contact@example.org"}
+]
+maintainers = [
+    {name = "Nimble Research Collective", email = "contact@example.org"}
+]
+keywords = [
+    "ai", "social-media", "neuroscience", "machine-learning", "books",
+    "neurochemical-optimization", "personas", "streamlit", "education"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Topic :: Education",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.28.0",
+    "nimble-llm-caller>=0.1.0",
+    "pandas>=1.5.0",
+    "python-dateutil>=2.8.0",
+    "pydantic>=2.0.0",
+    "bcrypt>=4.3.0",
+    "python-dotenv>=1.1.1",
+    "google-generativeai>=0.8.5",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "extra-streamlit-components>=0.1.0",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nimble-research/agentic-social-server"
+Documentation = "https://github.com/nimble-research/agentic-social-server/blob/main/README.md"
+Repository = "https://github.com/nimble-research/agentic-social-server"
+"Bug Tracker" = "https://github.com/nimble-research/agentic-social-server/issues"
+Changelog = "https://github.com/nimble-research/agentic-social-server/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+]
+academic = [
+    "jupyter>=1.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "scipy>=1.10.0",
+]
+
+[project.scripts]
+agentic-social-server = "social_server.app:main"
+social-feed = "social_server.app:main"
+
+[project.entry-points."streamlit.apps"]
+social-feed = "social_server.pages.ai_social_feed:main"
+social-profile = "social_server.pages.profile_home:main"
+social-auth = "social_server.pages.login_register:main"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["social_server*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+social_server = [
+    "modules/*.md",
+    "modules/**/*.md",
+    "core/*.yaml",
+    "core/*.json",
+]
+
+[tool.setuptools.package-dir]
+"" = "src"

@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""
+PDF Harvester Page
+
+Admin-only Streamlit page for harvesting PDFs using Google search pagination.
+"""
+
+import sys
+from pathlib import Path
+
+# Add the project root to Python path for proper imports
+project_root = Path(__file__).resolve().parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Add the src directory to Python path
+src_path = project_root / "src"
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
+# Import the page module
+from codexes.modules.ui.pages.pdf_harvester import render
+
+# Check user permissions
+try:
+    from codexes.core.auth import get_user_role, require_role
+    import streamlit as st
+
+    # Require admin role for this page
+    user_role = get_user_role()
+
+    if user_role != "admin":
+        st.error("🚫 Access Denied: Admin role required for PDF Harvester")
+        st.info("Please contact an administrator for access to this feature.")
+        st.stop()
+
+except ImportError:
+    # Fallback if auth system is not available
+    pass
+
+# Render the page
+if __name__ == "__main__":
+    render()

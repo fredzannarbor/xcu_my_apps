@@ -1,0 +1,28 @@
+{
+  "imprint": "Rhythm Records",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@rhythmrecords.com",
+  "branding": {
+    "tagline": "Feel the beat, know the journey",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.rhythmrecords.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs of musicians",
+    "target_audience": "Music lovers and industry insiders",
+    "competitive_advantage": "In-depth look at the music industry from those who've lived it",
+    "example_titles": "Autobiographies of famous composers, pop stars, rock legends"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

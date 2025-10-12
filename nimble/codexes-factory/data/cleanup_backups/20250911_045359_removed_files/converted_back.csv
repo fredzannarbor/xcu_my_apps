@@ -1,0 +1,4 @@
+title,book_id,scheduled_date,isbn,imprint,publisher,format,priority,notes
+The Art of Programming,programming_book_1,2024-12-01,9780123456789,Tech Books,My Publisher,paperback,1,Manual ISBN assignment
+Web Development Guide,web_book_1,2024-12-15,,Tech Books,My Publisher,hardcover,2,Auto-assign ISBN
+Database Design Principles,db_book_1,2025-01-01,9780987654321,Tech Books,My Publisher,paperback,1,Another manual ISBN

@@ -1,0 +1,4 @@
+# process ideas stored in cumulative.csv
+df = pd.read_csv("integrate_ideas/cumulative.csv")
+df.description()
+df.info()

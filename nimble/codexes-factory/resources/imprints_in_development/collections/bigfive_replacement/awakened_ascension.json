@@ -1,0 +1,28 @@
+{
+  "imprint": "Awakened Ascension",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@awakenedascension.com",
+  "branding": {
+    "tagline": "Ascend with awakening",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.awakenedascension.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Spirituality, mindfulness, personal growth",
+    "target_audience": "Spiritual seekers, mindfulness practitioners",
+    "competitive_advantage": "Spiritual wisdom, practical guidance",
+    "example_titles": "Awakening guide, spiritual growth journey"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

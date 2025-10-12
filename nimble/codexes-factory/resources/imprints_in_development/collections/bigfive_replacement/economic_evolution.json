@@ -1,0 +1,28 @@
+{
+  "imprint": "Economic Evolution",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@economicevolution.com",
+  "branding": {
+    "tagline": "Economic insights for a changing world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.economicevolution.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Economic development, change, and sustainability",
+    "target_audience": "Economists, policymakers, and change-makers",
+    "competitive_advantage": "Future-oriented analysis of economic change and adaptation",
+    "example_titles": "Economic Adaptation in a Digital Age, Sustainability and Growth"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Tiller's Tome",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@tiller'stome.com",
+  "branding": {
+    "tagline": "Plow Ahead with Knowledge",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.tiller'stome.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Crop cultivation, animal husbandry, and modern farming technologies.",
+    "target_audience": "Modern farmers, agricultural students, and farming equipment innovators.",
+    "competitive_advantage": "We combine centuries-old wisdom with the latest advances in agricultural technology, providing a holistic view of modern farming.",
+    "example_titles": "Examples include 'The Digital Farmer's Guide', 'Innovative Irrigation', or authors like John Deere."
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

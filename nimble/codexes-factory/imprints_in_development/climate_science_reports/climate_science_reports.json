@@ -1,0 +1,223 @@
+{
+  "_config_info": {
+    "description": "experimental imprint focused on climate science research",
+    "version": "1.0",
+    "last_updated": "2025-01-03",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Nimble Earth",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "climate@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/climate_science_reports_logo.png",
+    "logo_font": {
+      "family_name": "Times New Roman",
+      "file_path": "",
+      "fallback_family": "serif"
+    },
+    "brand_colors": {
+      "primary": "#1B4F72",
+      "secondary": "#2E86AB"
+    },
+    "tagline": "AI-Powered Adaptation to Climate Change",
+    "website": "nimblebooks.com"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Climate Science",
+      "Environmental Policy",
+      "Sustainability",
+      "Earth Sciences"
+    ],
+    "target_audience": "Academic, Policy, and Professional",
+    "specialization": "climate assessments and authoritative climate science",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "Color",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "8.5x11",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy",
+    "audience": "Academic/Professional",
+    "country_of_origin": "USA"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "200"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Color 8.5 x 11 in or 216 x 279 mm Perfect Bound on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "SCI092000",
+      "POL044000",
+      "NAT011000",
+      "SCI026000"
+    ],
+    "thema_subject_preferences": [
+      "RNP",
+      "RNPG",
+      "PSAF",
+      "TQ"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Editor",
+      "secondary_role": "Contributing Author"
+    },
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+  "production_settings": {
+    "file_naming_convention": "{title}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "output/climate_science_reports"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "institutional_endorsements",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@CambridgeUP",
+      "linkedin": "linkedin.com/company/cambridge-university-press",
+      "website": "cambridge.org"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "CLIMATE SCIENCE REPORTS",
+    "stamped_text_right": "",
+    "lsi_special_category": "Academic",
+    "metadata_contact_dictionary": "Climate Science Editorial Team",
+    "publisher_reference_id": "CSR",
+    "flex_fields": {
+      "lsi_flexfield1": "IPCC",
+      "lsi_flexfield2": "Climate Assessment",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes-Destroy",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "GBP",
+      "pricing_multiplier": 0.79,
+      "exchange_rate": 0.78
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "EUR",
+      "pricing_multiplier": 0.85,
+      "exchange_rate": 0.91
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "CAD",
+      "pricing_multiplier": 1.25,
+      "exchange_rate": 1.35
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "AUD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.48
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "climate@nimblebooks.com",
+    "backup_configurations": true,
+    "llm_completion_enabled": true,
+    "computed_fields_enabled": true
+  },
+  "fixes_configuration": {
+    "subtitle_validation": {
+      "max_length": 50,
+      "enable_llm_replacement": true,
+      "replacement_strategy": "llm_with_fallback"
+    },
+    "dotgrid_layout": {
+      "min_header_spacing_inches": 0.75,
+      "default_y_position_inches": 2.5,
+      "dotgrid_height_ratio": 0.8
+    },
+    "isbn_formatting": {
+      "format_style": "hyphenated_13_digit",
+      "copyright_page_prefix": "ISBN "
+    },
+    "spine_width": {
+      "paper_type": "Standard perfect 70",
+      "fallback_width_inches": 2.8
+    },
+    "barcode_generation": {
+      "format": "UPC-A",
+      "position": "bottom_right",
+      "safety_margins_inches": 0.125
+    }
+  },
+  "legacy_compatibility": {
+    "defaults": {
+      "imprint": "climate science reports",
+      "us_wholesale_discount": "40",
+      "uk_wholesale_discount": "40",
+      "eu_wholesale_discount": "40",
+      "returnability": "Yes-Destroy",
+      "rendition_booktype": "Perfect Bound Color",
+      "carton_pack_quantity": "1",
+      "territorial_rights": "World",
+      "order_type_eligibility": "POD",
+      "cover_submission_method": "FTP",
+      "text_block_submission_method": "FTP",
+      "edition_number": "1",
+      "edition_description": "First Edition",
+      "audience": "Academic/Professional",
+      "language": "eng",
+      "country_of_origin": "US"
+    },
+    "field_overrides": {
+      "metadata_contact_dictionary": "Climate Science Editorial Team",
+      "publisher_reference_id": "CSR",
+      "lsi_flexfield1": "IPCC",
+      "stamped_text_center": "CLIMATE SCIENCE REPORTS"
+    }
+  }
+}

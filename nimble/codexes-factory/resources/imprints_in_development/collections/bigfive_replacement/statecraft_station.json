@@ -1,0 +1,28 @@
+{
+  "imprint": "Statecraft Station",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@statecraftstation.com",
+  "branding": {
+    "tagline": "Master the Art of Statecraft",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.statecraftstation.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Public administration, governance, and policy making",
+    "target_audience": "Public administrators, policy makers, and students",
+    "competitive_advantage": "Practical insights into governance and administration",
+    "example_titles": "Public administrators, policy advisors, and political scientists"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "EpicFlow Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@epicflowpublishing.com",
+  "branding": {
+    "tagline": "Unleash the Epic Flow!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.epicflowpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Serial fantasy, sci-fi, and thriller genres",
+    "target_audience": "Young Adults and Millennials",
+    "competitive_advantage": "Dynamic engagement through immersive, evolving storylines",
+    "example_titles": "Harry Potter series, Game of Thrones"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,14 @@
+Brown, Tom B., Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al. “Language Models Are Few-Shot Learners.” ArXiv:2005.14165 [Cs], July 22, 2020. http://arxiv.org/abs/2005.14165.
+
+Graeber, David, and David Wengrow. The Dawn of Everything: A New History of Humanity. Penguin UK, 2021.
+
+Lebret, Rémi, David Grangier, and Michael Auli. “Generating Text from Structured Data with Application to the Biography Domain.” CoRR abs/1603.07771 (2016). http://arxiv.org/abs/1603.07771.
+
+Office of the Director of National Intelligence. “Global Trends 2040: A More Contested World.” Global Trends 2040: A More Contested World, 2021. https://www.dni.gov/index.php/gt2040-home/introduction.
+
+Population Reference Bureau. “How Many People Have Ever Lived on Earth? | PRB,” 2021. https://www.prb.org/articles/how-many-people-have-ever-lived-on-earth/.
+
+Vidal, Céline M., Christine S. Lane, Asfawossen Asrat, Dan N. Barfod, Darren F. Mark, Emma L. Tomlinson, Amdemichael Zafu Tadesse, et al. “Age of the Oldest Known Homo Sapiens from Eastern Africa.” Nature, January 12, 2022, 1–5. https://doi.org/10/gn3794.
+
+
+Vuuren, Detlef P. van, Jae Edmonds, Mikiko Kainuma, Keywan Riahi, Allison Thomson, Kathy Hibbard, George C. Hurtt, et al. “The Representative Concentration Pathways: An Overview.” Climatic Change 109, no. 1 (August 5, 2011): 5. https://doi.org/10/brtf7r.

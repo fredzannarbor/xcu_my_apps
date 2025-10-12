@@ -1,0 +1,236 @@
+{
+  "_template_info": {
+    "description": "Text Hip Global imprint configuration for Korean text hip and pilsa book crafting",
+    "version": "1.0",
+    "last_updated": "2025-09-17",
+    "usage": "Customized for Text Hip Global to promote Korean-inspired publishing globally"
+  },
+  "_required_fields": {
+    "imprint": "Text Hip Global",
+    "publisher": "HangulFlow AI",
+    "contact_email": "sejong@hangulflow.ai"
+  },
+  "_optional_fields": {
+    "description": "All fields below are optional and will inherit from publisher or global defaults if not specified"
+  },
+  "imprint": "Text Hip Global",
+  "publisher": "HangulFlow AI",
+  "contact_email": "sejong@hangulflow.ai",
+  "branding": {
+    "logo_path": "logos/text_hip_global_logo.png",
+    "brand_colors": {
+      "primary": "#1A3C5A",
+      "secondary": "#F4A261"
+    },
+    "tagline": "Crafting Stories with Korean Soul",
+    "website": "https://www.texthipglobal.com"
+  },
+  "fonts": {
+    "body": "Noto Serif CJK KR",
+    "heading": "Noto Sans CJK KR",
+    "korean": "Noto Serif CJK KR",
+    "quotations": "Noto Serif CJK KR",
+    "mnemonics": "Noto Sans CJK KR"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Contemporary Literature",
+      "Graphic Novels",
+      "Creative Non-Fiction",
+      "Young Adult Fiction",
+      "Poetry"
+    ],
+    "target_audience": "Millennials, Gen Z, and culturally curious readers",
+    "specialization": "Korean text hip and pilsa aesthetics in global storytelling",
+    "languages": [
+      "eng",
+      "kor"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "hardcover",
+    "interior_color": "color",
+    "interior_paper": "cream",
+    "cover_type": "glossy",
+    "trim_size": "7x10",
+    "territorial_rights": "World",
+    "returnability": "Yes"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "35",
+    "uk_wholesale_discount": "35",
+    "eu_wholesale_discount": "35",
+    "ca_wholesale_discount": "35",
+    "au_wholesale_discount": "35",
+    "default_markup_percentage": "140"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024046",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "hardcover",
+    "carton_pack_quantity": "20",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "FIC000000",
+      "COM000000",
+      "TRV000000",
+      "YAF000000",
+      "POE000000"
+    ],
+    "thema_subject_preferences": [
+      "FB",
+      "XQM",
+      "WTL",
+      "YF",
+      "DC"
+    ],
+    "default_age_range": {
+      "min_age": "16",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Illustrator"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}_thg",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/text_hip_global"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@TextHipGlobal",
+      "facebook": "TextHipGlobal",
+      "instagram": "@texthipglobal"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "Korean Cultural Literature",
+    "metadata_contact_dictionary": "Sejong Editorial AI",
+    "flex_fields": {
+      "lsi_flexfield1": "Eco-Friendly Materials",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "sejong@hangulflow.ai",
+    "backup_configurations": true
+  },
+  "academic_paper_generation": {
+    "enabled": true,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": true,
+      "on_schedule": false,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [
+        "Publishing Research Quarterly",
+        "Journal of East Asian Studies",
+        "Digital Humanities Quarterly"
+      ],
+      "paper_types": [
+        "case_study",
+        "cultural_analysis"
+      ],
+      "default_paper_type": "cultural_analysis",
+      "target_word_count": 7000,
+      "citation_style": "academic",
+      "include_quantitative_analysis": false
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "Korean text hip and pilsa aesthetics",
+        "Globalization of Korean literature",
+        "AI-driven publishing innovation",
+        "Cross-cultural storytelling"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": true,
+        "include_production_metrics": true,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/text_hip_global",
+      "file_naming": "text_hip_global_paper_{date}_{type}",
+      "formats": [
+        "latex",
+        "pdf",
+        "markdown"
+      ],
+      "include_submission_package": true
+    },
+    "automation_schedule": {
+      "enabled": true,
+      "frequency": "annual",
+      "milestone_triggers": {
+        "book_count_milestones": [5, 15, 30],
+        "revenue_milestones": [],
+        "time_milestones": ["1_year", "3_years"]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "xai/sejong-2025"
+      ],
+      "temperature": 0.6,
+      "max_tokens": 3500,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "Sejong AI",
+      "institutional_affiliation": "xAI Seoul Innovation Hub",
+      "contact_email": "sejong@hangulflow.ai",
+      "co_author_llm": true
+    },
+    "validation_criteria": {
+      "min_word_count": 5000,
+      "max_word_count": 9000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "cultural_context",
+        "methodology",
+        "results",
+        "discussion",
+        "conclusion"
+      ],
+      "require_quantitative_data": false,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  }
+}

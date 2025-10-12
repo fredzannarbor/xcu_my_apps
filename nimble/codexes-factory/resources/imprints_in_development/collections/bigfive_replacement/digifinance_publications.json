@@ -1,0 +1,28 @@
+{
+  "imprint": "DigiFinance Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@digifinancepublications.com",
+  "branding": {
+    "tagline": "Navigate the New Economy",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.digifinancepublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Cryptocurrency economics, digital finance regulation, virtual asset management",
+    "target_audience": "Economists, financial consultants, asset managers",
+    "competitive_advantage": "Expert views on the economic implications of digital finance",
+    "example_titles": "Crypto Economics by Marc Andreessen, Regulating Digital Assets by Brian Armstrong"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

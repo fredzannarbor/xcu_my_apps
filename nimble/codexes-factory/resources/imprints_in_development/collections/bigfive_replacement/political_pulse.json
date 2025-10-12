@@ -1,0 +1,28 @@
+{
+  "imprint": "Political Pulse",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@politicalpulse.com",
+  "branding": {
+    "tagline": "Take the Political Pulse",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.politicalpulse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Political trends, movements, and issues",
+    "target_audience": "Political enthusiasts, students, and general readers",
+    "competitive_advantage": "Up-to-date analysis of political trends",
+    "example_titles": "Political scientists, journalists, and commentators"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

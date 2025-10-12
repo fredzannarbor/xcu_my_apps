@@ -1,0 +1,28 @@
+{
+  "imprint": "CyberPulse",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cyberpulse.com",
+  "branding": {
+    "tagline": "Pulse of the digital world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cyberpulse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "AI-assisted non-fiction on digital culture and trends",
+    "target_audience": "Digital natives, Tech professionals",
+    "competitive_advantage": "In-depth understanding of tech trends through AI analytics",
+    "example_titles": "Books analyzing social media trends, Deep dives into digital culture"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

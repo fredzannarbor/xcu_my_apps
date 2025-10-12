@@ -1,0 +1,28 @@
+{
+  "imprint": "Growth Grid",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@growthgrid.com",
+  "branding": {
+    "tagline": "Grow your business",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.growthgrid.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Business growth, market expansion, and competitive strategies",
+    "target_audience": "Business owners, managers, and growth strategists",
+    "competitive_advantage": "Practical frameworks for accelerating business growth",
+    "example_titles": "Growth Hacking for Startups, Expansion Strategies for Business"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

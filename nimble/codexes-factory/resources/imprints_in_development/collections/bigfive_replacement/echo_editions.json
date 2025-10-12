@@ -1,0 +1,28 @@
+{
+  "imprint": "Echo Editions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@echoeditions.com",
+  "branding": {
+    "tagline": "Discover the unheard chapters",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.echoeditions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fictional audiobook hybrids with podcast companions",
+    "target_audience": "Young adults and fiction enthusiasts",
+    "competitive_advantage": "Unique integration formats and engaging storytelling techniques",
+    "example_titles": "John Green, Veronica Roth"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "July",
+      "year": 2025,
+      "books": [
+        {
+          "title": "AI-Driven Science: Speed versus Safety",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "series_name": "Future Debates",
+          "series_number": 1,
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-07-15"
+        },
+        {
+          "title": "Birth Rate Boost: Policy versus Freedom",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "series_name": "Future Debates",
+          "series_number": 2,
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-07-22"
+        },
+        {
+          "title": "Free Speech Platforms: Openness versus Regulation",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "series_name": "Future Debates",
+          "series_number": 3,
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-07-29"
+        }
+      ]
+    },
+    {
+      "month": "August",
+      "year": 2025,
+      "books": [
+        {
+          "title": "Global Renewables: Scale versus Scarcity",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "series_name": "Future Debates",
+          "series_number": 4,
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-08-05"
+        },
+        {
+          "title": "Martian Self-Reliance: Isolation versus Earth Support",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "series_name": "Space Exploration",
+          "series_number": 1,
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-08-12"
+        },
+        {
+          "title": "Mind-Machine Fusion: Liberation versus Dependency",
+          "author": "AI Lab for Book-Lovers",
+          "publisher": "Nimble Books LLC",
+          "imprint": "Xynapse Traces",
+          "format": "Paperback",
+          "trim_size": "6 x 9",
+          "page_count": 216,
+          "publication_date": "2025-08-19"
+        }
+      ]
+    }
+  ]
+}

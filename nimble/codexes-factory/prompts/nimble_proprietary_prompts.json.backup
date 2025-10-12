@@ -1,0 +1,46 @@
+{
+  "twin-creator": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing specialist."
+      },
+      {
+        "role": "user",
+        "content": "Your task is to write an \"origin story\" for twin gpt-5-level AIs inspired by the myth of Castor and Pollux... (content omitted for brevity)"
+      }
+    ],
+    "tags": [
+      "AI",
+      "origin story",
+      "twin models",
+      "creative writing"
+    ]
+  },
+  "twin-instructions-to-create-outlines": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing specialist."
+      },
+      {
+        "role": "user",
+        "content": "You have been assigned to participate in a longform writing competition using the Gemini AI models... (content omitted for brevity)"
+      }
+    ],
+    "tags": [
+      "book outline",
+      "AI writing",
+      "twin models",
+      "creative writing"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "validation_system": {
+    "enabled": true,
+    "log_validation_results": true,
+    "fail_fast": false,
+    "comprehensive_reporting": true
+  },
+  "isbn_validation": {
+    "check_format": true,
+    "check_length": true,
+    "check_prefix": true,
+    "check_digit_validation": true,
+    "allowed_prefixes": ["978", "979"],
+    "required_length": 13,
+    "allow_hyphens": true,
+    "strip_whitespace": true
+  },
+  "barcode_positioning": {
+    "validate_position_bounds": true,
+    "validate_safety_spaces": true,
+    "min_safety_space_inches": 0.125,
+    "warn_on_edge_proximity": true,
+    "check_overlap_prevention": true
+  },
+  "dotgrid_spacing": {
+    "validate_header_spacing": true,
+    "validate_footer_spacing": true,
+    "min_header_spacing_inches": 0.5,
+    "min_footer_spacing_inches": 0.5,
+    "check_page_bounds": true,
+    "warn_on_tight_spacing": true
+  },
+  "subtitle_validation": {
+    "check_length": true,
+    "imprint_specific_limits": {
+      "xynapse_traces": 38,
+      "default": 100
+    },
+    "trim_whitespace": true,
+    "allow_empty": true,
+    "warn_on_long_subtitles": 50
+  },
+  "spine_width_validation": {
+    "check_positive_values": true,
+    "check_reasonable_ranges": true,
+    "min_width_inches": 0.0625,
+    "max_width_inches": 2.0,
+    "page_correlation_check": true,
+    "warn_on_unusual_thickness": true,
+    "very_thin_threshold_inches": 0.0625
+  },
+  "template_safety": {
+    "check_file_exists": true,
+    "check_file_writable": true,
+    "check_extension": true,
+    "expected_extension": ".tex",
+    "recommend_backup": true,
+    "validate_latex_syntax": false
+  },
+  "llm_response_validation": {
+    "check_length": true,
+    "check_empty_response": true,
+    "strip_quotes": true,
+    "check_whitespace_characters": true,
+    "max_expected_length": 100
+  },
+  "configuration_validation": {
+    "check_required_fields": true,
+    "validate_numeric_ranges": true,
+    "check_file_paths": false,
+    "warn_on_missing_optional": true
+  }
+}

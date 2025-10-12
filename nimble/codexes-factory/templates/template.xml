@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template category="Own Templates">
+		<name>pilsa_cover_template</name>
+		<file>Document-1.sla</file>
+		<tnail>pilsa_cover_templatetn.png</tnail>
+		<img>pilsa_cover_template.png</img>
+		<psize>custom, 432x648</psize>
+		<color></color>
+		<descr></descr>
+		<usage></usage>
+		<scribus_version>1.6.3</scribus_version>
+		<date>2025-07-01</date>
+		<author></author>
+		<email></email>
+	</template>
+</templates>

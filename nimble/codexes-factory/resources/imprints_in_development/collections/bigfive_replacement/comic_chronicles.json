@@ -1,0 +1,28 @@
+{
+  "imprint": "Comic Chronicles",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@comicchronicles.com",
+  "branding": {
+    "tagline": "Experience the Comic Universe Like Never Before",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.comicchronicles.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Comic, graphic novel, and manga series",
+    "target_audience": "Comic book fans and graphic novel enthusiasts",
+    "competitive_advantage": "Innovative delivery of visual and narrative comic content",
+    "example_titles": "Marvel Universe, Naruto"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

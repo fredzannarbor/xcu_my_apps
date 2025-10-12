@@ -1,0 +1,28 @@
+{
+  "imprint": "Graphic Gateway",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@graphicgateway.com",
+  "branding": {
+    "tagline": "Your Gateway to Graphic Greatness",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.graphicgateway.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Graphic Novel and Manga series",
+    "target_audience": "Manga fans, graphic novel enthusiasts",
+    "competitive_advantage": "Visual storytelling combined with compelling narratives",
+    "example_titles": "Attack on Titan, V for Vendetta"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

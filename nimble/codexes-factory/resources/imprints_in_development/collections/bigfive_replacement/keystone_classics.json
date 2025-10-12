@@ -1,0 +1,28 @@
+{
+  "imprint": "Keystone Classics",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@keystoneclassics.com",
+  "branding": {
+    "tagline": "Literature for Lifelong Readers",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.keystoneclassics.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Classic literature, large print editions, audiobooks",
+    "target_audience": "Senior literature lovers",
+    "competitive_advantage": "We make great literature accessible for seniors with large print and audiobook editions",
+    "example_titles": "Moby Dick in Large Print, Audiobook of To Kill a Mockingbird"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

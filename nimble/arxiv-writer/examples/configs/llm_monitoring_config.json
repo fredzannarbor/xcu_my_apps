@@ -1,0 +1,16 @@
+{
+  "monitoring": {
+    "log_empty_responses": true,
+    "log_successful_responses": true,
+    "log_response_times": true,
+    "alert_on_high_empty_rate": true,
+    "empty_rate_threshold": 0.3,
+    "save_response_stats": true
+  },
+  "logging": {
+    "level": "INFO",
+    "include_prompt_names": true,
+    "include_response_length": true,
+    "include_model_name": true
+  }
+}

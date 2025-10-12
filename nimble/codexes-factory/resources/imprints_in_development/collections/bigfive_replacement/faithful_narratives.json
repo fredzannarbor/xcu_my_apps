@@ -1,0 +1,28 @@
+{
+  "imprint": "Faithful Narratives",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@faithfulnarratives.com",
+  "branding": {
+    "tagline": "Fiction that fuels faith",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.faithfulnarratives.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Christian fiction, Biblical narratives and parables",
+    "target_audience": "Devoted Christian readers of all ages, seeking inspiration and spiritual growth through storytelling",
+    "competitive_advantage": "Committed to combining the power of compelling storytelling with deep spiritual insights. We focus on quality, authenticity and scriptural integrity, allowing readers to enrich their faith through engaging fictional narratives.",
+    "example_titles": "Author types like Francine Rivers, Karen Kingsbury; Titles like 'The Masterpiece', 'A Time to Dance'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

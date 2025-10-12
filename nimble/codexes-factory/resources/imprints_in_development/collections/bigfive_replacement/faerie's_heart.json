@@ -1,0 +1,28 @@
+{
+  "imprint": "Faerie's Heart",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@faerie'sheart.com",
+  "branding": {
+    "tagline": "Where love is magic",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.faerie'sheart.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy romance",
+    "target_audience": "Readers who enjoy fantasy elements intertwined with romance",
+    "competitive_advantage": "Offering a perfect blend of fantastical world-building and romantic storytelling",
+    "example_titles": "Sarah J. Maas, Juliet Marillier"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

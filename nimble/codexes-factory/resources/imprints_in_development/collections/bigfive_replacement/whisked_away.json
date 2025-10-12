@@ -1,0 +1,28 @@
+{
+  "imprint": "Whisked Away",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@whiskedaway.com",
+  "branding": {
+    "tagline": "Embark on the Adventure",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.whiskedaway.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Adventure, Historical Fiction, Travelogues",
+    "target_audience": "Adventurous readers seeking inspiring journeys",
+    "competitive_advantage": "Exotic settings, high-stakes adventures, dynamic characters",
+    "example_titles": "Jules Verne, Jack London, Ernest Hemingway"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

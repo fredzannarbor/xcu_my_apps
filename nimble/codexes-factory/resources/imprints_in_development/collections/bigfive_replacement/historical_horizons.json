@@ -1,0 +1,28 @@
+{
+  "imprint": "Historical Horizons",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@historicalhorizons.com",
+  "branding": {
+    "tagline": "Expand your horizons, delve into history",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.historicalhorizons.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical narratives, adventure history",
+    "target_audience": "Readers seeking adventure and exploration in history",
+    "competitive_advantage": "Historical Horizons combines the thrill of adventure with historical insight",
+    "example_titles": "Books on polar exploration, space race narratives"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

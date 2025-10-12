@@ -1,0 +1,28 @@
+{
+  "imprint": "PodPioneer Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@podpioneerpress.com",
+  "branding": {
+    "tagline": "Podcast Your Way to Success",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.podpioneerpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Podcasting, audio marketing, social media promotion",
+    "target_audience": "Podcasters, audio marketers",
+    "competitive_advantage": "In-depth guidance on podcasting and audio marketing strategies.",
+    "example_titles": "Podcasting guides, social media promotion strategies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

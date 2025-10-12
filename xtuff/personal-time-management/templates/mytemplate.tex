@@ -1,0 +1,80 @@
+\documentclass[$if(fontsize)$$fontsize$$else$11pt$endif$]{article}
+\usepackage{xcolor}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[margin=1in]{geometry}
+$endif$
+\usepackage{amsmath,amssymb}
+\usepackage{bookmark}
+\usepackage{setspace} % For line spacing
+\usepackage{fontspec}  % Required for advanced font handling with XeLaTeX
+\usepackage{newunicodechar} % Required to map missing characters to fallback
+
+% Define tightlist command for Pandoc compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Font settings with better fallbacks
+$if(mainfont)$
+\setmainfont{$mainfont$}
+$else$
+% Use system fonts that are more likely to be available
+\setmainfont{Times}[
+  Extension = .ttc,
+  UprightFont = *,
+  BoldFont = *,
+  ItalicFont = *,
+  BoldItalicFont = *
+]
+$endif$
+
+$if(sansfont)$
+\setsansfont{$sansfont$}
+$else$
+\setsansfont{Helvetica}
+$endif$
+
+$if(monofont)$
+\setmonofont{$monofont$}
+$else$
+\setmonofont{Monaco}
+$endif$
+
+% Handle emoji and special characters - ONLY SIMPLE SINGLE-CODEPOINT EMOJIS
+\newunicodechar{📋}{\textcolor{blue}{\textbf{[CHECKLIST]}}}
+\newunicodechar{💡}{\textcolor{orange}{\textbf{[IDEA]}}}
+\newunicodechar{⚡}{\textcolor{red}{\textbf{[ACTION]}}}
+\newunicodechar{⚠}{\textcolor{red}{\textbf{[WARNING]}}}
+\newunicodechar{❓}{\textcolor{purple}{\textbf{[QUESTION]}}}
+\newunicodechar{📈}{\textcolor{green}{\textbf{[STRATEGY]}}}
+\newunicodechar{💰}{\textcolor{green}{\textbf{[\$]}}}
+
+% Pandoc's default styling for code highlighting
+$highlighting-macros$
+
+\hypersetup{
+    pdftitle={$title$},
+    pdfauthor={$author$},
+    hidelinks,
+    pdfcreator={LaTeX via pandoc}
+}
+
+\title{$title$}
+\author{$author$}
+\date{$date$}
+
+\begin{document}
+$if(linestretch)$
+\setstretch{$linestretch$} % Apply line spacing using the variable
+$endif$
+
+\maketitle
+
+$if(toc)$
+{\let\cleardoublepage\relax\let\clearpage\relax\tableofcontents}
+$endif$
+
+$body$
+
+\end{document>

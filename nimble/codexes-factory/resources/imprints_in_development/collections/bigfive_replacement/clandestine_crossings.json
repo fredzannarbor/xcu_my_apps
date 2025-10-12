@@ -1,0 +1,28 @@
+{
+  "imprint": "Clandestine Crossings",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@clandestinecrossings.com",
+  "branding": {
+    "tagline": "Every line is crossed",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.clandestinecrossings.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Border Thrillers",
+    "target_audience": "Fans of international crime dramas",
+    "competitive_advantage": "Specific focus on border-related crime and suspense",
+    "example_titles": "Authors like Don Winslow, Cormac McCarthy"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

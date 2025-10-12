@@ -1,0 +1,19 @@
+[Unit]
+Description=Fred's App Runner - Process Manager
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/app-runner
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/app-runner
+ExecStart=/usr/bin/python3 process_manager.py --action start
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

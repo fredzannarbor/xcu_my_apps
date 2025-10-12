@@ -1,0 +1,28 @@
+{
+  "imprint": "Opus Origin",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@opusorigin.com",
+  "branding": {
+    "tagline": "Unearth your past",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.opusorigin.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Novels showcasing roots, heritage, and ancestry",
+    "target_audience": "Teens exploring their heritage and personal history",
+    "competitive_advantage": "Stories that encourage self-discovery through ancestry",
+    "example_titles": "Ruta Sepetys, Yaa Gyasi type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

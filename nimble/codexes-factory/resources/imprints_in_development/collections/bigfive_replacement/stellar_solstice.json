@@ -1,0 +1,28 @@
+{
+  "imprint": "Stellar Solstice",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@stellarsolstice.com",
+  "branding": {
+    "tagline": "Reach for the stars",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.stellarsolstice.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space operas and cosmic adventures",
+    "target_audience": "Teens interested in space and astral themes",
+    "competitive_advantage": "Intriguing intergalactic narratives with diverse characters",
+    "example_titles": "Andy Weir, Amie Kaufman type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

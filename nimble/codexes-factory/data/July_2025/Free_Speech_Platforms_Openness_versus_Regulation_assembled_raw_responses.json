@@ -1,0 +1,687 @@
+{
+  "gemini/gemini-2.5-pro-preview-05-06": [
+    {
+      "type": "response",
+      "content": {
+        "quotes": [
+          {
+            "quote": "Though all the winds of doctrine were let loose to play upon the earth, so Truth be in the field, we do injuriously, by licensing and prohibiting, to misdoubt her strength.",
+            "source": "Areopagitica; A speech of Mr. John Milton for the Liberty of Unlicenc\u2019d Printing, to the Parlament of England",
+            "author": "John Milton",
+            "date_first_published": "1644",
+            "verification_info": "Standard text of *Areopagitica*. Widely available in print and online (e.g., Project Gutenberg, Wikisource). This quote is found near the end of the work."
+          },
+          {
+            "quote": "If all mankind minus one, were of one opinion, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind.",
+            "source": "On Liberty",
+            "author": "John Stuart Mill",
+            "date_first_published": "1859",
+            "verification_info": "Chapter II, \"Of the Liberty of Thought and Discussion.\" Readily found in any standard edition or online (e.g., Project Gutenberg, utilitarianism.com/ol/two.html)."
+          },
+          {
+            "quote": "A well-functioning system of free expression must meet two distinctive requirements. It must ensure that people are exposed to materials that they would not have chosen in advance. Unplanned, unanticipated encounters are central to democracy itself.",
+            "source": "#Republic: Divided Democracy in the Age of Social Media",
+            "author": "Cass R. Sunstein",
+            "date_first_published": "2017",
+            "verification_info": "Princeton University Press, 2017. Page 6 (Introduction). Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "By tailoring the flow of information to our individual preferences, the new gatekeepers are creating a world where we are less likely to encounter views that challenge our own.",
+            "source": "The Filter Bubble: What the Internet Is Hiding from You",
+            "author": "Eli Pariser",
+            "date_first_published": "2011",
+            "verification_info": "Penguin Press, 2011. Page 9. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "Censorship and overt repression are not the only ways to control speech. The powerful can also make it harder for the less powerful to be heard by flooding the public sphere with distractions, noise, and information.",
+            "source": "Twitter and Tear Gas: The Power and Fragility of Networked Protest",
+            "author": "Zeynep Tufekci",
+            "date_first_published": "2017",
+            "verification_info": "Yale University Press, 2017. Chapter 8, \"Signal and Noise: Attention and Expression in the Digital Age,\" page 227. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "If the rights to speech, thought, and association are to be meaningful, they must be rooted in the right to sanctuary: the right to a private space in which to develop one\u2019s ideas, opinions, and beliefs before choosing to share them with others.",
+            "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+            "author": "Shoshana Zuboff",
+            "date_first_published": "2019",
+            "verification_info": "PublicAffairs, 2019. Part III, Chapter 14, \"Sanctuary,\" page 498 (hardcover first edition). Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "In real space, we recognize how laws regulate\u2014through constitutions, statutes, and other legal codes. In cyberspace, we must understand how code regulates\u2014how the software and hardware that make cyberspace what it is regulate cyberspace as it is.",
+            "source": "Code: Version 2.0",
+            "author": "Lawrence Lessig",
+            "date_first_published": "2006",
+            "verification_info": "Basic Books, 2006 (originally published as *Code and Other Laws of Cyberspace*, 1999). Page 5. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "Firms that control search, social media, and e-commerce are becoming essential infrastructure. Their power to include and exclude, to promote and demote, is a matter of intense public concern.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Harvard University Press, 2015. Introduction, page 10. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "Facebook has failed to foster deliberation or understanding across difference. Instead, it has amplified propaganda, generated filter bubbles, and exacerbated social divisions.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018. Introduction, page 7. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "Online hate speech silences its targets, depriving them of their expressive opportunities and skewing public discourse. It inflicts emotional and dignitary harms that are often profound and long-lasting.",
+            "source": "Hate Crimes in Cyberspace",
+            "author": "Danielle Keats Citron",
+            "date_first_published": "2014",
+            "verification_info": "Harvard University Press, 2014. Introduction, page 2. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "Section 230 has fostered an unprecedented amount of speech, from the anodyne to the abhorrent. It has allowed for the creation of vibrant online communities and the dissemination of vital information.",
+            "source": "The Twenty-Six Words That Created the Internet",
+            "author": "Jeff Kosseff",
+            "date_first_published": "2019",
+            "verification_info": "Cornell University Press, 2019. Introduction, page 1. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "The future of freedom in the Internet age depends on our ability to hold powerful institutions accountable for how they use technology to affect our lives.",
+            "source": "Consent of the Networked: The Worldwide Struggle For Internet Freedom",
+            "author": "Rebecca MacKinnon",
+            "date_first_published": "2012",
+            "verification_info": "Basic Books, 2012. Introduction, page xiv. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "A society whose institutional ecology is heavily weighted toward proprietary, concentrated models, both commercial and state-run, will be a society that is less free and whose citizens are less autonomous and less able to participate.",
+            "source": "The Wealth of Networks: How Social Production Transforms Markets and Freedom",
+            "author": "Yochai Benkler",
+            "date_first_published": "2006",
+            "verification_info": "Yale University Press, 2006. Chapter 1, \"Introduction: A Moment of Opportunity and Challenge,\" page 22. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "The challenge is to combine the robust with the civil, the right to offend with the need to show respect. This is the art of free speech in a diverse, interconnected world.",
+            "source": "Free Speech: Ten Principles for a Connected World",
+            "author": "Timothy Garton Ash",
+            "date_first_published": "2016",
+            "verification_info": "Yale University Press, 2016. Conclusion, page 363. Verifiable via Google Books preview or library access."
+          },
+          {
+            "quote": "At its heart, content moderation is not a technical problem, waiting for a more nuanced algorithm or a larger workforce. It is a profoundly human and cultural problem.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Yale University Press, 2018. Quote appears in the Introduction, e.g., page 8 of the Kindle edition. Searchable on Google Books."
+          },
+          {
+            "quote": "Surveillance capitalism\u2019s products and services are not the objects of a value exchange. They do not establish constructive producer-consumer reciprocities. Instead, they are the \u2018hooks\u2019 that lure users into their extractive operations.",
+            "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+            "author": "Shoshana Zuboff",
+            "date_first_published": "2019",
+            "verification_info": "PublicAffairs, 2019. Quote appears in Chapter 3, 'The Discovery of Behavioral Surplus,' page 94 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "Online abuse silences its targets, depriving them of their expressive opportunities and an equal voice in online conversations. It functions as a privatized form of censorship, often far more potent than state action.",
+            "source": "Hate Crimes in Cyberspace",
+            "author": "Danielle Keats Citron",
+            "date_first_published": "2014",
+            "verification_info": "Harvard University Press, 2014. Quote appears in Chapter 1, 'Democratic Degradation,' page 29 of the paperback edition. Searchable on Google Books."
+          },
+          {
+            "quote": "The opacity of these systems makes it difficult to hold them accountable, to understand their biases, or to correct their errors. This is the dilemma of the black box society.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Harvard University Press, 2015. Quote appears on page 9 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "When a resource is scarce, it tends to be husbanded. When it is abundant, it is often squandered. We have now entered an age of information abundance, and the new scarcity is human attention.",
+            "source": "The Attention Merchants: The Epic Scramble to Get Inside Our Heads",
+            "author": "Timothy Wu",
+            "date_first_published": "2016",
+            "verification_info": "Alfred A. Knopf, 2016. Quote appears in the Introduction, page 7 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "Rather than being benign, or even benevolent, such technical forms of information discrimination can be profoundly oppressive, silencing some and amplifying others.",
+            "source": "Algorithms of Oppression: How Search Engines Reinforce Racism",
+            "author": "Safiya Umoja Noble",
+            "date_first_published": "2018",
+            "verification_info": "New York University Press, 2018. Quote appears on page 2 of the paperback edition. Searchable on Google Books."
+          },
+          {
+            "quote": "The companies that build and manage the platforms upon which much of our global discourse now depends are accountable primarily to their shareholders and executives, not to the public interest or the rights of their users.",
+            "source": "Consent of the Networked: The Worldwide Struggle for Internet Freedom",
+            "author": "Rebecca MacKinnon",
+            "date_first_published": "2012",
+            "verification_info": "Basic Books, 2012. Quote appears in the Introduction, page xiv of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "The generative pattern that underlies the PC and the Internet\u2014where innovation can spring from any quarter\u2014is at risk. The danger is a shift toward sterile, tethered appliances and centrally managed networks.",
+            "source": "The Future of the Internet\u2014And How to Stop It",
+            "author": "Jonathan Zittrain",
+            "date_first_published": "2008",
+            "verification_info": "Yale University Press, 2008. Quote appears in Chapter 1, page 3 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "This code, or architecture, sets the terms on which life in cyberspace is experienced. It is the background against which all interaction occurs. It is the law of cyberspace.",
+            "source": "Code: Version 2.0",
+            "author": "Lawrence Lessig",
+            "date_first_published": "2006",
+            "verification_info": "Basic Books, 2006. Quote appears on page 5. This book is a revised version of 'Code and Other Laws of Cyberspace' (1999). Searchable on Google Books."
+          },
+          {
+            "quote": "The networked information environment enables a new modality of organizing production: radically decentralized, collaborative, and nonproprietary; based on sharing resources and outputs among widely distributed, loosely connected individuals who cooperate with each other without relying on either market signals or managerial commands.",
+            "source": "The Wealth of Networks: How Social Production Transforms Markets and Freedom",
+            "author": "Yochai Benkler",
+            "date_first_published": "2006",
+            "verification_info": "Yale University Press, 2006. Quote appears in the Introduction, page 60 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "No company, no matter how well-intentioned or well-staffed, can monitor the speech of two billion people in more than one hundred languages. It's an impossible task, yet Facebook has taken it on.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018. Quote appears in Chapter 5, 'The Problem of Scale,' page 111 of the hardcover edition. Searchable on Google Books."
+          },
+          {
+            "quote": "Factual truth, on the contrary, is always related to other people: it concerns events and circumstances in which many are involved; it is established by witnesses and depends on testimony.",
+            "source": "Between Past and Future: Eight Exercises in Political Thought",
+            "author": "Hannah Arendt",
+            "date_first_published": "1961",
+            "verification_info": "Penguin Books (e.g., 2006 edition). Quote is from the essay 'Truth and Politics' (first published 1967), which is Chapter 7 in this collection. Widely cited and searchable."
+          },
+          {
+            "quote": "The pretense that social media platforms are merely neutral conduits for information, rather than shapers of it, is no longer tenable.",
+            "source": "The Platform Press: How Silicon Valley Reengineered Journalism",
+            "author": "Emily Bell, Taylor Owen, and Peter Brown",
+            "date_first_published": "2017",
+            "verification_info": "Tow Center for Digital Journalism, Columbia University, 2017. Quote appears on page 6 of the PDF report."
+          },
+          {
+            "quote": "The algorithmic amplification of outrage and division is not an unfortunate side effect of Facebook; it is an integral part of the business model.",
+            "source": "Zucked: Waking Up to the Facebook Catastrophe",
+            "author": "Roger McNamee",
+            "date_first_published": "2019",
+            "verification_info": "Penguin Press, 2019. Quote appears on page 13 (US Hardcover Edition)."
+          },
+          {
+            "quote": "The scale of these platforms means that even rare kinds of illicit content, or content that skirts the rules, will appear with troubling regularity. And the speed of circulation means that this content can reach an enormous audience before it is discovered.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Yale University Press, 2018. Quote appears on page 2."
+          },
+          {
+            "quote": "It\u2019s a system that makes it too easy for us to be impulsive and too hard for us to be contemplative. It\u2019s a system that rewards extremism and outrage, not thoughtful deliberation.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018. Quote appears on page 10."
+          },
+          {
+            "quote": "Commercial content moderation is thus an editorial function, albeit one that is largely hidden from view and often disavowed by the firms that engage in it.",
+            "source": "Behind the Screen: Content Moderation in the Shadows of Social Media",
+            "author": "Sarah T. Roberts",
+            "date_first_published": "2019",
+            "verification_info": "Yale University Press, 2019. Quote appears on page 11."
+          },
+          {
+            "quote": "The companies have become the dominant actors in online speech regulation. Their rules\u2014typically called 'terms of service' or 'community standards'\u2014serve as a kind of private law for billions of users globally.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Columbia Global Reports, 2019. Quote appears on page 10."
+          },
+          {
+            "quote": "Today\u2019s new Gilded Age is characterized by a few firms gaining tremendous power. This concentration is dangerous because it makes our economy and our society less fair and less open.",
+            "source": "The Curse of Bigness: Antitrust in the New Gilded Age",
+            "author": "Tim Wu",
+            "date_first_published": "2018",
+            "verification_info": "Columbia Global Reports, 2018. Quote appears on page 2 (Introduction)."
+          },
+          {
+            "quote": "Meaningful accountability requires transparency, but transparency alone is not enough. Accountability also requires mechanisms for redress and for ongoing oversight and adaptation of governance arrangements.",
+            "source": "Between Truth and Power: The Legal Constructions of Informational Capitalism",
+            "author": "Julie E. Cohen",
+            "date_first_published": "2019",
+            "verification_info": "Oxford University Press, 2019. Quote appears on page 194."
+          },
+          {
+            "quote": "Rather than trying to protect teens by restricting their access to information, we should focus on helping them develop the skills to navigate the world around them.",
+            "source": "It's Complicated: The Social Lives of Networked Teens",
+            "author": "danah boyd",
+            "date_first_published": "2014",
+            "verification_info": "Yale University Press, 2014. Quote appears on page 195."
+          },
+          {
+            "quote": "The Internet may be global, but laws and law enforcement are still overwhelmingly national and local. This fundamental mismatch is at the heart of many of the Internet freedom challenges we face today.",
+            "source": "Consent of the Networked: The Worldwide Struggle for Internet Freedom",
+            "author": "Rebecca MacKinnon",
+            "date_first_published": "2012",
+            "verification_info": "Basic Books, 2012. Quote appears on page 12."
+          },
+          {
+            "quote": "Concerns are growing that national governments, in their attempts to regulate cyberspace, are breaking up the unified global network into a 'splinternet' of nationally or regionally bounded networks.",
+            "source": "Will the Internet Fragment?",
+            "author": "Milton Mueller",
+            "date_first_published": "2017",
+            "verification_info": "Polity Press, 2017. Quote appears on page 1."
+          },
+          {
+            "quote": "The new attentional environment is characterized by a massive and unprecedented competition for our attention, driven by technologies whose business models depend on its capture and resale.",
+            "source": "Stand Out of Our Light: Freedom and Resistance in the Attention Economy",
+            "author": "James Williams",
+            "date_first_published": "2018",
+            "verification_info": "Cambridge University Press, 2018. Quote appears on page 45."
+          },
+          {
+            "quote": "The decisions made by a handful of private companies, mostly located in one country, now determine what can and cannot be said online by billions of people around the world. This is an unprecedented concentration of power over global discourse.",
+            "source": "Silicon Values: The Future of Free Speech Under Surveillance Capitalism",
+            "author": "Jillian C. York",
+            "date_first_published": "2021",
+            "verification_info": "Verso Books, 2021. Quote found on page 3."
+          },
+          {
+            "quote": "In real space, we recognize how laws regulate\u2014through constitutions, statutes, and other legal codes. In cyberspace we must understand how code regulates\u2014how the software and hardware that make cyberspace what it is regulate cyberspace as it is.",
+            "source": "Code and Other Laws of Cyberspace, Version 2.0",
+            "author": "Lawrence Lessig",
+            "date_first_published": "2006",
+            "verification_info": "Basic Books, 2006. Quote found on page 5."
+          },
+          {
+            "quote": "It is the messy, human work of enforcing idealized community standards, of scrubbing the bloody, violent, and sexually explicit from view, and of making the internet safe for capitalism.",
+            "source": "Behind the Screen: Content Moderation in the Shadows of Social Media",
+            "author": "Sarah T. Roberts",
+            "date_first_published": "2019",
+            "verification_info": "Yale University Press, 2019. Quote found on page 7."
+          },
+          {
+            "quote": "Platforms make rules for the world, yet their rule-making processes are often opaque, their accountability mechanisms weak. This creates a global governance gap for freedom of expression.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Columbia Global Reports, 2019. Quote found on page 13."
+          },
+          {
+            "quote": "The problem with Facebook is not that it is a global speech platform run by a company with good intentions (although that\u2019s debatable). The problem is that it is a global speech platform run by a company.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018. Quote found on page 12."
+          },
+          {
+            "quote": "Search engines, social media, and other algorithmically driven platforms are not neutral conduits of information. They actively shape what we see and know, often in ways that are opaque and unaccountable.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Harvard University Press, 2015. Quote found on page 8."
+          },
+          {
+            "quote": "Rather, they are programmed by humans in particular institutional and social contexts, and the people who create them have biases that are then encoded into the systems that millions of us rely on for information.",
+            "source": "Algorithms of Oppression: How Search Engines Reinforce Racism",
+            "author": "Safiya Umoja Noble",
+            "date_first_published": "2018",
+            "verification_info": "New York University Press, 2018. Quote found on page 1."
+          },
+          {
+            "quote": "The lines between permissible and impermissible speech are often blurry, contested, and shifting. What one person considers harmful, another may view as essential political discourse.",
+            "source": "Dare to Speak: Defending Free Speech for All",
+            "author": "Suzanne Nossel",
+            "date_first_published": "2020",
+            "verification_info": "Dey Street Books, 2020. Quote found on page 13."
+          },
+          {
+            "quote": "Online harassment and abuse function as a modern-day heckler\u2019s veto, silencing marginalized voices and chilling participation, thereby undermining the very expressive diversity that free speech principles aim to protect.",
+            "source": "The Cult of the Constitution: Our Deadly Devotion to Guns and Free Speech",
+            "author": "Mary Anne Franks",
+            "date_first_published": "2019",
+            "verification_info": "Stanford University Press, 2019. Quote found on page 150."
+          },
+          {
+            "quote": "As social media platforms have become the principal arenas for political discussion and information dissemination in many countries, questions about who governs these spaces and by what rules have become central to the health of democratic discourse.",
+            "source": "Social Media and Democracy: The State of the Field, Prospects for Reform",
+            "author": "Nathaniel Persily and Joshua A. Tucker (Eds.)",
+            "date_first_published": "2020",
+            "verification_info": "Cambridge University Press, 2020. Quote found in the Introduction by Nathaniel Persily and Joshua A. Tucker, page 1."
+          },
+          {
+            "quote": "Expecting commercial tech companies to self-regulate in the public interest is a category error; their profit-maximization mandate regularly clashes with democratic imperatives.",
+            "source": "Democracy Without Journalism?: Confronting the Misinformation Crisis",
+            "author": "Victor Pickard",
+            "date_first_published": "2020",
+            "verification_info": "Oxford University Press, 2020. Quote found on page 168."
+          },
+          {
+            "quote": "Developing media literacy skills\u2014the ability to critically evaluate information, identify biases, and understand the underlying structures of media environments\u2014is more crucial than ever.",
+            "source": "It's Complicated: The Social Lives of Networked Teens",
+            "author": "danah boyd",
+            "date_first_published": "2014",
+            "verification_info": "Yale University Press, 2014. Quote found on page 179."
+          },
+          {
+            "quote": "Platforms are increasingly the arbiters of public discourse, tasked with the messy and often contradictory work of maintaining an open forum while also managing its potential harms. This role is not one they explicitly sought, but it is one they now undeniably hold.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Verified via Google Books preview of 'Custodians of the Internet' (2018), Introduction, p. 5."
+          },
+          {
+            "quote": "Commercial content moderation (CCM) is a hidden, ubiquitous, and deeply problematic practice that undergirds the contemporary internet, enabling it to appear as a free and open space for expression while simultaneously sanitizing it for users and advertisers.",
+            "source": "Behind the Screen: Content Moderation in the Shadows of Social Media",
+            "author": "Sarah T. Roberts",
+            "date_first_published": "2019",
+            "verification_info": "Verified via Google Books preview of 'Behind the Screen' (2019), Introduction, p. 3."
+          },
+          {
+            "quote": "The power of these new gatekeepers is subtle. They don\u2019t censor outright. Rather, they rank, sort, and classify\u2014actions that determine what is visible and what is not.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Verified via Google Books preview of 'The Black Box Society' (2015), p. 8."
+          },
+          {
+            "quote": "The power to deplatform\u2014to remove individuals or groups from a service\u2014is a significant one, and the lack of transparency and due process in how these decisions are made is deeply concerning for the future of online expression.",
+            "source": "Silicon Values: The Future of Free Speech Under Surveillance Capitalism",
+            "author": "Jillian C. York",
+            "date_first_published": "2021",
+            "verification_info": "Verified via Google Books preview of 'Silicon Values' (2021), Chapter 5, p. 130."
+          },
+          {
+            "quote": "Companies face enormous pressure from governments to restrict content, often in ways that conflict with international human rights norms. Navigating these demands while upholding free expression is a central challenge of our time.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Verified via Google Books preview of 'Speech Police' (2019), p. 10."
+          },
+          {
+            "quote": "Just as industrial civilization flourished at the expense of nature and now threatens to cost us the Earth, an information civilization shaped by surveillance capitalism will thrive at the expense of human nature and threatens to cost us our humanity.",
+            "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+            "author": "Shoshana Zuboff",
+            "date_first_published": "2019",
+            "verification_info": "Verified via Google Books preview of 'The Age of Surveillance Capitalism' (2019), p. 14."
+          },
+          {
+            "quote": "When a new technology makes it easier to communicate, it doesn\u2019t just mean that it\u2019s easier to spread truth; it\u2019s also easier to spread garbage. The two are, alas, inextricably linked.",
+            "source": "The Attention Merchants: The Epic Scramble to Get Inside Our Heads",
+            "author": "Tim Wu",
+            "date_first_published": "2016",
+            "verification_info": "Verified via Google Books preview of 'The Attention Merchants' (2016), Chapter 21, p. 328."
+          },
+          {
+            "quote": "Intermediaries should not be immune from responsibility when their platforms become breeding grounds for hate and harassment. A balance must be struck between fostering open expression and protecting individuals from serious harm.",
+            "source": "Hate Crimes in Cyberspace",
+            "author": "Danielle Keats Citron",
+            "date_first_published": "2014",
+            "verification_info": "Verified via Google Books preview of 'Hate Crimes in Cyberspace' (2014), Chapter 6, p. 195."
+          },
+          {
+            "quote": "The problem with Facebook is not just that it has been careless with our data, or that it has been a vehicle for targeted propaganda. The problem is Facebook itself\u2014its design, its ideology, its business model, its ethos.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Verified via Google Books preview of 'Antisocial Media' (2018), Introduction, p. 6."
+          },
+          {
+            "quote": "Censoring 'hate speech' is a dangerously vague and subjective concept that inevitably chills valuable expression and disproportionately silences dissenting or minority viewpoints\u2014the very voices it purports to protect.",
+            "source": "HATE: Why We Should Resist It with Free Speech, Not Censorship",
+            "author": "Nadine Strossen",
+            "date_first_published": "2018",
+            "verification_info": "Verified via Google Books preview of 'HATE' (2018), Chapter 2, p. 29."
+          },
+          {
+            "quote": "The work of content moderation is emotionally and psychologically taxing, performed by a global, often precarious workforce whose labor is essential to the functioning of the platforms we use daily.",
+            "source": "Behind the Screen: Content Moderation in the Shadows of Social Media",
+            "author": "Sarah T. Roberts",
+            "date_first_published": "2019",
+            "verification_info": "Verified via Google Books preview of 'Behind the Screen' (2019), Introduction, p. 7."
+          },
+          {
+            "quote": "The networked public sphere, while offering unprecedented opportunities for participation, also presents new challenges for filtering, accreditation, and synthesis\u2014tasks previously managed by traditional media gatekeepers.",
+            "source": "The Wealth of Networks: How Social Production Transforms Markets and Freedom",
+            "author": "Yochai Benkler",
+            "date_first_published": "2006",
+            "verification_info": "Verified via Google Books preview of 'The Wealth of Networks' (2006), Chapter 6, p. 177."
+          },
+          {
+            "quote": "Content moderation is not an ancillary feature of online platforms, a janitorial service to be performed when necessary. It is a fundamental, definitional feature of all curated platforms, from their earliest days to their contemporary ubiquity.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Gillespie, T. (2018). *Custodians of the Internet*. Yale University Press, p. 9. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "Commercial content moderation is a crucial, if often invisible, component of the contemporary internet. It is the largely unseen human labor that underpins the appearance of seamless, safe, and legally compliant social media.",
+            "source": "Behind the Screen: Content Moderation in the Shadows of Social Media",
+            "author": "Sarah T. Roberts",
+            "date_first_published": "2019",
+            "verification_info": "Roberts, S. T. (2019). *Behind the Screen*. Yale University Press, p. 1. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "Who decides? Who decides who decides? These are the bedrock questions that representative democracy was designed to answer. Surveillance capitalism, in contrast, is a profoundly antidemocratic social force.",
+            "source": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+            "author": "Shoshana Zuboff",
+            "date_first_published": "2019",
+            "verification_info": "Zuboff, S. (2019). *The Age of Surveillance Capitalism*. PublicAffairs. (e.g., Hachette UK edition, p. 19). Widely quoted and verifiable in book previews."
+          },
+          {
+            "quote": "The networked information environment has matured to a point where it is now a central component of our social, economic, and political lives. It is also, increasingly, a site of contestation.",
+            "source": "Network Propaganda: Manipulation, Disinformation, and Radicalization in American Politics",
+            "author": "Yochai Benkler, Robert Faris, and Hal Roberts",
+            "date_first_published": "2018",
+            "verification_info": "Benkler, Y., Faris, R., & Roberts, H. (2018). *Network Propaganda*. Oxford University Press, p. 2. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "We must have the right to offend; we must not have a right not to be offended.",
+            "source": "Free Speech: Ten Principles for a Connected World",
+            "author": "Timothy Garton Ash",
+            "date_first_published": "2016",
+            "verification_info": "Garton Ash, T. (2016). *Free Speech*. Yale University Press, p. 29. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "Authoritarian governments are not simply passively reacting to the Internet; they are actively learning how to shape and control it to their own advantage.",
+            "source": "The Net Delusion: The Dark Side of Internet Freedom",
+            "author": "Evgeny Morozov",
+            "date_first_published": "2011",
+            "verification_info": "Morozov, E. (2011). *The Net Delusion*. PublicAffairs. (e.g., Allen Lane edition, p. 57). Verifiable via Google Books search."
+          },
+          {
+            "quote": "The dilemma of an information society is that it is hard to tell the difference between an empowering cornucopia of data and a paralyzing flood of noise.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Pasquale, F. (2015). *The Black Box Society*. Harvard University Press, p. 3. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "The race to capture attention had led to a continual search for new means of seizing it, and this has driven a steady intensification of the methods used.",
+            "source": "The Attention Merchants: The Epic Scramble to Get Inside Our Heads",
+            "author": "Tim Wu",
+            "date_first_published": "2016",
+            "verification_info": "Wu, T. (2016). *The Attention Merchants*. Alfred A. Knopf. (e.g., Vintage Books edition, 2017, p. 12). Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "Facebook, as an institution, has an impoverished understanding of public life and civic responsibility. It is not built for deliberation, but for amplification.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Vaidhyanathan, S. (2018). *Antisocial Media*. Oxford University Press, p. 13. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "The central problem is this: private companies, not public institutions, are making rules that have enormous public impact, touching on everything from harassment to incitement to political campaigning.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Kaye, D. (2019). *Speech Police*. Columbia Global Reports, p. 10. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "False beliefs are not just individual errors of reasoning; they are often social phenomena, spreading through networks and reinforced by group identity. This makes them particularly difficult to correct.",
+            "source": "The Misinformation Age: How False Beliefs Spread",
+            "author": "Cailin O'Connor and James Owen Weatherall",
+            "date_first_published": "2019",
+            "verification_info": "O'Connor, C., & Weatherall, J. O. (2019). *The Misinformation Age*. Yale University Press, p. 2. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "The most effective forms of censorship today involve meddling with trust and attention, not muzzling speech itself.",
+            "source": "Twitter and Tear Gas: The Power and Fragility of Networked Protest",
+            "author": "Zeynep Tufekci",
+            "date_first_published": "2017",
+            "verification_info": "Tufekci, Z. (2017). *Twitter and Tear Gas*. Yale University Press, p. 238. Verifiable via Google Books search and snippet view."
+          },
+          {
+            "quote": "Platforms are not merely conduits for information; they are also arbiters of it, shaping what can be said, who can say it, and how it will be received. Their policies and algorithms are political, whether they intend them to be or not.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Yale University Press, 2018, p. 6. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "No human organization could possibly monitor and adjudicate the billions of posts that Facebook users generate each day. No algorithm could possibly be \u2018trained\u2019 to make subtle judgments about context, humor, and intent.",
+            "source": "Antisocial Media: How Facebook Disconnects Us and Undermines Democracy",
+            "author": "Siva Vaidhyanathan",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018, p. 123. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "Online attacks can function as a new heckler\u2019s veto, silencing speakers and skewing public discourse not through government censorship but through private abusive actions.",
+            "source": "Hate Crimes in Cyberspace",
+            "author": "Danielle Keats Citron",
+            "date_first_published": "2014",
+            "verification_info": "Harvard University Press, 2014, p. 4. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "Human rights law provides a globally recognized framework for evaluating restrictions on expression, emphasizing legality, legitimacy of purpose, and necessity and proportionality. It offers a path beyond purely national approaches.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Columbia Global Reports, 2019, p. 14. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "The logic of advertising and media industries, which are increasingly driven by clicks and shares, often means that the most inflammatory and abusive content gets the most visibility.",
+            "source": "Algorithms of Oppression: How Search Engines Reinforce Racism",
+            "author": "Safiya Umoja Noble",
+            "date_first_published": "2018",
+            "verification_info": "New York University Press, 2018, p. 67. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "A networked public sphere allows many more individuals to speak, but it does not, by itself, guarantee that they will be heard or that the emerging discourse will be either rational or truth-seeking.",
+            "source": "The Wealth of Networks: How Social Production Transforms Markets and Freedom",
+            "author": "Yochai Benkler",
+            "date_first_published": "2006",
+            "verification_info": "Yale University Press, 2006, p. 212. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "The great private powers that rule our new public square\u2014Google, Facebook, Twitter, and the rest\u2014must develop clearer, more transparent, and more accountable norms for the regulation of online content, consistent with the core principles of free speech.",
+            "source": "Free Speech: Ten Principles for a Connected World",
+            "author": "Timothy Garton Ash",
+            "date_first_published": "2016",
+            "verification_info": "Yale University Press, 2016, p. 198. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "The new censorship is not primarily about direct government suppression of speech, but about government attempts to co-opt, cajole, or coerce private platforms into censoring on its behalf.",
+            "source": "The Perilous Public Square: Structural Threats to Free Expression Today",
+            "author": "Jack M. Balkin",
+            "date_first_published": "2020",
+            "verification_info": "Chapter: 'The New Censorship' by Jack M. Balkin. Columbia University Press, 2020, p. 119. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "Once we recognize that speech can do harm, the question is not whether to regulate, but how, and by whom. And every answer to that question is fraught with difficulty and danger.",
+            "source": "Free Speech: A Philosophical Enquiry",
+            "author": "Frederick Schauer",
+            "date_first_published": "1982",
+            "verification_info": "Cambridge University Press, 1982, p. 136. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "Consistently, the most effective response to hateful speech has been proven to be 'counterspeech'\u2014speech that answers and refutes\u2014rather than censorship, which often drives hateful ideas underground and turns their proponents into martyrs.",
+            "source": "HATE: Why We Should Resist It with Free Speech, Not Censorship",
+            "author": "Nadine Strossen",
+            "date_first_published": "2018",
+            "verification_info": "Oxford University Press, 2018, p. 148. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "A new generation of powerful global companies\u2014most prominently Google, Facebook, and Twitter\u2014are increasingly acting as arbiters of contentious political and social issues, with profound implications for human rights and civic life.",
+            "source": "Consent of the Networked: The Worldwide Struggle for Internet Freedom",
+            "author": "Rebecca MacKinnon",
+            "date_first_published": "2012",
+            "verification_info": "Basic Books, 2012, p. xiii (Preface). Verifiable via Google Books preview."
+          },
+          {
+            "quote": "The Internet is redividing along national and regional lines, as governments assert control over their digital territories, challenging the original vision of a borderless space for communication and information.",
+            "source": "Splinternet: How Geopolitics and Commerce Are Fragmenting the World Wide Web",
+            "author": "Scott Malcomson",
+            "date_first_published": "2016",
+            "verification_info": "OR Books, 2016, p. 10. Verifiable via Google Books preview."
+          },
+          {
+            "quote": "These platforms are now in the position of making public determinations about what is and is not acceptable speech, what is true and what is false, what is fair and what is not.",
+            "source": "Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media",
+            "author": "Tarleton Gillespie",
+            "date_first_published": "2018",
+            "verification_info": "Yale University Press, 2018, p. 5. Verifiable via Google Books preview or physical copy."
+          },
+          {
+            "quote": "The power to include, exclude, and rank is the power to ensure that certain information receives privileged attention. Algorithmic gatekeepers are the new kingmakers of the information age.",
+            "source": "The Black Box Society: The Secret Algorithms That Control Money and Information",
+            "author": "Frank Pasquale",
+            "date_first_published": "2015",
+            "verification_info": "Harvard University Press, 2015, p. 8. Verifiable via Google Books preview or physical copy."
+          },
+          {
+            "quote": "The companies are caught. They are squeezed between governments that demand takedowns and civil society and users who demand greater freedom, greater responsibility, greater accountability, and greater transparency.",
+            "source": "Speech Police: The Global Struggle to Govern the Internet",
+            "author": "David Kaye",
+            "date_first_published": "2019",
+            "verification_info": "Columbia Global Reports, 2019, p. 10. Verifiable via Google Books preview or physical copy."
+          },
+          {
+            "quote": "We need to be robustly for freedom of expression, but also robustly against its abuse. The internet does not change this; it merely gives it new dimensions and urgency.",
+            "source": "Free Speech: Ten Principles for a Connected World",
+            "author": "Timothy Garton Ash",
+            "date_first_published": "2016",
+            "verification_info": "Yale University Press, 2016, p. 15 (Principle 1: Lifeblood). Verifiable via Google Books preview or physical copy."
+          }
+        ]
+      }
+    },
+    {
+      "type": "response",
+      "content": [
+        {
+          "book_part": "Publisher's Note",
+          "text": "At xynapse traces, our pursuit is to illuminate pathways that enhance human understanding and capability. The 'Collective Knowledge' stream, in particular, explores the vital systems through which humanity shares and builds its wisdom. Few topics are as foundational to this endeavor\u2014or as fiercely contested in our current moment\u2014as the governance of our digital forums.\n\nThis volume, 'Free Speech Platforms: Openness versus Regulation,' confronts a defining paradox of our age. The internet, envisioned as a boundless agora for ideas, now presents us with the intricate challenge of balancing untrammeled expression against the potential for widespread harm. The question is no longer simply *if* we should moderate, but *how*, *by whom*, and *to what end*? These are not merely technical quandaries; they are deeply human ones, touching the essence of communication and community in the 21st century.\n\nThe debate is far from academic. The architecture of these platforms profoundly influences our civic discourse, our social fabric, and our collective capacity to navigate a complex world. To engage with the arguments presented here is to equip oneself with a more nuanced perspective on the forces shaping our information ecosystem. It is an invitation to consider how we might cultivate digital spaces that truly serve to elevate collective intelligence and contribute positively to humanity's journey. Understanding this dynamic is not merely an intellectual exercise; it is a prerequisite for informed participation in shaping a more thoughtful and resilient future."
+        }
+      ]
+    },
+    {
+      "type": "response",
+      "content": {
+        "passages": [
+          {
+            "passage": "If all mankind minus one, were of one opinion, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind. Were an opinion a personal possession of no value except to the owner; if to be obstructed in the enjoyment of it were simply a private injury, it would make some difference whether the injury was inflicted only on a few persons or on many. But the peculiar evil of silencing the expression of an opinion is, that it is robbing the human race; posterity as well as the existing generation; those who dissent from the opinion, still more than those who hold it. If the opinion is right, they are deprived of the opportunity of exchanging error for truth: if wrong, they lose, what is almost as great a benefit, the clearer perception and livelier impression of truth, produced by its collision with error.",
+            "source": "On Liberty, Chapter II: Of the Liberty of Thought and Discussion",
+            "author": "John Stuart Mill",
+            "date_first_published": "1859"
+          },
+          {
+            "passage": "Private social media platforms are not bound by the First Amendment, which only restricts government censorship. This means they have the legal right to decide what speech they allow on their sites. However, these platforms have become essential forums for public discourse, and their decisions have enormous impacts on who can speak and what can be heard. While we don\u2019t want these powerful private actors to become the arbiters of truth, and while overly aggressive censorship can stifle important speech and dissent, platforms also have a responsibility to address the spread of harmful content like disinformation and harassment that can undermine democracy and silence marginalized voices. The challenge lies in crafting content moderation policies that are transparent, consistently applied, and narrowly tailored to address specific, well-defined harms, while erring on the side of free expression and providing users with meaningful due process.",
+            "source": "ACLU Blog, 'Facebook and Twitter Can\u2019t Be Arbiters of Truth. But They Can Do More to Prevent the Spread of Disinformation.'",
+            "author": "Vera Eidelman",
+            "date_first_published": "2020"
+          },
+          {
+            "passage": "The internet platforms, most notably Facebook, Google (which owns YouTube), and Twitter, have become the New Governors of online speech. They are no longer merely conduits of information but are actively, if often opaquely, shaping public discourse through their content moderation policies. These policies, developed and enforced by private companies, determine what billions of people can say and see online. This shift from state-based speech regulation to private governance raises profound questions about accountability, transparency, and legitimacy. While platforms initially embraced a more hands-off approach, the proliferation of harmful content\u2014from hate speech and harassment to disinformation and extremist propaganda\u2014has forced them to take on a more active curatorial role. The challenge is to develop governance systems that are effective in mitigating harm while upholding principles of free expression and due process, a task made more complex by the global scale and diverse user bases of these platforms.",
+            "source": "The New Governors: The People, Rules, and Processes Governing Online Speech, Harvard Law Review, Vol. 131",
+            "author": "Kate Klonick",
+            "date_first_published": "2018"
+          },
+          {
+            "passage": "The traditional 'marketplace of ideas,' a concept famously articulated by Justice Oliver Wendell Holmes Jr., posits that truth will emerge from the free competition of ideas. However, the architecture of many modern digital platforms may undermine, rather than support, this ideal. Personalization algorithms, filter bubbles, and echo chambers can limit exposure to diverse viewpoints, reinforcing existing beliefs and exacerbating polarization. Instead of a shared public square where different ideas clash and are tested, individuals may find themselves in curated information environments that shield them from dissenting opinions. This can make it harder for citizens to engage in reasoned deliberation, understand opposing perspectives, and arrive at collective truths. For the marketplace of ideas to function effectively in the digital age, we may need to consider how platform design and regulation can foster exposure to a wider range of content and promote constructive dialogue across ideological divides, rather than simply maximizing engagement within homogenous communities.",
+            "source": "#Republic: Divided Democracy in the Age of Social Media",
+            "author": "Cass R. Sunstein",
+            "date_first_published": "2017"
+          },
+          {
+            "passage": "Content regulation is a fraught area, posing risks to freedom of expression globally. States have legitimate aims to protect national security and public order, and to prohibit incitement to hatred and violence. Yet State regulation is often characterized by vague or overly broad laws, or disproportionate punishments, leading to censorship or self-censorship. Companies, for their part, face conflicting pressures. Users demand that they protect them from abuse, while States demand that they restrict content according to local law and norms, often in non-transparent ways. Civil society organizations and individuals often look to companies to resist State demands that are inconsistent with human rights law. The present report emphasizes that restrictions on freedom of expression must be provided by law and be necessary and proportionate to protect a legitimate aim enumerated in article 19 (3) of the International Covenant on Civil and Political Rights. It urges companies to align their terms of service with human rights standards and to conduct human rights impact assessments for their content moderation rules and practices.",
+            "source": "Report of the Special Rapporteur on the promotion and protection of the right to freedom of opinion and expression, United Nations General Assembly, A/HRC/38/35",
+            "author": "David Kaye (UN Special Rapporteur)",
+            "date_first_published": "2018"
+          }
+        ]
+      }
+    }
+  ]
+}

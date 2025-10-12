@@ -1,0 +1,16 @@
+[
+  {
+    "user_id": "anonymous",
+    "post_id": "74803983-8c3f-4c4b-89c7-a94b8a31cd62",
+    "action": "like",
+    "timestamp": "2025-09-14T03:50:12.415128",
+    "context": null
+  },
+  {
+    "user_id": "anonymous",
+    "post_id": "ef079967-e66c-41dd-a973-b8b73e5f812c",
+    "action": "like",
+    "timestamp": "2025-09-14T03:50:18.503053",
+    "context": null
+  }
+]

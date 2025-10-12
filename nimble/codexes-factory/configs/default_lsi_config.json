@@ -1,0 +1,339 @@
+
+{
+  "_config_info": {
+    "description": "Global default LSI configuration",
+    "version": "3.0",
+    "last_updated": "2024-07-18",
+    "config_type": "global_defaults",
+    "usage": "These are system-wide defaults used when no publisher or imprint-specific values are available"
+  },
+
+  "system_defaults": {
+    "language_code": "eng",
+    "country_of_origin": "US",
+    "territorial_rights": "World",
+    "returnability": "Yes",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+
+  "publishing_defaults": {
+    "publisher": "",
+    "imprint": "",
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "24",
+    "order_type_eligibility": "POD"
+  },
+
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40"
+  },
+  
+  "physical_defaults": {
+    "trim_size": "6x9",
+    "page_count": "200",
+    "spine_width": "0.5",
+    "weight_lbs": "0",
+    "custom_trim_width_inches": "",
+    "custom_trim_height_inches": ""
+  },
+  
+  "metadata_defaults": {
+    "language": "English",
+    "audience": "General Adult",
+    "bisac_category": "GEN000000",
+    "bisac_category_2": "",
+    "bisac_category_3": "",
+    "thema_subject_1": "",
+    "thema_subject_2": "",
+    "thema_subject_3": "",
+    "min_age": "",
+    "max_age": "",
+    "min_grade": "",
+    "max_grade": ""
+  },
+  
+  "contributor_defaults": {
+    "contributor_one_role": "Author",
+    "contributor_two_role": "",
+    "contributor_three_role": "",
+    "contributor_one_bio": "",
+    "contributor_one_affiliations": "",
+    "contributor_one_professional_position": "",
+    "contributor_one_location": "",
+    "contributor_one_prior_work": ""
+  },
+  
+  "series_defaults": {
+    "series_name": "",
+    "series_number": "",
+    "volume_number": ""
+  },
+  
+  "illustration_defaults": {
+    "illustration_count": "0",
+    "illustration_notes": "",
+    "illustrations_color": "No"
+  },
+  
+  "distribution_defaults": {
+    "availability": "Available",
+    "discount_code": "",
+    "tax_code": "",
+    "returns_allowed": "Yes"
+  },
+  
+  "shipping_defaults": {
+    "carton_quantity": "24",
+    "carton_weight": "",
+    "carton_length": "",
+    "carton_width": "",
+    "carton_height": ""
+  },
+  
+  "lsi_specific_defaults": {
+    "lsi_special_category": "",
+    "lsi_flexfield1": "",
+    "lsi_flexfield2": "",
+    "lsi_flexfield3": "",
+    "lsi_flexfield4": "",
+    "lsi_flexfield5": "",
+    "reserved1": "",
+    "reserved2": "",
+    "reserved3": "",
+    "reserved4": "",
+    "reserved5": "",
+    "reserved6": "",
+    "reserved7": "",
+    "reserved8": "",
+    "reserved9": "",
+    "reserved10": "",
+    "reserved11": "",
+    "reserved12": "",
+    "reserved_special_instructions": ""
+  },
+  
+  "marketing_defaults": {
+    "marketing_image": "",
+    "publisher_reference_id": "",
+    "review_quotes": "",
+    "annotation_summary": "",
+    "short_description": "",
+    "keywords": ""
+  },
+  
+  "defaults": {
+    "publisher": "Nimble Books LLC",
+    "imprint": "xynapse traces",
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "1",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy",
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "edition_number": "1",
+    "edition_description": "First Edition",
+    "order_type_eligibility": "POD",
+    "language_code": "ENG",
+    "pages": "200",
+    "pub_date": "2025-07-18",
+    "street_date": "2025-07-25",
+    "interior_color": "Black and White",
+    "interior_paper": "Cream",
+    "binding": "Perfect Bound",
+    "cover_type": "Paperback"
+  },
+  
+  "legacy_compatibility": {
+    "defaults": {
+      "publisher": "Nimble Books LLC",
+      "imprint": "xynapse traces",
+      "lightning_source_account": "6024045",
+      "cover_submission_method": "FTP",
+      "text_block_submission_method": "FTP",
+      "rendition_booktype": "Perfect Bound",
+      "carton_pack_quantity": "1",
+      "territorial_rights": "World",
+      "returnability": "Yes-Destroy",
+      "us_wholesale_discount": "40",
+      "uk_wholesale_discount": "40",
+      "eu_wholesale_discount": "40",
+      "edition_number": "1",
+      "edition_description": "First Edition",
+      "order_type_eligibility": "POD",
+      "language_code": "ENG",
+      "bisac_category": "",
+      "metadata_contact": {},
+      "pages": "200",
+      "pub_date": "2025-07-18",
+      "street_date": "2025-07-25",
+      "interior_color": "Black and White",
+      "interior_paper": "Cream",
+      "binding": "Perfect Bound",
+      "cover_type": "Paperback"
+    }
+  },
+  "field_overrides": {
+    "metadata_contact_dictionary": "Editorial Department",
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": ""
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0,
+      "tax_rate": "0.0",
+      "shipping_class": "domestic",
+      "market_type": "primary"
+    },
+    "UK": {
+      "wholesale_discount_percent": "35",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "pricing_multiplier": 0.78,
+      "exchange_rate": 0.78,
+      "tax_rate": "20.0",
+      "shipping_class": "international",
+      "market_type": "primary"
+    },
+    "EU": {
+      "wholesale_discount_percent": "35",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "pricing_multiplier": 0.91,
+      "exchange_rate": 0.91,
+      "tax_rate": "19.0",
+      "shipping_class": "international",
+      "market_type": "primary"
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.35,
+      "tax_rate": "5.0",
+      "shipping_class": "north_america",
+      "market_type": "primary"
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "pricing_multiplier": 1.48,
+      "exchange_rate": 1.48,
+      "tax_rate": "10.0",
+      "shipping_class": "international",
+      "market_type": "primary"
+    },
+    "NZ": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "NZD",
+      "pricing_multiplier": 1.60,
+      "exchange_rate": 1.60,
+      "tax_rate": "15.0",
+      "shipping_class": "international",
+      "market_type": "secondary"
+    },
+    "JP": {
+      "wholesale_discount_percent": "30",
+      "returnability": "No",
+      "currency": "JPY",
+      "pricing_multiplier": 150.0,
+      "exchange_rate": 150.0,
+      "tax_rate": "10.0",
+      "shipping_class": "international",
+      "market_type": "secondary"
+    },
+    "ZA": {
+      "wholesale_discount_percent": "35",
+      "returnability": "No",
+      "currency": "ZAR",
+      "pricing_multiplier": 18.0,
+      "exchange_rate": 18.0,
+      "tax_rate": "15.0",
+      "shipping_class": "international",
+      "market_type": "secondary"
+    },
+    "GC": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USBR1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USDE1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USRU1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USPL1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USKR1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USCN1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USIN1": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "USJP2": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "UAEUSD": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    }
+  }
+}

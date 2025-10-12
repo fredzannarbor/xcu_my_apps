@@ -1,0 +1,28 @@
+{
+  "imprint": "Eldercare Editions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@eldercareeditions.com",
+  "branding": {
+    "tagline": "Empowering Care for Every Stage of Aging",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.eldercareeditions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Guides to home care, nursing homes, legal and financial planning",
+    "target_audience": "Eldercare providers, seniors, and their families",
+    "competitive_advantage": "Our practical, compassionate guides are written by experts in elder care",
+    "example_titles": "The 36-Hour Day by Nancy Mace and Peter Rabins, A Bittersweet Season by Jane Gross"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "NFT bio creator",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "Provide the name of a historical figure.",
+        "preset_description": "",
+        "preset_pagetype": "Launcher",
+        "pre_user_input": "Provide an interesting, factual biography of this historical person: ",
+        "prompt": " ",  
+        "post_user_input": "",
+        "engine": "curie-instruct-beta",
+        "temperature": 0.7,
+        "max_tokens": 240,
+        "top_p": 1,
+        "fp": 0.5,
+        "pp": 0.5,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "Enter brief description of your project here.",
+        "user" : "37",
+        "organization" : "org-evK17V8xnQ6bhmsr8Qv2N7PR"
+    }
+]

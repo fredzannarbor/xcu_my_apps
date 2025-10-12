@@ -1,0 +1,24 @@
+{
+  "imprint_name": "New Literary Imprint",
+  "workflow_stages": [
+    "Manuscript Acquisition",
+    "Initial Review",
+    "Editorial Assessment",
+    "Developmental Editing",
+    "Copy Editing",
+    "Design & Layout",
+    "Proofreading",
+    "Production",
+    "Marketing & Promotion",
+    "Distribution",
+    "Launch Support",
+    "Post-Launch Analysis"
+  ],
+  "quality_standards": "",
+  "automation_settings": "",
+  "template_settings": {
+    "default_template": "template.tex",
+    "cover_template": "cover.tex",
+    "style_package": "newliteraryimprint_styles"
+  }
+}

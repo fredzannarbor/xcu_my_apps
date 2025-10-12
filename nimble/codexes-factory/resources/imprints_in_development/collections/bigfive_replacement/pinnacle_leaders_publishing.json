@@ -1,0 +1,28 @@
+{
+  "imprint": "Pinnacle Leaders Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pinnacleleaderspublishing.com",
+  "branding": {
+    "tagline": "Elevate your leadership",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pinnacleleaderspublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Leadership, management, and corporate strategy",
+    "target_audience": "Emerging leaders, managers, and executives",
+    "competitive_advantage": "Practical, experience-based leadership advice",
+    "example_titles": "The Future CEO, Leadership in Crisis"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

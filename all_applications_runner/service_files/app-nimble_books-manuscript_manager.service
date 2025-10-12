@@ -1,0 +1,19 @@
+[Unit]
+Description=Manuscript Manager - Nimble Books LLC
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/nimble/repos/manuscript-manager
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/nimble/repos/manuscript-manager
+ExecStart=/usr/bin/python3 -m streamlit run  app.py --server.port=8506
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

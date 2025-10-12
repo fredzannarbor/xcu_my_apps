@@ -1,0 +1,47 @@
+in catalog output (books.csv):
+
+- author_en/ko are missing
+- output file not at specified location
+- page count is 0
+-  in keywords,
+    - remove #Bibliographic Key Phrases
+    - add space after semi-colons
+ - table_of_contents, bisac_codes, publication_date are blank
+ - description needs a standard paragraph explaining pilsa
+ - description needs a para explaining the imprint
+
+in PDF book:
+- title page must have
+    - subtitle (even if blank)
+    - author (mandatory; Pilsa books default to AI Lab for Book-Lovers)
+    - imprint (defaults to xynapse traces)
+- copyright page:
+    - 1 in space at top
+    - supply ISBN from list of available ISBNs
+    - Version info should go on bottom of page below copyright notice
+    - no header
+    - no footer
+ - contents page:
+    - no header
+    - no footer
+  - p. iv: blank if verso
+  - p. v: improve Publisher's Note by explaining what a Pilsa book is
+  - p. vi: blank if verso
+  - p. vii: remove
+  - p. viii: remove
+  - p. 1. customize Transcription Note to go with this book; retitle as Quotations for Transcription
+  - p. 2 delete p 2/3
+  - evens beginning at page 4: show quotations 1 throgh N with citation at the bottom of the page
+    - optional comment from editor at page bottom styled as footnote and signed --Ed.
+  - occasional even pages (as documented in config json):
+     - figure with matching transcription instruction on paired odd page}
+  - occasional even passages: lengthier passages
+     -
+  - odds beginning at page 5
+    - show dot grid
+    - add rotating transcription instructions at bottom of each N pages
+    - watermark image at 20% opacity on every 8th odd page
+
+
+   add Mnemonics page at end
+   add Bibliography page at end with QR code to Amazon link page on NimbleBooks.com

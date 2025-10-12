@@ -1,0 +1,759 @@
+#!/usr/bin/env python3
+"""
+Unified Streamlit App Runner - Main Navigation Interface
+
+Provides a single entry point and navigation dashboard for all applications
+with role-based access control and subscription management.
+"""
+
+import json
+import streamlit as st
+import requests
+from datetime import datetime
+from pathlib import Path
+import subprocess
+import sys
+import logging
+
+# Add current directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+from process_manager import ProcessManager
+from auth_integration import get_auth_manager, AuthManager
+from subscription_manager import get_subscription_manager, SubscriptionManager
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Page configuration
+st.set_page_config(
+    page_title="xtuff.ai Application Universe",
+    page_icon="🚀",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Initialize managers (removed caching to avoid widget caching issues)
+def get_managers():
+    """Initialize manager instances."""
+    try:
+        auth_manager = get_auth_manager()
+        subscription_manager = get_subscription_manager()
+        return auth_manager, subscription_manager
+    except Exception as e:
+        logger.error(f"Error initializing managers: {e}")
+        # Return mock managers if real ones fail
+        return None, None
+
+def load_config():
+    """Load the applications configuration."""
+    config_path = Path(__file__).parent / "apps_config.json"
+    try:
+        with open(config_path, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        st.error(f"Configuration file not found: {config_path}")
+        return None
+    except json.JSONDecodeError as e:
+        st.error(f"Invalid JSON in configuration: {e}")
+        return None
+
+def get_app_status():
+    """Get current status of all applications."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+        return manager.get_status()
+    except Exception as e:
+        st.error(f"Error getting app status: {e}")
+        return None
+
+def render_sidebar(auth_manager: AuthManager, user_role: str):
+    """Render the navigation sidebar with role-based options."""
+    st.sidebar.title("🚀 xtuff.ai")
+    st.sidebar.markdown("**xtuff.ai Cinematic Universe (xCU)**")
+
+    # Prominent subscription button at top
+    if st.sidebar.button("📬 Subscribe to the xCU", type="primary", use_container_width=True):
+        st.session_state["selected_page"] = "💳 Subscriptions"
+        st.rerun()
+
+    st.sidebar.markdown("---")
+
+    # User information
+    user = auth_manager.get_current_user() if auth_manager else None
+
+    if user:
+        st.sidebar.subheader("👤 User Info")
+        st.sidebar.write(f"**{user.get('name', 'User')}**")
+        st.sidebar.write(f"Role: {user_role}")
+        st.sidebar.markdown("---")
+
+    # Navigation based on role
+    if user_role in ["admin", "superadmin"]:
+        page = st.sidebar.selectbox(
+            "Navigate to:",
+            ["🏠 Home", "🔧 Management", "📊 Monitoring", "💳 Subscriptions", "⚙️ Settings"]
+        )
+    else:
+        page = st.sidebar.selectbox(
+            "Navigate to:",
+            ["🏠 Home", "💳 Subscriptions"]
+        )
+
+    st.sidebar.markdown("---")
+
+    # Logout control (login widget is rendered in main())
+    if user:
+        st.sidebar.markdown("---")
+        if st.sidebar.button("Logout", type="primary", use_container_width=True):
+            if auth_manager:
+                auth_manager.logout()
+            st.rerun()
+
+    # Quick stats for admins
+    if user_role in ["admin", "superadmin"]:
+        st.sidebar.markdown("---")
+        st.sidebar.subheader("📈 System Status")
+        status = get_app_status()
+        if status:
+            summary = status.get("summary", {})
+            col1, col2 = st.sidebar.columns(2)
+            with col1:
+                st.metric("Running", summary.get("running", 0))
+            with col2:
+                st.metric("Healthy", summary.get("healthy", 0))
+
+    return page
+
+def render_home_page(auth_manager: AuthManager, subscription_manager: SubscriptionManager, user_role: str):
+    """Render the public/subscriber home page."""
+    st.title("🚀 Welcome to xtuff.ai Application Universe")
+
+    st.markdown("""
+    ### Innovative AI-Powered Applications
+
+    **Fred Zimmerman, Founder**
+
+    Explore our suite of cutting-edge applications powered by generative AI.
+    """)
+
+    config = load_config()
+    if not config:
+        return
+
+    status = get_app_status()
+    if not status:
+        st.warning("Unable to get application status")
+        return
+
+    # Get user's subscriptions
+    user_email = auth_manager.get_current_user().get("email") if auth_manager and auth_manager.get_current_user() else None
+    user_app_access = []
+
+    if user_email and subscription_manager:
+        try:
+            user_app_access = subscription_manager.get_app_access_list(user_email)
+        except Exception as e:
+            logger.error(f"Error getting user subscriptions: {e}")
+
+    st.markdown("---")
+
+    # Display apps organized by organization
+    organizations = config.get("organizations", {})
+    app_statuses = status.get("organizations", {})
+
+    # First show xtuff.ai apps
+    if "xtuff_ai" in organizations:
+        st.header("xtuff.ai Applications")
+        render_public_apps(
+            "xtuff_ai",
+            organizations["xtuff_ai"],
+            app_statuses.get("xtuff_ai", {}),
+            user_role,
+            user_app_access
+        )
+
+    # Then show Nimble Books apps
+    if "nimble_books" in organizations:
+        st.header("Nimble Books LLC")
+        render_public_apps(
+            "nimble_books",
+            organizations["nimble_books"],
+            app_statuses.get("nimble_books", {}),
+            user_role,
+            user_app_access
+        )
+
+    # Then show personal apps
+    if "personal" in organizations:
+        st.header("Personal & Professional")
+        render_public_apps(
+            "personal",
+            organizations["personal"],
+            app_statuses.get("personal", {}),
+            user_role,
+            user_app_access
+        )
+
+def render_public_apps(org_id: str, org_config: dict, org_status: dict, user_role: str, user_app_access: list):
+    """Render apps for the public home page."""
+    apps = org_config.get("apps", {})
+
+    for app_id, app_config in apps.items():
+        # Only show public_visible apps
+        if not app_config.get("public_visible", False):
+            continue
+
+        app_status = org_status.get("apps", {}).get(app_id, {})
+
+        with st.expander(f"**{app_config.get('name', app_id)}**", expanded=True):
+            render_app_details(
+                org_id,
+                app_id,
+                app_config,
+                app_status,
+                user_role,
+                user_app_access
+            )
+
+def render_app_details(org_id: str, app_id: str, app_config: dict, app_status: dict, user_role: str, user_app_access: list):
+    """Render detailed app information with access control."""
+    col1, col2 = st.columns([2, 1])
+
+    # Get status first for both columns
+    is_running = app_status.get("running", False)
+    health_status = app_status.get("health_status", "unknown")
+
+    with col1:
+        st.markdown(f"**{app_config.get('description', '')}**")
+
+        # Dataframe preview - placeholder for now
+        # In production, this would fetch actual data from each app's API
+        import pandas as pd
+        import numpy as np
+
+        # Create mock preview data based on app type
+        app_name = app_config.get('name', '')
+        if 'Daily Engine' in app_name:
+            preview_df = pd.DataFrame({
+                'Task': ['Review code', 'Write tests', 'Deploy app', 'Team meeting', 'Documentation'],
+                'Status': ['In Progress', 'Pending', 'Completed', 'Scheduled', 'Pending'],
+                'Priority': ['High', 'Medium', 'High', 'Low', 'Medium']
+            })
+        elif 'Social' in app_name:
+            preview_df = pd.DataFrame({
+                'Post': ['AI trends 2025', 'Product launch', 'Team update', 'New feature', 'User feedback'],
+                'Engagement': [152, 89, 234, 67, 145],
+                'Reach': [1203, 567, 2341, 456, 1123]
+            })
+        elif 'Collectiverse' in app_name:
+            preview_df = pd.DataFrame({
+                'Item': ['Stamp #1234', 'Coin #567', 'Card #890', 'Figure #345', 'Book #678'],
+                'Value': ['$450', '$1,200', '$89', '$234', '$567'],
+                'Condition': ['Mint', 'Good', 'Fair', 'Excellent', 'Good']
+            })
+        elif 'altDOGE' in app_name:
+            preview_df = pd.DataFrame({
+                'Document': ['CFR Title 12', 'CFR Title 17', 'CFR Title 31', 'SEC Rule 10b', 'FINRA Notice'],
+                'Relevance': ['95%', '87%', '92%', '78%', '89%'],
+                'Date': ['2025-01-15', '2025-01-10', '2025-01-08', '2024-12-20', '2025-01-05']
+            })
+        elif 'Codexes' in app_name:
+            preview_df = pd.DataFrame({
+                'Book Title': ['Python Guide', 'Data Science 101', 'Web Dev Mastery', 'AI Cookbook', 'Cloud Computing'],
+                'Status': ['Published', 'In Review', 'Draft', 'Published', 'In Progress'],
+                'Sales': [234, 0, 0, 567, 0]
+            })
+        elif 'Trillions' in app_name:
+            preview_df = pd.DataFrame({
+                'Person': ['Person #12345', 'Person #67890', 'Person #23456', 'Person #78901', 'Person #34567'],
+                'Era': ['1200-1250 CE', '500-550 BCE', '1800-1850 CE', '1000-1050 CE', '1600-1650 CE'],
+                'Region': ['Europe', 'Asia', 'Americas', 'Africa', 'Europe']
+            })
+        else:
+            preview_df = pd.DataFrame({
+                'Feature': ['Feature A', 'Feature B', 'Feature C', 'Feature D', 'Feature E'],
+                'Value': [100, 200, 150, 300, 250],
+                'Status': ['Active', 'Active', 'Beta', 'Active', 'Beta']
+            })
+
+        # Display dataframe with click handler
+        st.caption("📊 Preview (Click to launch full app)")
+        st.dataframe(preview_df, use_container_width=True, hide_index=True)
+
+    with col2:
+        # Status indicator moved to right column
+        if is_running and health_status == "healthy":
+            st.success("✅ Service Online")
+        elif is_running:
+            st.warning("⚠️ Service Starting")
+        else:
+            st.error("❌ Service Offline")
+
+        st.markdown("---")
+        # Access control
+        minimum_role = app_config.get("minimum_role", "subscriber")
+        subscription_tier = app_config.get("subscription_tier", "free")
+
+        # Check if user has access
+        has_access = False
+
+        # Check role hierarchy
+        role_levels = {"anonymous": 0, "registered": 1, "subscriber": 2, "admin": 3, "superadmin": 4}
+        user_level = role_levels.get(user_role, 0)
+        required_level = role_levels.get(minimum_role, 0)
+
+        if user_level >= required_level:
+            # Also check subscription for paid tiers
+            if subscription_tier == "free":
+                has_access = True
+            elif '*' in user_app_access:  # All-access pass
+                has_access = True
+            elif f"{org_id}.{app_id}" in user_app_access:
+                has_access = True
+
+        # Display tier badge
+        tier_colors = {"free": "🆓", "basic": "🥉", "premium": "🥇"}
+        tier_emoji = tier_colors.get(subscription_tier, "🎫")
+        st.info(f"{tier_emoji} {subscription_tier.title()} Tier")
+
+        # Access button or subscription prompt
+        if has_access and is_running:
+            port = app_config.get("port")
+            if st.button(f"🚀 Launch App", key=f"launch_{org_id}_{app_id}", type="primary"):
+                # Pass session_id in URL for SSO
+                session_id = st.session_state.get('shared_session_id', '')
+                url = f"http://localhost:{port}"
+                if session_id:
+                    url += f"?session_id={session_id}"
+                st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />',
+                           unsafe_allow_html=True)
+                st.success(f"Opening {app_config.get('name')}...")
+        elif has_access and not is_running:
+            st.warning("Service starting...")
+        else:
+            st.button(f"🔒 Subscribe to Access", key=f"sub_{org_id}_{app_id}", disabled=True)
+            st.caption(f"Requires: {minimum_role.title()} + {subscription_tier.title()}")
+
+def render_management_page():
+    """Render the management interface for admins."""
+    st.title("🔧 Application Management")
+    st.markdown("*Administrator Control Panel*")
+
+    # Management actions
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        if st.button("▶️ Start All", type="primary"):
+            start_all_apps()
+
+    with col2:
+        if st.button("⏹️ Stop All"):
+            stop_all_apps()
+
+    with col3:
+        if st.button("🔄 Restart All"):
+            restart_all_apps()
+
+    with col4:
+        if st.button("🔍 Refresh Status"):
+            st.rerun()
+
+    st.markdown("---")
+
+    # Detailed application management
+    config = load_config()
+    status = get_app_status()
+
+    if not config or not status:
+        return
+
+    st.subheader("Application Control")
+
+    # Health check interval control
+    global_settings = config.get("global_settings", {})
+    current_interval = global_settings.get("health_check_interval", 120)
+
+    with st.expander("⚙️ Health Check Configuration"):
+        st.info(f"Current health check interval: {current_interval} seconds")
+        st.caption("To modify, edit apps_config.json")
+
+    # Display apps by organization
+    for org_id, org_data in status.get("organizations", {}).items():
+        org_name = org_data.get("name", org_id)
+
+        with st.expander(f"📁 {org_name}", expanded=True):
+            for app_id, app_data in org_data.get("apps", {}).items():
+                render_management_app_card(org_id, app_id, app_data)
+
+def render_management_app_card(org_id: str, app_id: str, app_data: dict):
+    """Render an app management card."""
+    col1, col2, col3, col4, col5 = st.columns([3, 2, 1, 1, 1])
+
+    with col1:
+        st.write(f"**{app_data.get('name', app_id)}**")
+        port = app_data.get('port')
+        st.caption(f"Port: {port}")
+
+    with col2:
+        # Status indicators
+        is_running = app_data.get("running", False)
+        health_status = app_data.get("health_status", "unknown")
+
+        if is_running and health_status == "healthy":
+            st.success("🟢 Healthy")
+        elif is_running:
+            st.warning("🟡 Running")
+        else:
+            st.error("🔴 Stopped")
+
+    with col3:
+        # Last restart info
+        last_restart = app_data.get("last_restart_time")
+        if last_restart:
+            restart_dt = datetime.fromisoformat(last_restart)
+            st.caption(f"Restarted: {restart_dt.strftime('%H:%M:%S')}")
+        else:
+            st.caption("No restarts")
+
+    with col4:
+        if st.button("🔄", key=f"restart_{org_id}_{app_id}", help="Restart"):
+            restart_app(org_id, app_id)
+            st.rerun()
+
+    with col5:
+        if is_running:
+            if st.button("⏹️", key=f"stop_mgmt_{org_id}_{app_id}", help="Stop"):
+                stop_app(org_id, app_id)
+                st.rerun()
+        else:
+            if st.button("▶️", key=f"start_mgmt_{org_id}_{app_id}", help="Start"):
+                start_app(org_id, app_id)
+                st.rerun()
+
+def render_subscriptions_page(subscription_manager: SubscriptionManager, auth_manager: AuthManager):
+    """Render the subscriptions page."""
+    st.title("💳 Subscription Plans")
+
+    st.markdown("""
+    ### Choose Your Access Level
+
+    Subscribe to get unlimited access to premium applications.
+    """)
+
+    # Get user info
+    user = auth_manager.get_current_user() if auth_manager else None
+    user_email = user.get("email") if user else None
+
+    # Display current subscriptions
+    if user_email and subscription_manager:
+        try:
+            user_subs = subscription_manager.get_user_subscriptions(user_email)
+
+            if user_subs:
+                st.success(f"✅ You have {len(user_subs)} active subscription(s)")
+
+                with st.expander("View My Subscriptions"):
+                    for sub in user_subs:
+                        col1, col2, col3 = st.columns([2, 2, 1])
+
+                        with col1:
+                            st.write(f"**{sub['type'].replace('_', ' ').title()}**")
+                            if sub.get('app_id'):
+                                st.caption(f"App: {sub['app_id']}")
+
+                        with col2:
+                            end_date = datetime.fromisoformat(sub['current_period_end'])
+                            st.caption(f"Renews: {end_date.strftime('%Y-%m-%d')}")
+
+                        with col3:
+                            st.write(f"*{sub['status']}*")
+        except Exception as e:
+            logger.error(f"Error loading subscriptions: {e}")
+            st.warning("Unable to load subscription details")
+
+    st.markdown("---")
+
+    # Pricing tiers
+    st.subheader("📋 Available Plans")
+
+    if subscription_manager:
+        tiers = subscription_manager.list_all_tiers()
+
+        # Create columns for pricing cards
+        cols = st.columns(4)
+
+        for idx, (tier_name, tier_info) in enumerate(tiers.items()):
+            if tier_name == "free":
+                continue  # Skip free tier
+
+            with cols[idx - 1]:
+                render_pricing_card(tier_name, tier_info, user_email, subscription_manager)
+
+def render_pricing_card(tier_name: str, tier_info: dict, user_email: str, subscription_manager: SubscriptionManager):
+    """Render a pricing tier card."""
+
+    # Special styling for all-access
+    if tier_name == "all_access":
+        st.markdown("### 🌟 BEST VALUE")
+
+    st.markdown(f"### {tier_info['name']}")
+    st.markdown(f"## ${tier_info['price']:.0f}/mo")
+
+    st.markdown(tier_info['description'])
+
+    if tier_info.get('discount_percentage'):
+        st.success(f"💰 Save {tier_info['discount_percentage']}%!")
+
+    st.markdown("---")
+
+    # Subscribe button
+    price_id = tier_info.get('stripe_price_id')
+
+    if price_id and user_email:
+        if st.button(f"Subscribe to {tier_info['name']}", key=f"sub_{tier_name}", type="primary"):
+            try:
+                checkout_url = subscription_manager.create_checkout_session(
+                    user_email=user_email,
+                    price_id=price_id,
+                    app_id=None if tier_name == "all_access" else tier_name
+                )
+                st.markdown(f'<meta http-equiv="refresh" content="0; url={checkout_url}" />',
+                           unsafe_allow_html=True)
+                st.success("Redirecting to checkout...")
+            except Exception as e:
+                st.error(f"Error creating checkout: {e}")
+    elif not user_email:
+        st.info("Login to subscribe")
+    else:
+        st.caption("Coming soon")
+
+def render_monitoring_page():
+    """Render the monitoring interface."""
+    st.title("📊 Application Monitoring")
+
+    # Auto-refresh option
+    auto_refresh = st.checkbox("Auto-refresh (30s)")
+
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        if st.button("🔄 Refresh Now"):
+            st.rerun()
+
+    status = get_app_status()
+    if not status:
+        return
+
+    # Last updated
+    st.info(f"Last updated: {status.get('timestamp', 'Unknown')}")
+
+    st.markdown("---")
+
+    # Health status overview
+    st.subheader("Health Status Overview")
+
+    for org_id, org_data in status.get("organizations", {}).items():
+        with st.expander(f"{org_data.get('name', org_id)} - Applications", expanded=True):
+            for app_id, app_data in org_data.get("apps", {}).items():
+                col1, col2, col3, col4 = st.columns(4)
+
+                with col1:
+                    st.write(f"**{app_data.get('name', app_id)}**")
+                with col2:
+                    status_emoji = "🟢" if app_data.get("running") else "🔴"
+                    st.write(f"{status_emoji} {app_data.get('health_status', 'unknown')}")
+                with col3:
+                    st.write(f"Port: {app_data.get('port')}")
+                with col4:
+                    last_check = app_data.get("last_health_check")
+                    if last_check:
+                        check_dt = datetime.fromisoformat(last_check)
+                        st.write(f"Checked: {check_dt.strftime('%H:%M:%S')}")
+                    else:
+                        st.write("No check")
+
+def render_settings_page():
+    """Render the settings interface."""
+    st.title("⚙️ Settings")
+
+    config = load_config()
+    if not config:
+        return
+
+    # Global settings
+    st.subheader("Global Configuration")
+
+    global_settings = config.get("global_settings", {})
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write("**Current Settings:**")
+        st.json(global_settings)
+
+    with col2:
+        st.write("**Configuration File:**")
+        config_path = Path(__file__).parent / "apps_config.json"
+        st.code(str(config_path))
+
+        if st.button("📝 Edit Configuration"):
+            st.info("Open apps_config.json in your text editor to modify settings")
+
+    st.markdown("---")
+
+    st.subheader("System Information")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write("**Platform:** macOS")
+        st.write("**Master Port:** 8500")
+        st.write("**Reverse Proxy:** Apache")
+
+    with col2:
+        st.write("**Process Manager:** Active")
+        st.write("**Health Checks:** Enabled")
+        st.write(f"**Health Check Interval:** {global_settings.get('health_check_interval', 120)}s")
+
+# Process management functions
+def start_app(org_id: str, app_id: str):
+    """Start a specific application."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+
+        process_key = f"{org_id}.{app_id}"
+        success = manager.start_process(process_key)
+
+        if success:
+            st.success(f"Started {app_id}")
+        else:
+            st.error(f"Failed to start {app_id}")
+    except Exception as e:
+        st.error(f"Error starting {app_id}: {e}")
+
+def stop_app(org_id: str, app_id: str):
+    """Stop a specific application."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+
+        process_key = f"{org_id}.{app_id}"
+        success = manager.stop_process(process_key)
+
+        if success:
+            st.success(f"Stopped {app_id}")
+        else:
+            st.error(f"Failed to stop {app_id}")
+    except Exception as e:
+        st.error(f"Error stopping {app_id}: {e}")
+
+def restart_app(org_id: str, app_id: str):
+    """Restart a specific application."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+
+        process_key = f"{org_id}.{app_id}"
+        success = manager.restart_process(process_key)
+
+        if success:
+            st.success(f"Restarted {app_id}")
+        else:
+            st.error(f"Failed to restart {app_id}")
+    except Exception as e:
+        st.error(f"Error restarting {app_id}: {e}")
+
+def start_all_apps():
+    """Start all applications."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+        manager.start_all()
+        st.success("Starting all applications...")
+    except Exception as e:
+        st.error(f"Error starting applications: {e}")
+
+def stop_all_apps():
+    """Stop all applications."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+        manager.stop_all()
+        st.success("Stopped all applications")
+    except Exception as e:
+        st.error(f"Error stopping applications: {e}")
+
+def restart_all_apps():
+    """Restart all applications."""
+    try:
+        manager = ProcessManager()
+        manager.initialize_processes()
+        manager.stop_all()
+        manager.start_all()
+        st.success("Restarting all applications...")
+    except Exception as e:
+        st.error(f"Error restarting applications: {e}")
+
+def main():
+    """Main application entry point."""
+    # Initialize managers
+    auth_manager, subscription_manager = get_managers()
+
+    # Auto-start apps on first launch
+    if "apps_started" not in st.session_state:
+        st.session_state["apps_started"] = True
+        try:
+            manager = ProcessManager()
+            manager.initialize_processes()
+            manager.start_all()
+            logger.info("Auto-started all applications on first launch")
+        except Exception as e:
+            logger.error(f"Error auto-starting applications: {e}")
+
+    # Render login widget first (before checking role)
+    if auth_manager:
+        auth_manager.render_login_widget(location="sidebar")
+
+    # Get user role after login widget is rendered
+    user_role = auth_manager.get_user_role() if auth_manager else "anonymous"
+
+    # Render sidebar and get selected page
+    page = render_sidebar(auth_manager, user_role)
+
+    # Override page if set in session state
+    if "selected_page" in st.session_state:
+        page = st.session_state["selected_page"]
+        del st.session_state["selected_page"]
+
+    # Route to appropriate page based on role and selection
+    if page == "🏠 Home":
+        render_home_page(auth_manager, subscription_manager, user_role)
+
+    elif page == "🔧 Management":
+        if user_role in ["admin", "superadmin"]:
+            render_management_page()
+        else:
+            st.error("Access denied. Administrator privileges required.")
+
+    elif page == "📊 Monitoring":
+        if user_role in ["admin", "superadmin"]:
+            render_monitoring_page()
+        else:
+            st.error("Access denied. Administrator privileges required.")
+
+    elif page == "💳 Subscriptions":
+        render_subscriptions_page(subscription_manager, auth_manager)
+
+    elif page == "⚙️ Settings":
+        if user_role in ["admin", "superadmin"]:
+            render_settings_page()
+        else:
+            st.error("Access denied. Administrator privileges required.")
+
+if __name__ == "__main__":
+    main()

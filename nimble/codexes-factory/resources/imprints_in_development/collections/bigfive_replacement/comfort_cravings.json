@@ -1,0 +1,28 @@
+{
+  "imprint": "Comfort Cravings",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@comfortcravings.com",
+  "branding": {
+    "tagline": "Where Comfort Meets Cuisine",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.comfortcravings.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Comfort foods, family favourites, nostalgic recipes",
+    "target_audience": "Everyday home cooks, family meal planners",
+    "competitive_advantage": "Focus on universally loved comfort foods",
+    "example_titles": "Hearty Home Cooking, Nostalgia on a Plate"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

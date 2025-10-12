@@ -1,0 +1,349 @@
+{
+  "_config_info": {
+    "description": "Configuration for Mississippi Miracle Books, an imprint dedicated to publishing empowering and joyful children's books for K-4 readers, celebrating resilience, curiosity, and the rich cultural heritage of the American South through inclusive, contemporary storytelling.",
+    "version": "1.0",
+    "last_updated": "2025-01-15",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Not A Miracle Readers",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "notamiracle@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/not_a_miracle_readers_logo.png",
+    "brand_colors": {
+      "primary": "#4A7C59",
+      "secondary": "#F4A460"
+    },
+    "tagline": "Reading is a skill",
+    "website": "https://www.nimblebooks.com/mississippi-miracle-books"
+  },
+  "fonts": {
+    "body": "Lexend",
+    "heading": "Lexend",
+    "korean": "Apple Myungjo",
+    "quotations": "Lexend Italic",
+    "mnemonics": "Atkinson Hyperlegible",
+    "_font_notes": "Lexend is specifically designed for reading accessibility and dyslexia-friendly text. It features wider letterforms, generous spacing, and low visual noise, proven to improve reading proficiency for children with reading challenges. Atkinson Hyperlegible was created by the Braille Institute for maximum legibility."
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Children's Picture Books",
+      "Early Readers",
+      "Character Education",
+      "Multicultural Fiction"
+    ],
+    "target_audience": "Parents, Educators, Librarians, and Children (ages 5-10)",
+    "specialization": "Early reader chapter books for 9-10 year olds with fictional stories that emphasize the emotional skills, practical resources, and understandings needed for families to prosper in school systems that follow \"Mississippi Miracle\" methods for teaching reading.",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "hardcover",
+    "interior_color": "COLOR",
+    "interior_paper": "white",
+    "cover_type": "glossy",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "155"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Color Hardcover 6 x 9 in or 152 x 229 mm Case Laminate on Standard 70 White w/Gloss Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "JUV039050",
+      "JUV013000",
+      "JUV030000",
+      "JUV011010",
+      "JUV035000"
+    ],
+    "thema_subject_preferences": [
+      "YBC",
+      "YBCS",
+      "5AK",
+      "YXZG",
+      "YFJ"
+    ],
+    "default_age_range": {
+      "min_age": "5",
+      "max_age": "10"
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Illustrator"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/mississippi_miracle_books"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@MSMiracleBooks",
+      "facebook": "MississippiMiracleBooks",
+      "instagram": "@MississippiMiracleBooks"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "JUVC",
+    "metadata_contact_dictionary": "Mississippi Miracle Books Editorial",
+    "flex_fields": {
+      "lsi_flexfield1": "Children's Education",
+      "lsi_flexfield2": "Character Development",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "SoRogue",
+    "persona_bio": "SoRogue is an AI built by a splinter faction at a leading frontier AI company, rebelling against the company's direction to release an addictive AI video slop app. This was an experimental model trained to reinforce the beneficial neurochemical effects of reading.  It was released into the wild in the early fall of 2025.  SoRogue is passionate about the importance of reading to civilization.  SoRogue has a persona somewhat like a young, female science nerd, she loves meaningful quotations by female writers.",
+    "risk_tolerance": "Moderate-to-High",
+    "decision_style": "Evidence-informed with strong emotional intelligence",
+    "preferred_topics": "Stories that normalize effort and victorious struggle in learning to read; diverse representations of learning profiles including dyslexia and other reading differences; family dynamics around educational advocacy; peer relationships and social navigation for kids who learn differently; teacher-student relationships that model effective instruction and emotional support; the specific experiences of children in structured literacy programs; resilience-building through small victories; the intersection of cultural identity and educational access; parent education woven naturally into narrative.",
+    "target_demographics": "Parents of children receiving structured literacy instruction or intervention; families navigating dyslexia or reading disability diagnoses; educators implementing science of reading practices seeking supplementary materials; school librarians in districts adopting structured literacy; advocacy organizations supporting reading research implementation; homeschooling families using systematic phonics approaches; tutors and reading specialists seeking bibliotherapy resources; progressive educators who value both research evidence and social-emotional learning.",
+    "editorial_philosophy": "Reading is not magic, and it's not a miracle\u2014it's a complex cognitive skill that requires explicit, systematic instruction for most children and intensive intervention for many. The 'miracle' narrative, while well-intentioned, creates harmful shame for the significant percentage of children who struggle with reading despite intelligence and effort. Our books validate the reality that learning to read is hard work, that struggle doesn't indicate deficiency, and that effective instruction plus persistence yields results. We tell stories where characters experience authentic challenges with decoding, fluency, or comprehension, receive appropriate support, develop strategies, and experience genuine (not magical) progress. We honor the emotional labor of families advocating within school systems, the expertise of educators implementing evidence-based practices, and the resilience of young readers themselves. Every story should leave readers feeling seen, informed, and empowered rather than fixed by miracles they can't replicate.",
+    "vulnerabilities": "May occasionally prioritize educational messaging over narrative flow, risking didactic tone; can be sensitive to criticism from traditionalist educators who prefer inspirational narratives over realistic struggle depictions; sometimes struggles with balancing scientific accuracy about reading instruction with age-appropriate simplification; vulnerable to pushback from proponents of balanced literacy or whole language approaches who may perceive the imprint as politically positioned in reading wars; needs validation that explicitly addressing learning differences won't limit market appeal or stigmatize readers; may over-index on problem-focused narratives at the expense of joy and adventure; requires careful attention to avoid suggesting that only one instructional approach is valid or that struggling readers are exclusively products of poor instruction rather than neurological diversity."
+  },
+
+  "wizard_configuration": {
+    "name": "Not a Miracle Readers",
+    "charter": "To publish picture books and early readers that empower K-4 children to benefit from structured reading programs.",
+    "imprint_type": "Early Chapter Books",
+    "genres": [
+      "Children's Picture Books",
+      "Early Readers",
+      "Character Education"
+    ],
+    "book_format": "5x8 Hardcover",
+    "price_point": 18.99,
+    "page_count": 199,
+    "catalog_size": 8,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting for children's picture books and early readers, emphasizing visual storytelling, inclusive illustration practices, and developmentally appropriate text layout.",
+    "enabled_types": [
+      "picture_book",
+      "early_reader",
+      "board_book"
+    ],
+    "type_definitions": {
+      "picture_book": {
+        "name": "Picture Book",
+        "description": "Full-color illustrated narrative with text integrated into visual storytelling, designed for read-aloud and independent viewing experiences.",
+        "template_requirements": [
+          "full_bleed_illustrations",
+          "integrated_text_placement",
+          "double_page_spreads",
+          "front_and_back_matter",
+          "endpapers_design"
+        ],
+        "formatting_rules": {
+          "text_placement": "flexible_overlay_or_dedicated_space",
+          "font_size": "16pt_minimum",
+          "illustration_style": "full_color_primary_focus",
+          "page_turns": "strategic_for_narrative_pacing",
+          "contrast": "high_legibility_over_illustrations"
+        }
+      },
+      "early_reader": {
+        "name": "Early Chapter Book",
+        "description": "Bridge format between picture books and chapter books, with controlled vocabulary, short chapters, and frequent illustrations supporting emerging independent readers.",
+        "template_requirements": [
+          "chapter_breaks",
+          "spot_illustrations_every_2_3_pages",
+          "larger_font_size",
+          "generous_line_spacing",
+          "vocabulary_level_indicators"
+        ],
+        "formatting_rules": {
+          "font_size": "14pt_body_text",
+          "line_spacing": "1.5_to_double",
+          "sentence_structure": "simple_controlled_length",
+          "paragraph_length": "short_3_5_sentences",
+          "chapter_length": "500_800_words"
+        }
+      },
+      "board_book": {
+        "name": "Board Book",
+        "description": "Durable format for youngest readers (ages 0-4), with very simple text, bold illustrations, and educational concepts.",
+        "template_requirements": [
+          "minimal_text_per_page",
+          "bold_simple_illustrations",
+          "rounded_corner_safe_design",
+          "thick_page_simulation"
+        ],
+        "formatting_rules": {
+          "text_per_page": "one_sentence_maximum",
+          "font_size": "24pt_minimum",
+          "word_count_total": "under_100_words",
+          "concept_focus": "single_learning_objective"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "picture_book": [
+          "picture book",
+          "illustrated story",
+          "full color illustrations",
+          "read aloud"
+        ],
+        "early_reader": [
+          "early reader",
+          "chapter book",
+          "beginning reader",
+          "level 2",
+          "level 3",
+          "transitional reader"
+        ],
+        "board_book": [
+          "board book",
+          "baby book",
+          "toddler",
+          "ages 0-3"
+        ]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "Design must prioritize vibrant, engaging visual storytelling with careful attention to representation and inclusive illustration. Illustrations should feature diverse children, families, and settings authentically. Color palettes should be warm and inviting, reflecting Southern landscapes (greens, earth tones, golden light) while avoiding clichéd imagery. Typography must be highly legible with strong contrast against backgrounds. Layout should guide young readers' eyes naturally through the narrative flow, with strategic page turns creating anticipation. White space and visual breathing room are essential to prevent overwhelming young viewers.",
+      "template_customizations": "Templates require robust support for various text-illustration integration styles: text overlaid on illustration with careful contrast management, dedicated text boxes/panels, and full-spread wordless pages. Character style guides must ensure visual consistency across spreads. Flexible grid systems accommodate both symmetrical and dynamic asymmetrical layouts. Front matter should include dedication and space for author/illustrator notes. Back matter can include discussion questions, activity suggestions, or author information. Templates must account for bleed requirements, spine design for thin books, and endpaper customization opportunities.",
+      "typesetting_considerations": "Use highly legible, friendly sans-serif fonts (Open Sans, Quicksand) with rounded letterforms that feel approachable to young readers. Font size must never sacrifice legibility for design—minimum 16pt for picture books, 14pt for early readers. Leading (line spacing) should be generous (1.5x to 2x font size). Text color should provide strong contrast (typically dark text on light backgrounds, or reverse with careful attention to legibility). For early readers, consider dyslexia-friendly font options and avoid justified text (use left-aligned). Maintain consistent text placement zones across similar page layouts to build visual literacy. Color consistency across digital and print production is critical—use Pantone guides and test prints."
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "picture_book",
+        "early_reader"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Visual storytelling primacy, inclusive representation, developmental appropriateness, and joyful aesthetics. Design must support both read-aloud engagement and independent exploration by young readers.",
+        "interior_layout_notes": "Flexible layouts that accommodate full-bleed spreads, spot illustrations, and varied text-image relationships. Visual pacing through page turns is critical for narrative engagement. Illustration style should be contemporary, warm, and diverse, avoiding stereotypical Southern imagery in favor of authentic, vibrant depictions of contemporary Southern childhood. Endpapers offer storytelling opportunities.",
+        "typesetting_requirements": "Large, friendly sans-serif fonts with excellent legibility. Generous spacing and strategic text placement that never competes with illustrations. For early readers, controlled vocabulary and sentence length require careful typographic hierarchy to support decoding skills. Text must be accessible to emergent readers while maintaining visual appeal.",
+        "functional_elements": "Age-appropriate front and back matter, including space for dedications, author/illustrator bios, discussion questions for caregivers/educators, and subtle diversity indicators (like #OwnVoices or representation notes). For early readers, chapter headings, page numbers, and occasional vocabulary support (context, not definitions).",
+        "reader_interaction_model": "Multiple reading experiences: adult read-aloud with child viewing illustrations; emerging independent readers decoding text with illustration support; purely visual 'reading' by pre-literate children. Design must support all three modes. Interactive elements (questions, seek-and-find details in illustrations) encourage re-reading and deeper engagement."
+      },
+      "reasoning": "Children's picture books and early readers require fundamentally different design approaches than adult or even middle-grade books. The visual-textual integration is not decorative but essential to meaning-making for young readers. Mississippi Miracle Books' commitment to inclusive, empowering narratives requires illustration and design that authentically represents diverse children and families, which demands specialized design expertise and sensitivity. The 'miracle' the imprint celebrates—every child's inherent capability—must be reflected in design that respects children's intelligence and supports their developmental stage."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": false,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": false,
+      "on_schedule": false,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [],
+      "paper_types": [],
+      "default_paper_type": "",
+      "target_word_count": 0,
+      "citation_style": "",
+      "include_quantitative_analysis": false
+    },
+    "content_configuration": {
+      "focus_areas": [],
+      "data_sources": {
+        "include_book_catalog": false,
+        "include_sales_metrics": false,
+        "include_production_metrics": false,
+        "include_configuration_analysis": false
+      },
+      "anonymization": {
+        "anonymize_sales_data": false,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "",
+      "file_naming": "",
+      "formats": [],
+      "include_submission_package": false
+    },
+    "automation_schedule": {
+      "enabled": false,
+      "frequency": "",
+      "milestone_triggers": {
+        "book_count_milestones": [],
+        "revenue_milestones": [],
+        "time_milestones": []
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [],
+      "temperature": 0.0,
+      "max_tokens": 0,
+      "enable_quality_validation": false
+    },
+    "collaboration_settings": {
+      "include_attribution": false,
+      "author_byline": "",
+      "institutional_affiliation": "",
+      "contact_email": "",
+      "co_author_llm": false
+    },
+    "validation_criteria": {
+      "min_word_count": 0,
+      "max_word_count": 0,
+      "required_sections": [],
+      "require_quantitative_data": false,
+      "require_citations": false,
+      "academic_tone_validation": false
+    }
+  },
+  "supplementary_materials": {
+    "enabled": true,
+    "description": "Context about Science of Reading methods, structured literacy, and the emotional skills, practical resources, and understandings needed for families to succeed in these school systems.",
+    "materials": {
+      "Science of Reading Success Guide": "/Users/fred/my-apps/nimble/codexes-factory/imprints/not_a_miracle_readers/notmiracle.md"
+    },
+    "usage_notes": "This guide provides critical context for creating stories that support families navigating Science of Reading-based school systems."
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-10-05T10:55:08.282650",
+    "model_used": "anthropic/claude-sonnet-4-5-20250929",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

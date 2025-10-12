@@ -1,0 +1,28 @@
+{
+  "imprint": "Warrior Words",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@warriorwords.com",
+  "branding": {
+    "tagline": "Brave hearts, brave tales",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.warriorwords.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies and memoirs of military personnel",
+    "target_audience": "Readers interested in military history and stories of valor",
+    "competitive_advantage": "Deep insights into the world of warfare and military strategy",
+    "example_titles": "Memoirs of decorated military officers, war heroes"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

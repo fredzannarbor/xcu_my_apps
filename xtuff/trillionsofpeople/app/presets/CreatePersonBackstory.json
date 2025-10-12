@@ -1,0 +1,27 @@
+[
+    {
+        "preset_name" : "Create Backstory for Synthetic People ",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_description": "Creates backstory for a synthetic person.",
+        "preset_instructions": "Run silently from command line.",
+        "preset_placeholder": "Enter brief description of your project here.",
+        "pre_user_input": "Create a backstory for the person described below.\n \nDescription: ",
+        "prompt" : "",
+        "post_user_input": "",
+        "engine": "curie-instruct-beta",
+        "temperature": 0.7,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0.9,
+        "pp": 0.3,
+        "stop_sequence": "",
+        "echo_on": "False",
+        "completion_heading": "", 
+        "user":"testing",
+        "organization": "org-evK17V8xnQ6bhmsr8Qv2N7PR"
+    }
+]
+
+
+

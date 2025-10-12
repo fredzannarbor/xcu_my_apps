@@ -1,0 +1,28 @@
+{
+  "imprint": "TrendShift Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@trendshiftpress.com",
+  "branding": {
+    "tagline": "Shaping the Influencer Sphere",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.trendshiftpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Influencer marketing, brand strategy, digital advertising",
+    "target_audience": "Influencers, digital marketers, brand strategists",
+    "competitive_advantage": "First-hand insights from influencers and marketing experts.",
+    "example_titles": "Books by top influencers, digital marketing strategies"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

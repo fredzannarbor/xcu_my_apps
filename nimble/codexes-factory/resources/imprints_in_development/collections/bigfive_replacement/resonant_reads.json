@@ -1,0 +1,28 @@
+{
+  "imprint": "Resonant Reads",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@resonantreads.com",
+  "branding": {
+    "tagline": "Listen to the heart, experience the romance",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.resonantreads.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Romantic novels with integrated podcasts",
+    "target_audience": "Romance novel enthusiasts",
+    "competitive_advantage": "Enhanced emotional engagement through integrative audio content",
+    "example_titles": "Nicholas Sparks, Nora Roberts"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

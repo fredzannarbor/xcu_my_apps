@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "description": "Logging configuration for Codexes Factory",
+  "settings": {
+    "litellm_filtering": {
+      "enabled": true,
+      "debug_mode_override": false,
+      "description": "Controls whether LiteLLM verbose messages are filtered out"
+    },
+    "statistics_reporting": {
+      "enabled": true,
+      "detail_level": "standard",
+      "include_model_breakdown": true,
+      "include_prompt_breakdown": true,
+      "include_cost_analysis": true,
+      "description": "Controls token usage and cost statistics reporting"
+    },
+    "log_levels": {
+      "application": "INFO",
+      "litellm": "WARNING",
+      "openai": "WARNING",
+      "httpx": "WARNING",
+      "description": "Log levels for different components"
+    },
+    "output_formats": {
+      "console_format": "standard",
+      "file_format": "detailed",
+      "timestamp_format": "%Y-%m-%d %H:%M:%S",
+      "description": "Formatting options for log output"
+    },
+    "handlers": {
+      "console_enabled": true,
+      "file_enabled": true,
+      "error_file_enabled": true,
+      "console_level": "INFO",
+      "file_level": "DEBUG",
+      "error_file_level": "ERROR",
+      "description": "Configuration for log handlers"
+    },
+    "files": {
+      "application_log": "logs/application.log",
+      "error_log": "logs/errors.log",
+      "statistics_log": "logs/statistics.log",
+      "encoding": "utf-8",
+      "description": "Log file paths and settings"
+    },
+    "environment_overrides": {
+      "development": {
+        "log_levels": {
+          "application": "DEBUG",
+          "litellm": "DEBUG"
+        },
+        "handlers": {
+          "console_level": "DEBUG"
+        },
+        "litellm_filtering": {
+          "debug_mode_override": true
+        }
+      },
+      "production": {
+        "log_levels": {
+          "application": "INFO",
+          "litellm": "ERROR"
+        },
+        "handlers": {
+          "console_level": "WARNING"
+        },
+        "statistics_reporting": {
+          "detail_level": "summary"
+        }
+      },
+      "testing": {
+        "log_levels": {
+          "application": "ERROR"
+        },
+        "handlers": {
+          "console_level": "ERROR",
+          "file_enabled": false
+        },
+        "statistics_reporting": {
+          "enabled": false
+        }
+      },
+      "description": "Environment-specific configuration overrides"
+    }
+  },
+  "detail_levels": {
+    "minimal": {
+      "description": "Only basic statistics",
+      "include_model_breakdown": false,
+      "include_prompt_breakdown": false,
+      "include_cost_analysis": false
+    },
+    "summary": {
+      "description": "Summary statistics with model breakdown",
+      "include_model_breakdown": true,
+      "include_prompt_breakdown": false,
+      "include_cost_analysis": true
+    },
+    "standard": {
+      "description": "Standard reporting with all breakdowns",
+      "include_model_breakdown": true,
+      "include_prompt_breakdown": true,
+      "include_cost_analysis": true
+    },
+    "detailed": {
+      "description": "Detailed reporting with timing and performance metrics",
+      "include_model_breakdown": true,
+      "include_prompt_breakdown": true,
+      "include_cost_analysis": true,
+      "include_timing_analysis": true,
+      "include_performance_metrics": true
+    }
+  },
+  "format_templates": {
+    "simple": "%(levelname)s - %(message)s",
+    "standard": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "detailed": "%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s"
+  }
+}

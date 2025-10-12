@@ -1,0 +1,28 @@
+{
+  "imprint": "Thriving Thymes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@thrivingthymes.com",
+  "branding": {
+    "tagline": "Thrive with Nature's Bounty",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.thrivingthymes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Plant-based diets, Organic foods, Nutrition",
+    "target_audience": "Health-conscious consumers looking for dietary advice",
+    "competitive_advantage": "Emphasis on using food as medicine and the power of whole food diets",
+    "example_titles": "Vegan and vegetarian cookbooks, nutrition guides, books on growing organic food"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

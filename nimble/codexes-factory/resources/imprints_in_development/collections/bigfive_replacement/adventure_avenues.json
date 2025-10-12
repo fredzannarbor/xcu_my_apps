@@ -1,0 +1,28 @@
+{
+  "imprint": "Adventure Avenues",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@adventureavenues.com",
+  "branding": {
+    "tagline": "Your Adventure Begins Here",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.adventureavenues.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Adventure, travel and exploration series",
+    "target_audience": "Adventure seekers and travel enthusiasts",
+    "competitive_advantage": "Thrilling narratives with unique cultural insights",
+    "example_titles": "Indiana Jones series, Jules Verne's Extraordinary Voyages"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Fit Future Foundations",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@fitfuturefoundations.com",
+  "branding": {
+    "tagline": "Build Your Fit Future",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.fitfuturefoundations.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fitness, Nutrition, Youth health",
+    "target_audience": "Young adults and their parents seeking to establish healthy habits",
+    "competitive_advantage": "Targeting the important demographic of young adults and their health",
+    "example_titles": "Fitness guides for young adults, nutrition books, youth health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

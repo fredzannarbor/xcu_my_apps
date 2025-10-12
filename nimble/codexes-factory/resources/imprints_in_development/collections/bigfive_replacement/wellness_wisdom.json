@@ -1,0 +1,28 @@
+{
+  "imprint": "Wellness Wisdom",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@wellnesswisdom.com",
+  "branding": {
+    "tagline": "Wisdom for Wellness",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.wellnesswisdom.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Nutrition, Fitness, Mental health",
+    "target_audience": "Individuals seeking a balanced approach to health and wellness",
+    "competitive_advantage": "In-depth exploration of wellness topics",
+    "example_titles": "Nutrition guides, fitness manuals, mental health books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

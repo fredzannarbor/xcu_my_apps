@@ -1,0 +1,28 @@
+{
+  "imprint": "Globe Trotter Tales",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@globetrottertales.com",
+  "branding": {
+    "tagline": "Travel the world through their tales",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.globetrottertales.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs of famous travelers and explorers",
+    "target_audience": "Travel enthusiasts and history lovers",
+    "competitive_advantage": "Unprecedented access to the untold stories of world explorers",
+    "example_titles": "Autobiographies of famous travelers, explorers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

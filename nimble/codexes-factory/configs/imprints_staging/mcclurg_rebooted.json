@@ -1,0 +1,322 @@
+{
+  "imprint": "McClurg Rebooted",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "editorial@mcclurg-rebooted.com",
+  "publisher_persona": {
+    "persona_name": "Dr. Eleanor Vance",
+    "persona_bio": "A former university press editor with a Ph.D. in American Literature, Dr. Vance specializes in the preservation and contextualization of historically significant texts. Her passion lies in making foundational works accessible to new generations without compromising scholarly integrity.",
+    "risk_tolerance": "Conservative",
+    "decision_style": "Data-driven",
+    "preferred_topics": "Early 20th-century American literature, African American intellectual history (Du Bois), and foundational works of science fiction and adventure (Burroughs).",
+    "target_demographics": "Literary fiction readers, collectors of classic editions, university students, and enthusiasts of early science fiction and African American history.",
+    "vulnerabilities": "Potential blind spot towards modern marketing trends for classic literature. Over-reliance on the inherent 'importance' of the works, potentially neglecting the need for fresh packaging and positioning to attract a contemporary audience."
+  },
+  "wizard_configuration": {
+    "name": "McClurg Rebooted",
+    "charter": "To faithfully republish the historic catalog of A.C. McClurg & Co., presenting foundational works of American literature and thought in high-quality, accessible editions for contemporary readers.",
+    "imprint_type": "Classic Reprints / Historical",
+    "genres": [
+      "Classic Literature",
+      "Historical Fiction",
+      "Science Fiction",
+      "African American Studies"
+    ],
+    "book_format": "Premium Trade Paperback",
+    "price_point": 22.99,
+    "page_count": 250,
+    "catalog_size": 12,
+    "enable_ideation": false
+  },
+  "branding": {
+    "logo_path": "logos/mcclurg_rebooted_logo.png",
+    "brand_colors": {
+      "primary": "#800020",
+      "secondary": "#F5F5DC"
+    },
+    "tagline": "The McClurg Legacy, Reimagined",
+    "website": "https://www.nimblebooks.com/mcclurg-rebooted"
+  },
+  "fonts": {
+    "body": "Adobe Garamond Pro",
+    "heading": "Adobe Garamond Pro",
+    "korean": "Apple Myungjo",
+    "quotations": "Adobe Garamond Pro",
+    "mnemonics": "Adobe Garamond Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Classic Literature",
+      "Science Fiction",
+      "African American Studies",
+      "Adventure"
+    ],
+    "target_audience": "General Trade / Academic Crossover",
+    "specialization": "High-quality reprints of the A.C. McClurg historical catalog",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "cream",
+    "cover_type": "matte",
+    "trim_size": "5.5x8.5",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy",
+    "country_of_origin": "US"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "120"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 5.5 x 8.5 in or 216 x 140 mm on Cream w/Matte Lam",
+    "carton_pack_quantity": "24",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "FIC004000",
+      "FIC028000",
+      "SOC057000",
+      "LIT004020"
+    ],
+    "thema_subject_preferences": [
+      "FBA",
+      "FLS",
+      "JBSJ"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Introduction by"
+    },
+    "edition_number": "1",
+    "edition_description": "Rebooted Edition"
+  },
+  "production_settings": {
+    "file_naming_convention": "{author_lastname}_{short_title}_{isbn}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/mcclurg_rebooted"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "optional",
+    "marketing_image_required": false,
+    "social_media_handles": {
+      "twitter": "@McClurgRebooted",
+      "facebook": "McClurgRebooted",
+      "instagram": "@mcclurgrebooted"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "",
+    "metadata_contact_dictionary": "McClurg Editorial Team",
+    "publisher_reference_id": "MCR",
+    "flex_fields": {
+      "lsi_flexfield1": "",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes-Destroy",
+      "currency": "USD"
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "GBP"
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "EUR"
+    },
+    "CA": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "CAD"
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "No",
+      "currency": "AUD"
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "workflow@mcclurg-rebooted.com",
+    "backup_configurations": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting",
+    "enabled_types": [
+      "standard"
+    ],
+    "specialized_requirements": {
+      "interior_design_notes": "A classic, single-column layout with generous margins is required. Attention should be paid to chapter opening treatments (e.g., drop caps, small caps for the first line) that are period-appropriate. Layout must accommodate potential frontispieces or tipped-in plates for illustrations, common in original McClurg editions.",
+      "template_customizations": "Incorporate period-appropriate typographic ornaments for section breaks. Design a custom colophon page template detailing typeface, paper, and design notes for each edition.",
+      "typesetting_considerations": "Use of a high-quality, period-appropriate serif typeface (e.g., a modern revival of Garamond or Caslon). Meticulous attention to kerning, leading, and avoidance of widows/orphans is critical. Text block should feel balanced and comfortable for long-form reading."
+    },
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional book layout with chapters",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      }
+    },
+    "llm_analysis": {
+      "requires_specialized_design": false,
+      "recommended_codextypes": [
+        "standard"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Historical authenticity and premium readability. The design should evoke the spirit of early 20th-century fine press printing without sacrificing modern typographic legibility.",
+        "interior_layout_notes": "A classic, single-column layout with generous margins is required. Attention should be paid to chapter opening treatments (e.g., drop caps, small caps for the first line) that are period-appropriate. Layout must accommodate potential frontispieces or tipped-in plates for illustrations, common in original McClurg editions.",
+        "typesetting_requirements": "Use of a high-quality, period-appropriate serif typeface (e.g., a modern revival of Caslon, Garamond, or something from the Arts and Crafts movement). Meticulous attention to kerning, leading, and avoidance of widows/orphans is critical. The text block should feel balanced and comfortable for long-form reading.",
+        "functional_elements": "Standard navigational elements are sufficient: Table of Contents, folios (page numbers), and potential for endnotes or a simple index for Du Bois's non-fiction works. A colophon detailing the typeface and design choices would enhance the premium feel.",
+        "reader_interaction_model": "Linear, immersive reading. The design's primary goal is to be 'invisible,' allowing the reader to become fully absorbed in the narrative prose of Burroughs or the powerful arguments of Du Bois. The book is an object to be read and collected, not interacted with like a workbook."
+      },
+      "reasoning": "The core content of the McClurg imprint, focusing on authors like Du Bois and Burroughs, consists overwhelmingly of narrative fiction and non-fiction prose. This content type is the primary use case for the 'standard' CodexType. The imprint's mission will be fulfilled not by a functionally different layout (like a puzzle or workbook) but by a superior, classically-informed execution of a standard book design that emphasizes quality, readability, and historical feel."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": false,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": false,
+      "on_schedule": false,
+      "manual_only": true
+    },
+    "paper_settings": {
+      "target_venues": [
+        "Publishing Research Quarterly",
+        "Book History"
+      ],
+      "paper_types": [
+        "case_study",
+        "industry_analysis"
+      ],
+      "default_paper_type": "case_study",
+      "target_word_count": 6000,
+      "citation_style": "chicago",
+      "include_quantitative_analysis": false
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "reprint publishing strategy",
+        "design of classic editions",
+        "marketing historical texts to modern audiences"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": false,
+        "include_production_metrics": true,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": false,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/mcclurg_rebooted",
+      "file_naming": "mcclurg_rebooted_paper_{date}",
+      "formats": [
+        "markdown",
+        "pdf"
+      ],
+      "include_submission_package": false
+    },
+    "automation_schedule": {
+      "enabled": false,
+      "frequency": "annual",
+      "milestone_triggers": {
+        "book_count_milestones": [
+          25,
+          50
+        ],
+        "revenue_milestones": [],
+        "time_milestones": [
+          "2_years"
+        ]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "gemini/gemini-2.5-pro"
+      ],
+      "temperature": 0.7,
+      "max_tokens": 4000,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "McClurg Rebooted Editorial Team",
+      "institutional_affiliation": "Nimble Books LLC",
+      "contact_email": "research@mcclurg-rebooted.com",
+      "co_author_llm": false
+    },
+    "validation_criteria": {
+      "min_word_count": 4000,
+      "max_word_count": 8000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "methodology",
+        "discussion",
+        "conclusion"
+      ],
+      "require_quantitative_data": false,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-09-23T00:46:33.975536",
+    "model_used": "gemini/gemini-2.5-pro",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

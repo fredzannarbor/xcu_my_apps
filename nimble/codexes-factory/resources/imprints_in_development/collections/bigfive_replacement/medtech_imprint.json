@@ -1,0 +1,28 @@
+{
+  "imprint": "MedTech Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@medtechimprint.com",
+  "branding": {
+    "tagline": "Where health meets tech",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.medtechimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Medical technology, health informatics, telemedicine",
+    "target_audience": "Healthcare professionals, tech enthusiasts, patients",
+    "competitive_advantage": "Bridging the gap between complex medical technology and everyday health",
+    "example_titles": "The Future of Telemedicine, AI in Healthcare: Opportunities and Challenges"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

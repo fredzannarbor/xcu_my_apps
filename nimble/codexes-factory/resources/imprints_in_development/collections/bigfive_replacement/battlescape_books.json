@@ -1,0 +1,28 @@
+{
+  "imprint": "Battlescape Books",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@battlescapebooks.com",
+  "branding": {
+    "tagline": "Every Battlefield has a Story",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.battlescapebooks.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Detailed descriptions of historic battlefields, cultural impact of war zones, and landmark battles",
+    "target_audience": "Military history enthusiasts, cultural historians, battlefield tourists",
+    "competitive_advantage": "Combines rigorous research with engaging storytelling, bringing the world's most iconic battlefields to life",
+    "example_titles": "Guidebooks to historic battlefields, cultural history of war-torn regions"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

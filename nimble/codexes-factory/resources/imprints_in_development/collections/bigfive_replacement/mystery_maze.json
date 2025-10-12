@@ -1,0 +1,28 @@
+{
+  "imprint": "Mystery Maze",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mysterymaze.com",
+  "branding": {
+    "tagline": "Unravel the Enigma",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mysterymaze.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mystery, crime and detective series",
+    "target_audience": "Fans of crime, mystery and suspense",
+    "competitive_advantage": "Complex plotlines with cliffhanger endings",
+    "example_titles": "Agatha Christie's Poirot series, Arthur Conan Doyle's Sherlock Holmes series"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

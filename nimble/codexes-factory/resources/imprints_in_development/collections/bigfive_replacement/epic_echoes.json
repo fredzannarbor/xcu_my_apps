@@ -1,0 +1,28 @@
+{
+  "imprint": "Epic Echoes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@epicechoes.com",
+  "branding": {
+    "tagline": "History echoes through their lives",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.epicechoes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of important historical figures from various eras",
+    "target_audience": "History buffs and students",
+    "competitive_advantage": "Thorough research and riveting storytelling",
+    "example_titles": "Biographies of famous queens, war heroes, revolutionaries"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

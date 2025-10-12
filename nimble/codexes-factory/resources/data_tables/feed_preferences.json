@@ -1,0 +1,38 @@
+{
+  "anonymous": {
+    "user_id": "anonymous",
+    "preferred_genres": [],
+    "preferred_personas": [],
+    "hidden_personas": [],
+    "engagement_weight": 0.394241910867576,
+    "learning_weight": 0.22462106538579954,
+    "breakthrough_weight": 0.38113702374662456,
+    "mood_elevation_weight": 0.2,
+    "max_posts_per_session": 25,
+    "preferred_post_types": []
+  },
+  "admin": {
+    "user_id": "admin",
+    "preferred_genres": [],
+    "preferred_personas": [],
+    "hidden_personas": [],
+    "engagement_weight": 0.4,
+    "learning_weight": 0.3,
+    "breakthrough_weight": 0.3,
+    "mood_elevation_weight": 0.2,
+    "max_posts_per_session": 25,
+    "preferred_post_types": []
+  },
+  "wfzimmerman": {
+    "user_id": "wfzimmerman",
+    "preferred_genres": [],
+    "preferred_personas": [],
+    "hidden_personas": [],
+    "engagement_weight": 0.4,
+    "learning_weight": 0.3,
+    "breakthrough_weight": 0.3,
+    "mood_elevation_weight": 0.2,
+    "max_posts_per_session": 25,
+    "preferred_post_types": []
+  }
+}

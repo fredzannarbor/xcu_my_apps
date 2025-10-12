@@ -1,0 +1,28 @@
+{
+  "imprint": "Dreamscapes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@dreamscapes.com",
+  "branding": {
+    "tagline": "Escape to the extraordinary",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.dreamscapes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Magical realism and surreal narratives",
+    "target_audience": "Teens who enjoy escapism and imaginative worlds",
+    "competitive_advantage": "Creating unique, dreamlike settings and plots",
+    "example_titles": "Laini Taylor, Haruki Murakami type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

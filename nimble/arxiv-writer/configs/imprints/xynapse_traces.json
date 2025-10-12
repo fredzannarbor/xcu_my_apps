@@ -1,0 +1,46 @@
+{
+  "_config_info": {
+    "description": "Xynapse Traces imprint configuration for context collection",
+    "version": "2.0",
+    "last_updated": "2025-01-15",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Xynapse Traces",
+  "publisher": "Nimble Books LLC",
+  "branding": {
+    "tagline": "Exploring the intersection of AI, consciousness, and human potential",
+    "color_scheme": "Deep blue and silver",
+    "logo_style": "Minimalist neural network design"
+  },
+  "publishing_focus": {
+    "primary_genres": ["Technology", "Philosophy", "Science", "Future Studies"],
+    "target_audience": "Academic researchers, technology professionals, and thoughtful general readers",
+    "content_themes": [
+      "Artificial Intelligence and Ethics",
+      "Consciousness Studies", 
+      "Future of Technology",
+      "Philosophy of Mind",
+      "Digital Transformation"
+    ]
+  },
+  "default_book_settings": {
+    "format": "Trade paperback and digital",
+    "typical_page_range": "200-350 pages",
+    "price_range": "$25-40",
+    "distribution": "Global via Lightning Source and digital platforms"
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_email": "xynapse@nimblebooks.com",
+    "backup_configurations": true,
+    "llm_completion_enabled": true,
+    "computed_fields_enabled": true
+  },
+  "quality_standards": {
+    "editorial_review": "Required for all titles",
+    "fact_checking": "Required for technical content",
+    "peer_review": "Recommended for academic titles",
+    "ai_assistance": "Used for initial drafts and editing suggestions"
+  }
+}

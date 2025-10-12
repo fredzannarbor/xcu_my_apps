@@ -1,0 +1,28 @@
+{
+  "imprint": "NeuroNexus Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@neuronexusimprint.com",
+  "branding": {
+    "tagline": "Enter the mind's labyrinth",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.neuronexusimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Neuroscience and mental health",
+    "target_audience": "Psychology enthusiasts and mental health advocates",
+    "competitive_advantage": "Demystifying the brain and mental health topics",
+    "example_titles": "The Wonderful World of Neuroplasticity, Understanding OCD"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

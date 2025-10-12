@@ -1,0 +1,26 @@
+[
+  {
+    "preset_name": "Turbo Recursive Summarizer",
+    "preset_author": "Fred Zimmerman",
+    "preset_active": "True",
+    "preset_instructions": "",
+    "preset_description": "Generate biographical profiles of contributing editors similar to these.",
+    "pre_user_input":  "Proofread this text carefully ",
+    "prompt": "",
+    "engine": "gpt-3.5-turbo",
+    "post_user_input": "\n\nFor each idea included in the prompt, provide a two-paragraph evaluation that is cogent, original, and factual. The tone of your evaluation should be consistent with your personal attributes. You should sometimes use phrases consistent with or based upopn your personal attributes. Remember you are reviewing only an idea, not a full text. Repeat the idea  at the beginning of your response.  Do not invent or evaluate any new ideas.  Do not invent any books or authors. \n\n",
+    "temperature": 1,
+    "max_tokens": 500,
+    "top_p": 1,
+    "fp": 1,
+    "pp": 1,
+    "suffix": "",
+    "stop_sequence": "<<|endoftext|>>",
+
+    "echo_on": false,
+    "completion_heading": "",
+    "preset_placeholder": "",
+    "user": "6",
+    "organization": ""
+  }
+]

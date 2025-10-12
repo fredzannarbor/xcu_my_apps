@@ -1,0 +1,28 @@
+{
+  "imprint": "Artisanal Archives",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@artisanalarchives.com",
+  "branding": {
+    "tagline": "Crafted with care. Curated for you.",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.artisanalarchives.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Historical narratives, social history, cultural history",
+    "target_audience": "Readers seeking beautifully crafted historical narratives",
+    "competitive_advantage": "Artisanal Archives offers carefully crafted, artistic interpretations of historical events",
+    "example_titles": "Narratives on the Age of Enlightenment, the Renaissance, the Industrial Revolution"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

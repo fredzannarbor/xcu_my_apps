@@ -1,0 +1,2487 @@
+{
+  "config": {
+    "id": "36a3b0b5-bad0-4a04-b79b-441c7cef77db",
+    "label": "BetterBibTeX JSON",
+    "preferences": {
+      "ascii": "",
+      "asciiBibLaTeX": false,
+      "asciiBibTeX": true,
+      "autoAbbrev": false,
+      "autoAbbrevStyle": "",
+      "autoExport": "immediate",
+      "autoExportDelay": 5,
+      "autoExportIdleWait": 10,
+      "autoExportPathReplaceDiacritics": false,
+      "autoExportPathReplaceDirSep": "-",
+      "autoExportPathReplaceSpace": " ",
+      "automaticTags": true,
+      "autoPinDelay": 0,
+      "auxImport": false,
+      "baseAttachmentPath": "",
+      "biblatexExtendedDateFormat": true,
+      "biblatexExtendedNameFormat": true,
+      "biblatexExtractEprint": true,
+      "bibtexParticleNoOp": false,
+      "bibtexURL": "off",
+      "cache": true,
+      "cacheFlushInterval": 5,
+      "charmap": "",
+      "citeCommand": "cite",
+      "citekeyFold": true,
+      "citekeyFormat": "auth.lower+shorttitle(3,3)+year",
+      "citekeySearch": true,
+      "citekeyUnsafeChars": "\\\"#%'(),={}~",
+      "csquotes": "",
+      "DOIandURL": "both",
+      "exportBibTeXStrings": "off",
+      "exportBraceProtection": true,
+      "exportTitleCase": true,
+      "extraMergeCitekeys": false,
+      "extraMergeCSL": false,
+      "extraMergeTeX": false,
+      "git": "config",
+      "import": true,
+      "importBibTeXStrings": true,
+      "importCaseProtection": "as-needed",
+      "importCitationKey": true,
+      "importExtra": true,
+      "importJabRefAbbreviations": true,
+      "importJabRefStrings": true,
+      "importNoteToExtra": "",
+      "importSentenceCase": "on+guess",
+      "importUnknownTexCommand": "ignore",
+      "itemObserverDelay": 5,
+      "jabrefFormat": 0,
+      "jieba": false,
+      "keyConflictPolicy": "keep",
+      "keyScope": "library",
+      "kuroshiro": false,
+      "language": "langid",
+      "mapMath": "",
+      "mapText": "",
+      "mapUnicode": "conservative",
+      "parseParticles": true,
+      "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
+      "postscript": "",
+      "postscriptOverride": "",
+      "preferencesOverride": "",
+      "qualityReport": false,
+      "quickCopyEta": "",
+      "quickCopyMode": "latex",
+      "quickCopyOrgMode": "zotero",
+      "quickCopyPandocBrackets": false,
+      "quickCopySelectLink": "zotero",
+      "rawImports": false,
+      "rawLaTag": "#LaTeX",
+      "relativeFilePaths": false,
+      "retainCache": false,
+      "separatorList": "and",
+      "separatorNames": "and",
+      "skipFields": "",
+      "skipWords": "a,ab,aboard,about,above,across,after,against,al,along,amid,among,an,and,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,d,da,das,de,del,dell,dello,dei,degli,della,dell,delle,dem,den,der,des,despite,die,do,down,du,during,ein,eine,einem,einen,einer,eines,el,en,et,except,for,from,gli,i,il,in,inside,into,is,l,la,las,le,les,like,lo,los,near,nor,of,off,on,onto,or,over,past,per,plus,round,save,since,so,some,sur,than,the,through,to,toward,towards,un,una,unas,under,underneath,une,unlike,uno,unos,until,up,upon,versus,via,von,while,with,within,without,yet,zu,zum",
+      "startupProgress": "popup",
+      "strings": "",
+      "stringsOverride": "",
+      "verbatimFields": "url,doi,file,pdf,ids,eprint,/^verb[a-z]$/,groups,/^citeulike-linkout-[0-9]+$/, /^bdsk-url-[0-9]+$/",
+      "warnBulkModify": 10,
+      "warnTitleCased": false
+    },
+    "options": {
+      "exportNotes": true,
+      "exportFileData": false,
+      "keepUpdated": false,
+      "worker": true,
+      "Normalize": false
+    }
+  },
+  "version": {
+    "zotero": "6.0.26",
+    "bbt": "6.7.79"
+  },
+  "collections": {},
+  "items": [
+    {
+      "key": "DEMQL9XK",
+      "version": 473,
+      "itemType": "webpage",
+      "title": "140k Real and Fake Faces",
+      "abstractNote": "70k real faces (from Flickr) and 70k fake faces (GAN-generated)",
+      "language": "en",
+      "url": "https://kaggle.com/xhlulu/140k-real-and-fake-faces",
+      "accessDate": "2022-01-10T02:26:56Z",
+      "creators": [],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-01-10T02:26:56Z",
+      "dateModified": "2022-01-10T02:26:56Z",
+      "uri": "http://zotero.org/users/8920562/items/DEMQL9XK",
+      "itemID": 6439,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-10T02:27:04Z",
+          "dateModified": "2022-01-10T02:27:04Z",
+          "uri": "http://zotero.org/users/8920562/items/5NJMG9X3",
+          "path": "/Users/fred/Zotero/storage/5NJMG9X3/metadata.html",
+          "select": "zotero://select/library/items/5NJMG9X3"
+        }
+      ],
+      "notes": [],
+      "citationKey": "140kRealFake",
+      "itemKey": "DEMQL9XK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DEMQL9XK"
+    },
+    {
+      "key": "A5BKHTQW",
+      "version": 876,
+      "itemType": "journalArticle",
+      "title": "A critical review of comparative global historical energy consumption and future demand: The story told so far",
+      "abstractNote": "This review presents a critical combined energy analysis of demand in developed/developing countries, including the load requirements of the various business sectors. It summarizes on-demand time-series, energy supply, overall trade in gas, oil, electricity, coal, and renewable energy (e.g., wind, solar, geothermal, tidal, etc.) as well as global carbon dioxide (CO2) emissions. The duration of the review is selected between the energy supply and demand forecast from 1990 to 2040. Multi-energy approaches include primary energy generation, consumption, gross domestic product (GDP) energy intensity, the total trade balance of crude oil production, production of natural gas, trade balance and use of natural gas, production of lignite and coal, demand for trade in lignite and coal, generation and use of electricity, the share of renewables in power generation, total percentage of solar energy. Geographic coverage covered the global energy demand of the Organization for Economic Co-operation and Development (OECD), the group of seven (G7), Brazil, Russia, India, China, and South Africa (BRICS), European Union, Europe, North America, Commonwealth of Independent States (CIS), Asia, Latin America, Pacific, Middle-East and Africa. Market individuals and cooperative policymakers communicate in a variety of ways: our review and its impact on energy trade, social development, economic and climate change, which is then presented in a deeper way, in the future energy outlook. The findings of the review make it clear that there is a great deal of future global energy demand until 2040 in different situations: new aspects of policymaking, the requirement is about 15% lower in the 450-scenario, and 10% higher in the current energy policy scenario.",
+      "date": "2020-11-01",
+      "language": "en",
+      "shortTitle": "A critical review of comparative global historical energy consumption and future demand",
+      "libraryCatalog": "ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352484720312385",
+      "accessDate": "2022-05-01T23:01:08Z",
+      "volume": "6",
+      "pages": "1973-1991",
+      "publicationTitle": "Energy Reports",
+      "DOI": "10.1016/j.egyr.2020.07.020",
+      "journalAbbreviation": "Energy Reports",
+      "ISSN": "2352-4847",
+      "creators": [
+        {
+          "firstName": "Tanveer",
+          "lastName": "Ahmad",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dongdong",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Renewable energy",
+          "type": 1
+        },
+        {
+          "tag": "CO emissions",
+          "type": 1
+        },
+        {
+          "tag": "Comprehensive geographical coverage",
+          "type": 1
+        },
+        {
+          "tag": "Future energy requirement",
+          "type": 1
+        },
+        {
+          "tag": "Historical energy outlook",
+          "type": 1
+        },
+        {
+          "tag": "Multi-energy approaches",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-05-01T23:01:08Z",
+      "dateModified": "2022-05-01T23:01:08Z",
+      "uri": "http://zotero.org/users/8920562/items/A5BKHTQW",
+      "itemID": 6496,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "ScienceDirect Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-05-01T23:01:17Z",
+          "dateModified": "2022-05-01T23:01:17Z",
+          "uri": "http://zotero.org/users/8920562/items/L82RNNKY",
+          "path": "/Users/fred/Zotero/storage/L82RNNKY/S2352484720312385.html",
+          "select": "zotero://select/library/items/L82RNNKY"
+        }
+      ],
+      "notes": [],
+      "citationKey": "ahmadCriticalReviewComparative2020",
+      "itemKey": "A5BKHTQW",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/A5BKHTQW"
+    },
+    {
+      "key": "7FVMNBMN",
+      "version": 2888,
+      "itemType": "attachment",
+      "title": "Population+Growth+&+Earth's+Human+Carrying+Capacity.pdf",
+      "url": "http://ehsapes.pbworks.com/w/file/fetch/47173273/Population%2BGrowth%2B%26%2BEarth%27s%2BHuman%2BCarrying%2BCapacity.pdf",
+      "accessDate": "2022-11-20T13:36:51Z",
+      "linkMode": "imported_url",
+      "contentType": "application/pdf",
+      "charset": "",
+      "filename": "Population+Growth+&+Earth's+Human+Carrying+Capacity.pdf",
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "collections": [
+        "K25NMTUR"
+      ],
+      "relations": {},
+      "dateAdded": "2022-11-20T13:36:51Z",
+      "dateModified": "2022-12-05T04:56:01Z",
+      "uri": "http://zotero.org/users/8920562/items/7FVMNBMN",
+      "itemID": 7901,
+      "localPath": "/Users/fred/Zotero/storage/7FVMNBMN/Population+Growth+&+Earth's+Human+Carrying+Capacity.pdf",
+      "defaultPath": "files/7901/Population+Growth+&+Earth's+Human+Carrying+Capacity.pdf",
+      "itemKey": "7FVMNBMN",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/7FVMNBMN"
+    },
+    {
+      "key": "IIGI5HPU",
+      "version": 867,
+      "itemType": "conferencePaper",
+      "title": "A Bayesian Mixed Effects Model of Literary Character",
+      "date": "2014",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://aclweb.org/anthology/P14-1035",
+      "accessDate": "2022-03-11T20:47:57Z",
+      "place": "Baltimore, Maryland",
+      "publisher": "Association for Computational Linguistics",
+      "pages": "370-379",
+      "proceedingsTitle": "Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "conferenceName": "Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "DOI": "10.3115/v1/P14-1035",
+      "creators": [
+        {
+          "firstName": "David",
+          "lastName": "Bamman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ted",
+          "lastName": "Underwood",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noah A.",
+          "lastName": "Smith",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-03-11T20:47:58Z",
+      "dateModified": "2022-03-11T20:47:58Z",
+      "uri": "http://zotero.org/users/8920562/items/IIGI5HPU",
+      "itemID": 6481,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-03-11T20:48:09Z",
+          "dateModified": "2022-03-11T20:48:09Z",
+          "uri": "http://zotero.org/users/8920562/items/4BX8S3NZ",
+          "path": "/Users/fred/Zotero/storage/4BX8S3NZ/Bamman et al. - 2014 - A Bayesian Mixed Effects Model of Literary Charact.pdf",
+          "select": "zotero://select/library/items/4BX8S3NZ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "bammanBayesianMixedEffects2014",
+      "itemKey": "IIGI5HPU",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/IIGI5HPU"
+    },
+    {
+      "key": "A4NRGPAW",
+      "version": 2864,
+      "itemType": "journalArticle",
+      "title": "What Makes Content Engaging? How Emotional Dynamics Shape Success",
+      "abstractNote": "Abstract\n            Some cultural products (e.g., books and movies) catch on and become popular, while others fail. Why? While some have argued that success is unpredictable, we suggest that period-to-period shifts in sentiment—what we term sentiment volatility—enhance engagement. Automated sentiment analysis of over 4,000 movies demonstrates that more volatile movies are evaluated more positively. Consistent with the notion that sentiment volatility makes experiences more stimulating, the effect is stronger in genres where evaluations are more likely to be driven stimulation (i.e., thrillers rather than romance). Further, analysis of over 30,000 online articles demonstrate that people are more likely to continue reading more volatile articles. By manipulating sentiment volatility in follow-up experiments, we underscore its causal impact on evaluations, and provide evidence for the role of stimulation in these effects. Taken together, the results shed light on what drives engagement, the time dynamics of sentiment, and cultural analytics or why some cultural items are more successful.",
+      "date": "2021-08-13",
+      "language": "en",
+      "shortTitle": "What Makes Content Engaging?",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://academic.oup.com/jcr/article/48/2/235/6146928",
+      "accessDate": "2022-03-11T20:47:57Z",
+      "volume": "48",
+      "pages": "235-250",
+      "publicationTitle": "Journal of Consumer Research",
+      "DOI": "10.1093/jcr/ucab010",
+      "issue": "2",
+      "ISSN": "0093-5301, 1537-5277",
+      "creators": [
+        {
+          "firstName": "Jonah",
+          "lastName": "Berger",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yoon Duk",
+          "lastName": "Kim",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Robert",
+          "lastName": "Meyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "J. Jeffrey",
+          "lastName": "Inman",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Andrew T",
+          "lastName": "Stephen",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-03-11T20:47:58Z",
+      "dateModified": "2022-12-05T04:55:10Z",
+      "uri": "http://zotero.org/users/8920562/items/A4NRGPAW",
+      "itemID": 6483,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "bergerWhatMakesContent2021",
+      "itemKey": "A4NRGPAW",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/A4NRGPAW"
+    },
+    {
+      "key": "EV9BJH7T",
+      "version": 2864,
+      "itemType": "webpage",
+      "title": "Exploratory network analysis of Marvel Universe",
+      "abstractNote": "Introducing the new k-nearest neighbors algorithm in the Graph Data Science library",
+      "date": "2020-10-26T17:25:24.040Z",
+      "language": "en",
+      "url": "https://towardsdatascience.com/exploratory-network-analysis-of-marvel-universe-c557f4959048",
+      "accessDate": "2022-02-07T05:30:56Z",
+      "extra": "WFZ Some interesting reference points here. The MCU, which is worth a gazillion dollars, contains 1,105 characters in 38,875 comics.",
+      "websiteTitle": "Medium",
+      "creators": [
+        {
+          "firstName": "Tomaz",
+          "lastName": "Bratanic",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-02-07T05:30:56Z",
+      "dateModified": "2022-12-05T04:55:10Z",
+      "uri": "http://zotero.org/users/8920562/items/EV9BJH7T",
+      "itemID": 6458,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "bratanicExploratoryNetworkAnalysis2020",
+      "itemKey": "EV9BJH7T",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/EV9BJH7T"
+    },
+    {
+      "key": "RVHQTRDI",
+      "version": 473,
+      "itemType": "journalArticle",
+      "title": "Language Models are Few-Shot Learners",
+      "abstractNote": "Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions - something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art fine-tuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.",
+      "date": "2020-07-22",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2005.14165",
+      "accessDate": "2022-01-09T00:14:02Z",
+      "extra": "arXiv: 2005.14165",
+      "publicationTitle": "arXiv:2005.14165 [cs]",
+      "creators": [
+        {
+          "firstName": "Tom B.",
+          "lastName": "Brown",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Benjamin",
+          "lastName": "Mann",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nick",
+          "lastName": "Ryder",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Melanie",
+          "lastName": "Subbiah",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jared",
+          "lastName": "Kaplan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Prafulla",
+          "lastName": "Dhariwal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Arvind",
+          "lastName": "Neelakantan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pranav",
+          "lastName": "Shyam",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Girish",
+          "lastName": "Sastry",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amanda",
+          "lastName": "Askell",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sandhini",
+          "lastName": "Agarwal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ariel",
+          "lastName": "Herbert-Voss",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gretchen",
+          "lastName": "Krueger",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tom",
+          "lastName": "Henighan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rewon",
+          "lastName": "Child",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aditya",
+          "lastName": "Ramesh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniel M.",
+          "lastName": "Ziegler",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jeffrey",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Clemens",
+          "lastName": "Winter",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Hesse",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mark",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eric",
+          "lastName": "Sigler",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mateusz",
+          "lastName": "Litwin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Scott",
+          "lastName": "Gray",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Benjamin",
+          "lastName": "Chess",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jack",
+          "lastName": "Clark",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Berner",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sam",
+          "lastName": "McCandlish",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alec",
+          "lastName": "Radford",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilya",
+          "lastName": "Sutskever",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dario",
+          "lastName": "Amodei",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-09T00:14:02Z",
+      "dateModified": "2022-01-09T00:14:05Z",
+      "uri": "http://zotero.org/users/8920562/items/RVHQTRDI",
+      "itemID": 6435,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-09T00:14:11Z",
+          "dateModified": "2022-01-09T00:14:11Z",
+          "uri": "http://zotero.org/users/8920562/items/YZLVCZLL",
+          "path": "/Users/fred/Zotero/storage/YZLVCZLL/Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf",
+          "select": "zotero://select/library/items/YZLVCZLL"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-09T00:14:19Z",
+          "dateModified": "2022-01-09T00:14:19Z",
+          "uri": "http://zotero.org/users/8920562/items/MK2WJT3Y",
+          "path": "/Users/fred/Zotero/storage/MK2WJT3Y/2005.html",
+          "select": "zotero://select/library/items/MK2WJT3Y"
+        }
+      ],
+      "notes": [
+        {
+          "key": "AYVLV5BJ",
+          "version": 473,
+          "itemType": "note",
+          "parentItem": "RVHQTRDI",
+          "note": "Comment: 40+32 pages",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-01-09T00:14:02Z",
+          "dateModified": "2022-01-09T00:14:02Z",
+          "uri": "http://zotero.org/users/8920562/items/AYVLV5BJ"
+        }
+      ],
+      "citationKey": "brownLanguageModelsAre2020",
+      "itemKey": "RVHQTRDI",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/RVHQTRDI"
+    },
+    {
+      "key": "GFA8N5LV",
+      "version": 2417,
+      "itemType": "journalArticle",
+      "title": "Historical World Population",
+      "language": "en",
+      "libraryCatalog": "Zotero",
+      "pages": "17",
+      "creators": [
+        {
+          "firstName": "Julius",
+          "lastName": "Caesar",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-11-20T13:35:51Z",
+      "dateModified": "2022-11-20T13:35:52Z",
+      "uri": "http://zotero.org/users/8920562/items/GFA8N5LV",
+      "itemID": 7900,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Caesar - Historical World Population.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-11-20T13:35:47Z",
+          "dateModified": "2022-11-20T13:35:51Z",
+          "uri": "http://zotero.org/users/8920562/items/6NED9AK4",
+          "path": "/Users/fred/Zotero/storage/6NED9AK4/Caesar - Historical World Population.pdf",
+          "select": "zotero://select/library/items/6NED9AK4"
+        }
+      ],
+      "notes": [],
+      "citationKey": "caesarHistoricalWorldPopulation",
+      "itemKey": "GFA8N5LV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/GFA8N5LV"
+    },
+    {
+      "key": "8YRUPS5L",
+      "version": 1724,
+      "itemType": "journalArticle",
+      "title": "The origins and development of <i>Jane's Fighting Ships</i>",
+      "abstractNote": "Once a year a reference source is published in Surrey, England, that brings visitors such as the military attachés from the Chinese and former Soviet embassies in London to Surrey. The source these individuals and organizations are so eager to obtain is\n              Jane's Fighting Ships (JFS)\n              , an annual naval compendium which has summarized international naval trends and developments for nearly a century.",
+      "date": "1993-1-1",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://www.emerald.com/insight/content/doi/10.1108/eb049178/full/html",
+      "accessDate": "2022-08-20T23:00:43Z",
+      "volume": "21",
+      "pages": "71-78",
+      "publicationTitle": "Reference Services Review",
+      "DOI": "10.1108/eb049178",
+      "issue": "1",
+      "ISSN": "0090-7324",
+      "creators": [
+        {
+          "firstName": "Bert",
+          "lastName": "Chapman",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-08-20T23:00:43Z",
+      "dateModified": "2022-08-20T23:00:44Z",
+      "uri": "http://zotero.org/users/8920562/items/8YRUPS5L",
+      "itemID": 7425,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Chapman - 1993 - The origins and development of Jane's Fighting .pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-20T23:00:38Z",
+          "dateModified": "2022-08-20T23:00:45Z",
+          "uri": "http://zotero.org/users/8920562/items/KVPYZMN9",
+          "path": "/Users/fred/Zotero/storage/KVPYZMN9/Chapman - 1993 - The origins and development of Jane's Fighting .pdf",
+          "select": "zotero://select/library/items/KVPYZMN9"
+        }
+      ],
+      "notes": [],
+      "citationKey": "chapmanOriginsDevelopmentJane1993",
+      "itemKey": "8YRUPS5L",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8YRUPS5L"
+    },
+    {
+      "key": "BQ2XP8RS",
+      "version": 1714,
+      "itemType": "report",
+      "title": "Knowledge Mapping of Planetary Boundaries based on Bibliometrics Analysis",
+      "abstractNote": "Abstract\n          There are an increasing number of academic researches and sustainable development policies focusing on planetary boundaries. However, no research has been conducted to far on drawing scientific investigation map of planetary boundaries. Therefore, this paper conducted a scientometric analysis of 530 academic publications and their 1784 references on planetary boundaries from 2009 to 2021 by visualizing the social network, dual-map overlay, co-cited references, structure variation article, and co-occurrence keywords with Citespace. The results show that as a new achievement and paradigm in the field of sustainable development research, the planetary boundaries framework is gradually getting global attention and promotion, which increasingly becomes an interdisciplinary hot research topic. The most productive authors and institutions are concentrated in England, the United States, Germany, and Sweden. Relevant articles were mainly published in journals focusing on ecology, earth, marine, veterinary, animal, economics and politics, as represented by the dual-map overlay. In addition, we summarized three predominant research themes by clustering keywords: the calculation of single boundary threshold and present value, the integration with assessment methods such as life cycle assessment and footprint families, the downscaling of planetary boundaries, and the expansion to economic and social domains. For scholars interested in this topic, this paper would be a useful reference and guideline.",
+      "date": "2022-05-10",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://www.researchsquare.com/article/rs-1478359/v1",
+      "accessDate": "2022-08-20T15:06:20Z",
+      "extra": "DOI: 10.21203/rs.3.rs-1478359/v1",
+      "reportType": "preprint",
+      "institution": "In Review",
+      "creators": [
+        {
+          "firstName": "Siying",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Demin",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhixiong",
+          "lastName": "Tan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Maozhi",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jingwei",
+          "lastName": "Han",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-08-20T15:06:20Z",
+      "dateModified": "2022-08-20T15:06:30Z",
+      "uri": "http://zotero.org/users/8920562/items/BQ2XP8RS",
+      "itemID": 7417,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Chen et al. - 2022 - Knowledge Mapping of Planetary Boundaries based on.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-20T15:06:17Z",
+          "dateModified": "2022-08-20T15:06:23Z",
+          "uri": "http://zotero.org/users/8920562/items/Z7KI7ZNV",
+          "path": "/Users/fred/Zotero/storage/Z7KI7ZNV/Chen et al. - 2022 - Knowledge Mapping of Planetary Boundaries based on.pdf",
+          "select": "zotero://select/library/items/Z7KI7ZNV"
+        }
+      ],
+      "notes": [],
+      "citationKey": "chenKnowledgeMappingPlanetary2022",
+      "itemKey": "BQ2XP8RS",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/BQ2XP8RS"
+    },
+    {
+      "key": "PSEI44V6",
+      "version": 1716,
+      "itemType": "journalArticle",
+      "title": "Visualizing a Field of Research: A Methodology of Systematic Scientometric Reviews",
+      "abstractNote": "Systematic scientometric reviews, empowered by scientometric and visual analytic techniques, offer opportunities to improve the timeliness, accessibility, and reproducibility of conventional systematic reviews. While increasingly accessible science mapping tools enable end users to visualize the structure and dynamics of a research field, a common bottleneck in the current practice is the construction of a collection of scholarly publications as the input of the subsequent scientometric analysis and visualization. End users often have to face a dilemma in the preparation process: the more they know about a knowledge domain, the easier it is for them to find the relevant data to meet their needs adequately; the little they know, the harder the problem is. What can we do to avoid missing something valuable but beyond our initial description? In this article, we introduce a flexible and generic methodology, cascading citation expansion, to increase the quality of constructing a bibliographic dataset for systematic reviews. Furthermore, the methodology simplifies the conceptualization of globalism and localism in science mapping and unifies them on a consistent and continuous spectrum. We demonstrate an application of the methodology to the research of literature-based discovery and compare five datasets constructed based on three use scenarios, namely a conventional keyword-based search (one dataset), an expansion process starting with a groundbreaking article of the knowledge domain (two datasets), and an expansion process starting with a recently published review article by a prominent expert in the domain (two datasets). The unique coverage of each of the datasets is inspected through network visualization overlays with reference to other datasets in a broad and integrated context.",
+      "date": "2019-10-31",
+      "shortTitle": "Visualizing a Field of Research",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1906.04800",
+      "accessDate": "2022-08-20T15:39:25Z",
+      "extra": "arXiv:1906.04800 [cs]",
+      "volume": "14",
+      "pages": "e0223994",
+      "publicationTitle": "PLOS ONE",
+      "DOI": "10.1371/journal.pone.0223994",
+      "issue": "10",
+      "journalAbbreviation": "PLoS ONE",
+      "ISSN": "1932-6203",
+      "creators": [
+        {
+          "firstName": "Chaomei",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Min",
+          "lastName": "Song",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Digital Libraries",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-08-20T15:39:25Z",
+      "dateModified": "2022-08-20T15:39:25Z",
+      "uri": "http://zotero.org/users/8920562/items/PSEI44V6",
+      "itemID": 7418,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-20T15:39:31Z",
+          "dateModified": "2022-08-20T15:39:31Z",
+          "uri": "http://zotero.org/users/8920562/items/XHJFUKY8",
+          "path": "/Users/fred/Zotero/storage/XHJFUKY8/Chen and Song - 2019 - Visualizing a Field of Research A Methodology of .pdf",
+          "select": "zotero://select/library/items/XHJFUKY8"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-20T15:39:38Z",
+          "dateModified": "2022-08-20T15:39:38Z",
+          "uri": "http://zotero.org/users/8920562/items/MBTBW76U",
+          "path": "/Users/fred/Zotero/storage/MBTBW76U/1906.html",
+          "select": "zotero://select/library/items/MBTBW76U"
+        }
+      ],
+      "notes": [
+        {
+          "key": "E9VQEX9P",
+          "version": 1716,
+          "itemType": "note",
+          "parentItem": "PSEI44V6",
+          "note": "Comment: 17 figures, 3 tables",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-08-20T15:39:25Z",
+          "dateModified": "2022-08-20T15:39:25Z",
+          "uri": "http://zotero.org/users/8920562/items/E9VQEX9P"
+        }
+      ],
+      "citationKey": "chenVisualizingFieldResearch2019",
+      "itemKey": "PSEI44V6",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PSEI44V6"
+    },
+    {
+      "key": "A2S79YAL",
+      "version": 2378,
+      "itemType": "conferencePaper",
+      "title": "Understanding AI-Generated Personal Narratives as Design Material for Socially Engaging Things",
+      "abstractNote": "Requirements of interaction design are becoming increasingly sophisticated and complex. Interaction designers should consider not only usability, intuitiveness, and aesthetics but also the quality of the social experience of interactive things. However, traditional...",
+      "date": "2022",
+      "language": "en",
+      "libraryCatalog": "link.springer.com",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-19-4472-7_75",
+      "accessDate": "2022-11-12T08:40:37Z",
+      "publisher": "Springer, Singapore",
+      "pages": "1135-1152",
+      "proceedingsTitle": "[ ] With Design: Reinventing Design Modes",
+      "conferenceName": "Congress of the International Association of Societies of Design Research",
+      "DOI": "10.1007/978-981-19-4472-7_75",
+      "creators": [
+        {
+          "firstName": "Hyungjun",
+          "lastName": "Cho",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gyeongwon",
+          "lastName": "Yun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "JiYeon",
+          "lastName": "Lee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tek-Jin",
+          "lastName": "Nam",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-11-12T08:40:37Z",
+      "dateModified": "2022-11-12T08:40:42Z",
+      "uri": "http://zotero.org/users/8920562/items/A2S79YAL",
+      "itemID": 7886,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-11-12T08:40:44Z",
+          "dateModified": "2022-11-12T08:40:44Z",
+          "uri": "http://zotero.org/users/8920562/items/KFPCNJBX",
+          "path": "/Users/fred/Zotero/storage/KFPCNJBX/978-981-19-4472-7_75.html",
+          "select": "zotero://select/library/items/KFPCNJBX"
+        }
+      ],
+      "notes": [],
+      "citationKey": "choUnderstandingAIGeneratedPersonal2022",
+      "itemKey": "A2S79YAL",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/A2S79YAL"
+    },
+    {
+      "key": "JYPSBEWU",
+      "version": 1703,
+      "itemType": "webpage",
+      "title": "Critiques",
+      "abstractNote": "Longtermism may be the most influential—and dangerous—secular ideology that few people outside of elite universities and Silicon Valley have heard about.",
+      "language": "en",
+      "url": "https://www.longtermism-hub.com/critiques",
+      "accessDate": "2022-08-17T21:49:40Z",
+      "websiteTitle": "Longtermism Hub",
+      "creators": [],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-08-17T21:49:40Z",
+      "dateModified": "2022-08-17T21:49:49Z",
+      "uri": "http://zotero.org/users/8920562/items/JYPSBEWU",
+      "itemID": 7412,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-17T21:49:48Z",
+          "dateModified": "2022-08-17T21:49:48Z",
+          "uri": "http://zotero.org/users/8920562/items/W3TIWXWX",
+          "path": "/Users/fred/Zotero/storage/W3TIWXWX/critiques.html",
+          "select": "zotero://select/library/items/W3TIWXWX"
+        }
+      ],
+      "notes": [],
+      "citationKey": "Critiques",
+      "itemKey": "JYPSBEWU",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JYPSBEWU"
+    },
+    {
+      "key": "WPQJZM6J",
+      "version": 2864,
+      "itemType": "journalArticle",
+      "title": "Generating text from structured data with application to the biography domain",
+      "date": "2016",
+      "url": "http://arxiv.org/abs/1603.07771",
+      "extra": "Citation Key: DBLP:journals/corr/LebretGA16\narXiv: 1603.07771\ntex.bibsource: dblp computer science bibliography, https://dblp.org\ntex.biburl: https://dblp.org/rec/journals/corr/LebretGA16.bib\ntex.timestamp: Mon, 13 Aug 2018 16:48:30 +0200",
+      "volume": "abs/1603.07771",
+      "publicationTitle": "CoRR",
+      "creators": [
+        {
+          "firstName": "Rémi",
+          "lastName": "Lebret",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Grangier",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Auli",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        },
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-06T00:27:47Z",
+      "dateModified": "2022-12-05T04:55:09Z",
+      "uri": "http://zotero.org/users/8920562/items/WPQJZM6J",
+      "itemID": 6426,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "DBLP:journals/corr/LebretGA16",
+      "itemKey": "WPQJZM6J",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/WPQJZM6J"
+    },
+    {
+      "key": "3MEB4W5C",
+      "version": 867,
+      "itemType": "journalArticle",
+      "title": "Improving productivity in Hollywood with data science: Using emotional arcs of movies to drive product and service innovation in entertainment industries",
+      "date": "2021-05-04",
+      "language": "en",
+      "shortTitle": "Improving productivity in Hollywood with data science",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/01605682.2019.1705194",
+      "accessDate": "2022-03-11T20:47:57Z",
+      "volume": "72",
+      "pages": "1110-1137",
+      "publicationTitle": "Journal of the Operational Research Society",
+      "DOI": "10.1080/01605682.2019.1705194",
+      "issue": "5",
+      "journalAbbreviation": "Journal of the Operational Research Society",
+      "ISSN": "0160-5682, 1476-9360",
+      "creators": [
+        {
+          "firstName": "Marco",
+          "lastName": "Del Vecchio",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexander",
+          "lastName": "Kharlamov",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Glenn",
+          "lastName": "Parry",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ganna",
+          "lastName": "Pogrebna",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-03-11T20:47:58Z",
+      "dateModified": "2022-03-11T20:47:58Z",
+      "uri": "http://zotero.org/users/8920562/items/3MEB4W5C",
+      "itemID": 6482,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-03-11T20:48:11Z",
+          "dateModified": "2022-03-11T20:48:11Z",
+          "uri": "http://zotero.org/users/8920562/items/7UTADUL7",
+          "path": "/Users/fred/Zotero/storage/7UTADUL7/Del Vecchio et al. - 2021 - Improving productivity in Hollywood with data scie.pdf",
+          "select": "zotero://select/library/items/7UTADUL7"
+        }
+      ],
+      "notes": [],
+      "citationKey": "delvecchioImprovingProductivityHollywood2021",
+      "itemKey": "3MEB4W5C",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/3MEB4W5C"
+    },
+    {
+      "key": "L2C3P6H9",
+      "version": 474,
+      "itemType": "conferencePaper",
+      "title": "Taming transformers for high-resolution image synthesis",
+      "date": "2021",
+      "libraryCatalog": "Google Scholar",
+      "pages": "12873–12883",
+      "proceedingsTitle": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "creators": [
+        {
+          "firstName": "Patrick",
+          "lastName": "Esser",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Robin",
+          "lastName": "Rombach",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bjorn",
+          "lastName": "Ommer",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-24T22:19:15Z",
+      "dateModified": "2022-01-24T22:19:17Z",
+      "uri": "http://zotero.org/users/8920562/items/L2C3P6H9",
+      "itemID": 6446,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-24T22:19:19Z",
+          "dateModified": "2022-01-24T22:19:19Z",
+          "uri": "http://zotero.org/users/8920562/items/QJ6KTFJM",
+          "path": "/Users/fred/Zotero/storage/QJ6KTFJM/Esser et al. - 2021 - Taming transformers for high-resolution image synt.pdf",
+          "select": "zotero://select/library/items/QJ6KTFJM"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-24T22:19:26Z",
+          "dateModified": "2022-01-24T22:19:26Z",
+          "uri": "http://zotero.org/users/8920562/items/UKUEJP56",
+          "path": "/Users/fred/Zotero/storage/UKUEJP56/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.html",
+          "select": "zotero://select/library/items/UKUEJP56"
+        }
+      ],
+      "notes": [],
+      "citationKey": "esserTamingTransformersHighresolution2021",
+      "itemKey": "L2C3P6H9",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/L2C3P6H9"
+    },
+    {
+      "key": "X3KZ3JEH",
+      "version": 1798,
+      "itemType": "journalArticle",
+      "title": "Intelligence as a planetary scale process",
+      "abstractNote": "Conventionally, intelligence is seen as a property of individuals. However, it is also known to be a property of collectives. Here, we broaden the idea of intelligence as a collective property and extend it to the planetary scale. We consider the ways in which the appearance of technological intelligence may represent a kind of planetary scale transition, and thus might be seen not as something which happens on a planet but to a planet, much as some models propose the origin of life itself was a planetary phenomenon. Our approach follows the recognition among researchers that the correct scale to understand key aspects of life and its evolution is planetary, as opposed to the more traditional focus on individual species. We explore ways in which the concept may prove useful for three distinct domains: Earth Systems and Exoplanet studies; Anthropocene and Sustainability studies; and the study of Technosignatures and the Search for Extraterrestrial Intelligence (SETI). We argue that explorations of planetary intelligence, defined as the acquisition and application of collective knowledge operating at a planetary scale and integrated into the function of coupled planetary systems, can prove a useful framework for understanding possible paths of the long-term evolution of inhabited planets including future trajectories for life on Earth and predicting features of intelligentially steered planetary evolution on other worlds.",
+      "date": "04/2022",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://www.cambridge.org/core/product/identifier/S147355042100029X/type/journal_article",
+      "accessDate": "2022-08-28T15:45:45Z",
+      "volume": "21",
+      "pages": "47-61",
+      "publicationTitle": "International Journal of Astrobiology",
+      "DOI": "10.1017/S147355042100029X",
+      "issue": "2",
+      "journalAbbreviation": "International Journal of Astrobiology",
+      "ISSN": "1473-5504, 1475-3006",
+      "creators": [
+        {
+          "firstName": "Adam",
+          "lastName": "Frank",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Grinspoon",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sara",
+          "lastName": "Walker",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-08-28T15:45:45Z",
+      "dateModified": "2022-08-28T15:45:48Z",
+      "uri": "http://zotero.org/users/8920562/items/X3KZ3JEH",
+      "itemID": 7467,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Frank et al. - 2022 - Intelligence as a planetary scale process.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-28T15:45:41Z",
+          "dateModified": "2022-08-28T15:45:47Z",
+          "uri": "http://zotero.org/users/8920562/items/EPCCXXC3",
+          "path": "/Users/fred/Zotero/storage/EPCCXXC3/Frank et al. - 2022 - Intelligence as a planetary scale process.pdf",
+          "select": "zotero://select/library/items/EPCCXXC3"
+        }
+      ],
+      "notes": [],
+      "citationKey": "frankIntelligencePlanetaryScale2022",
+      "itemKey": "X3KZ3JEH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/X3KZ3JEH"
+    },
+    {
+      "key": "A37WQAIV",
+      "version": 2864,
+      "itemType": "book",
+      "title": "The dawn of everything: A new history of humanity",
+      "date": "2021",
+      "extra": "Citation Key: graeber2021dawn",
+      "publisher": "Penguin UK",
+      "creators": [
+        {
+          "firstName": "David",
+          "lastName": "Graeber",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Wengrow",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        },
+        {
+          "tag": "trillions"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-05T20:18:24Z",
+      "dateModified": "2022-12-05T04:55:09Z",
+      "uri": "http://zotero.org/users/8920562/items/A37WQAIV",
+      "itemID": 6424,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "graeber2021dawn",
+      "itemKey": "A37WQAIV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/A37WQAIV"
+    },
+    {
+      "key": "HFGNGGY6",
+      "version": 871,
+      "itemType": "journalArticle",
+      "title": "The Hardware Lottery",
+      "abstractNote": "Hardware, systems and algorithms research communities have historically had different incentive structures and fluctuating motivation to engage with each other explicitly. This historical treatment is odd given that hardware and software have frequently determined which research ideas succeed (and fail). This essay introduces the term hardware lottery to describe when a research idea wins because it is suited to the available software and hardware and not because the idea is superior to alternative research directions. Examples from early computer science history illustrate how hardware lotteries can delay research progress by casting successful ideas as failures. These lessons are particularly salient given the advent of domain specialized hardware which make it increasingly costly to stray off of the beaten path of research ideas. This essay posits that the gains from progress in computing are likely to become even more uneven, with certain research directions moving into the fast-lane while progress on others is further obstructed.",
+      "date": "2020-09-21",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2009.06489",
+      "accessDate": "2022-04-06T16:29:22Z",
+      "extra": "arXiv: 2009.06489",
+      "publicationTitle": "arXiv:2009.06489 [cs]",
+      "creators": [
+        {
+          "firstName": "Sara",
+          "lastName": "Hooker",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computers and Society",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Hardware Architecture",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-04-06T16:29:22Z",
+      "dateModified": "2022-04-06T16:29:24Z",
+      "uri": "http://zotero.org/users/8920562/items/HFGNGGY6",
+      "itemID": 6490,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-04-06T16:29:26Z",
+          "dateModified": "2022-04-06T16:29:26Z",
+          "uri": "http://zotero.org/users/8920562/items/SXQ59HN4",
+          "path": "/Users/fred/Zotero/storage/SXQ59HN4/Hooker - 2020 - The Hardware Lottery.pdf",
+          "select": "zotero://select/library/items/SXQ59HN4"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-04-06T16:29:33Z",
+          "dateModified": "2022-04-06T16:29:33Z",
+          "uri": "http://zotero.org/users/8920562/items/48WP8SWI",
+          "path": "/Users/fred/Zotero/storage/48WP8SWI/2009.html",
+          "select": "zotero://select/library/items/48WP8SWI"
+        }
+      ],
+      "notes": [],
+      "citationKey": "hookerHardwareLottery2020",
+      "itemKey": "HFGNGGY6",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/HFGNGGY6"
+    },
+    {
+      "key": "WAQD65F8",
+      "version": 875,
+      "itemType": "journalArticle",
+      "title": "Jigsaw: Large Language Models meet Program Synthesis",
+      "abstractNote": "Large pre-trained language models such as GPT-3 [10], Codex [11], and Google’s language model [7] are now capable of generating code from natural language specifications of programmer intent. We view these developments with a mixture of optimism and caution. On the optimistic side, such large language models have the potential to improve productivity by providing an automated AI pair programmer for every programmer in the world. On the cautionary side, since these large language models do not understand program semantics, they offer no guarantees about quality of the suggested code. In this paper, we present an approach to augment these large language models with post-processing steps based on program analysis and synthesis techniques, that understand the syntax and semantics of programs. Further, we show that such techniques can make use of user feedback and improve with usage. We present our experiences from building and evaluating such a tool Jigsaw, targeted at synthesizing code for using Python Pandas API using multi-modal inputs. Our experience suggests that as these large language models evolve for synthesizing code from intent, Jigsaw has an important role to play in improving the accuracy of the systems.",
+      "date": "2021-12-06",
+      "language": "en",
+      "shortTitle": "Jigsaw",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2112.02969",
+      "accessDate": "2022-04-13T04:48:07Z",
+      "extra": "arXiv: 2112.02969",
+      "publicationTitle": "arXiv:2112.02969 [cs]",
+      "creators": [
+        {
+          "firstName": "Naman",
+          "lastName": "Jain",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Skanda",
+          "lastName": "Vaidyanath",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Arun",
+          "lastName": "Iyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nagarajan",
+          "lastName": "Natarajan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Suresh",
+          "lastName": "Parthasarathy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sriram",
+          "lastName": "Rajamani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rahul",
+          "lastName": "Sharma",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Programming Languages",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Software Engineering",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-04-13T04:48:07Z",
+      "dateModified": "2022-04-13T04:48:09Z",
+      "uri": "http://zotero.org/users/8920562/items/WAQD65F8",
+      "itemID": 6494,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Jain et al. - 2021 - Jigsaw Large Language Models meet Program Synthes.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-04-13T04:48:01Z",
+          "dateModified": "2022-04-13T04:48:09Z",
+          "uri": "http://zotero.org/users/8920562/items/DP2TFMHI",
+          "path": "/Users/fred/Zotero/storage/DP2TFMHI/Jain et al. - 2021 - Jigsaw Large Language Models meet Program Synthes.pdf",
+          "select": "zotero://select/library/items/DP2TFMHI"
+        }
+      ],
+      "notes": [
+        {
+          "key": "9FTTUAXE",
+          "version": 875,
+          "itemType": "note",
+          "parentItem": "WAQD65F8",
+          "note": "Comment: Accepted to ICSE'22",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-04-13T04:48:07Z",
+          "dateModified": "2022-04-13T04:48:07Z",
+          "uri": "http://zotero.org/users/8920562/items/9FTTUAXE"
+        }
+      ],
+      "citationKey": "jainJigsawLargeLanguage2021",
+      "itemKey": "WAQD65F8",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/WAQD65F8"
+    },
+    {
+      "key": "T49FPHDH",
+      "version": 2211,
+      "itemType": "journalArticle",
+      "title": "Extraction and analysis of fictional character networks: A survey",
+      "abstractNote": "A\n              character network\n              is a graph extracted from a narrative in which vertices represent characters and edges correspond to interactions between them. A number of narrative-related problems can be addressed automatically through the analysis of character networks, such as summarization, classification, or role detection. Character networks are particularly relevant when considering\n              works of fiction\n              (e.g., novels, plays, movies, TV series), as their exploitation allows developing information retrieval and recommendation systems. However, works of fiction possess specific properties that make these tasks harder.\n            \n            This survey aims at presenting and organizing the scientific literature related to the extraction of character networks from works of fiction, as well as their analysis. We first describe the extraction process in a generic way and explain how its constituting steps are implemented in practice, depending on the medium of the narrative, the goal of the network analysis, and other factors. We then review the descriptive tools used to characterize character networks, with a focus on the way they are interpreted in this context. We illustrate the relevance of character networks by also providing a review of applications derived from their analysis. Finally, we identify the limitations of the existing approaches and the most promising perspectives.",
+      "date": "2019-09-01",
+      "language": "en",
+      "shortTitle": "Extraction and Analysis of Fictional Character Networks",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://dl.acm.org/doi/10.1145/3344548",
+      "accessDate": "2021-08-22",
+      "extra": "Publisher: Association for Computing Machinery",
+      "volume": "52",
+      "pages": "1-40",
+      "publicationTitle": "ACM Computing Surveys",
+      "DOI": "10.1145/3344548",
+      "issue": "5",
+      "journalAbbreviation": "ACM Comput. Surv.",
+      "ISSN": "0360-0300, 1557-7341",
+      "creators": [
+        {
+          "firstName": "Vincent",
+          "lastName": "Labatut",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xavier",
+          "lastName": "Bost",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Character network",
+          "type": 1
+        },
+        {
+          "tag": "Graph analysis",
+          "type": 1
+        },
+        {
+          "tag": "Graph extraction",
+          "type": 1
+        },
+        {
+          "tag": "Information retrieval",
+          "type": 1
+        },
+        {
+          "tag": "Narrative",
+          "type": 1
+        },
+        {
+          "tag": "Work of fiction",
+          "type": 1
+        },
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2021-08-22T16:28:26Z",
+      "dateModified": "2022-10-20T03:01:23Z",
+      "uri": "http://zotero.org/users/8920562/items/T49FPHDH",
+      "itemID": 6403,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Labatut and Bost - 2020 - Extraction and Analysis of Fictional Character Net.pdf",
+          "tags": [
+            {
+              "tag": "#duplicate_attachments"
+            }
+          ],
+          "relations": [],
+          "dateAdded": "2022-06-22T21:52:07Z",
+          "dateModified": "2022-12-05T04:50:33Z",
+          "uri": "http://zotero.org/users/8920562/items/G8DXXZRM",
+          "path": "/Users/fred/Zotero/storage/G8DXXZRM/Labatut and Bost - 2020 - Extraction and Analysis of Fictional Character Net.pdf",
+          "select": "zotero://select/library/items/G8DXXZRM"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Submitted Version",
+          "tags": [
+            {
+              "tag": "#duplicate_attachments"
+            }
+          ],
+          "relations": [],
+          "dateAdded": "2022-03-11T20:48:19Z",
+          "dateModified": "2022-12-05T04:50:29Z",
+          "uri": "http://zotero.org/users/8920562/items/M4NHK5JD",
+          "path": "/Users/fred/Zotero/storage/M4NHK5JD/Labatut and Bost - 2020 - Extraction and Analysis of Fictional Character Net.pdf",
+          "select": "zotero://select/library/items/M4NHK5JD"
+        }
+      ],
+      "notes": [],
+      "citationKey": "labatutExtractionAnalysisFictional2019",
+      "itemKey": "T49FPHDH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/T49FPHDH"
+    },
+    {
+      "key": "JHKS3H6G",
+      "version": 1833,
+      "itemType": "journalArticle",
+      "title": "Surgical amputation of a limb 31,000 years ago in Borneo",
+      "abstractNote": "The prevailing view regarding the evolution of medicine is that the emergence of settled agricultural societies around 10,000 years ago (the Neolithic Revolution) gave rise to a host of health problems that had previously been unknown among non-sedentary foraging populations, stimulating the first major innovations in prehistoric medical practices1,2. Such changes included the development of more advanced surgical procedures, with the oldest known indication of an ‘operation’ formerly thought to have consisted of the skeletal remains of a European Neolithic farmer (found in Buthiers-Boulancourt, France) whose left forearm had been surgically removed and then partially healed3. Dating to around 7,000 years ago, this accepted case of amputation would have required comprehensive knowledge of human anatomy and considerable technical skill, and has thus been viewed as the earliest evidence of a complex medical act3. Here, however, we report the discovery of skeletal remains of a young individual from Borneo who had the distal third of their left lower leg surgically amputated, probably as a child, at least 31,000 years ago. The individual survived the procedure and lived for another 6–9 years, before their remains were intentionally buried in Liang Tebo cave, which is located in East Kalimantan, Indonesian Borneo, in a limestone karst area that contains some of the world’s earliest dated rock art4. This unexpectedly early evidence of a successful limb amputation suggests that at least some modern human foraging groups in tropical Asia had developed sophisticated medical knowledge and skills long before the Neolithic farming transition.",
+      "date": "2022-09-07",
+      "language": "en",
+      "libraryCatalog": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41586-022-05160-8",
+      "accessDate": "2022-09-07T21:52:57Z",
+      "rights": "2022 The Author(s)",
+      "extra": "Publisher: Nature Publishing Group",
+      "pages": "1-5",
+      "publicationTitle": "Nature",
+      "DOI": "10.1038/s41586-022-05160-8",
+      "ISSN": "1476-4687",
+      "creators": [
+        {
+          "firstName": "Tim Ryan",
+          "lastName": "Maloney",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "India Ella",
+          "lastName": "Dilkes-Hall",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Melandri",
+          "lastName": "Vlok",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Adhi Agus",
+          "lastName": "Oktaviana",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pindi",
+          "lastName": "Setiawan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Andika Arief Drajat",
+          "lastName": "Priyatno",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marlon",
+          "lastName": "Ririmasse",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "I. Made",
+          "lastName": "Geria",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Muslimin A. R.",
+          "lastName": "Effendy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Budi",
+          "lastName": "Istiawan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Falentinus Triwijaya",
+          "lastName": "Atmoko",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shinatria",
+          "lastName": "Adhityatama",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ian",
+          "lastName": "Moffat",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Renaud",
+          "lastName": "Joannes-Boyau",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Adam",
+          "lastName": "Brumm",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Maxime",
+          "lastName": "Aubert",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Archaeology",
+          "type": 1
+        },
+        {
+          "tag": "Biological anthropology",
+          "type": 1
+        },
+        {
+          "tag": "Social anthropology",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-09-07T21:52:56Z",
+      "dateModified": "2022-09-07T21:53:01Z",
+      "uri": "http://zotero.org/users/8920562/items/JHKS3H6G",
+      "itemID": 7494,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-09-07T21:53:11Z",
+          "dateModified": "2022-09-07T21:53:11Z",
+          "uri": "http://zotero.org/users/8920562/items/B892V8SW",
+          "path": "/Users/fred/Zotero/storage/B892V8SW/Maloney et al. - 2022 - Surgical amputation of a limb 31,000 years ago in .pdf",
+          "select": "zotero://select/library/items/B892V8SW"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-09-07T21:53:08Z",
+          "dateModified": "2022-09-07T21:53:08Z",
+          "uri": "http://zotero.org/users/8920562/items/3UPY8RI4",
+          "path": "/Users/fred/Zotero/storage/3UPY8RI4/s41586-022-05160-8.html",
+          "select": "zotero://select/library/items/3UPY8RI4"
+        }
+      ],
+      "notes": [],
+      "citationKey": "maloneySurgicalAmputationLimb2022",
+      "itemKey": "JHKS3H6G",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JHKS3H6G"
+    },
+    {
+      "key": "Q69PJU99",
+      "version": 1720,
+      "itemType": "webpage",
+      "title": "Network Analysis & Visualization: Game of Thrones Character Network",
+      "abstractNote": "This article will help you understand the basics of network centrality measures and how to compute them using networkx library on a Game…",
+      "date": "2022-03-30T06:49:22.359Z",
+      "language": "en",
+      "shortTitle": "Network Analysis & Visualization",
+      "url": "https://medium.com/analytics-vidhya/network-analysis-visualization-game-of-thrones-character-network-dc96ea3013e9",
+      "accessDate": "2022-08-20T21:37:24Z",
+      "websiteTitle": "Medium",
+      "creators": [
+        {
+          "firstName": "Nayana",
+          "lastName": "Nair",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-08-20T21:37:24Z",
+      "dateModified": "2022-08-20T21:37:24Z",
+      "uri": "http://zotero.org/users/8920562/items/Q69PJU99",
+      "itemID": 7422,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-08-20T21:37:32Z",
+          "dateModified": "2022-08-20T21:37:32Z",
+          "uri": "http://zotero.org/users/8920562/items/R887JAMN",
+          "path": "/Users/fred/Zotero/storage/R887JAMN/network-analysis-visualization-game-of-thrones-character-network-dc96ea3013e9.html",
+          "select": "zotero://select/library/items/R887JAMN"
+        }
+      ],
+      "notes": [],
+      "citationKey": "nairNetworkAnalysisVisualization2022",
+      "itemKey": "Q69PJU99",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/Q69PJU99"
+    },
+    {
+      "key": "W592WGFG",
+      "version": 472,
+      "itemType": "webpage",
+      "title": "Global Trends 2040: A More Contested World",
+      "date": "2021",
+      "url": "https://www.dni.gov/index.php/gt2040-home/introduction",
+      "accessDate": "2022-01-07T22:15:39Z",
+      "websiteTitle": "Global Trends 2040: A More Contested World",
+      "creators": [
+        {
+          "name": "Office of the Director of National Intelligence",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-01-07T22:15:39Z",
+      "dateModified": "2022-01-07T22:19:32Z",
+      "uri": "http://zotero.org/users/8920562/items/W592WGFG",
+      "itemID": 6431,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Office of the Director of National Intelligence - Global Trends",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-07T22:15:44Z",
+          "dateModified": "2022-01-07T22:15:44Z",
+          "uri": "http://zotero.org/users/8920562/items/59USE4TS",
+          "path": "/Users/fred/Zotero/storage/59USE4TS/introduction.html",
+          "select": "zotero://select/library/items/59USE4TS"
+        }
+      ],
+      "notes": [],
+      "citationKey": "officeofthedirectorofnationalintelligenceGlobalTrends20402021",
+      "itemKey": "W592WGFG",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W592WGFG"
+    },
+    {
+      "key": "PB6B3I7N",
+      "version": 2863,
+      "itemType": "webpage",
+      "title": "How Many People Have Ever Lived on Earth? | PRB",
+      "date": "2021",
+      "url": "https://www.prb.org/articles/how-many-people-have-ever-lived-on-earth/",
+      "accessDate": "2021-12-16",
+      "extra": "Citation Key: PRB2021",
+      "creators": [
+        {
+          "name": "Population Reference Bureau",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2021-12-16T18:45:58Z",
+      "dateModified": "2022-12-05T04:55:09Z",
+      "uri": "http://zotero.org/users/8920562/items/PB6B3I7N",
+      "itemID": 6418,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "PRB2021",
+      "itemKey": "PB6B3I7N",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PB6B3I7N"
+    },
+    {
+      "key": "4CY9YV52",
+      "version": 474,
+      "itemType": "journalArticle",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "abstractNote": "State-of-the-art computer vision systems are trained to predict a ﬁxed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efﬁcient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of ﬁne-grained object classiﬁcation. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset speciﬁc training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.",
+      "language": "en",
+      "libraryCatalog": "Zotero",
+      "pages": "47",
+      "creators": [
+        {
+          "firstName": "Alec",
+          "lastName": "Radford",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jong Wook",
+          "lastName": "Kim",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chris",
+          "lastName": "Hallacy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aditya",
+          "lastName": "Ramesh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gabriel",
+          "lastName": "Goh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sandhini",
+          "lastName": "Agarwal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Girish",
+          "lastName": "Sastry",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amanda",
+          "lastName": "Askell",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pamela",
+          "lastName": "Mishkin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jack",
+          "lastName": "Clark",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gretchen",
+          "lastName": "Krueger",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilya",
+          "lastName": "Sutskever",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "⛔ No DOI found",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-24T22:21:08Z",
+      "dateModified": "2022-01-24T22:21:08Z",
+      "uri": "http://zotero.org/users/8920562/items/4CY9YV52",
+      "itemID": 6450,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Radford et al. - Learning Transferable Visual Models From Natural L.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-24T22:21:04Z",
+          "dateModified": "2022-01-24T22:21:08Z",
+          "uri": "http://zotero.org/users/8920562/items/AH6GRBIX",
+          "path": "/Users/fred/Zotero/storage/AH6GRBIX/Radford et al. - Learning Transferable Visual Models From Natural L.pdf",
+          "select": "zotero://select/library/items/AH6GRBIX"
+        }
+      ],
+      "notes": [],
+      "citationKey": "radfordLearningTransferableVisual",
+      "itemKey": "4CY9YV52",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/4CY9YV52"
+    },
+    {
+      "key": "PFL2KV3Q",
+      "version": 474,
+      "itemType": "webpage",
+      "title": "ruDALL-E: Generating Images from Text. Facing down the biggest computational challenge in Russia",
+      "abstractNote": "In this article we present the ruDALL-E XL model, an open-source text-to-image transformer with 1.3 billion parameters as well as ruDALL-E XXL model, an text-to-image transformer with 12.0 billion...",
+      "language": "en",
+      "shortTitle": "ruDALL-E",
+      "url": "https://habr.com/en/company/sberbank/blog/589673/",
+      "accessDate": "2022-01-25T07:10:06Z",
+      "websiteTitle": "Habr",
+      "creators": [],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-01-25T07:10:06Z",
+      "dateModified": "2022-01-25T07:10:06Z",
+      "uri": "http://zotero.org/users/8920562/items/PFL2KV3Q",
+      "itemID": 6451,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-25T07:10:12Z",
+          "dateModified": "2022-01-25T07:10:12Z",
+          "uri": "http://zotero.org/users/8920562/items/Y54BL9F7",
+          "path": "/Users/fred/Zotero/storage/Y54BL9F7/589673.html",
+          "select": "zotero://select/library/items/Y54BL9F7"
+        }
+      ],
+      "notes": [],
+      "citationKey": "RuDALLEGeneratingImages",
+      "itemKey": "PFL2KV3Q",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PFL2KV3Q"
+    },
+    {
+      "key": "4W48K395",
+      "version": 477,
+      "itemType": "report",
+      "title": "Bounce backs amid continued losses: Life expectancy changes since COVID-19",
+      "abstractNote": "Background The COVID-19 pandemic triggered an unprecedented rise in mortality that translated into life expectancy losses around the world, with only a few exceptions. In 2021, life expectancy trends globally diverged more due to the unequal impact of the pandemic across countries, variation in the age-patterns of mortality, and diﬀerences in vaccination. We estimate life expectancy changes in 29 countries since 2020, attribute them to mortality changes by age group, and compare them to historic life expectancy shocks.",
+      "date": "2022-02-24",
+      "language": "en",
+      "shortTitle": "Bounce backs amid continued losses",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://medrxiv.org/lookup/doi/10.1101/2022.02.23.22271380",
+      "accessDate": "2022-03-08T16:57:45Z",
+      "extra": "DOI: 10.1101/2022.02.23.22271380",
+      "reportType": "preprint",
+      "institution": "Epidemiology",
+      "creators": [
+        {
+          "firstName": "Jonas",
+          "lastName": "Schöley",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "José Manuel",
+          "lastName": "Aburto",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilya",
+          "lastName": "Kashnitsky",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Maxi S.",
+          "lastName": "Kniffka",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luyin",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hannaliis",
+          "lastName": "Jaadla",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jennifer B.",
+          "lastName": "Dowd",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ridhi",
+          "lastName": "Kashyap",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-03-08T16:57:45Z",
+      "dateModified": "2022-03-08T16:57:46Z",
+      "uri": "http://zotero.org/users/8920562/items/4W48K395",
+      "itemID": 6475,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Schöley et al. - 2022 - Bounce backs amid continued losses Life expectanc.pdf",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-03-08T16:57:41Z",
+          "dateModified": "2022-03-08T16:57:46Z",
+          "uri": "http://zotero.org/users/8920562/items/JAS4XS9Z",
+          "path": "/Users/fred/Zotero/storage/JAS4XS9Z/Schöley et al. - 2022 - Bounce backs amid continued losses Life expectanc.pdf",
+          "select": "zotero://select/library/items/JAS4XS9Z"
+        }
+      ],
+      "notes": [],
+      "citationKey": "scholeyBounceBacksContinued2022",
+      "itemKey": "4W48K395",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/4W48K395"
+    },
+    {
+      "key": "4RYQWPX3",
+      "version": 474,
+      "itemType": "webpage",
+      "title": "Songchun Zhu: Intelligence needs to be driven by “mind,” achieving a dynamic balance between “mind” and “principle”",
+      "abstractNote": "Songchun Zhu: Intelligence needs to be driven by “mind,” achieving a dynamic balance between “mind” and “principle” *Note: These are Jeffrey Ding’s informal and unofficial translations -- all credit for the original goes to the authors and the original text linked below. These are informal transl...",
+      "language": "en",
+      "shortTitle": "Songchun Zhu",
+      "url": "https://docs.google.com/document/d/19HOh3C2KQxBCBZl87yF0phbWsfZB8VcTG8Df19fiXCc/edit?usp=sharing&usp=embed_facebook",
+      "accessDate": "2022-01-18T02:34:06Z",
+      "websiteTitle": "Google Docs",
+      "creators": [],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-01-18T02:34:06Z",
+      "dateModified": "2022-01-18T02:34:06Z",
+      "uri": "http://zotero.org/users/8920562/items/4RYQWPX3",
+      "itemID": 6444,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-18T02:34:14Z",
+          "dateModified": "2022-01-18T02:34:14Z",
+          "uri": "http://zotero.org/users/8920562/items/4NNE8SYU",
+          "path": "/Users/fred/Zotero/storage/4NNE8SYU/edit.html",
+          "select": "zotero://select/library/items/4NNE8SYU"
+        }
+      ],
+      "notes": [],
+      "citationKey": "SongchunZhuIntelligence",
+      "itemKey": "4RYQWPX3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/4RYQWPX3"
+    },
+    {
+      "key": "FV65PP5M",
+      "version": 2864,
+      "itemType": "journalArticle",
+      "title": "Quantitative analysis of fanfictions’ popularity",
+      "date": "12/2022",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://link.springer.com/10.1007/s13278-021-00854-9",
+      "accessDate": "2022-03-11T20:47:57Z",
+      "volume": "12",
+      "pages": "42",
+      "publicationTitle": "Social Network Analysis and Mining",
+      "DOI": "10.1007/s13278-021-00854-9",
+      "issue": "1",
+      "journalAbbreviation": "Soc. Netw. Anal. Min.",
+      "ISSN": "1869-5450, 1869-5469",
+      "creators": [
+        {
+          "firstName": "Zhivar",
+          "lastName": "Sourati Hassan Zadeh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nazanin",
+          "lastName": "Sabri",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Houmaan",
+          "lastName": "Chamani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Behnam",
+          "lastName": "Bahrak",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-03-11T20:47:58Z",
+      "dateModified": "2022-12-05T04:55:11Z",
+      "uri": "http://zotero.org/users/8920562/items/FV65PP5M",
+      "itemID": 6486,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "souratihassanzadehQuantitativeAnalysisFanfictions2022",
+      "itemKey": "FV65PP5M",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/FV65PP5M"
+    },
+    {
+      "key": "IWTXXURR",
+      "version": 473,
+      "itemType": "journalArticle",
+      "title": "Age of the oldest known Homo sapiens from eastern Africa",
+      "abstractNote": "Efforts to date the oldest modern human fossils in eastern Africa, from Omo-Kibish1–3 and Herto4,5 in Ethiopia, have drawn on a variety of chronometric evidence, including 40Ar/39Ar ages of stratigraphically associated tuffs. The ages that are generally reported for these fossils are around 197 thousand years (kyr) for the Kibish Omo I3,6,7, and around 160–155 kyr for the Herto hominins5,8. However, the stratigraphic relationships and tephra correlations that underpin these estimates have been challenged6,8. Here we report geochemical analyses that link the Kamoya’s Hominid Site (KHS) Tuff9, which conclusively overlies the member of the Omo-Kibish Formation that contains Omo I, with a major explosive eruption of Shala volcano in the Main Ethiopian Rift. By dating the proximal deposits of this eruption, we obtain a new minimum age for the Omo fossils of 233 ± 22 kyr. Contrary to previous arguments6,8, we also show that the KHS Tuff does not correlate with another widespread tephra layer, the Waidedo Vitric Tuff, and therefore cannot anchor a minimum age for the Herto fossils. Shifting the age of the oldest known Homo sapiens fossils in eastern Africa to before around 200 thousand years ago is consistent with independent evidence for greater antiquity of the modern human lineage10.",
+      "date": "2022-01-12",
+      "language": "en",
+      "libraryCatalog": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41586-021-04275-8",
+      "accessDate": "2022-01-14T08:19:01Z",
+      "rights": "2022 The Author(s)",
+      "extra": "Bandiera_abtest: a\nCc_license_type: cc_by\nCg_type: Nature Research Journals\nPrimary_atype: Research\nPublisher: Nature Publishing Group\nSubject_term: Archaeology;Geochemistry;Volcanology\nSubject_term_id: archaeology;geochemistry;volcanology",
+      "pages": "1-5",
+      "publicationTitle": "Nature",
+      "DOI": "10/gn3794",
+      "ISSN": "1476-4687",
+      "creators": [
+        {
+          "firstName": "Céline M.",
+          "lastName": "Vidal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christine S.",
+          "lastName": "Lane",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Asfawossen",
+          "lastName": "Asrat",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dan N.",
+          "lastName": "Barfod",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Darren F.",
+          "lastName": "Mark",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emma L.",
+          "lastName": "Tomlinson",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amdemichael Zafu",
+          "lastName": "Tadesse",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gezahegn",
+          "lastName": "Yirgu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alan",
+          "lastName": "Deino",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "William",
+          "lastName": "Hutchison",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aurélien",
+          "lastName": "Mounier",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Clive",
+          "lastName": "Oppenheimer",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Archaeology",
+          "type": 1
+        },
+        {
+          "tag": "Geochemistry",
+          "type": 1
+        },
+        {
+          "tag": "Volcanology",
+          "type": 1
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-01-14T08:19:01Z",
+      "dateModified": "2022-01-14T08:19:03Z",
+      "uri": "http://zotero.org/users/8920562/items/IWTXXURR",
+      "itemID": 6441,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-14T08:19:03Z",
+          "dateModified": "2022-01-14T08:19:03Z",
+          "uri": "http://zotero.org/users/8920562/items/G3R5D853",
+          "path": "/Users/fred/Zotero/storage/G3R5D853/Vidal et al. - 2022 - Age of the oldest known Homo sapiens from eastern .pdf",
+          "select": "zotero://select/library/items/G3R5D853"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-14T08:19:10Z",
+          "dateModified": "2022-01-14T08:19:10Z",
+          "uri": "http://zotero.org/users/8920562/items/YU5EDA7W",
+          "path": "/Users/fred/Zotero/storage/YU5EDA7W/s41586-021-04275-8.html",
+          "select": "zotero://select/library/items/YU5EDA7W"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vidalAgeOldestKnown2022",
+      "itemKey": "IWTXXURR",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/IWTXXURR"
+    },
+    {
+      "key": "XFLTASVJ",
+      "version": 1084,
+      "itemType": "journalArticle",
+      "title": "The representative concentration pathways: an overview",
+      "abstractNote": "This paper summarizes the development process and main characteristics of the Representative Concentration Pathways (RCPs), a set of four new pathways developed for the climate modeling community as a basis for long-term and near-term modeling experiments. The four RCPs together span the range of year 2100 radiative forcing values found in the open literature, i.e. from 2.6 to 8.5 W/m2. The RCPs are the product of an innovative collaboration between integrated assessment modelers, climate modelers, terrestrial ecosystem modelers and emission inventory experts. The resulting product forms a comprehensive data set with high spatial and sectoral resolutions for the period extending to 2100. Land use and emissions of air pollutants and greenhouse gases are reported mostly at a 0.5 × 0.5 degree spatial resolution, with air pollutants also provided per sector (for well-mixed gases, a coarser resolution is used). The underlying integrated assessment model outputs for land use, atmospheric emissions and concentration data were harmonized across models and scenarios to ensure consistency with historical observations while preserving individual scenario trends. For most variables, the RCPs cover a wide range of the existing literature. The RCPs are supplemented with extensions (Extended Concentration Pathways, ECPs), which allow climate modeling experiments through the year 2300. The RCPs are an important development in climate research and provide a potential foundation for further research and assessment, including emissions mitigation and impact analysis.",
+      "date": "2011-08-05",
+      "language": "en",
+      "shortTitle": "The representative concentration pathways",
+      "libraryCatalog": "Springer Link",
+      "url": "http://www.springerlink.com/index/10.1007/s10584-011-0148-z",
+      "extra": "Publisher: Springer Netherlands",
+      "volume": "109",
+      "pages": "1-27",
+      "publicationTitle": "Climatic Change",
+      "DOI": "10.1007/s10584-011-0148-z",
+      "issue": "1",
+      "journalAbbreviation": "Climatic Change",
+      "ISSN": "1573-1480",
+      "creators": [
+        {
+          "firstName": "Detlef P",
+          "lastName": "Vuuren",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jae",
+          "lastName": "Edmonds",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mikiko",
+          "lastName": "Kainuma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Keywan",
+          "lastName": "Riahi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Allison",
+          "lastName": "Thomson",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kathy",
+          "lastName": "Hibbard",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "George C",
+          "lastName": "Hurtt",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tom",
+          "lastName": "Kram",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Volker",
+          "lastName": "Krey",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jean-Francois",
+          "lastName": "Lamarque",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Toshihiko",
+          "lastName": "Masui",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Malte",
+          "lastName": "Meinshausen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nebojsa",
+          "lastName": "Nakicenovic",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Steven J",
+          "lastName": "Smith",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Steven K",
+          "lastName": "Rose",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2021-03-29T22:52:36Z",
+      "dateModified": "2022-06-18T22:44:54Z",
+      "uri": "http://zotero.org/users/8920562/items/XFLTASVJ",
+      "itemID": 3361,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Springer Full Text PDF",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-01-08T06:02:18Z",
+          "dateModified": "2022-06-18T22:44:54Z",
+          "uri": "http://zotero.org/users/8920562/items/RA6M5ZSJ",
+          "path": "/Users/fred/Zotero/storage/RA6M5ZSJ/van Vuuren et al. - 2011 - The representative concentration pathways an over.pdf",
+          "select": "zotero://select/library/items/RA6M5ZSJ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vuurenRepresentativeConcentrationPathways2011",
+      "itemKey": "XFLTASVJ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/XFLTASVJ"
+    },
+    {
+      "key": "H9H6TUHU",
+      "version": 2864,
+      "itemType": "conferencePaper",
+      "title": "Fiction Popularity Prediction Based on Emotion Analysis",
+      "date": "2020-10-27",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://dl.acm.org/doi/10.1145/3437802.3437831",
+      "accessDate": "2022-03-11T20:47:57Z",
+      "place": "Xiamen China",
+      "publisher": "ACM",
+      "ISBN": "978-1-4503-8805-4",
+      "pages": "169-175",
+      "proceedingsTitle": "2020 International Conference on Control, Robotics and Intelligent System",
+      "conferenceName": "CCRIS 2020: 2020 International Conference on Control, Robotics and Intelligent System",
+      "DOI": "10.1145/3437802.3437831",
+      "creators": [
+        {
+          "firstName": "Xing",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shouhua",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ivan",
+          "lastName": "Smetannikov",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#nosource"
+        }
+      ],
+      "relations": [],
+      "dateAdded": "2022-03-11T20:47:58Z",
+      "dateModified": "2022-12-05T04:55:11Z",
+      "uri": "http://zotero.org/users/8920562/items/H9H6TUHU",
+      "itemID": 6485,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "wangFictionPopularityPrediction2020",
+      "itemKey": "H9H6TUHU",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/H9H6TUHU"
+    },
+    {
+      "key": "ZTXAXUKR",
+      "version": 1084,
+      "itemType": "webpage",
+      "title": "How Did This Many Deaths Become Normal?",
+      "abstractNote": "The U.S. is nearing 1 million recorded COVID-19 deaths without the social reckoning that such a tragedy should provoke. Why?",
+      "date": "2022-03-08T12:00:00Z",
+      "language": "en",
+      "url": "https://www.theatlantic.com/health/archive/2022/03/covid-us-death-rate/626972/",
+      "accessDate": "2022-03-08T16:52:09Z",
+      "extra": "Section: Health",
+      "websiteTitle": "The Atlantic",
+      "creators": [
+        {
+          "firstName": "Ed",
+          "lastName": "Yong",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": [],
+      "dateAdded": "2022-03-08T16:52:33Z",
+      "dateModified": "2022-06-18T22:44:34Z",
+      "uri": "http://zotero.org/users/8920562/items/ZTXAXUKR",
+      "itemID": 6476,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": [],
+          "dateAdded": "2022-03-08T16:52:33Z",
+          "dateModified": "2022-06-18T22:44:34Z",
+          "uri": "http://zotero.org/users/8920562/items/DGPT3EQV",
+          "path": "/Users/fred/Zotero/storage/DGPT3EQV/Yong - 2022 - How Did This Many Deaths Become Normal.html",
+          "select": "zotero://select/library/items/DGPT3EQV"
+        }
+      ],
+      "notes": [
+        {
+          "key": "W99IGXXX",
+          "version": 1085,
+          "itemType": "note",
+          "parentItem": "ZTXAXUKR",
+          "note": "<blockquote>a study of 29 high-income countries</blockquote>",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-03-08T16:55:31Z",
+          "dateModified": "2022-06-18T22:44:34Z",
+          "uri": "http://zotero.org/users/8920562/items/W99IGXXX"
+        },
+        {
+          "key": "3E9UEMS4",
+          "version": 2,
+          "itemType": "note",
+          "parentItem": "ZTXAXUKR",
+          "note": "<blockquote>a study of 29 high-income countries</blockquote>",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-03-08T16:52:33Z",
+          "dateModified": "2022-03-08T16:52:33Z",
+          "uri": "http://zotero.org/users/8920562/items/3E9UEMS4"
+        }
+      ],
+      "citationKey": "yongHowDidThis2022a",
+      "itemKey": "ZTXAXUKR",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ZTXAXUKR"
+    }
+  ]
+}

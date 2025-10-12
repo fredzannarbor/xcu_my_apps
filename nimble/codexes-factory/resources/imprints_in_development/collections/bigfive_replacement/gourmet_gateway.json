@@ -1,0 +1,28 @@
+{
+  "imprint": "Gourmet Gateway",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@gourmetgateway.com",
+  "branding": {
+    "tagline": "Elevate Your Culinary Journey",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.gourmetgateway.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "High-end cooking, fine dining, international cuisines",
+    "target_audience": "Aspiring home chefs and food enthusiasts",
+    "competitive_advantage": "Accessible yet sophisticated content, focus on unique global flavors",
+    "example_titles": "Michelin Star Home Cooking, The World's Kitchen"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

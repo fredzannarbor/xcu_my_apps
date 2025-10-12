@@ -1,0 +1,92 @@
+{
+  "_config_info": {
+    "description": "Xynapse Traces imprint configuration for arxiv-writer",
+    "version": "2.0",
+    "last_updated": "2025-01-15",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Xynapse Traces",
+  "publisher": "Nimble Books LLC",
+  "workspace_root": ".",
+  "output_directory": "output/arxiv_papers",
+  "llm_config": {
+    "default_model": "gemini/gemini-2.5-flash",
+    "available_models": [
+      "google/gemini-2.0-flash-exp",
+      "google/gemini-pro-1.5",
+      "anthropic/claude-3-5-sonnet-20241022",
+      "openai/gpt-4-turbo",
+      "xai/grok-beta"
+    ],
+    "model_parameters": {
+      "google/gemini-2.0-flash-exp": {
+        "max_tokens": 8000,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "google/gemini-pro-1.5": {
+        "max_tokens": 4000,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "anthropic/claude-3-5-sonnet-20241022": {
+        "max_tokens": 4000,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "openai/gpt-4-turbo": {
+        "max_tokens": 4000,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "xai/grok-beta": {
+        "max_tokens": 4000,
+        "temperature": 0.7,
+        "top_p": 0.9
+      }
+    }
+  },
+  "template_config": {
+    "template_file": "templates/default_prompts.json",
+    "section_order": [
+      "abstract",
+      "introduction",
+      "related_work",
+      "methodology",
+      "results",
+      "discussion",
+      "conclusion",
+      "references"
+    ],
+    "custom_templates": {},
+    "default_prompts": {}
+  },
+  "validation_config": {
+    "enabled": true,
+    "strict_mode": false,
+    "quality_thresholds": {
+      "min_word_count": 500,
+      "max_word_count": 8000,
+      "readability_score": 0.7,
+      "coherence_score": 0.8,
+      "citation_count": 10,
+      "section_balance": 0.6,
+      "technical_depth": 0.7,
+      "academic_tone": 0.8
+    }
+  },
+  "context_config": {
+    "collect_book_catalog": true,
+    "collect_imprint_config": true,
+    "collect_technical_architecture": true,
+    "collect_performance_metrics": true
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "notification_email": "xynapse@nimblebooks.com",
+    "backup_configurations": true,
+    "llm_completion_enabled": true,
+    "computed_fields_enabled": true
+  }
+}

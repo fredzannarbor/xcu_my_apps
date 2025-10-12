@@ -1,0 +1,37 @@
+{
+  "uuid": "bf086f0d-5d82-4cd8-8966-d568a485faa8",
+  "shortuuid": "bf086f0d",
+  "object_type": "outline",
+  "development_stage": "development",
+  "title": "Untitled",
+  "content": "# Untitled\n\n**Total Chapters:** 0\n**Target Word Count:** 0\n",
+  "logline": "",
+  "description": "",
+  "genre": "",
+  "target_audience": "",
+  "confidence_score": 0.0,
+  "word_count": 9,
+  "parent_uuid": null,
+  "series_uuid": null,
+  "source_elements": [],
+  "derived_from": [],
+  "created_timestamp": "2025-10-07T09:14:20.173909",
+  "last_modified": "2025-10-07T09:14:20.173918",
+  "processing_history": [
+    {
+      "action": "created",
+      "timestamp": "2025-10-07T09:14:20.173909",
+      "details": {
+        "object_type": "outline"
+      }
+    }
+  ],
+  "llm_responses": {},
+  "generation_metadata": {},
+  "tournament_performance": {},
+  "reader_feedback": [],
+  "evaluation_scores": {},
+  "status": "created",
+  "tags": [],
+  "notes": ""
+}

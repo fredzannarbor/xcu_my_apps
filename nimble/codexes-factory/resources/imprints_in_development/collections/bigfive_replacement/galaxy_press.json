@@ -1,0 +1,28 @@
+{
+  "imprint": "Galaxy Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@galaxypress.com",
+  "branding": {
+    "tagline": "Journey to the stars",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.galaxypress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space exploration biographies and memoirs",
+    "target_audience": "Biography readers, space enthusiasts",
+    "competitive_advantage": "Close associations with astronauts and space agencies",
+    "example_titles": "Life Among the Stars by Astronaut Jane Doe"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

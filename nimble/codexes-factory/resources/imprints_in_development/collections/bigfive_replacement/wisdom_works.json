@@ -1,0 +1,28 @@
+{
+  "imprint": "Wisdom Works",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@wisdomworks.com",
+  "branding": {
+    "tagline": "Where Experience Meets Expression",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.wisdomworks.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Novels, memoirs, and nonfiction by senior authors",
+    "target_audience": "Readers interested in the unique perspectives of seniors",
+    "competitive_advantage": "We exclusively publish works by senior authors, showcasing their unique voices",
+    "example_titles": "Elizabeth is Missing by Emma Healey, A Man Called Ove by Fredrik Backman"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

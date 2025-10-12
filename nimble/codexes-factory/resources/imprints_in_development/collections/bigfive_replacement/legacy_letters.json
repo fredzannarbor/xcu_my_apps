@@ -1,0 +1,28 @@
+{
+  "imprint": "Legacy Letters",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@legacyletters.com",
+  "branding": {
+    "tagline": "History, one life at a time",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.legacyletters.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs and biographies of historical figures",
+    "target_audience": "History enthusiasts and students",
+    "competitive_advantage": "Unparalleled historical research and authenticity",
+    "example_titles": "Biographies of significant philosophers, politicians, scientists"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

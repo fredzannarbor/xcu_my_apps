@@ -1,0 +1,74 @@
+
+\usepackage{xcolor}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[margin=1in]{geometry}
+$endif$
+\usepackage{amsmath,amssymb}
+\usepackage{bookmark}
+\usepackage{setspace} % For line spacing
+\usepackage{fontspec}  % Required for advanced font handling with XeLaTeX
+\usepackage{newunicodechar} % Required to map missing characters to fallback
+
+% Define tightlist command for Pandoc compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Enhanced font fallback for emoji support
+$if(mainfont)$
+\setmainfont{$mainfont$}[
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$else$
+\setmainfont{Times}[
+  Extension = .ttc,
+  UprightFont = *,
+  BoldFont = *,
+  ItalicFont = *,
+  BoldItalicFont = *,
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$endif$
+
+$if(sansfont)$
+\setsansfont{$sansfont$}[
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$else$
+\setsansfont{Helvetica}[
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$endif$
+
+$if(monofont)$
+\setmonofont{$monofont$}[
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$else$
+\setmonofont{Monaco}[
+  RawFeature={fallback="Apple Color Emoji:mode=harf;Noto Color Emoji:mode=harf;Symbola:mode=harf;Apple Symbols:mode=harf;Segoe UI Emoji:mode=harf;"}
+]
+$endif$
+
+% Backup emoji definitions with colored text fallbacks
+% These will only be used if the font fallback chain fails
+\newunicodechar{📋}{\textcolor{blue}{\textbf{[CHECKLIST]}}}
+\newunicodechar{💡}{\textcolor{orange}{\textbf{[IDEA]}}}
+\newunicodechar{⚡}{\textcolor{red}{\textbf{[ACTION]}}}
+\newunicodechar{⚠️}{\textcolor{red}{\textbf{[WARNING]}}}
+\newunicodechar{❓}{\textcolor{purple}{\textbf{[QUESTION]}}}
+\newunicodechar{📈}{\textcolor{green}{\textbf{[STRATEGY]}}}
+\newunicodechar{💰}{\textcolor{green}{\textbf{[\$REVENUE]}}}
+\newunicodechar{🎯}{\textcolor{blue}{\textbf{[TARGET]}}}
+\newunicodechar{🚀}{\textcolor{cyan}{\textbf{[PROJECT]}}}
+\newunicodechar{📊}{\textcolor{green}{\textbf{[CHART]}}}
+\newunicodechar{🔍}{\textcolor{gray}{\textbf{[SEARCH]}}}
+\newunicodechar{✅}{\textcolor{green}{\textbf{[DONE]}}}
+\newunicodechar{❌}{\textcolor{red}{\textbf{[FAIL]}}}
+\newunicodechar{⏰}{\textcolor{orange}{\textbf{[TIME]}}}
+\newunicodechar{📝}{\textcolor{blue}{\textbf{[NOTE]}}}
+\newunicodechar{🔥}{\textcolor{red}{\textbf{[HOT]}}}
+\newunicodechar{👤}{\textcolor{gray}{\textbf{[PERSON]}}}
+\newunicodechar{🏠}{\textcolor{brown}{\textbf{[HOME]}}}
+\newunicodechar{💼}{\textcolor{black}{\textbf{[

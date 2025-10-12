@@ -1,0 +1,93 @@
+{
+  "publishing_schedule": [
+    {
+      "month": "September 2025",
+      "books": [
+        {
+          "stream": "Interplanetary Ambition",
+          "title": "Radiation Barriers: Protection versus Exposure",
+          "description": "Search for quotes on shielding Mars colonists from cosmic radiation, focusing on protective technologies (e.g., shielding materials, habitats) versus exposure risks (e.g., health impacts). Include space medicine papers, Musk’s SpaceX safety plans, and sci-fi on space survival.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Neural Augmentation",
+          "title": "Implant Safety: Assurance versus Uncertainty",
+          "description": "Seek quotes on Neuralink’s neural implant safety, exploring assurances (e.g., rigorous testing, biocompatibility) versus uncertainties (e.g., long-term effects). Prioritize medical device studies, Musk’s Neuralink safety comments, and sci-fi on neural tech risks.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Sustainable Energy",
+          "title": "Solar Expansion: Dominance versus Balance",
+          "description": "Find quotes on Tesla’s solar energy push, weighing dominance (e.g., widespread adoption, cost declines) versus balanced energy mixes (e.g., wind, hydro). Focus on renewable energy studies, Musk’s solar strategy, and eco-fiction on solar power.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Global Connectivity",
+          "title": "Knowledge Access: Freedom versus Restriction",
+          "description": "Collect quotes on Starlink’s role in global knowledge access, exploring free access (e.g., open education) versus restrictions (e.g., government censorship). Include information policy studies, Musk’s Starlink goals, and fiction on knowledge dissemination.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Urban Infrastructure",
+          "title": "Underground Planning: Resilience versus Accessibility",
+          "description": "Search for quotes on The Boring Company’s underground urban designs, focusing on resilience (e.g., disaster-proofing) versus accessibility challenges (e.g., public access, costs). Prioritize urban planning research, Musk’s infrastructure plans, and fiction on subterranean cities.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Artificial Intelligence",
+          "title": "AI Governance: Freedom versus Constraint",
+          "description": "Seek quotes on xAI’s AI development governance, exploring freedom for innovation (e.g., open research) versus constraints (e.g., ethical regulations). Include AI ethics papers, Musk’s xAI governance views, and sci-fi on AI oversight.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Government Efficiency",
+          "title": "Policy Automation: Efficiency versus Equity",
+          "description": "Find quotes on AI-driven policy automation via DOGE, weighing efficiency gains (e.g., streamlined decisions) against equity concerns (e.g., biased algorithms). Focus on policy analysis studies, Musk’s DOGE comments, and fiction on automated governance.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Collective Knowledge",
+          "title": "Truth Platforms: Objectivity versus Bias",
+          "description": "Collect quotes on X Corp’s truth-seeking platforms, exploring objective verification (e.g., AI fact-checking) versus human biases (e.g., subjective moderation). Prioritize information science studies, Musk’s X posts, and fiction on truth platforms.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Pronatal Innovation",
+          "title": "Family Support: Data versus Intuition",
+          "description": "Search for quotes on AI-driven family planning support, focusing on data-driven tools (e.g., fertility tracking) versus intuitive approaches (e.g., cultural traditions). Include health tech studies, Musk’s pronatal views, and fiction on family dynamics.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Resilience and Vision",
+          "title": "Risk Endurance: Innovation versus Caution",
+          "description": "Seek quotes on Musk’s risk-taking mindset, exploring innovative leaps (e.g., bold ventures) versus cautious restraint (e.g., risk mitigation). Focus on entrepreneurship studies, Musk’s interviews, and fiction on risk-driven leadership.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Technological Disruption",
+          "title": "Market Evolution: Gradual versus Radical",
+          "description": "Find quotes on Musk’s market transformations, weighing gradual evolution (e.g., incremental adoption) versus radical shifts (e.g., industry overhaul). Include business studies, Musk’s comments, and fiction on market disruption.",
+          "special_requests": "",
+          "recommended_sources": ""
+        },
+        {
+          "stream": "Space Economy",
+          "title": "Orbital Systems: Public versus Private",
+          "description": "Collect quotes on space infrastructure development, exploring private systems (e.g., SpaceX satellites) versus public investments (e.g., government stations). Prioritize aerospace economics, Musk’s SpaceX plans, and sci-fi on orbital economies.",
+          "special_requests": "",
+          "recommended_sources": ""
+        }
+      ]
+    }
+  ]
+}

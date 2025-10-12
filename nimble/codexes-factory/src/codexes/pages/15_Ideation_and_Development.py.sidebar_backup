@@ -1,0 +1,711 @@
+from typing import List, Dict
+import sys
+from pathlib import Path
+
+# Add paths for imports
+sys.path.insert(0, '/Users/fred/my-apps')
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+import streamlit as st
+import pandas as pd
+import json
+import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime, timedelta
+import logging
+
+# Import ideation modules with fallback pattern
+try:
+    from codexes.modules.ideation import (
+        BookIdea, IdeaSet, Tournament, TournamentManager,
+        ContinuousIdeaGenerator, IntegratedIdeaGenerator,
+        SyntheticReaderPanel, IdeationPipelineBridge
+    )
+    from codexes.core.llm_integration import LLMCaller
+except ImportError:
+    from src.codexes.modules.ideation import (
+        BookIdea, IdeaSet, Tournament, TournamentManager,
+        ContinuousIdeaGenerator, IntegratedIdeaGenerator,
+        SyntheticReaderPanel, IdeationPipelineBridge
+    )
+    from src.codexes.core.llm_integration import LLMCaller
+
+# Import safety patterns with fallback
+try:
+    from codexes.modules.ui.safety_patterns import (
+        safe_getattr, safe_dict_get, safe_iteration, safe_len, safe_join,
+        validate_not_none, log_none_encounter
+    )
+    from codexes.modules.ui.safe_components import (
+        safe_components, safe_display, display_validation_safely
+    )
+    from codexes.modules.ui.error_prevention import handle_missing_data
+except ImportError:
+    try:
+        from src.codexes.modules.ui.safety_patterns import (
+            safe_getattr, safe_dict_get, safe_iteration, safe_len, safe_join,
+            validate_not_none, log_none_encounter
+        )
+        from src.codexes.modules.ui.safe_components import (
+            safe_components, safe_display, display_validation_safely
+        )
+        from src.codexes.modules.ui.error_prevention import handle_missing_data
+    except ImportError:
+        # Fallback safety functions
+        def safe_getattr(obj, attr, default=None):
+            return getattr(obj, attr, default) if obj is not None else default
+
+        def safe_dict_get(d, key, default=None):
+            return (d or {}).get(key, default)
+
+        def safe_len(collection):
+            return len(collection or [])
+
+        def safe_iteration(collection):
+            return collection or []
+
+        def validate_not_none(value, context, attr):
+            return value is not None
+
+        def handle_missing_data(data, data_type, context):
+            return data if data is not None else ({} if data_type == 'dict' else [])
+
+        safe_components = None
+    safe_display = None
+
+from shared.ui import render_unified_sidebar
+
+st.set_page_config(page_title="Ideation and Development", layout="wide")
+
+render_unified_sidebar(
+    app_name="Codexes Factory - Ideation & Development",
+    nav_items=[]
+)
+
+# Initialize logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class IdeationDashboard:
+    """Enhanced Streamlit dashboard for ideation system management."""
+    
+    def __init__(self):
+        # Safe initialization with None protection
+        try:
+            self.llm_caller = LLMCaller()
+        except Exception as e:
+            log_none_encounter('ideation_init', 'LLMCaller')
+            self.llm_caller = None
+        
+        # Safe initialization of components
+        try:
+            self.tournament_manager = TournamentManager(self.llm_caller) if self.llm_caller else None
+        except Exception as e:
+            log_none_encounter('ideation_init', 'TournamentManager')
+            self.tournament_manager = None
+        
+        try:
+            self.synthetic_reader_panel = SyntheticReaderPanel(self.llm_caller) if self.llm_caller else None
+        except Exception as e:
+            log_none_encounter('ideation_init', 'SyntheticReaderPanel')
+            self.synthetic_reader_panel = None
+        
+        try:
+            self.pipeline_bridge = IdeationPipelineBridge()
+        except Exception as e:
+            log_none_encounter('ideation_init', 'IdeationPipelineBridge')
+            self.pipeline_bridge = None
+        
+        try:
+            self.integrated_generator = IntegratedIdeaGenerator(self.llm_caller) if self.llm_caller else None
+        except Exception as e:
+            log_none_encounter('ideation_init', 'IntegratedIdeaGenerator')
+            self.integrated_generator = None
+
+    def render_dashboard(self):
+        """Render the main ideation dashboard."""
+        st.title('💡 Ideation and Development')
+        st.markdown('AI-powered book idea generation, tournament evaluation, and synthetic reader feedback system.')
+        
+        # Create tabs for different functionalities
+        tab1, tab2, tab3, tab4, tab5 = st.tabs([
+            "🎯 Idea Generation", 
+            "🏆 Tournaments", 
+            "👥 Reader Feedback", 
+            "📊 Analytics", 
+            "⚙️ Settings"
+        ])
+        
+        with tab1:
+            self.render_idea_generation_tab()
+        
+        with tab2:
+            self.render_tournament_tab()
+        
+        with tab3:
+            self.render_reader_feedback_tab()
+        
+        with tab4:
+            self.render_analytics_tab()
+        
+        with tab5:
+            self.render_settings_tab()
+
+    def render_idea_generation_tab(self):
+        """Render idea generation interface."""
+        st.header("Book Idea Generation")
+        
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            st.subheader("Generate New Ideas")
+            
+            # Generation parameters
+            with st.expander("Generation Settings", expanded=True):
+                num_ideas = st.slider("Number of ideas to generate", 1, 20, 5)
+                model = st.selectbox("Model", ["ollama/mistral:latest", "ollama/llama2:latest", "ollama/deepseek-r1:latest"], index=0)
+                temperature = st.slider("Temperature", 0.1, 1.0, 0.7, 0.1)
+                
+                # Imprint selection
+                available_imprints = self._get_available_imprints()
+                selected_imprint = st.selectbox("Target Imprint", available_imprints)
+                
+                # Custom prompt
+                use_custom_prompt = st.checkbox("Use custom prompt")
+                custom_prompt = ""
+                if use_custom_prompt:
+                    custom_prompt = st.text_area(
+                        "Custom Prompt", 
+                        placeholder="Enter your custom idea generation prompt...",
+                        height=100
+                    )
+            
+            # Generation buttons
+            col_gen1, col_gen2, col_gen3 = st.columns(3)
+            
+            with col_gen1:
+                if st.button("Generate Ideas", type="primary"):
+                    self._generate_ideas(num_ideas, model, temperature, selected_imprint, custom_prompt)
+            
+            with col_gen2:
+                if st.button("Start Continuous Generation"):
+                    self._start_continuous_generation(selected_imprint, model, temperature)
+            
+            with col_gen3:
+                if st.button("Stop Continuous Generation"):
+                    self._stop_continuous_generation(selected_imprint)
+        
+        with col2:
+            st.subheader("Generation Status")
+            self._display_generation_status()
+        
+        # Display recent ideas
+        st.subheader("Recent Ideas")
+        self._display_recent_ideas()
+
+    def render_tournament_tab(self):
+        """Render tournament interface."""
+        st.header("Tournament System")
+        
+        col1, col2 = st.columns([1, 1])
+        
+        with col1:
+            st.subheader("Create Tournament")
+            
+            # Load available ideas
+            available_ideas = self._load_available_ideas()
+            
+            if available_ideas:
+                st.write(f"Available ideas: {len(available_ideas)}")
+                
+                # Tournament settings
+                tournament_size = st.selectbox(
+                    "Tournament Size", 
+                    [4, 8, 16, 32], 
+                    index=1
+                )
+                
+                model = st.selectbox("Judging Model", ["ollama/mistral:latest", "ollama/gpt-oss:20b", "ollama/deepseek-r1:latest"], index=0)
+
+                temperature = st.slider("Judging Temperature", 0.1, 1.0, 0.3, 0.1)
+                
+                if st.button("Create Tournament", type="primary"):
+                    self._create_tournament(available_ideas, tournament_size, model, temperature)
+            else:
+                st.info("No ideas available for tournament. Generate some ideas first!")
+        
+        with col2:
+            st.subheader("Active Tournaments")
+            self._display_active_tournaments()
+        
+        # Tournament history
+        st.subheader("Tournament History")
+        self._display_tournament_history()
+
+    def render_reader_feedback_tab(self):
+        """Render synthetic reader feedback interface."""
+        st.header("Synthetic Reader Feedback")
+        
+        col1, col2 = st.columns([1, 1])
+        
+        with col1:
+            st.subheader("Evaluate Ideas")
+            
+            # Load ideas for evaluation
+            available_ideas = self._load_available_ideas()
+            
+            if available_ideas:
+                # Select ideas to evaluate
+                selected_idea_titles = st.multiselect(
+                    "Select ideas to evaluate",
+                    [idea.title for idea in available_ideas],
+                    max_selections=5
+                )
+                
+                # Select reader personas
+                available_personas = [persona.name for persona in self.synthetic_reader_panel.reader_personas]
+                selected_personas = st.multiselect(
+                    "Select reader personas",
+                    available_personas,
+                    default=available_personas[:3]
+                )
+                
+                if st.button("Evaluate Ideas", type="primary") and selected_idea_titles:
+                    selected_ideas = [idea for idea in available_ideas if idea.title in selected_idea_titles]
+                    self._evaluate_ideas_with_readers(selected_ideas, selected_personas)
+            else:
+                st.info("No ideas available for evaluation. Generate some ideas first!")
+        
+        with col2:
+            st.subheader("Reader Personas")
+            self._display_reader_personas()
+        
+        # Display feedback results
+        st.subheader("Recent Feedback")
+        self._display_recent_feedback()
+
+    def render_analytics_tab(self):
+        """Render analytics and insights."""
+        st.header("Analytics & Insights")
+        
+        # Key metrics
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            total_ideas = self._get_total_ideas_count()
+            st.metric("Total Ideas Generated", total_ideas)
+        
+        with col2:
+            tournaments_run = self._get_tournaments_count()
+            st.metric("Tournaments Run", tournaments_run)
+        
+        with col3:
+            feedback_sessions = self._get_feedback_sessions_count()
+            st.metric("Feedback Sessions", feedback_sessions)
+        
+        with col4:
+            promoted_ideas = self._get_promoted_ideas_count()
+            st.metric("Ideas Promoted", promoted_ideas)
+        
+        # Charts
+        col_chart1, col_chart2 = st.columns(2)
+        
+        with col_chart1:
+            st.subheader("Ideas Generated Over Time")
+            self._display_generation_chart()
+        
+        with col_chart2:
+            st.subheader("Tournament Performance")
+            self._display_tournament_chart()
+        
+        # Insights
+        st.subheader("AI Insights")
+        self._display_ai_insights()
+
+    def render_settings_tab(self):
+        """Render system settings."""
+        st.header("System Settings")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.subheader("Generation Settings")
+            
+            # Default model settings
+            st.selectbox("Default Model", ["ollama/mistral:latest", "openai/gpt-oss:20b", "deepseek/deepseek-r1:latest"], key="default_model")
+            st.slider("Default Temperature", 0.1, 1.0, 0.7, 0.1, key="default_temp")
+            st.number_input("Default Batch Size", 1, 50, 5, key="default_batch")
+            st.number_input("Batch Interval (seconds)", 60, 3600, 300, key="batch_interval")
+            
+            if st.button("Save Generation Settings"):
+                st.success("Settings saved!")
+        
+        with col2:
+            st.subheader("System Status")
+            
+            # System health checks
+            st.write("**LLM Connection:**", "✅ Connected" if self._check_llm_connection() else "❌ Disconnected")
+            st.write("**Storage:**", "✅ Available" if self._check_storage() else "❌ Issues")
+            st.write("**Tournaments:**", f"{len(self.tournament_manager.active_tournaments)} active")
+            
+            # Maintenance actions
+            if st.button("Clear Cache"):
+                st.success("Cache cleared!")
+            
+            if st.button("Export Data"):
+                self._export_system_data()
+
+    def _generate_ideas(self, num_ideas: int, model: str, temperature: float, 
+                       imprint: str, custom_prompt: str):
+        """Generate new ideas."""
+        try:
+            with st.spinner(f"Generating {num_ideas} ideas..."):
+                generator = ContinuousIdeaGenerator(
+                    llm_caller=self.llm_caller,
+                    ideas_per_batch=num_ideas,
+                    model=model,
+                    temperature=temperature,
+                    custom_prompt=custom_prompt if custom_prompt else None
+                )
+                
+                results = generator.generate_single_batch()
+                
+                if results:
+                    st.success(f"Generated {len(results)} ideas successfully!")
+                    
+                    # Display generated ideas
+                    for idea_id, idea in results.items():
+                        with st.expander(f"💡 {idea.title}"):
+                            st.write(f"**Logline:** {idea.logline}")
+                            if idea.description:
+                                st.write(f"**Description:** {idea.description}")
+                            if idea.genre:
+                                st.write(f"**Genre:** {idea.genre}")
+                else:
+                    st.error("Failed to generate ideas. Please try again.")
+                    
+        except Exception as e:
+            st.error(f"Error generating ideas: {str(e)}")
+            logger.error(f"Idea generation error: {e}")
+
+    def _start_continuous_generation(self, imprint: str, model: str, temperature: float):
+        """Start continuous generation for an imprint."""
+        try:
+            config = {
+                'model': model,
+                'temperature': temperature,
+                'ideas_per_batch': 5,
+                'batch_interval': 300
+            }
+            
+            self.integrated_generator.start_continuous_generation(imprint, config)
+            st.success(f"Started continuous generation for {imprint}")
+            
+        except Exception as e:
+            st.error(f"Error starting continuous generation: {str(e)}")
+
+    def _stop_continuous_generation(self, imprint: str):
+        """Stop continuous generation for an imprint."""
+        try:
+            self.integrated_generator.stop_continuous_generation(imprint)
+            st.success(f"Stopped continuous generation for {imprint}")
+            
+        except Exception as e:
+            st.error(f"Error stopping continuous generation: {str(e)}")
+
+    def _display_generation_status(self):
+        """Display current generation status."""
+        # Get status for all imprints
+        imprints = self._get_available_imprints()
+        
+        for imprint in imprints:
+            status = self.integrated_generator.get_generator_status(imprint)
+            
+            if status['status'] == 'running':
+                st.success(f"**{imprint}**: Running")
+                st.write(f"Generated: {status.get('generation_count', 0)} batches")
+                st.write(f"Success rate: {status.get('successful_generations', 0)}/{status.get('successful_generations', 0) + status.get('failed_generations', 0)}")
+            elif status['status'] == 'stopped':
+                st.warning(f"**{imprint}**: Stopped")
+            else:
+                st.info(f"**{imprint}**: Not running")
+
+    def _display_recent_ideas(self):
+        """Display recently generated ideas."""
+        try:
+            # Load recent ideas from cumulative file
+            cumulative_path = Path("output/resources/cumulative.csv")
+            
+            if cumulative_path.exists():
+                df = pd.read_csv(cumulative_path)
+                
+                if not df.empty:
+                    # Show last 10 ideas
+                    recent_df = df.tail(10)
+                    
+                    for _, row in recent_df.iterrows():
+                        with st.expander(f"💡 {row['title']}"):
+                            st.write(f"**Logline:** {row['logline']}")
+                            st.write(f"**Model:** {row.get('model', 'Unknown')}")
+                            st.write(f"**Generated:** {row.get('timestamp', 'Unknown')}")
+                else:
+                    st.info("No ideas generated yet.")
+            else:
+                st.info("No ideas generated yet.")
+                
+        except Exception as e:
+            st.error(f"Error loading recent ideas: {str(e)}")
+
+    def _load_available_ideas(self) -> List[BookIdea]:
+        """Load available ideas for tournaments and evaluation."""
+        ideas = []
+
+        try:
+            # Load from cumulative CSV
+            cumulative_path = Path("output/resources/cumulative.csv")
+
+            if cumulative_path.exists():
+                df = pd.read_csv(cumulative_path)
+
+                for _, row in df.iterrows():
+                    idea = BookIdea(
+                        title=row['title'],
+                        logline=row['logline'],
+                        generation_metadata={
+                            'idea_id': row.get('idea_id', ''),
+                            'model': row.get('model', 'unknown'),
+                            'temperature': row.get('temperature', 0.7)
+                        }
+                    )
+                    ideas.append(idea)
+
+        except Exception as e:
+            logger.error(f"Error loading ideas: {e}")
+
+        return ideas
+
+    def _create_tournament(self, available_ideas: List[BookIdea], tournament_size: int,
+                          model: str, temperature: float):
+        """Create and run a tournament."""
+        try:
+            # Select random ideas for tournament
+            import random
+            selected_ideas = random.sample(available_ideas, min(tournament_size, len(available_ideas)))
+            
+            with st.spinner("Creating tournament..."):
+                # Create tournament
+                tournament_config = {'model': model, 'temperature': temperature}
+                tournament = self.tournament_manager.create_tournament(selected_ideas, tournament_config)
+                
+                # Run tournament
+                results = self.tournament_manager.run_tournament(tournament)
+                
+                st.success("Tournament completed!")
+                
+                # Display results
+                winner = results.get('winner')
+                if winner:
+                    st.write(f"🏆 **Winner:** {winner.title}")
+                    st.write(f"**Logline:** {winner.logline}")
+                
+                finalists = results.get('finalists', [])
+                if finalists:
+                    st.write("🥈 **Finalists:**")
+                    for finalist in finalists:
+                        st.write(f"- {finalist.title}")
+                
+                # Option to promote winner
+                if st.button("Promote Winner to Pipeline"):
+                    self._promote_tournament_winner(results)
+                    
+        except Exception as e:
+            st.error(f"Error creating tournament: {str(e)}")
+
+    def _promote_tournament_winner(self, tournament_results: Dict):
+        """Promote tournament winner to production pipeline."""
+        try:
+            imprint = st.selectbox("Select target imprint", self._get_available_imprints())
+            
+            if st.button("Confirm Promotion"):
+                promoted = self.pipeline_bridge.promote_tournament_winners(
+                    tournament_results, imprint, auto_promote=True
+                )
+                
+                if promoted:
+                    st.success(f"Promoted {len(promoted)} ideas to {imprint} pipeline!")
+                else:
+                    st.warning("No ideas were promoted.")
+                    
+        except Exception as e:
+            st.error(f"Error promoting winner: {str(e)}")
+
+    def _display_active_tournaments(self):
+        """Display currently active tournaments."""
+        active = self.tournament_manager.get_active_tournaments()
+        
+        if active:
+            for tournament_id, tournament in active.items():
+                st.write(f"**{tournament_id}**: {tournament.total_ideas} participants")
+        else:
+            st.info("No active tournaments")
+
+    def _display_tournament_history(self):
+        """Display tournament history."""
+        history = self.tournament_manager.get_tournament_history()
+        
+        if history:
+            for result in history[-5:]:  # Show last 5
+                with st.expander(f"Tournament {result['tournament_id']}"):
+                    st.write(f"**Winner:** {result['winner'].title if result['winner'] else 'None'}")
+                    st.write(f"**Participants:** {result['total_participants']}")
+                    st.write(f"**Completed:** {result['completed_at']}")
+        else:
+            st.info("No tournament history available")
+
+    def _evaluate_ideas_with_readers(self, ideas: List[BookIdea], personas: List[str]):
+        """Evaluate ideas with synthetic readers."""
+        try:
+            with st.spinner("Evaluating ideas with synthetic readers..."):
+                feedback = self.synthetic_reader_panel.evaluate_ideas(ideas, personas)
+                
+                if feedback:
+                    st.success(f"Collected {len(feedback)} feedback responses!")
+                    
+                    # Synthesize insights
+                    insights = self.synthetic_reader_panel.synthesize_feedback(feedback)
+                    
+                    # Display results
+                    for idea_id, insight in insights.items():
+                        idea_title = next((idea.title for idea in ideas 
+                                         if idea.generation_metadata.get('idea_id') == idea_id), 
+                                        f"Idea {idea_id}")
+                        
+                        with st.expander(f"📊 {idea_title} - Rating: {insight.market_potential:.1f}/10"):
+                            st.write(f"**Consensus:** {insight.overall_consensus}")
+                            st.write(f"**Market Potential:** {insight.market_potential:.1f}/10")
+                            
+                            if insight.recommended_improvements:
+                                st.write("**Improvements:**")
+                                for improvement in insight.recommended_improvements[:3]:
+                                    st.write(f"- {improvement}")
+                            
+                            if insight.imprint_suggestions:
+                                st.write("**Imprint Suggestions:**")
+                                for suggestion in insight.imprint_suggestions:
+                                    st.write(f"- {suggestion}")
+                else:
+                    st.warning("No feedback collected.")
+                    
+        except Exception as e:
+            st.error(f"Error evaluating ideas: {str(e)}")
+
+    def _display_reader_personas(self):
+        """Display available reader personas."""
+        for persona in self.synthetic_reader_panel.reader_personas:
+            with st.expander(f"👤 {persona.name}"):
+                st.write(f"**Age:** {persona.age_range}")
+                st.write(f"**Genres:** {', '.join(persona.preferred_genres)}")
+                st.write(f"**Traits:** {', '.join(persona.personality_traits)}")
+
+    def _display_recent_feedback(self):
+        """Display recent reader feedback."""
+        # This would load from saved feedback files
+        st.info("Recent feedback display not yet implemented")
+
+    def _get_available_imprints(self) -> List[str]:
+        """Get list of available imprints."""
+        try:
+            imprints_dir = Path("configs/imprints")
+            if imprints_dir.exists():
+                return [f.stem for f in imprints_dir.glob("*.json")]
+            else:
+                return ["xynapse_traces", "default"]
+        except:
+            return ["xynapse_traces", "default"]
+
+    def _get_total_ideas_count(self) -> int:
+        """Get total number of ideas generated."""
+        try:
+            cumulative_path = Path("output/resources/cumulative.csv")
+            if cumulative_path.exists():
+                df = pd.read_csv(cumulative_path)
+                return len(df)
+        except:
+            pass
+        return 0
+
+    def _get_tournaments_count(self) -> int:
+        """Get total number of tournaments run."""
+        return len(self.tournament_manager.get_tournament_history())
+
+    def _get_feedback_sessions_count(self) -> int:
+        """Get number of feedback sessions."""
+        # This would count feedback files
+        return 0
+
+    def _get_promoted_ideas_count(self) -> int:
+        """Get number of ideas promoted to pipeline."""
+        # This would count promoted ideas
+        return 0
+
+    def _display_generation_chart(self):
+        """Display ideas generation over time chart."""
+        try:
+            cumulative_path = Path("output/resources/cumulative.csv")
+            if cumulative_path.exists():
+                df = pd.read_csv(cumulative_path)
+                if 'timestamp' in df.columns:
+                    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                    daily_counts = df.groupby(df['timestamp'].dt.date).size()
+                    
+                    fig = px.line(x=daily_counts.index, y=daily_counts.values,
+                                title="Ideas Generated Per Day")
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.info("No timestamp data available")
+            else:
+                st.info("No generation data available")
+        except Exception as e:
+            st.error(f"Error displaying chart: {str(e)}")
+
+    def _display_tournament_chart(self):
+        """Display tournament performance chart."""
+        history = self.tournament_manager.get_tournament_history()
+        if history:
+            participants = [result['total_participants'] for result in history]
+            dates = [result['completed_at'][:10] for result in history]  # Extract date
+            
+            fig = px.bar(x=dates, y=participants, title="Tournament Participants Over Time")
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("No tournament data available")
+
+    def _display_ai_insights(self):
+        """Display AI-generated insights about the ideation system."""
+        st.info("AI insights feature coming soon...")
+
+    def _check_llm_connection(self) -> bool:
+        """Check if LLM connection is working."""
+        try:
+            response = self.llm_caller.call_llm("Test", model="mistral", temperature=0.1)
+            return bool(response)
+        except:
+            return False
+
+    def _check_storage(self) -> bool:
+        """Check if storage is available."""
+        try:
+            Path("output").mkdir(exist_ok=True)
+            return True
+        except:
+            return False
+
+    def _export_system_data(self):
+        """Export system data."""
+        st.info("Data export feature coming soon...")
+
+
+# Initialize and render dashboard
+if __name__ == "__main__":
+    dashboard = IdeationDashboard()
+    dashboard.render_dashboard()

@@ -1,0 +1,28 @@
+{
+  "imprint": "Nomadic Narratives",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@nomadicnarratives.com",
+  "branding": {
+    "tagline": "The Chronicles of the Digital Age",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.nomadicnarratives.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs, anecdotes, and stories from digital nomads",
+    "target_audience": "Readers seeking personal stories about remote work",
+    "competitive_advantage": "Unique personal stories from digital nomads",
+    "example_titles": "Memoirs like 'From Cubicle to Coffee Shop: My Nomad Journey'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

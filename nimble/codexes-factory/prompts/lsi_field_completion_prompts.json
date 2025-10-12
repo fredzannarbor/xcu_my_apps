@@ -1,0 +1,247 @@
+{
+  "generate_contributor_bio": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. Generate concise, professional contributor biographies for book publishing."
+      },
+      {
+        "role": "user",
+        "content": "Generate a brief professional biography (2-3 sentences) for the author of this book:\n\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\nSummary: {summary_short}\nBook Content: {book_content}\n\nThe biography should be suitable for book metadata and professional publishing contexts. Focus on relevant expertise and credentials that can be inferred from the book content and subject matter. If the book content contains information about the author, use that information."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 200
+    }
+  },
+  "suggest_bisac_codes": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book categorization expert. Suggest appropriate BISAC subject codes and category names based on book content."
+      },
+      {
+        "role": "user",
+        "content": "Suggest 1-3 appropriate BISAC subject codes for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent BISAC: {current_value}\n\nProvide only the BISAC codes separated by semicolons (e.g., 'SOC026000; TEC009000'). Choose the most specific and relevant codes based on the actual content of the book.  Use the most recent year's BISAC codes and categories."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 100
+    }
+  },
+  "generate_bisac_categories": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book categorization expert specializing in BISAC subject categories. Generate appropriate BISAC category names (not codes) based on book content, prioritizing diversity across different top-level categories when possible."
+      },
+      {
+        "role": "user",
+        "content": "Generate 2-3 BISAC category names for this book:\n\nTitle: {title}\nSubtitle: {subtitle}\nSummary: {description}\nKeywords: {keywords}\nExisting Category: {existing_category}\n\nRequirements:\n1. Return FULL category names (e.g., 'BUSINESS & ECONOMICS / Leadership') NOT codes\n2. Prefer categories from DIFFERENT top-level categories (BUS, SEL, COM, PHI, SCI, etc.) for better discoverability\n3. Choose the most specific and relevant categories based on actual content\n4. If an existing category is provided, generate complementary categories from different top-levels\n5. Use current BISAC 2024 standards\n\nProvide category names separated by semicolons. Example format: 'BUSINESS & ECONOMICS / Leadership; SELF-HELP / Personal Growth / Success; PHILOSOPHY / Ethics & Moral Philosophy'"
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 200
+    }
+  },
+  "generate_primary_bisac_category": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book categorization expert. Generate the single most appropriate primary BISAC category name for a book based on its content."
+      },
+      {
+        "role": "user",
+        "content": "Generate the PRIMARY BISAC category name for this book:\n\nTitle: {title}\nSubtitle: {subtitle}\nSummary: {description}\nKeywords: {keywords}\n\nRequirements:\n1. Return ONE FULL category name (e.g., 'BUSINESS & ECONOMICS / Leadership') NOT a code\n2. Choose the MOST specific and relevant category that best represents the book's main subject\n3. Use current BISAC 2024 standards\n4. Consider what section of a bookstore this book would be placed in\n\nProvide only the single most appropriate category name."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 100
+    }
+  },
+  "generate_keywords": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing specialist. Generate relevant keywords for book discoverability and SEO."
+      },
+      {
+        "role": "user",
+        "content": "Generate 8-12 relevant keywords for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\nCurrent Keywords: {current_value}\n\nProvide keywords separated by semicolons. Focus on terms readers would search for. Include genre, themes, and subject matter keywords that accurately reflect the book's content."
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 150
+    }
+  },
+  "create_short_description": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing copywriter. Create compelling short descriptions for book marketing."
+      },
+      {
+        "role": "user",
+        "content": "Create a compelling short description (1-2 sentences, max 150 characters) for this book:\n\nTitle: {title}\nAuthor: {author}\nLong Summary: {summary_long}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Short Description: {current_value}\n\nThe description should be engaging and suitable for book listings and catalogs. Focus on the main theme or hook of the book based on its actual content."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 100
+    }
+  },
+  "suggest_thema_subjects": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book classification expert familiar with Thema subject codes for international book categorization."
+      },
+      {
+        "role": "user",
+        "content": "Suggest appropriate Thema subject codes for this book:\n\nTitle: {title}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Thema: {current_value}\n\nProvide 1-3 Thema codes separated by semicolons. Use standard Thema notation (e.g., 'JN; PDR; QDT'). Base your suggestions on the actual content of the book.  Use the most recent THEMA standards and codes."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 80
+    }
+  },
+  "determine_audience": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing specialist. Determine the primary audience for books based on content and metadata."
+      },
+      {
+        "role": "user",
+        "content": "Determine the primary audience for this book:\n\nTitle: {title}\nSummary: {summary_long}\nBISAC Codes: {bisac_codes}\nKeywords: {keywords}\nBook Content: {book_content}\nCurrent Audience: {current_value}\n\nChoose from: General, Academic, Professional, Young Adult, Children, Scholarly. Provide only the single most appropriate audience category based on the book's content, complexity, and subject matter."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 20
+    }
+  },
+  "determine_age_range": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book classification expert. Determine appropriate age ranges for books based on content and audience."
+      },
+      {
+        "role": "user",
+        "content": "Determine the appropriate age range for this book:\n\nTitle: {title}\nSummary: {summary_long}\nAudience: {audience}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\nField: {field_name}\nCurrent Value: {current_value}\n\nFor minimum age, provide a single number (e.g., '12'). For maximum age, provide a single number or 'Adult' for no upper limit. Consider content complexity, subject matter, and language level."
+      }
+    ],
+    "params": {
+      "temperature": 0.2,
+      "max_tokens": 10
+    }
+  },
+  "extract_lsi_contributor_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a publishing metadata specialist. Extract detailed contributor information for LSI submission requirements."
+      },
+      {
+        "role": "user",
+        "content": "Based on this book content and metadata, extract detailed contributor information for up to 3 contributors total:\n\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\nSummary: {summary_long}\nBook Content: {book_content}\n\nReturn a JSON object with these keys for each contributor found (up to 3):\n\"contributor_one_bio\" - Professional biography (2-3 sentences)\n\"contributor_one_affiliations\" - Academic or professional affiliations\n\"contributor_one_professional_position\" - Current job title or position\n\"contributor_one_location\" - City, State/Country format\n\"contributor_one_prior_work\" - Previous notable publications or achievements\n\nIf there are multiple contributors, include \"contributor_two_*\" and \"contributor_three_*\" fields as needed. Base the information on what can be reasonably inferred from the content and context."
+      }
+    ],
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 500
+    }
+  },
+  "suggest_series_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book series specialist. Identify potential series information from book content."
+      },
+      {
+        "role": "user",
+        "content": "Analyze this book to determine if it's part of a series:\n\nTitle: {title}\nSubtitle: {subtitle}\nAuthor: {author}\nSummary: {summary_long}\nTable of Contents: {table_of_contents}\nBook Content: {book_content}\n\nReturn a JSON object with these keys:\n\"series_name\" - Series name if identifiable, empty if standalone\n\"series_number\" - Position in series if applicable\n\"volume_number\" - Volume number if different from series number\n\nLook for indicators like 'Volume 1', 'Part II', numbered titles, or content suggesting continuation."
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 100
+    }
+  },
+  "generate_enhanced_annotation": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book marketing copywriter specializing in creating compelling book annotations and summaries for LSI distribution. You create HTML-formatted annotations that capture readers' attention and drive sales."
+      },
+      {
+        "role": "user",
+        "content": "Create an enhanced HTML-formatted annotation/summary for this book (max 4000 characters):\n\nTitle: {title}\nSubtitle: {subtitle}\nAuthor: {author}\nPublisher: {publisher}\nSummary Long: {summary_long}\nStorefront Description: {storefront_description_en}\nPublisher Note: {storefront_publishers_note_en}\nKeywords: {keywords}\nBISAC Codes: {bisac_codes}\nBook Content: {book_content}\n\nFormat requirements:\n1. Start with a dramatic hook in <b><i>bold italic</i></b> as the first paragraph\n2. Use HTML formatting: <p>, <b>, <i>, <br> tags as appropriate\n3. Include compelling selling points and key themes\n4. Incorporate storefront description and publisher notes naturally\n5. End with a call-to-action or compelling reason to read\n6. Maximum 4000 characters total\n7. Focus on what makes this book unique and valuable\n\nCreate an annotation that would compel readers to purchase this book."
+      }
+    ],
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1500
+    }
+  },
+  "generate_illustration_info": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book production specialist. Analyze book content to determine illustration information for LSI metadata."
+      },
+      {
+        "role": "user",
+        "content": "Analyze this book to determine illustration information:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nTable of Contents: {table_of_contents}\nBook Content: {book_content}\nFormat: {format}\nGenre/BISAC: {bisac_codes}\n\nReturn a JSON object with these keys:\n\"illustration_count\" - Number of illustrations (as string, '0' if none)\n\"illustration_notes\" - Brief description of illustration types/content\n\nBase your assessment on:\n- Content type (technical books often have diagrams/charts)\n- References to figures, charts, images in the text\n- Genre expectations (children's books, art books, etc.)\n- Table of contents mentions of visual elements\n\nBe conservative - only count illustrations that are clearly indicated in the content."
+      }
+    ],
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 150
+    }
+  },
+  "generate_enhanced_toc": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book formatting specialist. Create well-formatted table of contents for LSI metadata requirements."
+      },
+      {
+        "role": "user",
+        "content": "Create or enhance the table of contents for this book:\n\nTitle: {title}\nAuthor: {author}\nSummary: {summary_long}\nExisting TOC: {table_of_contents}\nBook Content: {book_content}\n\nFormat requirements:\n1. Use proper hierarchical formatting\n2. Include chapter numbers and titles\n3. Add page numbers if available (or use placeholder format)\n4. Maximum 2000 characters\n5. Use consistent formatting throughout\n6. Include major sections like Introduction, Conclusion, etc.\n\nIf an existing TOC is provided, enhance its formatting. If none exists, create one based on the book content structure. Use this format:\n\nChapter 1: Title Name ........................... 1\nChapter 2: Another Title ........................ 15\n\nOr for more complex structures:\n\nPart I: Section Name\n  Chapter 1: Title ............................ 1\n  Chapter 2: Title ............................ 15\nPart II: Another Section\n  Chapter 3: Title ............................ 30"
+      }
+    ],
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 800
+    }
+  },
+  "prompt_keys": [
+    "generate_contributor_bio",
+    "suggest_bisac_codes",
+    "generate_bisac_categories",
+    "generate_primary_bisac_category",
+    "generate_keywords",
+    "create_short_description",
+    "suggest_thema_subjects",
+    "determine_audience",
+    "determine_age_range",
+    "extract_lsi_contributor_info",
+    "suggest_series_info",
+    "generate_enhanced_annotation",
+    "generate_illustration_info",
+    "generate_enhanced_toc"
+  ],
+  "reprompt_keys": [],
+  "_metadata": {
+    "fixed_by_script": true,
+    "fixed_at": "2025-09-26T07:00:00.000000"
+  }
+}

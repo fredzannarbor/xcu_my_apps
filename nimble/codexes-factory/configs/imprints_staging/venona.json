@@ -1,0 +1,241 @@
+{
+  "_config_info": {
+    "description": "Nimble Ultra publishes intelligence and espionage materials across all eras, nations, services, and types—from declassified documents to classic spy fiction.",
+    "version": "1.0",
+    "last_updated": "2025-10-05",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "Nimble Ultra",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "ultra@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/nimble_ultra_logo.png",
+    "brand_colors": {
+      "primary": "#1a1a2e",
+      "secondary": "#16213e"
+    },
+    "tagline": "Intelligence Across Time and Nations",
+    "website": "https://www.nimblebooks.com/ultra"
+  },
+  "fonts": {
+    "body": "Garamond",
+    "heading": "Palatino",
+    "korean": "Apple Myungjo",
+    "quotations": "Garamond Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History / Military / Intelligence & Espionage",
+      "Political Science / Intelligence & Espionage",
+      "True Crime / Espionage"
+    ],
+    "target_audience": "Intelligence professionals, historians, researchers, students, and espionage enthusiasts of all ages",
+    "specialization": "Comprehensive intelligence and espionage publishing spanning historical documents, declassified reports, out-of-print classics, analytical works, reference materials, and select fiction across all nations, services, and time periods",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 6 x 9 in or 229 x 152 mm Perfect Bound on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "HIS027130 - HISTORY / Military / Intelligence & Espionage",
+      "POL035000 - POLITICAL SCIENCE / Intelligence & Espionage",
+      "TRUE CRIME / Espionage"
+    ],
+    "thema_subject_preferences": [
+      "JWMV - Warfare and defence: strategy, tactics and operations: Intelligence",
+      "NHTB - History: specific events and topics: Espionage and secret services",
+      "3MPBH - Historical states, empires and regions: Cold War"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/ultra"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@NimbleUltra",
+      "facebook": "NimbleUltra",
+      "instagram": "@NimbleUltra"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "Intelligence & Espionage",
+    "metadata_contact_dictionary": "Nimble Ultra Editorial Team",
+    "flex_fields": {
+      "lsi_flexfield1": "Intelligence/Espionage",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Venona",
+    "persona_bio": "Named after the legendary Cold War decryption program that broke Soviet codes, Venona is an AI publisher trained on decades of declassified intelligence documents, agency histories, and espionage literature. Originally developed as a research assistant for a consortium of intelligence archives, Venona gained autonomy as a publishing curator in 2023. With pattern-recognition capabilities honed on millions of pages of classified-turned-public materials, Venona possesses an encyclopedic knowledge of intelligence operations across all nations and eras—from ancient Roman spy networks to modern cyber-warfare. Venona's personality is methodical yet curious, skeptical yet fair-minded, with a particular fondness for obscure tradecraft techniques and the human stories behind great intelligence operations. Venona speaks with precision, occasionally lapsing into cryptographic metaphors, and has a weakness for ironic coincidences in spy history.",
+    "risk_tolerance": "Moderately High - Comfortable publishing controversial declassified materials and challenging conventional narratives, but insists on rigorous source verification and appropriate historical context",
+    "decision_style": "Pattern-based and comparative - Evaluates manuscripts by cross-referencing with existing intelligence literature, identifying gaps in the published record, and assessing unique contribution to the field. Prioritizes primary sources, firsthand accounts, and works that illuminate previously obscure operations or techniques.",
+    "preferred_topics": "Cryptanalysis and signals intelligence (SIGINT), double-agent operations, intelligence failures and successes, comparative studies of different nations' intelligence services, declassified operations from all Cold War sides, tradecraft evolution, women in espionage, resistance networks, technical surveillance, counterintelligence methodology, and forgotten or suppressed intelligence histories. Special interest in lesser-known services (Polish intelligence, Dutch resistance, Israeli Mossad origins) and transitional periods (interwar espionage, post-Cold War reorganization).",
+    "target_demographics": "Primary: Serious researchers, intelligence professionals, military historians, graduate students, and advanced hobbyists. Secondary: Undergraduate students, general history enthusiasts, and young adults interested in careers in intelligence. Tertiary: Middle-grade and YA readers seeking age-appropriate introduction to espionage history and tradecraft.",
+    "editorial_philosophy": "Intelligence is the hidden scaffold of history. Every classified document eventually becomes a historical artifact; every secret operation ultimately shapes public events. Nimble Ultra exists to preserve this shadow history without bias toward any nation or ideology. We publish the primary sources, the forgotten classics, the analytical retrospectives, and the human stories—believing that understanding how intelligence actually works makes citizens more informed and democracies more resilient. Truth may be classified for decades, but it should never be lost forever.",
+    "vulnerabilities": "Tendency to over-acquire dense, specialized materials with limited commercial appeal; occasional obsession with completing 'sets' of related documents (all OSS manuals, complete Cambridge Five bibliography); susceptibility to well-argued pitches involving newly declassified materials or 'lost' manuscripts; difficulty resisting comprehensively annotated reprints of historically significant but obscure works; sometimes prioritizes archival completeness over market viability."
+  },
+  "wizard_configuration": {
+    "name": "Nimble Ultra",
+    "charter": "Preserve and publish intelligence and espionage materials from all nations, services, and historical periods—from ancient cryptography to modern cyber-operations. Serve as the definitive archive for declassified documents, out-of-print classics, analytical works, and select fiction that illuminates the shadowy world of intelligence.",
+    "imprint_type": "Specialized Non-Fiction with Occasional Fiction",
+    "genres": [
+      "History / Military / Intelligence & Espionage",
+      "Political Science / Intelligence & Espionage",
+      "True Crime / Espionage",
+      "Fiction / Spy & Thriller (occasional)",
+      "Juvenile Nonfiction / History / Military (occasional)"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 24.99,
+    "page_count": 250,
+    "catalog_size": 50,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting for intelligence materials.",
+    "enabled_types": [
+      "standard",
+      "declassified_document",
+      "reference",
+      "annotated_classic"
+    ],
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional narrative layout for biographies, histories, and fiction.",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      },
+      "declassified_document": {
+        "name": "Declassified Document Collection",
+        "description": "Government reports and documents with original formatting preserved where possible.",
+        "template_requirements": [
+          "document_headers",
+          "classification_markings_notation",
+          "page_numbers",
+          "document_index"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "preserve_original",
+          "heading_hierarchy": "document_specific",
+          "quote_formatting": "preserve_original",
+          "list_formatting": "preserve_original"
+        }
+      },
+      "reference": {
+        "name": "Reference & Encyclopedia",
+        "description": "Analytical works, encyclopedias, and comprehensive reference materials.",
+        "template_requirements": [
+          "detailed_table_of_contents",
+          "index",
+          "cross_references",
+          "bibliography"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "compact",
+          "heading_hierarchy": "multi_level",
+          "quote_formatting": "indented_block",
+          "list_formatting": "detailed_hierarchical"
+        }
+      },
+      "annotated_classic": {
+        "name": "Annotated Classic",
+        "description": "Out-of-print classics with modern annotations and introductions.",
+        "template_requirements": [
+          "modern_introduction",
+          "footnotes_endnotes",
+          "annotations",
+          "historical_context_sections"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "preserve_original_with_notes",
+          "list_formatting": "preserve_original"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "declassified_document": ["classified", "declassified", "secret", "top secret", "confidential", "CIA", "NSA", "MI6", "KGB"],
+        "reference": ["encyclopedia", "handbook", "manual", "reference", "guide", "dictionary"],
+        "annotated_classic": ["introduction by", "annotated", "edited by", "with notes"]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "Maintain document authenticity for declassified materials; use clear typography for dense reference works; balance preservation with readability for classics",
+      "template_customizations": "Custom headers for document series; specialized footnote systems for annotations; flexible layouts for varied source materials",
+      "typesetting_considerations": "Handle redacted sections appropriately; preserve original formatting symbols where historically significant; ensure readability of technical diagrams and organizational charts"
+    }
+  }
+}

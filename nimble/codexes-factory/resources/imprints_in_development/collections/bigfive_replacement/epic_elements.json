@@ -1,0 +1,28 @@
+{
+  "imprint": "Epic Elements",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@epicelements.com",
+  "branding": {
+    "tagline": "Unleash the Epic",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.epicelements.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Epic Fantasy, Historical Sagas, Space Operas",
+    "target_audience": "Fans of large-scale, expansive narratives",
+    "competitive_advantage": "Epic scale, complex world-building, grand narratives",
+    "example_titles": "J.R.R. Tolkien, George R.R. Martin, Frank Herbert"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

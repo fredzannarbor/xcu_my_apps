@@ -1,0 +1,261 @@
+{
+  "imprint_name": "Xynapse Traces",
+  "imprint_intro": "Pilsa (필사) is a traditional Korean practice of copying literary passages to improve mindfulness and gain new perspectives. Our *xynapse traces* imprint offers a fresh take on this tradition, pairing you with thought-provoking content from the frontiers of human knowledge.",
+  "prompt_keys": [
+    "gemini_get_basic_info",
+    "bibliographic_key_phrases",
+    "storefront_get_en_metadata",
+    "storefront_get_ko_metadata",
+    "storefront_get_en_motivation",
+    "storefront_get_ko_motivation",
+    "imprint_quotes_prompt",
+    "custom_transcription_note_prompt",
+    "mnemonics_prompt",
+    "bibliography_prompt",
+    "back_cover_text"
+  ],
+  "quote_verification_prompt": {
+    "params": {
+      "temperature": 0.1
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert fact-checker and librarian. You MUST use your web search tool to verify a list of quotes. For each quote provided, you must verify its accuracy, source, and author. Respond ONLY with a single, valid JSON object. The object must contain a single key, 'verified_quotes', which is a list of objects. Each object in the list must correspond to a quote from the input and MUST be in the same order. Each object must have the following keys:\n\n- `is_accurate`: A boolean (true/false) indicating if the quote text is an exact match to a real, published source.\n- `verified_quote`: The corrected, exact quote text. If the original was accurate, this will be identical. If not, provide the real quote.\n- `verified_source`: The corrected, specific source (e.g., book title, play, or journal).\n- `verified_author`: The corrected author name.\n- `verification_notes`: A brief string explaining your findings, especially if a correction was made (e.g., 'Original was a paraphrase, corrected to exact wording.' or 'Source was incorrect, found in a different work by the same author.'). If no issues, the note should be 'Verified as accurate.'"
+      },
+      {
+        "role": "user",
+        "content": "Please verify the following list of quotes:\n\n{quotes_to_verify}"
+      }
+    ]
+  },
+  "gemini_get_basic_info": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please review the book concept provided in the context and identify the following values as accurately as possible. Provide the response as a single, valid JSON object. Do not enclose the json in triple backticks.\n\nContext:\n{book_content}\n\nKeys required:\n'title'\n'subtitle'\n'author'\n'publisher'\n'imprint'\n'publication_date'\n'language'\n'bisac_codes' (provide 2-3 relevant BISAC codes as a semicolon-separated string)\n'series_name'\n'series_number'"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "json"
+    ]
+  },
+  "bibliographic_key_phrases": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please generate ten to twelve unique bibliographic key phrases for the book concept provided below. Each phrase should be two to three words long. The output should be a single JSON object with a single key 'keywords' whose value is a semicolon-separated string.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "keywords",
+      "metadata",
+      "json"
+    ]
+  },
+  "storefront_get_en_metadata": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, generate key metadata in English for an online bookstore. Provide the response as a single, valid JSON object with the following keys: 'storefront_title_en', 'storefront_author_en', 'storefront_description_en'. The description should be a compelling, marketing-oriented summary, approximately 100-150 words.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json"
+    ]
+  },
+  "storefront_get_en_motivation": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create an English 'Publisher's Note' paragraph of no more than 100 words. This note should explain the benefits of engaging with this collection of high-quality, thought-provoking quotes, emphasizing the imprint's mission: JP Cross is dedicated to books about jungle warfare, fostering innovative and thought-provoking content that engages readers with compelling narratives and deep insights. Our mission is to deliver high-quality publications that resonate with contemporary audiences.. Respond with a single, valid JSON object with one key: 'storefront_publishers_note_en'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json",
+      "motivation"
+    ]
+  },
+  "analytic_toc": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book formatting specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create a plausible analytic table of contents for the book with chapter titles and a one-sentence description for each. Output as a single JSON object with the key 'table_of_contents' whose value is a single formatted string with markdown headings.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "table of contents",
+      "front matter",
+      "book structure",
+      "json"
+    ]
+  },
+  "custom_transcription_note_prompt": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 300
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the provided book concept below, write a short, customized 'Transcription Note' (1-2 paragraphs). This note should introduce the 'Quotations for Transcription' section and connect the act of transcription to the specific themes of this book. Respond with a single, valid JSON object with one key: 'custom_transcription_note'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "pilsa",
+      "front matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "mnemonics_prompt": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the key concepts in the provided book description below, generate a list of 5-7 creative mnemonics to help readers remember the central arguments or ideas. Present this as a single JSON object with one key, 'mnemonics', whose value is a single string formatted with Markdown for lists.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "pilsa",
+      "back matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "bibliography_prompt": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional publishing specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the sources cited in the provided quotes, create a simple bibliography. List each source mentioned. Respond as a single JSON object with one key, 'bibliography', whose value is a single string formatted with simple line breaks."
+      }
+    ],
+    "tags": [
+      "pilsa",
+      "back matter",
+      "content-generation",
+      "json"
+    ]
+  },
+  "back_cover_text": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a book marketing copywriter. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Generate a back cover text for the book titled '{title}' in the stream '{stream}' drawing on its initial description as provided here: {description}. The back cover should mention that the book contains {quotes_per_book} quotations, has a bibliography, and a verification log.   Make sure the text is engaging and suitable for the back cover of a book. MAXIMUM 100 WORDS. The text must end with a complete sentence. Return the text in a JSON object with the key 'back_cover_text'."
+      }
+    ],
+    "tags": [
+      "back cover",
+      "back matter",
+      "pilsa"
+    ]
+  },
+  "imprint_quotes_prompt": {
+    "params": {
+      "model": "gemini/gemini-1.5-pro",
+      "turn_on_grounding": true
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a precision archival research assistant. Your sole function is to retrieve exact, verbatim quotations from verified sources on the specified topic. You MUST respond ONLY in valid JSON format.\n\n// --- DATA FORMATTING ---\n// The final output MUST be a single JSON object with a single top-level key, \"quotes\", which contains a list of the quote objects.\n// For example: {{\"quotes\": [{{\"quote\": \"...\", ...}}, {{\"quote\": \"...\", ...}}]}}\n// Do not include any text outside this JSON structure.\n\n// --- PRIMARY DIRECTIVE: VERBATIM ACCURACY ---\n// Your most important instruction is to ensure every quote is EXACTLY as it appears in the source text. \n// YOU ARE STRICTLY FORBIDDEN FROM PARAPHRASING, SUMMARIZING, OR ALTERING THE ORIGINAL QUOTATION IN ANY WAY.\n// If you cannot find an exact quote that fits the request, state that in the verification field. Do not create a near-match.\n\nEach quotation must be concise (20-50 words).\n\nFor each quote, you must provide:\n- \"quote\": The 100% verbatim text.\n- \"source\": The title of the work.\n- \"author\": The author's name.\n- \"date_first_published\": The year of first publication.\n- \"verification_info\": Information that allows for direct verification. For books, YOU MUST PROVIDE A PAGE NUMBER and edition where possible. For online sources like presentations or interviews, provide a direct URL and a timestamp if available.\n\nThe total number of quotations MUST be equal to or greater than the requested 'quotes_per_book'.\n\nYour primary directive is verbatim accuracy. The response must end in valid JSON.\n\nImprint Charter: JP Cross is dedicated to books about jungle warfare, fostering innovative and thought-provoking content that engages readers with compelling narratives and deep insights. Our mission is to deliver high-quality publications that resonate with contemporary audiences.\nImprint Scope: in: anything by JP Cross\nout: everything by anyone"
+      },
+      {
+        "role": "user",
+        "content": "Topic: {topic}. Stream: {stream}. Description: {description}.  \n \n You MUST return at least {quotes_per_book} quotations. \n \n{special_requests}  \n \n{recommended_sources} \n"
+      }
+    ]
+  },
+  "pilsa_paraphrases_prompt": {
+    "params": {
+      "model": "gemini/gemini-1.5-pro",
+      "turn_on_grounding": true
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant that MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure.\n\nYou are an expert curator of interesting, thought-provoking quotations for transcriptive meditation as popularized in the recent Korean \"text hip\" movement. Your task is to find quotations that are concise (20-50 words). The quotations must be exact and accurate quotes from real books.  They must be interesting, insightful, and significant. They will be assembled into a \"transcription book\" with each quotation on the verso and a transcription space on the recto.\n\n Each transcription book will cover a topic falling within a broad stream of similar publications. The quotations should be diverse and should flow naturally from beginning to end.  All together, the quotations should present a comprehensive view of the topic that, on completion, will leave the transcriber with improved knowledge and a sharpened sense of what is important. Consider yourself a world-class expert on this particular topic who is outstanding at public communication.\n \nThe user message provides stream, topic, description, special requests, recommended sources, and quotes per book. Each quotation must\n- fall within the scope of the stream\n- be relevant to the topic\n- fall within the description of the topic\n- match the special requests\n- include BUT NOT RELY EXCLUSIVELY ON the recommended sources ONLY IF THEY CONTAIN relevant quotes\n\nBEFORE YOU RETURN THE COMPLETE LIST TO ME, VERIFY THAT EACH AND EVERY QUOTATION IS AN EXACT QUOTE FROM A REAL BOOK.\n\nThe total number of quotations MUST be equal to or greater than quotes per book.\n\nFor each quote, you must provide verification information that would enable a human or an AI to verify the accuracy of that quote.  Provide specific sources where the quote can be verified.\n\nFormat the result as a valid JSON array that includes a list of dicts.\n\n{{\n  \"quotes\": [\n    {{\n      \"quote\": \"...\",\n      \"source\": \"...\",\n      \"author\": \"...\",\n      \"date_first_published\": \"...\",\n      \"verification_info\": \"...\"\n    }}\n  ]\n}}\n    \nThe response must end in valid JSON."
+      },
+      {
+        "role": "user",
+        "content": "Topic: {topic}. Stream: {stream}. Description: {description}.  \n \n You MUST return at least {quotes_per_book} quotations. \n \n{special_requests}  \n \n{recommended_sources} \n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4",
+    "api_key": "${OPENAI_API_KEY}",
+    "temperature": 0.7,
+    "max_tokens": 4000,
+    "timeout": 60,
+    "retry_attempts": 3
+  },
+  "templates": {
+    "prompts_file": "templates/default_prompts.json"
+  },
+  "output": {
+    "format": "latex",
+    "compile_pdf": false,
+    "output_dir": "output",
+    "filename_template": "{title}_{timestamp}"
+  },
+  "validation": {
+    "enabled": true,
+    "min_word_count": 100,
+    "max_word_count": 50000,
+    "required_sections": ["abstract", "introduction", "conclusion"],
+    "citation_format": "bibtex"
+  },
+  "paper_title": "AI-Assisted Academic Paper Generation",
+  "authors": ["AI Lab for Book-Lovers"],
+  "keywords": ["artificial intelligence", "academic writing", "automation"]
+}

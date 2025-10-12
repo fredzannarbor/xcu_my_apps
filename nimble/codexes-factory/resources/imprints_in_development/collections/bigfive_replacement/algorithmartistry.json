@@ -1,0 +1,28 @@
+{
+  "imprint": "AlgorithmArtistry",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@algorithmartistry.com",
+  "branding": {
+    "tagline": "Creating art from algorithms",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.algorithmartistry.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "AI-generated and interactive fiction",
+    "target_audience": "Tech-savvy readers and lovers of experimental fiction",
+    "competitive_advantage": "Unique fusion of tech innovation and narrative creativity",
+    "example_titles": "AI-crafted speculative fiction, Interactive adventure novels"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

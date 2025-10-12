@@ -1,0 +1,28 @@
+{
+  "imprint": "Podcast Pioneers",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@podcastpioneers.com",
+  "branding": {
+    "tagline": "Hear the future of literature",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.podcastpioneers.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Non-fiction and educational audiobook hybrids",
+    "target_audience": "Educational seekers and knowledge enthusiasts",
+    "competitive_advantage": "First-to-market with innovative podcast-integrated book formats",
+    "example_titles": "Malcolm Gladwell, Yuval Noah Harari"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

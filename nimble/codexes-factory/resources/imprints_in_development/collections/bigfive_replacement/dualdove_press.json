@@ -1,0 +1,28 @@
+{
+  "imprint": "DualDove Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@dualdovepress.com",
+  "branding": {
+    "tagline": "Wings of Wisdom in Two Languages",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.dualdovepress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Children's bilingual Spanish-English literature and educational materials",
+    "target_audience": "Parents, educators, and children seeking bilingual learning resources",
+    "competitive_advantage": "Our evidence-based, pedagogically sound materials are designed by bilingual education experts to enhance children's language acquisition and cognitive development.",
+    "example_titles": "Bilingual picture books, early reader series, bilingual educational resources for homeschooling and classrooms"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

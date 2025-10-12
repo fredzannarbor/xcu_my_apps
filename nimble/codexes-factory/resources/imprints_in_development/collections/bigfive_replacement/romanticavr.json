@@ -1,0 +1,28 @@
+{
+  "imprint": "RomanticaVR",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@romanticavr.com",
+  "branding": {
+    "tagline": "Where love meets virtual reality",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.romanticavr.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Romance novels in VR",
+    "target_audience": "Romance novel lovers",
+    "competitive_advantage": "Uniting the passion of romance with immersive VR",
+    "example_titles": "Interactive VR romance novels, VR love stories"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Satellite Scripts",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@satellitescripts.com",
+  "branding": {
+    "tagline": "Uncover the unseen heroes of space",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.satellitescripts.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Books on satellite technology and its applications",
+    "target_audience": "Tech enthusiasts, space buffs",
+    "competitive_advantage": "Exclusive insights from satellite engineers",
+    "example_titles": "Satellites: The Silent Colonizers by Satellite Engineer"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

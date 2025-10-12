@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Repository Cleanup Report - cleanup_20250826_231949</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2, h3 { color: #333; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .success { color: #28a745; }
+        .failure { color: #dc3545; }
+        .warning { color: #ffc107; }
+    </style>
+</head>
+<body>
+    <pre># Repository Cleanup Report
+
+**Session ID:** cleanup_20250826_231949
+**Generated:** 2025-08-26 23:19:49
+
+## Executive Summary
+
+- **Duration:** 2025-08-26 23:19:49 to 2025-08-26 23:19:49
+- **Total Operations:** 3
+- **Successful Operations:** 3
+- **Failed Operations:** 0
+- **Files Moved:** 1
+- **Files Deleted:** 1
+- **Directories Created:** 1
+- **Directories Removed:** 1
+
+## Operations Performed
+
+### Delete Operations
+
+- ✅ **temp_cleanup_001**
+  - Source: `exported_config_20240826_120000.json`
+  - Message: Removed temporary exported configuration file
+  - Files Affected: 1
+
+### Move Operations
+
+- ✅ **test_move_001**
+  - Source: `test_pipeline_success_messages.py`
+  - Destination: `tests/test_pipeline_success_messages.py`
+  - Message: Moved test file to tests directory
+  - Files Affected: 1
+
+### Merge Operations
+
+- ✅ **config_merge_001**
+  - Source: `config`
+  - Destination: `configs`
+  - Message: Merged config directory into configs for consistency
+  - Files Affected: 2
+
+## Directory Structure Changes
+
+- **Removed:** `config`
+  - Reason: Merged into configs directory for consistency
+  - Files: 2
+
+- **Created:** `cleanup_reports`
+  - Reason: Created directory for cleanup reports and documentation
+
+- **Moved:** `tests/test_pipeline_success_messages.py`
+  - Moved from: `test_pipeline_success_messages.py` to `tests/test_pipeline_success_messages.py`
+  - Reason: Moved test file to proper tests directory
+  - Files: 1
+
+## Validation Results
+
+**Overall Validation:** ❌ FAILED
+
+- ✅ **import_validation**
+  - Import validation: 12/12 modules imported successfully
+  - Warnings: 5
+
+- ✅ **configuration_validation**
+  - Configuration validation: 4/4 configs loaded successfully
+  - Warnings: 3
+
+- ❌ **file_reference_validation**
+  - File reference validation: 30 files checked. Found 32 broken references
+
+- ✅ **script_validation**
+  - Script validation: 3/3 scripts validated successfully
+  - Warnings: 1
+
+- ✅ **directory_structure_validation**
+  - Directory structure validation: 10/10 expected directories found. Unexpected: ['.build', '.cleanup_backups', 'text_hip_global', 'tools', 'test_output', 'cache', 'config', 'input', 'notes_and_reports', '.snapshots', 'ftp2lsi', 'cleanup_reports', 'transformation_snapshots', 'integrate_synthetic_readers', 'exports', 'scripts', 'test_cleanup_reports', 'batch_output', 'fonts', 'integrate_ideas', 'services', '.idea']
+  - Warnings: 22
+
+- ✅ **functionality_preservation**
+  - Functionality preservation: 5/5 functions working
+
+## Recommendations
+
+- ⚠️ Some validation tests failed. Review the validation results and fix any issues.
+- ✅ Cleanup operations completed successfully. The repository structure has been improved.
+- 📝 Update any documentation that references the old file locations.
+- 🧪 Run the full test suite to ensure all functionality still works.
+- 🔄 Consider updating CI/CD pipelines if they reference moved files.
+</pre>
+</body>
+</html>

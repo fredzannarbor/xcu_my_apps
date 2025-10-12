@@ -1,0 +1,163 @@
+{
+  "_config_info": {
+    "version": "1.0",
+    "imprint": "Nimble Books LLC",
+    "created_at": "2025-09-09T20:13:28.862280",
+    "updated_at": "2025-09-09T20:13:28.863786",
+    "template_name": "default",
+    "parent_configs": []
+  },
+  "imprint": "Nimble Books LLC",
+  "publisher": "Nimble Books LLC",
+  "language_code": "eng",
+  "territorial_rights": "World",
+  "binding_type": "paperback",
+  "edition_number": "1",
+  "edition_description": "First Edition",
+  "contact_email": "nimble@nimblebooks.com",
+  "primary_genres": [
+    "Fiction"
+  ],
+  "target_audience": "General Adult",
+  "supported_languages": [
+    "eng"
+  ],
+  "standard_price": 24.99,
+  "standard_page_count": 200,
+  "_entry_metadata": {
+    "imprint": {
+      "key": "imprint",
+      "value": "Nimble Books LLC",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862396",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "publisher": {
+      "key": "publisher",
+      "value": "Nimble Books LLC",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862414",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "language_code": {
+      "key": "language_code",
+      "value": "eng",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862402",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "territorial_rights": {
+      "key": "territorial_rights",
+      "value": "World",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862403",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "binding_type": {
+      "key": "binding_type",
+      "value": "paperback",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862405",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "edition_number": {
+      "key": "edition_number",
+      "value": "1",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862406",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "edition_description": {
+      "key": "edition_description",
+      "value": "First Edition",
+      "level": "template",
+      "source": "default_template",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.862408",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "contact_email": {
+      "key": "contact_email",
+      "value": "nimble@nimblebooks.com",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863777",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "primary_genres": {
+      "key": "primary_genres",
+      "value": [
+        "Fiction"
+      ],
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863779",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "target_audience": {
+      "key": "target_audience",
+      "value": "General Adult",
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863781",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "supported_languages": {
+      "key": "supported_languages",
+      "value": [
+        "eng"
+      ],
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863782",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "standard_price": {
+      "key": "standard_price",
+      "value": 24.99,
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863784",
+      "modified_by": "system",
+      "is_locked": false
+    },
+    "standard_page_count": {
+      "key": "standard_page_count",
+      "value": 200,
+      "level": "imprint_specific",
+      "source": "manual",
+      "description": "",
+      "last_modified": "2025-09-09T20:13:28.863785",
+      "modified_by": "system",
+      "is_locked": false
+    }
+  }
+}

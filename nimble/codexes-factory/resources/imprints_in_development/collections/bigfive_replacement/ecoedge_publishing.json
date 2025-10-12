@@ -1,0 +1,28 @@
+{
+  "imprint": "EcoEdge Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@ecoedgepublishing.com",
+  "branding": {
+    "tagline": "Thrills on the Edge of Tomorrow",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.ecoedgepublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Eco-thriller novels",
+    "target_audience": "Adult fiction readers concerned with environmental issues",
+    "competitive_advantage": "Stories that expose readers to the stark realities of climate change through thrilling narratives",
+    "example_titles": "N.K. Jemisin, Kim Stanley Robinson"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

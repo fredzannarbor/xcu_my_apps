@@ -1,0 +1,28 @@
+{
+  "imprint": "Humor Harmony",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@humorharmony.com",
+  "branding": {
+    "tagline": "Laughter, in Series",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.humorharmony.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Comedy and satire series",
+    "target_audience": "Readers seeking light-hearted, humorous content",
+    "competitive_advantage": "Unique blend of humor and continuity in storytelling",
+    "example_titles": "Hitchhiker's Guide to the Galaxy, Diary of a Wimpy Kid"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

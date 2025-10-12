@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Generic Logline Creator",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "Describe your project in a few words:",
+        "preset_description": "",
+        "preset_pagetype": "Launcher",
+        "pre_user_input": "",
+        "prompt": "Generate a list of new, fictional movie loglines. Each logline must contain the following elements: \n* the MAIN CHARACTER: describe his psychology, behavior, and social context\n * the MAJOR EVENT: this is the inciting incident, the call to adventure, catalyst.\n* the GOAL: what the MAIN CHARACTER tries to achieve for most of the story.\n\nEach logline should be on its own line.  Focus on ideas relevant to the following keywords: ",  
+        "post_user_input": "",
+        "engine": "davinci-instruct-beta",
+        "temperature": 0.85,
+        "max_tokens": 240,
+        "top_p": 1,
+        "fp": 0.5,
+        "pp": 0.5,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "Enter brief description of your project here.",
+        "user" : "37",
+        "organization" : ""
+    }
+]

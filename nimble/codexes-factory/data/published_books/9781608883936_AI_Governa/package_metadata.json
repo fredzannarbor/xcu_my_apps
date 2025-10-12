@@ -1,0 +1,25 @@
+{
+  "isbn": "9781608883936",
+  "title": "AI Governance: Freedom vs. Constraint",
+  "imprint": "xynapse_traces",
+  "package_created": "2025-09-06T01:40:10.365796",
+  "assets_included": 9,
+  "distribution_channels": [
+    "LSI",
+    "KDP"
+  ],
+  "asset_inventory": {
+    "final_json": "output/xynapse_traces_build/processed_json/AI_Governance_Freedom_vs_Constraint.json",
+    "response_json": "NOT FOUND",
+    "interior_pdf": "NOT FOUND",
+    "cover_pdf": "NOT FOUND",
+    "front_cover_image": "output/xynapse_traces_build/covers/AI_Governance_Freedom_vs_Constraint_front_cover.png",
+    "back_cover_image": "output/xynapse_traces_build/covers/AI_Governance_Freedom_vs_Constraint_back_cover.png",
+    "lsi_csv": "ftp2lsi/csv/xynapse_traces_tranche1_processed.csv",
+    "storefront_csv": "data/catalogs/xynapse_traces_latest.csv",
+    "substack_post": "marketing/xynapse_traces/substack_posts/ai_governance_freedom_vs_constraint.html",
+    "latex_template": "imprints/xynapse_traces/template.tex",
+    "cover_template": "imprints/xynapse_traces/cover_template.tex",
+    "prompts_config": "imprints/xynapse_traces/prompts.json"
+  }
+}

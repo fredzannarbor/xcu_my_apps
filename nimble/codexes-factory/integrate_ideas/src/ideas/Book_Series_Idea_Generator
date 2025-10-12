@@ -1,0 +1,101 @@
+import json
+
+import streamlit as st
+
+from app.ManageUserAPIKeys import ManageUserAPIKeys
+from app.utilities.utilities import (
+    read_markdown_file,
+    get_version_as_dict, statcounter)
+from classes.BookSeries.CreateSeries import BookSeries, save_cumulative_idea_results
+
+api_key_manager = ManageUserAPIKeys()
+
+with st.sidebar:
+    #st.session_state.openai_key = api_key_manager.enter_api_key("openai")
+
+    st.components.v1.iframe('https://fredzannarbor.substack.com/embed', width=320, height=200, scrolling=False)
+    sidebar_message = read_markdown_file("resources/markdown/sidebar_message.md")
+    st.sidebar.markdown(sidebar_message)
+    st.sidebar.markdown("""**Operational**, no known issues""")
+    version2 = json.dumps(get_version_as_dict())
+    st.sidebar.json(version2)
+st.title("Book Series Idea Generator")
+with st.expander("About book series", expanded=False):
+    st.markdown(
+        "Series are books that are explicitly connected to each other, either by high similarity of title and topic, or because they are published in a specific order.")
+    st.markdown(
+        "The main thing to know is that *series sell*. A useful proof point is to observe that over the years Amazon has inexorably increased the visibility of series, to the point where they are now the dominant way that books are sold online. If you are a reader, you are likely to crave the familiarity of a series. If you are an author, you should probably think long and hard before writing a book that is not part of a series. If you are a publisher, you are likely to discourage your authors from writing one-offs. And if you are a bookseller, you are likely to give series a lot of visibility.")
+
+st.write("This tool will help you create lots of ideas for book series.  You can then sift through these ideas to find the ones that are most interesting to you, or submit them to one of Nimble's Reader Panels.")
+
+
+def submit_guard():
+    if "openai_key" not in st.session_state:
+        st.session_state.openai_key = None
+    if st.session_state.openai_key == "" or st.session_state.openai_key is None:
+        st.error("Before submitting a request, you must enter an API key for OpenAI in the sidebar.")
+        st.stop()
+    return
+
+
+with st.form("series_info"):
+    reboot = st.radio("Reboot?", [True, False], index=1)
+    franchise = st.radio("Franchise?", [True, False], index=1)
+    series_description = st.text_area("Series Description",
+                                       "Kids complain about things that separate them from their parents.")
+    if reboot:
+        whatsbeingrebooted = st.text_input("Name/Short Description of Series Being Rebooted", "Harry Potter")
+        reboot_prefix = "Reboot of " + whatsbeingrebooted + ". "
+        st.info("The reboot begins with the description of the original series.")
+    if franchise:
+        min_formulaicness = 0.7
+        st.info("Franchises must be quite formulaic.")
+    else:
+        min_formulaicness = 0.0
+    random_genre = "snarky children's stories"
+    genre = st.text_input("Genre", random_genre)
+    word_count = st.text_input("Word Count", 500)
+    audience = st.text_input("Audience", "children")
+    formulaicness = st.slider("Formulaicness", min_formulaicness, 1.0, 0.7, 0.05)
+    if formulaicness == 0:
+        formulaic = "Not at all"
+    elif formulaicness < 0.25:
+        formulaic = "Not very"
+    elif formulaicness < 0.5:
+        formulaic = "Somewhat"
+    elif formulaicness < 0.7:
+        formulaic = "Quite"
+    elif formulaicness < 0.9:
+        formulaic = "Highly"
+    elif formulaicness == 1:
+        formulaic = "Completely"
+    else:
+        formulaicness == 0.7
+        formulaic = "Quite"
+        st.caption("How closely the series will adhere to a formula. 0.0 means not at all, 1.0 means completely.")
+    number_of_titles = st.number_input("Number of Titles", 2, 100, 12, 1)
+
+    submitted = st.form_submit_button("Create Series")
+    if submitted:
+        submit_guard()
+        title_requirements_prompt = f" Words: {word_count}. Genre: {genre}. Audience: {audience}. {formulaic} formulaic."
+
+        description = series_description + title_requirements_prompt
+        infomessage = "You asked for series ideas fitting the following parameters: \n" + description
+        st.info(infomessage)
+        bs = BookSeries()
+        with st.spinner("Generating ideas..."):
+            ideas_result = bs.get_ideas(description=description, model="gpt-3.5-turbo")
+        st.write(ideas_result)
+        ideas_df = bs.convert_ideas_result_to_dataframe(ideas_result, series_description)
+        try:
+            cumulative_ideas_df = save_cumulative_idea_results("userdocs/cumulative_ideas.csv", ideas_df, )
+
+        except Exception as e:
+            errormessage = "Error saving ideas to cumulative ideas file. " + str(e)
+            st.error(errormessage)
+
+        st.dataframe(ideas_df, hide_index=True)
+        st.caption("The AI sometimes slips from describing series into describing titles that are part of a series. If this\
+                happens, simply resubmit the form.")
+statcounter(0, 0)

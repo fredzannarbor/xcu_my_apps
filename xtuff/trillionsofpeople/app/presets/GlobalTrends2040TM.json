@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: Tragedy and Mobilization",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: In 2040, a global coalition, led by the European Union (EU) and China working with nongovernmental organizations (NGOs) and revitalized multilateral institutions, is implementing far-reaching changes designed to address climate change, resource depletion, and poverty following a global food catastrophe caused by climate events and environmental degradation. Richer countries shift to help poorer ones manage the crisis and then transition to low carbon economies through broad aid programs and transfers of advanced energy technologies, recognizing how rapidly these global challenges spread across borders.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0,
+        "pp": 0,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

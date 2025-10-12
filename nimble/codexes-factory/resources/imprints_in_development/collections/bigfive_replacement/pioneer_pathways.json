@@ -1,0 +1,28 @@
+{
+  "imprint": "Pioneer Pathways",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pioneerpathways.com",
+  "branding": {
+    "tagline": "Pave your path to success",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pioneerpathways.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Business innovation, future trends, and entrepreneurship",
+    "target_audience": "Business innovators, entrepreneurs, and trendwatchers",
+    "competitive_advantage": "In-depth exploration of emerging business trends and practices",
+    "example_titles": "The Future of Work, Pioneering Innovation"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

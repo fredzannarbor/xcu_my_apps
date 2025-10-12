@@ -1,0 +1,28 @@
+{
+  "imprint": "Mindful Uprise",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mindfuluprise.com",
+  "branding": {
+    "tagline": "Rise above with mindfulness",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mindfuluprise.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mindfulness, stress management, happiness",
+    "target_audience": "Professionals, parents, students",
+    "competitive_advantage": "Content blending traditional wisdom and modern research",
+    "example_titles": "Guided meditations, mindfulness for busy people"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

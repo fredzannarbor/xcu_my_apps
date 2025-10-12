@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{fontspec}
+
+\begin{document}
+
+\section*{Font Test}
+
+% Test if Berkshire Swash is available
+\newfontfamily\testfont{Berkshire Swash}
+\testfont This text should be in Berkshire Swash font.
+
+% Test with fallback
+\IfFontExistsTF{Berkshire Swash}{
+  \newfontfamily\berkshirefont{Berkshire Swash}
+  \berkshirefont Berkshire Swash is available.
+}{
+  Font not available.
+}
+
+\end{document}

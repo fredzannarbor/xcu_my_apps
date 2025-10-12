@@ -1,0 +1,28 @@
+{
+  "imprint": "Harrowing Heights",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@harrowingheights.com",
+  "branding": {
+    "tagline": "The thrill of terror",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.harrowingheights.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Horror Thrillers",
+    "target_audience": "Brave readers who crave a spine-chilling thrill",
+    "competitive_advantage": "Bridging the gap between thrillers and horror literature",
+    "example_titles": "Authors like Stephen King, Dean Koontz"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

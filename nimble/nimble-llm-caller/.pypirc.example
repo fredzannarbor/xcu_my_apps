@@ -1,0 +1,23 @@
+[distutils]
+index-servers =
+    pypi
+    testpypi
+    nimble-private
+
+[pypi]
+repository = https://upload.pypi.org/legacy/
+username = __token__
+password = <your-pypi-token>
+
+[testpypi]
+repository = https://test.pypi.org/legacy/
+username = __token__
+password = <your-testpypi-token>
+
+[nimble-private]
+repository = https://your-private-pypi.com/simple/
+username = <your-username>
+password = <your-password>
+# or use token authentication:
+# username = __token__
+# password = <your-private-pypi-token>

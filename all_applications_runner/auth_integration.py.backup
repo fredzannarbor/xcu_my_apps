@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+"""
+Authentication Integration for Unified App Runner
+
+Uses streamlit-authenticator for centralized authentication.
+"""
+
+import streamlit as st
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
+import logging
+from typing import Optional, Dict, Any
+from pathlib import Path
+
+logger = logging.getLogger(__name__)
+
+class AuthManager:
+    """Manages authentication across all applications using streamlit-authenticator."""
+
+    def __init__(self, config_path: Optional[Path] = None):
+        """Initialize the AuthManager with config file."""
+        if config_path is None:
+            config_path = Path(__file__).parent / "resources/yaml/config.yaml"
+
+        self.config_path = config_path
+        self.session_key = "app_runner_auth"
+        self.authenticator = None
+        self._load_config()
+
+    def _load_config(self):
+        """Load the authentication configuration."""
+        try:
+            with open(self.config_path, 'r') as file:
+                config = yaml.load(file, Loader=SafeLoader)
+
+            # Initialize streamlit-authenticator
+            self.authenticator = stauth.Authenticate(
+                config['credentials'],
+                config['cookie']['name'],
+                config['cookie']['key'],
+                config['cookie']['expiry_days'],
+            )
+
+            logger.info(f"Authentication config loaded from {self.config_path}")
+
+        except FileNotFoundError:
+            logger.error(f"Config file not found: {self.config_path}")
+            raise
+        except Exception as e:
+            logger.error(f"Error loading auth config: {e}")
+            raise
+
+    def check_auth_required(self, auth_level: str) -> bool:
+        """Check if authentication is required for the given auth level."""
+        if auth_level == "public":
+            return False
+        return True
+
+    def get_current_user(self) -> Optional[Dict[str, Any]]:
+        """Get the currently authenticated user from session state."""
+        # Check if user is authenticated via streamlit-authenticator
+        if st.session_state.get("authentication_status"):
+            name = st.session_state.get("name")
+            username = st.session_state.get("username")
+
+            # Get user details from config
+            try:
+                with open(self.config_path, 'r') as file:
+                    config = yaml.load(file, Loader=SafeLoader)
+
+                if username in config['credentials']['usernames']:
+                    user_data = config['credentials']['usernames'][username]
+                    return {
+                        "name": user_data.get("name", name),
+                        "email": user_data.get("email", ""),
+                        "role": user_data.get("role", "user"),
+                        "username": username,
+                        "subscription_tier": user_data.get("subscription_tier", "free"),
+                        "app_access": user_data.get("app_access", [])
+                    }
+            except Exception as e:
+                logger.error(f"Error getting user details: {e}")
+
+        return None
+
+    def get_user_role(self) -> str:
+        """Get the role of the currently authenticated user."""
+        user = self.get_current_user()
+        if not user:
+            return "anonymous"
+        return user.get("role", "user")
+
+    def get_user_subscription_tier(self) -> str:
+        """Get the subscription tier of the currently authenticated user."""
+        user = self.get_current_user()
+        if not user:
+            return "free"
+        return user.get("subscription_tier", "free")
+
+    def has_app_access(self, org_id: str) -> bool:
+        """Check if user has access to apps from a specific organization."""
+        user = self.get_current_user()
+        if not user:
+            return False
+
+        # Admin always has access
+        if user.get("role") in ["admin", "superadmin"]:
+            return True
+
+        # Check app_access list
+        app_access = user.get("app_access", [])
+        if not app_access:
+            return True  # No restrictions, user can access all
+
+        return org_id in app_access
+
+    def has_access(self, required_auth_level: str) -> bool:
+        """Check if the current user has access to the required auth level."""
+        if required_auth_level == "public":
+            return True
+
+        user_role = self.get_user_role()
+
+        # Define role hierarchy: anonymous (0) → public (0) → user (1) → subscriber (2) → admin (3) → superadmin (4)
+        role_hierarchy = {
+            "anonymous": 0,
+            "public": 0,
+            "user": 1,
+            "registered": 1,
+            "subscriber": 2,
+            "admin": 3,
+            "superadmin": 4
+        }
+
+        required_level_map = {
+            "public": 0,
+            "anonymous": 0,
+            "user": 1,
+            "registered": 1,
+            "subscriber": 2,
+            "admin": 3,
+            "superadmin": 4
+        }
+
+        user_level = role_hierarchy.get(user_role, 0)
+        required_level = required_level_map.get(required_auth_level, 4)
+
+        return user_level >= required_level
+
+    def render_login_widget(self, location: str = "sidebar"):
+        """Render the streamlit-authenticator login widget with registration link."""
+        if not self.authenticator:
+            st.error("Authentication system not initialized")
+            return
+
+        try:
+            # Render login widget
+            name, authentication_status, username = self.authenticator.login(
+                location=location,
+                fields={'Form name': 'Login', 'Username': 'Username', 'Password': 'Password', 'Login': 'Login'}
+            )
+
+            # Add registration link in sidebar
+            if location == "sidebar":
+                if not authentication_status:
+                    st.sidebar.markdown("---")
+                    st.sidebar.markdown("**New user?** [Register here](http://localhost:8500) to create an account")
+
+            return authentication_status
+
+        except Exception as e:
+            logger.error(f"Error rendering login widget: {e}")
+            st.error("Authentication error. Please try again.")
+            return False
+
+    def logout(self):
+        """Log out the current user."""
+        if self.authenticator:
+            self.authenticator.logout(location='sidebar')
+
+        # Clear session state
+        if "authentication_status" in st.session_state:
+            st.session_state["authentication_status"] = False
+        if "name" in st.session_state:
+            del st.session_state["name"]
+        if "username" in st.session_state:
+            del st.session_state["username"]
+
+    def render_auth_check(self, required_auth_level: str) -> bool:
+        """Render authentication check UI and return if user has access."""
+        if not self.check_auth_required(required_auth_level):
+            return True
+
+        if self.has_access(required_auth_level):
+            return True
+
+        # Show login prompt
+        st.warning(f"⚠️ Authentication required. Minimum role: {required_auth_level}")
+        st.info("Please login using the sidebar.")
+        return False
+
+    def render_user_info(self):
+        """Render user information in sidebar."""
+        user = self.get_current_user()
+
+        if user:
+            st.sidebar.markdown("---")
+            st.sidebar.subheader("👤 User Info")
+            st.sidebar.write(f"**Name:** {user.get('name', 'Unknown')}")
+            st.sidebar.write(f"**Email:** {user.get('email', 'Unknown')}")
+            st.sidebar.write(f"**Role:** {user.get('role', 'user')}")
+        else:
+            st.sidebar.markdown("---")
+            st.sidebar.info("🔓 Not logged in")
+
+
+def create_auth_wrapper(auth_manager: AuthManager):
+    """Create a decorator for protecting app functions."""
+
+    def auth_required(required_level: str = "subscriber"):
+        def decorator(func):
+            def wrapper(*args, **kwargs):
+                if auth_manager.render_auth_check(required_level):
+                    return func(*args, **kwargs)
+                else:
+                    st.stop()
+            return wrapper
+        return decorator
+    return auth_required
+
+
+def get_auth_manager() -> AuthManager:
+    """Get a configured AuthManager instance."""
+    try:
+        return AuthManager()
+    except Exception as e:
+        logger.error(f"Failed to initialize AuthManager: {e}")
+        # Return a basic instance that will show errors
+        return AuthManager()
+
+
+if __name__ == "__main__":
+    # Test the auth system
+    st.title("Authentication System Test")
+
+    auth_manager = get_auth_manager()
+
+    # Show login widget
+    auth_manager.render_login_widget(location="main")
+
+    # Test different auth levels
+    st.subheader("Access Level Tests")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write("**Public Access**")
+        if auth_manager.render_auth_check("public"):
+            st.success("✅ Access granted")
+
+    with col2:
+        st.write("**Subscriber Access**")
+        if auth_manager.render_auth_check("subscriber"):
+            st.success("✅ Access granted")
+
+    with col3:
+        st.write("**Admin Access**")
+        if auth_manager.render_auth_check("admin"):
+            st.success("✅ Access granted")
+
+    # Show user info
+    auth_manager.render_user_info()

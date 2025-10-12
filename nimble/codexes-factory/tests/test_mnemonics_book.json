@@ -1,0 +1,17 @@
+{
+  "title": "Test Mnemonics Book",
+  "author": "Test Author",
+  "imprint": "xynapse traces",
+  "isbn13": "9781234567890",
+  "shortuuid": "test123456",
+  "quotes": [
+    {
+      "quote": "This is a test quote for transcription practice.",
+      "author": "Test Author",
+      "source": "Test Source",
+      "date_first_published": "2025"
+    }
+  ],
+  "mnemonics_tex": "\\textbf{First mnemonic at line start}\nThis is some content after the first mnemonic.\n\n    \\textbf{This should NOT be counted - has leading spaces}\n\n\\textbf{Second mnemonic at line start}\nMore content here.\n\nSome text with \\textbf{inline bold} that should not be counted.\n\n\\textbf{Third mnemonic at line start}\nFinal content.",
+  "storefront_publishers_note_en": "This is a test book for validating the textbf line detection fix."
+}

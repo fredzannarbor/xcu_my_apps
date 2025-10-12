@@ -1,0 +1,28 @@
+{
+  "imprint": "VRogress",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vrogress.com",
+  "branding": {
+    "tagline": "Navigate the future",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vrogress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "VR tech guides and tutorials",
+    "target_audience": "Tech enthusiasts and professionals",
+    "competitive_advantage": "Cutting-edge content for tech-savvy readers",
+    "example_titles": "VR coding guides, hands-on VR tech workshops"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Scarlet Quill",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@scarletquill.com",
+  "branding": {
+    "tagline": "Stories that stimulate body and mind",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.scarletquill.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Intelligent, thought-provoking romance",
+    "target_audience": "Readers seeking romance novels with depth and intellectual stimulation",
+    "competitive_advantage": "Romantic narratives that engage readers on multiple levels",
+    "example_titles": "Romance novels akin to 'Bridgerton' series"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

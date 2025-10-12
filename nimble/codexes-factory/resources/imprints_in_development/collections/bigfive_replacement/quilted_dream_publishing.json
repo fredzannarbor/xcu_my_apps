@@ -1,0 +1,28 @@
+{
+  "imprint": "Quilted Dream Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@quilteddreampublishing.com",
+  "branding": {
+    "tagline": "Your patchwork of inspiration and knowledge in quilting!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.quilteddreampublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Quilting patterns, history, technique guides, and artist profiles.",
+    "target_audience": "Quilting enthusiasts, craft historians, art students and professionals.",
+    "competitive_advantage": "Our publishing arm is dedicated exclusively to quilting, providing in-depth insights and expertise that general craft publishers can't match.",
+    "example_titles": "Unique and traditional quilt patterns, in-depth history of quilting, author types like quilting experts, historians"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

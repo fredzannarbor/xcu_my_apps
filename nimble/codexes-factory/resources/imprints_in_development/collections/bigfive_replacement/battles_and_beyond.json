@@ -1,0 +1,28 @@
+{
+  "imprint": "Battles and Beyond",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@battlesandbeyond.com",
+  "branding": {
+    "tagline": "Beyond battles, into human lives",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.battlesandbeyond.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Military history, human stories from wars",
+    "target_audience": "Readers interested in military history and human narratives of war",
+    "competitive_advantage": "Battles and Beyond combines military strategy with personal stories",
+    "example_titles": "Books on World War II, the Vietnam War, personal tales of soldiers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

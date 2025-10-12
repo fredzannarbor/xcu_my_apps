@@ -1,0 +1,33 @@
+credentials:
+  usernames:
+    demo_user:
+      name: Demo User
+      password: null
+      email: demo@example.com
+      role: user
+    admin:
+      name: Administrator
+      password: $2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj6hsC6BtZvy
+      email: admin@example.com
+      role: admin
+    demo_user_2:
+      name: Demo User 2
+      email: user2@example.com
+      password: $2b$12$aEfg65gk.cut8NwK0Mvs1uSeLArnVHHvWNmoi0jGCh9lrVFIraV2e
+      role: user
+    fredzannarbor:
+      name: Fred Zimmerman
+      email: wfzimmerman@gmail.com
+      password: $2b$12$0bqCPqKSM7xO2l/yNgsG4ugyMFW7fWXg365GjGN17GoX1TMiCciMC
+      role: user
+cookie:
+  name: ai_social_auth_cookie
+  key: some_signature_key_for_development
+  expiry_days: 30
+registration:
+  enabled: true
+  default_role: user
+app:
+  name: AI Social Server
+  version: 1.0.0
+  description: AI-powered social media platform optimized for neurochemical engagement

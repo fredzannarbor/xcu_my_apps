@@ -1,0 +1,152 @@
+{
+  "user_id": "user_21232f29",
+  "username": "admin",
+  "created": "2025-09-24T01:26:21.062122",
+  "data_sources": {
+    "lsi_data": [
+      {
+        "original_name": "ltd.xlsx",
+        "saved_name": "ltd_20250924_040929.xlsx",
+        "category": "lsi_data",
+        "destination": "LTD",
+        "upload_time": "2025-09-24T04:09:29.931282",
+        "file_size": 66524,
+        "file_path": "user_21232f29/finance_data/lsi/LTD/ltd_20250924_040929.xlsx"
+      }
+    ],
+    "lsi_metadata": [
+      {
+        "original_name": "books_in_print.csv",
+        "saved_name": "books_in_print_20250925_215051.csv",
+        "category": "lsi_metadata",
+        "destination": "Current",
+        "upload_time": "2025-09-25T21:50:51.910987",
+        "file_size": 1418125,
+        "file_path": "user_21232f29/finance_data/lsi_metadata/Current/books_in_print_20250925_215051.csv"
+      }
+    ],
+    "kdp_data": [
+      {
+        "original_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1).xlsx",
+        "saved_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250925_115224.xlsx",
+        "category": "kdp_data",
+        "destination": "LTD",
+        "upload_time": "2025-09-25T11:52:24.426746",
+        "file_size": 3610727,
+        "file_path": "user_21232f29/finance_data/kdp/LTD/KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250925_115224.xlsx"
+      }
+    ],
+    "author_data": [
+      {
+        "original_name": "add2fme.xlsx",
+        "saved_name": "add2fme_20250926_015341.xlsx",
+        "category": "author_data",
+        "destination": "Metadata",
+        "upload_time": "2025-09-26T01:53:41.044970",
+        "file_size": 5638932,
+        "file_path": "user_21232f29/finance_data/authors/Metadata/add2fme_20250926_015341.xlsx"
+      }
+    ]
+  },
+  "file_history": [
+    {
+      "original_name": "ltd.xlsx",
+      "saved_name": "ltd_20250924_030037.xlsx",
+      "category": "lsi_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-24T03:00:37.413431",
+      "file_size": 66524,
+      "file_path": "user_21232f29/finance_data/lsi/LTD/ltd_20250924_030037.xlsx"
+    },
+    {
+      "original_name": "ltd.xlsx",
+      "saved_name": "ltd_20250924_030042.xlsx",
+      "category": "lsi_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-24T03:00:42.461702",
+      "file_size": 66524,
+      "file_path": "user_21232f29/finance_data/lsi/LTD/ltd_20250924_030042.xlsx"
+    },
+    {
+      "original_name": "ltd.xlsx",
+      "saved_name": "ltd_20250924_040921.xlsx",
+      "category": "lsi_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-24T04:09:21.222711",
+      "file_size": 66524,
+      "file_path": "user_21232f29/finance_data/lsi/LTD/ltd_20250924_040921.xlsx"
+    },
+    {
+      "original_name": "ltd.xlsx",
+      "saved_name": "ltd_20250924_040929.xlsx",
+      "category": "lsi_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-24T04:09:29.931282",
+      "file_size": 66524,
+      "file_path": "user_21232f29/finance_data/lsi/LTD/ltd_20250924_040929.xlsx"
+    },
+    {
+      "original_name": "books_in_print.csv",
+      "saved_name": "books_in_print_20250924_052937.csv",
+      "category": "lsi_metadata",
+      "destination": "Current",
+      "upload_time": "2025-09-24T05:29:37.634099",
+      "file_size": 1418125,
+      "file_path": "user_21232f29/finance_data/lsi_metadata/Current/books_in_print_20250924_052937.csv"
+    },
+    {
+      "original_name": "kdp.xlsx",
+      "saved_name": "kdp_20250924_105919.xlsx",
+      "category": "kdp_data",
+      "destination": "Monthly",
+      "upload_time": "2025-09-24T10:59:19.374791",
+      "file_size": 1117971,
+      "file_path": "user_21232f29/finance_data/kdp/Monthly/kdp_20250924_105919.xlsx"
+    },
+    {
+      "original_name": "kdp.xlsx",
+      "saved_name": "kdp_20250924_105935.xlsx",
+      "category": "kdp_data",
+      "destination": "Monthly",
+      "upload_time": "2025-09-24T10:59:35.288035",
+      "file_size": 1117971,
+      "file_path": "user_21232f29/finance_data/kdp/Monthly/kdp_20250924_105935.xlsx"
+    },
+    {
+      "original_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1).xlsx",
+      "saved_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250924_232455.xlsx",
+      "category": "kdp_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-24T23:24:55.718327",
+      "file_size": 3610727,
+      "file_path": "user_21232f29/finance_data/kdp/LTD/KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250924_232455.xlsx"
+    },
+    {
+      "original_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1).xlsx",
+      "saved_name": "KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250925_115224.xlsx",
+      "category": "kdp_data",
+      "destination": "LTD",
+      "upload_time": "2025-09-25T11:52:24.426746",
+      "file_size": 3610727,
+      "file_path": "user_21232f29/finance_data/kdp/LTD/KDP_Orders-edcf8329-6964-45af-8afa-7b1144619331 (1)_20250925_115224.xlsx"
+    },
+    {
+      "original_name": "books_in_print.csv",
+      "saved_name": "books_in_print_20250925_215051.csv",
+      "category": "lsi_metadata",
+      "destination": "Current",
+      "upload_time": "2025-09-25T21:50:51.910987",
+      "file_size": 1418125,
+      "file_path": "user_21232f29/finance_data/lsi_metadata/Current/books_in_print_20250925_215051.csv"
+    },
+    {
+      "original_name": "add2fme.xlsx",
+      "saved_name": "add2fme_20250926_015341.xlsx",
+      "category": "author_data",
+      "destination": "Metadata",
+      "upload_time": "2025-09-26T01:53:41.044970",
+      "file_size": 5638932,
+      "file_path": "user_21232f29/finance_data/authors/Metadata/add2fme_20250926_015341.xlsx"
+    }
+  ]
+}

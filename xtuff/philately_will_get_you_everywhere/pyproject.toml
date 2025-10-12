@@ -1,0 +1,35 @@
+[project]
+name = "philately-will-get-you-everywhere"
+version = "0.1.0"
+description = "A Python-based command-line system for managing a philatelic (stamp) collection."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Fred Zimmerman", email = "fred.zimmerman@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "google-generativeai>=0.8.5",
+    "markdown>=3.8",
+    "openai>=1.84.0",
+    "opencv-python>=4.11.0.86",
+    "pymupdf>=1.26.0",
+    "python-dotenv>=1.1.0",
+    "streamlit>=1.45.1",
+    "litellm>=1.35.2",
+    "pandas>=2.2.0",
+    "tqdm>=4.66.1"
+]
+
+[project.scripts]
+philately = "philately.processor_v2:main"
+
+[project.gui-scripts]
+philately-ui = "philately.philately_ui:main"

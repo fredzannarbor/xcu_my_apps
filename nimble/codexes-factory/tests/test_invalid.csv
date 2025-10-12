@@ -1,0 +1,5 @@
+title,book_id,scheduled_date,isbn,imprint,publisher,format,priority,notes
+"Valid Book",valid_1,2024-12-01,9781234567890,Test,Test Pub,paperback,1,Good book
+"Missing Book ID",,2024-12-01,,Test,Test Pub,paperback,1,Missing book_id
+"Invalid ISBN",invalid_isbn,2024-12-01,123,Test,Test Pub,paperback,1,Bad ISBN
+,missing_title,2024-12-01,,Test,Test Pub,paperback,1,Missing title

@@ -1,0 +1,28 @@
+{
+  "imprint": "AquaRealm Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@aquarealmimprint.com",
+  "branding": {
+    "tagline": "Dive into the unknown",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.aquarealmimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Marine biology, oceanography, freshwater ecosystems",
+    "target_audience": "Adventure seekers, environmentalists, marine life enthusiasts",
+    "competitive_advantage": "Breathtaking underwater explorations and revelations",
+    "example_titles": "The Hidden Life of Sea Turtles, The Great Thirst: An Insight into Freshwater Crises"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "VRevolution Prints",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vrevolutionprints.com",
+  "branding": {
+    "tagline": "Entertainment redefined",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vrevolutionprints.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Innovative VR games and interactive entertainment",
+    "target_audience": "Gamers and entertainment seekers",
+    "competitive_advantage": "Pushing the boundaries of VR entertainment",
+    "example_titles": "VR game walkthroughs, immersive VR concerts"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

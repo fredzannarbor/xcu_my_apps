@@ -1,0 +1,28 @@
+{
+  "imprint": "Audio Anecdotes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@audioanecdotes.com",
+  "branding": {
+    "tagline": "Hear the old, experience the timeless",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.audioanecdotes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Traditional folktales and mythologies with accompanying podcasts",
+    "target_audience": "Folklore enthusiasts and mythology fans",
+    "competitive_advantage": "Diverse cultural narratives brought to life with audio",
+    "example_titles": "Neil Gaiman's Norse Mythology, Japanese Folktales"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

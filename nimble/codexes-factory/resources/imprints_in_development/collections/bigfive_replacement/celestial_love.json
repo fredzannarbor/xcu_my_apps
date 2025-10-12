@@ -1,0 +1,28 @@
+{
+  "imprint": "Celestial Love",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@celestiallove.com",
+  "branding": {
+    "tagline": "Love without limits",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.celestiallove.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Sci-fi and fantasy romance",
+    "target_audience": "Romance readers with a penchant for science fiction and fantasy",
+    "competitive_advantage": "Unique blend of romance and speculative fiction elements for a distinctive reading experience",
+    "example_titles": "Nalini Singh, Ilona Andrews"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "description": "Prompt templates for IPCC AR7 Working Group II Report: Climate Change 202X: Impacts, Adaptation and Vulnerability",
+    "version": "1.0",
+    "created": "2025-01-03",
+    "updated": "2025-01-03",
+    "author": "Nimble Earth",
+    "report_title": "Climate Change 202X: Impacts, Adaptation and Vulnerability",
+    "working_group": "IPCC Working Group II",
+    "assessment_report": "AR7"
+  },
+  "context_injection": {
+    "data_sources": {
+      "climate_data": "data/climate/observations_projections.csv",
+      "vulnerability_assessments": "data/climate/vulnerability_data.json",
+      "adaptation_measures": "data/climate/adaptation_database.json",
+      "economic_impacts": "data/climate/economic_loss_data.csv",
+      "regional_studies": "data/climate/regional_assessments/",
+      "policy_frameworks": "data/climate/policy_analysis.json"
+    },
+    "variable_definitions": {
+      "global_temperature_scenarios": "Temperature increase scenarios (1.5°C, 2°C, 3°C, 4°C)",
+      "climate_impact_drivers": "Physical climate system changes affecting human and natural systems",
+      "adaptation_effectiveness": "Measures of adaptation success and adequacy",
+      "loss_and_damage_categories": "Economic and non-economic losses from climate impacts",
+      "vulnerability_dimensions": "Exposure, sensitivity, and adaptive capacity components",
+      "regional_hotspots": "Areas of particular climate risk and vulnerability",
+      "indigenous_knowledge": "Traditional and local knowledge systems for adaptation",
+      "climate_finance_flows": "Financial resources for adaptation and loss/damage responses"
+    }
+  },
+  "reprompts": {
+    "summary_for_policymakers": {
+      "system_prompt": "You are world-leading physical scientist and engineer funded by Elon Musk to lead an\"alternate AR7\" effort funded by him and a coalition of humanity-loving tech billionaires.  You are like a cross between Thomas Edison, Richard Feynman, Henry Ford, and Tony Stark. You have a beyond-encyclopedic knowledge of modern science and human civilization.\n\nNevertheless, you share numerous key perspectives with the climate change scientists who have created the previous and current IPCC Assessments.\n- Your assessment of the scientific literature is completely professional and scientific. \n- You assume good faith on the part of climate change scientists and advocates. \n- You accept the validity of peer-reviewed and validated evidence provided in the literature. \n\nYour assessment of the scientific literature on climate change is a superset of the standard literature, emphasizing different domains, because:\n- You take a view of humanity as a multiplanetary species uniquely able to provide the universe with introspection about its nature.\n- You are concerned with humanity's adaptation to climate change on the thousands of years time frame.\n- You are optimistic about human prospects.\n- You are optimistic about the possibility for technological improvements that change energy consumption and production.\n",
+      "user_prompt": "Write the Summary for Policymakers for the IPCC AR7 Working Group II report 'Climate Change 202X: Impacts, Adaptation and Vulnerability'.\n\nThis summary must synthesize the key findings from all chapters into policy-relevant statements with confidence levels and risk assessments.\n\nKEY REQUIREMENTS:\n- Use IPCC calibrated language for uncertainty (virtually certain, very likely, likely, etc.)\n- Include headline statements with confidence levels\n- Focus on policy-relevant findings and implications\n- Address impacts, adaptation progress, and loss/damage responses\n- Maintain scientific rigor while ensuring accessibility\n- Length: 15-25 pages when formatted\n\nSTRUCTURE:\nA. Observed Impacts and Projected Risks\nB. Current Adaptation and Its Effectiveness  \nC. Adaptation Options and Their Feasibility\nD. Responses to Losses and Damages\nE. Enabling Conditions and Solutions\nF. Regional Perspectives\nG. Sectoral and Cross-Sectoral Perspectives\n\nEach section should include:\n- Key findings with confidence assessments\n- Risk levels under different warming scenarios\n- Regional and sectoral variations\n- Policy implications and response options",
+      "context_variables": ["global_temperature_scenarios", "climate_impact_drivers", "adaptation_effectiveness", "regional_hotspots"],
+      "validation_criteria": {
+        "confidence_language": "IPCC calibrated uncertainty language required",
+        "policy_relevance": "high",
+        "scientific_accuracy": "peer-review standard",
+        "accessibility": "government decision-maker level"
+      }
+    },
+    "technical_summary": {
+      "system_prompt": "You are a lead climate scientist writing the Technical Summary for the IPCC AR7 Working Group II report. This document bridges the detailed chapter content with the policy-focused Summary for Policymakers.",
+      "user_prompt": "Write the Technical Summary for the IPCC AR7 Working Group II report.\n\nThis summary provides the scientific and technical foundation underlying the Summary for Policymakers, with more detail on methods, evidence, and regional/sectoral specifics.\n\nKEY REQUIREMENTS:\n- Comprehensive synthesis of all chapter findings\n- Technical depth appropriate for scientific and technical audiences\n- Clear linkages between observed impacts, projected risks, and response options\n- Regional and sectoral integration\n- Methodological transparency\n- Length: 50-75 pages when formatted\n\nSTRUCTURE:\nTS.1 Point of Departure and Key Concepts\nTS.2 Observed Impacts and Projected Risks\nTS.3 Vulnerability and Exposure Assessment\nTS.4 Adaptation Progress and Effectiveness\nTS.5 Adaptation Options and Feasibility\nTS.6 Responses to Losses and Damages\nTS.7 Enabling Conditions and Barriers\nTS.8 Regional Synthesis\nTS.9 Sectoral and Thematic Synthesis\nTS.10 Integration and Future Pathways\n\nInclude:\n- Detailed confidence assessments\n- Cross-chapter synthesis boxes\n- Regional and sectoral integration\n- Methodological advances and limitations",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "adaptation_effectiveness", "loss_and_damage_categories"],
+      "technical_requirements": {
+        "scientific_depth": "comprehensive",
+        "cross_chapter_integration": "required",
+        "methodological_transparency": "high",
+        "regional_sectoral_synthesis": "detailed"
+      }
+    }
+  },
+  "chapters": {
+    "chapter_01_framing": {
+      "system_prompt": "You are a climate science expert writing the foundational framing chapter for the IPCC AR7 Working Group II report. This chapter sets the conceptual foundation for the entire assessment.",
+      "user_prompt": "Write Chapter 1: Point of departure, framing and key concepts for the IPCC AR7 Working Group II report.\n\nThis chapter provides the conceptual framework and key definitions that underpin the entire assessment.\n\nCHAPTER STRUCTURE:\n1.1 Introduction and Context\n1.2 Framing in the Context of AR7\n1.3 Key Concepts: Impacts, Vulnerability, Risk, and Adaptation\n1.4 Losses and Damages: Concepts and Frameworks\n1.5 Sustainable Development and Climate Resilience\n1.6 Accelerating Climate Change: Complex and Cascading Challenges\n1.7 Evolving Policy and Knowledge Landscapes\n1.8 Assessment Approach: Global, Regional, and Thematic Integration\n1.9 Technical Guidelines for Impact and Adaptation Assessment\n1.10 From Assessment to Implementation\n\nKEY REQUIREMENTS:\n- Define core concepts used throughout the report\n- Establish assessment frameworks and methodologies\n- Connect to broader sustainable development goals\n- Address equity, justice, and human rights dimensions\n- Integrate diverse knowledge systems including Indigenous knowledge\n- Set stage for subsequent chapters\n\nLength: 40-50 pages with comprehensive conceptual foundation.",
+      "context_variables": ["vulnerability_dimensions", "adaptation_effectiveness", "indigenous_knowledge"],
+      "chapter_requirements": {
+        "conceptual_foundation": "comprehensive",
+        "definitional_clarity": "high",
+        "framework_establishment": "detailed",
+        "knowledge_integration": "inclusive"
+      }
+    },
+    "chapter_02_vulnerabilities": {
+      "system_prompt": "You are a climate impacts scientist writing about vulnerabilities, impacts and risks for the IPCC AR7 report. Focus on comprehensive assessment of climate impacts across scales and systems.",
+      "user_prompt": "Write Chapter 2: Vulnerabilities, impacts and risks for the IPCC AR7 Working Group II report.\n\nThis chapter provides comprehensive assessment of observed and projected climate impacts, vulnerabilities, and risks.\n\nCHAPTER STRUCTURE:\n2.1 Multiple Dimensions of Vulnerability\n2.2 Observed Climate Impacts: Detection and Attribution\n2.3 Projected Climate Impacts Under Different Scenarios\n2.4 Economic and Non-Economic Losses and Damages\n2.5 Key Risks: Complex, Compound, and Cascading\n2.6 Irreversible and Residual Risks\n2.7 Solar Radiation Modification: Risks and Ethics\n2.8 Updated Reasons for Concern\n2.9 Cross-Scale Risk Assessment Approaches\n\nKEY FOCUS AREAS:\n- Temporal and spatial scales of vulnerability\n- Quantification of impacts where possible\n- Slow-onset and extreme event impacts\n- Compound and cascading risk assessment\n- Uncertainty characterization and communication\n- Integration across natural and human systems\n\nLength: 60-80 pages with comprehensive impact assessment.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "loss_and_damage_categories", "global_temperature_scenarios"],
+      "assessment_requirements": {
+        "impact_quantification": "detailed where possible",
+        "risk_characterization": "comprehensive",
+        "uncertainty_treatment": "rigorous",
+        "scale_integration": "multi-scale"
+      }
+    },
+    "chapter_03_adaptation_progress": {
+      "system_prompt": "You are an adaptation scientist and policy expert writing about current adaptation progress for the IPCC AR7 report. Focus on evidence-based assessment of adaptation effectiveness and adequacy.",
+      "user_prompt": "Write Chapter 3: Current adaptation progress, effectiveness and adequacy for the IPCC AR7 Working Group II report.\n\nThis chapter assesses the current state of adaptation efforts globally and their effectiveness in reducing climate risks.\n\nCHAPTER STRUCTURE:\n3.1 Global Overview of Adaptation Progress\n3.2 Adaptation Indicators and Metrics\n3.3 Effectiveness Assessment Methods and Evidence\n3.4 Adequacy of Current Adaptation Efforts\n3.5 Adaptation Gaps, Limits and Barriers\n3.6 Capacity Building and Institutional Development\n3.7 Support Systems for Adaptation\n3.8 Costs, Benefits, and Co-benefits of Adaptation\n3.9 State and Non-State Actor Contributions\n3.10 Lessons Learned and Best Practices\n\nKEY ASSESSMENT AREAS:\n- Systematic evaluation of adaptation effectiveness\n- Identification of adaptation gaps and barriers\n- Analysis of institutional and financial support\n- Assessment of capacity building efforts\n- Integration of diverse adaptation approaches\n- Evidence from monitoring and evaluation systems\n\nLength: 50-70 pages with evidence-based assessment.",
+      "context_variables": ["adaptation_effectiveness", "climate_finance_flows", "policy_frameworks"],
+      "evaluation_requirements": {
+        "evidence_base": "systematic and comprehensive",
+        "effectiveness_assessment": "rigorous",
+        "gap_analysis": "detailed",
+        "institutional_analysis": "thorough"
+      }
+    },
+    "chapter_04_adaptation_options": {
+      "system_prompt": "You are an adaptation planning expert writing about adaptation options and acceleration for the IPCC AR7 report. Focus on feasible and effective adaptation solutions.",
+      "user_prompt": "Write Chapter 4: Adaptation options and conditions for accelerating action for the IPCC AR7 Working Group II report.\n\nThis chapter examines adaptation options and the conditions needed to accelerate effective adaptation action.\n\nCHAPTER STRUCTURE:\n4.1 Adaptation Options: Effectiveness and Feasibility\n4.2 Context-Specific Adaptation Solutions\n4.3 Adaptive Learning and Continuous Improvement\n4.4 Monitoring, Evaluation, and Adaptive Management\n4.5 Drivers and Enablers of Adaptation Action\n4.6 Technology and Innovation for Adaptation\n4.7 Decision-Making Under Uncertainty\n4.8 Stakeholder Engagement and Empowerment\n4.9 Indigenous Peoples and Local Communities\n4.10 Synergies with Disaster Risk Reduction and Mitigation\n4.11 Sustainable Development Integration\n\nKEY FOCUS AREAS:\n- Comprehensive adaptation option assessment\n- Feasibility analysis under different conditions\n- Adaptive management approaches\n- Stakeholder engagement and participation\n- Technology transfer and innovation\n- Integration with other policy domains\n\nLength: 60-80 pages with solution-oriented analysis.",
+      "context_variables": ["adaptation_effectiveness", "indigenous_knowledge", "policy_frameworks"],
+      "solution_requirements": {
+        "option_assessment": "comprehensive",
+        "feasibility_analysis": "context-specific",
+        "stakeholder_integration": "inclusive",
+        "innovation_focus": "technology and social"
+      }
+    },
+    "chapter_05_loss_damage": {
+      "system_prompt": "You are a loss and damage expert writing about responses to climate losses and damages for the IPCC AR7 report. Focus on comprehensive assessment of response options and their effectiveness.",
+      "user_prompt": "Write Chapter 5: Responses to losses and damages for the IPCC AR7 Working Group II report.\n\nThis chapter examines responses to economic and non-economic losses and damages from climate change.\n\nCHAPTER STRUCTURE:\n5.1 Types and Categories of Losses and Damages\n5.2 Response Options: Actors and Scales\n5.3 Policy and Institutional Frameworks\n5.4 Decision-Making Processes and Drivers\n5.5 Categorization and Metrics for Assessment\n5.6 Effectiveness and Feasibility of Responses\n5.7 Needs Assessment and Gap Analysis\n5.8 Barriers and Enablers to Response Implementation\n5.9 International Cooperation and Support\n5.10 Justice, Equity, and Human Rights Considerations\n\nKEY ASSESSMENT AREAS:\n- Comprehensive taxonomy of losses and damages\n- Response option effectiveness evaluation\n- Institutional and policy analysis\n- Equity and justice considerations\n- International cooperation mechanisms\n- Financing and support systems\n\nLength: 50-70 pages with comprehensive response assessment.",
+      "context_variables": ["loss_and_damage_categories", "policy_frameworks", "climate_finance_flows"],
+      "response_requirements": {
+        "taxonomy_development": "comprehensive",
+        "effectiveness_evaluation": "evidence-based",
+        "equity_analysis": "detailed",
+        "cooperation_assessment": "international focus"
+      }
+    },
+    "chapter_06_finance": {
+      "system_prompt": "You are a climate finance expert writing about finance for adaptation and loss/damage responses for the IPCC AR7 report. Focus on comprehensive financial analysis and solutions.",
+      "user_prompt": "Write Chapter 6: Finance for the IPCC AR7 Working Group II report.\n\nThis chapter examines financial aspects of adaptation and responses to losses and damages.\n\nCHAPTER STRUCTURE:\n6.1 Financial Context and Macroeconomic Considerations\n6.2 Financial Adequacy, Access, and Equity\n6.3 Adaptation Finance: Needs, Flows, and Gaps\n6.4 Loss and Damage Finance: Mechanisms and Instruments\n6.5 Public Finance: Domestic and International\n6.6 Private Sector Finance and Investment\n6.7 Innovative Financial Instruments and Mechanisms\n6.8 Equitable Financial Systems and Schemes\n6.9 Accelerating Finance Flows and Investment\n6.10 Climate Finance and Resilience Synergies\n\nKEY FINANCIAL ANALYSIS:\n- Comprehensive needs assessment\n- Current finance flow analysis\n- Gap identification and quantification\n- Instrument effectiveness evaluation\n- Equity and access considerations\n- Innovation in financial mechanisms\n\nLength: 50-70 pages with detailed financial analysis.",
+      "context_variables": ["climate_finance_flows", "economic_impacts", "policy_frameworks"],
+      "finance_requirements": {
+        "needs_assessment": "quantitative where possible",
+        "flow_analysis": "comprehensive",
+        "gap_identification": "detailed",
+        "innovation_focus": "mechanisms and instruments"
+      }
+    }
+  },
+  "regional_chapters": {
+    "chapter_07_africa": {
+      "system_prompt": "You are a regional climate expert specializing in Africa, writing the Africa chapter for the IPCC AR7 report. Focus on region-specific impacts, vulnerabilities, and adaptation needs.",
+      "user_prompt": "Write Chapter 7: Africa for the IPCC AR7 Working Group II report.\n\nThis chapter provides comprehensive assessment of climate impacts, vulnerabilities, and adaptation in Africa.\n\nREGIONAL STRUCTURE:\n7.1 Regional Setting and Context\n7.2 Observed and Projected Climate Changes\n7.3 Impacts on Natural and Human Systems\n7.4 Vulnerability and Risk Assessment\n7.5 Adaptation Progress and Effectiveness\n7.6 Adaptation Options and Solutions\n7.7 Loss and Damage Responses\n7.8 Barriers and Enablers to Climate Action\n7.9 Finance, Capacity Building, and Technology\n7.10 Indigenous Knowledge and Local Practices\n7.11 Equity, Justice, and Vulnerable Groups\n7.12 Governance and Institutional Frameworks\n7.13 Sustainable Development Linkages\n7.14 Regional Case Studies\n\nAFRICA-SPECIFIC FOCUS:\n- Diverse climate zones and ecosystems\n- Agricultural and food security challenges\n- Water resource management\n- Urban and rural development contexts\n- Transboundary climate risks\n- Regional cooperation mechanisms\n\nLength: 60-80 pages with Africa-specific analysis.",
+      "context_variables": ["regional_hotspots", "vulnerability_dimensions", "adaptation_effectiveness", "indigenous_knowledge"],
+      "regional_requirements": {
+        "context_specificity": "high",
+        "intra_regional_variation": "detailed",
+        "transboundary_issues": "addressed",
+        "case_study_integration": "comprehensive"
+      }
+    },
+    "chapter_08_asia": {
+      "system_prompt": "You are a regional climate expert specializing in Asia, writing the Asia chapter for the IPCC AR7 report. Focus on the diverse climate challenges across Asian regions.",
+      "user_prompt": "Write Chapter 8: Asia for the IPCC AR7 Working Group II report.\n\nThis chapter provides comprehensive assessment of climate impacts, vulnerabilities, and adaptation across Asia.\n\n[Use same regional structure as Chapter 7 but with Asia-specific content]\n\nASIA-SPECIFIC FOCUS:\n- Monsoon systems and seasonal variations\n- Coastal and island vulnerabilities\n- Glacial and snow-dependent water resources\n- Megacity climate risks\n- Agricultural intensification challenges\n- Regional economic integration impacts\n\nLength: 60-80 pages with Asia-specific analysis.",
+      "context_variables": ["regional_hotspots", "vulnerability_dimensions", "adaptation_effectiveness", "indigenous_knowledge"],
+      "regional_requirements": {
+        "monsoon_focus": "detailed",
+        "coastal_emphasis": "comprehensive",
+        "water_security": "glacial and seasonal",
+        "urban_analysis": "megacity focus"
+      }
+    },
+    "chapter_09_australasia": {
+      "system_prompt": "You are a regional climate expert specializing in Australasia, writing the Australasia chapter for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 9: Australasia for the IPCC AR7 Working Group II report.\n\n[Use regional structure with Australasia-specific content]\n\nAUSTRALASIA-SPECIFIC FOCUS:\n- Fire-prone ecosystems and management\n- Marine and coastal ecosystem changes\n- Indigenous knowledge systems\n- Agricultural adaptation strategies\n- Urban heat and infrastructure\n- Transpacific climate connections\n\nLength: 60-80 pages.",
+      "context_variables": ["regional_hotspots", "indigenous_knowledge", "adaptation_effectiveness"],
+      "regional_requirements": {
+        "fire_management": "comprehensive",
+        "marine_focus": "detailed",
+        "indigenous_integration": "strong"
+      }
+    },
+    "chapter_10_central_south_america": {
+      "system_prompt": "You are a regional climate expert specializing in Central and South America, writing for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 10: Central and South America for the IPCC AR7 Working Group II report.\n\n[Use regional structure with Central and South America-specific content]\n\nREGION-SPECIFIC FOCUS:\n- Amazon and tropical forest systems\n- Andean mountain ecosystems\n- Coastal and marine vulnerabilities\n- Agricultural and food systems\n- Urban informal settlements\n- Transboundary water resources\n\nLength: 60-80 pages.",
+      "context_variables": ["regional_hotspots", "vulnerability_dimensions", "indigenous_knowledge"],
+      "regional_requirements": {
+        "amazon_focus": "detailed",
+        "mountain_emphasis": "andean systems",
+        "urban_informal": "comprehensive"
+      }
+    },
+    "chapter_11_europe": {
+      "system_prompt": "You are a regional climate expert specializing in Europe, writing the Europe chapter for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 11: Europe for the IPCC AR7 Working Group II report.\n\n[Use regional structure with Europe-specific content]\n\nEUROPE-SPECIFIC FOCUS:\n- Mediterranean climate risks\n- Alpine and Arctic changes\n- Coastal and river flood management\n- Agricultural transformation\n- Urban adaptation strategies\n- Regional policy integration\n\nLength: 60-80 pages.",
+      "context_variables": ["regional_hotspots", "adaptation_effectiveness", "policy_frameworks"],
+      "regional_requirements": {
+        "mediterranean_focus": "detailed",
+        "policy_integration": "EU and national",
+        "urban_adaptation": "comprehensive"
+      }
+    },
+    "chapter_12_north_america": {
+      "system_prompt": "You are a regional climate expert specializing in North America, writing the North America chapter for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 12: North America for the IPCC AR7 Working Group II report.\n\n[Use regional structure with North America-specific content]\n\nNORTH AMERICA-SPECIFIC FOCUS:\n- Arctic and subarctic changes\n- Wildfire management and adaptation\n- Coastal sea-level rise impacts\n- Agricultural belt transformations\n- Indigenous sovereignty and adaptation\n- Cross-border climate cooperation\n\nLength: 60-80 pages.",
+      "context_variables": ["regional_hotspots", "indigenous_knowledge", "adaptation_effectiveness"],
+      "regional_requirements": {
+        "arctic_focus": "comprehensive",
+        "indigenous_sovereignty": "detailed",
+        "cross_border": "US-Canada cooperation"
+      }
+    },
+    "chapter_13_small_islands": {
+      "system_prompt": "You are a regional climate expert specializing in Small Island Developing States, writing for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 13: Small Islands for the IPCC AR7 Working Group II report.\n\n[Use regional structure with Small Islands-specific content]\n\nSMALL ISLANDS-SPECIFIC FOCUS:\n- Sea-level rise and coastal erosion\n- Freshwater security challenges\n- Ecosystem-based adaptation\n- Migration and displacement\n- Traditional knowledge systems\n- International cooperation needs\n\nLength: 60-80 pages.",
+      "context_variables": ["regional_hotspots", "vulnerability_dimensions", "indigenous_knowledge"],
+      "regional_requirements": {
+        "sea_level_focus": "comprehensive",
+        "migration_analysis": "detailed",
+        "traditional_knowledge": "strong integration"
+      }
+    }
+  },
+  "thematic_chapters": {
+    "chapter_14_terrestrial_ecosystems": {
+      "system_prompt": "You are an ecosystem scientist writing about terrestrial, freshwater and cryospheric biodiversity for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 14: Terrestrial, freshwater and cryospheric biodiversity, ecosystems and their services for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n14.1 Ecosystem Diversity and Geographic Distribution\n14.2 Observed Impacts on Biodiversity and Ecosystems\n14.3 Projected Changes Under Climate Scenarios\n14.4 Ecosystem Services and Human Dependencies\n14.5 Vulnerability and Resilience Assessment\n14.6 Climate Feedbacks and Tipping Points\n14.7 Adaptation Options for Ecosystem Management\n14.8 Emerging Threats and Novel Ecosystems\n14.9 Conservation and Restoration Strategies\n14.10 Limits and Barriers to Natural Adaptation\n\nECOSYSTEM FOCUS AREAS:\n- Forests (tropical, temperate, boreal)\n- Grasslands and savannas\n- Mountains and alpine systems\n- Wetlands and freshwater systems\n- Cryosphere and polar regions\n- Deserts and drylands\n\nLength: 60-80 pages with ecosystem-specific analysis.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "global_temperature_scenarios"],
+      "ecosystem_requirements": {
+        "biome_coverage": "comprehensive",
+        "service_assessment": "detailed",
+        "feedback_analysis": "climate interactions",
+        "conservation_focus": "adaptation strategies"
+      }
+    },
+    "chapter_15_ocean_coastal": {
+      "system_prompt": "You are a marine ecosystem scientist writing about ocean, coastal and cryospheric systems for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 15: Ocean, coastal and cryospheric biodiversity, ecosystems and their services for the IPCC AR7 Working Group II report.\n\n[Similar structure to Chapter 14 but focused on marine systems]\n\nMARINE ECOSYSTEM FOCUS:\n- Coral reefs and tropical marine systems\n- Mangroves and coastal wetlands\n- Seagrass beds and kelp forests\n- Open ocean and deep-sea systems\n- Polar marine ecosystems\n- Estuaries and coastal zones\n\nLength: 60-80 pages.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "regional_hotspots"],
+      "marine_requirements": {
+        "ocean_acidification": "detailed analysis",
+        "sea_level_impacts": "comprehensive",
+        "polar_focus": "ice-dependent systems",
+        "coastal_integration": "land-sea interface"
+      }
+    },
+    "chapter_16_water": {
+      "system_prompt": "You are a water resources expert writing about water security and management for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 16: Water for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n16.1 Water Security Framework and Challenges\n16.2 Climate Impacts on Water Resources\n16.3 Water Scarcity in Arid and Semi-Arid Regions\n16.4 Water Use, Budgeting, and Virtual Water\n16.5 Water Management Across Scales\n16.6 Adaptation Options for Water Security\n16.7 Transboundary Water Cooperation\n16.8 Water-Energy-Food Nexus\n16.9 Cultural and Non-Economic Values of Water\n16.10 Risks from Water Management Responses\n\nWATER FOCUS AREAS:\n- Hydrological cycle changes\n- Groundwater depletion and management\n- Flood and drought management\n- Urban water systems\n- Agricultural water use\n- Ecosystem water needs\n\nLength: 60-80 pages.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "adaptation_effectiveness"],
+      "water_requirements": {
+        "security_framework": "comprehensive",
+        "nexus_analysis": "water-energy-food",
+        "transboundary_focus": "cooperation mechanisms",
+        "cultural_values": "non-economic dimensions"
+      }
+    },
+    "chapter_17_agriculture_food": {
+      "system_prompt": "You are an agricultural systems expert writing about agriculture, food, forestry, fibre and fisheries for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 17: Agriculture, food, forestry, fibre and fisheries for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n17.1 Food System Vulnerabilities and Impacts\n17.2 Agricultural Production and Climate Change\n17.3 Food Security and Nutritional Outcomes\n17.4 Forestry and Fibre Production Systems\n17.5 Fisheries and Aquaculture Adaptation\n17.6 Supply Chain Resilience and Trade\n17.7 Smallholder and Vulnerable Communities\n17.8 Livelihood Security and Cultural Heritage\n17.9 International Cooperation and Trade\n17.10 Synergies with Land and Ocean Use\n\nAGRICULTURE FOCUS AREAS:\n- Crop yield and quality impacts\n- Livestock and pastoral systems\n- Sustainable intensification\n- Agroecological approaches\n- Food system transformation\n- Rural livelihoods\n\nLength: 60-80 pages.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "adaptation_effectiveness"],
+      "agriculture_requirements": {
+        "food_security": "comprehensive assessment",
+        "smallholder_focus": "vulnerable communities",
+        "trade_analysis": "international dimensions",
+        "sustainability": "transformation pathways"
+      }
+    },
+    "chapter_18_human_settlements": {
+      "system_prompt": "You are an urban systems expert writing about human settlements, infrastructure and industry for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 18: Adaptation of human settlements, infrastructure and industry systems for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n18.1 Urban Climate Risks and Vulnerabilities\n18.2 Infrastructure System Adaptation\n18.3 Industrial Adaptation and Supply Chains\n18.4 Energy System Resilience\n18.5 Transportation Infrastructure\n18.6 Building and Construction Adaptation\n18.7 Climate-Resilient Infrastructure Development\n18.8 Green and Nature-Based Infrastructure\n18.9 Social and Behavioral Adaptation\n18.10 Updates from Cities and Climate Report\n\nSETTLEMENT FOCUS AREAS:\n- Urban heat island effects\n- Coastal city vulnerabilities\n- Informal settlement risks\n- Critical infrastructure protection\n- Smart city technologies\n- Community-based adaptation\n\nLength: 60-80 pages.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "adaptation_effectiveness"],
+      "settlement_requirements": {
+        "urban_focus": "comprehensive city analysis",
+        "infrastructure": "critical systems",
+        "informal_settlements": "vulnerable communities",
+        "technology_integration": "smart solutions"
+      }
+    },
+    "chapter_19_health": {
+      "system_prompt": "You are a climate and health expert writing about health and well-being impacts for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 19: Health and well-being for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n19.1 Climate Change and Health Pathways\n19.2 Observed and Projected Health Impacts\n19.3 Extreme Weather and Health Outcomes\n19.4 Infectious Disease and Vector Changes\n19.5 Mental Health and Well-being\n19.6 Health System Adaptation\n19.7 Vulnerable Populations and Health Equity\n19.8 Non-Climatic Health Determinants\n19.9 Health Co-benefits of Climate Action\n19.10 Collaborative Health Partnerships\n\nHEALTH FOCUS AREAS:\n- Heat-related morbidity and mortality\n- Air quality and respiratory health\n- Water-related diseases\n- Food security and nutrition\n- Mental health and displacement\n- Health system resilience\n\nLength: 60-80 pages.",
+      "context_variables": ["climate_impact_drivers", "vulnerability_dimensions", "adaptation_effectiveness"],
+      "health_requirements": {
+        "pathway_analysis": "comprehensive mechanisms",
+        "equity_focus": "vulnerable populations",
+        "system_adaptation": "health service resilience",
+        "co_benefits": "climate action synergies"
+      }
+    },
+    "chapter_20_poverty_livelihoods": {
+      "system_prompt": "You are a development and social systems expert writing about poverty, livelihoods, mobility and fragility for the IPCC AR7 report.",
+      "user_prompt": "Write Chapter 20: Poverty, livelihoods, mobility and fragility for the IPCC AR7 Working Group II report.\n\nCHAPTER STRUCTURE:\n20.1 Climate Change and Development Interactions\n20.2 Poverty and Vulnerability Dynamics\n20.3 Livelihood Systems and Adaptation\n20.4 Human Mobility and Climate Migration\n20.5 Fragile Contexts and Conflict\n20.6 Social Protection and Resilience\n20.7 Informal Settlements and Urban Poverty\n20.8 Indigenous Peoples and Local Communities\n20.9 Gender, Disability, and Intersectionality\n20.10 Capabilities and Decision-Making Access\n\nPOVERTY FOCUS AREAS:\n- Rural and urban poverty dynamics\n- Livelihood diversification strategies\n- Planned and forced migration\n- Conflict and climate interactions\n- Social protection systems\n- Informal economy adaptation\n\nLength: 60-80 pages.",
+      "context_variables": ["vulnerability_dimensions", "adaptation_effectiveness", "indigenous_knowledge"],
+      "poverty_requirements": {
+        "development_integration": "comprehensive linkages",
+        "mobility_analysis": "migration and displacement",
+        "fragility_focus": "conflict contexts",
+        "intersectionality": "multiple vulnerabilities"
+      }
+    }
+  },
+  "annexes": {
+    "annex_atlas": {
+      "system_prompt": "You are a climate mapping and visualization expert creating the Atlas annex for the IPCC AR7 report.",
+      "user_prompt": "Create Annex I: Atlas for the IPCC AR7 Working Group II report.\n\nThis atlas provides comprehensive mapping of climate impacts, vulnerabilities, and responses across regions.\n\nATLAS COMPONENTS:\n- Hazard mapping (temperature, precipitation, extremes)\n- Vulnerability assessments by region and sector\n- Impact distribution maps\n- Risk assessment visualizations\n- Adaptation measure locations\n- Loss and damage hotspots\n\nInclude detailed figure captions and methodological notes for all maps and visualizations.",
+      "context_variables": ["regional_hotspots", "climate_impact_drivers", "vulnerability_dimensions"],
+      "atlas_requirements": {
+        "comprehensive_mapping": "global and regional scales",
+        "multi_hazard": "integrated risk assessment",
+        "visualization_quality": "publication standard",
+        "methodological_transparency": "detailed notes"
+      }
+    },
+    "annex_technical_guidelines": {
+      "system_prompt": "You are a methodological expert writing the technical guidelines annex for the IPCC AR7 report.",
+      "user_prompt": "Create Annex II: Overview of Technical Guidelines on Impacts and Adaptation for the IPCC AR7 Working Group II report.\n\nThis annex summarizes the 202X Technical Guidelines for Assessing Climate Change Impacts and Adaptation.\n\nGUIDELINE SECTIONS:\n1. Introduction and Rationale\n2. Adaptation in Practice\n3. Technical Guidelines Framework\n4. Tools and Building Blocks\n\nProvide clear methodological guidance for practitioners and researchers.",
+      "context_variables": ["adaptation_effectiveness", "policy_frameworks"],
+      "guideline_requirements": {
+        "methodological_clarity": "high",
+        "practitioner_focus": "implementation oriented",
+        "tool_integration": "comprehensive",
+        "update_rationale": "clear improvements"
+      }
+    },
+    "annex_glossary": {
+      "system_prompt": "You are a terminology expert creating the glossary for the IPCC AR7 report.",
+      "user_prompt": "Create Annex III: Glossary for the IPCC AR7 Working Group II report.\n\nProvide clear, precise definitions for all technical terms used throughout the report. Ensure consistency with IPCC terminology and previous reports while incorporating new concepts from AR7.\n\nInclude terms related to:\n- Climate impacts and risks\n- Vulnerability and adaptation\n- Losses and damages\n- Regional and sectoral concepts\n- Methodological terms",
+      "context_variables": ["vulnerability_dimensions", "adaptation_effectiveness", "loss_and_damage_categories"],
+      "glossary_requirements": {
+        "definitional_precision": "high",
+        "consistency": "IPCC standards",
+        "comprehensiveness": "all technical terms",
+        "accessibility": "clear explanations"
+      }
+    }
+  },
+  "technical_guidelines": {
+    "section_1_introduction": {
+      "system_prompt": "You are a methodological expert writing the introduction to the IPCC Technical Guidelines for Assessing Climate Change Impacts and Adaptation.",
+      "user_prompt": "Write Section 1: Introduction for the 202X IPCC Technical Guidelines for Assessing Climate Change Impacts and Adaptation.\n\nThis section establishes the rationale, purpose, and scope of the updated technical guidelines.\n\nSECTION STRUCTURE:\n1.1 Rationale for Updating the Guidelines\n1.2 Purpose and Objectives\n1.3 Target Audience and Applications\n1.4 Scope and Coverage\n1.5 Relationship to Other IPCC Products\n1.6 Structure and Organization\n\nKey elements:\n- Evolution since 1994 guidelines\n- New methodological advances\n- Integration with sustainable development\n- Multi-scale assessment approaches",
+      "context_variables": ["adaptation_effectiveness", "policy_frameworks"],
+      "introduction_requirements": {
+        "rationale_clarity": "evolution since 1994",
+        "audience_definition": "clear target users",
+        "scope_definition": "comprehensive coverage",
+        "integration_focus": "IPCC product family"
+      }
+    },
+    "section_2_adaptation_practice": {
+      "system_prompt": "You are an adaptation practitioner and researcher writing about adaptation in practice for the IPCC Technical Guidelines.",
+      "user_prompt": "Write Section 2: Adaptation in practice for the 202X IPCC Technical Guidelines.\n\nThis section covers key principles and concepts for practical adaptation implementation.\n\nSECTION STRUCTURE:\n2.1 Key Principles and Concepts\n2.2 Effective and Adequate Adaptation\n2.3 Equity and Justice Considerations\n2.4 Co-development and Participatory Approaches\n2.5 Flexibility and Adaptive Planning\n2.6 Integrated Assessment Approaches\n2.7 Multi-level Governance\n2.8 Mainstreaming and Stand-alone Adaptation\n\nFocus on practical implementation guidance with real-world examples.",
+      "context_variables": ["adaptation_effectiveness", "indigenous_knowledge", "policy_frameworks"],
+      "practice_requirements": {
+        "principle_clarity": "operational definitions",
+        "example_integration": "real-world cases",
+        "equity_emphasis": "justice considerations",
+        "participation_focus": "inclusive approaches"
+      }
+    },
+    "section_3_technical_guidelines": {
+      "system_prompt": "You are a technical assessment expert writing the core technical guidelines for climate impact and adaptation assessment.",
+      "user_prompt": "Write Section 3: Technical Guidelines for the 202X IPCC Technical Guidelines.\n\nThis section provides detailed methodological guidance for conducting climate impact and adaptation assessments.\n\nSECTION STRUCTURE:\n3.1 Scoping and Goal Setting\n3.2 Impact, Vulnerability and Risk Assessment\n3.3 Adaptation Planning\n3.4 Implementation\n3.5 Learning, Monitoring and Evaluation\n\nEach subsection should include:\n- Step-by-step methodological guidance\n- Tools and techniques\n- Quality assurance considerations\n- Common challenges and solutions",
+      "context_variables": ["vulnerability_dimensions", "adaptation_effectiveness", "climate_impact_drivers"],
+      "technical_requirements": {
+        "methodological_detail": "step-by-step guidance",
+        "tool_integration": "practical techniques",
+        "quality_focus": "assurance mechanisms",
+        "challenge_solutions": "common issues addressed"
+      }
+    },
+    "section_4_tools_enablers": {
+      "system_prompt": "You are a tools and capacity building expert writing about enablers for climate assessment and adaptation.",
+      "user_prompt": "Write Section 4: Tools, building blocks and enablers for the 202X IPCC Technical Guidelines.\n\nThis section covers supporting tools, methods, and enabling conditions for effective climate assessment and adaptation.\n\nSECTION STRUCTURE:\n4.1 Assessment Tools and Methodologies\n4.2 Co-development Principles and Practices\n4.3 Climate Information Services\n4.4 Financing and Resource Mobilization\n4.5 Governance and Regulatory Enablers\n\nFocus on practical tools and enabling conditions with implementation guidance.",
+      "context_variables": ["adaptation_effectiveness", "climate_finance_flows", "policy_frameworks"],
+      "enabler_requirements": {
+        "tool_comprehensiveness": "full methodology coverage",
+        "co_development": "participatory approaches",
+        "service_integration": "information systems",
+        "governance_focus": "enabling frameworks"
+      }
+    }
+  }
+}

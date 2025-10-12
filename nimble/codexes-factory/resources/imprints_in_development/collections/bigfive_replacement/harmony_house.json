@@ -1,0 +1,28 @@
+{
+  "imprint": "Harmony House",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@harmonyhouse.com",
+  "branding": {
+    "tagline": "Harmonize Your Life",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.harmonyhouse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Holistic health, Mind-body connection, Stress management",
+    "target_audience": "Individuals interested in holistic health and stress relief",
+    "competitive_advantage": "Publications that promote a balanced approach to health and wellbeing",
+    "example_titles": "Books on holistic health, mind-body connection, and stress relief"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

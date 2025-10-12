@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: Separate Silos pwb",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a profile with backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: First, global leadership shifts from being led by the U.S. and like-minded nation-states to relative parity with China and its allies. Second, the global technological change rate will increase from  'Accelerated' to 'Exponential,' especially as key enabling space technologies in data analytics and  artificial intelligence, propulsion, manufacturing,   resource extraction, and more importantly the     convergence of all of these factors, will be used to   augment human endeavors. Finally, Geopolitical Stability starts to potentially shift from 'Predictable Competition' to 'Unrestrained Competition', which reflects its increasingly competitive nature.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Include some personal details. Profile with backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0.8,
+        "pp": 0.5,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

@@ -1,0 +1,247 @@
+{
+  "_template_info": {
+    "description": "BigFiveReplacement LLC - Virtual publishing conglomerate",
+    "version": "1.0",
+    "last_updated": "2025-09-22",
+    "usage": "Shadow Big Five publisher configuration with massive scale"
+  },
+
+  "_required_fields": {
+    "publisher": "BigFiveReplacement LLC",
+    "contact_email": "bigfive@nimblebooks.com",
+    "lightning_source_account": "LSI950000"
+  },
+
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "bigfive@nimblebooks.com",
+  "lightning_source_account": "LSI950000",
+
+  "company_info": {
+    "legal_name": "BigFiveReplacement LLC",
+    "founded_year": "2025",
+    "headquarters": "Ann Arbor, Michigan, USA",
+    "website": "https://www.bigfivereplacement.com",
+    "phone": "+1-734-555-9500",
+    "tax_id": "47-2850945"
+  },
+
+  "business_model": {
+    "publishing_type": "Conglomerate",
+    "distribution_model": "Hybrid Traditional/AI-Enhanced",
+    "primary_markets": ["US", "UK", "CA", "AU", "EU", "Global"],
+    "business_focus": "Multi-Imprint Conglomerate",
+    "annual_titles": "200000+",
+    "target_market_share": "25%"
+  },
+
+  "scale_metrics": {
+    "target_imprints": "50+",
+    "annual_revenue_target": "$10B",
+    "titles_per_imprint": "1000-10000",
+    "markets_served": "Global",
+    "languages_published": ["eng", "spa", "fra", "deu", "ita", "por", "jpn", "kor", "zho"],
+    "competitive_positioning": "Larger than Penguin Random House"
+  },
+
+  "default_settings": {
+    "language_code": "eng",
+    "country_of_origin": "US",
+    "territorial_rights": "World",
+    "returnability": "Yes",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "cover_type": "matte"
+  },
+
+  "pricing_strategy": {
+    "us_wholesale_discount": "45",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "45",
+    "au_wholesale_discount": "42",
+    "default_markup_percentage": "120",
+    "pricing_model": "aggressive_competitive",
+    "volume_discounts": true,
+    "dynamic_pricing": true
+  },
+
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "cover_submission_method": "API",
+    "text_block_submission_method": "API",
+    "rendition_booktype": "all_formats",
+    "carton_pack_quantity": "50",
+    "order_type_eligibility": "POD_AND_OFFSET",
+    "preferred_printer": "Multi-Vendor",
+    "global_distribution": true,
+    "expedited_processing": true
+  },
+
+  "quality_standards": {
+    "min_resolution_dpi": "400",
+    "color_profile": "CMYK_Premium",
+    "pdf_version": "PDF/X-4",
+    "bleed_requirements": "0.125 inches",
+    "spine_calculation_method": "automated_precision",
+    "quality_tier": "premium"
+  },
+
+  "metadata_standards": {
+    "required_fields": [
+      "title", "author", "isbn13", "publication_date",
+      "bisac_category", "thema_subjects", "summary",
+      "page_count", "contributor_bio", "marketing_copy"
+    ],
+    "preferred_bisac_depth": 5,
+    "require_thema_subjects": true,
+    "require_age_range": true,
+    "require_contributor_bio": true,
+    "ai_enhanced_metadata": true,
+    "seo_optimization": true
+  },
+
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "USD",
+      "exchange_rate": 1.0,
+      "tax_rate": "0.0",
+      "shipping_class": "expedited"
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "exchange_rate": 0.78,
+      "tax_rate": "20.0",
+      "shipping_class": "international_priority"
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "exchange_rate": 0.91,
+      "tax_rate": "19.0",
+      "shipping_class": "international_priority"
+    },
+    "CA": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "exchange_rate": 1.35,
+      "tax_rate": "5.0",
+      "shipping_class": "north_america_priority"
+    },
+    "AU": {
+      "wholesale_discount_percent": "42",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "exchange_rate": 1.48,
+      "tax_rate": "10.0",
+      "shipping_class": "asia_pacific"
+    }
+  },
+
+  "lsi_account_settings": {
+    "account_number": "LSI950000",
+    "account_type": "Enterprise_Premium",
+    "billing_contact": "billing@bigfivereplacement.com",
+    "technical_contact": "api@bigfivereplacement.com",
+    "account_manager": "enterprise@lightningsource.com",
+    "priority_support": true,
+    "api_access": "full",
+    "ftp_credentials": {
+      "username": "bigfive_enterprise",
+      "server": "enterprise.lightningsource.com",
+      "directory": "/enterprise_incoming"
+    }
+  },
+
+  "workflow_preferences": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": false,
+    "ai_assisted_workflow": true,
+    "batch_processing": true,
+    "notification_emails": [
+      "workflow@bigfivereplacement.com",
+      "production@bigfivereplacement.com",
+      "editorial@bigfivereplacement.com"
+    ],
+    "backup_configurations": true,
+    "audit_trail": true,
+    "performance_monitoring": true
+  },
+
+  "branding_defaults": {
+    "logo_path": "logos/bigfive_replacement_logo.png",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f",
+      "accent": "#ffd54f"
+    },
+    "default_fonts": {
+      "title": "Minion Pro Bold",
+      "body": "Adobe Caslon Pro",
+      "caption": "Source Sans Pro"
+    }
+  },
+
+  "marketing_settings": {
+    "default_marketing_copy": "Published by BigFiveReplacement LLC - Redefining Global Publishing",
+    "social_media_handles": {
+      "twitter": "@BigFiveReplace",
+      "facebook": "BigFiveReplacement",
+      "linkedin": "bigfive-replacement-llc",
+      "instagram": "@bigfivereplacement"
+    },
+    "press_contact": "press@bigfivereplacement.com",
+    "review_copy_policy": "Available for all titles",
+    "influencer_program": true,
+    "global_marketing": true
+  },
+
+  "legal_settings": {
+    "copyright_notice": "© {year} BigFiveReplacement LLC. All rights reserved.",
+    "legal_disclaimer": "Enterprise publishing disclaimer - Global operations",
+    "privacy_policy_url": "https://www.bigfivereplacement.com/privacy",
+    "terms_of_service_url": "https://www.bigfivereplacement.com/terms",
+    "international_compliance": true
+  },
+
+  "integration_settings": {
+    "erp_system": "SAP Enterprise",
+    "crm_system": "Salesforce Enterprise",
+    "accounting_system": "Oracle Financials",
+    "inventory_management": "Automated_AI",
+    "api_endpoints": {
+      "production": "https://api.bigfivereplacement.com/v1",
+      "metadata": "https://metadata.bigfivereplacement.com/v1",
+      "distribution": "https://distribution.bigfivereplacement.com/v1"
+    },
+    "webhook_urls": [
+      "https://webhooks.bigfivereplacement.com/production",
+      "https://webhooks.bigfivereplacement.com/sales"
+    ]
+  },
+
+  "ai_enhancement": {
+    "enabled": true,
+    "content_generation": true,
+    "metadata_automation": true,
+    "trend_analysis": true,
+    "predictive_publishing": true,
+    "automated_editing": true,
+    "cover_generation": true,
+    "marketing_optimization": true
+  },
+
+  "competitive_advantages": {
+    "scale": "Unprecedented title output",
+    "technology": "AI-first publishing pipeline",
+    "speed": "Rapid time-to-market",
+    "cost": "Optimized production costs",
+    "global_reach": "Simultaneous worldwide release",
+    "data_driven": "Advanced analytics and insights"
+  }
+}

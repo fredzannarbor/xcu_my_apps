@@ -1,0 +1,28 @@
+{
+  "imprint": "BilinguaBridge",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@bilinguabridge.com",
+  "branding": {
+    "tagline": "Building Bridges with Bilingual Books",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.bilinguabridge.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Bilingual Spanish-English literary fiction and non-fiction",
+    "target_audience": "Spanish and English-speaking readers seeking to immerse in both cultures through literature",
+    "competitive_advantage": "Our carefully curated, engaging bilingual content helps readers effortlessly transition between languages, promoting cultural understanding and language proficiency.",
+    "example_titles": "Contemporary Latin American authors, English translations of Spanish classics, bilingual editions of popular English language novels"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

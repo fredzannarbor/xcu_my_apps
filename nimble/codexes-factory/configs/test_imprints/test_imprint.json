@@ -1,0 +1,505 @@
+{
+  "_config_info": {
+    "description": "Apex Technical Press imprint configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-20",
+    "parent_publisher": "Global Knowledge Works"
+  },
+  "imprint": "Apex Technical Press",
+  "publisher": "Global Knowledge Works",
+  "contact_email": "editorial@apextechnical.com",
+  "branding": {
+    "logo_path": "logos/apex_technical_logo.png",
+    "brand_colors": {
+      "primary": {
+        "hex": "#2C3E50",
+        "description": "Deep Charcoal Blue"
+      },
+      "secondary": {
+        "hex": "#3498DB",
+        "description": "Professional Blue"
+      },
+      "accent": {
+        "hex": "#E67E22",
+        "description": "Vibrant Orange (for highlights)"
+      }
+    },
+    "tagline": "Precision. Clarity. Expertise.",
+    "website": "https://www.apextechnical.com"
+  },
+  "fonts": {
+    "body": {
+      "primary": "Source Sans Pro",
+      "fallback": "Open Sans",
+      "source": "Google Fonts",
+      "fallback_source": "Google Fonts"
+    },
+    "heading": {
+      "primary": "Montserrat",
+      "fallback": "Roboto",
+      "source": "Google Fonts",
+      "fallback_source": "Google Fonts"
+    },
+    "korean": "Noto Sans KR",
+    "quotations": {
+      "primary": "Source Sans Pro",
+      "fallback": "Open Sans",
+      "source": "Google Fonts",
+      "fallback_source": "Google Fonts"
+    },
+    "mnemonics": {
+      "primary": "Source Code Pro",
+      "fallback": "Fira Code",
+      "source": "Google Fonts",
+      "fallback_source": "Google Fonts"
+    }
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Computer Science",
+      "Engineering",
+      "Technical Reference",
+      "Professional Development",
+      "Data Science"
+    ],
+    "target_audience": "Engineers, Developers, IT Professionals, Advanced Students, Researchers, Technical Educators",
+    "specialization": "Advanced technical documentation, professional reference works, and specialized manuals.",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "7x10",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "180"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "ATX67890",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 7 x 10 in or 254 x 178 mm Case Lam w/Jacket on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "COM000000",
+      "TEC000000",
+      "MAT000000",
+      "SCI000000",
+      "BUS000000"
+    ],
+    "thema_subject_preferences": [
+      "UM",
+      "UBC",
+      "UJM",
+      "PN",
+      "TG",
+      "TGB"
+    ],
+    "default_age_range": {
+      "min_age": "18",
+      "max_age": "99"
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Technical Reviewer"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{title_short}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/{imprint}"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "strongly_encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@ApexTechPress",
+      "linkedin": "linkedin.com/company/apex-technical-press",
+      "facebook": "ApexTechnicalPress"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "Technical/Professional",
+    "metadata_contact_dictionary": "Apex Technical Press Editorial",
+    "flex_fields": {
+      "lsi_flexfield1": "Technical Manual",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "workflow@apextechnical.com",
+    "backup_configurations": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting, with a strong focus on technical precision.",
+    "enabled_types": [
+      "reference",
+      "textbook",
+      "workbook"
+    ],
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional book layout with chapters",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      },
+      "reference": {
+        "name": "Reference Book",
+        "description": "Structured for targeted information retrieval, comprehensive indexes, and glossaries.",
+        "template_requirements": [
+          "detailed_index",
+          "glossary",
+          "cross_references",
+          "running_heads"
+        ],
+        "formatting_rules": {
+          "hierarchy": "nested_sections_numbered",
+          "quick_lookup": "highlighted_terms_and_definitions",
+          "tables_figures": "numbered_with_captions_and_lists",
+          "whitespace_strategy": "functional_for_scanning"
+        }
+      },
+      "textbook": {
+        "name": "Technical Textbook",
+        "description": "Designed for learning, featuring exercises, learning objectives, and academic formatting.",
+        "template_requirements": [
+          "learning_objectives",
+          "exercises_and_problems",
+          "solution_sections_or_hints",
+          "key_term_callouts",
+          "chapter_summaries"
+        ],
+        "formatting_rules": {
+          "section_summaries": "boxed_or_shaded",
+          "example_blocks": "distinct_styling_with_code_syntax_highlighting",
+          "question_answer_format": "clear_delineation",
+          "diagram_integration": "inline_and_floating_with_text_wrap"
+        }
+      },
+      "workbook": {
+        "name": "Technical Workbook",
+        "description": "Interactive content with fillable sections, practice problems, and answer keys.",
+        "template_requirements": [
+          "fillable_sections",
+          "practice_problems",
+          "answer_key_or_guide",
+          "interactive_exercises"
+        ],
+        "formatting_rules": {
+          "interactive_areas": "lined_sections_or_form_fields",
+          "problem_solution_pairs": "clear_separation_with_reveal_options",
+          "instruction_flow": "step_by_step_visual_guidance",
+          "feedback_mechanisms": "self_assessment_checklists"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "oral_history": [
+          "oral history",
+          "interview",
+          "testimony",
+          "spoken",
+          "conversation"
+        ],
+        "puzzle": [
+          "puzzle",
+          "sudoku",
+          "crossword",
+          "brain teaser",
+          "logic",
+          "game"
+        ],
+        "cookbook": [
+          "recipe",
+          "cooking",
+          "cuisine",
+          "cookbook",
+          "culinary",
+          "kitchen"
+        ],
+        "poetry": [
+          "poetry",
+          "poems",
+          "verse",
+          "sonnet",
+          "haiku",
+          "lyrical"
+        ],
+        "reference": [
+          "reference",
+          "handbook",
+          "manual",
+          "guide",
+          "dictionary",
+          "encyclopedia",
+          "api",
+          "specifications"
+        ],
+        "textbook": [
+          "textbook",
+          "curriculum",
+          "academic",
+          "educational",
+          "course",
+          "study",
+          "principles",
+          "introduction_to"
+        ],
+        "journal": [
+          "journal",
+          "diary",
+          "reflection",
+          "daily",
+          "log",
+          "personal"
+        ],
+        "workbook": [
+          "workbook",
+          "exercises",
+          "practice",
+          "worksheets",
+          "activities",
+          "assignments",
+          "labs"
+        ]
+      }
+    },
+    "specialized_templates": {
+      "oral_history": {
+        "name": "Oral History",
+        "description": "Formatted for interview-style content with speaker identification",
+        "template_requirements": [
+          "speaker_tags",
+          "timestamp_markers",
+          "question_answer_format"
+        ],
+        "formatting_rules": {
+          "speaker_name": "bold_at_paragraph_start",
+          "question_format": "italic_or_bold_q_prefix",
+          "answer_format": "regular_text_with_indent",
+          "section_breaks": "topic_or_time_based",
+          "quote_preservation": "verbatim_with_markers"
+        }
+      },
+      "puzzle": {
+        "name": "Puzzle Book",
+        "description": "Grid-based layouts for puzzles with answer sections",
+        "template_requirements": [
+          "grid_layouts",
+          "answer_keys",
+          "difficulty_indicators"
+        ],
+        "formatting_rules": {
+          "puzzle_grid": "fixed_width_monospace",
+          "instructions": "boxed_or_highlighted",
+          "answer_section": "separate_or_back_matter",
+          "difficulty_rating": "visual_indicators",
+          "numbering_system": "sequential_or_by_section"
+        }
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "A highly modular and flexible grid system is essential to accommodate varying content types: text, code blocks, tables, figures, warnings, tips, and exercises. Distinct visual cues (e.g., color, iconography, specific typography) for different content functions (notes, warnings, examples). Clear visual hierarchy for headings and subheadings. Ample whitespace to prevent visual fatigue and aid comprehension. Consistent layout for sidebars, callouts, and multi-column elements where appropriate.",
+      "template_customizations": "Required template modifications for precision typography for complex content (code, formulas, diagrams), hierarchical information structure, rapid information retrieval, and clear instruction flow.",
+      "typesetting_considerations": "Extensive use of specialized typography: precise kerning, leading, and tracking for technical terms and formulas; dedicated monospace fonts for code blocks (with optional syntax highlighting for digital versions); robust support for mathematical equations (e.g., MathML, LaTeX rendering) ensuring correct baseline alignment and symbol sizing; custom bullet points or numbered lists for procedural instructions; consistent styling for cross-references and index entries. Font choices must prioritize legibility for dense technical information."
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "reference",
+        "textbook",
+        "workbook"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Precision typography for complex content (code, formulas, diagrams), hierarchical information structure, rapid information retrieval, and clear instruction flow.",
+        "interior_layout_notes": "A highly modular and flexible grid system is essential to accommodate varying content types: text, code blocks, tables, figures, warnings, tips, and exercises. Distinct visual cues (e.g., color, iconography, specific typography) for different content functions (notes, warnings, examples). Clear visual hierarchy for headings and subheadings. Ample whitespace to prevent visual fatigue and aid comprehension. Consistent layout for sidebars, callouts, and multi-column elements where appropriate.",
+        "typesetting_requirements": "Extensive use of specialized typography: precise kerning, leading, and tracking for technical terms and formulas; dedicated monospace fonts for code blocks (with optional syntax highlighting for digital versions); robust support for mathematical equations (e.g., MathML, LaTeX rendering) ensuring correct baseline alignment and symbol sizing; custom bullet points or numbered lists for procedural instructions; consistent styling for cross-references and index entries. Font choices must prioritize legibility for dense technical information.",
+        "functional_elements": "Comprehensive, multi-level index; detailed glossary of technical terms; appendices for supplementary data or reference tables; clear, nested Table of Contents; running heads/feet that indicate current chapter/section for easy navigation; robust system for internal cross-referencing (e.g., 'See Chapter 3' or 'Figure 4.5 on page X'). For manuals, dedicated sections for exercises, practice problems, and potentially answer keys or troubleshooting guides.",
+        "reader_interaction_model": "Readers will predominantly engage in targeted information retrieval (looking up specific facts, definitions, or procedures), sequential instruction following (for technical tasks or software usage), and in-depth study/comprehension of complex topics. The design must facilitate quick scanning, efficient navigation between related topics, and sustained focus on detailed content. Readers often use these books as tools for learning, problem-solving, and professional development."
+      },
+      "reasoning": "The imprint's focus on 'technical manuals and reference books' with 'specialized typography' necessitates a sophisticated design approach far beyond standard layouts. The 'reference' codextype is crucial for structured information retrieval and cross-referencing, while the 'textbook' codextype provides a framework for learning objectives, exercises, and academic formatting common in manuals. The 'workbook' codextype offers specific patterns for interactive exercises often found in technical training manuals. The explicit mention of 'specialized typography' further mandates innovative interior design to accurately and legibly present code, formulas, diagrams, and other complex data types. These combined codextypes, along with highly specific design parameters, will create a superior reader experience for complex technical content."
+    }
+  },
+  "academic_paper_generation": {
+    "enabled": true,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": true,
+      "on_schedule": true,
+      "manual_only": false
+    },
+    "paper_settings": {
+      "target_venues": [
+        "IEEE Transactions on Professional Communication",
+        "ACM Journal of Data and Information Quality",
+        "Publishing Research Quarterly",
+        "Technical Communication"
+      ],
+      "paper_types": [
+        "case_study",
+        "methodology_paper",
+        "industry_analysis",
+        "typography_study"
+      ],
+      "default_paper_type": "methodology_paper",
+      "target_word_count": 9000,
+      "citation_style": "ieee",
+      "include_quantitative_analysis": true
+    },
+    "content_configuration": {
+      "focus_areas": [
+        "Specialized typography in technical publishing",
+        "AI/LLM application in technical content generation and validation",
+        "Methodologies for producing high-quality technical manuals",
+        "Impact of information architecture on knowledge retention",
+        "Best practices for diagram and code integration in books"
+      ],
+      "data_sources": {
+        "include_book_catalog": true,
+        "include_sales_metrics": true,
+        "include_production_metrics": true,
+        "include_configuration_analysis": true
+      },
+      "anonymization": {
+        "anonymize_sales_data": true,
+        "anonymize_author_names": true,
+        "anonymize_specific_titles": false
+      }
+    },
+    "output_settings": {
+      "output_directory": "output/academic_papers/{imprint_name}",
+      "file_naming": "{imprint_name}_paper_{date}",
+      "formats": [
+        "latex",
+        "pdf",
+        "markdown"
+      ],
+      "include_submission_package": true
+    },
+    "automation_schedule": {
+      "enabled": true,
+      "frequency": "quarterly",
+      "milestone_triggers": {
+        "book_count_milestones": [
+          10,
+          25,
+          50
+        ],
+        "revenue_milestones": [],
+        "time_milestones": [
+          "6_months",
+          "1_year",
+          "2_years"
+        ]
+      }
+    },
+    "llm_configuration": {
+      "preferred_models": [
+        "gemini/gemini-2.5-pro",
+        "claude-3-opus-20240229"
+      ],
+      "temperature": 0.6,
+      "max_tokens": 4000,
+      "enable_quality_validation": true
+    },
+    "collaboration_settings": {
+      "include_attribution": true,
+      "author_byline": "Apex Technical Press Research Team",
+      "institutional_affiliation": "Global Knowledge Works Publishing Innovation Lab",
+      "contact_email": "research@apextechnical.com",
+      "co_author_llm": true
+    },
+    "validation_criteria": {
+      "min_word_count": 7000,
+      "max_word_count": 11000,
+      "required_sections": [
+        "abstract",
+        "introduction",
+        "literature_review",
+        "methodology",
+        "results",
+        "discussion",
+        "conclusion"
+      ],
+      "require_quantitative_data": true,
+      "require_citations": true,
+      "academic_tone_validation": true
+    }
+  },
+  "publisher_persona": {
+    "persona_name": "Dr. Evelyn Reed",
+    "persona_bio": "Former lead engineer at a major tech firm, now a seasoned editor with a passion for bridging academic research and practical application in technology and engineering. Holds a Ph.D. in Computer Science and has a strong network in industry and academia.",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Data-driven",
+    "preferred_topics": "AI/ML advancements, Cybersecurity best practices, Quantum Computing foundations, Advanced Materials engineering, Sustainable technology solutions, Data Science applications.",
+    "target_demographics": "Early-to-mid career professionals (25-45), advanced university students, researchers in STEM fields, technical trainers and educators.",
+    "vulnerabilities": "Potential over-reliance on quantitative metrics for content validation, sometimes underestimating the importance of broader market appeal or simplified explanations for complex topics if not directly impacting functional clarity."
+  },
+  "wizard_configuration": {
+    "name": "Apex Technical Press",
+    "charter": "To disseminate high-quality, precise, and practical technical knowledge for professionals and advanced learners through meticulously crafted manuals and reference works, emphasizing clarity and specialized typography.",
+    "imprint_type": "Technical/Professional Reference",
+    "genres": [
+      "Computer Science",
+      "Engineering",
+      "Technical Manuals",
+      "Data Science"
+    ],
+    "book_format": "Paperback",
+    "price_point": 49.99,
+    "page_count": 400,
+    "catalog_size": 20,
+    "enable_ideation": true
+  },
+  "_generation_info": {
+    "generated_by": "oneshot_imprint_generator",
+    "generated_at": "2025-09-23T02:35:40.933003",
+    "model_used": "gemini/gemini-2.5-flash",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

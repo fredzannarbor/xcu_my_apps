@@ -1,0 +1,195 @@
+{
+  "_config_info": {
+    "description": "Academic Publishers Inc. publisher configuration",
+    "version": "1.0",
+    "last_updated": "2024-07-18",
+    "config_type": "publisher"
+  },
+  
+  "publisher": "Academic Publishers Inc.",
+  "contact_email": "info@academicpublishers.com",
+  "lightning_source_account": "LSI123456",
+  
+  "company_info": {
+    "legal_name": "Academic Publishers Inc.",
+    "founded_year": "1995",
+    "headquarters": "Boston, Massachusetts, USA",
+    "website": "https://www.academicpublishers.com",
+    "phone": "+1-617-555-0123",
+    "tax_id": "XX-XXXXXXX"
+  },
+  
+  "business_model": {
+    "publishing_type": "Academic",
+    "distribution_model": "Print-on-Demand + Traditional",
+    "primary_markets": ["US", "UK", "CA", "EU"],
+    "business_focus": "Academic and Educational Publishing",
+    "annual_titles": "200-500"
+  },
+  
+  "default_settings": {
+    "language_code": "eng",
+    "country_of_origin": "US",
+    "territorial_rights": "World",
+    "returnability": "Yes",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "cover_type": "matte",
+    "edition_number": "1",
+    "edition_description": "First Edition"
+  },
+  
+  "pricing_strategy": {
+    "us_wholesale_discount": "45",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "45",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150",
+    "pricing_model": "academic"
+  },
+  
+  "distribution_settings": {
+    "lightning_source_account": "LSI123456",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "12",
+    "order_type_eligibility": "POD",
+    "preferred_printer": "Lightning Source"
+  },
+  
+  "quality_standards": {
+    "min_resolution_dpi": "300",
+    "color_profile": "CMYK",
+    "pdf_version": "PDF/X-1a",
+    "bleed_requirements": "0.125 inches",
+    "spine_calculation_method": "automatic"
+  },
+  
+  "metadata_standards": {
+    "required_fields": [
+      "title", "author", "isbn13", "publication_date",
+      "bisac_category", "summary", "page_count", "contributor_bio"
+    ],
+    "preferred_bisac_depth": 3,
+    "require_thema_subjects": true,
+    "require_age_range": false,
+    "require_contributor_bio": true
+  },
+  
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "USD",
+      "pricing_multiplier": 1.0,
+      "exchange_rate": 1.0,
+      "tax_rate": "0.0",
+      "shipping_class": "domestic"
+    },
+    "UK": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "GBP",
+      "pricing_multiplier": 0.78,
+      "exchange_rate": 0.78,
+      "tax_rate": "20.0",
+      "shipping_class": "international"
+    },
+    "EU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "EUR",
+      "pricing_multiplier": 0.91,
+      "exchange_rate": 0.91,
+      "tax_rate": "19.0",
+      "shipping_class": "international"
+    },
+    "CA": {
+      "wholesale_discount_percent": "45",
+      "returnability": "Yes",
+      "currency": "CAD",
+      "pricing_multiplier": 1.35,
+      "exchange_rate": 1.35,
+      "tax_rate": "5.0",
+      "shipping_class": "north_america"
+    },
+    "AU": {
+      "wholesale_discount_percent": "40",
+      "returnability": "Yes",
+      "currency": "AUD",
+      "pricing_multiplier": 1.48,
+      "exchange_rate": 1.48,
+      "tax_rate": "10.0",
+      "shipping_class": "international"
+    }
+  },
+  
+  "lsi_account_settings": {
+    "account_number": "LSI123456",
+    "account_type": "Premium",
+    "billing_contact": "billing@academicpublishers.com",
+    "technical_contact": "tech@academicpublishers.com",
+    "ftp_credentials": {
+      "username": "academic_pub",
+      "server": "ftp.lightningsource.com",
+      "directory": "/incoming"
+    }
+  },
+  
+  "workflow_preferences": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_emails": [
+      "workflow@academicpublishers.com",
+      "editorial@academicpublishers.com"
+    ],
+    "backup_configurations": true,
+    "audit_trail": true
+  },
+  
+  "branding_defaults": {
+    "logo_path": "logos/academic_publishers_logo.png",
+    "brand_colors": {
+      "primary": "#1E3A8A",
+      "secondary": "#3B82F6"
+    },
+    "default_fonts": {
+      "title": "Times New Roman Bold",
+      "body": "Times New Roman",
+      "caption": "Arial"
+    }
+  },
+  
+  "marketing_settings": {
+    "default_marketing_copy": "Published by Academic Publishers Inc.",
+    "social_media_handles": {
+      "twitter": "@academicpub",
+      "linkedin": "academic-publishers-inc"
+    },
+    "press_contact": "press@academicpublishers.com",
+    "review_copy_policy": "Available for academic review"
+  },
+  
+  "legal_settings": {
+    "copyright_notice": "© {year} Academic Publishers Inc. All rights reserved.",
+    "legal_disclaimer": "Academic publishing disclaimer",
+    "privacy_policy_url": "https://www.academicpublishers.com/privacy",
+    "terms_of_service_url": "https://www.academicpublishers.com/terms"
+  },
+  
+  "integration_settings": {
+    "erp_system": "SAP",
+    "crm_system": "Salesforce",
+    "accounting_system": "SAP",
+    "inventory_management": "Automated",
+    "api_endpoints": {
+      "orders": "https://api.academicpublishers.com/orders",
+      "inventory": "https://api.academicpublishers.com/inventory"
+    },
+    "webhook_urls": [
+      "https://webhook.academicpublishers.com/lsi-updates"
+    ]
+  }
+}

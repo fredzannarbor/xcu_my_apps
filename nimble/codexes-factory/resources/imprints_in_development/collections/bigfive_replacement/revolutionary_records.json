@@ -1,0 +1,28 @@
+{
+  "imprint": "Revolutionary Records",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@revolutionaryrecords.com",
+  "branding": {
+    "tagline": "Revolution starts here",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.revolutionaryrecords.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies of revolutionaries and freedom fighters",
+    "target_audience": "Readers inspired by the spirit of revolution and change",
+    "competitive_advantage": "Exclusive accounts of revolutions from those who led them",
+    "example_titles": "Autobiographies of famous revolutionaries, civil rights activists"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

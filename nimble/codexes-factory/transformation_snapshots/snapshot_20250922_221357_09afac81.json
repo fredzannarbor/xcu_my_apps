@@ -1,0 +1,106 @@
+{
+  "id": "snapshot_20250922_221357_09afac81",
+  "timestamp": "2025-09-22T22:13:57.706355",
+  "description": "Before batch transform to detailed_outline",
+  "objects": [
+    {
+      "uuid": "d49050be-4a88-435c-a449-8005f1996d3f",
+      "title": "Words of Wisdom",
+      "content": "Imprint Charter: Pilsa books curated by experts\n\nFocus Areas: \n\nTagline: What you need to know now\n\nTarget Audience: General readers on substantive topiocs\n\nCompetitive Advantage: First mover advantage, leverage relationships\n\nExamples: John Konrad, John Robb, Liam Donovan",
+      "object_type": "idea",
+      "word_count": 37,
+      "genre": "Publishing",
+      "target_audience": "General readers on substantive topiocs"
+    },
+    {
+      "uuid": "4f69101b-f502-4f87-9ec4-b80e9399dfe8",
+      "title": "Warships & Navies",
+      "content": "Imprint Charter: Naval histories, all navies, all  oceans, all years\n\nFocus Areas: Focus on out of copyright, out of print, or never-printed technical naval materials\n\nTagline: \n\nTarget Audience: \n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 31,
+      "genre": "Publishing",
+      "target_audience": ""
+    },
+    {
+      "uuid": "f459448c-c508-477b-b21b-cdac52dc0975",
+      "title": "Hearthstone Books",
+      "content": "Imprint Charter: \n\nFocus Areas: \n\nTagline: \n\nTarget Audience: \n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 10,
+      "genre": "Publishing",
+      "target_audience": ""
+    },
+    {
+      "uuid": "eddc9bda-090b-43e0-8dd4-5dae61dfd716",
+      "title": "Xynapse Traces",
+      "content": "Imprint Charter: Cutting-edge research and emerging technologies\n\nFocus Areas: Technology, Science, Philosophy, Future Studies\n\nTagline: Tracing the Future of Knowledge\n\nTarget Audience: Academic and Professional\n\nCompetitive Advantage: First to publish emerging tech research with academic rigor\n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 37,
+      "genre": "Publishing",
+      "target_audience": "Academic and Professional"
+    },
+    {
+      "uuid": "be01bb70-9b57-44d3-ba6a-0b910f0aac34",
+      "title": "McClurg Rebooted",
+      "content": "Imprint Charter: Reprint all McClurg books\n\nFocus Areas: DuBois, Burroughs\n\nTagline: revamp McClurg\n\nTarget Audience: Trade\n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 19,
+      "genre": "Publishing",
+      "target_audience": "Trade"
+    },
+    {
+      "uuid": "ab04bbfe-f427-482e-a55d-0e09212e9629",
+      "title": "Extremes Press",
+      "content": "Imprint Charter: Human experience and knowledge in the most extreme environments\n\nFocus Areas: Antarctica, the deep ocean, deserts, etc.\n\nTagline: Books at the extreme\n\nTarget Audience: Trade\n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 30,
+      "genre": "Publishing",
+      "target_audience": "Trade"
+    },
+    {
+      "uuid": "31cac01c-9c0e-43a3-b51e-c0e59600b0b7",
+      "title": "STEAMtastic",
+      "content": "Imprint Charter: Help 8 to 12 year olds maximize their lifetime optionality\n\nFocus Areas: Keeping scholastic options open\n\nTagline: \n\nTarget Audience: Middle school\n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 26,
+      "genre": "Publishing",
+      "target_audience": "Middle school"
+    },
+    {
+      "uuid": "a36cb648-c698-429e-bc5c-9d322105677a",
+      "title": "Text Hip Global",
+      "content": "Imprint Charter: Amplifying diverse voices in global literature\n\nFocus Areas: Contemporary Fiction, Translation, Cultural Studies\n\nTagline: Words Without Borders\n\nTarget Audience: International readers and cultural enthusiasts\n\nCompetitive Advantage: Focus on underrepresented authors and non-Western perspectives\n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 36,
+      "genre": "Publishing",
+      "target_audience": "International readers and cultural enthusiasts"
+    },
+    {
+      "uuid": "e6c47516-aa45-4fd4-a4c5-dcc2ef62cd7e",
+      "title": "Nimble Ultra Global",
+      "content": "Imprint Charter: Intelligence & espionage. All agencies, all nations, all times.\n\nFocus Areas: Public domain US govt documents\n\nTagline: All your secrets are belong to us.\n\nTarget Audience: Adults interested in the history and future of espionage.\n\nCompetitive Advantage: \n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 40,
+      "genre": "Publishing",
+      "target_audience": "Adults interested in the history and future of espionage."
+    },
+    {
+      "uuid": "1da95527-058a-4a5a-b6ed-edac41828c6c",
+      "title": "Oral Histories",
+      "content": "Imprint Charter: Synthetic oral histories of real and fictional people, places, and events.\n\nFocus Areas: Oral histories of sparsely documented real events such as the Nativity; apocryphal, mythical, or fictional events; alternate universes; and possible real future events.\n\nTagline: As if you were there\n\nTarget Audience: General readers with strong imaginations and lots of empathy.\n\nCompetitive Advantage: Under-developed genre that is ideally suited for current-gen ALLMs.\n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 67,
+      "genre": "Publishing",
+      "target_audience": "General readers with strong imaginations and lots of empathy."
+    },
+    {
+      "uuid": "a1eefa6f-a4dc-4582-8fa8-66bc656ad0ce",
+      "title": "Nim ble Earth",
+      "content": "Imprint Charter: Perspective diversity in climate science with rigorous respect for ground truth.\n\nFocus Areas: AR7\n\nTagline: \n\nTarget Audience: Trade and scientific readers\n\nCompetitive Advantage: Innovative use of grounded LLMs\n\nExamples: ",
+      "object_type": "idea",
+      "word_count": 31,
+      "genre": "Publishing",
+      "target_audience": "Trade and scientific readers"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "book_idea": "A 9-year-old boy adapts to life during the tariff wars of Trump’s term, learning resilience and resourcefulness as trade battles shake his small town in 2027.",
+  "author_voice": "Warm, relatable, and hopeful, weaving real-world trade issues into a kid-friendly adventure that teaches grit and empathy for 9-12 year-olds.",
+  "protagonist": {
+    "name": "Ethan Carter",
+    "age": 9,
+    "description": "A 4th-grader from rural Ohio, a scrappy and kind kid who loves fixing things and trading baseball cards. He’s smart but gets frustrated when plans fail."
+  },
+  "antagonist": {
+    "name": "Economic Ripple Effects",
+    "description": "The unseen chaos of tariffs—higher prices, job worries, and town tension—that disrupts Ethan’s world, showing how big decisions hit small lives."
+  },
+  "cast_of_characters": [
+    {
+      "name": "Liam Carter",
+      "role": "Ethan’s Older Brother",
+      "description": "14-year-old high school freshman, moody but protective, upset about losing his part-time job."
+    },
+    {
+      "name": "Mr. Tom Grayson",
+      "role": "Shop Teacher",
+      "description": "45-year-old gruff but caring teacher, helps Ethan build projects and understand change."
+    },
+    {
+      "name": "Sophie Nguyen",
+      "role": "Ethan’s Best Friend",
+      "description": "9-year-old spunky girl, trades crafts and keeps Ethan laughing despite tough times."
+    },
+    {
+      "name": "Mr. Dave Carter",
+      "role": "Ethan’s Dad",
+      "description": "38-year-old factory worker, stressed about layoffs but hides it from Ethan."
+    },
+    {
+      "name": "Mrs. Kelly Carter",
+      "role": "Ethan’s Mom",
+      "description": "36-year-old nurse, practical and upbeat, keeps the family steady."
+    },
+    {
+      "name": "Grandpa Joe",
+      "role": "Family Elder",
+      "description": "68-year-old retired mechanic, shares stories of hard times and fixes stuff with Ethan."
+    },
+    {
+      "name": "Mrs. Linda Hayes",
+      "role": "Store Owner",
+      "description": "50-year-old owner of the local hardware store, grumbles about pricey supplies."
+    },
+    {
+      "name": "Jake Miller",
+      "role": "Classmate",
+      "description": "10-year-old loud kid, brags about his dad’s new job but misses the old days."
+    },
+    {
+      "name": "Mayor Patel",
+      "role": "Town Leader",
+      "description": "42-year-old hopeful mayor, tries to calm folks but faces tariff complaints."
+    },
+    {
+      "name": "Ms. Ellie Brooks",
+      "role": "Librarian",
+      "description": "30-year-old quiet helper, teaches Ethan about trade with old books."
+    }
+  ],
+  "locations": [
+    "Rural Ohio town (Ethan’s home and school, a tight-knit place hit by trade shifts)",
+    "Carter family garage (a messy workshop where Ethan tinkers)",
+    "Main Street (local stores struggling with costs and empty shelves)"
+  ],
+  "plot_points": [
+    "Opening Scene: Ethan trades baseball cards in the schoolyard, noticing prices are up.",
+    "Inciting Incident: Dad comes home worried about factory cuts, sparking Ethan’s questions.",
+    "First Plot Point: Ethan starts fixing old bikes to trade, seeing how tariffs touch everything.",
+    "Midpoint Reversal: The hardware store raises prices, halting Ethan’s bike project.",
+    "Second Pinch Point: Liam loses his job, and Ethan feels the family strain.",
+    "Low Point: Ethan’s best bike trade flops, leaving him stuck and mad.",
+    "Second Plot Point: Ethan and Sophie plan a town swap fair in the garage.",
+    "Climactic Sequence: The fair helps neighbors share goods, lifting spirits despite tariffs."
+  ],
+  "themes": [
+    "Resilience and Adaptation: Bouncing back when big changes hit home.",
+    "Community Strength: Working together beats going it alone.",
+    "Understanding Trade: Seeing how far-off decisions affect daily life.",
+    "Making Do with Less: Finding value in what you’ve got.",
+    "Hope Amid Uncertainty: Keeping spirits up when things get tough."
+  ],
+  "revelations": [
+    "Ethan learns that tariffs aren’t just about money—they change how people live, pushing him to start a swap fair to help his town."
+  ],
+  "character_arcs": [
+    {
+      "character": "Ethan Carter",
+      "arc": "From frustrated kid to resourceful leader, learning to fix problems and rally friends."
+    },
+    {
+      "character": "Liam Carter",
+      "arc": "From sulky teen to team player, finding purpose by helping Ethan’s fair."
+    }
+  ],
+  "num_chapters": 16,
+  "num_scenes_per_chapter": 5,
+  "num_words": 40000,
+  "special_instructions": "Ground it in today’s tariff tensions—like U.S.-China trade spats—without guessing exact 2027 outcomes. Keep it simple and uplifting for 9-12 year-olds, teaching about economics through Ethan’s eyes.",
+  "book_so_far": ""
+}

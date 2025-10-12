@@ -1,0 +1,28 @@
+{
+  "imprint": "Virtual Voyager",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@virtualvoyager.com",
+  "branding": {
+    "tagline": "Voyage Virtually, Live Fully",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.virtualvoyager.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Travel, lifestyle, and culture within the context of digital nomadism",
+    "target_audience": "Digital nomads and culture enthusiasts",
+    "competitive_advantage": "Mix of travel and lifestyle content catered to digital nomads",
+    "example_titles": "Travelogues like 'My Office: From Bali to Barcelona'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

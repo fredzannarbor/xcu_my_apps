@@ -1,0 +1,28 @@
+{
+  "imprint": "Seasoned Travels",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@seasonedtravels.com",
+  "branding": {
+    "tagline": "The World is Waiting, at Any Age",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.seasonedtravels.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Travel guides, memoirs, and stories specifically for senior travelers",
+    "target_audience": "Senior travelers and adventure seekers",
+    "competitive_advantage": "Our travel guides consider the unique needs and interests of senior travelers",
+    "example_titles": "The Senior Nomad: One Couple's Journey Around the World, Great Train Journeys for the Over 60s"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

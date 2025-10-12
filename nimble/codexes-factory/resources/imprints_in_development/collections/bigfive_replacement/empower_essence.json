@@ -1,0 +1,28 @@
+{
+  "imprint": "Empower Essence",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@empoweressence.com",
+  "branding": {
+    "tagline": "Empower yourself",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.empoweressence.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Self-esteem, empowerment, motivation",
+    "target_audience": "Women, youths, self-improvement enthusiasts",
+    "competitive_advantage": "Inspirational content, practical strategies",
+    "example_titles": "Empowerment journey, self-esteem solution"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

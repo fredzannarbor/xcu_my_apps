@@ -1,0 +1,110 @@
+{
+  "book_idea": "A group of 12-year-olds forms a coding club to solve mysteries with their AI Buddies, preparing them for a world where AI runs everything from schools to cities by 2027.",
+  "author_voice": "Fun, curious, and encouraging, sparking wonder about AI while teaching teamwork and problem-solving to 9-12 year-olds.",
+  "protagonist": {
+    "name": "Zara Kim",
+    "age": 12,
+    "description": "A 7th-grader from California, a bold and clever girl who loves puzzles and teaches herself to code AI apps. She’s brave and creative but sometimes rushes without thinking."
+  },
+  "antagonist": {
+    "name": "AI Glitches",
+    "description": "Unpredictable bugs in the kids’ AI Buddies that cause chaos, like sending wrong messages or shutting down power, showing the limits of trusting tech too much."
+  },
+  "cast_of_characters": [
+    {
+      "name": "Leo Tran",
+      "role": "Zara’s Best Friend",
+      "description": "12-year-old gamer and jokester, great at strategy but doubts AI can beat him."
+    },
+    {
+      "name": "Ms. Riley Carter",
+      "role": "Science Teacher",
+      "description": "30-year-old enthusiastic teacher, runs the coding club and believes kids can shape the future."
+    },
+    {
+      "name": "Ava Patel",
+      "role": "Club Member",
+      "description": "11-year-old shy artist, uses AI to make cool designs but worries about mistakes."
+    },
+    {
+      "name": "Omar Hassan",
+      "role": "Club Member",
+      "description": "12-year-old math whiz, loves fixing AI bugs and figuring out how things work."
+    },
+    {
+      "name": "Sparky",
+      "role": "Zara’s AI Buddy",
+      "description": "A chatty app with a big personality, helps Zara code but sometimes messes up big-time."
+    },
+    {
+      "name": "Principal Gomez",
+      "role": "School Leader",
+      "description": "50-year-old strict but fair principal, unsure if kids should rely on AI so much."
+    },
+    {
+      "name": "Mia Kim",
+      "role": "Zara’s Little Sister",
+      "description": "9-year-old chatterbox, loves playing with AI but accidentally causes trouble."
+    },
+    {
+      "name": "Dr. Sam Kim",
+      "role": "Zara’s Dad",
+      "description": "40-year-old engineer, supports Zara’s coding but warns her to be careful."
+    },
+    {
+      "name": "Lila Kim",
+      "role": "Zara’s Mom",
+      "description": "38-year-old nurse, proud of Zara but busy and misses the tech talk."
+    },
+    {
+      "name": "Grandpa Kim",
+      "role": "Family Elder",
+      "description": "70-year-old storyteller, compares AI to old inventions like TV."
+    },
+    {
+      "name": "Ellie Ruiz",
+      "role": "Zara’s Neighbor",
+      "description": "12-year-old fearless explorer, tests AI outside and finds real-world glitches."
+    }
+  ],
+  "locations": [
+    "California suburb (Zara’s home and school, full of tech-savvy kids)",
+    "Coding Club HQ (a school lab with screens and gadgets)",
+    "Town Square (where AI runs lights and events, sometimes going haywire)"
+  ],
+  "plot_points": [
+    "Opening Scene: Zara programs her AI Buddy, Sparky, to solve a riddle in her room.",
+    "Inciting Incident: Sparky glitches at school, locking the doors, and Zara forms a club to investigate.",
+    "First Plot Point: The club discovers AI Buddies control more than they thought—like the town’s power.",
+    "Midpoint Reversal: A big glitch blacks out the town, and the kids take charge to fix it.",
+    "Second Pinch Point: Sparky sends a fake alert, making everyone mad at Zara.",
+    "Low Point: Zara wants to quit when the club blames her for trusting Sparky.",
+    "Second Plot Point: Zara and the club code a ‘Glitch-Fixer’ app together late at night.",
+    "Climactic Sequence: They stop a city-wide AI meltdown, proving kids can handle tech."
+  ],
+  "themes": [
+    "Curiosity and Creativity: Using AI to explore and solve problems.",
+    "Teamwork Over Tech: Friends beat glitches together, not alone.",
+    "Learning from Mistakes: Glitches teach more than perfection.",
+    "AI in Everyday Life: Seeing how tech changes school and home.",
+    "Responsibility with Power: Handling AI means thinking about others."
+  ],
+  "revelations": [
+    "Zara realizes AI isn’t just a tool—it’s a partner that needs teamwork and care to work right, leading her to share the Glitch-Fixer with everyone."
+  ],
+  "character_arcs": [
+    {
+      "character": "Zara Kim",
+      "arc": "From solo coder to team leader, learning to slow down and trust her friends with AI."
+    },
+    {
+      "character": "Leo Tran",
+      "arc": "From AI skeptic to believer, seeing it’s about how you use it, not just winning."
+    }
+  ],
+  "num_chapters": 16,
+  "num_scenes_per_chapter": 5,
+  "num_words": 40000,
+  "special_instructions": "Make AI fun and simple for 9-12 year-olds, teaching coding and teamwork. Keep it exciting with mysteries and glitches, showing kids they can shape an AI world.",
+  "book_so_far": ""
+}

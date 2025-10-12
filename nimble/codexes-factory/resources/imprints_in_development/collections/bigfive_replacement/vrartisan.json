@@ -1,0 +1,28 @@
+{
+  "imprint": "VRArtisan",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@vrartisan.com",
+  "branding": {
+    "tagline": "Artistry reimagined",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.vrartisan.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Art and design in VR",
+    "target_audience": "Artists, designers, and creatives",
+    "competitive_advantage": "Combining the visual beauty of art with VR",
+    "example_titles": "VR art tutorials, VR gallery walkthroughs"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

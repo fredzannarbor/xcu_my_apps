@@ -1,0 +1,25 @@
+[
+    {
+        "preset_name" : "Global Trends 2040: A World Adrift",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_instructions": "",
+        "preset_description": "This preset ",
+        "pre_user_input": "Create a backstory for a person living in 2040. Use the scenario, role, and biographical details provided below.\n\nScenario: In 2040, the international system is directionless, chaotic, and volatile as international rules and institutions are largely ignored by major powers such as China, regional players, and nonstate actors. Organization for Economic Cooperation and Development (OECD) countries are plagued by slower economic growth, widening societal divisions, and political paralysis. China is taking advantage of the West’s troubles to expand its international influence, especially in Asia, but lacks the will and military might to take on global leadership, leaving many global challenges, such as climate change and instability in developing countries, largely unaddressed.\n\nRole: ",
+        "prompt": "",
+        "post_user_input": "Backstory:\n\n",
+        "engine":"curie-instruct-beta-v2",
+        "temperature": 0.8,
+        "max_tokens": 300,
+        "top_p": 1,
+        "fp": 0,
+        "pp": 0,
+        "stop_sequence": "",
+        "echo_on": false,
+        "completion_heading": "", 
+        "preset_placeholder": "",
+        "user" : "37",
+        "organization" : ""
+        
+    }
+]

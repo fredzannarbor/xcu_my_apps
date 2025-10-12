@@ -1,0 +1,28 @@
+{
+  "imprint": "Inventor Impressions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@inventorimpressions.com",
+  "branding": {
+    "tagline": "Innovation starts here",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.inventorimpressions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs of innovators and inventors",
+    "target_audience": "Anyone interested in the process of innovation",
+    "competitive_advantage": "Personal insights into the journey of innovation",
+    "example_titles": "Memoirs of famous inventors, tech innovators"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

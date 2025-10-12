@@ -1,0 +1,28 @@
+{
+  "imprint": "Past Portraits",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pastportraits.com",
+  "branding": {
+    "tagline": "Historical portraits, beautifully painted",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pastportraits.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographies, memoirs, event-specific history",
+    "target_audience": "Readers interested in biographies and key historical events",
+    "competitive_advantage": "Past Portraits focuses on in-depth, vivid portrayals of historical figures and events",
+    "example_titles": "Biographies of world leaders, memoirs of freedom fighters"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,63 @@
+# in Series	DirectMappingStrategy		Default	Yes
+Annotation / Summary	DirectMappingStrategy		Default	Yes
+BISAC Category 2	DirectMappingStrategy		Default	Yes
+BISAC Category 3	DirectMappingStrategy		Default	Yes
+Contributor One Affiliations	DirectMappingStrategy		Default	Yes
+Contributor One BIO	DirectMappingStrategy		Default	Yes
+Contributor One Location	DirectMappingStrategy		Default	Yes
+Contributor One Location Type Code	DirectMappingStrategy		Default	Yes
+Contributor One Prior Work	DirectMappingStrategy		Default	Yes
+Contributor One Professional Position	DirectMappingStrategy		Default	Yes
+Contributor Three	DirectMappingStrategy		Default	Yes
+Contributor Three Role	DirectMappingStrategy		Default	Yes
+Contributor Two	DirectMappingStrategy		Default	Yes
+Contributor Two Role	DirectMappingStrategy		Default	Yes
+Cover Path / Filename	DirectMappingStrategy		Default	Yes
+ISBN or SKU	DirectMappingStrategy		Default	Yes
+Illustration Notes	DirectMappingStrategy		Default	Yes
+Interior Path / Filename	DirectMappingStrategy		Default	Yes
+Jacket Path / Filename	DirectMappingStrategy		Default	Yes
+LSI FlexField1 (please consult LSI before using)	DirectMappingStrategy		Default	Yes
+LSI FlexField2 (please consult LSI before using)	DirectMappingStrategy		Default	Yes
+LSI FlexField3 (please consult LSI before using)	DirectMappingStrategy		Default	Yes
+LSI FlexField4 (please consult LSI before using)	DirectMappingStrategy		Default	Yes
+LSI FlexField5 (please consult LSI before using)	DirectMappingStrategy		Default	Yes
+LSI Special Category (please consult LSI before using	DirectMappingStrategy		Default	Yes
+Marketing Image	DirectMappingStrategy		Default	Yes
+Max Age	DirectMappingStrategy		Default	Yes
+Max Grade	DirectMappingStrategy		Default	Yes
+Min Age	DirectMappingStrategy		Default	Yes
+Min Grade	DirectMappingStrategy		Default	Yes
+Parent ISBN	DirectMappingStrategy		Default	Yes
+Publisher Reference ID	DirectMappingStrategy		Default	Yes
+Regional Subjects	DirectMappingStrategy		Default	Yes
+Reserved (Special Instructions)	DefaultMappingStrategy		Default	Yes
+Reserved 1	DefaultMappingStrategy		Default	Yes
+Reserved 2	DefaultMappingStrategy		Default	Yes
+Reserved 3	DefaultMappingStrategy		Default	Yes
+Reserved 4	DefaultMappingStrategy		Default	Yes
+Reserved10	DefaultMappingStrategy		Default	Yes
+Reserved11	DefaultMappingStrategy		Default	Yes
+Reserved12	DefaultMappingStrategy		Default	Yes
+Reserved5	DefaultMappingStrategy		Default	Yes
+Reserved6	DefaultMappingStrategy		Default	Yes
+Reserved7	DefaultMappingStrategy		Default	Yes
+Reserved8	DefaultMappingStrategy		Default	Yes
+Reserved9	DefaultMappingStrategy		Default	Yes
+Review Quote(s)	DefaultMappingStrategy		Default	Yes
+SIBI - EDUC - US * Suggested List Price (mode 2)	DefaultMappingStrategy		Default	Yes
+SIBI - EDUC - US * Wholesale Discount % (Mode 2)	DefaultMappingStrategy		Default	Yes
+Series Name	DirectMappingStrategy		Default	Yes
+Short Description	DirectMappingStrategy		Default	Yes
+Stamped Text CENTER	DirectMappingStrategy		Default	Yes
+Stamped Text LEFT	DirectMappingStrategy		Default	Yes
+Stamped Text RIGHT	DirectMappingStrategy		Default	Yes
+Street Date	DirectMappingStrategy		Default	Yes
+Table of Contents	DirectMappingStrategy		Default	Yes
+Thema Subject 1	DirectMappingStrategy		Default	Yes
+Thema Subject 2	DirectMappingStrategy		Default	Yes
+Thema Subject 3	DirectMappingStrategy		Default	Yes
+US - Ingram - GAP * Suggested List Price (mode 2)	DefaultMappingStrategy		Default	Yes
+US - Ingram - GAP * Wholesale Discount % (Mode 2)	DefaultMappingStrategy		Default	Yes
+US-Ingram-Only* Suggested List Price (mode 2)	DefaultMappingStrategy		Default	Yes
+US-Ingram-Only* Wholesale Discount % (Mode 2)

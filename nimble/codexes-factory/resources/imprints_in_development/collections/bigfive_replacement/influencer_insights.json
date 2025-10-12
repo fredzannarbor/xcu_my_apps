@@ -1,0 +1,28 @@
+{
+  "imprint": "Influencer Insights",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@influencerinsights.com",
+  "branding": {
+    "tagline": "Influence with Impact",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.influencerinsights.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Influencer marketing strategies and trends",
+    "target_audience": "Social media influencers, marketers",
+    "competitive_advantage": "Insider knowledge on influencer trends and strategies.",
+    "example_titles": "Influencer marketing guides, trend reports"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

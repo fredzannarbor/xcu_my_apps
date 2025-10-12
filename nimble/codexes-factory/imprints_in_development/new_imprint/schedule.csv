@@ -1,0 +1,13 @@
+book_id,title,subtitle,author,genre,target_audience,page_count,price,format,publication_date,status,imprint,notes
+BK001,Non-Fiction Book 1,An Exploration in Non-Fiction,Author 1,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2025-09-22,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK002,Non-Fiction Book 2,An Exploration in Non-Fiction,Author 2,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2025-10-13,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK003,Non-Fiction Book 3,An Exploration in Non-Fiction,Author 3,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2025-11-03,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK004,Non-Fiction Book 4,An Exploration in Non-Fiction,Author 4,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2025-11-24,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK005,Non-Fiction Book 5,An Exploration in Non-Fiction,Author 5,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2025-12-22,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK006,Non-Fiction Book 6,An Exploration in Non-Fiction,Author 6,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-01-12,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK007,Non-Fiction Book 7,An Exploration in Non-Fiction,Author 7,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-02-02,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK008,Non-Fiction Book 8,An Exploration in Non-Fiction,Author 8,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-02-23,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK009,Non-Fiction Book 9,An Exploration in Non-Fiction,Author 9,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-03-23,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK010,Non-Fiction Book 10,An Exploration in Non-Fiction,Author 10,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-04-13,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK011,Non-Fiction Book 11,An Exploration in Non-Fiction,Author 11,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-05-04,planned,New Imprint,Initial catalog book focusing on non-fiction content
+BK012,Non-Fiction Book 12,An Exploration in Non-Fiction,Author 12,Non-Fiction,General Adult,200,24.99,6x9 Paperback,2026-05-25,planned,New Imprint,Initial catalog book focusing on non-fiction content

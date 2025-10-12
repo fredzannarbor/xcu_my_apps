@@ -1,0 +1,28 @@
+{
+  "imprint": "Resilience Rise",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@resiliencerise.com",
+  "branding": {
+    "tagline": "Rise through resilience",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.resiliencerise.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Resilience, coping strategies, mental toughness",
+    "target_audience": "Survivors, fighters, individuals facing challenges",
+    "competitive_advantage": "Inspirational true stories, expert advice",
+    "example_titles": "Resilience in adversity, mental toughness training"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Pundit Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@punditpublications.com",
+  "branding": {
+    "tagline": "Your Guide to Politics, Straight from the Pundits",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.punditpublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Political commentary, analysis, and forecasts",
+    "target_audience": "Political enthusiasts, students, and general readers",
+    "competitive_advantage": "Exclusive access to top political pundits",
+    "example_titles": "Renowned political commentators and analysts"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

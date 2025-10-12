@@ -1,0 +1,16 @@
+{
+  "schedule_file": "imprints/xynapse_traces/publishing_schedule.csv",
+  "generated_date": "2025-08-26T18:34:03.625028",
+  "summary": {
+    "total_books": 0,
+    "books_with_isbn": 0,
+    "books_without_isbn": 0,
+    "valid_isbns": 0,
+    "invalid_isbns": 0,
+    "duplicate_isbns": 0,
+    "isbn_coverage_percentage": 0
+  },
+  "validation_details": [],
+  "isbn_usage": {},
+  "recommendations": []
+}

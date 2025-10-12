@@ -1,0 +1,28 @@
+{
+  "imprint": "MysterioVR",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mysteriovr.com",
+  "branding": {
+    "tagline": "Where suspense meets virtual reality",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mysteriovr.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mystery, crime, and thriller genres in VR",
+    "target_audience": "Mystery and crime story enthusiasts",
+    "competitive_advantage": "Merging the thrill of crime stories with immersive VR",
+    "example_titles": "Interactive VR crime novels, VR detective stories"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,75 @@
+\documentclass[11pt, twoside]{memoir}
+\normalsize
+
+% --- Page Geometry ---
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*}
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1in}{1in}{*}
+\setulmarginsandblock{0.85in}{*}{1} % Increased upper margin from 0.75in to 0.85in
+
+% Adjusted headheight to accommodate header content
+\setheadfoot{20pt}{24pt} % Reduced from 25pt to 20pt
+\setlength{\headdrop}{2pt}
+\setlength{\headsep}{12pt} % Base headsep
+\addtolength{\headsep}{0.2in} % Reduced from 0.3in to 0.2in
+\checkandfixthelayout[nearest] % Apply layout changes, preserving other settings
+
+% --- Font Setup ---
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+% --- Korean Font Setup ---
+\newfontfamily\koreanfont{AppleMyungjo}
+
+% --- Logo Font Definition ---
+% Simplest possible definition
+\newfontfamily\logofont{Times New Roman}
+
+% --- Other Useful Packages ---
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{ifoddpage}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{footnote}
+
+% --- Page Style Setup ---
+\newcommand*{\headerstrut}{\vphantom{ypg}} % Ensures consistent header baseline
+\makepagestyle{mypagestyle}
+
+% Define a custom command for the imprint name in header
+\newcommand{\imprintheader}{\logofont\small\headerstrut\vphantom{yptg} xynapse traces}
+
+% Set up headers for odd and even pages
+\makeoddhead{mypagestyle}{}{}{\imprintheader} % Removed \vspace{0.5in}, using headsep instead
+\makeevenhead{mypagestyle}{\small\headerstrut title}{}{} % Unchanged
+% Set up footers (page numbers)
+\makeoddfoot{mypagestyle}{}{}{\thepage}
+\makeevenfoot{mypagestyle}{\thepage}{}{}
+
+% Apply this style to all pages
+\pagestyle{mypagestyle}
+
+% Make sure chapter pages also use this style (instead of plain)
+\aliaspagestyle{chapter}{mypagestyle}
+\aliaspagestyle{cleared}{mypagestyle}
+\aliaspagestyle{part}{mypagestyle}
+
+\usepackage{indentfirst}
+
+% --- Document Start ---
+\begin{document}
+
+\chapter{Test Chapter}
+This is a test page to verify that the template compiles correctly.
+
+\newpage
+This is a second page to test the headers and footers.
+
+\end{document}

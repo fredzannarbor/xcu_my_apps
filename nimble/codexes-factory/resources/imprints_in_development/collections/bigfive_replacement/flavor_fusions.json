@@ -1,0 +1,28 @@
+{
+  "imprint": "Flavor Fusions",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@flavorfusions.com",
+  "branding": {
+    "tagline": "Discover the World on Your Plate",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.flavorfusions.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fusion food, multicultural cuisine, food history",
+    "target_audience": "Adventurous foodies, multicultural households",
+    "competitive_advantage": "In-depth exploration of global food culture",
+    "example_titles": "Fusion Cuisine Revolution, The Great Food Migration"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

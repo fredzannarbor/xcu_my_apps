@@ -1,0 +1,28 @@
+{
+  "imprint": "Reality Ripples",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@realityripples.com",
+  "branding": {
+    "tagline": "Real Lives, Real Stories",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.realityripples.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Biographical, self-help, and documentary series",
+    "target_audience": "Non-fiction readers seeking real-life inspirations and insights",
+    "competitive_advantage": "Diverse, real-world content with thought-provoking narratives",
+    "example_titles": "Michelle Obama's Becoming, Wild Swans"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

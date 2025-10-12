@@ -1,0 +1,153 @@
+{
+  "imprint_name": "New Literary Imprint",
+  "branding": {
+    "_data": {
+      "imprint_name": "New Literary Imprint",
+      "mission_statement": "To publish exceptional literature that connects with readers.",
+      "brand_values": [
+        "Quality",
+        "Innovation",
+        "Authenticity"
+      ],
+      "brand_voice": "Professional, engaging, and accessible",
+      "tagline": "Stories That Matter",
+      "unique_selling_proposition": "Distinctive literary publishing with focus on quality and reader connection.",
+      "logo_concept": "Clean, modern design reflecting literary excellence"
+    }
+  },
+  "design": {
+    "_data": {
+      "color_palette": {
+        "primary": "#2C3E50",
+        "secondary": "#3498DB",
+        "accent": "#E74C3C",
+        "neutral": "#F8F9FA"
+      },
+      "typography": {
+        "headline": "Serif, readable, professional",
+        "body": "Clean, readable, professional",
+        "primary_font": "Minion Pro",
+        "secondary_font": "Myriad Pro",
+        "body_font": "Minion Pro"
+      },
+      "visual_motifs": [
+        "Clean lines",
+        "Literary symbols",
+        "Modern elements"
+      ],
+      "cover_art_direction": "Modern, clean design with strong typography",
+      "interior_layout_preferences": {
+        "chapter_start": "Elegant drop cap with clean typography",
+        "margins": "Generous, balanced margins for comfortable reading",
+        "text_and_header_styles": "Professional, readable typography"
+      },
+      "trim_sizes": [
+        "6x9",
+        "5.5x8.5",
+        "7x10"
+      ]
+    }
+  },
+  "publishing": {
+    "_data": {
+      "primary_genres": [
+        "Inspirational Non-Fiction",
+        "Biographical",
+        "Educational (STEAM)",
+        "Personal Development"
+      ],
+      "target_readership": "Children aged 8 to 12 years old, and their parents/guardians seeking inspirational and developmental content.",
+      "target_audience": "Children aged 8 to 12 years old, and their parents/guardians seeking inspirational and developmental content.",
+      "publication_frequency": "Bi-monthly",
+      "editorial_focus": "High-quality, engaging content",
+      "author_acquisition_strategy": "Agent submissions and direct outreach",
+      "rights_management": [
+        "World English rights",
+        "Digital rights"
+      ],
+      "pricing_strategy": {
+        "hardcover": "Mid-range ($22.99-$27.99)",
+        "paperback": "Mid-range ($14.99-$18.99)",
+        "ebook": "Standard ($9.99-$13.99)"
+      },
+      "market_positioning": "Quality-focused publishing with strong editorial standards"
+    }
+  },
+  "production": {
+    "_data": {
+      "workflow_stages": [
+        "Manuscript Acquisition",
+        "Initial Review",
+        "Editorial Assessment",
+        "Developmental Editing",
+        "Copy Editing",
+        "Design & Layout",
+        "Proofreading",
+        "Production",
+        "Marketing & Promotion",
+        "Distribution",
+        "Launch Support",
+        "Post-Launch Analysis"
+      ],
+      "technology_stack": [
+        "Manuscript management system",
+        "Design software",
+        "Project management tools",
+        "Distribution platform",
+        "Analytics tools",
+        "Communication platform"
+      ],
+      "team_structure": {
+        "editorial": "Editorial Director, Senior Editor, Associate Editor",
+        "production": "Production Manager, Designer, Production Coordinator",
+        "marketing": "Marketing Director, Marketing Specialist",
+        "sales": "Sales Director, Sales Representative"
+      },
+      "vendor_relationships": [
+        "Print-on-demand services",
+        "Freelance editors",
+        "Book distributors",
+        "Marketing agencies",
+        "Translation services",
+        "Legal services"
+      ],
+      "quality_control_measures": "Multi-stage editorial review, professional proofreading, and quality assurance checks",
+      "communication_protocols": "Weekly team meetings, monthly reviews, and quarterly planning sessions"
+    }
+  },
+  "distribution": {
+    "_data": {}
+  },
+  "marketing": {
+    "_data": {
+      "target_platforms": [
+        "Goodreads"
+      ],
+      "promotional_activities": [
+        "Author reading events",
+        "Book club partnerships",
+        "Review campaigns",
+        "Social media contests",
+        "Literary award submissions",
+        "Influencer collaborations"
+      ],
+      "audience_engagement_tactics": "Community building through social media, newsletters, and reader events",
+      "budget_allocation": {
+        "digital_ads": "30%",
+        "influencer_marketing": "20%",
+        "events": "25%",
+        "PR": "20%",
+        "content_marketing": "5%"
+      },
+      "brand_partnerships": [
+        "Independent bookstores",
+        "Literary festivals",
+        "Reading groups",
+        "Educational institutions",
+        "Cultural organizations"
+      ],
+      "success_metrics": "Book sales, social media engagement, review coverage, and brand awareness"
+    }
+  },
+  "generated_at": "2025-08-11T03:15:49.413157"
+}

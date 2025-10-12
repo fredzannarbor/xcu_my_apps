@@ -1,0 +1,28 @@
+{
+  "imprint": "OrbitOps Imprint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@orbitopsimprint.com",
+  "branding": {
+    "tagline": "To infinity and beyond",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.orbitopsimprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space exploration, astronomy, astronautics",
+    "target_audience": "Space enthusiasts, students, amateur astronomers",
+    "competitive_advantage": "Offering unique perspectives on our universe and the final frontier",
+    "example_titles": "Orbiting Mars: The Next Frontier, Navigating the Solar System"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

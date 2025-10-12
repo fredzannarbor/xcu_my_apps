@@ -1,0 +1,28 @@
+{
+  "imprint": "Twilight Tales",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@twilighttales.com",
+  "branding": {
+    "tagline": "Suspense beyond the stars",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.twilighttales.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Sci-Fi Thrillers",
+    "target_audience": "Sci-fi enthusiasts who love a good mystery",
+    "competitive_advantage": "Blending elements of sci-fi and thriller genres",
+    "example_titles": "Authors like Philip K. Dick, Michael Crichton"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

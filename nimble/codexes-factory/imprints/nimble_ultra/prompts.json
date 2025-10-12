@@ -1,0 +1,178 @@
+{
+  "imprint_name": "nimble_ultra",
+  "imprint_intro": "Nimble Ultra  publishes high-quality books.",
+  "prompt_keys": [
+    "gemini_get_basic_info",
+    "bibliographic_key_phrases",
+    "storefront_get_en_metadata",
+    "storefront_get_en_motivation",
+    "analytic_toc",
+    "back_cover_text",
+    "mnemonics_prompt"
+  ],
+  "reprompt_keys": [
+    "mnemonics_prompt"
+  ],
+  "_metadata": {
+    "imprint": "Nimble Ultra",
+    "generated_at": "2025-09-26T06:36:10.978510",
+    "specialization": "Cold War operations, signals intelligence (SIGINT), declassified commission reports, and the history of covert action.",
+    "extracted_from_oneshot": true,
+    "fixed_by_script": true,
+    "fixed_at": "2025-09-26T07:00:00.000000"
+  },
+  "gemini_get_basic_info": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please review the book concept provided and identify the following values as accurately as possible. Provide the response as a single, valid JSON object.\n\nContext:\n{book_content}\n\nKeys required:\n\n'bisac_categories' (provide 2-3 relevant BISAC categories as a semicolon-separated string)"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "json"
+    ]
+  },
+  "bibliographic_key_phrases": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional bibliographic specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Please generate ten to twelve unique bibliographic key phrases for the book concept provided below. Each phrase should be two to three words long. The output should be a single JSON object with a single key 'keywords' whose value is a semicolon-separated string.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "publishing",
+      "bibliographic",
+      "keywords",
+      "metadata",
+      "json"
+    ]
+  },
+  "storefront_get_en_metadata": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, generate key metadata in English for an online bookstore. Provide the response as a single, valid JSON object with the following keys: 'storefront_title_en', 'storefront_author_en', 'storefront_description_en'. The description should be a compelling, marketing-oriented summary, approximately 100-150 words.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json"
+    ]
+  },
+  "storefront_get_en_motivation": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 1000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create an English \"Publisher's Note\" (or 'motivation') paragraph of no more than 100 words. This note should explain to the reader the benefits of engaging with this collection of high-quality, thought-provoking quotes via the Korean practice of \ud544\uc0ac pilsa, or transcriptive meditation. The note should be engaging and articulate why this book is relevant and important today. Respond with a single, valid JSON object with one key: 'storefront_publishers_note_en'.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "metadata",
+      "storefront",
+      "english",
+      "json",
+      "motivation"
+    ]
+  },
+  "analytic_toc": {
+    "params": {
+      "temperature": 0.5,
+      "max_tokens": 800
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book formatting specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Based on the book concept below, create a plausible analytic table of contents for the book with chapter titles and a one-sentence description for each. Output as a single JSON object with the key 'table_of_contents' whose value is a single formatted string with markdown headings.\n\nConcept:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "table of contents",
+      "front matter",
+      "book structure",
+      "json"
+    ]
+  },
+  "back_cover_text": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional book marketing copywriter."
+      },
+      {
+        "role": "user",
+        "content": "Generate back cover text for the book described below. The text should be engaging. The text should explain that this book is intended to help users explore the Korean practice of pilsa, or transcriptive meditation. The text should mention that the book contains {quotes_per_book} quotations that are displayed on verso (even) pages with 5 mm dot grid transcription area on matching recto (odd) pages. MAXIMUM 100 WORDS. Return clean, final text with no variables or placeholders as a JSON object with the key 'back_cover_text'.\n\nBook Details:\n{book_content}"
+      }
+    ],
+    "tags": [
+      "back cover",
+      "back matter",
+      "pilsa"
+    ]
+  },
+  "mnemonics_prompt": {
+    "params": {
+      "temperature": 0.7,
+      "max_tokens": 8000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an expert in creating mnemonics to help readers remember key concepts from books. Your task is to create three creative mnemonics based on the book content provided by the user. Focus specifically on the book's content, not on the art of mnemonics itself. The mnemonics should help readers remember the key themes, concepts, and insights from the book's quotations."
+      },
+      {
+        "role": "user",
+        "content": "Based on the following book content and its quotations, generate a list of three creative mnemonics that specifically help readers remember the key themes, concepts, and insights from THIS SPECIFIC BOOK'S QUOTATIONS. DO NOT create generic mnemonics about learning or memory techniques. Instead, focus on the actual subject matter and content of the book's quotations.\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.\n\nExample format:\n\n% Mnemonics for Key Themes in This Book\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\n\\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)\n\n\\begin{itemize}\n    \\item \\textbf{C}hallenge assumptions\n    \\item \\textbf{L}ook for evidence\n    \\item \\textbf{E}valuate alternatives\n    \\item \\textbf{A}pply reasoning\n    \\item \\textbf{R}eflect on outcomes\n\\end{itemize}\n\nBook Content:\n$book_content$"
+      }
+    ],
+    "tags": [
+      "returns_tex",
+      "pilsa",
+      "back matter",
+      "content-generation",
+      "json"
+    ]
+  }
+}

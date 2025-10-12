@@ -1,0 +1,28 @@
+{
+  "imprint": "CogitoPrint",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cogitoprint.com",
+  "branding": {
+    "tagline": "Cognitive computing meets the written word",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cogitoprint.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Cognitive computing in literature and non-fiction",
+    "target_audience": "Tech enthusiasts, AI and cognitive computing professionals",
+    "competitive_advantage": "Leadership in AI and cognitive computing literature",
+    "example_titles": "Cognitive computing guidebooks, AI-authored tech analysis"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

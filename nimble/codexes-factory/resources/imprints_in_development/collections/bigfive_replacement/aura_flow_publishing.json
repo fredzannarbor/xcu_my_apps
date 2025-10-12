@@ -1,0 +1,28 @@
+{
+  "imprint": "Aura Flow Publishing",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@auraflowpublishing.com",
+  "branding": {
+    "tagline": "Heal yourself, heal the world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.auraflowpublishing.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Alternative healing, chakra balancing, and reiki",
+    "target_audience": "Individuals seeking holistic wellness and therapeutic alternatives",
+    "competitive_advantage": "In-depth expertise in alternative healing methods, backed by scientific research",
+    "example_titles": "Books like 'The Reiki Manual' or authors like Penelope Quest"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

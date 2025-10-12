@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[paperwidth=6.125in,paperheight=9.25in,margin=0in]{geometry}
+\usepackage[cmyk]{xcolor}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{microtype}
+
+% New Literary Imprint Cover Template
+% Optimized for professional CMYK printing
+
+% CMYK color definitions for professional printing
+\definecolor{primarycolor}{cmyk}{0.45,0.22,0.00,0.69}
+\definecolor{secondarycolor}{cmyk}{0.76,0.31,0.00,0.14}
+\definecolor{accentcolor}{cmyk}{0.00,0.67,0.74,0.09}
+
+% Custom commands for title and author (to be set when using the template)
+\newcommand{\booktitle}{[BOOK TITLE]}
+\newcommand{\bookauthor}{[AUTHOR NAME]}
+
+% Font settings
+\setmainfont{Minion Pro}
+\setsansfont{Futura}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+% Background
+\fill[primarycolor] (current page.south west) rectangle (current page.north east);
+
+% Title area
+\node[text=white,font=\Huge\sffamily,text width=5in,align=center] at (current page.center) {\booktitle};
+
+% Author area
+\node[text=white,font=\Large\sffamily,text width=5in,align=center] at ([yshift=-2in]current page.center) {\bookauthor};
+
+% Imprint logo area
+\node[text=secondarycolor,font=\large\sffamily] at ([yshift=-4in]current page.center) {New Literary Imprint};
+
+\end{tikzpicture}
+
+\end{document}

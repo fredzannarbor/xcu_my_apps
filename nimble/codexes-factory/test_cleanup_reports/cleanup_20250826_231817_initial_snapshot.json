@@ -1,0 +1,115 @@
+{
+  "session_id": "cleanup_20250826_231817",
+  "timestamp": "2025-08-26T23:18:17.792842",
+  "directory_structure": {
+    "type": "directory",
+    "children": {
+      "cleanup_reports": {
+        "type": "directory",
+        "children": {}
+      },
+      "configs": {
+        "type": "directory",
+        "children": {
+          "config.json": {
+            "type": "file",
+            "size": 33
+          }
+        }
+      },
+      "data": {
+        "type": "directory",
+        "children": {
+          "sample.csv": {
+            "type": "file",
+            "size": 29
+          }
+        }
+      },
+      "docs": {
+        "type": "directory",
+        "children": {
+          "README.md": {
+            "type": "file",
+            "size": 28
+          }
+        }
+      },
+      "logs": {
+        "type": "directory",
+        "children": {
+          "app.log": {
+            "type": "file",
+            "size": 26
+          }
+        }
+      },
+      "prompts": {
+        "type": "directory",
+        "children": {
+          "sample.json": {
+            "type": "file",
+            "size": 33
+          }
+        }
+      },
+      "src": {
+        "type": "directory",
+        "children": {
+          "codexes": {
+            "type": "directory",
+            "children": {
+              "core": {
+                "type": "directory",
+                "children": {
+                  "test_module.py": {
+                    "type": "file",
+                    "size": 45
+                  }
+                }
+              },
+              "modules": {
+                "type": "directory",
+                "children": {
+                  "test_feature.py": {
+                    "type": "file",
+                    "size": 49
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "tests": {
+        "type": "directory",
+        "children": {
+          "test_example.py": {
+            "type": "file",
+            "size": 35
+          }
+        }
+      }
+    }
+  },
+  "file_categories": {
+    "regular": [
+      "tests/test_example.py",
+      "docs/README.md",
+      "prompts/sample.json",
+      "data/sample.csv"
+    ],
+    "temporary": [
+      "logs/app.log"
+    ],
+    "configuration": [
+      "configs/config.json"
+    ],
+    "misplaced_test": [
+      "src/codexes/core/test_module.py",
+      "src/codexes/modules/test_feature.py"
+    ]
+  },
+  "total_files": 8,
+  "total_directories": 12
+}

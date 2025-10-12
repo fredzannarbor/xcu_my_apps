@@ -1,0 +1,28 @@
+{
+  "imprint": "Azure Aspirations",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@azureaspirations.com",
+  "branding": {
+    "tagline": "Aspire to Health",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.azureaspirations.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Nutrition, Fitness, Mental health",
+    "target_audience": "Individuals looking to improve their health and lifestyle",
+    "competitive_advantage": "Focus on aspirational health goals",
+    "example_titles": "Books on healthy lifestyle, fitness goals, mental health improvement"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

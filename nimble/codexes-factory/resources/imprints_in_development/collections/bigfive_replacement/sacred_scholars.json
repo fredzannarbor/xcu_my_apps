@@ -1,0 +1,28 @@
+{
+  "imprint": "Sacred Scholars",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sacredscholars.com",
+  "branding": {
+    "tagline": "Empowering tomorrow's faith leaders today",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sacredscholars.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Christian leadership, Church history, Christian education",
+    "target_audience": "Emerging Christian leaders, educators, pastors, and anyone involved in church leadership or Christian education",
+    "competitive_advantage": "We publish industry-leading resources aimed at training, equipping and inspiring the Christian leaders of tomorrow. Our authors are recognized experts in their fields, ensuring our content is both trustworthy and relevant.",
+    "example_titles": "Authors like Bill Hybels, John C. Maxwell; Titles like 'Courageous Leadership', 'The 21 Irrefutable Laws of Leadership'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "preset_name" : "CRM ticket subject lines using instruct ",
+        "preset_author": "Fred Zimmerman",
+        "preset_active": "True",
+        "preset_description": "Creates 5-10 CRM subject lines.",
+        "preset_instructions": "Run silently from command line.",
+        "preset_placeholder": "Enter brief description of your project here.",
+        "pre_user_input": "",
+        "prompt" : "Generate a list of subject lines for customer support tickets for a fictitious company in the space transportation industry. The users should be enterprise customers. The topics should be highly technical.",
+        "post_user_input": "",
+        "engine": "davinci-instruct-beta",
+        "temperature": 0.9,
+        "max_tokens": 180,
+        "top_p": 1,
+        "fp": 0.5,
+        "pp": 0.3,
+        "stop_sequence": "",
+        "echo_on": "False",
+        "completion_heading": "", 
+        "user":"testing",
+        "organization": "org-evK17V8xnQ6bhmsr8Qv2N7PR"
+    }
+]
+
+
+

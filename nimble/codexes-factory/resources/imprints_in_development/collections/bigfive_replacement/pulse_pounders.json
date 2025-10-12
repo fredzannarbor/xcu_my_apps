@@ -1,0 +1,28 @@
+{
+  "imprint": "Pulse Pounders",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@pulsepounders.com",
+  "branding": {
+    "tagline": "Turn the page, up the pace",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.pulsepounders.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "High-Stakes Thrillers",
+    "target_audience": "Readers seeking adrenaline-fueled thrillers",
+    "competitive_advantage": "Commitment to non-stop action and suspense",
+    "example_titles": "Books like 'Cell', 'Velocity'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Chronicle Chambers",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@chroniclechambers.com",
+  "branding": {
+    "tagline": "Chronicles that change your perspective",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.chroniclechambers.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Event-specific history, world wars, revolutions",
+    "target_audience": "History buffs, historians, students",
+    "competitive_advantage": "Chronicle Chambers offers a mix of scholarly rigor and narrative storytelling",
+    "example_titles": "Books on World War II, French Revolution, American Civil War"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

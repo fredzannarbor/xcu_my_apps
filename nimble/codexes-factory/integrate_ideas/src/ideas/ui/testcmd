@@ -1,0 +1,2 @@
+
+ uv run python src/ideas/vibes/vibe_oral_history_builder.py --mode hls_only --description "Thoroughly modern oral history of the Odyssey 2026.  Odysseus = Founder mode. Telemachis = nepo baby. Cyclops = NSA. etc." --word-count-target 60000 --generate-ideas --run-tournament --idea-batch-size 5 --writing-model grok-3-fast-beta --idea-model mistral --idea-temperature 0.7 --stipulated-facts [] --base-dir runs/run-f0369da8

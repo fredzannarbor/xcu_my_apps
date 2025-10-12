@@ -1,0 +1,34 @@
+import streamlit as st
+import os
+import sys
+sys.path.insert(0, '/Users/fred/xcu_my_apps')
+
+st.set_page_config(page_title="Settings & Commerce", layout="wide")
+
+st.title("⚙️ Settings & Commerce")
+st.markdown("This page is a placeholder for future functionality.")
+
+st.header("API Keys")
+st.markdown("API keys are loaded from your `.env` file in the project root (`codexes/.env`).")
+st.info("To add or change a key, edit the `.env` file and restart the Streamlit app.")
+
+keys_found = []
+if os.getenv("GEMINI_API_KEY"): keys_found.append("Google Gemini")
+if os.getenv("OPENAI_API_KEY"): keys_found.append("OpenAI")
+if os.getenv("ANTHROPIC_API_KEY"): keys_found.append("Anthropic")
+if os.getenv("GROQ_API_KEY"): keys_found.append("Groq")
+
+if keys_found:
+    st.success(f"Found API keys for: {', '.join(keys_found)}")
+else:
+    st.warning("No API keys found in `.env` file. LLM calls will fail.")
+
+st.header("Commerce (Stripe Integration)")
+st.markdown("This section is a placeholder for future Stripe integration.")
+st.write("Functionality to be added:")
+st.markdown("""
+- User account creation and management.
+- Tiered subscription plans for different levels of usage.
+- Pay-per-use credit system.
+- Secure checkout process via Stripe.
+""")

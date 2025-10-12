@@ -1,0 +1,28 @@
+{
+  "imprint": "Oracle's Oasis",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@oracle'soasis.com",
+  "branding": {
+    "tagline": "Embrace the inevitable",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.oracle'soasis.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy novels featuring prophecies, oracles, and fate",
+    "target_audience": "Readers who enjoy narratives centered around prophecies and fate",
+    "competitive_advantage": "We focus on the theme of fate and prophecies, which is highly popular in the fantasy genre",
+    "example_titles": "Comparable to works by J.K. Rowling or Rick Riordan"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

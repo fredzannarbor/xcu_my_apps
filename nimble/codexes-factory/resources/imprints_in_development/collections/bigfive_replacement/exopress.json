@@ -1,0 +1,28 @@
+{
+  "imprint": "ExoPress",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@exopress.com",
+  "branding": {
+    "tagline": "Venture beyond the Milky Way",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.exopress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Science-fiction novels about exoplanet exploration and colonization",
+    "target_audience": "Science-fiction readers, dreamers",
+    "competitive_advantage": "Award-winning science-fiction authors",
+    "example_titles": "The Exoplanet by Hugo Award Winner"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Soundbound",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@soundbound.com",
+  "branding": {
+    "tagline": "Tune in to imagination",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.soundbound.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Children's and YA literature with podcast companions",
+    "target_audience": "Young readers and young adults",
+    "competitive_advantage": "Engaging multimedia storytelling that appeals to younger audiences",
+    "example_titles": "J.K. Rowling, Suzanne Collins"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

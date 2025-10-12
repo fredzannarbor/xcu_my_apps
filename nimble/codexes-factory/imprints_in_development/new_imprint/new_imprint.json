@@ -1,0 +1,65 @@
+{
+  "title": "Words of Wisdom",
+  "content": "Imprint Charter: Pilsa books curated by experts\n\nFocus Areas: \n\nTagline: What you need to know now\n\nTarget Audience: General readers on substantive topiocs\n\nCompetitive Advantage: First mover advantage, leverage relationships\n\nExamples: John Konrad, John Robb, Liam Donovan",
+  "genre": "Publishing",
+  "target_audience": "General readers on substantive topiocs",
+  "object_type": "idea",
+  "metadata": {
+    "imprint_name": "Words of Wisdom",
+    "charter": "Pilsa books curated by experts",
+    "focus": "",
+    "tagline": "What you need to know now",
+    "competitive_advantage": "First mover advantage, leverage relationships",
+    "examples": "John Konrad, John Robb, Liam Donovan"
+  },
+  "imprint": "New Imprint",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "info@nimblebooks.com",
+  "branding": {
+    "brand_colors": {
+      "primary": "#2C3E50",
+      "secondary": "#E74C3C"
+    },
+    "tagline": "Excellence in New Imprint Publishing",
+    "website": "nimblebooks.com"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Non-Fiction"
+    ],
+    "target_audience": "General Adult",
+    "specialization": "General Publishing",
+    "languages": [
+      "eng"
+    ]
+  },
+  "fonts": {
+    "body": "Adobe Caslon Pro",
+    "heading": "Adobe Caslon Pro",
+    "korean": "Apple Myungjo",
+    "quotations": "Adobe Caslon Pro",
+    "mnemonics": "Adobe Caslon Pro"
+  },
+  "publisher_persona": {
+    "persona_name": "New Imprint Editorial Team",
+    "persona_bio": "Professional editorial team focused on Non-Fiction publishing",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Collaborative",
+    "preferred_topics": "Non-Fiction",
+    "target_demographics": "General Adult",
+    "vulnerabilities": "Ensuring content quality and market fit"
+  },
+  "wizard_configuration": {
+    "name": "New Imprint",
+    "charter": "Publishing excellent Non-Fiction content",
+    "imprint_type": "Non-Fiction",
+    "genres": [
+      "Non-Fiction"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 24.99,
+    "page_count": 200,
+    "catalog_size": 12,
+    "enable_ideation": true
+  }
+}

@@ -1,0 +1,219 @@
+% /Users/fred/my-organizations/nimble/repos/codexes-factory/templates/pilsa_cover_template.tex
+\documentclass[12pt]{article}
+
+% This template creates a full-bleed book cover.
+% It is populated and compiled by the Python script.
+
+% Required packages
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ifthen} % NEW: Add package for conditional logic
+\usepackage{luaquotes}
+% In the preamble of pilsa_cover_template.tex
+\newfontfamily\koreanfont{AppleMyungjo}
+% Define a command to easily switch to Korean text
+\newcommand{\korean}[1]{{\koreanfont #1}}
+\newfontfamily\xynapselogo{LuloOne-Bold.otf}[
+  Path=/Users/fred/Library/Fonts/,
+  Extension=.otf,
+  UprightFont=*,
+  BoldFont=*,
+  FontFace={b}{n}{Font=* One Bold}
+]
+\newfontfamily\booktitlefont{LuloOne-Bold.otf}[
+  Path=/Users/fred/Library/Fonts/,
+  Extension=.otf,
+  UprightFont=*,
+  BoldFont=*,
+  FontFace={b}{n}{Font=* One Bold}
+]
+\newcommand{\backcoverfont}{\fontspec{Adobe Caslon Pro}}
+
+% --- These values are replaced by the Python script using safe, unique names ---
+\newcommand{\coverPageHeight}{9.2500in}
+\newcommand{\coverPageWidth}{12.7500in}
+\newcommand{\coverBookTitle}{The Future of Geoinformatics}
+\newcommand{\coverBookAuthor}{AI Lab for Book-Lovers}
+\newcommand{\coverImprint}{xynapse traces}
+\newcommand{\coverPilsaLineOne}{\korean{필사}}
+\newcommand{\coverPilsaLineTwo}{Korean transcriptive meditation}
+
+% Structural placeholders. Python will fill these with formatted LaTeX code.
+\newcommand{\coverBookSubtitleChunk}{} % For conditional subtitle
+\newcommand{\coverDrawBarcode}{}
+
+% Add placeholders for all dynamic values used in debug drawing.
+\newcommand{\coverTrimWidth}{6.0000in}
+\newcommand{\coverTrimHeight}{9.0000in}
+\newcommand{\coverSpineWidth}{0.5000in}
+\newcommand{\coverBleedIn}{0.1250in}
+\newcommand{\coverFrontCoverXShift}{3.2500in}
+\newcommand{\coverDebugMode}{false} % NEW: Add placeholder for the debug flag
+\newcommand{\coverBackCoverXShift}{-3.2500in} % This will be replaced by Python
+\newcommand{\coverBackCoverText}{In a world of constant distraction, find your center through the art of pilsa. This Korean practice of transcriptive meditation invites you to slow down, focus, and connect with wisdom by carefully copying text. Inside, discover 89 inspiring quotations, each displayed on a dedicated page. Facing every quote is a spacious 5 mm dot grid area, providing the perfect canvas for your transcription. Discover the profound calm that comes from putting pen to paper and embrace this meditative journey to mindfulness.} % This will be replaced by Python
+% --- End of replaceable values ---
+
+% Define some colors (optional)
+% FIX: The following line is a placeholder that will be replaced by the Python script.
+\definecolor{coverbackground}{cmyk}{0.0500,0.1000,0.2500,0.0200}
+\definecolor{covertext}{RGB}{20, 20, 20} % Changed text to dark for contrast
+\definecolor{spinetext}{RGB}{20, 20, 20}  % Changed text to dark for contrast
+
+% Set the exact page dimensions for the full cover spread
+\geometry{
+  paperheight=\coverPageHeight,
+  paperwidth=\coverPageWidth,
+  margin=0in
+}
+
+% Set a default sans-serif font for English text
+\setsansfont{Lulo}
+
+% IMPORTANT: Prevent page numbers or other styles from being added to the cover
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+    % Background and Spine (unchanged)
+    \fill[coverbackground] (current page.south west) rectangle (current page.north east);
+    \node[
+        rotate=270,
+        anchor=center,
+        text=spinetext,
+        text=white,
+        font=\booktitlefont\raggedright
+    ] at (current page.center) {\coverBookTitle{} };
+
+    % --- Front Cover Content ---
+    % Define a coordinate for the horizontal center of the front cover
+    \coordinate (covercenter) at ([xshift=\coverFrontCoverXShift]current page.center);
+
+    % --- FRONT COVER TEXT LAYOUT (REVISED FOR PRECISION) ---
+    % First, define anchor points for the top and bottom of our content area.
+    \coordinate (toptextanchor) at ([yshift={(\coverTrimHeight/2) - 1.25in}]covercenter);
+    \coordinate (bottomtextanchor) at ([yshift={-(\coverTrimHeight/2) + 1.25in}]covercenter);
+
+    % --- TOP TEXT BLOCK (Title & Subtitle) ---
+    \node[
+        anchor=north,
+        text centered,
+        text width=5in,
+        text=white
+    ] at (toptextanchor) {
+        {\booktitlefont\Large\raggedright \coverBookTitle\par}
+        \coverBookSubtitleChunk
+    };
+
+    % --- MIDDLE BRANDING BLOCK ---
+    \node[
+        anchor=center,
+        text centered,
+        text width=5in,
+        text=white
+    ] at (covercenter) {
+        {\koreanfont\fontsize{144}{172}\selectfont\bfseries \coverPilsaLineOne\par}
+        \vspace{3em}
+        {\booktitlefont\Large\itshape\raggedright \coverPilsaLineTwo\par}
+    };
+
+    % --- BOTTOM TEXT BLOCK (Author & Imprint) ---
+    \node[
+        anchor=south,
+        text centered,
+        text width=5in,
+        text=white
+    ] at (bottomtextanchor) {
+        {\booktitlefont\Large\raggedright \coverBookAuthor\par}
+        \vspace{2em}
+        {\xynapselogo\Large\raggedright \coverImprint\par}
+    };
+
+    % --- Back Cover ---
+    \coverDrawBarcode
+    \coordinate (backcovercenter) at ([xshift=\coverBackCoverXShift]current page.center);
+\node[
+    anchor=center,
+    text width=4in,
+    align=justify,
+    font=\backcoverfont,
+        text=white,
+] at (backcovercenter) {\coverBackCoverText};
+
+% MODIFIED: Wrap the entire debug block in a conditional
+\ifthenelse{\equal{\coverDebugMode}{true}}{
+    % --- DEBUG: COMPREHENSIVE VISUALIZATION WITH LEGEND ---
+    \begin{scope}[
+        font=\sffamily\tiny,
+        every node/.style={
+            fill=white,
+            fill opacity=0.8,
+            text opacity=1.0,
+            inner sep=2pt,
+            align=left
+        }
+    ]
+        % --- Define Key Coordinates ---
+        \coordinate (spineleft) at ([xshift=-0.5*\coverSpineWidth]current page.center);
+        \coordinate (spineright) at ([xshift=0.5*\coverSpineWidth]current page.center);
+        \coordinate (trim_top_left) at ([xshift={-0.5*\coverSpineWidth - \coverTrimWidth}, yshift=0.5*\coverTrimHeight]current page.center);
+        \coordinate (trim_bottom_right) at ([xshift={0.5*\coverSpineWidth + \coverTrimWidth}, yshift=-0.5*\coverTrimHeight]current page.center);
+        \coordinate (fc_left_margin) at ([xshift=-2.5in]covercenter);
+        \coordinate (fc_right_margin) at ([xshift=2.5in]covercenter);
+
+        % --- Draw Guides ---
+        % Spine (Green)
+        \draw[green, thick] (spineleft) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Left};
+        \draw[green, thick, dashed] (current page.center) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Center};
+        \draw[green, thick] (spineright) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Right};
+
+        % Trim Box (Blue, Dashed)
+        \draw[blue, thick, dashed] (trim_top_left) rectangle (trim_bottom_right) node[pos=0.01, anchor=north west] {Trim Box};
+
+        % Bleed Box (Red, Dotted)
+        \draw[red, thick, dotted] (current page.north west) rectangle (current page.south east) node[pos=0.01, anchor=north west] {Bleed Box};
+
+        % Front Cover Text Margins (Magenta)
+        \draw[magenta, thick] (toptextanchor) -- ++(-\textwidth, 0) node[pos=0.9, anchor=south east] {Top Text Margin};
+        \draw[magenta, thick] (bottomtextanchor) -- ++(-\textwidth, 0) node[pos=0.9, anchor=north east] {Bottom Text Margin};
+        \draw[magenta, thick] (fc_left_margin) -- ++(0, \coverPageHeight);
+        \draw[magenta, thick] (fc_right_margin) -- ++(0, \coverPageHeight);
+
+        % Barcode Area (Cyan)
+        \coordinate (barcode_anchor) at ([xshift={-\coverFrontCoverXShift}, yshift=0.5in]current page.south);
+        \draw[cyan, thick, ->] (barcode_anchor) -- ++(0, -0.5in) node[midway, right] {Barcode Y-Shift};
+        \draw[cyan, thick, ->] (barcode_anchor) -- ++(2in, 0); % Show width
+
+        % Back Cover Text Box (Orange)
+\draw[orange, thick] ([xshift=-2in, yshift=3in]backcovercenter) rectangle ([xshift=2in, yshift=-3in]backcovercenter) node[midway] {Back Cover Text Area};
+
+        % --- Legend Node ---
+        \node[anchor=north west, draw, rounded corners] at ([xshift=0.25in, yshift=-0.25in]current page.north west) {
+            \begin{tabular}{@{}l l l@{}}
+                \multicolumn{3}{c}{\textbf{Layout Legend}} \\
+                \hline
+                \textbf{Element} & \textbf{Value} & \textbf{Python Variable} \\
+                \hline
+                \textcolor{red}{Bleed} & \coverBleedIn & \texttt{bleed\_in} \\
+                \textcolor{blue}{Trim Width} & \coverTrimWidth & \texttt{book\_width\_in} \\
+                \textcolor{blue}{Trim Height} & \coverTrimHeight & \texttt{book\_height\_in} \\
+                \textcolor{green}{Spine Width} & \coverSpineWidth & \texttt{spine\_width\_in} \\
+                \hline
+                \multicolumn{3}{c}{\textbf{Calculated Margins}} \\
+                \hline
+                \textcolor{magenta}{Top Margin} & 1.25in & (in \texttt{.tex}) \\
+                \textcolor{magenta}{Bottom Margin} & 1.25in & (in \texttt{.tex}) \\
+                \textcolor{magenta}{Side Margin} & 0.5in & (in \texttt{.tex}) \\
+                \textcolor{cyan}{Barcode Y-Shift} & 0.5in & (in \texttt{barcode\_draw\_command}) \\
+            \end{tabular}
+        };
+    \end{scope}
+    % --- END DEBUG ---
+}{} % End of \ifthenelse
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Harvest Moon Media",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@harvestmoonmedia.com",
+  "branding": {
+    "tagline": "Enriching the Journey of Aging",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.harvestmoonmedia.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs, spirituality, end-of-life planning",
+    "target_audience": "Seniors and their families",
+    "competitive_advantage": "We take a holistic approach to aging, from practical planning to spiritual exploration",
+    "example_titles": "Being Mortal by Atul Gawande, The Five Invitations by Frank Ostaseski"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

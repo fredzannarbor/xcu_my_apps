@@ -1,0 +1,28 @@
+{
+  "imprint": "Culinary Canvas",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@culinarycanvas.com",
+  "branding": {
+    "tagline": "Where Art Meets Appetite",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.culinarycanvas.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Artistic presentation, plating techniques, creative recipes",
+    "target_audience": "Creative cooks, food stylists, gastronomy enthusiasts",
+    "competitive_advantage": "Unique blend of culinary art and creativity",
+    "example_titles": "The Art of Plating, Creative Cuisine"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Book Two Updated",
+    "book_id": "book_2",
+    "scheduled_date": "2024-12-20",
+    "isbn": "9782222222222",
+    "imprint": "Imprint B",
+    "publisher": "Publisher B",
+    "format": "ebook",
+    "priority": 1,
+    "notes": "Updated from second file"
+  },
+  {
+    "title": "Book Three",
+    "book_id": "book_3",
+    "scheduled_date": "2025-01-01",
+    "isbn": "",
+    "imprint": "Imprint B",
+    "publisher": "Publisher B",
+    "format": "paperback",
+    "priority": 3,
+    "notes": "New book from second file"
+  }
+]

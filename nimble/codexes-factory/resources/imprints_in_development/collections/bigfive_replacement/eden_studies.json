@@ -1,0 +1,28 @@
+{
+  "imprint": "Eden Studies",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@edenstudies.com",
+  "branding": {
+    "tagline": "Your guide to theological enlightenment",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.edenstudies.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Theological studies, Biblical archaeology, Comparative religion",
+    "target_audience": "Theological students, scholars, and laymen interested in deepening their understanding of Christianity",
+    "competitive_advantage": "Our texts are meticulously researched and written by leading experts in the field, making them the go-to resources for serious theological study. We strive to bridge the academia-church gap and make complex religious studies accessible to all.",
+    "example_titles": "Authors like NT Wright, John Piper; Titles like 'Systematic Theology', 'The Resurrection of the Son of God'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

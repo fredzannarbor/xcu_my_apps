@@ -1,0 +1,28 @@
+{
+  "imprint": "EcoGrow Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@ecogrowpublications.com",
+  "branding": {
+    "tagline": "Farming with the Future in Mind",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.ecogrowpublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Environmental awareness, climate-smart farming, and agroecology.",
+    "target_audience": "Eco-conscious farmers, policymakers, and advocates of agroecology.",
+    "competitive_advantage": "We are a leading voice in eco-friendly farming practices, helping to shape the conversation around sustainable agriculture and agroecology.",
+    "example_titles": "Titles like 'Eco-Farming: The Sustainable Solution', 'Climate-Smart Agriculture', or authors like Wendell Berry."
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

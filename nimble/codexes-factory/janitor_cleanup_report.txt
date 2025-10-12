@@ -1,0 +1,19 @@
+=== JANITOR CLEANUP REPORT - Thu Sep 11 04:47:40 EDT 2025 ===
+Files analyzed for removal from project root:
+
+SAFE TO REMOVE (not referenced in source code):
+- example_idea.json
+- sample_book.json
+- ivanhoes.txt
+- ivanhoes.json
+- schedule1.csv
+- schedule2.json
+- temp_model_params.json
+- converted_back.csv
+
+Additional example/sample files that can be removed:
+- example_schedule.csv
+- example_schedule.json
+- sample_schedule.json
+- sample_schedule_with_series.json
+- merged_schedule.csv

@@ -1,0 +1,28 @@
+{
+  "imprint": "Arena Anthology",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@arenaanthology.com",
+  "branding": {
+    "tagline": "Where champions' stories come to life",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.arenaanthology.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs of athletes and sports professionals",
+    "target_audience": "Sports enthusiasts and aspiring athletes",
+    "competitive_advantage": "Exclusive insights into the minds of sports giants",
+    "example_titles": "Autobiographies of Olympic gold medalists, sports legends"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

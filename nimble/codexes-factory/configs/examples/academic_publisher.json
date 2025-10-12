@@ -1,0 +1,87 @@
+{
+  "publisher_name": "Academic Press International",
+  "defaults": {
+    "publisher": "Academic Press International",
+    "lightning_source_account": "1234567",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "Perfect Bound",
+    "carton_pack_quantity": "1",
+    "territorial_rights": "World",
+    "returnability": "Yes-Return",
+    "order_type_eligibility": "POD",
+    "edition_number": "1",
+    "edition_description": "First Edition",
+    "language": "eng",
+    "country_of_origin": "US",
+    "audience": "Professional/Scholarly",
+    "us_wholesale_discount": "20",
+    "uk_wholesale_discount": "25",
+    "eu_wholesale_discount": "25"
+  },
+  "field_overrides": {
+    "metadata_contact_dictionary": "Academic Editorial Board",
+    "lsi_special_category": "Academic",
+    "stamped_text_center": "ACADEMIC EDITION"
+  },
+  "imprint_configs": {
+    "Science & Technology Series": {
+      "publisher": "Academic Press International",
+      "defaults": {
+        "imprint": "Science & Technology Series",
+        "audience": "Professional/Scholarly",
+        "lsi_flexfield1": "STEM Academic Series",
+        "bisac_category": "SCI000000"
+      },
+      "territorial_configs": {
+        "SIBI-EDUC-US": {
+          "wholesale_discount_percent": "15",
+          "returnability": "Yes-Return",
+          "currency": "USD",
+          "pricing_multiplier": 1.0
+        }
+      }
+    },
+    "Humanities Research": {
+      "publisher": "Academic Press International",
+      "defaults": {
+        "imprint": "Humanities Research",
+        "audience": "Professional/Scholarly",
+        "lsi_flexfield1": "Humanities Academic Series",
+        "bisac_category": "PHI000000"
+      }
+    }
+  },
+  "territorial_configs": {
+    "US": {
+      "wholesale_discount_percent": "20",
+      "returnability": "Yes-Return",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    },
+    "UK": {
+      "wholesale_discount_percent": "25",
+      "returnability": "Yes-Return",
+      "currency": "GBP",
+      "pricing_multiplier": 0.79
+    },
+    "EU": {
+      "wholesale_discount_percent": "25",
+      "returnability": "Yes-Return",
+      "currency": "EUR",
+      "pricing_multiplier": 0.85
+    },
+    "CA": {
+      "wholesale_discount_percent": "25",
+      "returnability": "Yes-Return",
+      "currency": "CAD",
+      "pricing_multiplier": 1.25
+    },
+    "SIBI-EDUC-US": {
+      "wholesale_discount_percent": "15",
+      "returnability": "Yes-Return",
+      "currency": "USD",
+      "pricing_multiplier": 1.0
+    }
+  }
+}

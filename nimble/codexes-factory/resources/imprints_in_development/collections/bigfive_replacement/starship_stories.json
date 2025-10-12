@@ -1,0 +1,28 @@
+{
+  "imprint": "Starship Stories",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@starshipstories.com",
+  "branding": {
+    "tagline": "Soar with the stars",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.starshipstories.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Space travel technology and spacecraft design",
+    "target_audience": "Tech lovers, space enthusiasts",
+    "competitive_advantage": "Behind-the-scenes access to spacecraft designs",
+    "example_titles": "Starships: Past, Present, Future by Spacecraft Designer"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

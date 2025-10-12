@@ -1,0 +1,28 @@
+{
+  "imprint": "Policy Prose",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@policyprose.com",
+  "branding": {
+    "tagline": "Unfold the Policy Story",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.policyprose.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Policy narratives, case studies, and analyses",
+    "target_audience": "Policy makers, students, and general readers",
+    "competitive_advantage": "Engaging narratives about policy",
+    "example_titles": "Policy writers, journalists, and political commentators"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

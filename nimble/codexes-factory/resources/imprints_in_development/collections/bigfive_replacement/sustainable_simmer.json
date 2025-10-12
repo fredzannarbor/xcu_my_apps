@@ -1,0 +1,28 @@
+{
+  "imprint": "Sustainable Simmer",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sustainablesimmer.com",
+  "branding": {
+    "tagline": "Cooking for a Better Tomorrow",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sustainablesimmer.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Sustainable cooking, zero waste, ethical food production",
+    "target_audience": "Environmentally conscious cooks, ethical consumers",
+    "competitive_advantage": "Focus on sustainability in the kitchen",
+    "example_titles": "Zero Waste Kitchen, Ethical Eating"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

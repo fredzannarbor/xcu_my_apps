@@ -1,0 +1,28 @@
+{
+  "imprint": "Revive Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@revivepublications.com",
+  "branding": {
+    "tagline": "Rediscover Ancient Wisdom",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.revivepublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Alternative medicine, Herbalism, Ayurveda",
+    "target_audience": "Individuals looking for natural remedies and traditional health solutions",
+    "competitive_advantage": "Unique focus on traditional and natural health alternatives",
+    "example_titles": "Books on herbal medicine, Ayurveda, and holistic health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

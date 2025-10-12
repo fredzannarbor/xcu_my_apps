@@ -1,0 +1,29 @@
+{
+  "name": "Substack Post Generator",
+  "description": "Generates a concise Substack post when significant new features are added to the project",
+  "trigger": {
+    "type": "file_change",
+    "patterns": [
+      "src/**/*.py",
+      "README.md",
+      "pyproject.toml"
+    ],
+    "conditions": {
+      "significant_change": true,
+      "exclude_patterns": [
+        "**/__pycache__/**",
+        "**/*.pyc",
+        "**/test_*.py"
+      ]
+    }
+  },
+  "execution": {
+    "type": "agent_request",
+    "request": "Analyze the recent changes to this philately project and create a concise Substack post describing the new features. Follow these requirements:\n\n1. Research my writing style by examining:\n   - My social media presence (Twitter, Threads, LinkedIn)\n   - My existing Substack posts\n   - My professional history and publications\n   - Any available writing samples in this project\n\n2. Write a 3-paragraph Substack post in first person that includes:\n   - My substantive domain motivation for adding the features (making stamp collecting more enjoyable, studies more accurate, etc.)\n   - The coding problems I overcame during development\n   - Description of the new feature: how it's invoked, created, and what it delivers\n   - Tight POV on my mental state including words and emotions\n\n3. Include a prompt for a visual asset that would complement the post\n\n4. Save the result in the /substack folder as a JSON file with a meaningful, safe filename based on the feature name and date\n\n5. The JSON should contain:\n   - title: Post title\n   - content: The 3-paragraph post content\n   - visual_prompt: Description for visual asset\n   - feature_summary: Brief technical summary\n   - date_created: ISO timestamp\n\nFocus on the human story behind the code - the frustrations, breakthroughs, and satisfaction of building tools that make stamp collecting more accessible and enjoyable."
+  },
+  "settings": {
+    "auto_execute": false,
+    "require_confirmation": true,
+    "cooldown_minutes": 60
+  }
+}

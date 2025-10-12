@@ -1,0 +1,28 @@
+{
+  "imprint": "Midnight Mystique",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@midnightmystique.com",
+  "branding": {
+    "tagline": "Discover the darker side of love",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.midnightmystique.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Gothic and supernatural romance",
+    "target_audience": "Readers who like their romance with a touch of mystery and the macabre",
+    "competitive_advantage": "Atmospheric, lush settings paired with intense romantic relationships",
+    "example_titles": "Diana Gabaldon, Anne Rice"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "imprint": "Planet Otaku",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@planetotaku.com",
+  "branding": {
+    "tagline": "Your passport to otaku culture",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.planetotaku.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Manga and manhwa covering gaming, pop culture references and more",
+    "target_audience": "Otaku culture enthusiasts, predominantly in their teens and twenties",
+    "competitive_advantage": "Our immersive, niche content speaks directly to the otaku community, bridging the gap between East and West",
+    "example_titles": "Titles like 'Sword Art Online' and 'The King's Avatar'; authors similar to Reki Kawahara"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

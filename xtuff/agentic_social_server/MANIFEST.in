@@ -1,0 +1,39 @@
+# Include documentation and configuration files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include USER_GUIDE.md
+include CLAUDE.md
+
+# Include academic paper and research documentation
+include arxiv_paper.md
+include arxiv_paper.tex
+include references.bib
+graft src/social_server/modules/*.md
+recursive-include src/social_server/modules *.md
+
+# Include data and configuration directories
+recursive-include resources *.json
+recursive-include resources *.yaml
+recursive-include resources *.yml
+
+# Include example and template files
+include app.py
+include main.py
+include requirements.txt
+
+# Exclude development and build files
+exclude .gitignore
+exclude *.log
+exclude *.aux
+exclude *.out
+exclude *.synctex.gz
+exclude *.pdf
+exclude uv.lock
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+prune .git
+prune .idea
+prune .venv
+prune .claude

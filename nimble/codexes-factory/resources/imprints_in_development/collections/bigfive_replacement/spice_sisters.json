@@ -1,0 +1,28 @@
+{
+  "imprint": "Spice Sisters",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@spicesisters.com",
+  "branding": {
+    "tagline": "Empowered Women, Empowering Cuisine",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.spicesisters.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Female chefs, women's culinary history, feminist food culture",
+    "target_audience": "Women, feminist readers, culinary historians",
+    "competitive_advantage": "Spotlight on women's influence in the culinary world",
+    "example_titles": "Women Who Cook, The Feminine Kitchen"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

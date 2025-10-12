@@ -1,0 +1,28 @@
+{
+  "imprint": "Sapphire Prose",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sapphireprose.com",
+  "branding": {
+    "tagline": "Unearth the gems of literary fiction",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sapphireprose.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Beautifully-crafted, enchanting literary fiction",
+    "target_audience": "Readers who value exquisite prose and vivid storytelling",
+    "competitive_advantage": "Emphasis on stunning prose and enchanting narratives",
+    "example_titles": "Alice Hoffman, Anne Tyler"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

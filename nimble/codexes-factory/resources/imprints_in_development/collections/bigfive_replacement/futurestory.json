@@ -1,0 +1,28 @@
+{
+  "imprint": "FutureStory",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@futurestory.com",
+  "branding": {
+    "tagline": "Your story, evolved",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.futurestory.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Interactive and AI-generated fiction",
+    "target_audience": "Futuristic fiction lovers and tech enthusiasts",
+    "competitive_advantage": "Unique fusion of AI and innovative storytelling",
+    "example_titles": "Interactive sci-fi novels, AI-crafted fantasy tales"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

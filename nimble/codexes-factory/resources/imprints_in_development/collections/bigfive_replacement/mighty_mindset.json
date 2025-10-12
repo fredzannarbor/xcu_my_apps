@@ -1,0 +1,28 @@
+{
+  "imprint": "Mighty Mindset",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mightymindset.com",
+  "branding": {
+    "tagline": "Empower Your Mind",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mightymindset.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Mental health, Positive psychology, Mindset",
+    "target_audience": "People interested in improving mental health through mindset changes",
+    "competitive_advantage": "Focus on the power of mindset in improving overall health",
+    "example_titles": "Books on positive psychology, mindset shifts, motivational books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

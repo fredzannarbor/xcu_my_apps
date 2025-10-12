@@ -1,0 +1,28 @@
+{
+  "imprint": "Festive Foodscapes",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@festivefoodscapes.com",
+  "branding": {
+    "tagline": "Celebrations Tasted Better",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.festivefoodscapes.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Holiday recipes, festive foods, celebration meals",
+    "target_audience": "Hosts, families, holiday enthusiasts",
+    "competitive_advantage": "Unique focus on culinary celebrations and holidays",
+    "example_titles": "Festive Feasts, Holiday Cooking Unwrapped"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

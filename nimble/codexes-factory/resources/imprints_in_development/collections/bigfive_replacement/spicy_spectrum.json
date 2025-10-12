@@ -1,0 +1,28 @@
+{
+  "imprint": "Spicy Spectrum",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@spicyspectrum.com",
+  "branding": {
+    "tagline": "Turn Up the Heat",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.spicyspectrum.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Hot and spicy recipes, global spice usage",
+    "target_audience": "Spice lovers, adventurous eaters",
+    "competitive_advantage": "Dedicated focus on spicy and flavorful cuisines",
+    "example_titles": "Spice Route, The Heat Seekers' Cookbook"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

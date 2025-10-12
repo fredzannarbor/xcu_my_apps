@@ -1,0 +1,28 @@
+{
+  "imprint": "Revolution Reads",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@revolutionreads.com",
+  "branding": {
+    "tagline": "Join the revolution",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.revolutionreads.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Dystopian and rebel-against-the-system stories",
+    "target_audience": "Teens who question authority and societal norms",
+    "competitive_advantage": "Promoting critical thinking and questioning",
+    "example_titles": "Veronica Roth, Suzanne Collins type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

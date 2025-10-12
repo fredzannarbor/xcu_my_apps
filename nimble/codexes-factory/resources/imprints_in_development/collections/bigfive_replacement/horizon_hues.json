@@ -1,0 +1,28 @@
+{
+  "imprint": "Horizon Hues",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@horizonhues.com",
+  "branding": {
+    "tagline": "Expand your world",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.horizonhues.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Multicultural narratives and global settings",
+    "target_audience": "Teens interested in global cultures and perspectives",
+    "competitive_advantage": "Promoting cultural awareness and global understanding",
+    "example_titles": "Adeline Yen Mah, Malala Yousafzai type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

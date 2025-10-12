@@ -1,0 +1,28 @@
+{
+  "imprint": "Spectrum Stories",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@spectrumstories.com",
+  "branding": {
+    "tagline": "Live your truth",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.spectrumstories.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "LGBTQ+ narratives and inclusivity",
+    "target_audience": "Teen readers of all sexual orientations and identities",
+    "competitive_advantage": "Promotion of diversity and representation in literature",
+    "example_titles": "David Levithan, Becky Albertalli type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

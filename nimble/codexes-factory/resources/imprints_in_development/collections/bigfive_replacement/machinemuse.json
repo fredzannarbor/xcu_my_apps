@@ -1,0 +1,28 @@
+{
+  "imprint": "MachineMuse",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@machinemuse.com",
+  "branding": {
+    "tagline": "Unleashing the creative potential of AI",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.machinemuse.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Books written by AI and about AI in creative writing",
+    "target_audience": "Authors, writers, and tech enthusiasts",
+    "competitive_advantage": "Innovative combination of AI and creative writing",
+    "example_titles": "AI-written novels, Guides to AI in creative writing"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

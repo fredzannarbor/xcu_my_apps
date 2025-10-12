@@ -1,0 +1,28 @@
+{
+  "imprint": "Fiber Artistry Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@fiberartistrypress.com",
+  "branding": {
+    "tagline": "Where art and craft intertwine!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.fiberartistrypress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Showcase books, artist profiles, technique guides, and trend reports in the fiber arts industry.",
+    "target_audience": "Professional crafters, art students, craft teachers, and art lovers.",
+    "competitive_advantage": "Our focus on the intersection of art and craft sets us apart, appealing to both hobbyists and professionals.",
+    "example_titles": "The Art of Modern Needlework, Crafting Trends: The Year Ahead, author types like popular fiber artists, industry trend analysts"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

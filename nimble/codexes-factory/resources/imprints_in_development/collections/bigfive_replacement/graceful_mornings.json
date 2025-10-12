@@ -1,0 +1,28 @@
+{
+  "imprint": "Graceful Mornings",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@gracefulmornings.com",
+  "branding": {
+    "tagline": "Start your day with grace",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.gracefulmornings.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Daily devotionals, Prayer books, Inspirational guides",
+    "target_audience": "Individuals seeking to strengthen their faith and personal relationship with God through daily devotion and spiritual reflection",
+    "competitive_advantage": "Our devotionals are not just inspiring, but deeply personal, designed to accompany readers on their individual faith journeys. We provide a wide range of content to suit various spiritual needs, from introspective prayer books to uplifting devotionals.",
+    "example_titles": "Authors like Sarah Young, Max Lucado; Titles like 'Jesus Calling', 'You Are Never Alone'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

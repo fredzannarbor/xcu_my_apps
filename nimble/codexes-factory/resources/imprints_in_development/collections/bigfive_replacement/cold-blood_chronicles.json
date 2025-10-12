@@ -1,0 +1,28 @@
+{
+  "imprint": "Cold-Blood Chronicles",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@cold-bloodchronicles.com",
+  "branding": {
+    "tagline": "Reality is the greatest mystery",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.cold-bloodchronicles.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "True Crime Mysteries",
+    "target_audience": "Readers fascinated by real-life mysteries",
+    "competitive_advantage": "Specializing in researched, non-fiction crime stories",
+    "example_titles": "Books similar to 'In Cold Blood', 'The Stranger Beside Me'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

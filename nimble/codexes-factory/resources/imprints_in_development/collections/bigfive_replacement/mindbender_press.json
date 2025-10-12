@@ -1,0 +1,28 @@
+{
+  "imprint": "MindBender Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@mindbenderpress.com",
+  "branding": {
+    "tagline": "Flex your mental muscles!",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.mindbenderpress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Brain teasers, visual puzzles and logic games",
+    "target_audience": "Adult puzzle enthusiasts, brain trainers, and logic game lovers",
+    "competitive_advantage": "Specializes in high-quality, intellectually challenging puzzle books not available in typical mass-market offerings",
+    "example_titles": "Visual Logic Games by Renowned Puzzle Designer, Paul Sloane's Brain Teasers"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=altDOGE - Alternative Cryptocurrency Analysis
+After=network.target
+
+[Service]
+Type=simple
+User=wfzimmerman
+Group=wfzimmerman
+WorkingDirectory=/home/wfzimmerman/xcu_my_apps/xtuff/altDOGE
+Environment="PATH=/home/wfzimmerman/xcu_my_apps/xtuff/altDOGE/.venv/bin:/home/wfzimmerman/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/local/bin/uv run streamlit run cfr_document_analyzer/streamlit_app.py --server.port=8505 --server.address=127.0.0.1 --server.headless=true
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/wfzimmerman/xcu_my_apps/xtuff/altDOGE/logs/altdoge.log
+StandardError=append:/home/wfzimmerman/xcu_my_apps/xtuff/altDOGE/logs/altdoge-error.log
+
+[Install]
+WantedBy=multi-user.target

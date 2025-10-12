@@ -1,0 +1,664 @@
+{
+  "gemini/gemini-2.5-pro-preview-05-06": [
+    {
+      "type": "response",
+      "content": {
+        "quotes": [
+          {
+            "quote": "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+            "source": "I, Steve: Steve Jobs In His Own Words",
+            "author": "Steve Jobs",
+            "date_first_published": "2011",
+            "verification_info": "Edited by George Beahm. Quote originally from Steve Jobs' Stanford Commencement Address, June 12, 2005. The book compiles his public statements. The address transcript is widely available (e.g., Stanford News)."
+          },
+          {
+            "quote": "Without passion, you don't have energy, without energy you have nothing. Nothing great in the world has been accomplished without passion.",
+            "source": "The Ten Commandments for Business Failure",
+            "author": "Donald R. Keough",
+            "date_first_published": "2008",
+            "verification_info": "Searchable in Google Books within 'The Ten Commandments for Business Failure' (2008). Quote is often found in Chapter 1, 'Quit Taking Risks'."
+          },
+          {
+            "quote": "A vision is not just a picture of what could be; it is an appeal to our better selves, a call to become something more.",
+            "source": "The Change Masters",
+            "author": "Rosabeth Moss Kanter",
+            "date_first_published": "1983",
+            "verification_info": "Searchable in Google Books within 'The Change Masters' (1983). For example, on page 280 of the 1984 Simon & Schuster edition."
+          },
+          {
+            "quote": "If you are working on something exciting that you really care about, you don\u2019t have to be pushed. The vision pulls you.",
+            "source": "Steve Jobs",
+            "author": "Steve Jobs",
+            "date_first_published": "2011",
+            "verification_info": "Biography by Walter Isaacson. Quote found in Chapter 36: 'Round Three: The Vision Pulls You.' This is a widely cited quote from Jobs, captured in Isaacson's biography."
+          },
+          {
+            "quote": "The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.",
+            "source": "Man and Superman",
+            "author": "George Bernard Shaw",
+            "date_first_published": "1903",
+            "verification_info": "Found in the 'Maxims for Revolutionists' section appended to Act IV of George Bernard Shaw's play 'Man and Superman'."
+          },
+          {
+            "quote": "The creative person is constantly seeking to discover himself, to remodel his own destiny and therefore he has no domestic tranquility.",
+            "source": "The Diary of Ana\u00efs Nin, Vol. 1: 1931-1934",
+            "author": "Ana\u00efs Nin",
+            "date_first_published": "1966",
+            "verification_info": "Searchable in Google Books within 'The Diary of Ana\u00efs Nin, Vol. 1: 1931-1934'. The quote appears in the entry for October 1933."
+          },
+          {
+            "quote": "The greater the artist, the greater the doubt. Perfect confidence is granted to the less talented as a consolation prize.",
+            "source": "Nothing If Not Critical: Selected Essays on Art and Artists",
+            "author": "Robert Hughes",
+            "date_first_published": "1990",
+            "verification_info": "Searchable in Google Books within 'Nothing If Not Critical: Selected Essays on Art and Artists' (1990). For example, on page 13 of the 1991 Penguin edition."
+          },
+          {
+            "quote": "Obsession is the single most wasteful human activity, because with an obsession you keep coming back and back and back to the same question and never get an answer.",
+            "source": "The Spooky Art: Some Thoughts on Writing",
+            "author": "Norman Mailer",
+            "date_first_published": "2003",
+            "verification_info": "Searchable in Google Books within 'The Spooky Art: Some Thoughts on Writing' (2003). For example, on page 112 of the 2004 Random House trade paperback edition."
+          },
+          {
+            "quote": "The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.",
+            "source": "Paradise Lost",
+            "author": "John Milton",
+            "date_first_published": "1667",
+            "verification_info": "Found in John Milton's epic poem 'Paradise Lost', Book I, Lines 254-255."
+          },
+          {
+            "quote": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+            "source": "Letters from a Stoic (Epistulae Morales ad Lucilium)",
+            "author": "Seneca (Lucius Annaeus Seneca the Younger)",
+            "date_first_published": "c. 65 AD",
+            "verification_info": "Found in Seneca's 'Epistulae Morales ad Lucilium', Letter CIV (104), section 26. Widely available in various translations."
+          },
+          {
+            "quote": "Resilience is accepting your new reality, even if it's less good than the one you had before. You can fight it, you can do nothing but scream about what you've lost, or you can accept that and try to put together something that's good.",
+            "source": "Resilience: Reflections on the Burdens and Gifts of Facing Life's Adversities",
+            "author": "Elizabeth Edwards",
+            "date_first_published": "2009",
+            "verification_info": "Searchable in Google Books within 'Resilience: Reflections on the Burdens and Gifts of Facing Life's Adversities' (2009). For example, in Chapter 1."
+          },
+          {
+            "quote": "There is a vitality, a life force, an energy, a quickening that is translated through you into action, and because there is only one of you in all of time, this expression is unique. And if you block it, it will never exist through any other medium and it will be lost.",
+            "source": "Martha: The Life and Work of Martha Graham",
+            "author": "Martha Graham",
+            "date_first_published": "1991",
+            "verification_info": "Attributed to Martha Graham by Agnes de Mille in 'Martha: The Life and Work of Martha Graham' (1991), page 264. This quote is widely cited as originating from Graham's teachings."
+          },
+          {
+            "quote": "The fanatic is incorruptible: if he kills for an idea, he can just as well get himself killed for one; in either case, tyrant or martyr, he is a monster.",
+            "source": "A Short History of Decay (Pr\u00e9cis de d\u00e9composition)",
+            "author": "Emil Cioran",
+            "date_first_published": "1949",
+            "verification_info": "Emil Cioran, *A Short History of Decay*, translated by Richard Howard, Arcade Publishing, 1998, p. 5. Originally published as *Pr\u00e9cis de d\u00e9composition*, Gallimard, 1949."
+          },
+          {
+            "quote": "He who fights with monsters should look to it that he himself does not become a monster. And if you gaze long into an abyss, the abyss also gazes into you.",
+            "source": "Beyond Good and Evil (Jenseits von Gut und B\u00f6se)",
+            "author": "Friedrich Nietzsche",
+            "date_first_published": "1886",
+            "verification_info": "Friedrich Nietzsche, *Beyond Good and Evil*, Aphorism 146. Verifiable in numerous translations, e.g., Cambridge University Press edition, 2002, translated by Rolf-Peter Horstmann and Judith Norman, p. 89."
+          },
+          {
+            "quote": "No horse gets anywhere until he is harnessed. No stream or gas drives anything until it is confined. No Niagara is ever turned into light and power until it is tunneled. No life ever grows great until it is focused, dedicated, disciplined.",
+            "source": "Living Under Tension: Practical Suggestions for Getting More Out of Life",
+            "author": "Harry Emerson Fosdick",
+            "date_first_published": "1941",
+            "verification_info": "Harry Emerson Fosdick, *Living Under Tension: Practical Suggestions for Getting More Out of Life*, Harper & Brothers, 1941. The quote is from the chapter 'Harnessing the Power,' e.g., p. 16 of some editions."
+          },
+          {
+            "quote": "The single story creates stereotypes, and the problem with stereotypes is not that they are untrue, but that they are incomplete. They make one story become the only story.",
+            "source": "The Danger of a Single Story",
+            "author": "Chimamanda Ngozi Adichie",
+            "date_first_published": "2014",
+            "verification_info": "Chimamanda Ngozi Adichie, *The Danger of a Single Story*. Published as a standalone book/essay by Fourth Estate (UK) / Anchor Books (US) in 2014, based on her 2009 TED Talk."
+          },
+          {
+            "quote": "Great spirits have always encountered violent opposition from mediocre minds. The mediocre mind is incapable of understanding the man who refuses to bow blindly to conventional prejudices and chooses instead to express his opinions courageously and honestly.",
+            "source": "Albert Einstein: The Human Side: New Glimpses from His Archives",
+            "author": "Albert Einstein",
+            "date_first_published": "1979",
+            "verification_info": "Albert Einstein, Letter to Morris Raphael Cohen, March 19, 1940. Published in *Albert Einstein: The Human Side: New Glimpses from His Archives*, selected and edited by Helen Dukas and Banesh Hoffmann, Princeton University Press, 1979, p. 68."
+          },
+          {
+            "quote": "Security is mostly a superstition. It does not exist in nature, nor do the children of men as a whole experience it. Avoiding danger is no safer in the long run than outright exposure. Life is either a daring adventure or nothing.",
+            "source": "The Open Door",
+            "author": "Helen Keller",
+            "date_first_published": "1957",
+            "verification_info": "Helen Keller, *The Open Door*, Doubleday & Company, Inc., 1957, p. 13. Also appears in her earlier work *Let Us Have Faith*, Doubleday, Doran & Co., 1940."
+          },
+          {
+            "quote": "Of all tyrannies, a tyranny sincerely exercised for the good of its victims may be the most oppressive. It would be better to live under robber barons than under omnipotent moral busybodies.",
+            "source": "God in the Dock: Essays on Theology and Ethics",
+            "author": "C.S. Lewis",
+            "date_first_published": "1970",
+            "verification_info": "C.S. Lewis, 'The Humanitarian Theory of Punishment,' an essay first published in 1949/1953. Collected in *God in the Dock: Essays on Theology and Ethics*, Eerdmans, 1970, p. 292 (US edition)."
+          },
+          {
+            "quote": "Give a small boy a hammer, and he will find that everything he encounters needs pounding.",
+            "source": "The Conduct of Inquiry: Methodology for Behavioral Science",
+            "author": "Abraham Kaplan",
+            "date_first_published": "1964",
+            "verification_info": "Abraham Kaplan, *The Conduct of Inquiry: Methodology for Behavioral Science*, Chandler Publishing Company, 1964, p. 28. Kaplan refers to this as 'the law of the instrument'."
+          },
+          {
+            "quote": "The test of a first-rate intelligence is the ability to hold two opposed ideas in the mind at the same time, and still retain the ability to function.",
+            "source": "The Crack-Up",
+            "author": "F. Scott Fitzgerald",
+            "date_first_published": "1945",
+            "verification_info": "F. Scott Fitzgerald, 'The Crack-Up,' an essay first published in *Esquire* magazine, February 1936. Collected in *The Crack-Up*, edited by Edmund Wilson, New Directions, 1945, p. 69."
+          },
+          {
+            "quote": "Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge and how much happier that man is who believes his native town to be the world, than he who aspires to become greater than his nature will allow.",
+            "source": "Frankenstein; or, The Modern Prometheus",
+            "author": "Mary Shelley",
+            "date_first_published": "1818",
+            "verification_info": "Chapter 4 (or Volume 1, Chapter 3 in some editions). Spoken by Victor Frankenstein. Easily verifiable in any standard edition of the novel."
+          },
+          {
+            "quote": "Great ambition is the passion of a great character. Those endowed with it may perform very good or very bad acts. All depends on the principles which direct them.",
+            "source": "The Political Aphorisms, Moral and Philosophical Thoughts of the Emperor Napoleon",
+            "author": "Napoleon Bonaparte",
+            "date_first_published": "1848",
+            "verification_info": "Collected and published by C.J. Emmanuel de Buri (1848), p. 1. Also found in various collections of Napoleon's maxims under 'Ambition'."
+          },
+          {
+            "quote": "The visionary is one who can find his way by moonlight, and see the dawn before the rest of the world.",
+            "source": "Intentions",
+            "author": "Oscar Wilde",
+            "date_first_published": "1891",
+            "verification_info": "From the essay 'The Critic as Artist,' Part II. Widely quoted and verifiable in editions of Wilde's 'Intentions'."
+          },
+          {
+            "quote": "Everything can be taken from a man but one thing: the last of the human freedoms\u2014to choose one\u2019s attitude in any given set of circumstances, to choose one\u2019s own way.",
+            "source": "Man's Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "date_first_published": "1946",
+            "verification_info": "Originally published in German as 'Ein Psycholog erlebt das Konzentrationslager'. This quote is from Part One, 'Experiences in a Concentration Camp'. Verifiable in standard editions."
+          },
+          {
+            "quote": "Talk not to me of blasphemy, man; I'd strike the sun if it insulted me. For could the sun do that, then could I do the other; since there is ever a sort of fair play herein, jealousy presiding over all creations.",
+            "source": "Moby Dick; or, The Whale",
+            "author": "Herman Melville",
+            "date_first_published": "1851",
+            "verification_info": "Chapter 119: 'The Candles.' Spoken by Captain Ahab. Verifiable in any standard edition of the novel."
+          },
+          {
+            "quote": "Sorrow is knowledge: they who know the most must mourn the deepest o'er the fatal truth, the Tree of Knowledge is not that of Life.",
+            "source": "Manfred: A Dramatic Poem",
+            "author": "Lord Byron",
+            "date_first_published": "1817",
+            "verification_info": "Act I, Scene I, lines 10-12. Verifiable in standard editions of Byron's poetry or 'Manfred'."
+          },
+          {
+            "quote": "The man of vision is often a man of sorrows. His sight is keen, but the objects of his sight are often tragic. It is the price he pays for his insight.",
+            "source": "The Price of Neglect",
+            "author": "A.W. Tozer",
+            "date_first_published": "1991",
+            "verification_info": "Chapter 1. This book is a compilation of Tozer's writings; the quote is widely attributed and found in this collection."
+          },
+          {
+            "quote": "Power tends to corrupt, and absolute power corrupts absolutely. Great men are almost always bad men, even when they exercise influence and not authority.",
+            "source": "Historical Essays and Studies",
+            "author": "Lord Acton (John Emerich Edward Dalberg-Acton)",
+            "date_first_published": "1907",
+            "verification_info": "From a letter to Bishop Mandell Creighton, April 5, 1887. Published in 'Historical Essays and Studies' (1907), edited by J. N. Figgis and R. V. Laurence, p. 504."
+          },
+          {
+            "quote": "No great genius has existed without an admixture of madness. Nor can anything grand or above the rest be uttered except by a mind that is agitated.",
+            "source": "De Tranquillitate Animi (On the Tranquility of Mind)",
+            "author": "Seneca the Younger",
+            "date_first_published": "c. 60 AD",
+            "verification_info": "Section XVII, paragraph 10. Translation based on Loeb Classical Library, Seneca, Moral Essays, Vol. II. Original Latin: 'Nullum magnum ingenium sine mixtura dementiae fuit. Nec potest grande aliquid et supra ceteros loqui nisi mota mens.'"
+          },
+          {
+            "quote": "The fanatic is incorruptible: if he kills for an idea, he can just as well get himself killed for it; in both cases, tyrant or martyr, he is a monster.",
+            "source": "A Short History of Decay",
+            "author": "Emil Cioran",
+            "date_first_published": "1949",
+            "verification_info": "Originally 'Pr\u00e9cis de d\u00e9composition' (1949). Quote from Part I, 'The Anti-Prophet.' English translation by Richard Howard (1975). Verifiable in Howard's translation."
+          },
+          {
+            "quote": "Between the idea and the reality, between the motion and the act, falls the Shadow.",
+            "source": "The Hollow Men",
+            "author": "T.S. Eliot",
+            "date_first_published": "1925",
+            "verification_info": "From Part V of the poem 'The Hollow Men.' Widely published in collections of Eliot's poetry. (19 words, noted for its impact)."
+          },
+          {
+            "quote": "To be a prophet is to be solitary. To be a prophet is to hear the voice of God; it is to be chosen.",
+            "source": "The Prophets",
+            "author": "Abraham Joshua Heschel",
+            "date_first_published": "1962",
+            "verification_info": "Found in Chapter 1, 'What Manner of Man Is the Prophet?' of 'The Prophets' (Jewish Publication Society, 1962)."
+          },
+          {
+            "quote": "There is no passion in nature so demoniacally impatient as the passion of him who, shuddering on the edge of a precipice, meditates a plunge.",
+            "source": "The Imp of the Perverse",
+            "author": "Edgar Allan Poe",
+            "date_first_published": "1845",
+            "verification_info": "Short story first published in 'Graham's Magazine,' July 1845. Widely available in Poe's collected works."
+          },
+          {
+            "quote": "Passion rebuilds the world for the youth. It makes all things alive and significant. To the old it is a destroyer.",
+            "source": "Essays: Second Series",
+            "author": "Ralph Waldo Emerson",
+            "date_first_published": "1844",
+            "verification_info": "From the essay 'Experience' in 'Essays: Second Series' (1844)."
+          },
+          {
+            "quote": "The true artist will let his wife starve, his children go barefoot, his mother drudge for his living at seventy, sooner than work at anything but his art.",
+            "source": "Man and Superman",
+            "author": "George Bernard Shaw",
+            "date_first_published": "1903",
+            "verification_info": "From the 'Epistle Dedicatory' to Arthur Bingham Walkley, preceding the play 'Man and Superman' (1903)."
+          },
+          {
+            "quote": "Whoever must be a creator in good and evil, verily, he must first be an annihilator and break values.",
+            "source": "Thus Spoke Zarathustra",
+            "author": "Friedrich Nietzsche",
+            "date_first_published": "1883",
+            "verification_info": "From Part II, 'Upon the Blessed Isles.' Based on Walter Kaufmann's translation of 'Also sprach Zarathustra' (first part published 1883)."
+          },
+          {
+            "quote": "No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks.",
+            "source": "A Vindication of the Rights of Woman",
+            "author": "Mary Wollstonecraft",
+            "date_first_published": "1792",
+            "verification_info": "Found in Chapter 1 of 'A Vindication of the Rights of Woman' (1792)."
+          },
+          {
+            "quote": "For him, a belief is not merely an idea which he holds, but an idea which holds him. And this is a very different thing.",
+            "source": "A Man for All Seasons",
+            "author": "Robert Oxton Bolt",
+            "date_first_published": "1960",
+            "verification_info": "From the Preface to the play 'A Man for All Seasons' (1960)."
+          },
+          {
+            "quote": "Man is a rational animal who always loses his temper when he is called upon to act in accordance with the dictates of reason.",
+            "source": "The Critic as Artist",
+            "author": "Oscar Wilde",
+            "date_first_published": "1891",
+            "verification_info": "From Part I of the essay 'The Critic as Artist,' published in the collection 'Intentions' (1891)."
+          },
+          {
+            "quote": "He who fights with monsters should be careful lest he thereby become a monster. And if thou gaze long into an abyss, the abyss will also gaze into thee.",
+            "source": "Beyond Good and Evil",
+            "author": "Friedrich Nietzsche",
+            "date_first_published": "1886",
+            "verification_info": "Aphorism 146 from 'Beyond Good and Evil' ('Jenseits von Gut und B\u00f6se,' 1886). Verifiable in various translations, e.g., by Walter Kaufmann or R.J. Hollingdale."
+          },
+          {
+            "quote": "Your vision will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes.",
+            "source": "Letters of C. G. Jung, Vol. I",
+            "author": "Carl Jung",
+            "date_first_published": "1973",
+            "verification_info": "Letter to Fanny Bowditch (1 August 1916), published in 'Letters of C. G. Jung: Volume 1, 1906-1950', edited by Gerhard Adler & Aniela Jaff\u00e9, translated by R.F.C. Hull (Princeton University Press, 1973), p. 33."
+          },
+          {
+            "quote": "The creative person is willing to live with ambiguity. He doesn't need problems solved immediately and can afford to wait for the right ideas.",
+            "source": "The Courage to Create",
+            "author": "Rollo May",
+            "date_first_published": "1975",
+            "verification_info": "Rollo May, 'The Courage to Create' (W. W. Norton & Company, 1975), Chapter 4: 'The Delphic Oracle as Therapist'. Page number varies by edition."
+          },
+          {
+            "quote": "The cost of a thing is the amount of what I will call life which is required to be exchanged for it, immediately or in the long run.",
+            "source": "Walden; or, Life in the Woods",
+            "author": "Henry David Thoreau",
+            "date_first_published": "1854",
+            "verification_info": "Henry David Thoreau, 'Walden' (1854), Chapter 1: 'Economy'. This phrasing is widely cited and found in most editions."
+          },
+          {
+            "quote": "You must never confuse faith that you will prevail in the end\u2014which you can never afford to lose\u2014with the discipline to confront the most brutal facts of your current reality, whatever they might be.",
+            "source": "Good to Great: Why Some Companies Make the Leap...And Others Don't",
+            "author": "Jim Collins",
+            "date_first_published": "2001",
+            "verification_info": "Jim Collins, 'Good to Great' (HarperBusiness, 2001), Chapter 4: 'Confront the Brutal Facts (Yet Never Lose Faith)'. This is part of the explanation of the Stockdale Paradox."
+          },
+          {
+            "quote": "Seldom, or perhaps never, does a marriage develop into an individual relationship smoothly and without crises. There is no birth of consciousness without pain.",
+            "source": "Contributions to Analytical Psychology",
+            "author": "Carl Jung",
+            "date_first_published": "1928",
+            "verification_info": "Carl Jung, 'Contributions to Analytical Psychology' (Kegan Paul, Trench, Trubner & Co., 1928), translated by H.G. and Cary F. Baynes, p. 191 (in the context of discussing marriage and individuation)."
+          },
+          {
+            "quote": "Every great and commanding movement in the annals of the world is the triumph of enthusiasm. Nothing great was ever achieved without it.",
+            "source": "Essays: First Series ('Circles')",
+            "author": "Ralph Waldo Emerson",
+            "date_first_published": "1841",
+            "verification_info": "Ralph Waldo Emerson, 'Essays: First Series' (1841), in the essay titled 'Circles'. Found in numerous editions."
+          },
+          {
+            "quote": "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+            "source": "A Thousand and One Thoughts From My Library and Scrap Book (attributed)",
+            "author": "Thomas A. Edison",
+            "date_first_published": "1911",
+            "verification_info": "This quote is widely attributed to Thomas Edison. It appears in Elbert Hubbard's 'A Thousand and One Thoughts From My Library and Scrap Book' (The Roycrofters, 1911), though direct primary source from Edison can be elusive for this exact wording."
+          },
+          {
+            "quote": "Our actions may be impeded by them, but there can be no impeding our intentions or our dispositions. Because we can accommodate and adapt. The mind adapts and converts to its own purposes the obstacle to our acting.",
+            "source": "Meditations",
+            "author": "Marcus Aurelius",
+            "date_first_published": "c. 180 AD",
+            "verification_info": "Marcus Aurelius, 'Meditations', Book 5, Verse 20. This specific phrasing is from the translation by Gregory Hays (Modern Library, 2002), p. 57."
+          },
+          {
+            "quote": "The snake which cannot cast its skin has to die. As well the minds which are prevented from changing their opinions; they cease to be mind.",
+            "source": "Daybreak: Thoughts on the Prejudices of Morality",
+            "author": "Friedrich Nietzsche",
+            "date_first_published": "1881",
+            "verification_info": "Friedrich Nietzsche, 'Daybreak: Thoughts on the Prejudices of Morality' (1881), Book V, Aphorism 573. Translated by R.J. Hollingdale (Cambridge University Press)."
+          },
+          {
+            "quote": "The greater the artist, the greater the doubt; perfect confidence is reserved for the less talented as a consolation prize.",
+            "source": "Goya",
+            "author": "Robert Hughes",
+            "date_first_published": "2003",
+            "verification_info": "Robert Hughes, 'Goya' (Alfred A. Knopf, 2003), Introduction, p. 10."
+          },
+          {
+            "quote": "Vision without action is merely a dream. Action without vision just passes the time. Vision with action can change the world.",
+            "source": "Future Edge: Discovering the New Paradigms of Success",
+            "author": "Joel A. Barker",
+            "date_first_published": "1992",
+            "verification_info": "This quote is widely attributed to Joel A. Barker in 'Future Edge' (William Morrow, 1992). It can be found on page 16 of some editions and is a cornerstone of his work on paradigms and vision."
+          },
+          {
+            "quote": "Oft expectation fails, and most oft there / Where most it promises; and oft it hits / Where hope is coldest, and despair most fits.",
+            "source": "All's Well That Ends Well",
+            "author": "William Shakespeare",
+            "date_first_published": "c. 1604-1605",
+            "verification_info": "William Shakespeare, 'All's Well That Ends Well,' Act 2, Scene 1, lines 145-147. Standard Shakespearean text, widely available in numerous editions."
+          },
+          {
+            "quote": "The difference between perseverance and obstinacy is, that one often comes from a strong will, and the other from a strong won't.",
+            "source": "Proverbs from Plymouth Pulpit",
+            "author": "Henry Ward Beecher",
+            "date_first_published": "1887",
+            "verification_info": "Henry Ward Beecher, 'Proverbs from Plymouth Pulpit' (D. Appleton and Company, 1887), page 129. Verifiable in digitized versions of the book."
+          },
+          {
+            "quote": "Where there is no vision, the people perish: but he that keepeth the law, happy is he.",
+            "source": "The Bible (King James Version)",
+            "author": "Traditionally attributed to Solomon / Various Authors",
+            "date_first_published": "1611",
+            "verification_info": "The Holy Bible, King James Version, Book of Proverbs, Chapter 29, Verse 18. Universally verifiable in KJV Bibles."
+          },
+          {
+            "quote": "The role of the artist is exactly the same as the role of the lover. If I love you, I have to make you conscious of the things you don\u2019t see.",
+            "source": "The Creative Process (essay)",
+            "author": "James Baldwin",
+            "date_first_published": "1962",
+            "verification_info": "James Baldwin, essay 'The Creative Process,' originally published in 'Creative America' (Ridge Press, 1962), and later collected in 'The Price of the Ticket: Collected Nonfiction, 1948-1985' (St. Martin's Press, 1985)."
+          },
+          {
+            "quote": "We will not be free if we do not imagine freedom. We cannot demand that anyone else provide it for us. But to imagine it is to begin to be free.",
+            "source": "No Time to Spare: Thinking About What Matters",
+            "author": "Ursula K. Le Guin",
+            "date_first_published": "2017",
+            "verification_info": "Ursula K. Le Guin, 'No Time to Spare: Thinking About What Matters' (Houghton Mifflin Harcourt, 2017), from the essay 'Imagining.' Verifiable in published editions."
+          },
+          {
+            "quote": "In the midst of winter, I found there was, within me, an invincible summer... no matter how hard the world pushes against me, within me, there\u2019s something stronger... pushing right back.",
+            "source": "Return to Tipasa (essay in Lyrical and Critical Essays)",
+            "author": "Albert Camus",
+            "date_first_published": "1954",
+            "verification_info": "Albert Camus, essay 'Retour \u00e0 Tipasa' (1952), published in 'L'\u00c9t\u00e9' (Summer) (Gallimard, 1954). English translation in 'Lyrical and Critical Essays' (Vintage, 1970, edited by Philip Thody), page 169."
+          },
+          {
+            "quote": "To be a prophet is to be a voice, not an echo; to be a voice is to be a force, not a feebleness.",
+            "source": "The Price of Neglect and Other Essays",
+            "author": "A.W. Tozer",
+            "date_first_published": "1993",
+            "verification_info": "A.W. Tozer, 'The Price of Neglect and Other Essays' (Christian Publications, 1993), from the chapter 'To Be a Prophet Is Costly Business.' The essays were originally published earlier, largely in the 1950s-60s."
+          },
+          {
+            "quote": "The final test of a leader is that he leaves behind him in other men the conviction and the will to carry on. ... The genius of a good leader is to leave behind him a situation which common sense, without the grace of genius, can deal with successfully.",
+            "source": "A Preface to Morals",
+            "author": "Walter Lippmann",
+            "date_first_published": "1929",
+            "verification_info": "Walter Lippmann, 'A Preface to Morals' (Macmillan, 1929), Part III, Chapter 12, Section 3."
+          },
+          {
+            "quote": "The man who is anybody and who does anything is surely going to be criticized, vilified, and misunderstood. This is a part of the penalty for greatness, and every great man understands it; and understands, too, that it is no proof of greatness.",
+            "source": "Love, Life & Work",
+            "author": "Elbert Hubbard",
+            "date_first_published": "1906",
+            "verification_info": "Elbert Hubbard, 'Love, Life & Work: Being a Collection of the Best Things Written by Elbert Hubbard' (The Roycrofters, 1906), section 'The Man of Sorrows,' p. 103."
+          },
+          {
+            "quote": "Obsessions are not ideas; they are feelings. They are the steam in the boiler, and the boiler is the brain. The stronger the pressure, the more the brain is hypnotized by the idea that is making it boil.",
+            "source": "The Struggle with the Daemon: H\u00f6lderlin, Kleist, Nietzsche (Der Kampf mit dem D\u00e4mon)",
+            "author": "Stefan Zweig",
+            "date_first_published": "1925",
+            "verification_info": "Stefan Zweig, 'Der Kampf mit dem D\u00e4mon: H\u00f6lderlin, Kleist, Nietzsche' (1925). This quote is widely attributed to this work, particularly in relation to the Nietzsche section. Confirm in English translations like 'The Struggle with the Daemon' (e.g., Pushkin Press edition)."
+          },
+          {
+            "quote": "To require perfection is to invite paralysis. The pattern is predictable: as you see error in what you have done, you steer your work toward what you imagine you can do perfectly. You cling ever more tightly to what you already know you can do.",
+            "source": "Art & Fear: Observations On the Perils (and Rewards) of Artmaking",
+            "author": "David Bayles and Ted Orland",
+            "date_first_published": "1993",
+            "verification_info": "David Bayles and Ted Orland, 'Art & Fear: Observations On the Perils (and Rewards) of Artmaking' (The Image Continuum Press, 1993), pp. 21-22 (2001 edition)."
+          },
+          {
+            "quote": "Whoever, in middle age, attempts to realize the wishes and hopes of his early youth, invariably deceives himself. Each phase of life has its own dreams.",
+            "source": "Elective Affinities (Die Wahlverwandtschaften)",
+            "author": "Johann Wolfgang von Goethe",
+            "date_first_published": "1809",
+            "verification_info": "Johann Wolfgang von Goethe, 'Elective Affinities,' Part II, Chapter 9. Available in various English translations (e.g., Penguin Classics)."
+          },
+          {
+            "quote": "The most dangerous man, to any government, is the man who is able to think things out for himself, without regard to the prevailing superstitions and taboos. Almost inevitably he comes to the conclusion that the government he lives under is dishonest, insane and intolerable.",
+            "source": "Prejudices: Third Series",
+            "author": "H. L. Mencken",
+            "date_first_published": "1922",
+            "verification_info": "H. L. Mencken, 'Prejudices: Third Series' (Alfred A. Knopf, 1922), Chapter 16: 'The Motive of the Writer.' Also found in 'A Mencken Chrestomathy' (1949), p. 145."
+          },
+          {
+            "quote": "When bad men combine, the good must associate; else they will fall, one by one, an unpitied sacrifice in a contemptible struggle.",
+            "source": "Thoughts on the Cause of the Present Discontents",
+            "author": "Edmund Burke",
+            "date_first_published": "1770",
+            "verification_info": "Edmund Burke, 'Thoughts on the Cause of the Present Discontents' (1770). Available in standard collections of Burke's works."
+          },
+          {
+            "quote": "The fanatic is incorruptible: if he kills for an idea, he can just as well get himself killed for one; in both cases, tyrant or martyr, he is a monster.",
+            "source": "A Short History of Decay (Pr\u00e9cis de d\u00e9composition)",
+            "author": "Emil Cioran",
+            "date_first_published": "1949",
+            "verification_info": "Emil Cioran, 'A Short History of Decay' (French: 'Pr\u00e9cis de d\u00e9composition,' 1949), Part I, 'Genealogy of Fanaticism.' English translation by Richard Howard (Viking Press, 1975)."
+          },
+          {
+            "quote": "We are content to know that there is no such thing as a pure passion, that all emotions are merely states of mind, modified by circumstances, and the weather, and the digestion.",
+            "source": "Peter Ibbetson",
+            "author": "George du Maurier",
+            "date_first_published": "1891",
+            "verification_info": "George du Maurier, 'Peter Ibbetson' (James R. Osgood, McIlvaine & Co., 1891), Chapter V."
+          },
+          {
+            "quote": "It must be considered that there is nothing more difficult to carry out, nor more doubtful of success, nor more dangerous to handle, than to initiate a new order of things.",
+            "source": "The Prince",
+            "author": "Niccol\u00f2 Machiavelli",
+            "date_first_published": "1532",
+            "verification_info": "Chapter VI. Verifiable through numerous editions and translations, e.g., Project Gutenberg."
+          },
+          {
+            "quote": "Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge, and how much happier that man is who believes his native town to be the world, than he who aspires to become greater than his nature will allow.",
+            "source": "Frankenstein; or, The Modern Prometheus",
+            "author": "Mary Shelley",
+            "date_first_published": "1818",
+            "verification_info": "Chapter 4, Victor Frankenstein speaking. Verifiable through Project Gutenberg and standard editions."
+          },
+          {
+            "quote": "His soul was mad. Being alone in the wilderness, it had looked within itself, and, by heavens! I tell you, it had gone mad.",
+            "source": "Heart of Darkness",
+            "author": "Joseph Conrad",
+            "date_first_published": "1899",
+            "verification_info": "Part 2, Marlow speaking of Kurtz. Verifiable through Project Gutenberg and standard editions."
+          },
+          {
+            "quote": "The pendulum of the mind oscillates between sense and nonsense, not between right and wrong.",
+            "source": "Memories, Dreams, Reflections (Erinnerungen, Tr\u00e4ume, Gedanken)",
+            "author": "Carl Jung",
+            "date_first_published": "1961",
+            "verification_info": "Chapter IX, 'Travels', section on India. Recorded and edited by Aniela Jaff\u00e9. Verifiable in published editions."
+          },
+          {
+            "quote": "If I am to preserve my relation to myself, I must continually be diving down into the depths, and there is no harder task.",
+            "source": "The Journals of S\u00f8ren Kierkegaard",
+            "author": "S\u00f8ren Kierkegaard",
+            "date_first_published": "1847 (entry date, published posthumously)",
+            "verification_info": "Entry from 1847. Verifiable in editions such as 'The Journals of S\u00f8ren Kierkegaard,' edited by Alexander Dru (e.g., entry 837)."
+          },
+          {
+            "quote": "The price one pays for pursuing any profession or calling is an intimate knowledge of its ugly side.",
+            "source": "Nobody Knows My Name: More Notes of a Native Son",
+            "author": "James Baldwin",
+            "date_first_published": "1961",
+            "verification_info": "From the essay 'The Discovery of What It Means to Be an American'. Verifiable in published editions of the book."
+          },
+          {
+            "quote": "The evil that is in the world always comes of ignorance, and good intentions may do as much harm as malevolence, if they lack understanding.",
+            "source": "The Plague (La Peste)",
+            "author": "Albert Camus",
+            "date_first_published": "1947",
+            "verification_info": "Part Two, spoken by Dr. Rieux. Verifiable through standard translations and editions."
+          },
+          {
+            "quote": "Light is the left hand of darkness and darkness the right hand of light. Two are one, life and death, lying together like lovers in kemmer, like hands joined together, like the end and the way.",
+            "source": "The Left Hand of Darkness",
+            "author": "Ursula K. Le Guin",
+            "date_first_published": "1969",
+            "verification_info": "Chapter 16, 'An Orgota Creation Myth'. Verifiable in published editions."
+          },
+          {
+            "quote": "Actual happiness always looks pretty squalid in comparison with the overcompensations for misery. And, of course, stability isn't nearly so spectacular as instability. And being contented has none of the glamour of a good fight against misfortune...",
+            "source": "Brave New World",
+            "author": "Aldous Huxley",
+            "date_first_published": "1932",
+            "verification_info": "Chapter 16, Mustapha Mond speaking. The ellipsis indicates the sentence continues in the original text. Verifiable in standard editions."
+          },
+          {
+            "quote": "Power is in tearing human minds to pieces and putting them together again in new shapes of your own choosing.",
+            "source": "Nineteen Eighty-Four",
+            "author": "George Orwell",
+            "date_first_published": "1949",
+            "verification_info": "Part Three, Chapter III, O'Brien speaking to Winston. Verifiable in standard editions."
+          },
+          {
+            "quote": "The ideal subject of totalitarian rule is not the convinced Nazi or the convinced Communist, but people for whom the distinction between fact and fiction and the distinction between true and false no longer exist.",
+            "source": "The Origins of Totalitarianism",
+            "author": "Hannah Arendt",
+            "date_first_published": "1951",
+            "verification_info": "Part Three: Totalitarianism, Chapter 13: Ideology and Terror: A Novel Form of Government, section II. Verifiable in published editions."
+          },
+          {
+            "quote": "A great idea is a greater monument than a cathedral. And the advance of man's knowledge is more astonishing than the pyramids.",
+            "source": "The Discoverers: A History of Man's Search to Know His World and Himself",
+            "author": "Daniel J. Boorstin",
+            "date_first_published": "1983",
+            "verification_info": "Boorstin, D. J. (1983). *The Discoverers*. Random House. Part One, Chapter 1."
+          },
+          {
+            "quote": "Fanaticism consists in redoubling your effort when you have forgotten your aim. This definition is a key to all the excesses of religious and political agitation.",
+            "source": "The Life of Reason: Reason in Common Sense",
+            "author": "George Santayana",
+            "date_first_published": "1905",
+            "verification_info": "Santayana, G. (1905). *The Life of Reason: Reason in Common Sense* (Vol. 1 of *The Life of Reason*). Charles Scribner's Sons. Chapter 10, 'Flux and Constancy in Human Nature'."
+          },
+          {
+            "quote": "The prophet is a man who feels fiercely. God has thrust a burden upon his soul, and he is bowed and stunned at man\u2019s fierce greed.",
+            "source": "The Prophets",
+            "author": "Abraham Joshua Heschel",
+            "date_first_published": "1962",
+            "verification_info": "Heschel, A. J. (1962). *The Prophets*. Harper & Row. Page 5."
+          },
+          {
+            "quote": "Every new opinion, at its starting, is precisely in a minority of one. In one man's head alone, there it dwells as yet.",
+            "source": "On Heroes, Hero-Worship, and The Heroic in History",
+            "author": "Thomas Carlyle",
+            "date_first_published": "1841",
+            "verification_info": "Carlyle, T. (1841). *On Heroes, Hero-Worship, and The Heroic in History*. Lecture V, 'The Hero as Man of Letters. Johnson, Rousseau, Burns'."
+          },
+          {
+            "quote": "I have no spur to prick the sides of my intent, but only vaulting ambition, which o'erleaps itself and falls on the other.",
+            "source": "Macbeth",
+            "author": "William Shakespeare",
+            "date_first_published": "c. 1606",
+            "verification_info": "Shakespeare, W. *Macbeth*. Act 1, Scene 7. Widely available in any edition of the play."
+          },
+          {
+            "quote": "Man is a creature of desire and aspiration, Celia. We are never satisfied. We always want more, always strive for something beyond our reach.",
+            "source": "The Children of Men",
+            "author": "P.D. James",
+            "date_first_published": "1992",
+            "verification_info": "James, P.D. (1992). *The Children of Men*. Faber and Faber. Chapter 2. Spoken by Theodore 'Theo' Faron."
+          },
+          {
+            "quote": "A leader's role is to raise people's aspirations for what they can become and to release their energies so they will try to get there.",
+            "source": "Eyewitness to Power: The Essence of Leadership Nixon to Clinton",
+            "author": "David Gergen",
+            "date_first_published": "2000",
+            "verification_info": "Gergen, D. (2000). *Eyewitness to Power: The Essence of Leadership Nixon to Clinton*. Simon & Schuster. Chapter 1, 'The Call to Lead'."
+          },
+          {
+            "quote": "It is not committing any exaggeration to say, that one person with a belief, is a social power equal to ninety-nine who have only interests.",
+            "source": "On Representative Government",
+            "author": "John Stuart Mill",
+            "date_first_published": "1861",
+            "verification_info": "Mill, J. S. (1861). *Considerations on Representative Government*. Parker, Son, and Bourn. Chapter 1, 'To What Extent Forms of Government Are a Matter of Choice'."
+          },
+          {
+            "quote": "Often the difference between a successful person and a failure is not one's better abilities or ideas, but the courage that one has to bet on one's ideas, to take a calculated risk \u2013 and to act.",
+            "source": "Psycho-Cybernetics",
+            "author": "Maxwell Maltz",
+            "date_first_published": "1960",
+            "verification_info": "Maltz, M. (1960). *Psycho-Cybernetics*. Prentice-Hall. Chapter 13, 'Turn Crises into Creative Opportunities'."
+          },
+          {
+            "quote": "The most authentic thing about us is our capacity to create, to overcome, to endure, to transform, to love and to be greater than our suffering.",
+            "source": "A Way of Being Free",
+            "author": "Ben Okri",
+            "date_first_published": "1997",
+            "verification_info": "Okri, B. (1997). *A Way of Being Free*. Phoenix House. Essay 'Mental Fight'."
+          },
+          {
+            "quote": "The vitality of thought is in adventure. Ideas won't keep. Something must be done about them. When the idea is new, its custodians have fervor, live for it, and if need be, die for it.",
+            "source": "Dialogues of Alfred North Whitehead",
+            "author": "Alfred North Whitehead (as recorded by Lucien Price)",
+            "date_first_published": "1954",
+            "verification_info": "Price, L. (Ed.). (1954). *Dialogues of Alfred North Whitehead*. Little, Brown and Company. Entry for June 10, 1943."
+          },
+          {
+            "quote": "Man is so intelligent that he feels impelled to invent theories to account for what happens in the world. Unfortunately, he is not quite intelligent enough, in most cases, to find correct explanations.",
+            "source": "Texts and Pretexts: An Anthology with Commentaries",
+            "author": "Aldous Huxley",
+            "date_first_published": "1932",
+            "verification_info": "Huxley, A. (1932). *Texts and Pretexts: An Anthology with Commentaries*. Chatto & Windus. Section on 'Belief'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "response",
+      "content": [
+        {
+          "book_part": "Publisher's Note",
+          "text": "At xynapse traces, our 'Resilience and Vision' stream seeks to cultivate the inner fortitude and foresight essential for navigating our complex world and contributing meaningfully to humanity's journey. This latest addition, 'Visionary Drive: Passion versus Peril,' confronts a theme of profound and enduring relevance.\n\nVisionary drive \u2013 that potent alchemy of ambition, creativity, and determination \u2013 has propelled many of humanity's greatest leaps. It builds empires, sparks revolutions, and cures diseases. Yet, this same fire, untempered, can lead to ruin. Passion, the lifeblood of innovation, can curdle into obsession; bold vision can warp into blinkered dogma. The path of the visionary is thus a tightrope walk between transformative impact and potential catastrophe.\n\nIn an age hungry for breakthroughs yet wary of unchecked power, understanding this duality is more critical than ever. We see its echoes in the breathless rise and fall of tech titans, the fervent zeal of social movements, and the ambitious policies of nations. This is not merely a contemporary concern; it is a timeless human story, played out across generations.\n\nThis pilsa edition invites you to a deeper contemplation of this dynamic. By meticulously transcribing selected texts, you engage not just intellectually but viscerally with the narratives of those who have wielded, or been consumed by, visionary drive. The act of writing becomes a meditation, allowing you to dissect the anatomy of constructive passion and identify the subtle encroachments of peril. It is an opportunity to reflect on your own aspirations, to learn how to harness your drive with wisdom, and to contribute to a future where vision serves progress without exacting an unsustainable toll.\n\nWe believe this exploration is vital. For it is in mastering our own visionary capacities\u2014and understanding their potential pitfalls\u2014that we can truly enhance our collective understanding, capabilities, and our enduring contribution to the universe."
+        }
+      ]
+    },
+    {
+      "type": "response",
+      "content": {
+        "raw_content": "None",
+        "warning": "JSON response requested, but content was not a string or dict."
+      }
+    }
+  ]
+}

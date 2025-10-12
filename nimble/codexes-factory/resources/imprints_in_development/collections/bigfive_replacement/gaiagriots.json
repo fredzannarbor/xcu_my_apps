@@ -1,0 +1,28 @@
+{
+  "imprint": "GaiaGriots",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@gaiagriots.com",
+  "branding": {
+    "tagline": "Mother Earth's Storytellers",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.gaiagriots.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Climate fiction based on indigenous cultures",
+    "target_audience": "Readers interested in indigenous narratives and environmentalism",
+    "competitive_advantage": "Unique storytelling that intertwines indigenous narratives with climate fiction",
+    "example_titles": "Sherri L. Smith, Louise Erdrich"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

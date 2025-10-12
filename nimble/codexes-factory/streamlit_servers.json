@@ -1,0 +1,24 @@
+[
+
+  {
+    "name": "xtuff.ai",
+    "organization": "xtuff.ai",
+    "role": "multi-organizational",
+    "venv": "/Users/fred/my-organizations/xtuff/.venv",
+    "command": ["streamlit", "run", "/Users/fred/my-organizations/xtuff/app.py", "--server.port", "8503"]
+  },
+  {
+    "name": "Codexes Factory",
+    "organization": "Nimble Books",
+    "role": "multi-organizational",
+    "venv": "/Users/fred/my-organizations/nimble/repos/codexes-factory/.venv",
+    "command": ["streamlit", "run", "/Users/fred/my-organizations/nimble/repos/codexes-factory/src/codexes/codexes-factory-home-ui.py", "--server.port", "8502"]
+  },
+  {
+    "name": "Daily Engine",
+    "organization": "self",
+    "role": "personal",
+    "venv": "/Users/fred/bin/personal-time-management/.venv",
+    "command": ["streamlit", "run", "/Users/fred/bin/personal-time-management/daily_engine.py", "--server.port", "8508"]
+  }
+]

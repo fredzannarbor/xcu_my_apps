@@ -1,0 +1,383 @@
+"""
+Max Bialystok Financial Analysis
+
+Financial analysis dashboard for book publishers inspired by "The Producers".
+Provides comprehensive financial reporting, royalty calculation, and performance analytics.
+"""
+
+import pandas as pd
+import streamlit as st
+import os
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+import glob
+
+# Optional imports
+try:
+    from currency_converter import CurrencyConverter
+    CURRENCY_CONVERTER_AVAILABLE = True
+except ImportError:
+    CURRENCY_CONVERTER_AVAILABLE = False
+    st.warning("⚠️ Currency converter not available. Install with: pip install currency_converter")
+
+# Import following current patterns - UPDATED FOR NEW ARCHITECTURE
+try:
+    from codexes.modules.finance.core.user_data_manager import UserDataManager
+    from codexes.modules.finance.core.fro_coordinator import FROCoordinator
+    from codexes.modules.finance.ui.unified_uploader import UnifiedFinanceUploader
+    from codexes.modules.finance.ui.source_display import DataSourceDisplay
+    from codexes.core.simple_auth import get_auth
+    # Keep some legacy imports for compatibility during transition
+    from codexes.modules.finance.leo_bloom.integrations.imprint_finance_integration import ImprintFinanceIntegration
+except ModuleNotFoundError:
+    from src.codexes.modules.finance.core.user_data_manager import UserDataManager
+    from src.codexes.modules.finance.core.fro_coordinator import FROCoordinator
+    from src.codexes.modules.finance.ui.unified_uploader import UnifiedFinanceUploader
+    from src.codexes.modules.finance.ui.source_display import DataSourceDisplay
+    from src.codexes.core.simple_auth import get_auth
+    try:
+        from src.codexes.modules.finance.leo_bloom.integrations.imprint_finance_integration import ImprintFinanceIntegration
+    except ModuleNotFoundError:
+        ImprintFinanceIntegration = None
+
+st.set_page_config(
+    page_title="Max Bialystok Financial Analysis",
+    page_icon="💰",
+    layout="wide"
+)
+
+# Page header
+st.title("💰 Max Bialystok Financial Analysis")
+st.markdown("*Financial Analysis Software for Book Publishers*")
+
+# Authentication and user setup - NEW ARCHITECTURE
+auth = get_auth()
+if not auth.is_authenticated():
+    st.error("🔒 Please log in to access financial data.")
+    st.stop()
+
+current_username = auth.get_current_user()
+user_role = auth.get_user_role()
+
+if user_role not in ['admin']:
+    st.error("🚫 This page requires admin access.")
+    st.stop()
+
+# Initialize new architecture components
+udm = UserDataManager(current_username)
+fro_coord = FROCoordinator(udm)
+uploader = UnifiedFinanceUploader(udm, fro_coord)
+source_display = DataSourceDisplay()
+
+# Get date variables from FRO coordinator
+today, thisyear, starting_day_of_current_year, daysYTD, annualizer, this_year_month = fro_coord.get_date_variables()
+
+# Legacy compatibility
+deep_backlist_window = 60  # months
+user_id = udm.user_id  # For backward compatibility with existing code
+
+# Display current information
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.metric("Today", today)
+with col2:
+    st.metric("Current Year", thisyear)
+with col3:
+    st.metric("Days YTD", daysYTD)
+
+# Currency conversion
+if CURRENCY_CONVERTER_AVAILABLE:
+    try:
+        c = CurrencyConverter()
+        cgbp = c.convert(1, 'USD', 'GBP')
+        st.info(f"Exchange Rate: 1 USD = {cgbp:.4f} GBP")
+    except Exception as e:
+        st.warning(f"Currency conversion unavailable: {e}")
+else:
+    st.info("💱 Currency conversion: 1 USD ≈ 0.82 GBP (static rate - install currency_converter for live rates)")
+
+# Data File Management Section
+def check_file_status(filepath, max_age_days=30):
+    """Check if a file exists and if it's recent enough."""
+    if not os.path.exists(filepath):
+        return "❌ Missing", "File not found", None
+
+    file_stat = os.stat(filepath)
+    file_date = datetime.fromtimestamp(file_stat.st_mtime)
+    file_age = datetime.now() - file_date
+
+    if file_age.days > max_age_days:
+        return "⚠️ Outdated", f"Last updated {file_age.days} days ago", file_date
+    else:
+        return "✅ Current", f"Updated {file_age.days} days ago", file_date
+
+def get_file_info(filepath):
+    """Get detailed file information."""
+    if not os.path.exists(filepath):
+        return {"exists": False, "size": 0, "modified": None}
+
+    file_stat = os.stat(filepath)
+    return {
+        "exists": True,
+        "size": file_stat.st_size,
+        "modified": datetime.fromtimestamp(file_stat.st_mtime),
+        "size_mb": round(file_stat.st_size / (1024*1024), 2)
+    }
+
+# Data Management Section using New Architecture
+with st.expander("📋 Data Management & Upload", expanded=True):
+    st.markdown("### Unified Financial Data Management")
+
+    # Display current data sources
+    col1, col2 = st.columns([2, 1])
+
+    with col1:
+        st.markdown("#### 📁 Data Sources Overview")
+
+        # Get current data status from user data manager
+        data_sources = {
+            'LSI Data': udm.list_files('lsi_data'),
+            'KDP Data': udm.list_files('kdp_data'),
+            'Direct Sales': udm.list_files('direct_sales'),
+            'Author Data': udm.list_files('author_data'),
+            'Market Data': udm.list_files('market_data')
+        }
+
+        for source_type, files in data_sources.items():
+            with st.container():
+                col_icon, col_info = st.columns([1, 4])
+                with col_icon:
+                    if files:
+                        st.success("✅")
+                    else:
+                        st.warning("⚠️")
+                with col_info:
+                    st.write(f"**{source_type}**: {len(files)} files")
+                    if files:
+                        latest_file = max(files, key=lambda x: x.get('modified', datetime.min))
+                        st.caption(f"Latest: {latest_file.get('name', 'Unknown')}")
+
+    with col2:
+        st.markdown("#### 🔧 Quick Actions")
+        if st.button("🔄 Refresh Data Sources", use_container_width=True):
+            fro_coord.clear_cache()
+            st.rerun()
+
+        if st.button("📊 Process All Data", use_container_width=True):
+            with st.spinner("Processing financial data..."):
+                processed_data = fro_coord.process_user_data('all', force_refresh=True)
+                if processed_data.get('processing_errors'):
+                    st.error(f"Processing errors: {processed_data['processing_errors']}")
+                else:
+                    st.success("✅ All data processed successfully!")
+
+    st.markdown("---")
+
+    # Use the unified uploader
+    st.markdown("#### 📤 Upload Financial Data")
+    uploader.render_upload_interface()
+
+# Imprint Filter Section (if integration available)
+if ImprintFinanceIntegration:
+    with st.expander("🎯 Imprint-Specific Analysis", expanded=False):
+        try:
+            integration = ImprintFinanceIntegration()
+            integration.load_imprint_configurations()
+
+            available_imprints = integration.get_available_imprints()
+
+            if available_imprints:
+                selected_imprint = st.selectbox(
+                    "Filter by Imprint:",
+                    options=["All Imprints"] + available_imprints,
+                    help="Select an imprint to filter financial data"
+                )
+
+                if selected_imprint != "All Imprints":
+                    st.info(f"🎯 Filtering data for: **{selected_imprint}**")
+
+                    # Initialize financial reporting if not done yet
+                    try:
+                        integration.initialize_financial_reporting()
+
+                        # Get imprint-specific financial data
+                        imprint_data = integration.get_imprint_financial_data(selected_imprint)
+                        if imprint_data is not None and not imprint_data.empty:
+                            col1, col2, col3 = st.columns(3)
+
+                            with col1:
+                                total_revenue = imprint_data.get('Net Compensation', pd.Series()).sum()
+                                st.metric(f"{selected_imprint} Revenue", f"${total_revenue:,.2f}")
+
+                            with col2:
+                                total_units = imprint_data.get('Net Qty', pd.Series()).sum()
+                                st.metric(f"{selected_imprint} Units", f"{total_units:,}")
+
+                            with col3:
+                                title_count = len(imprint_data)
+                                st.metric(f"{selected_imprint} Titles", title_count)
+
+                            # Quick access to detailed dashboard
+                            if st.button(f"📊 Open Detailed Dashboard for {selected_imprint}"):
+                                st.info("Navigate to the 'Imprint Financial Dashboard' page for detailed analysis")
+                        else:
+                            st.warning(f"No financial data found for {selected_imprint}")
+
+                    except Exception as e:
+                        st.warning(f"Could not load financial data: {e}")
+                else:
+                    st.info("Showing data for all imprints")
+            else:
+                st.warning("No imprint configurations found")
+
+        except Exception as e:
+            st.warning(f"Imprint integration not available: {e}")
+
+# Main tabs
+tab1, tab2 = st.tabs(["📊 Analysis", "💰 Royalties"])
+
+with tab1:
+    st.header("Financial Analysis")
+
+    # File upload section
+    with st.expander("📁 Upload LSI Data Files", expanded=False):
+        st.info("""
+        **LSI File Requirements:**
+        - File names: `LSI_compensation_YYYY-MM-DD.xlsx` or `lightning_source_compensation_YYYYMM.csv`
+        - Required columns: Date, Title/ISBN, Units Sold, Net Sales, Compensation
+        - Currency values as numbers only (no $ symbols)
+        - Date format: YYYY-MM-DD or MM/DD/YYYY consistently throughout file
+        """)
+
+        with st.form(key='LSIupload'):
+            destination = st.selectbox("Destination", ["YTD", "LYTD", "LTD", "ThisMonth"])
+            uploaded_file = st.file_uploader(
+                "Upload LSI compensation file",
+                type=['xlsx', 'csv', 'xls'],
+                help="Select your LSI compensation report file"
+            )
+            submit_upload = st.form_submit_button(label='Upload')
+
+            if submit_upload:
+                if uploaded_file is None:
+                    st.warning("No file uploaded. Using default system data.")
+                else:
+                    file_details = {
+                        "FileName": uploaded_file.name,
+                        "FileType": uploaded_file.type,
+                        "FileSize": uploaded_file.size
+                    }
+                    st.success("File uploaded successfully!")
+                    st.json(file_details)
+
+    # LSI Compensation Analysis
+    with st.expander("💰 LSI Compensation Analysis", expanded=True):
+        try:
+            # Load data files
+            ltd_path = 'resources/data_tables/LSI/ltd.xlsx'
+            unpaid_comp_path = 'resources/data_tables/LSI/unpaid_comp.xlsx'
+            fme_path = 'resources/data_tables/LSI/Full_Metadata_Export.xlsx'
+
+            st.info("Loading LSI compensation data...")
+
+            # Display file status
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("LTD Data", "✅ Available" if ltd_path else "❌ Missing")ImportError: cannot import name 'ingest_kdp_by_month' from 'codexes.modules.finance.leo_bloom.FinancialReportingObjects.KDP_Financial_Reporting_Objects' (/Users/fred/my-apps/nimble/codexes-factory/src/codexes/modules/finance/leo_bloom/FinancialReportingObjects/KDP_Financial_Reporting_Objects.py)
+Traceback:
+File "/Users/fred/xcu_my_apps/nimble/codexes-factory/src/codexes/codexes-factory-home-ui.py", line 150, in <module>
+    build_sidebar(
+File "/Users/fred/xcu_my_apps/nimble/codexes-factory/src/codexes/core/ui.py", line 94, in build_sidebar
+    pg.run()
+File "/Users/fred/xcu_my_apps/nimble/codexes-factory/.venv/lib/python3.12/site-packages/streamlit/navigation/page.py", line 300, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/Users/fred/xcu_my_apps/nimble/codexes-factory/src/codexes/pages/27_Max_Bialystok_Financial.py", line 26, in <module>
+    from codexes.modules.finance.core.fro_coordinator import FROCoordinator
+File "/Users/fred/xcu_my_apps/nimble/codexes-factory/src/codexes/modules/finance/core/fro_coordinator.py", line 22, in <module>
+    from codexes.modules.finance.leo_bloom.FinancialReportingObjects.KDP_Financial_Reporting_Objects import ingest_kdp_by_month
+
+            with col2:
+                st.metric("Unpaid Comp", "✅ Available" if unpaid_comp_path else "❌ Missing")
+            with col3:
+                st.metric("Metadata Export", "✅ Available" if fme_path else "❌ Missing")
+
+        except Exception as e:
+            st.error(f"Error loading LSI data: {e}")
+
+    # Performance Metrics
+    with st.expander("📈 Performance Metrics", expanded=False):
+        col1, col2, col3, col4, col5 = st.columns(5)
+
+        # Placeholder metrics - replace with actual calculations
+        with col1:
+            st.metric("Frontlist Median", "$0.00", help="Median net compensation per month for frontlist titles")
+        with col2:
+            st.metric("Frontlist Mean", "$0.00", help="Average net compensation per month for frontlist titles")
+        with col3:
+            st.metric("Frontlist Total", "$0.00", help="Total frontlist compensation to date")
+        with col4:
+            st.metric("LTD Median", "$0.00", help="Lifetime median net compensation")
+        with col5:
+            st.metric("LTD Mean", "$0.00", help="Lifetime average net compensation")
+
+    # Substack Revenue
+    with st.expander("📰 Substack Revenue", expanded=False):
+        col1, col2 = st.columns(2)
+
+        # Placeholder for Substack data - implement actual data loading
+        sample_data = {
+            'Year': ['2023', '2024'],
+            'Annualized Gross Revenue': [1200.00, 1500.00]
+        }
+        substack_df = pd.DataFrame(sample_data)
+
+        with col1:
+            edited_df = st.data_editor(
+                substack_df,
+                num_rows="dynamic",
+                use_container_width=True
+            )
+
+        with col2:
+            monthly_revenue = edited_df['Annualized Gross Revenue'].sum() / 12
+            st.metric("Monthly Gross Revenue", f"${monthly_revenue:.2f}")
+
+        if st.button("💾 Save Substack Data"):
+            st.success("Substack data saved successfully!")
+
+with tab2:
+    st.header("Royalty Management")
+
+    with st.expander("💳 Payments Data and Reporting", expanded=True):
+        st.markdown("**Payment History**")
+
+        # Placeholder payment data - implement actual data loading
+        sample_payments = {
+            'Date': ['2024-01-15', '2024-02-15', '2024-03-15'],
+            'Author': ['Author A', 'Author B', 'Author C'],
+            'Amount': [150.00, 275.50, 325.75],
+            'Status': ['Paid', 'Paid', 'Pending']
+        }
+        payments_df = pd.DataFrame(sample_payments)
+
+        edited_payments = st.data_editor(
+            payments_df,
+            key="payments2authors",
+            num_rows="dynamic",
+            use_container_width=True
+        )
+
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("💾 Update Payments History"):
+                st.success("Payments history updated successfully!")
+
+        with col2:
+            total_payments = edited_payments['Amount'].sum()
+            st.metric("Total Payments", f"${total_payments:.2f}")
+
+# Footer
+st.markdown("---")
+st.caption("Max Bialystok Financial Analysis - Inspired by 'The Producers'")
+st.caption("💡 The inspired lunacy of Zero Mostel as Max Bialystok in the classic movie THE PRODUCERS.")

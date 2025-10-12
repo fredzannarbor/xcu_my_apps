@@ -1,0 +1,28 @@
+{
+  "imprint": "Saga Stream",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@sagastream.com",
+  "branding": {
+    "tagline": "Where Stories Flow",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.sagastream.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Fantasy, sci-fi, and adventure series",
+    "target_audience": "Young adult and adult fantasy readers",
+    "competitive_advantage": "Continuous, immersive storytelling with extensive world-building",
+    "example_titles": "The Lord of the Rings, A Song of Ice and Fire"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

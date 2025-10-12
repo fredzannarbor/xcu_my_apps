@@ -1,0 +1,26 @@
+{
+  "search_history": [
+    {
+      "query": "site:nsa.gov filetype:pdf",
+      "timestamp": "2025-09-28T02:41:27.626649",
+      "site": "nsa.gov"
+    }
+  ],
+  "default_min_pages": 18,
+  "default_max_docs": 300,
+  "default_time_filter": "y",
+  "current_bundle": "Intel",
+  "bundles": {
+    "Intel": [
+      "odni.gov",
+      "cia.gov",
+      "nsa.gov",
+      "nro.gov",
+      "nga.mil",
+      "dia.mil",
+            "intel.gov",
+            "intelligence.gov",
+            "intellink.gov"
+    ]
+  }
+}

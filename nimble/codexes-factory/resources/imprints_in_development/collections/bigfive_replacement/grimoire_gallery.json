@@ -1,0 +1,28 @@
+{
+  "imprint": "Grimoire Gallery",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@grimoiregallery.com",
+  "branding": {
+    "tagline": "Uncover the mystique in the mundane",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.grimoiregallery.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Urban fantasy and magical realism",
+    "target_audience": "Young adult and adult readers seeking fantastical elements in contemporary settings",
+    "competitive_advantage": "We publish stories that blur the boundaries of reality and fantasy, captivating readers with unexpected twists",
+    "example_titles": "Comparable to works by Neil Gaiman or Alice Hoffman"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

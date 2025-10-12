@@ -1,0 +1,28 @@
+{
+  "imprint": "NaturePreserve Press",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@naturepreservepress.com",
+  "branding": {
+    "tagline": "Bringing nature to your doorstep",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.naturepreservepress.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Ecology, biodiversity, conservation",
+    "target_audience": "Nature lovers and environmentalists",
+    "competitive_advantage": "Promoting sustainable living through nature-based literature",
+    "example_titles": "The Great Barrier Reef: A Deep Dive, On the Trail of the Snow Leopard"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

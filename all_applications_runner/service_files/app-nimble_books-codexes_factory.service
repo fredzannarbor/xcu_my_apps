@@ -1,0 +1,19 @@
+[Unit]
+Description=Codexes Factory - Nimble Books LLC
+After=network.target
+
+[Service]
+Type=exec
+User=www-data
+Group=www-data
+WorkingDirectory=/home/wfz/streamlit-vibe-multicommerce
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/wfz/streamlit-vibe-multicommerce
+ExecStart=/usr/bin/python3 -m streamlit run  codexes-factory-home-ui.py --server.port=8502
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

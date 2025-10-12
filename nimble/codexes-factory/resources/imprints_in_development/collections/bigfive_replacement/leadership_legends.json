@@ -1,0 +1,28 @@
+{
+  "imprint": "Leadership Legends",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@leadershiplegends.com",
+  "branding": {
+    "tagline": "Lead with their stories",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.leadershiplegends.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Memoirs of leaders in business, politics and social spheres",
+    "target_audience": "Aspiring leaders and management professionals",
+    "competitive_advantage": "Access to the thought process and strategies of successful leaders",
+    "example_titles": "Autobiographies of successful CEOs, political leaders"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

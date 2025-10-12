@@ -1,0 +1,28 @@
+{
+  "imprint": "Panacea Publications",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@panaceapublications.com",
+  "branding": {
+    "tagline": "Your Health Solution",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.panaceapublications.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Alternative health, Nutrition, Mental health",
+    "target_audience": "Readers seeking integrated and alternative approaches to health",
+    "competitive_advantage": "Unique focus on integrated and holistic health",
+    "example_titles": "Books on alternative health, nutrition, mental health"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

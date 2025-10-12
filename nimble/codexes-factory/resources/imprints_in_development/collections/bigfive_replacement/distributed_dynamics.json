@@ -1,0 +1,28 @@
+{
+  "imprint": "Distributed Dynamics",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@distributeddynamics.com",
+  "branding": {
+    "tagline": "Unearthing the Dynamics of Distance",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.distributeddynamics.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Team dynamics, conflict resolution, and collaboration in remote teams",
+    "target_audience": "Professionals in remote teams",
+    "competitive_advantage": "Expertise in team dynamics in virtual settings",
+    "example_titles": "Publications like 'Team Chemistry in Cyberspace'"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}

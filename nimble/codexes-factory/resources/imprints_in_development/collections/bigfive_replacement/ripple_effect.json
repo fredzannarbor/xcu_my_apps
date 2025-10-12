@@ -1,0 +1,28 @@
+{
+  "imprint": "Ripple Effect",
+  "publisher": "BigFiveReplacement LLC",
+  "contact_email": "contact@rippleeffect.com",
+  "branding": {
+    "tagline": "Every choice creates a ripple",
+    "brand_colors": {
+      "primary": "#1a237e",
+      "secondary": "#303f9f"
+    },
+    "website": "https://www.rippleeffect.com"
+  },
+  "publishing_focus": {
+    "primary_focus": "Stories exploring consequences and decision-making",
+    "target_audience": "Teens learning about responsibility",
+    "competitive_advantage": "Stories with moral and ethical dilemmas",
+    "example_titles": "Jay Asher, Lois Lowry type books"
+  },
+  "business_metrics": {
+    "annual_titles_target": "1000-5000",
+    "establishment_date": "2025-09-22",
+    "status": "active"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "distribution_channel": "Global POD + Traditional"
+  }
+}
