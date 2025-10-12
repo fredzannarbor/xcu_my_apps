@@ -1,0 +1,25 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+env:
+  REMOTE_HOST: 34.172.181.254
+  REMOTE_USER: wfzimmerman
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Services
+        env:
+          SSH_KEY: ${{ secrets.GCP_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H $REMOTE_HOST >> ~/.ssh/known_hosts
+          
+          ssh -i ~/.ssh/id_ed25519 $REMOTE_USER@$REMOTE_HOST "systemctl is-active codexes-factory.service"

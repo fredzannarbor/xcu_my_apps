@@ -28,8 +28,8 @@ remote_ssh() {
 # Repository configuration
 # Format: "local_path|github_repo|remote_path|branch"
 REPOS=(
-    # Main xCU apps container - this contains everything
-    "/Users/fred/my-apps|git@github.com:fredzannarbor/xcu_my_apps.git|xcu_my_apps|gemin"
+    # Main xCU apps container - lean production branch (no archives, no secrets)
+    "/Users/fred/xcu_my_apps|git@github.com:fredzannarbor/xcu_my_apps.git|xcu_my_apps|lean-production"
 
     # Resume site - separate standalone app
     # Note: Add resume-site repo if/when it exists
@@ -146,8 +146,78 @@ case "$MODE" in
         echo "Copying main .env to xcu_my_apps..."
         scp -i "$SSH_KEY" /Users/fred/xcu_my_apps/.env "$REMOTE_USER@$REMOTE_HOST:$REMOTE_BASE/xcu_my_apps/.env"
 
-        # You can add more .env files here as needed
+        # Copy app-specific .env files
+        echo "Copying codexes-factory .env..."
+        scp -i "$SSH_KEY" /Users/fred/xcu_my_apps/nimble/codexes-factory/.env "$REMOTE_USER@$REMOTE_HOST:$REMOTE_BASE/xcu_my_apps/nimble/codexes-factory/.env" 2>/dev/null || echo "  (no .env found, skipping)"
+
         echo -e "${GREEN}✓ .env files copied${NC}"
+        ;;
+
+    restart)
+        echo -e "${GREEN}=== Restarting Services ===${NC}"
+        SERVICE="${2:-all}"
+
+        if [ "$SERVICE" = "all" ]; then
+            echo "Restarting all app services..."
+            remote_ssh "sudo systemctl restart 'app-*.service' codexes-factory.service trillionsofpeople.service xai_health_coach.service agentic_social_server.service 2>/dev/null || echo 'Some services may not exist'"
+        else
+            echo "Restarting $SERVICE..."
+            remote_ssh "sudo systemctl restart $SERVICE"
+        fi
+
+        echo -e "${GREEN}✓ Services restarted${NC}"
+        ;;
+
+    deploy)
+        echo -e "${GREEN}=== Full Deployment Pipeline ===${NC}"
+        echo ""
+
+        # 1. Update code
+        echo -e "${BLUE}Step 1: Updating repositories...${NC}"
+        for repo_config in "${REPOS[@]}"; do
+            IFS='|' read -r local_path github_repo remote_path branch <<< "$repo_config"
+            update_repo "$remote_path" "$branch"
+        done
+        echo ""
+
+        # 2. Copy .env files
+        echo -e "${BLUE}Step 2: Copying .env files...${NC}"
+        scp -i "$SSH_KEY" /Users/fred/xcu_my_apps/.env "$REMOTE_USER@$REMOTE_HOST:$REMOTE_BASE/xcu_my_apps/.env" 2>/dev/null || echo "  (skipped)"
+        echo ""
+
+        # 3. Restart services
+        echo -e "${BLUE}Step 3: Restarting services...${NC}"
+        remote_ssh "sudo systemctl restart codexes-factory.service trillionsofpeople.service 2>/dev/null || echo 'Some services may not exist'"
+        echo ""
+
+        # 4. Check status
+        echo -e "${BLUE}Step 4: Checking service status...${NC}"
+        remote_ssh "systemctl status codexes-factory.service --no-pager -l | head -10"
+        echo ""
+
+        echo -e "${GREEN}=== Deployment Complete ===${NC}"
+        echo ""
+        echo "Services available at:"
+        echo "  - Codexes Factory: http://xtuff.ai:8502"
+        echo "  - All Apps Runner: http://xtuff.ai:8500"
+        echo "  - Trillions: http://xtuff.ai:8507"
+        ;;
+
+    test)
+        echo -e "${GREEN}=== Testing Production Services ===${NC}"
+        echo ""
+
+        SERVICES=("codexes-factory.service" "trillionsofpeople.service" "xai_health_coach.service" "agentic_social_server.service" "app-runner-master.service")
+
+        for service in "${SERVICES[@]}"; do
+            echo -e "${YELLOW}Testing: $service${NC}"
+            remote_ssh "systemctl is-active $service 2>/dev/null && echo '  ✓ Running' || echo '  ✗ Not running'"
+            remote_ssh "systemctl status $service --no-pager -l 2>/dev/null | head -5"
+            echo ""
+        done
+
+        echo -e "${BLUE}Checking ports:${NC}"
+        remote_ssh "ss -tlnp 2>/dev/null | grep -E ':(8500|8501|8502|8506|8507)' || echo 'No ports listening'"
         ;;
 
     ssh)
@@ -156,14 +226,22 @@ case "$MODE" in
         ;;
 
     *)
-        echo "Usage: $0 [setup|update|status|copy-env|ssh]"
+        echo "Usage: $0 [setup|update|status|copy-env|restart|deploy|test|ssh]"
         echo ""
         echo "Commands:"
-        echo "  setup     - Initial clone of all repositories"
-        echo "  update    - Pull latest changes for all repos"
-        echo "  status    - Check git status of all repos"
-        echo "  copy-env  - Copy .env files to remote"
-        echo "  ssh       - Open SSH session to remote server"
+        echo "  setup          - Initial clone of all repositories (lean-production branch)"
+        echo "  update         - Pull latest changes for all repos"
+        echo "  status         - Check git status of all repos"
+        echo "  copy-env       - Copy .env files to remote"
+        echo "  restart [name] - Restart services (all or specific service)"
+        echo "  deploy         - Full deployment pipeline (update + restart + test)"
+        echo "  test           - Test all production services"
+        echo "  ssh            - Open SSH session to remote server"
+        echo ""
+        echo "Examples:"
+        echo "  $0 deploy                              # Full deployment"
+        echo "  $0 restart codexes-factory.service     # Restart single service"
+        echo "  $0 test                                # Check all services"
         exit 1
         ;;
 esac
