@@ -412,12 +412,23 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
 
     # WORKING APPS SHOWCASE
     st.markdown("---")
-    st.markdown("## Start Your Journey: Revolutionary Apps")
+    st.markdown("## Join the Journey to Self-Evolving Apps")
     st.markdown("*Algorithmic self-evolution coming soon...*")
     st.markdown("")
 
     # Define all apps data
     apps_data = {
+        "ai_lab_for_book_lovers": ("👨‍🔬", "AI Lab for Book-Lovers from Nimble Books", "Humans Using Models to Make Books Better",
+         "Minimally, make sure AGI doesn't kill the world of books. Maximally, use AGI to shape a world where books are more important, vital, and ubiquitous than ever before.",
+         "Explore cutting-edge AI-human collaboration in book publishing. Browse our experiments, tools, and growing catalog of AI-assisted works.",
+         ["**Mission Statement:** Ensure books thrive in the AGI era",
+          "**Longform Prospectus:** Our vision for AI-powered publishing",
+          "**Annotated Bibliography:** Research and resources on AI + books",
+          "**Storefront:** Browse AI-assisted books from Nimble Books",
+          "**Xynapse Traces:** Our flagship experimental imprint"],
+         ["Browse catalog", "View mission statement", "Access prospectus"],
+         ["Use AI Lab tools", "Create with experimental imprints", "Priority publishing assistance"]),
+
         "codexes_factory": ("📚", "Codexes Factory from Nimble Books", "Book Publishing Platform",
          "Professional book publishing and catalog management.",
          "Create, manage, and publish books with AI assistance and comprehensive catalog tools.",
@@ -484,6 +495,7 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
         # Find the app in config
         app_config = None
         app_status_data = None
+        is_info_only = False
 
         for org_id, org_data in organizations.items():
             if app_id in org_data.get("apps", {}):
@@ -492,7 +504,13 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
                 org_key = org_id
                 break
 
-        if not app_config or not app_config.get("public_visible", False):
+        # Special handling for info-only expanders (like AI Lab)
+        if not app_config:
+            if app_id == "ai_lab_for_book_lovers":
+                is_info_only = True
+            else:
+                continue
+        elif not app_config.get("public_visible", False):
             continue
 
         # Determine if this is featured and get default expanded state
@@ -528,44 +546,80 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
                         st.markdown(f"🔒 {feat}")
 
             with col2:
-                # Status
-                is_running = app_status_data.get("running", False) if app_status_data else False
-                health = app_status_data.get("health_status", "unknown") if app_status_data else "unknown"
+                # Special handling for info-only expanders
+                if is_info_only and app_id == "ai_lab_for_book_lovers":
+                    st.info("📖 Informational Hub")
+                    st.markdown("---")
 
-                if is_running and health == "healthy":
-                    st.success("✅ Online")
-                elif is_running:
-                    st.warning("⚠️ Starting")
-                else:
-                    st.error("❌ Offline")
+                    # Links to resources
+                    st.markdown("### Quick Links:")
 
-                st.markdown("---")
+                    # Get codexes factory port for links
+                    codexes_port = 8502  # default
+                    for org_id, org_data in organizations.items():
+                        if "codexes_factory" in org_data.get("apps", {}):
+                            codexes_port = org_data["apps"]["codexes_factory"].get("port", 8502)
+                            break
 
-                # Access control
-                has_access = has_premium or app_config.get("subscription_tier") == "free"
+                    session_id = st.session_state.get('shared_session_id', '')
+                    base_url = f"http://localhost:{codexes_port}"
+                    if session_id:
+                        base_url += f"?session_id={session_id}"
 
-                if has_access and is_running:
-                    port = app_config.get("port")
-                    if st.button(f"🚀 Launch {name}", key=f"launch_{app_id}", type="primary", use_container_width=True):
-                        session_id = st.session_state.get('shared_session_id', '')
-                        url = f"http://localhost:{port}"
-                        if session_id:
-                            url += f"?session_id={session_id}"
+                    if st.button("👨‍🔬 AI Lab Home", key=f"ailab_home", use_container_width=True):
+                        st.markdown(f'<meta http-equiv="refresh" content="0; url={base_url}" />', unsafe_allow_html=True)
+
+                    if st.button("🛒 Browse Storefront", key=f"ailab_store", use_container_width=True):
+                        url = f"{base_url}&page=Bookstore" if '?' in base_url else f"{base_url}?page=Bookstore"
                         st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
-                        st.success(f"Opening {name}...")
-                elif has_access and not is_running:
-                    st.warning("⏳ Starting up...")
-                else:
-                    st.markdown("""
-                    <div class="premium-lock">
-                        🔒 Premium Features Locked<br>
-                        <small>Upgrade to unlock full access</small>
-                    </div>
-                    """, unsafe_allow_html=True)
 
-                    if st.button("⬆️ Upgrade to Premium", key=f"upgrade_{app_id}", type="primary", use_container_width=True):
-                        st.session_state["selected_page"] = "💳 Pricing"
-                        st.rerun()
+                    if st.button("✨ Xynapse Traces", key=f"ailab_xynapse", use_container_width=True):
+                        url = f"{base_url}&page=Imprint_Display" if '?' in base_url else f"{base_url}?page=Imprint_Display"
+                        st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
+
+                    st.markdown("---")
+                    st.caption("💡 Premium: Access AI Lab tools")
+
+                else:
+                    # Regular app handling
+                    # Status
+                    is_running = app_status_data.get("running", False) if app_status_data else False
+                    health = app_status_data.get("health_status", "unknown") if app_status_data else "unknown"
+
+                    if is_running and health == "healthy":
+                        st.success("✅ Online")
+                    elif is_running:
+                        st.warning("⚠️ Starting")
+                    else:
+                        st.error("❌ Offline")
+
+                    st.markdown("---")
+
+                    # Access control
+                    has_access = has_premium or app_config.get("subscription_tier") == "free"
+
+                    if has_access and is_running:
+                        port = app_config.get("port")
+                        if st.button(f"🚀 Launch {name}", key=f"launch_{app_id}", type="primary", use_container_width=True):
+                            session_id = st.session_state.get('shared_session_id', '')
+                            url = f"http://localhost:{port}"
+                            if session_id:
+                                url += f"?session_id={session_id}"
+                            st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
+                            st.success(f"Opening {name}...")
+                    elif has_access and not is_running:
+                        st.warning("⏳ Starting up...")
+                    else:
+                        st.markdown("""
+                        <div class="premium-lock">
+                            🔒 Premium Features Locked<br>
+                            <small>Upgrade to unlock full access</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                        if st.button("⬆️ Upgrade to Premium", key=f"upgrade_{app_id}", type="primary", use_container_width=True):
+                            st.session_state["selected_page"] = "💳 Pricing"
+                            st.rerun()
 
     # FUTURE APPS SECTION
     st.markdown("---")

@@ -190,15 +190,16 @@
   },
   "ui_settings": {
     "home_page_expanders": {
-      "order": ["codexes_factory", "agentic_social_server", "ai_resume_builder", "trillionsofpeople", "personal_time_management"],
+      "order": ["ai_lab_for_book_lovers", "codexes_factory", "agentic_social_server", "ai_resume_builder", "trillionsofpeople", "personal_time_management"],
       "default_states": {
-        "codexes_factory": true,
+        "ai_lab_for_book_lovers": true,
+        "codexes_factory": false,
         "agentic_social_server": false,
         "ai_resume_builder": false,
         "trillionsofpeople": false,
         "personal_time_management": false
       },
-      "featured": "codexes_factory"
+      "featured": "ai_lab_for_book_lovers"
     }
   }
 }
