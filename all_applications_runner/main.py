@@ -54,7 +54,7 @@ st.markdown("""
     /* Hero Section */
     .hero-multiverse {
         background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-        padding: 60px 40px;
+        padding: 30px 40px;
         border-radius: 20px;
         color: white;
         text-align: center;
@@ -286,8 +286,8 @@ def get_app_status():
 
 def render_sidebar(auth_manager: AuthManager, user_role: str):
     """Render the navigation sidebar."""
-    st.sidebar.markdown("# 🌌 xtuff.ai")
-    st.sidebar.markdown("**Your Personal AI Multiverse**")
+    # Title at very top
+    st.sidebar.markdown("# 🌌 xtuff.ai / your personal ai multiverse")
 
     st.sidebar.markdown("---")
 
@@ -336,16 +336,14 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
     # Premium teaser
     if user_role not in ["subscriber", "admin", "superadmin"]:
         st.sidebar.markdown("---")
-        st.sidebar.markdown("""
-        ### 💎 Premium Benefits
+        with st.sidebar.expander("💎 Premium Benefits", expanded=False):
+            st.markdown("""
+            ✅ All apps - full access
+            ✅ Future apps included
+            ✅ Priority support
 
-        ✅ All 4 apps - full access
-        ✅ Unlimited usage
-        ✅ Future apps included
-        ✅ Priority support
-
-        **$49/mo** - Lock rate forever
-        """)
+            **$49/mo** - Lock rate forever
+            """)
 
     # Logout
     if user:
@@ -415,12 +413,21 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
     # WORKING APPS SHOWCASE
     st.markdown("---")
     st.markdown("## Start Your Journey: Revolutionary Apps")
-    st.markdown("*Algorithmic expansion coming soon to Premium members*")
+    st.markdown("*Algorithmic self-evolution coming soon...*")
     st.markdown("")
 
-    # Define the 4 working apps in priority order
-    featured_apps = [
-        ("agentic_social_server", "🧠", "Agentic Social Server", "Neurochemical Content Control",
+    # Define all apps data
+    apps_data = {
+        "codexes_factory": ("📚", "Codexes Factory from Nimble Books", "Book Publishing Platform",
+         "Professional book publishing and catalog management.",
+         "Create, manage, and publish books with AI assistance and comprehensive catalog tools.",
+         ["**Book creation:** AI-assisted writing and formatting",
+          "**Catalog management:** Track ISBNs, editions, and inventory",
+          "**Publishing tools:** LaTeX templates and automated workflows"],
+         ["Browse catalog, view samples"],
+         ["Full book creation", "Catalog management", "Publishing workflows", "AI assistance"]),
+
+        "agentic_social_server": ("🧠", "Agentic Social Server", "Neurochemical Content Control",
          "Don't just consume content. Engineer your consciousness.",
          "The world's first social platform where YOU control the neurochemical mix.",
          ["**Neurochemical optimization:** Control dopamine, norepinephrine, acetylcholine, serotonin",
@@ -429,7 +436,7 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
          ["3 AI personas, view-only feed"],
          ["All 147 personas", "Custom persona training", "Full neurochemical control", "Bulk scheduling"]),
 
-        ("ai_resume_builder", "👤", "AI Resume Builder", "Quantum Professional Identity",
+        "ai_resume_builder": ("👤", "AI Resume Builder", "Quantum Professional Identity",
          "Your career isn't linear. Why should your resume be?",
          "Project infinite versions of yourself. Share professional narratives as teams.",
          ["**Narrative quantum field:** Multiple professional identities simultaneously",
@@ -438,7 +445,7 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
          ["1 basic resume"],
          ["Unlimited resumes", "AI generation", "Team collaboration", "ATS optimization"]),
 
-        ("trillionsofpeople", "🌍", "TrillionsOfPeople", "All 118 Billion Humans",
+        "trillionsofpeople": ("🌍", "TrillionsOfPeople", "All 118 Billion Humans",
          "Human history isn't the past. It's 118 billion consultants.",
          "AI personas of every human who ever lived. For scenario analysis, worldbuilding, research.",
          ["**118 billion personas:** Everyone from 70,000 BCE to present",
@@ -447,7 +454,7 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
          ["Browse 100 sample personas"],
          ["All 118,000,000,000 personas", "Advanced search & filtering", "CSV/JSON export", "Full API access"]),
 
-        ("personal_time_management", "⚡", "Daily Engine", "Life Automation Intelligence",
+        "personal_time_management": ("⚡", "Daily Engine", "Life Automation Intelligence",
          "Your AI life operating system.",
          "Automate tasks, track habits, advance SaaS projects, optimize your time.",
          ["**AI priority scoring:** Knows what matters most",
@@ -455,7 +462,20 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
           "**SaaS advancement:** Track startup/project milestones"],
          ["Basic task management", "Habit tracking"],
          ["AI optimization", "Integrations (Google Cal, Notion, Slack)", "SaaS project tracking"])
-    ]
+    }
+
+    # Get UI settings from config
+    ui_settings = config.get("ui_settings", {})
+    expander_settings = ui_settings.get("home_page_expanders", {})
+    app_order = expander_settings.get("order", list(apps_data.keys()))
+    default_states = expander_settings.get("default_states", {})
+    featured_app = expander_settings.get("featured", None)
+
+    # Build featured_apps list based on configured order
+    featured_apps = []
+    for app_id in app_order:
+        if app_id in apps_data:
+            featured_apps.append((app_id,) + apps_data[app_id])
 
     organizations = config.get("organizations", {})
     app_statuses = status.get("organizations", {})
@@ -475,8 +495,17 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
         if not app_config or not app_config.get("public_visible", False):
             continue
 
+        # Determine if this is featured and get default expanded state
+        is_featured = (app_id == featured_app)
+        default_expanded = default_states.get(app_id, False)
+
+        # Add featured badge to title if featured
+        expander_title = f"{icon} **{name}** - {subtitle}"
+        if is_featured:
+            expander_title = f"⭐ {expander_title}"
+
         # Render app card
-        with st.expander(f"{icon} **{name}** - {subtitle}", expanded=True):
+        with st.expander(expander_title, expanded=default_expanded):
             col1, col2 = st.columns([2, 1])
 
             with col1:

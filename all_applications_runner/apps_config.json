@@ -187,5 +187,18 @@
     "ssl_enabled": false,
     "reverse_proxy": "apache",
     "deployment_method": "manual_git"
+  },
+  "ui_settings": {
+    "home_page_expanders": {
+      "order": ["codexes_factory", "agentic_social_server", "ai_resume_builder", "trillionsofpeople", "personal_time_management"],
+      "default_states": {
+        "codexes_factory": true,
+        "agentic_social_server": false,
+        "ai_resume_builder": false,
+        "trillionsofpeople": false,
+        "personal_time_management": false
+      },
+      "featured": "codexes_factory"
+    }
   }
 }

@@ -128,74 +128,73 @@ class AuthManager:
             container = st
 
         if not is_authenticated():
-            # Show tabbed interface for Login vs Create Account
-            container.subheader("🔐 Account")
+            # Show tabbed interface for Login vs Create Account inside collapsed expander
+            with container.expander("🔐 Login / Create Account", expanded=False):
+                tab1, tab2 = st.tabs(["Login", "Create Account"])
 
-            tab1, tab2 = container.tabs(["Login", "Create Account"])
+                # Login Tab
+                with tab1:
+                    with st.form("shared_auth_login_form"):
+                        username = st.text_input("Username", key="auth_username")
+                        password = st.text_input("Password", type="password", key="auth_password")
+                        submit = st.form_submit_button("Login", type="primary")
 
-            # Login Tab
-            with tab1:
-                with st.form("shared_auth_login_form"):
-                    username = st.text_input("Username", key="auth_username")
-                    password = st.text_input("Password", type="password", key="auth_password")
-                    submit = st.form_submit_button("Login", type="primary")
-
-                    if submit:
-                        if username and password:
-                            success, message = authenticate(username, password)
-                            if success:
-                                st.success(message)
-                                logger.info(f"User {username} logged in successfully")
-                                st.rerun()
-                            else:
-                                st.error(message)
-                                logger.warning(f"Failed login attempt for user {username}")
-                        else:
-                            st.error("Please enter both username and password")
-
-            # Create Account Tab
-            with tab2:
-                with st.form("shared_auth_register_form"):
-                    new_name = st.text_input("Full Name", key="auth_reg_name")
-                    new_email = st.text_input("Email", key="auth_reg_email")
-                    new_username = st.text_input("Username", key="auth_reg_username")
-                    new_password = st.text_input("Password", type="password", key="auth_reg_password")
-                    new_password_confirm = st.text_input("Confirm Password", type="password", key="auth_reg_password_confirm")
-                    submit_reg = st.form_submit_button("Create Account", type="primary")
-
-                    if submit_reg:
-                        if not all([new_name, new_email, new_username, new_password, new_password_confirm]):
-                            st.error("Please fill in all fields")
-                        elif new_password != new_password_confirm:
-                            st.error("Passwords do not match")
-                        elif len(new_password) < 8:
-                            st.error("Password must be at least 8 characters")
-                        else:
-                            # Try to register user through shared auth
-                            try:
-                                # Use the shared auth system to register
-                                auth_system = self.shared_auth
-
-                                # Call register_user if available
-                                if hasattr(auth_system, 'register_user'):
-                                    success = auth_system.register_user(
-                                        username=new_username,
-                                        password=new_password,
-                                        email=new_email,
-                                        name=new_name
-                                    )
-                                    if success:
-                                        st.success(f"✅ Account created! You can now login as '{new_username}'")
-                                        logger.info(f"New user registered: {new_username}")
-                                    else:
-                                        st.error("Username or email already exists")
+                        if submit:
+                            if username and password:
+                                success, message = authenticate(username, password)
+                                if success:
+                                    st.success(message)
+                                    logger.info(f"User {username} logged in successfully")
+                                    st.rerun()
                                 else:
-                                    # Fallback: add user directly to config if register_user not available
-                                    st.error("Registration temporarily unavailable. Please contact support.")
-                                    logger.error("register_user method not found in shared auth system")
-                            except Exception as e:
-                                st.error(f"Registration failed: {str(e)}")
-                                logger.error(f"Registration error: {e}")
+                                    st.error(message)
+                                    logger.warning(f"Failed login attempt for user {username}")
+                            else:
+                                st.error("Please enter both username and password")
+
+                # Create Account Tab
+                with tab2:
+                    with st.form("shared_auth_register_form"):
+                        new_name = st.text_input("Full Name", key="auth_reg_name")
+                        new_email = st.text_input("Email", key="auth_reg_email")
+                        new_username = st.text_input("Username", key="auth_reg_username")
+                        new_password = st.text_input("Password", type="password", key="auth_reg_password")
+                        new_password_confirm = st.text_input("Confirm Password", type="password", key="auth_reg_password_confirm")
+                        submit_reg = st.form_submit_button("Create Account", type="primary")
+
+                        if submit_reg:
+                            if not all([new_name, new_email, new_username, new_password, new_password_confirm]):
+                                st.error("Please fill in all fields")
+                            elif new_password != new_password_confirm:
+                                st.error("Passwords do not match")
+                            elif len(new_password) < 8:
+                                st.error("Password must be at least 8 characters")
+                            else:
+                                # Try to register user through shared auth
+                                try:
+                                    # Use the shared auth system to register
+                                    auth_system = self.shared_auth
+
+                                    # Call register_user if available
+                                    if hasattr(auth_system, 'register_user'):
+                                        success = auth_system.register_user(
+                                            username=new_username,
+                                            password=new_password,
+                                            email=new_email,
+                                            name=new_name
+                                        )
+                                        if success:
+                                            st.success(f"✅ Account created! You can now login as '{new_username}'")
+                                            logger.info(f"New user registered: {new_username}")
+                                        else:
+                                            st.error("Username or email already exists")
+                                    else:
+                                        # Fallback: add user directly to config if register_user not available
+                                        st.error("Registration temporarily unavailable. Please contact support.")
+                                        logger.error("register_user method not found in shared auth system")
+                                except Exception as e:
+                                    st.error(f"Registration failed: {str(e)}")
+                                    logger.error(f"Registration error: {e}")
 
         else:
             # User is authenticated - show user info
