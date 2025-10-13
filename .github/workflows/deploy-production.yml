@@ -3,7 +3,7 @@ name: Deploy to Production
 on:
   push:
     branches:
-      - lean-production
+      - clean-production
   workflow_dispatch:
 
 env:
@@ -29,4 +29,4 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H $REMOTE_HOST >> ~/.ssh/known_hosts
           
-          ssh -i ~/.ssh/id_ed25519 $REMOTE_USER@$REMOTE_HOST "cd $REMOTE_PATH && git pull origin lean-production && sudo systemctl restart codexes-factory.service"
+          ssh -i ~/.ssh/id_ed25519 $REMOTE_USER@$REMOTE_HOST "cd $REMOTE_PATH && git pull origin clean-production && sudo systemctl restart codexes-factory.service"

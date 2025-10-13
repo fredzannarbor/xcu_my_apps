@@ -28,8 +28,8 @@ remote_ssh() {
 # Repository configuration
 # Format: "local_path|github_repo|remote_path|branch"
 REPOS=(
-    # Main xCU apps container - lean production branch (no archives, no secrets)
-    "/Users/fred/xcu_my_apps|git@github.com:fredzannarbor/xcu_my_apps.git|xcu_my_apps|lean-production"
+    # Main xCU apps container - clean production branch (no archives, no secrets)
+    "/Users/fred/xcu_my_apps|git@github.com:fredzannarbor/xcu_my_apps.git|xcu_my_apps|clean-production"
 
     # Resume site - separate standalone app
     # Note: Add resume-site repo if/when it exists
@@ -229,7 +229,7 @@ case "$MODE" in
         echo "Usage: $0 [setup|update|status|copy-env|restart|deploy|test|ssh]"
         echo ""
         echo "Commands:"
-        echo "  setup          - Initial clone of all repositories (lean-production branch)"
+        echo "  setup          - Initial clone of all repositories (clean-production branch)"
         echo "  update         - Pull latest changes for all repos"
         echo "  status         - Check git status of all repos"
         echo "  copy-env       - Copy .env files to remote"
