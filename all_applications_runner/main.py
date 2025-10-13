@@ -9,10 +9,8 @@ No fake social proof - honest conversion optimization
 
 import json
 import streamlit as st
-import requests
 from datetime import datetime
 from pathlib import Path
-import subprocess
 import sys
 import logging
 
@@ -25,8 +23,7 @@ from subscription_manager import get_subscription_manager, SubscriptionManager
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
@@ -35,11 +32,12 @@ st.set_page_config(
     page_title="xtuff.ai - Your Personal AI Multiverse",
     page_icon="🌌",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
 )
 
 # Custom CSS - Medium-bold visual design
-st.markdown("""
+st.markdown(
+    """
 <style>
     /* Color Palette */
     :root {
@@ -249,7 +247,10 @@ st.markdown("""
         margin: 24px 0;
     }
 </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
+
 
 def get_managers():
     """Initialize manager instances."""
@@ -261,11 +262,12 @@ def get_managers():
         logger.error(f"Error initializing managers: {e}")
         return None, None
 
+
 def load_config():
     """Load the applications configuration."""
     config_path = Path(__file__).parent / "apps_config.json"
     try:
-        with open(config_path, 'r') as f:
+        with open(config_path, "r") as f:
             return json.load(f)
     except FileNotFoundError:
         st.error(f"Configuration file not found: {config_path}")
@@ -273,6 +275,7 @@ def load_config():
     except json.JSONDecodeError as e:
         st.error(f"Invalid JSON in configuration: {e}")
         return None
+
 
 def get_app_status():
     """Get current status of all applications."""
@@ -283,6 +286,7 @@ def get_app_status():
     except Exception as e:
         st.error(f"Error getting app status: {e}")
         return None
+
 
 def render_sidebar(auth_manager: AuthManager, user_role: str):
     """Render the navigation sidebar."""
@@ -325,13 +329,10 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
     if user_role in ["admin", "superadmin"]:
         page = st.sidebar.selectbox(
             "Navigate:",
-            ["🏠 Home", "💳 Pricing", "🔧 Management", "📊 Monitoring", "⚙️ Settings"]
+            ["🏠 Home", "💳 Pricing", "🔧 Management", "📊 Monitoring", "⚙️ Settings"],
         )
     else:
-        page = st.sidebar.selectbox(
-            "Navigate:",
-            ["🏠 Home", "💳 Pricing"]
-        )
+        page = st.sidebar.selectbox("Navigate:", ["🏠 Home", "💳 Pricing"])
 
     # Premium teaser
     if user_role not in ["subscriber", "admin", "superadmin"]:
@@ -355,11 +356,15 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
 
     return page
 
-def render_home_page(auth_manager: AuthManager, subscription_manager: SubscriptionManager, user_role: str):
+
+def render_home_page(
+    auth_manager: AuthManager, subscription_manager: SubscriptionManager, user_role: str
+):
     """Render the revenue-optimized home page."""
 
     # HERO SECTION
-    st.markdown("""
+    st.markdown(
+        """
     <div class="hero-multiverse">
         <h1 class="hero-title">Your Personal AI Multiverse</h1>
         <h2 class="hero-subtitle">The Last Platform You'll Ever Need.<br>Because It Builds The Others.</h2>
@@ -368,14 +373,20 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
             Control your neurochemistry • Access 118 billion humans • Project infinite identities • Automate your life
         </p>
     </div>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
 
     col1, col2, col3 = st.columns([1, 1, 1])
     with col1:
-        if st.button("🚀 Explore Free", type="primary", use_container_width=True, key="hero_free"):
+        if st.button(
+            "🚀 Explore Free", type="primary", use_container_width=True, key="hero_free"
+        ):
             st.info("👆 Create account in sidebar to start exploring")
     with col2:
-        if st.button("💎 Unlock Everything", use_container_width=True, key="hero_premium"):
+        if st.button(
+            "💎 Unlock Everything", use_container_width=True, key="hero_premium"
+        ):
             st.session_state["selected_page"] = "💳 Pricing"
             st.rerun()
     with col3:
@@ -383,11 +394,14 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
 
     # Early Access Urgency (only if not already premium)
     if user_role not in ["subscriber", "admin", "superadmin"]:
-        st.markdown("""
+        st.markdown(
+            """
         <div class="urgency-banner">
-            🔥 EARLY ACCESS PRICING: Lock in $49/mo forever • Regular price $79/mo
+            🔥 FOUNDING MEMBER PRICING: Lock in a steep discount of $49/mo <i>forever</i>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     # Get user access
     config = load_config()
@@ -399,7 +413,11 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
         st.warning("Checking app status...")
         return
 
-    user_email = auth_manager.get_current_user().get("email") if auth_manager and auth_manager.get_current_user() else None
+    user_email = (
+        auth_manager.get_current_user().get("email")
+        if auth_manager and auth_manager.get_current_user()
+        else None
+    )
     user_app_access = []
 
     if user_email and subscription_manager:
@@ -408,71 +426,128 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
         except Exception as e:
             logger.error(f"Error getting user subscriptions: {e}")
 
-    has_premium = '*' in user_app_access or user_role in ["admin", "superadmin"]
+    has_premium = "*" in user_app_access or user_role in ["admin", "superadmin"]
 
     # WORKING APPS SHOWCASE
     st.markdown("---")
     st.markdown("## Join the Journey to Self-Evolving Apps")
-    st.markdown("*Algorithmic self-evolution coming soon...*")
-    st.markdown("")
 
     # Define all apps data
     apps_data = {
-        "ai_lab_for_book_lovers": ("👨‍🔬", "AI Lab for Book-Lovers from Nimble Books", "Humans Using Models to Make Books Better",
-         "Minimally, make sure AGI doesn't kill the world of books. Maximally, use AGI to shape a world where books are more important, vital, and ubiquitous than ever before.",
-         "Explore cutting-edge AI-human collaboration in book publishing. Browse our experiments, tools, and growing catalog of AI-assisted works.",
-         ["**Mission Statement:** Ensure books thrive in the AGI era",
-          "**Longform Prospectus:** Our vision for AI-powered publishing",
-          "**Annotated Bibliography:** Research and resources on AI + books",
-          "**Storefront:** Browse AI-assisted books from Nimble Books",
-          "**Xynapse Traces:** Our flagship experimental imprint"],
-         ["Browse catalog", "View mission statement", "Access prospectus"],
-         ["Use AI Lab tools", "Create with experimental imprints", "Priority publishing assistance"]),
-
-        "codexes_factory": ("📚", "Codexes Factory from Nimble Books", "Book Publishing Platform",
-         "Professional book publishing and catalog management.",
-         "Create, manage, and publish books with AI assistance and comprehensive catalog tools.",
-         ["**Book creation:** AI-assisted writing and formatting",
-          "**Catalog management:** Track ISBNs, editions, and inventory",
-          "**Publishing tools:** LaTeX templates and automated workflows"],
-         ["Browse catalog, view samples"],
-         ["Full book creation", "Catalog management", "Publishing workflows", "AI assistance"]),
-
-        "agentic_social_server": ("🧠", "Agentic Social Server", "Neurochemical Content Control",
-         "Don't just consume content. Engineer your consciousness.",
-         "The world's first social platform where YOU control the neurochemical mix.",
-         ["**Neurochemical optimization:** Control dopamine, norepinephrine, acetylcholine, serotonin",
-          "**147 AI personas:** Pre-trained agents create content optimized for your brain",
-          "**Gamma-burst insights:** Engineered 'aha!' moments through neuroscience"],
-         ["3 AI personas, view-only feed"],
-         ["All 147 personas", "Custom persona training", "Full neurochemical control", "Bulk scheduling"]),
-
-        "ai_resume_builder": ("👤", "AI Resume Builder", "Quantum Professional Identity",
-         "Your career isn't linear. Why should your resume be?",
-         "Project infinite versions of yourself. Share professional narratives as teams.",
-         ["**Narrative quantum field:** Multiple professional identities simultaneously",
-          "**Team resume sharing:** Collaborate on group professional narratives",
-          "**AI-powered generation:** Trained on 10,000+ successful resumes"],
-         ["1 basic resume"],
-         ["Unlimited resumes", "AI generation", "Team collaboration", "ATS optimization"]),
-
-        "trillionsofpeople": ("🌍", "TrillionsOfPeople", "All 118 Billion Humans",
-         "Human history isn't the past. It's 118 billion consultants.",
-         "AI personas of every human who ever lived. For scenario analysis, worldbuilding, research.",
-         ["**118 billion personas:** Everyone from 70,000 BCE to present",
-          "**Scenario analysis:** Run historical what-ifs with real personas",
-          "**API access:** Integrate human history into your workflows"],
-         ["Browse 100 sample personas"],
-         ["All 118,000,000,000 personas", "Advanced search & filtering", "CSV/JSON export", "Full API access"]),
-
-        "personal_time_management": ("⚡", "Daily Engine", "Life Automation Intelligence",
-         "Your AI life operating system.",
-         "Automate tasks, track habits, advance SaaS projects, optimize your time.",
-         ["**AI priority scoring:** Knows what matters most",
-          "**Predictive scheduling:** Optimizes your day automatically",
-          "**SaaS advancement:** Track startup/project milestones"],
-         ["Basic task management", "Habit tracking"],
-         ["AI optimization", "Integrations (Google Cal, Notion, Slack)", "SaaS project tracking"])
+        "ai_lab_for_book_lovers": (
+            "👨‍🔬",
+            "AI Lab for Book-Lovers from Nimble Books",
+            "Humans Using Models to Make Books Better",
+            "Minimally, make sure AGI doesn't kill the world of books. Maximally, use AGI to shape a world where books are more important, vital, and ubiquitous than ever before.",
+            "Explore cutting-edge AI-human collaboration in book publishing. Browse our experiments, tools, and growing catalog of AI-assisted works.",
+            [
+                "**Mission Statement:** Ensure books thrive in the AGI era",
+                "**Longform Prospectus:** Our vision for AI-powered publishing",
+                "**Annotated Bibliography:** Research and resources on AI + books",
+                "**Storefront:** Browse AI-assisted books from Nimble Books",
+                "**Xynapse Traces:** Our flagship experimental imprint",
+            ],
+            ["Browse catalog", "View mission statement", "Access prospectus"],
+            [
+                "Use AI Lab tools",
+                "Create with experimental imprints",
+                "Priority publishing assistance",
+            ],
+        ),
+        "codexes_factory": (
+            "📚",
+            "Codexes Factory from Nimble Books",
+            "Book Publishing Platform",
+            "Professional book publishing and catalog management.",
+            "Create, manage, and publish books with AI assistance and comprehensive catalog tools.",
+            [
+                "**Book creation:** AI-assisted writing and formatting",
+                "**Catalog management:** Track ISBNs, editions, and inventory",
+                "**Publishing tools:** LaTeX templates and automated workflows",
+            ],
+            ["Browse catalog, view samples"],
+            [
+                "Full book creation",
+                "Catalog management",
+                "Publishing workflows",
+                "AI assistance",
+            ],
+        ),
+        "agentic_social_server": (
+            "🧠",
+            "Agentic Social Server",
+            "Neurochemical Content Control",
+            "Don't just consume content. Engineer your consciousness.",
+            "The world's first social platform where YOU control the neurochemical mix.",
+            [
+                "**Neurochemical optimization:** Control dopamine, norepinephrine, acetylcholine, serotonin",
+                "**147 AI personas:** Pre-trained agents create content optimized for your brain",
+                "**Gamma-burst insights:** Engineered 'aha!' moments through neuroscience",
+            ],
+            ["3 AI personas, view-only feed"],
+            [
+                "All 147 personas",
+                "Custom persona training",
+                "Full neurochemical control",
+                "Bulk scheduling",
+            ],
+        ),
+        "ai_resume_builder": (
+            "👤",
+            "AI Resume Builder",
+            "Quantum Professional Identity",
+            "Your career isn't linear. Why should your resume be?",
+            "Project infinite versions of yourself. Share professional narratives as teams.",
+            [
+                "**Narrative quantum field:** Multiple professional identities simultaneously",
+                "**Team resume sharing:** Collaborate on group professional narratives",
+                "**AI-powered generation:** Trained on 10,000+ successful resumes",
+            ],
+            ["1 basic resume"],
+            [
+                "Unlimited resumes",
+                "AI generation",
+                "Team collaboration",
+                "ATS optimization",
+            ],
+        ),
+        "trillionsofpeople": (
+            "🌍",
+            "TrillionsOfPeople",
+            "All 118 Billion Humans",
+            "Human history isn't the past. It's 118 billion consultants.",
+            "AI personas of every human who ever lived. For scenario analysis, worldbuilding, research.",
+            [
+                "**118 billion personas:** Everyone from 70,000 BCE to present",
+                "**Scenario analysis:** Run historical what-ifs with real personas",
+                "**API access:** Integrate human history into your workflows",
+            ],
+            ["Browse 100 sample personas"],
+            [
+                "All 118,000,000,000 personas",
+                "Advanced search & filtering",
+                "CSV/JSON export",
+                "Full API access",
+            ],
+        ),
+        "personal_time_management": (
+            "⚡",
+            "Daily Engine",
+            "Life Automation Intelligence",
+            "Your AI life operating system.",
+            "Automate tasks, track habits, advance SaaS projects, optimize your time.",
+            [
+                "**AI priority scoring:** Knows what matters most",
+                "**Predictive scheduling:** Optimizes your day automatically",
+                "**SaaS advancement:** Track startup/project milestones",
+            ],
+            ["Basic task management", "Habit tracking"],
+            [
+                "AI optimization",
+                "Integrations (Google Cal, Notion, Slack)",
+                "SaaS project tracking",
+            ],
+        ),
     }
 
     # Get UI settings from config
@@ -491,7 +566,17 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
     organizations = config.get("organizations", {})
     app_statuses = status.get("organizations", {})
 
-    for app_id, icon, name, subtitle, tagline, description, features, free_features, premium_features in featured_apps:
+    for (
+        app_id,
+        icon,
+        name,
+        subtitle,
+        tagline,
+        description,
+        features,
+        free_features,
+        premium_features,
+    ) in featured_apps:
         # Find the app in config
         app_config = None
         app_status_data = None
@@ -500,7 +585,9 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
         for org_id, org_data in organizations.items():
             if app_id in org_data.get("apps", {}):
                 app_config = org_data["apps"][app_id]
-                app_status_data = app_statuses.get(org_id, {}).get("apps", {}).get(app_id, {})
+                app_status_data = (
+                    app_statuses.get(org_id, {}).get("apps", {}).get(app_id, {})
+                )
                 org_key = org_id
                 break
 
@@ -514,7 +601,7 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
             continue
 
         # Determine if this is featured and get default expanded state
-        is_featured = (app_id == featured_app)
+        is_featured = app_id == featured_app
         default_expanded = default_states.get(app_id, False)
 
         # Add featured badge to title if featured
@@ -558,24 +645,53 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
                     codexes_port = 8502  # default
                     for org_id, org_data in organizations.items():
                         if "codexes_factory" in org_data.get("apps", {}):
-                            codexes_port = org_data["apps"]["codexes_factory"].get("port", 8502)
+                            codexes_port = org_data["apps"]["codexes_factory"].get(
+                                "port", 8502
+                            )
                             break
 
-                    session_id = st.session_state.get('shared_session_id', '')
+                    session_id = st.session_state.get("shared_session_id", "")
                     base_url = f"http://localhost:{codexes_port}"
                     if session_id:
                         base_url += f"?session_id={session_id}"
 
-                    if st.button("👨‍🔬 AI Lab Home", key=f"ailab_home", use_container_width=True):
-                        st.markdown(f'<meta http-equiv="refresh" content="0; url={base_url}" />', unsafe_allow_html=True)
+                    if st.button(
+                        "👨‍🔬 AI Lab Home", key="ailab_home", use_container_width=True
+                    ):
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={base_url}" />',
+                            unsafe_allow_html=True,
+                        )
 
-                    if st.button("🛒 Browse Storefront", key=f"ailab_store", use_container_width=True):
-                        url = f"{base_url}&page=Bookstore" if '?' in base_url else f"{base_url}?page=Bookstore"
-                        st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
+                    if st.button(
+                        "🛒 Browse Storefront",
+                        key="ailab_store",
+                        use_container_width=True,
+                    ):
+                        url = (
+                            f"{base_url}&page=Bookstore"
+                            if "?" in base_url
+                            else f"{base_url}?page=Bookstore"
+                        )
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={url}" />',
+                            unsafe_allow_html=True,
+                        )
 
-                    if st.button("✨ Xynapse Traces", key=f"ailab_xynapse", use_container_width=True):
-                        url = f"{base_url}&page=Imprint_Display" if '?' in base_url else f"{base_url}?page=Imprint_Display"
-                        st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
+                    if st.button(
+                        "✨ Xynapse Traces",
+                        key="ailab_xynapse",
+                        use_container_width=True,
+                    ):
+                        url = (
+                            f"{base_url}&page=Imprint_Display"
+                            if "?" in base_url
+                            else f"{base_url}?page=Imprint_Display"
+                        )
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={url}" />',
+                            unsafe_allow_html=True,
+                        )
 
                     st.markdown("---")
                     st.caption("💡 Premium: Access AI Lab tools")
@@ -583,8 +699,16 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
                 else:
                     # Regular app handling
                     # Status
-                    is_running = app_status_data.get("running", False) if app_status_data else False
-                    health = app_status_data.get("health_status", "unknown") if app_status_data else "unknown"
+                    is_running = (
+                        app_status_data.get("running", False)
+                        if app_status_data
+                        else False
+                    )
+                    health = (
+                        app_status_data.get("health_status", "unknown")
+                        if app_status_data
+                        else "unknown"
+                    )
 
                     if is_running and health == "healthy":
                         st.success("✅ Online")
@@ -596,28 +720,46 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
                     st.markdown("---")
 
                     # Access control
-                    has_access = has_premium or app_config.get("subscription_tier") == "free"
+                    has_access = (
+                        has_premium or app_config.get("subscription_tier") == "free"
+                    )
 
                     if has_access and is_running:
                         port = app_config.get("port")
-                        if st.button(f"🚀 Launch {name}", key=f"launch_{app_id}", type="primary", use_container_width=True):
-                            session_id = st.session_state.get('shared_session_id', '')
+                        if st.button(
+                            f"🚀 Launch {name}",
+                            key=f"launch_{app_id}",
+                            type="primary",
+                            use_container_width=True,
+                        ):
+                            session_id = st.session_state.get("shared_session_id", "")
                             url = f"http://localhost:{port}"
                             if session_id:
                                 url += f"?session_id={session_id}"
-                            st.markdown(f'<meta http-equiv="refresh" content="0; url={url}" />', unsafe_allow_html=True)
+                            st.markdown(
+                                f'<meta http-equiv="refresh" content="0; url={url}" />',
+                                unsafe_allow_html=True,
+                            )
                             st.success(f"Opening {name}...")
                     elif has_access and not is_running:
                         st.warning("⏳ Starting up...")
                     else:
-                        st.markdown("""
+                        st.markdown(
+                            """
                         <div class="premium-lock">
                             🔒 Premium Features Locked<br>
                             <small>Upgrade to unlock full access</small>
                         </div>
-                        """, unsafe_allow_html=True)
+                        """,
+                            unsafe_allow_html=True,
+                        )
 
-                        if st.button("⬆️ Upgrade to Premium", key=f"upgrade_{app_id}", type="primary", use_container_width=True):
+                        if st.button(
+                            "⬆️ Upgrade to Premium",
+                            key=f"upgrade_{app_id}",
+                            type="primary",
+                            use_container_width=True,
+                        ):
                             st.session_state["selected_page"] = "💳 Pricing"
                             st.rerun()
 
@@ -627,34 +769,60 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
 
     # Future apps with stepped gradient colors
     future_apps = [
-        ("🎨 Collectiverse", "Universe Creation Engine", "Build infinite universes from your collections. AGI-proof your collecting.", "Q2 2026", "linear-gradient(135deg, #8B5CF6, #A78BFA)"),
-        ("📝 ArXiv Paper Writer", "Scientific Reality Generator", "Transform ideas into peer-reviewed publications with AI research assistance.", "Q3 2026", "linear-gradient(135deg, #A78BFA, #C4B5FD)"),
-        ("🤖 Algorithmic App Generator", "The Meta-Platform", "Apps that create apps. New tools generated based on your usage patterns.", "Q4 2026", "linear-gradient(135deg, #C4B5FD, #DDD6FE)")
+        (
+            "🎨 Collectiverse",
+            "Universe Creation Engine",
+            "Build infinite universes from your collections. AGI-proof your collecting.",
+            "Q2 2026",
+            "linear-gradient(135deg, #8B5CF6, #A78BFA)",
+        ),
+        (
+            "📝 ArXiv Paper Writer",
+            "Scientific Reality Generator",
+            "Transform ideas into peer-reviewed publications with AI research assistance.",
+            "Q3 2026",
+            "linear-gradient(135deg, #A78BFA, #C4B5FD)",
+        ),
+        (
+            "🤖 Algorithmic App Generator",
+            "The Meta-Platform",
+            "Apps that create apps. New tools generated based on your usage patterns.",
+            "Q4 2026",
+            "linear-gradient(135deg, #C4B5FD, #DDD6FE)",
+        ),
     ]
 
     for icon_name, subtitle, description, timeline, gradient in future_apps:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="coming-soon" style="background: {gradient};">
             <h3>{icon_name} - {subtitle}</h3>
             <p>{description}</p>
             <p><strong>Status:</strong> Premium early access {timeline}</p>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-    st.info("💡 **Premium members get early access to all new apps. Free users wait 6 months.**")
+    st.info(
+        "💡 **Premium members get early access to all new apps. Free users wait 6 months.**"
+    )
 
     # SOCIAL PROOF PLACEHOLDER (honest - no fake data)
     st.markdown("---")
     st.markdown("## What Users Say")
 
-    st.markdown("""
+    st.markdown(
+        """
     <div class="social-proof-placeholder">
         <h3>📢 Coming Soon: User Testimonials</h3>
         <p>We're collecting feedback from our early users.<br>
         Real testimonials will appear here as we grow.</p>
         <p><em>Be one of the first to share your experience!</em></p>
     </div>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
 
     # FINAL CTA
     st.markdown("---")
@@ -662,22 +830,36 @@ def render_home_page(auth_manager: AuthManager, subscription_manager: Subscripti
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if st.button("🚀 Start Exploring Free", type="primary", use_container_width=True, key="final_cta"):
+        if st.button(
+            "🚀 Start Exploring Free",
+            type="primary",
+            use_container_width=True,
+            key="final_cta",
+        ):
             st.info("👆 Create account in sidebar to begin")
-        st.markdown("<p style='text-align: center; margin-top: 16px;'>💎 Upgrade anytime • 30-day money-back guarantee</p>", unsafe_allow_html=True)
+        st.markdown(
+            "<p style='text-align: center; margin-top: 16px;'>💎 Upgrade anytime • 30-day money-back guarantee</p>",
+            unsafe_allow_html=True,
+        )
 
-def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager: AuthManager):
+
+def render_pricing_page(
+    subscription_manager: SubscriptionManager, auth_manager: AuthManager
+):
     """Render the conversion-optimized pricing page."""
 
     st.markdown("# Choose Your Reality")
     st.markdown("## 🔥 Early Access Pricing - Lock In Your Rate Forever")
 
     # Guarantee
-    st.markdown("""
+    st.markdown(
+        """
     <div class="guarantee">
         🛡️ <strong>30-Day Money-Back Guarantee</strong> • Cancel Anytime • No Long-Term Contracts
     </div>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
 
     # Get user info
     user = auth_manager.get_current_user() if auth_manager else None
@@ -695,7 +877,7 @@ def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager:
                         with col1:
                             st.write(f"**{sub['type'].replace('_', ' ').title()}**")
                         with col2:
-                            end_date = datetime.fromisoformat(sub['current_period_end'])
+                            end_date = datetime.fromisoformat(sub["current_period_end"])
                             st.caption(f"Renews: {end_date.strftime('%Y-%m-%d')}")
                         with col3:
                             st.write(f"*{sub['status']}*")
@@ -726,14 +908,21 @@ def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager:
         st.markdown("")
         if st.button("Stay Free", key="free_tier", use_container_width=True):
             st.info("You're on the free plan. Explore and upgrade when ready!")
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     # PREMIUM TIER (HIGHLIGHTED)
     with col2:
-        st.markdown('<div class="pricing-card pricing-card-premium">', unsafe_allow_html=True)
-        st.markdown('<div class="pricing-badge">⭐ BEST VALUE</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="pricing-card pricing-card-premium">', unsafe_allow_html=True
+        )
+        st.markdown(
+            '<div class="pricing-badge">⭐ BEST VALUE</div>', unsafe_allow_html=True
+        )
         st.markdown("### Premium Architect")
-        st.markdown('<div class="price-amount">$49<small>/mo</small></div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="price-amount">$49<small>/mo</small></div>',
+            unsafe_allow_html=True,
+        )
         st.markdown("~~$79/mo~~ **Early access pricing**")
         st.markdown("---")
         st.markdown("✅ **All apps - full access**")
@@ -749,33 +938,52 @@ def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager:
         if user_email and subscription_manager:
             tiers = subscription_manager.list_all_tiers()
             all_access = tiers.get("all_access", {})
-            price_id = all_access.get('stripe_price_id')
+            price_id = all_access.get("stripe_price_id")
 
             if price_id:
-                if st.button("🚀 UNLOCK EVERYTHING", key="premium_tier", type="primary", use_container_width=True):
+                if st.button(
+                    "🚀 UNLOCK EVERYTHING",
+                    key="premium_tier",
+                    type="primary",
+                    use_container_width=True,
+                ):
                     try:
                         checkout_url = subscription_manager.create_checkout_session(
-                            user_email=user_email,
-                            price_id=price_id,
-                            app_id=None
+                            user_email=user_email, price_id=price_id, app_id=None
                         )
-                        st.markdown(f'<meta http-equiv="refresh" content="0; url={checkout_url}" />', unsafe_allow_html=True)
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={checkout_url}" />',
+                            unsafe_allow_html=True,
+                        )
                         st.success("Redirecting to checkout...")
                     except Exception as e:
                         st.error(f"Error: {e}")
             else:
-                st.button("Coming Soon", key="premium_soon", disabled=True, use_container_width=True)
+                st.button(
+                    "Coming Soon",
+                    key="premium_soon",
+                    disabled=True,
+                    use_container_width=True,
+                )
         else:
-            if st.button("Login to Subscribe", key="premium_login", type="primary", use_container_width=True):
+            if st.button(
+                "Login to Subscribe",
+                key="premium_login",
+                type="primary",
+                use_container_width=True,
+            ):
                 st.info("👆 Please login in sidebar to subscribe")
 
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     # ENTERPRISE TIER
     with col3:
         st.markdown('<div class="pricing-card">', unsafe_allow_html=True)
         st.markdown("### Enterprise")
-        st.markdown('<div class="price-amount" style="font-size: 2.5rem;">Custom</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="price-amount" style="font-size: 2.5rem;">Custom</div>',
+            unsafe_allow_html=True,
+        )
         st.markdown("**Contact for pricing**")
         st.markdown("---")
         st.markdown("✅ Everything in Premium")
@@ -788,7 +996,7 @@ def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager:
         st.markdown("")
         if st.button("Contact Sales", key="enterprise", use_container_width=True):
             st.info("📧 Email: fred@xtuff.ai for enterprise inquiries")
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     # VALUE PROPOSITION
     st.markdown("---")
@@ -886,20 +1094,24 @@ def render_pricing_page(subscription_manager: SubscriptionManager, auth_manager:
         This is our way of rewarding early believers.
         """)
 
+
 def render_management_page():
     """Admin management page."""
     st.title("🔧 Application Management")
     st.info("Management interface - see original main.py for full implementation")
+
 
 def render_monitoring_page():
     """Admin monitoring page."""
     st.title("📊 Application Monitoring")
     st.info("Monitoring interface - see original main.py for full implementation")
 
+
 def render_settings_page():
     """Admin settings page."""
     st.title("⚙️ Settings")
     st.info("Settings interface - see original main.py for full implementation")
+
 
 def main():
     """Main application entry point."""
@@ -956,6 +1168,7 @@ def main():
             render_settings_page()
         else:
             st.error("Access denied. Administrator privileges required.")
+
 
 if __name__ == "__main__":
     main()
