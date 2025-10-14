@@ -713,45 +713,73 @@ def render_imprint_about(imprint_data: dict):
         st.markdown("---")
         st.markdown("### Meet Our Editorial Intelligence")
 
+        # Get brand colors for styling
+        brand_colors = config.get("branding", {}).get("brand_colors", {})
+        primary_color = brand_colors.get("primary", "#2C3E50")
+
+        # Create light tint of primary color for background (10% opacity)
+        def hex_to_rgba(hex_color, alpha=0.1):
+            hex_color = hex_color.lstrip('#')
+            r, g, b = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+            return f"rgba({r}, {g}, {b}, {alpha})"
+
+        bg_color = hex_to_rgba(primary_color, 0.1)
+
+        # Use custom styling for the persona box
+        st.markdown(f"""
+        <style>
+        .persona-box {{
+            background-color: {bg_color};
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }}
+        </style>
+        """, unsafe_allow_html=True)
+
+        # Wrap the container in a div with our custom class
+        st.markdown('<div class="persona-box">', unsafe_allow_html=True)
+
         # Create engaging narrative with persona details
-        with st.container(border=True):
-            st.markdown(f"#### {persona['name']}")
+        st.markdown(f"#### {persona['name']}")
 
-            if persona.get('bio'):
-                st.markdown(persona['bio'])
-                st.markdown("")  # spacing
+        if persona.get('bio'):
+            st.markdown(persona['bio'])
+            st.markdown("")  # spacing
 
-            # Editorial approach section
-            if persona.get('editorial_philosophy'):
-                st.markdown("**Editorial Approach**")
-                st.markdown(f"*\"{persona['editorial_philosophy']}\"*")
-                st.markdown("")
+        # Editorial approach section
+        if persona.get('editorial_philosophy'):
+            st.markdown("**Editorial Approach**")
+            st.markdown(f"*\"{persona['editorial_philosophy']}\"*")
+            st.markdown("")
 
-            # Create readable overview of preferences and style
-            col1, col2 = st.columns(2)
+        # Create readable overview of preferences and style
+        col1, col2 = st.columns(2)
 
-            with col1:
-                if persona.get('preferred_topics'):
-                    st.markdown("**Areas of Focus**")
-                    st.markdown(f"{persona['preferred_topics']}")
+        with col1:
+            if persona.get('preferred_topics'):
+                st.markdown("**Areas of Focus**")
+                st.markdown(f"{persona['preferred_topics']}")
 
-                if persona.get('decision_style'):
-                    st.markdown("**Editorial Style**")
-                    st.markdown(f"{persona['decision_style']}")
+            if persona.get('decision_style'):
+                st.markdown("**Editorial Style**")
+                st.markdown(f"{persona['decision_style']}")
 
-            with col2:
-                if persona.get('target_demographics'):
-                    st.markdown("**Our Readers**")
-                    st.markdown(f"{persona['target_demographics']}")
+        with col2:
+            if persona.get('target_demographics'):
+                st.markdown("**Our Readers**")
+                st.markdown(f"{persona['target_demographics']}")
 
-                if persona.get('risk_tolerance'):
-                    st.markdown("**Publishing Philosophy**")
-                    risk_desc = {
-                        "High": "Embraces innovative and unconventional works",
-                        "Medium": "Balances traditional quality with fresh perspectives",
-                        "Low": "Focuses on proven topics with established audience"
-                    }.get(persona['risk_tolerance'], persona['risk_tolerance'])
-                    st.markdown(f"{risk_desc}")
+            if persona.get('risk_tolerance'):
+                st.markdown("**Publishing Philosophy**")
+                risk_desc = {
+                    "High": "Embraces innovative and unconventional works",
+                    "Medium": "Balances traditional quality with fresh perspectives",
+                    "Low": "Focuses on proven topics with established audience"
+                }.get(persona['risk_tolerance'], persona['risk_tolerance'])
+                st.markdown(f"{risk_desc}")
+
+        st.markdown('</div>', unsafe_allow_html=True)
 
     # Publisher information
     publisher = config.get("publisher", "Unknown Publisher")
