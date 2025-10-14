@@ -368,6 +368,7 @@ def load_imprint_data_fallback(imprint_name: str) -> dict:
         "forthcoming_books": [],
         "assets": {},
         "agent_config": {},
+        "persona": None,
         "academic_paper_path": None
     }
 
@@ -394,6 +395,20 @@ def load_imprint_data_fallback(imprint_name: str) -> dict:
                 with open(config_path, 'r') as f:
                     config_data = json.load(f)
                     imprint_data["config"] = config_data
+
+                    # Extract publisher persona from config
+                    if "publisher_persona" in config_data:
+                        persona_data = config_data["publisher_persona"]
+                        imprint_data["persona"] = {
+                            "name": persona_data.get("persona_name", "Editorial AI"),
+                            "bio": persona_data.get("persona_bio", ""),
+                            "reputation": "",  # Not in config format
+                            "risk_tolerance": persona_data.get("risk_tolerance", ""),
+                            "editorial_philosophy": persona_data.get("editorial_philosophy", ""),
+                            "decision_style": persona_data.get("decision_style", ""),
+                            "preferred_topics": persona_data.get("preferred_topics", ""),
+                            "target_demographics": persona_data.get("target_demographics", "")
+                        }
                 break
             except Exception as e:
                 logger.debug(f"Failed to load config {config_path}: {e}")
@@ -697,29 +712,51 @@ def render_imprint_about(imprint_data: dict):
         if "specialization" in publishing_focus:
             st.markdown(f"**Specialization**: {publishing_focus['specialization']}")
 
-    # Publisher persona (if available) - Enhanced with narrative framing
+    # Publisher persona (if available) - User-friendly narrative style
     if imprint_data.get("persona"):
         persona = imprint_data["persona"]
         st.markdown("---")
-        st.markdown("### Editorial Leadership")
+        st.markdown("### Meet Our Editorial Intelligence")
 
-        # Create narrative framing
-        st.markdown(f"**{persona['name']}** serves as the editorial intelligence behind this imprint.")
+        # Create engaging narrative with persona details
+        with st.container(border=True):
+            st.markdown(f"#### {persona['name']}")
 
-        if persona.get('bio'):
-            st.markdown(f"\n*{persona['bio']}*")
+            if persona.get('bio'):
+                st.markdown(persona['bio'])
+                st.markdown("")  # spacing
 
-        # Editorial philosophy (if available)
-        if persona.get('editorial_philosophy'):
-            st.markdown(f"\n**Editorial Philosophy**: {persona['editorial_philosophy']}")
+            # Editorial approach section
+            if persona.get('editorial_philosophy'):
+                st.markdown("**Editorial Approach**")
+                st.markdown(f"*\"{persona['editorial_philosophy']}\"*")
+                st.markdown("")
 
-        # Risk tolerance (if available)
-        if persona.get('risk_tolerance'):
-            st.markdown(f"\n**Risk Tolerance**: {persona['risk_tolerance']}")
+            # Create readable overview of preferences and style
+            col1, col2 = st.columns(2)
 
-        # Reputation (if available)
-        if persona.get('reputation'):
-            st.markdown(f"\n**Reputation**: {persona['reputation']}")
+            with col1:
+                if persona.get('preferred_topics'):
+                    st.markdown("**Areas of Focus**")
+                    st.markdown(f"{persona['preferred_topics']}")
+
+                if persona.get('decision_style'):
+                    st.markdown("**Editorial Style**")
+                    st.markdown(f"{persona['decision_style']}")
+
+            with col2:
+                if persona.get('target_demographics'):
+                    st.markdown("**Our Readers**")
+                    st.markdown(f"{persona['target_demographics']}")
+
+                if persona.get('risk_tolerance'):
+                    st.markdown("**Publishing Philosophy**")
+                    risk_desc = {
+                        "High": "Embraces innovative and unconventional works",
+                        "Medium": "Balances traditional quality with fresh perspectives",
+                        "Low": "Focuses on proven topics with established audience"
+                    }.get(persona['risk_tolerance'], persona['risk_tolerance'])
+                    st.markdown(f"{risk_desc}")
 
     # Publisher information
     publisher = config.get("publisher", "Unknown Publisher")
@@ -1146,17 +1183,13 @@ def render_forthcoming_list(books: list):
 
 
 def render_academic_paper(imprint_data: dict):
-    """Render academic paper tab with generation capability."""
+    """Render academic paper tab - display only, no generation UI."""
     st.subheader("📄 Academic Paper")
 
     paper_path = imprint_data.get("academic_paper_path")
     imprint_name = imprint_data.get("name")
     display_name = imprint_data.get("agent_config", {}).get('display_name', imprint_name)
     config = imprint_data.get("config", {})
-
-    # Check if paper generation is enabled in config
-    paper_gen_config = config.get("academic_paper_generation", {})
-    paper_gen_enabled = paper_gen_config.get("enabled", False)
 
     st.markdown("### About This Imprint: An Academic Perspective")
 
@@ -1167,13 +1200,16 @@ def render_academic_paper(imprint_data: dict):
 
     The paper follows academic standards with sections on methodology, implementation,
     impact analysis, and future directions.
+
+    *The paper is automatically updated when significant changes are made to the imprint
+    configuration or publishing pipeline.*
     """)
 
     # Paper exists - show download and info
     if paper_path and Path(paper_path).exists():
         st.markdown("---")
 
-        col1, col2, col3 = st.columns([2, 2, 2])
+        col1, col2, col3 = st.columns(3)
 
         with col1:
             # Download PDF button
@@ -1210,115 +1246,49 @@ def render_academic_paper(imprint_data: dict):
                     pass
 
         with col3:
-            # Regenerate option
-            if paper_gen_enabled:
-                if st.button("🔄 Regenerate Paper", use_container_width=True):
-                    with st.spinner("Regenerating academic paper..."):
-                        result = generate_academic_paper_for_imprint(imprint_name)
-                        if result and result.get("success"):
-                            st.success("Paper regenerated successfully!")
-                            st.rerun()
-                        else:
-                            st.error(f"Generation failed: {result.get('error', 'Unknown error')}")
+            # Show paper metadata
+            try:
+                stat = Path(paper_path).stat()
+                mod_time = datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d")
+                st.metric("Last Updated", mod_time)
+            except Exception:
+                pass
 
         # Display paper metadata
         st.markdown("---")
-        st.markdown("#### Paper Information")
+        st.markdown("#### Paper Details")
 
         try:
             stat = Path(paper_path).stat()
             file_size = stat.st_size / 1024  # KB
-            mod_time = datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M")
 
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("File Size", f"{file_size:.1f} KB")
             with col2:
-                st.metric("Last Modified", mod_time)
-            with col3:
+                paper_gen_config = config.get("academic_paper_generation", {})
                 if paper_gen_config.get("paper_settings", {}).get("target_word_count"):
-                    st.metric("Target Words", f"{paper_gen_config['paper_settings']['target_word_count']:,}")
+                    st.metric("Word Count", f"~{paper_gen_config['paper_settings']['target_word_count']:,}")
+            with col3:
+                if paper_gen_config.get("paper_settings", {}).get("citation_style"):
+                    st.metric("Citation Style", paper_gen_config['paper_settings']['citation_style'].title())
         except Exception:
             pass
 
         # Show paper preview if markdown exists
         md_path = Path(str(paper_path).replace('.pdf', '.md'))
         if md_path.exists():
-            with st.expander("📖 View Paper Content"):
+            with st.expander("📖 Read Paper Content"):
                 try:
                     with open(md_path, 'r', encoding='utf-8') as f:
                         st.markdown(f.read())
                 except Exception as e:
                     st.error(f"Could not display paper: {e}")
 
-    # Paper doesn't exist - offer generation
+    # Paper doesn't exist
     else:
         st.markdown("---")
-
-        if paper_gen_enabled:
-            st.info("📝 No academic paper has been generated yet for this imprint.")
-
-            # Show what will be included
-            with st.expander("ℹ️ What's included in the academic paper?"):
-                focus_areas = paper_gen_config.get("content_configuration", {}).get("focus_areas", [])
-                paper_type = paper_gen_config.get("paper_settings", {}).get("default_paper_type", "case_study")
-                target_venues = paper_gen_config.get("paper_settings", {}).get("target_venues", [])
-
-                st.markdown(f"""
-                **Paper Type:** {paper_type.replace('_', ' ').title()}
-
-                **Target Venues:** {', '.join(target_venues)}
-
-                **Focus Areas:**
-                {chr(10).join(f"- {area}" for area in focus_areas) if focus_areas else "- Imprint development methodology\n- Publishing workflow analysis\n- Market positioning strategy"}
-
-                **Required Sections:**
-                - Abstract
-                - Introduction
-                - Methodology
-                - Implementation Results
-                - Industry Impact
-                - Future Directions
-                - Conclusion
-                - References
-                """)
-
-            col1, col2 = st.columns([1, 2])
-
-            with col1:
-                if st.button("🚀 Generate Academic Paper", use_container_width=True, type="primary"):
-                    with st.spinner("Generating academic paper... This may take a few minutes."):
-                        result = generate_academic_paper_for_imprint(imprint_name)
-
-                        if result and result.get("success"):
-                            st.success("✅ Paper generated successfully!")
-                            st.balloons()
-
-                            # Show generation summary
-                            st.markdown("**Generation Summary:**")
-                            context = result.get("context_data", {})
-                            st.markdown(f"- **Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
-                            st.markdown(f"- **Focus Areas:** {len(context.get('focus_areas', []))}")
-                            st.markdown(f"- **Output Directory:** `{result.get('output_directory', 'Unknown')}`")
-
-                            if st.button("🔄 Reload Page"):
-                                st.rerun()
-                        else:
-                            error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
-                            st.error(f"❌ Paper generation failed: {error_msg}")
-
-                            # Show debug info
-                            with st.expander("🔍 Debug Information"):
-                                st.json(result if result else {"error": "No result returned"})
-
-            with col2:
-                st.markdown("**Generation Time:** ~2-5 minutes")
-                st.markdown("**Output Format:** PDF + Markdown")
-                st.markdown("**Citation Style:** Chicago")
-
-        else:
-            st.warning("📝 Academic paper generation is not enabled for this imprint.")
-            st.markdown("Contact the editorial team to enable paper generation in the imprint configuration.")
+        st.info("📝 The academic paper for this imprint is being prepared and will be available soon.")
 
 
 def generate_academic_paper_for_imprint(imprint_name: str) -> dict:
