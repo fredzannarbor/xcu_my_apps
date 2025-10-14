@@ -1314,48 +1314,72 @@ def render_research_paper(imprint_data: dict):
                 except Exception as e:
                     st.error(f"Could not display paper: {e}")
 
-    # Paper doesn't exist - auto-generate it
+    # Paper doesn't exist - auto-generate it (with cooldown to prevent loops)
     else:
         st.markdown("---")
 
-        # Check if generation is in progress via session state
-        generation_key = f"generating_paper_{imprint_name}"
+        # Check if we recently attempted generation (cooldown mechanism)
+        generation_timestamp_key = f"paper_gen_timestamp_{imprint_name}"
+        last_gen_time = st.session_state.get(generation_timestamp_key, 0)
+        current_time = datetime.now().timestamp()
 
-        if st.session_state.get(generation_key, False):
-            # Generation already triggered
-            st.info("🔄 Paper generation in progress... Please wait.")
+        # 5 minute cooldown to prevent infinite loops
+        cooldown_seconds = 300
+        time_since_gen = current_time - last_gen_time
+
+        if time_since_gen < cooldown_seconds:
+            # Recently generated - don't try again
+            remaining_time = int(cooldown_seconds - time_since_gen)
+            st.warning(f"⏳ Paper generation attempted recently. Please wait {remaining_time}s before trying again, or check if the paper was created successfully.")
+
+            # Show manual retry button
+            if st.button("🔄 Retry Now", key=f"retry_paper_{imprint_name}"):
+                # Clear cooldown and retry
+                st.session_state[generation_timestamp_key] = 0
+                st.rerun()
         else:
-            # Trigger auto-generation
-            st.info("📝 Research paper not found. Generating now...")
+            # Check if generation is in progress via session state
+            generation_key = f"generating_paper_{imprint_name}"
 
-            # Mark generation as in progress
-            st.session_state[generation_key] = True
+            if st.session_state.get(generation_key, False):
+                # Generation already triggered
+                st.info("🔄 Paper generation in progress... Please wait.")
+            else:
+                # Trigger auto-generation
+                st.info("📝 Research paper not found. Generating now...")
 
-            with st.spinner("Generating research paper... This may take 2-5 minutes."):
-                result = generate_research_paper_for_imprint(imprint_name)
+                # Mark generation as in progress and set timestamp
+                st.session_state[generation_key] = True
+                st.session_state[generation_timestamp_key] = current_time
 
-                # Clear generation flag
-                st.session_state[generation_key] = False
+                with st.spinner("Generating research paper... This may take 2-5 minutes."):
+                    result = generate_research_paper_for_imprint(imprint_name)
 
-                if result and result.get("success"):
-                    st.success("✅ Research paper generated successfully!")
+                    # Clear generation flag
+                    st.session_state[generation_key] = False
 
-                    # Show generation summary
-                    with st.expander("📊 Generation Summary"):
-                        context = result.get("context_data", {})
-                        st.markdown(f"**Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
-                        st.markdown(f"**Focus Areas:** {len(context.get('focus_areas', []))}")
-                        st.markdown(f"**Output Directory:** `{result.get('output_directory', 'Unknown')}`")
+                    if result and result.get("success"):
+                        st.success("✅ Research paper generated successfully!")
 
-                    # Auto-reload page to show the paper
-                    st.rerun()
-                else:
-                    error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
-                    st.error(f"❌ Paper generation failed: {error_msg}")
+                        # Show generation summary
+                        with st.expander("📊 Generation Summary"):
+                            context = result.get("context_data", {})
+                            st.markdown(f"**Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
+                            st.markdown(f"**Focus Areas:** {len(context.get('focus_areas', []))}")
+                            st.markdown(f"**Output Directory:** `{result.get('output_directory', 'Unknown')}`")
 
-                    # Show debug info
-                    with st.expander("🔍 Debug Information"):
-                        st.json(result if result else {"error": "No result returned"})
+                        # Clear cooldown on success
+                        st.session_state[generation_timestamp_key] = 0
+
+                        # Auto-reload page to show the paper
+                        st.rerun()
+                    else:
+                        error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
+                        st.error(f"❌ Paper generation failed: {error_msg}")
+
+                        # Show debug info
+                        with st.expander("🔍 Debug Information"):
+                            st.json(result if result else {"error": "No result returned"})
 
 
 def generate_research_paper_for_imprint(imprint_name: str) -> dict:
