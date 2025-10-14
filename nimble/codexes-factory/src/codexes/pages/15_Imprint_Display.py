@@ -222,11 +222,7 @@ def render_imprint_page(imprint_name: str):
     render_dynamic_header(imprint_data)
     
     # Main content tabs (reordered: About, Focus, Forthcoming, Catalog, Academic Paper, Connect)
-    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📧 Connect"]
-
-    # Add Academic Paper tab if paper exists
-    if imprint_data.get("academic_paper_path"):
-        tabs.insert(4, "📄 Academic Paper")
+    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📄 Academic Paper", "📧 Connect"]
 
     tab_objects = st.tabs(tabs)
     current_tab = 0
@@ -251,11 +247,10 @@ def render_imprint_page(imprint_name: str):
         render_imprint_catalog(imprint_name, imprint_data)
     current_tab += 1
 
-    # Academic Paper tab (if exists)
-    if imprint_data.get("academic_paper_path"):
-        with tab_objects[current_tab]:
-            render_academic_paper(imprint_data)
-        current_tab += 1
+    # Academic Paper tab (always present)
+    with tab_objects[current_tab]:
+        render_academic_paper(imprint_data)
+    current_tab += 1
 
     # Connect tab
     with tab_objects[current_tab]:
@@ -1183,7 +1178,7 @@ def render_forthcoming_list(books: list):
 
 
 def render_academic_paper(imprint_data: dict):
-    """Render academic paper tab - display only, no generation UI."""
+    """Render academic paper tab - auto-generates if missing."""
     st.subheader("📄 Academic Paper")
 
     paper_path = imprint_data.get("academic_paper_path")
@@ -1285,10 +1280,50 @@ def render_academic_paper(imprint_data: dict):
                 except Exception as e:
                     st.error(f"Could not display paper: {e}")
 
-    # Paper doesn't exist
+    # Paper doesn't exist - auto-generate it
     else:
         st.markdown("---")
-        st.info("📝 The academic paper for this imprint is being prepared and will be available soon.")
+
+        # Check if generation is in progress via session state
+        generation_key = f"generating_paper_{imprint_name}"
+
+        if st.session_state.get(generation_key, False):
+            # Generation already triggered
+            st.info("🔄 Paper generation in progress... Please wait.")
+        else:
+            # Trigger auto-generation
+            st.info("📝 Academic paper not found. Generating now...")
+
+            # Mark generation as in progress
+            st.session_state[generation_key] = True
+
+            with st.spinner("Generating academic paper... This may take 2-5 minutes."):
+                result = generate_academic_paper_for_imprint(imprint_name)
+
+                # Clear generation flag
+                st.session_state[generation_key] = False
+
+                if result and result.get("success"):
+                    st.success("✅ Academic paper generated successfully!")
+                    st.balloons()
+
+                    # Show generation summary
+                    with st.expander("📊 Generation Summary"):
+                        context = result.get("context_data", {})
+                        st.markdown(f"**Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
+                        st.markdown(f"**Focus Areas:** {len(context.get('focus_areas', []))}")
+                        st.markdown(f"**Output Directory:** `{result.get('output_directory', 'Unknown')}`")
+
+                    # Reload page to show the paper
+                    if st.button("🔄 Reload to View Paper", type="primary"):
+                        st.rerun()
+                else:
+                    error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
+                    st.error(f"❌ Paper generation failed: {error_msg}")
+
+                    # Show debug info
+                    with st.expander("🔍 Debug Information"):
+                        st.json(result if result else {"error": "No result returned"})
 
 
 def generate_academic_paper_for_imprint(imprint_name: str) -> dict:
