@@ -222,7 +222,7 @@ def render_imprint_page(imprint_name: str):
     render_dynamic_header(imprint_data)
     
     # Main content tabs (reordered: About, Focus, Forthcoming, Catalog, Academic Paper, Connect)
-    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📄 Academic Paper", "📧 Connect"]
+    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📄 Research Paper", "📧 Connect"]
 
     tab_objects = st.tabs(tabs)
     current_tab = 0
@@ -249,7 +249,7 @@ def render_imprint_page(imprint_name: str):
 
     # Academic Paper tab (always present)
     with tab_objects[current_tab]:
-        render_academic_paper(imprint_data)
+        render_research_paper(imprint_data)
     current_tab += 1
 
     # Connect tab
@@ -1206,19 +1206,19 @@ def render_forthcoming_list(books: list):
 
 
 def render_academic_paper(imprint_data: dict):
-    """Render academic paper tab - auto-generates if missing."""
-    st.subheader("📄 Academic Paper")
+    """Render research paper tab - auto-generates if missing."""
+    st.subheader("📄 Research Paper")
 
     paper_path = imprint_data.get("academic_paper_path")
     imprint_name = imprint_data.get("name")
     display_name = imprint_data.get("agent_config", {}).get('display_name', imprint_name)
     config = imprint_data.get("config", {})
 
-    st.markdown("### About This Imprint: An Academic Perspective")
+    st.markdown("### About This Imprint: A Research Perspective")
 
     # Display paper information
     st.markdown(f"""
-    This academic paper provides a scholarly analysis of the **{display_name}**
+    This research paper provides a scholarly analysis of the **{display_name}**
     imprint, its editorial approach, and its contribution to contemporary publishing.
 
     The paper follows academic standards with sections on methodology, implementation,
@@ -1320,20 +1320,19 @@ def render_academic_paper(imprint_data: dict):
             st.info("🔄 Paper generation in progress... Please wait.")
         else:
             # Trigger auto-generation
-            st.info("📝 Academic paper not found. Generating now...")
+            st.info("📝 Research paper not found. Generating now...")
 
             # Mark generation as in progress
             st.session_state[generation_key] = True
 
-            with st.spinner("Generating academic paper... This may take 2-5 minutes."):
+            with st.spinner("Generating research paper... This may take 2-5 minutes."):
                 result = generate_academic_paper_for_imprint(imprint_name)
 
                 # Clear generation flag
                 st.session_state[generation_key] = False
 
                 if result and result.get("success"):
-                    st.success("✅ Academic paper generated successfully!")
-                    st.balloons()
+                    st.success("✅ Research paper generated successfully!")
 
                     # Show generation summary
                     with st.expander("📊 Generation Summary"):
@@ -1342,9 +1341,8 @@ def render_academic_paper(imprint_data: dict):
                         st.markdown(f"**Focus Areas:** {len(context.get('focus_areas', []))}")
                         st.markdown(f"**Output Directory:** `{result.get('output_directory', 'Unknown')}`")
 
-                    # Reload page to show the paper
-                    if st.button("🔄 Reload to View Paper", type="primary"):
-                        st.rerun()
+                    # Auto-reload page to show the paper
+                    st.rerun()
                 else:
                     error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
                     st.error(f"❌ Paper generation failed: {error_msg}")
@@ -1379,7 +1377,7 @@ def generate_academic_paper_for_imprint(imprint_name: str) -> dict:
     except ImportError as e:
         return {
             "success": False,
-            "error": f"Academic paper generation module not available: {e}"
+            "error": f"Research paper generation module not available: {e}"
         }
     except Exception as e:
         return {
