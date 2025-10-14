@@ -540,6 +540,30 @@ def get_available_imprints() -> list:
     return imprints
 
 
+def get_persona_glyph(persona_name: str) -> str:
+    """Load AI glyph for a persona from the registry.
+
+    Args:
+        persona_name: Name of the persona (e.g., "Seon", "SoRogue")
+
+    Returns:
+        Unicode glyph character, or empty string if not found
+    """
+    try:
+        glyph_registry_path = Path("configs/imprints/persona_glyphs.json")
+        if glyph_registry_path.exists():
+            with open(glyph_registry_path, 'r') as f:
+                registry = json.load(f)
+                glyphs = registry.get("glyphs", {})
+                if persona_name in glyphs:
+                    return glyphs[persona_name].get("glyph", "")
+    except Exception as e:
+        logger.debug(f"Failed to load glyph for {persona_name}: {e}")
+
+    # Return empty string if glyph not found
+    return ""
+
+
 def render_dynamic_header(imprint_data: dict):
     """Render dynamic header based on imprint data."""
     config = imprint_data.get("config", {})
@@ -717,31 +741,15 @@ def render_imprint_about(imprint_data: dict):
         brand_colors = config.get("branding", {}).get("brand_colors", {})
         primary_color = brand_colors.get("primary", "#2C3E50")
 
-        # Create light tint of primary color for background (10% opacity)
-        def hex_to_rgba(hex_color, alpha=0.1):
-            hex_color = hex_color.lstrip('#')
-            r, g, b = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
-            return f"rgba({r}, {g}, {b}, {alpha})"
+        # Load AI glyph from registry
+        glyph = get_persona_glyph(persona['name'])
 
-        bg_color = hex_to_rgba(primary_color, 0.1)
-
-        # Use custom styling for the persona box
+        # Apply hero color to persona name heading with glyph
         st.markdown(f"""
-        <style>
-        .persona-box {{
-            background-color: {bg_color};
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }}
-        </style>
+        <h4 style="color: {primary_color}; margin-top: 1rem;">
+            {glyph} {persona['name']}
+        </h4>
         """, unsafe_allow_html=True)
-
-        # Wrap the container in a div with our custom class
-        st.markdown('<div class="persona-box">', unsafe_allow_html=True)
-
-        # Create engaging narrative with persona details
-        st.markdown(f"#### {persona['name']}")
 
         if persona.get('bio'):
             st.markdown(persona['bio'])
@@ -778,8 +786,6 @@ def render_imprint_about(imprint_data: dict):
                     "Low": "Focuses on proven topics with established audience"
                 }.get(persona['risk_tolerance'], persona['risk_tolerance'])
                 st.markdown(f"{risk_desc}")
-
-        st.markdown('</div>', unsafe_allow_html=True)
 
     # Publisher information
     publisher = config.get("publisher", "Unknown Publisher")

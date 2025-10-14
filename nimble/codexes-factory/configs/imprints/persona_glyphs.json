@@ -1,0 +1,21 @@
+{
+  "_description": "Registry of unique AI glyphs for publisher personas across all imprints",
+  "_usage": "Each persona must have a unique unicode character or emoji that represents their identity",
+  "glyphs": {
+    "Seon": {
+      "glyph": "◉",
+      "unicode": "U+25C9",
+      "name": "FISHEYE",
+      "meaning": "Represents meditation focus and the practice of mindful contemplation",
+      "imprint": "xynapse_traces"
+    },
+    "SoRogue": {
+      "glyph": "◆",
+      "unicode": "U+25C6",
+      "name": "BLACK DIAMOND",
+      "meaning": "Represents sharp rebellion and distinctive approach to reading advocacy",
+      "imprint": "not_a_miracle_readers"
+    }
+  },
+  "_notes": "When adding new personas, ensure the glyph is unique and meaningful to their identity"
+}
