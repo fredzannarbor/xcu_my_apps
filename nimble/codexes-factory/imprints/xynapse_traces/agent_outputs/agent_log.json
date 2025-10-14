@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2025-10-13T20:14:32",
+    "task_id": 5,
+    "queue_id": "q0001",
+    "task_name": "Write back cover copy for book needing it",
+    "category": "catalog_development",
+    "result": "Generated back cover copy for 'Family Support: Data vs. Intuition'",
+    "output_file": "back_cover_copy/back_cover_9781608883967_20251013.txt",
+    "executed_by": "claude_max",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-13T20:14:45",
+    "task_id": 1,
+    "queue_id": "q0002",
+    "task_name": "Generate social media post about catalog book",
+    "category": "content_creation",
+    "result": "Created social media post for 'AI-Driven Science: Speed versus Safety'",
+    "output_file": "social_media/social_post_20251013.txt",
+    "executed_by": "claude_max",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-13T20:14:58",
+    "task_id": 16,
+    "queue_id": "q0003",
+    "task_name": "Develop seasonal catalog promotion concept",
+    "category": "strategic",
+    "result": "Created Fall catalog promotion with 5 featured books",
+    "output_file": "promotions/seasonal_promo_fall_20251013.md",
+    "executed_by": "claude_max",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-13T21:12:45",
+    "task_id": 2,
+    "queue_id": "manual",
+    "task_name": "Write short blog post on imprint mission/practice",
+    "category": "content_creation",
+    "result": "Created Substack blog post for 'Space Markets: Innovation vs. Control'",
+    "output_file": "blog_posts/space_markets_innovation_control_20251013.md",
+    "executed_by": "claude_max",
+    "success": true
+  }
+]

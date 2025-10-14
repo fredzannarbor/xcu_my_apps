@@ -106,15 +106,21 @@ def render_auth_section():
         st.sidebar.warning("Authentication system not initialized")
         return
 
+    # Generate unique key prefix for this render to avoid collisions
+    import time
+    key_prefix = f"auth_{int(time.time() * 1000) % 100000}"
+
     if not is_authenticated():
         # Not authenticated - show expanded Account section
         st.sidebar.title("🔐 Account")
         tab1, tab2, tab3 = st.sidebar.tabs(["Login", "Register", "Subscribe"])
 
         with tab1:
-            with st.form("login_form"):
-                username = st.text_input("Username", key="login_username")
-                password = st.text_input("Password", type="password", key="login_password")
+            # Use unique form key to avoid collisions when multiple pages use unified_sidebar
+            form_key = f"{key_prefix}_login_form"
+            with st.form(form_key):
+                username = st.text_input("Username", key=f"{form_key}_username")
+                password = st.text_input("Password", type="password", key=f"{form_key}_password")
                 submit = st.form_submit_button("Login")
 
                 if submit:
@@ -152,7 +158,7 @@ def render_auth_section():
                 tier_emoji = {'free': '🆓', 'pro': '💎', 'enterprise': '🌟'}.get(sub_tier, '🆓')
                 st.info(f"{tier_emoji} {sub_tier.capitalize()} Subscription")
 
-            if st.button("Logout", key="logout_btn"):
+            if st.button("Logout", key=f"{key_prefix}_logout_btn"):
                 logout()
                 st.rerun()
 
@@ -162,15 +168,14 @@ def render_xtuff_nav():
     with st.sidebar.expander("🌐 xtuff.ai Cinematic Universe (xCU)"):
         st.markdown("### Apps")
 
+        # Updated to match apps_config.json - only showing public_visible apps
         apps = [
             ("🏠 Home", "http://localhost:8500"),
             ("🤖 Social Xtuff", "http://localhost:8501"),
             ("📚 Codexes Factory", "http://localhost:8502"),
             ("🌍 Trillions of People", "http://localhost:8504"),
-            ("📮 Philately", "http://localhost:8507"),
             ("⏰ Daily Engine", "http://localhost:8509"),
-            ("✍️ Substack Tools", "http://localhost:8510"),
-            ("🧠 XAI Health", "http://localhost:8511"),
+            ("👤 AI Resume Builder", "http://localhost:8512"),
         ]
 
         for name, url in apps:
@@ -231,6 +236,10 @@ def render_version_info():
 
 def render_contact_widget():
     """Render contact form widget."""
+    # Generate unique key prefix based on timestamp to avoid collisions
+    import time
+    key_prefix = f"contact_{int(time.time() * 1000) % 100000}"
+
     with st.sidebar.expander("📧 Contact"):
         st.markdown("### Subscribe to the xCU")
 
@@ -247,9 +256,9 @@ def render_contact_widget():
 
         st.markdown("---")
 
-        # Quick message form
-        st.text_area("Quick Message", key="contact_message", height=100)
-        if st.button("Send Message", key="send_message_btn"):
+        # Quick message form with unique keys
+        st.text_area("Quick Message", key=f"{key_prefix}_message", height=100)
+        if st.button("Send Message", key=f"{key_prefix}_send_btn"):
             # TODO: Integrate with email/notification system
             st.success("Message sent! We'll get back to you soon.")
 

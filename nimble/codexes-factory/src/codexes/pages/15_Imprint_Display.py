@@ -221,19 +221,44 @@ def render_imprint_page(imprint_name: str):
     # Render imprint header with branding
     render_dynamic_header(imprint_data)
     
-    # Main content tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["📚 Our Books", "🎯 About This Imprint", "📊 Publishing Focus", "📧 Connect"])
-    
-    with tab1:
-        render_imprint_catalog(imprint_name, imprint_data)
-    
-    with tab2:
+    # Main content tabs (reordered: About, Focus, Forthcoming, Catalog, Academic Paper, Connect)
+    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📧 Connect"]
+
+    # Add Academic Paper tab if paper exists
+    if imprint_data.get("academic_paper_path"):
+        tabs.insert(4, "📄 Academic Paper")
+
+    tab_objects = st.tabs(tabs)
+    current_tab = 0
+
+    # About tab
+    with tab_objects[current_tab]:
         render_imprint_about(imprint_data)
-    
-    with tab3:
+    current_tab += 1
+
+    # Focus tab
+    with tab_objects[current_tab]:
         render_publishing_focus(imprint_data)
-    
-    with tab4:
+    current_tab += 1
+
+    # Forthcoming Books tab
+    with tab_objects[current_tab]:
+        render_forthcoming_books(imprint_data)
+    current_tab += 1
+
+    # Catalog tab
+    with tab_objects[current_tab]:
+        render_imprint_catalog(imprint_name, imprint_data)
+    current_tab += 1
+
+    # Academic Paper tab (if exists)
+    if imprint_data.get("academic_paper_path"):
+        with tab_objects[current_tab]:
+            render_academic_paper(imprint_data)
+        current_tab += 1
+
+    # Connect tab
+    with tab_objects[current_tab]:
         render_contact_info(imprint_data)
     
     # Back navigation
@@ -251,30 +276,48 @@ def load_imprint_data(imprint_name: str) -> dict:
         "name": imprint_name,
         "config": {},
         "catalog": [],
+        "forthcoming_books": [],
         "assets": {},
-        "persona": None
+        "persona": None,
+        "agent_config": {},
+        "academic_paper_path": None
     }
-    
+
     # Try enhanced imprint manager first
     if ImprintManager:
         try:
             manager = ImprintManager()
             imprint = manager.get_imprint(imprint_name)
-            
+
             if imprint:
+                # Load agent_config.json (lightweight config)
+                agent_config_path = imprint.path / "agent_config.json" if imprint.path else Path(f"imprints/{imprint.slug}/agent_config.json")
+                if agent_config_path.exists():
+                    try:
+                        with open(agent_config_path, 'r') as f:
+                            imprint_data["agent_config"] = json.load(f)
+                    except Exception as e:
+                        logger.debug(f"Failed to load agent config for {imprint_name}: {e}")
+
                 # Load configuration
                 if imprint.configuration:
                     imprint_data["config"] = imprint.configuration.get_resolved_config()
-                
+
                 # Load catalog from CSV
                 catalog_path = imprint.path / "books.csv" if imprint.path else Path(f"imprints/{imprint.slug}/books.csv")
                 if catalog_path.exists():
                     try:
                         df = pd.read_csv(catalog_path)
                         imprint_data["catalog"] = df.to_dict('records')
+
+                        # Separate forthcoming books
+                        if 'publication_date' in df.columns:
+                            today = datetime.now().date()
+                            forthcoming_df = df[pd.to_datetime(df['publication_date'], errors='coerce').dt.date > today]
+                            imprint_data["forthcoming_books"] = forthcoming_df.to_dict('records')
                     except Exception as e:
                         logger.debug(f"Failed to load catalog for {imprint_name}: {e}")
-                
+
                 # Load assets info
                 if imprint.assets:
                     imprint_data["assets"] = {
@@ -283,34 +326,68 @@ def load_imprint_data(imprint_name: str) -> dict:
                         "brand_colors": imprint.assets.brand_colors,
                         "tagline": imprint.assets.tagline
                     }
-                
-                # Load persona
+
+                # Load persona (complete publisher_persona info)
                 if imprint.publisher_persona:
                     imprint_data["persona"] = {
                         "name": imprint.publisher_persona.name,
                         "bio": imprint.publisher_persona.bio,
-                        "reputation": imprint.publisher_persona.reputation_summary
+                        "reputation": imprint.publisher_persona.reputation_summary,
+                        "risk_tolerance": getattr(imprint.publisher_persona, 'risk_tolerance', None),
+                        "editorial_philosophy": getattr(imprint.publisher_persona, 'editorial_philosophy', None)
                     }
-                
+
+                # Check for academic paper
+                imprint_slug = imprint.slug if hasattr(imprint, 'slug') else imprint_name.lower().replace(' ', '_')
+                academic_paper_paths = [
+                    Path(f"output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf"),
+                    imprint.path / "academic_paper.pdf" if imprint.path else None,
+                    Path(f"output/academic_papers/{imprint_slug}.pdf")
+                ]
+
+                for paper_path in academic_paper_paths:
+                    if paper_path and paper_path.exists():
+                        imprint_data["academic_paper_path"] = str(paper_path)
+                        break
+
                 return imprint_data
-                
+
         except Exception as e:
             logger.debug(f"Enhanced manager failed for {imprint_name}, trying fallback: {e}")
-    
+
     # Fallback to direct file loading
     return load_imprint_data_fallback(imprint_name)
 
 
 def load_imprint_data_fallback(imprint_name: str) -> dict:
     """Fallback method to load imprint data from files."""
-    imprint_data = {"name": imprint_name, "config": {}, "catalog": [], "assets": {}}
-    
-    # Try to load config file
+    imprint_data = {
+        "name": imprint_name,
+        "config": {},
+        "catalog": [],
+        "forthcoming_books": [],
+        "assets": {},
+        "agent_config": {},
+        "academic_paper_path": None
+    }
+
+    imprint_slug = imprint_name.lower().replace(' ', '_')
+
+    # Load agent_config.json (lightweight config with display_name, tagline, special_practice)
+    agent_config_path = Path(f"imprints/{imprint_slug}/agent_config.json")
+    if agent_config_path.exists():
+        try:
+            with open(agent_config_path, 'r') as f:
+                imprint_data["agent_config"] = json.load(f)
+        except Exception as e:
+            logger.debug(f"Failed to load agent config {agent_config_path}: {e}")
+
+    # Try to load main config file
     config_paths = [
-        Path(f"configs/imprints/{imprint_name.lower().replace(' ', '_')}.json"),
+        Path(f"configs/imprints/{imprint_slug}.json"),
         Path(f"configs/imprints/{imprint_name}.json")
     ]
-    
+
     for config_path in config_paths:
         if config_path.exists():
             try:
@@ -320,24 +397,43 @@ def load_imprint_data_fallback(imprint_name: str) -> dict:
                 break
             except Exception as e:
                 logger.debug(f"Failed to load config {config_path}: {e}")
-    
+
     # Try to load catalog
     catalog_paths = [
-        Path(f"imprints/{imprint_name.lower().replace(' ', '_')}/books.csv"),
+        Path(f"imprints/{imprint_slug}/books.csv"),
         Path(f"imprints/{imprint_name}/books.csv"),
-        Path(f"data/catalogs/{imprint_name.lower().replace(' ', '_')}_latest.csv")
+        Path(f"data/catalogs/{imprint_slug}_latest.csv")
     ]
-    
+
     for catalog_path in catalog_paths:
         if catalog_path.exists():
             try:
                 df = pd.read_csv(catalog_path)
                 imprint_data["catalog"] = df.to_dict('records')
+
+                # Separate forthcoming books (publication_date in the future)
+                if 'publication_date' in df.columns:
+                    today = datetime.now().date()
+                    forthcoming_df = df[pd.to_datetime(df['publication_date'], errors='coerce').dt.date > today]
+                    imprint_data["forthcoming_books"] = forthcoming_df.to_dict('records')
+
                 break
             except Exception as e:
                 logger.debug(f"Failed to load catalog {catalog_path}: {e}")
-    
-    return imprint_data if imprint_data["config"] else None
+
+    # Check for academic paper
+    academic_paper_paths = [
+        Path(f"output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf"),
+        Path(f"imprints/{imprint_slug}/academic_paper.pdf"),
+        Path(f"output/academic_papers/{imprint_slug}.pdf")
+    ]
+
+    for paper_path in academic_paper_paths:
+        if paper_path.exists():
+            imprint_data["academic_paper_path"] = str(paper_path)
+            break
+
+    return imprint_data if imprint_data["config"] or imprint_data["agent_config"] else None
 
 
 def imprint_has_titles(imprint_name: str) -> bool:
@@ -437,19 +533,30 @@ def get_available_imprints() -> list:
 def render_dynamic_header(imprint_data: dict):
     """Render dynamic header based on imprint data."""
     config = imprint_data.get("config", {})
-    
-    # Extract branding information
-    branding = config.get("branding", {})
-    tagline = (branding.get("tagline") or 
-              config.get("tagline") or 
-              imprint_data.get("assets", {}).get("tagline") or
-              "A Publishing Imprint")
-    
-    # Get brand colors
-    brand_colors = branding.get("brand_colors", {})
+    agent_config = imprint_data.get("agent_config", {})
+
+    # Use display_name from agent_config, fall back to name
+    display_name = agent_config.get("display_name", imprint_data.get("name"))
+
+    # Extract branding information (prefer agent_config, then main config)
+    tagline = (
+        agent_config.get("tagline") or
+        config.get("branding", {}).get("tagline") or
+        config.get("tagline") or
+        imprint_data.get("assets", {}).get("tagline") or
+        "A Publishing Imprint"
+    )
+
+    # Get brand colors from main config
+    brand_colors = config.get("branding", {}).get("brand_colors", {})
     primary_color = brand_colors.get("primary", "#2C3E50")
     secondary_color = brand_colors.get("secondary", "#3498DB")
-    
+
+    # Get fonts from main config
+    fonts = config.get("fonts", {})
+    heading_font = fonts.get("heading", "Helvetica, Arial, sans-serif")
+    body_font = fonts.get("body", "Georgia, serif")
+
     st.markdown(f"""
     <style>
     .dynamic-imprint-header {{
@@ -459,20 +566,39 @@ def render_dynamic_header(imprint_data: dict):
         color: white;
         text-align: center;
         margin-bottom: 2rem;
+        font-family: {heading_font};
+    }}
+    .dynamic-imprint-title {{
+        font-family: {heading_font};
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0;
     }}
     .dynamic-tagline {{
+        font-family: {body_font};
         font-size: 1.2rem;
         font-style: italic;
         opacity: 0.95;
         margin-top: 0.8rem;
     }}
+    .imprint-special-practice {{
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        opacity: 0.9;
+    }}
     </style>
     """, unsafe_allow_html=True)
-    
+
+    # Add special practice if available (like pilsa for xynapse_traces)
+    special_practice_html = ""
+    if "special_practice" in agent_config:
+        special_practice_html = f'<div class="imprint-special-practice">Featuring {agent_config["special_practice"]}</div>'
+
     st.markdown(f"""
     <div class="dynamic-imprint-header">
-        <h1>🏢 {imprint_data['name']}</h1>
+        <h1 class="dynamic-imprint-title">🏢 {display_name}</h1>
         <div class="dynamic-tagline">{tagline}</div>
+        {special_practice_html}
     </div>
     """, unsafe_allow_html=True)
 
@@ -547,43 +673,62 @@ def render_dynamic_book_card(book: dict):
 def render_imprint_about(imprint_data: dict):
     """Render about section using configuration data."""
     st.subheader("🎯 About This Imprint")
-    
+
     config = imprint_data.get("config", {})
-    
-    # Charter/Description
-    charter = config.get("charter", config.get("description", ""))
-    if charter:
-        st.markdown(f"### Our Mission\n{charter}")
-    
+    agent_config = imprint_data.get("agent_config", {})
+
+    # Description from agent_config or charter from main config
+    description = agent_config.get("description", config.get("charter", config.get("description", "")))
+    if description:
+        st.markdown(f"### Our Mission\n{description}")
+
     # Publishing focus
     publishing_focus = config.get("publishing_focus", {})
     if publishing_focus:
         st.markdown("### Our Focus")
-        
+
         if "primary_genres" in publishing_focus:
             genres = publishing_focus["primary_genres"]
             st.markdown(f"**Genres**: {', '.join(genres)}")
-        
+
         if "target_audience" in publishing_focus:
             st.markdown(f"**Target Audience**: {publishing_focus['target_audience']}")
-        
+
         if "specialization" in publishing_focus:
             st.markdown(f"**Specialization**: {publishing_focus['specialization']}")
-    
+
+    # Publisher persona (if available) - Enhanced with narrative framing
+    if imprint_data.get("persona"):
+        persona = imprint_data["persona"]
+        st.markdown("---")
+        st.markdown("### Editorial Leadership")
+
+        # Create narrative framing
+        st.markdown(f"**{persona['name']}** serves as the editorial intelligence behind this imprint.")
+
+        if persona.get('bio'):
+            st.markdown(f"\n*{persona['bio']}*")
+
+        # Editorial philosophy (if available)
+        if persona.get('editorial_philosophy'):
+            st.markdown(f"\n**Editorial Philosophy**: {persona['editorial_philosophy']}")
+
+        # Risk tolerance (if available)
+        if persona.get('risk_tolerance'):
+            st.markdown(f"\n**Risk Tolerance**: {persona['risk_tolerance']}")
+
+        # Reputation (if available)
+        if persona.get('reputation'):
+            st.markdown(f"\n**Reputation**: {persona['reputation']}")
+
     # Publisher information
     publisher = config.get("publisher", "Unknown Publisher")
     contact_email = config.get("contact_email", "")
-    
+
     st.markdown("---")
     st.markdown(f"**Published by**: {publisher}")
     if contact_email:
         st.markdown(f"**Contact**: {contact_email}")
-    
-    # Publisher persona (if available)
-    if imprint_data.get("persona"):
-        persona = imprint_data["persona"]
-        st.markdown("### Editorial Leadership")
-        st.markdown(f"**{persona['name']}**: {persona.get('bio', persona.get('reputation', ''))}")
 
 
 def render_publishing_focus(imprint_data: dict):
@@ -773,6 +918,441 @@ def get_imprint_catalog_for_thumbnail(imprint_name: str) -> list:
                 continue
     
     return []
+
+
+def render_forthcoming_books(imprint_data: dict):
+    """Render forthcoming books tab with tournament visualization."""
+    st.subheader("🚀 Forthcoming Books")
+
+    forthcoming_books = imprint_data.get("forthcoming_books", [])
+
+    if not forthcoming_books:
+        st.info("No forthcoming books announced yet. Check back soon for exciting new releases!")
+        return
+
+    st.markdown(f"**{len(forthcoming_books)} upcoming titles**")
+
+    # Display mode toggle
+    col1, col2, col3 = st.columns([2, 2, 1])
+
+    with col1:
+        display_mode = st.radio(
+            "Display Mode",
+            ["🏆 Tournament View", "📋 List View"],
+            horizontal=True,
+            key=f"display_mode_{imprint_data['name']}"
+        )
+
+    with col2:
+        if display_mode == "🏆 Tournament View" and len(forthcoming_books) > 8:
+            max_books = st.slider(
+                "Books in Tournament",
+                min_value=4,
+                max_value=min(len(forthcoming_books), 16),
+                value=8,
+                step=4,
+                key=f"max_books_{imprint_data['name']}"
+            )
+        else:
+            max_books = min(len(forthcoming_books), 8)
+
+    with col3:
+        if st.button("🔄 Reset Votes", key=f"reset_votes_{imprint_data['name']}"):
+            # Clear vote session state
+            vote_keys = [k for k in st.session_state.keys() if k.startswith(f"vote_count_{imprint_data['name']}")]
+            for key in vote_keys:
+                del st.session_state[key]
+            st.rerun()
+
+    st.markdown("---")
+
+    if display_mode == "🏆 Tournament View":
+        render_tournament_bracket(imprint_data, forthcoming_books[:max_books])
+    else:
+        render_forthcoming_list(forthcoming_books)
+
+
+def render_tournament_bracket(imprint_data: dict, books: list):
+    """Render tournament bracket for forthcoming books."""
+    if len(books) < 2:
+        st.info("Need at least 2 books for tournament view. Showing list view instead.")
+        render_forthcoming_list(books)
+        return
+
+    st.markdown("""
+    ### 🏆 Reader Interest Tournament
+    *Vote for the books you're most excited about! The books with the most votes advance to the next round.*
+    """)
+
+    # Initialize session state for votes if needed
+    imprint_key = imprint_data['name']
+
+    # Determine tournament structure based on number of books
+    num_books = len(books)
+    if num_books <= 4:
+        rounds = ["Finals"]
+    elif num_books <= 8:
+        rounds = ["Round 1", "Finals"]
+    else:
+        rounds = ["Round 1", "Round 2", "Finals"]
+
+    # Create matchups for Round 1
+    matchups = []
+    for i in range(0, len(books), 2):
+        if i + 1 < len(books):
+            matchups.append((books[i], books[i + 1]))
+        else:
+            # Odd number of books - last one gets a bye
+            matchups.append((books[i], None))
+
+    # Display matchups in columns
+    st.markdown("#### 🎯 Round 1 Matchups")
+    st.markdown("*Vote for the books you want to see! Each vote helps us understand reader interest.*")
+
+    cols = st.columns(min(len(matchups), 2))
+
+    for idx, (book1, book2) in enumerate(matchups):
+        with cols[idx % 2]:
+            render_matchup_card(imprint_data, book1, book2, idx)
+
+    # Show current standings
+    st.markdown("---")
+    st.markdown("#### 📊 Current Standings")
+
+    # Get vote counts for all books
+    book_votes = []
+    for book in books:
+        book_id = book.get('id', book.get('isbn13', str(hash(book.get('title', '')))))
+        vote_key = f"vote_count_{imprint_key}_{book_id}"
+        votes = st.session_state.get(vote_key, 0)
+        book_votes.append({
+            'title': book.get('title', 'Unknown Title'),
+            'author': book.get('author', 'Unknown'),
+            'votes': votes,
+            'pub_date': book.get('publication_date', 'TBA')
+        })
+
+    # Sort by votes
+    book_votes_sorted = sorted(book_votes, key=lambda x: x['votes'], reverse=True)
+
+    # Display as dataframe
+    standings_df = pd.DataFrame(book_votes_sorted)
+    st.dataframe(
+        standings_df,
+        column_config={
+            "title": "Book Title",
+            "author": "Author",
+            "votes": st.column_config.NumberColumn("📊 Votes", format="%d"),
+            "pub_date": "Release Date"
+        },
+        hide_index=True,
+        use_container_width=True
+    )
+
+
+def render_matchup_card(imprint_data: dict, book1: dict, book2: dict, matchup_idx: int):
+    """Render a single matchup card with voting."""
+    imprint_key = imprint_data['name']
+
+    with st.container(border=True):
+        st.markdown(f"##### Matchup {matchup_idx + 1}")
+
+        if book2 is None:
+            # Bye - only one book
+            render_tournament_book(imprint_data, book1, f"m{matchup_idx}_b1")
+            st.info("🎯 This book advances automatically (bye)")
+        else:
+            # Regular matchup
+            col1, col2 = st.columns(2)
+
+            with col1:
+                render_tournament_book(imprint_data, book1, f"m{matchup_idx}_b1")
+
+            with col2:
+                render_tournament_book(imprint_data, book2, f"m{matchup_idx}_b2")
+
+
+def render_tournament_book(imprint_data: dict, book: dict, widget_key: str):
+    """Render a single book in tournament format with voting."""
+    imprint_key = imprint_data['name']
+    book_id = book.get('id', book.get('isbn13', str(hash(book.get('title', '')))))
+    vote_key = f"vote_count_{imprint_key}_{book_id}"
+
+    # Initialize vote count in session state
+    if vote_key not in st.session_state:
+        st.session_state[vote_key] = 0
+
+    # Display book info
+    title = book.get('title', 'Unknown Title')
+    author = book.get('author', 'Unknown Author')
+    pub_date = book.get('publication_date', 'TBA')
+
+    st.markdown(f"**{title}**")
+    st.markdown(f"*by {author}*")
+    st.markdown(f"📅 {pub_date}")
+
+    # Show short description if available
+    if book.get('back_cover_text'):
+        with st.expander("📖 Description"):
+            st.markdown(book['back_cover_text'][:200] + "...")
+
+    # Vote button
+    current_votes = st.session_state[vote_key]
+
+    col1, col2 = st.columns([2, 1])
+
+    with col1:
+        if st.button(
+            f"📚 I'm Interested!",
+            key=f"vote_btn_{imprint_key}_{widget_key}",
+            use_container_width=True
+        ):
+            st.session_state[vote_key] += 1
+            st.rerun()
+
+    with col2:
+        # Display current vote count with visual indicator
+        if current_votes > 0:
+            st.markdown(f"**{current_votes}** 🌟")
+        else:
+            st.markdown("0 votes")
+
+
+def render_forthcoming_list(books: list):
+    """Render forthcoming books as a simple list."""
+    st.markdown("#### 📋 Upcoming Releases")
+
+    for book in books:
+        with st.container(border=True):
+            col1, col2 = st.columns([3, 1])
+
+            with col1:
+                st.markdown(f"### {book.get('title', 'Unknown Title')}")
+                st.markdown(f"**Author**: {book.get('author', 'Unknown Author')}")
+
+                if book.get('series_name'):
+                    st.markdown(f"**Series**: {book.get('series_name')}")
+
+                if book.get('back_cover_text'):
+                    st.markdown(f"*{book['back_cover_text'][:200]}...*")
+
+            with col2:
+                pub_date = book.get('publication_date', 'TBA')
+                st.markdown(f"**Release Date**")
+                st.markdown(f"{pub_date}")
+
+                # Simple interest indicator (non-interactive in list view)
+                st.markdown("📚 *Coming Soon*")
+
+
+def render_academic_paper(imprint_data: dict):
+    """Render academic paper tab with generation capability."""
+    st.subheader("📄 Academic Paper")
+
+    paper_path = imprint_data.get("academic_paper_path")
+    imprint_name = imprint_data.get("name")
+    display_name = imprint_data.get("agent_config", {}).get('display_name', imprint_name)
+    config = imprint_data.get("config", {})
+
+    # Check if paper generation is enabled in config
+    paper_gen_config = config.get("academic_paper_generation", {})
+    paper_gen_enabled = paper_gen_config.get("enabled", False)
+
+    st.markdown("### About This Imprint: An Academic Perspective")
+
+    # Display paper information
+    st.markdown(f"""
+    This academic paper provides a scholarly analysis of the **{display_name}**
+    imprint, its editorial approach, and its contribution to contemporary publishing.
+
+    The paper follows academic standards with sections on methodology, implementation,
+    impact analysis, and future directions.
+    """)
+
+    # Paper exists - show download and info
+    if paper_path and Path(paper_path).exists():
+        st.markdown("---")
+
+        col1, col2, col3 = st.columns([2, 2, 2])
+
+        with col1:
+            # Download PDF button
+            try:
+                with open(paper_path, 'rb') as f:
+                    paper_data = f.read()
+
+                st.download_button(
+                    label="📥 Download PDF",
+                    data=paper_data,
+                    file_name=Path(paper_path).name,
+                    mime="application/pdf",
+                    use_container_width=True
+                )
+            except Exception as e:
+                st.error(f"Error loading paper: {e}")
+
+        with col2:
+            # Check for markdown version
+            md_path = Path(str(paper_path).replace('.pdf', '.md'))
+            if md_path.exists():
+                try:
+                    with open(md_path, 'r', encoding='utf-8') as f:
+                        md_data = f.read()
+
+                    st.download_button(
+                        label="📥 Download Markdown",
+                        data=md_data,
+                        file_name=md_path.name,
+                        mime="text/markdown",
+                        use_container_width=True
+                    )
+                except Exception:
+                    pass
+
+        with col3:
+            # Regenerate option
+            if paper_gen_enabled:
+                if st.button("🔄 Regenerate Paper", use_container_width=True):
+                    with st.spinner("Regenerating academic paper..."):
+                        result = generate_academic_paper_for_imprint(imprint_name)
+                        if result and result.get("success"):
+                            st.success("Paper regenerated successfully!")
+                            st.rerun()
+                        else:
+                            st.error(f"Generation failed: {result.get('error', 'Unknown error')}")
+
+        # Display paper metadata
+        st.markdown("---")
+        st.markdown("#### Paper Information")
+
+        try:
+            stat = Path(paper_path).stat()
+            file_size = stat.st_size / 1024  # KB
+            mod_time = datetime.fromtimestamp(stat.st_mtime).strftime("%Y-%m-%d %H:%M")
+
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("File Size", f"{file_size:.1f} KB")
+            with col2:
+                st.metric("Last Modified", mod_time)
+            with col3:
+                if paper_gen_config.get("paper_settings", {}).get("target_word_count"):
+                    st.metric("Target Words", f"{paper_gen_config['paper_settings']['target_word_count']:,}")
+        except Exception:
+            pass
+
+        # Show paper preview if markdown exists
+        md_path = Path(str(paper_path).replace('.pdf', '.md'))
+        if md_path.exists():
+            with st.expander("📖 View Paper Content"):
+                try:
+                    with open(md_path, 'r', encoding='utf-8') as f:
+                        st.markdown(f.read())
+                except Exception as e:
+                    st.error(f"Could not display paper: {e}")
+
+    # Paper doesn't exist - offer generation
+    else:
+        st.markdown("---")
+
+        if paper_gen_enabled:
+            st.info("📝 No academic paper has been generated yet for this imprint.")
+
+            # Show what will be included
+            with st.expander("ℹ️ What's included in the academic paper?"):
+                focus_areas = paper_gen_config.get("content_configuration", {}).get("focus_areas", [])
+                paper_type = paper_gen_config.get("paper_settings", {}).get("default_paper_type", "case_study")
+                target_venues = paper_gen_config.get("paper_settings", {}).get("target_venues", [])
+
+                st.markdown(f"""
+                **Paper Type:** {paper_type.replace('_', ' ').title()}
+
+                **Target Venues:** {', '.join(target_venues)}
+
+                **Focus Areas:**
+                {chr(10).join(f"- {area}" for area in focus_areas) if focus_areas else "- Imprint development methodology\n- Publishing workflow analysis\n- Market positioning strategy"}
+
+                **Required Sections:**
+                - Abstract
+                - Introduction
+                - Methodology
+                - Implementation Results
+                - Industry Impact
+                - Future Directions
+                - Conclusion
+                - References
+                """)
+
+            col1, col2 = st.columns([1, 2])
+
+            with col1:
+                if st.button("🚀 Generate Academic Paper", use_container_width=True, type="primary"):
+                    with st.spinner("Generating academic paper... This may take a few minutes."):
+                        result = generate_academic_paper_for_imprint(imprint_name)
+
+                        if result and result.get("success"):
+                            st.success("✅ Paper generated successfully!")
+                            st.balloons()
+
+                            # Show generation summary
+                            st.markdown("**Generation Summary:**")
+                            context = result.get("context_data", {})
+                            st.markdown(f"- **Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
+                            st.markdown(f"- **Focus Areas:** {len(context.get('focus_areas', []))}")
+                            st.markdown(f"- **Output Directory:** `{result.get('output_directory', 'Unknown')}`")
+
+                            if st.button("🔄 Reload Page"):
+                                st.rerun()
+                        else:
+                            error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
+                            st.error(f"❌ Paper generation failed: {error_msg}")
+
+                            # Show debug info
+                            with st.expander("🔍 Debug Information"):
+                                st.json(result if result else {"error": "No result returned"})
+
+            with col2:
+                st.markdown("**Generation Time:** ~2-5 minutes")
+                st.markdown("**Output Format:** PDF + Markdown")
+                st.markdown("**Citation Style:** Chicago")
+
+        else:
+            st.warning("📝 Academic paper generation is not enabled for this imprint.")
+            st.markdown("Contact the editorial team to enable paper generation in the imprint configuration.")
+
+
+def generate_academic_paper_for_imprint(imprint_name: str) -> dict:
+    """
+    Generate an academic paper for the specified imprint.
+
+    Args:
+        imprint_name: Name of the imprint
+
+    Returns:
+        Dictionary with generation results
+    """
+    try:
+        # Import the paper generator
+        from codexes.modules.imprints.academic_paper_integration import ImprintPaperGenerator
+
+        # Initialize generator
+        generator = ImprintPaperGenerator()
+
+        # Generate the paper
+        result = generator.generate_paper_for_imprint(imprint_name)
+
+        return result
+
+    except ImportError as e:
+        return {
+            "success": False,
+            "error": f"Academic paper generation module not available: {e}"
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "error": f"Paper generation failed: {e}"
+        }
 
 
 if __name__ == "__main__":

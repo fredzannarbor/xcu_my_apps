@@ -36,16 +36,18 @@ sys.path.insert(0, str(project_root / 'all_applications_runner'))
 # Import xcu_my_apps framework components
 try:
     from shared.ui import render_unified_sidebar
+    from shared.logging_utils import get_logger
     from auth_integration import get_auth_manager
     AUTH_AVAILABLE = True
+    SHARED_LOGGING_AVAILABLE = True
 except ImportError as e:
-    # Fallback for development
-    logger.warning(f"Shared components not available: {e}")
+    # Fallback for development (logger not yet configured, so using pass)
     def render_unified_sidebar(**kwargs):
         pass  # Silent fallback
     def get_auth_manager():
         return None
     AUTH_AVAILABLE = False
+    SHARED_LOGGING_AVAILABLE = False
 
 # Import nimble-llm-caller
 try:
@@ -64,18 +66,22 @@ except ImportError:
     SUBSCRIPTION_AVAILABLE = False
 
 # Configure logging
-log_dir = Path("/Users/fred/xcu_my_apps/all_applications_runner/logs/resume_builder")
-log_dir.mkdir(parents=True, exist_ok=True)
+if SHARED_LOGGING_AVAILABLE:
+    logger = get_logger(__name__)
+else:
+    # Fallback to standard logging if shared logging not available
+    log_dir = Path("/Users/fred/xcu_my_apps/all_applications_runner/logs/resume_builder")
+    log_dir.mkdir(parents=True, exist_ok=True)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(log_dir / f"resume_builder_{datetime.now().strftime('%Y%m%d')}.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_dir / f"resume_builder_{datetime.now().strftime('%Y%m%d')}.log"),
+            logging.StreamHandler()
+        ]
+    )
+    logger = logging.getLogger(__name__)
 
 # Page configuration
 st.set_page_config(

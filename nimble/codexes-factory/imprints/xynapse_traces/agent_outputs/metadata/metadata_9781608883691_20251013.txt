@@ -1,0 +1,7 @@
+Book: AI-Driven Science: Speed versus Safety
+ISBN: 9781608883691
+
+[Mock LLM Response: Would generate content for: Suggest metadata improvements for:
+
+Title: AI-Driven Science: Speed versus Safety
+Current subtitle: ...]

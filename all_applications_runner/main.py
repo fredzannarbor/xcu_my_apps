@@ -263,6 +263,7 @@ def get_managers():
         return None, None
 
 
+@st.cache_data(ttl=60)  # Cache for 60 seconds
 def load_config():
     """Load the applications configuration."""
     config_path = Path(__file__).parent / "apps_config.json"
@@ -277,6 +278,7 @@ def load_config():
         return None
 
 
+@st.cache_data(ttl=30)  # Cache for 30 seconds
 def get_app_status():
     """Get current status of all applications."""
     try:
@@ -292,6 +294,12 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
     """Render the navigation sidebar."""
     # Title at very top
     st.sidebar.markdown("# 🌌 xtuff.ai / your personal ai multiverse")
+
+    st.sidebar.markdown("---")
+
+    # Render login widget after title
+    if auth_manager:
+        auth_manager.render_login_widget(location="sidebar")
 
     st.sidebar.markdown("---")
 
@@ -357,83 +365,10 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
     return page
 
 
-def render_home_page(
-    auth_manager: AuthManager, subscription_manager: SubscriptionManager, user_role: str
-):
-    """Render the revenue-optimized home page."""
-
-    # HERO SECTION
-    st.markdown(
-        """
-    <div class="hero-multiverse">
-        <h1 class="hero-title">Your Personal AI Multiverse</h1>
-        <h2 class="hero-subtitle">The Last Platform You'll Ever Need.<br>Because It Builds The Others.</h2>
-        <p class="hero-description">
-            <strong>Revolutionary Apps Today.</strong> Infinite Possibilities Tomorrow.<br>
-            Control your neurochemistry • Access 118 billion humans • Project infinite identities • Automate your life
-        </p>
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
-
-    col1, col2, col3 = st.columns([1, 1, 1])
-    with col1:
-        if st.button(
-            "🚀 Explore Free", type="primary", use_container_width=True, key="hero_free"
-        ):
-            st.info("👆 Create account in sidebar to start exploring")
-    with col2:
-        if st.button(
-            "💎 Unlock Everything", use_container_width=True, key="hero_premium"
-        ):
-            st.session_state["selected_page"] = "💳 Pricing"
-            st.rerun()
-    with col3:
-        st.markdown("**30-day guarantee**")
-
-    # Early Access Urgency (only if not already premium)
-    if user_role not in ["subscriber", "admin", "superadmin"]:
-        st.markdown(
-            """
-        <div class="urgency-banner">
-            🔥 FOUNDING MEMBER PRICING: Lock in a steep discount of $49/mo <i>forever</i>
-        </div>
-        """,
-            unsafe_allow_html=True,
-        )
-
-    # Get user access
-    config = load_config()
-    if not config:
-        return
-
-    status = get_app_status()
-    if not status:
-        st.warning("Checking app status...")
-        return
-
-    user_email = (
-        auth_manager.get_current_user().get("email")
-        if auth_manager and auth_manager.get_current_user()
-        else None
-    )
-    user_app_access = []
-
-    if user_email and subscription_manager:
-        try:
-            user_app_access = subscription_manager.get_app_access_list(user_email)
-        except Exception as e:
-            logger.error(f"Error getting user subscriptions: {e}")
-
-    has_premium = "*" in user_app_access or user_role in ["admin", "superadmin"]
-
-    # WORKING APPS SHOWCASE
-    st.markdown("---")
-    st.markdown("## Join the Journey to Self-Evolving Apps")
-
-    # Define all apps data
-    apps_data = {
+@st.cache_data
+def get_apps_data():
+    """Get static app data dictionary. Cached since it doesn't change."""
+    return {
         "ai_lab_for_book_lovers": (
             "👨‍🔬",
             "AI Lab for Book-Lovers from Nimble Books",
@@ -550,6 +485,72 @@ def render_home_page(
         ),
     }
 
+
+def render_home_page(
+    auth_manager: AuthManager,
+    subscription_manager: SubscriptionManager,
+    user_role: str,
+):
+    """Render the conversion-optimized home page."""
+
+    # Load config and status
+    config = load_config()
+    status = get_app_status()
+
+    if not config or not status:
+        st.error("Unable to load configuration or status")
+        return
+
+    # Get static apps data (cached)
+    apps_data = get_apps_data()
+
+    # Check premium status
+    has_premium = user_role in ["subscriber", "admin", "superadmin"]
+
+    # HERO SECTION
+    st.markdown(
+        """
+    <div class="hero-multiverse">
+        <h1 class="hero-title">Your Personal AI Multiverse</h1>
+        <h2 class="hero-subtitle">The Last Platform You'll Ever Need.<br>Because It Builds The Others.</h2>
+        <p class="hero-description">
+            <strong>Revolutionary Apps Today.</strong> Infinite Possibilities Tomorrow.<br>
+            Control your neurochemistry • Access 118 billion humans • Project infinite identities • Automate your life
+        </p>
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
+
+    col1, col2, col3 = st.columns([1, 1, 1])
+    with col1:
+        if st.button(
+            "🚀 Explore Free", type="primary", use_container_width=True, key="hero_free"
+        ):
+            st.info("👆 Create account in sidebar to start exploring")
+    with col2:
+        if st.button(
+            "💎 Unlock Everything", use_container_width=True, key="hero_premium"
+        ):
+            st.session_state["selected_page"] = "💳 Pricing"
+            st.rerun()
+    with col3:
+        st.markdown("**30-day guarantee**")
+
+    # URGENCY BANNER (for non-premium users)
+    if not has_premium:
+        st.markdown(
+            """
+        <div class="urgency-banner">
+            ⚡ Early Access: Lock in $49/mo pricing FOREVER • Premium launching soon
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("---")
+    st.markdown("## Explore the Multiverse")
+
     # Get UI settings from config
     ui_settings = config.get("ui_settings", {})
     expander_settings = ui_settings.get("home_page_expanders", {})
@@ -618,29 +619,8 @@ def render_home_page(
                 st.markdown(f"{description}")
                 st.markdown("")
 
-                for feature in features:
-                    st.markdown(f"- {feature}")
-
-                st.markdown("")
-                st.markdown("**What you get FREE:**")
-                for feat in free_features:
-                    st.markdown(f"✅ {feat}")
-
-                if not has_premium:
-                    st.markdown("")
-                    st.markdown("**Unlock with Premium:**")
-                    for feat in premium_features:
-                        st.markdown(f"🔒 {feat}")
-
-            with col2:
-                # Special handling for info-only expanders
+                # Special handling for AI Lab - show buttons instead of bulleted list
                 if is_info_only and app_id == "ai_lab_for_book_lovers":
-                    st.info("📖 Informational Hub")
-                    st.markdown("---")
-
-                    # Links to resources
-                    st.markdown("### Quick Links:")
-
                     # Get codexes factory port for links
                     codexes_port = 8502  # default
                     for org_id, org_data in organizations.items():
@@ -655,11 +635,52 @@ def render_home_page(
                     if session_id:
                         base_url += f"?session_id={session_id}"
 
+                    # What you get FREE (concise)
+                    st.markdown("**🆓 Free:** Browse catalog • View mission • Newsletter")
+
+                    # With premium (single line)
+                    if not has_premium:
+                        st.markdown("**💎 Premium:** AI Lab tools • Experimental imprints • Priority assistance")
+
+                    st.markdown("---")
+
+                    # Quick Links buttons (consolidated)
                     if st.button(
-                        "👨‍🔬 AI Lab Home", key="ailab_home", use_container_width=True
+                        "📜 Mission Statement",
+                        key="ailab_mission",
+                        use_container_width=True,
                     ):
                         st.markdown(
                             f'<meta http-equiv="refresh" content="0; url={base_url}" />',
+                            unsafe_allow_html=True,
+                        )
+
+                    if st.button(
+                        "📚 Annotated Bibliography",
+                        key="ailab_bibliography",
+                        use_container_width=True,
+                    ):
+                        # Use Streamlit's multi-page URL format with custom url_path
+                        url = f"http://localhost:{codexes_port}/annotated_bibliography_alt"
+                        if session_id:
+                            url += f"?session_id={session_id}"
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={url}" />',
+                            unsafe_allow_html=True,
+                        )
+
+                    if st.button(
+                        "📄 Longform Prospectus",
+                        key="ailab_prospectus",
+                        use_container_width=True,
+                    ):
+                        # Longform Prospectus is a section within the Home page
+                        # Just link to the Home page (root)
+                        url = f"http://localhost:{codexes_port}/"
+                        if session_id:
+                            url += f"?session_id={session_id}"
+                        st.markdown(
+                            f'<meta http-equiv="refresh" content="0; url={url}" />',
                             unsafe_allow_html=True,
                         )
 
@@ -668,33 +689,74 @@ def render_home_page(
                         key="ailab_store",
                         use_container_width=True,
                     ):
-                        url = (
-                            f"{base_url}&page=Bookstore"
-                            if "?" in base_url
-                            else f"{base_url}?page=Bookstore"
-                        )
+                        # Link to Bookstore page with xynapse_traces imprint
+                        # Use Streamlit's multi-page URL format: /Bookstore?imprint=xynapse_traces
+                        url = f"http://localhost:{codexes_port}/Bookstore?imprint=xynapse_traces"
+                        if session_id:
+                            url += f"&session_id={session_id}"
                         st.markdown(
                             f'<meta http-equiv="refresh" content="0; url={url}" />',
                             unsafe_allow_html=True,
                         )
+
+                    # Xynapse Traces button with bright orange color - using HTML button
+                    # Use Streamlit's multi-page URL format: /Imprint_Display?imprint=xynapse_traces
+                    xynapse_url = f"http://localhost:{codexes_port}/Imprint_Display?imprint=xynapse_traces"
+                    if session_id:
+                        xynapse_url += f"&session_id={session_id}"
+
+                    st.markdown(f"""
+                        <a href="{xynapse_url}" target="_self" style="text-decoration: none;">
+                            <button style="
+                                width: 100%;
+                                padding: 0.5rem 1rem;
+                                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                                color: white;
+                                font-weight: 700;
+                                border: none;
+                                border-radius: 0.5rem;
+                                cursor: pointer;
+                                box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+                                font-size: 1rem;
+                                transition: all 0.3s ease;
+                            ">
+                                ✨ Xynapse Traces - New AI-generated imprint!
+                            </button>
+                        </a>
+                    """, unsafe_allow_html=True)
 
                     if st.button(
-                        "✨ Xynapse Traces",
-                        key="ailab_xynapse",
+                        "✉️ Subscribe to AI Lab Newsletter",
+                        key="ailab_substack",
                         use_container_width=True,
                     ):
-                        url = (
-                            f"{base_url}&page=Imprint_Display"
-                            if "?" in base_url
-                            else f"{base_url}?page=Imprint_Display"
-                        )
                         st.markdown(
-                            f'<meta http-equiv="refresh" content="0; url={url}" />',
+                            '<meta http-equiv="refresh" content="0; url=https://fredzannarbor.substack.com" />',
                             unsafe_allow_html=True,
                         )
+                else:
+                    # Regular app - show features as bulleted list
+                    for feature in features:
+                        st.markdown(f"- {feature}")
 
-                    st.markdown("---")
-                    st.caption("💡 Premium: Access AI Lab tools")
+                # Skip "What you get FREE" section for Codexes Factory and AI Lab
+                if app_id not in ["codexes_factory", "ai_lab_for_book_lovers"]:
+                    st.markdown("")
+                    st.markdown("**What you get FREE:**")
+                    for feat in free_features:
+                        st.markdown(f"✅ {feat}")
+
+                if not has_premium and app_id != "ai_lab_for_book_lovers":
+                    st.markdown("")
+                    st.markdown("**Unlock with Premium:**")
+                    for feat in premium_features:
+                        st.markdown(f"🔒 {feat}")
+
+            with col2:
+                # Special handling for info-only expanders
+                if is_info_only and app_id == "ai_lab_for_book_lovers":
+                    st.info("📖 Informational Hub")
+                    st.caption("Browse our experiments, tools, and growing catalog of AI-assisted works.")
 
                 else:
                     # Regular app handling
@@ -1129,14 +1191,10 @@ def main():
         except Exception as e:
             logger.error(f"Error auto-starting applications: {e}")
 
-    # Render login widget
-    if auth_manager:
-        auth_manager.render_login_widget(location="sidebar")
-
     # Get user role
     user_role = auth_manager.get_user_role() if auth_manager else "anonymous"
 
-    # Render sidebar and get selected page
+    # Render sidebar (includes login widget) and get selected page
     page = render_sidebar(auth_manager, user_role)
 
     # Override page if set in session state

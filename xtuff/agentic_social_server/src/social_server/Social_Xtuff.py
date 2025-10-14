@@ -840,6 +840,11 @@ def main():
     else:
         st.info("👋 Welcome! You're viewing the public feed. Log in for a personalized experience.")
 
+        # Add feed generator controls right under Welcome for anonymous users - OPEN by default
+        with st.expander("🎛️ Try Our AI Feed Generator (Limited Free Access)", expanded=True):
+            st.markdown("**Generate your own AI-powered feed!** You get 3 free feed generations to explore.")
+            display_feed_controls(feed_manager, user_id, feed_generator, key_prefix="anon_welcome", is_anonymous=True)
+
     # Sidebar content is now handled by unified sidebar
 
 
@@ -942,11 +947,6 @@ def main():
             display_personas_tab(persona_manager, feed_manager, user_id)
 
     else:
-        # Add limited feed controls for anonymous users
-        with st.expander("🎛️ Try Our AI Feed Generator (Limited Free Access)", expanded=False):
-            st.markdown("**Generate your own AI-powered feed!** You get 3 free feed generations to explore.")
-            display_feed_controls(feed_manager, user_id, feed_generator, key_prefix="anon", is_anonymous=True)
-
         st.markdown("---")
 
         tab1, tab2, tab3 = st.tabs(["🌍 Recent Posts", "🔥 Trending", "🎭 AI Personas"])

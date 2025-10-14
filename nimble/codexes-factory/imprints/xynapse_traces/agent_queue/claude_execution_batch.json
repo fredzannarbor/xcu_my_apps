@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "queue_id": "q0001",
+      "task_id": 5,
+      "task_name": "Write back cover copy for book needing it",
+      "category": "catalog_development",
+      "output_dir": "back_cover_copy",
+      "prompt": "Write compelling back cover copy (150-200 words) for:\n\nTitle: Family Support: Data vs. Intuition\nSubtitle: nan\nAuthor: AI Lab for Book-Lovers\nContext: Part of xynapse traces imprint (pilsa-inspired transcriptive meditation practice)\n\nCreate copy that:\n- Opens with hook\n- Explains what reader will gain\n- Positions within pilsa tradition\n- Ends with compelling reason to read\n\nTone: Thoughtful, inviting, intellectually ambitious\n\nOutput: Save as 'back_cover_ISBN_YYYYMMDD.txt' with ISBN and today's date",
+      "context": {
+        "book": "{'id': '15ba10fb8f3b', 'title': 'Family Support: Data vs. Intuition', 'subtitle': nan, 'author': 'AI Lab for Book-Lovers', 'isbn13': 9781608883967, 'series_name': 'Transcriptive Meditation', 'series_n"
+      },
+      "queued_at": "2025-10-13T20:11:10.809124",
+      "status": "pending"
+    },
+    {
+      "queue_id": "q0002",
+      "task_id": 1,
+      "task_name": "Generate social media post about catalog book",
+      "category": "content_creation",
+      "output_dir": "social_media",
+      "prompt": "Create a concise, engaging social media post (280 chars max) for:\n\nBook: AI-Driven Science: Speed versus Safety\nSubtitle: nan\nAuthor: AI Lab for Book-Lovers\nDescription: The greatest scientific revolution in human history is here, but what if its unstoppable speed outpaces our ability to control it? Welcome to the era of AI-Driven Science, where autonomous agents can \n\nImprint: xynapse traces (pilsa/transcriptive meditation practice)\nTone: Thoughtful, inviting, intellectually curious\nInclude: Relevant hashtags\n\nOutput: Save to file named 'social_post_YYYYMMDD.txt' with today's date",
+      "context": {
+        "book": "{'id': 'babf1e25c890', 'title': 'AI-Driven Science: Speed versus Safety', 'subtitle': nan, 'author': 'AI Lab for Book-Lovers', 'isbn13': 9781608883691, 'series_name': 'Transcriptive Meditation', 'seri"
+      },
+      "queued_at": "2025-10-13T20:11:19.543504",
+      "status": "pending"
+    },
+    {
+      "queue_id": "q0003",
+      "task_id": 16,
+      "task_name": "Develop seasonal catalog promotion concept",
+      "category": "strategic",
+      "output_dir": "promotions",
+      "prompt": "Create a Fall catalog promotion concept for xynapse traces.\n\nInclude:\n- Seasonal theme/angle\n- 3-5 featured books to highlight\n- Promotion message (100 words)\n- Social media angle\n- Email subject line\n\nConnect season to reading/learning/contemplation themes.\nTone: Seasonal, inviting, thoughtful\n\nOutput: Save as 'seasonal_promo_SEASON_YYYYMMDD.md' with season and today's date",
+      "context": {
+        "season": "Fall"
+      },
+      "queued_at": "2025-10-13T20:11:19.769109",
+      "status": "pending"
+    }
+  ],
+  "output_base": "/Users/fred/xcu_my_apps/nimble/codexes-factory/imprints/xynapse_traces/agent_outputs",
+  "exported_at": "2025-10-13T20:11:20.383913"
+}

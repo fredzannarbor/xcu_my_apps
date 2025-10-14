@@ -51,6 +51,11 @@ def get_cli_arg(arg_name, default_value=None):
         return default_value
 
 # --- Get catalog file path from imprint ---
+# Check if imprint is in query params and set session state
+query_params = st.query_params
+if "imprint" in query_params and query_params["imprint"]:
+    st.session_state['imprint'] = query_params["imprint"]
+
 if 'imprint' in st.session_state and st.session_state.get("imprint", "default"):
     catalog_file_path = Path('imprints') / st.session_state.get("imprint", "default") / 'books.csv'
 else:
@@ -449,7 +454,13 @@ def display_catalog():
 
         with col1:
             if "front_cover_image_path" in row and pd.notna(row["front_cover_image_path"]):
-                st.image(str(row["front_cover_image_path"]), use_container_width=False)
+                # Check if file exists before trying to display it
+                cover_path = Path(row["front_cover_image_path"])
+                if cover_path.exists() and cover_path.is_file():
+                    st.image(str(cover_path), use_container_width=False)
+                else:
+                    # Display placeholder if file doesn't exist
+                    st.image("https://via.placeholder.com/150x225/CCCCCC/FFFFFF?Text=No+Cover", use_container_width=False)
             else:
                 # Display a placeholder if no cover image is available
                 st.image("https://via.placeholder.com/150x225/CCCCCC/FFFFFF?Text=No+Cover", use_container_width=False)
@@ -553,14 +564,20 @@ def display_book_details(book_id):
         image_list = []
         caption_list = []
         if 'front_cover_image_path' in book and pd.notna(book['front_cover_image_path']):
-            image_list.append(book['front_cover_image_path'])
-            caption_list.append(get_translation(lang, 'front_cover'))
+            cover_path = Path(book['front_cover_image_path'])
+            if cover_path.exists() and cover_path.is_file():
+                image_list.append(str(cover_path))
+                caption_list.append(get_translation(lang, 'front_cover'))
         if 'back_cover_image_path' in book and pd.notna(book['back_cover_image_path']):
-            image_list.append(book['back_cover_image_path'])
-            caption_list.append(get_translation(lang, 'back_cover'))
+            back_path = Path(book['back_cover_image_path'])
+            if back_path.exists() and back_path.is_file():
+                image_list.append(str(back_path))
+                caption_list.append(get_translation(lang, 'back_cover'))
         if 'full_spread_image_path' in book and pd.notna(book['full_spread_image_path']):
-            image_list.append(book['full_spread_image_path'])
-            caption_list.append(get_translation(lang, 'full_spread'))
+            spread_path = Path(book['full_spread_image_path'])
+            if spread_path.exists() and spread_path.is_file():
+                image_list.append(str(spread_path))
+                caption_list.append(get_translation(lang, 'full_spread'))
 
         # FIX: Use st.tabs to create a carousel-like image viewer.
         if image_list:
