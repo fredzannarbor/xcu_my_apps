@@ -1205,7 +1205,7 @@ def render_forthcoming_list(books: list):
                 st.markdown("📚 *Coming Soon*")
 
 
-def render_academic_paper(imprint_data: dict):
+def render_research_paper(imprint_data: dict):
     """Render research paper tab - auto-generates if missing."""
     st.subheader("📄 Research Paper")
 
@@ -1326,7 +1326,7 @@ def render_academic_paper(imprint_data: dict):
             st.session_state[generation_key] = True
 
             with st.spinner("Generating research paper... This may take 2-5 minutes."):
-                result = generate_academic_paper_for_imprint(imprint_name)
+                result = generate_research_paper_for_imprint(imprint_name)
 
                 # Clear generation flag
                 st.session_state[generation_key] = False
@@ -1352,9 +1352,9 @@ def render_academic_paper(imprint_data: dict):
                         st.json(result if result else {"error": "No result returned"})
 
 
-def generate_academic_paper_for_imprint(imprint_name: str) -> dict:
+def generate_research_paper_for_imprint(imprint_name: str) -> dict:
     """
-    Generate an academic paper for the specified imprint.
+    Generate a research paper for the specified imprint.
 
     Args:
         imprint_name: Name of the imprint
