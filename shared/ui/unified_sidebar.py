@@ -168,15 +168,31 @@ def render_xtuff_nav():
     with st.sidebar.expander("🌐 xtuff ai nav"):
         st.markdown("### Apps")
 
-        # Updated to match apps_config.json - only showing public_visible apps
-        apps = [
-            ("🏠 Home", "http://localhost:8500"),
-            ("🤖 Social Xtuff", "http://localhost:8501"),
-            ("📚 Codexes Factory", "http://localhost:8502"),
-            ("🌍 Trillions of People", "http://localhost:8504"),
-            ("⏰ Daily Engine", "http://localhost:8509"),
-            ("👤 AI Resume Builder", "http://localhost:8512"),
-        ]
+        # Detect if running on localhost or production
+        import os
+        hostname = get_machine_info()
+
+        # Map apps to their subdomains/URLs
+        if 'localhost' in hostname or hostname == 'Freds-MacBook-Pro.local':
+            # Development: use localhost with ports
+            apps = [
+                ("🏠 Home", "http://localhost:8500"),
+                ("🤖 Social Xtuff", "http://localhost:8501"),
+                ("📚 Codexes Factory", "http://localhost:8502"),
+                ("🌍 Trillions of People", "http://localhost:8504"),
+                ("⏰ Daily Engine", "http://localhost:8509"),
+                ("👤 AI Resume Builder", "http://localhost:8512"),
+            ]
+        else:
+            # Production: use xtuff.ai subdomains
+            apps = [
+                ("🏠 Home", "https://xtuff.ai"),
+                ("🤖 Social Xtuff", "https://social.xtuff.ai"),
+                ("📚 Codexes Factory", "https://codexes.xtuff.ai"),
+                ("🌍 Trillions of People", "https://trillions.xtuff.ai"),
+                ("⏰ Daily Engine", "https://daily.xtuff.ai"),
+                ("👤 AI Resume Builder", "https://resume.xtuff.ai"),
+            ]
 
         # Get session ID if authenticated to maintain session across apps
         session_id = st.session_state.get('shared_session_id')
