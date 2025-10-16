@@ -1,0 +1,84 @@
+% arXiv-style template with CJK support
+\documentclass[11pt,a4paper]{article}
+
+% Core packages
+\usepackage{fontspec}
+\usepackage{luatexja-fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{calc}
+
+% Font configuration for CJK support (LuaLaTeX compatible)
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+\setmainjfont{AppleMyungjo}
+\setsansjfont{Apple SD Gothic Neo}
+
+% Fix for tight lists
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+% arXiv-style formatting
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Title and author formatting
+$if(title)$
+\title{\textbf{$title$}}
+$endif$
+
+$if(author)$
+\author{
+$for(author)$
+  $author$$sep$ \\
+$endfor$
+}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+\begin{document}
+
+\maketitle
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(keywords)$
+\noindent\textbf{Keywords:} $keywords$
+
+\vspace{1em}
+$endif$
+
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+$body$
+
+\end{document}
