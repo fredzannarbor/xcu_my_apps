@@ -190,7 +190,7 @@
   },
   "ui_settings": {
     "home_page_expanders": {
-      "order": ["ai_lab_for_book_lovers", "codexes_factory", "agentic_social_server", "ai_resume_builder", "trillionsofpeople", "personal_time_management"],
+      "order": ["ai_lab_for_book_lovers", "agentic_social_server", "ai_resume_builder", "trillionsofpeople", "personal_time_management", "codexes_factory"],
       "default_states": {
         "ai_lab_for_book_lovers": true,
         "codexes_factory": false,

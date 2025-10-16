@@ -373,8 +373,8 @@ def get_apps_data():
             "👨‍🔬",
             "AI Lab for Book-Lovers from Nimble Books",
             "Humans Using Models to Make Books Better",
-            "Minimally, make sure AGI doesn't kill the world of books. Maximally, use AGI to shape a world where books are more important, vital, and ubiquitous than ever before.",
-            "Explore cutting-edge AI-human collaboration in book publishing. Browse our experiments, tools, and growing catalog of AI-assisted works.",
+            "AI making the world of book-lovers bigger, richer, and more diverse than before.",
+            "Explore cutting-edge AI-human collaboration in book publishing.",
             [
                 "**Mission Statement:** Ensure books thrive in the AGI era",
                 "**Longform Prospectus:** Our vision for AI-powered publishing",
@@ -635,16 +635,33 @@ def render_home_page(
                     if session_id:
                         base_url += f"?session_id={session_id}"
 
-                    # What you get FREE (concise)
-                    st.markdown("**🆓 Free:** Browse catalog • View mission • Newsletter")
-
-                    # With premium (single line)
-                    if not has_premium:
-                        st.markdown("**💎 Premium:** AI Lab tools • Experimental imprints • Priority assistance")
-
-                    st.markdown("---")
-
                     # Quick Links buttons (consolidated)
+                    # Xynapse Traces button with bright orange color - using HTML button - MOVED TO TOP
+                    # Use Streamlit's multi-page URL format: /Imprint_Display?imprint=xynapse_traces
+                    xynapse_url = f"http://localhost:{codexes_port}/Imprint_Display?imprint=xynapse_traces"
+                    if session_id:
+                        xynapse_url += f"&session_id={session_id}"
+
+                    st.markdown(f"""
+                        <a href="{xynapse_url}" target="_self" style="text-decoration: none;">
+                            <button style="
+                                width: 100%;
+                                padding: 0.5rem 1rem;
+                                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                                color: white;
+                                font-weight: 700;
+                                border: none;
+                                border-radius: 0.5rem;
+                                cursor: pointer;
+                                box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+                                font-size: 1rem;
+                                transition: all 0.3s ease;
+                            ">
+                                ✨ Xynapse Traces - New AI-generated imprint!
+                            </button>
+                        </a>
+                    """, unsafe_allow_html=True)
+
                     if st.button(
                         "📜 Mission Statement",
                         key="ailab_mission",
@@ -699,32 +716,6 @@ def render_home_page(
                             unsafe_allow_html=True,
                         )
 
-                    # Xynapse Traces button with bright orange color - using HTML button
-                    # Use Streamlit's multi-page URL format: /Imprint_Display?imprint=xynapse_traces
-                    xynapse_url = f"http://localhost:{codexes_port}/Imprint_Display?imprint=xynapse_traces"
-                    if session_id:
-                        xynapse_url += f"&session_id={session_id}"
-
-                    st.markdown(f"""
-                        <a href="{xynapse_url}" target="_self" style="text-decoration: none;">
-                            <button style="
-                                width: 100%;
-                                padding: 0.5rem 1rem;
-                                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-                                color: white;
-                                font-weight: 700;
-                                border: none;
-                                border-radius: 0.5rem;
-                                cursor: pointer;
-                                box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-                                font-size: 1rem;
-                                transition: all 0.3s ease;
-                            ">
-                                ✨ Xynapse Traces - New AI-generated imprint!
-                            </button>
-                        </a>
-                    """, unsafe_allow_html=True)
-
                     if st.button(
                         "✉️ Subscribe to AI Lab Newsletter",
                         key="ailab_substack",
@@ -734,6 +725,15 @@ def render_home_page(
                             '<meta http-equiv="refresh" content="0; url=https://fredzannarbor.substack.com" />',
                             unsafe_allow_html=True,
                         )
+
+                    # Free/Premium section MOVED BELOW all buttons
+                    st.markdown("---")
+                    # What you get FREE (concise)
+                    st.markdown("**🆓 Free:** Browse catalog • View mission • Newsletter")
+
+                    # With premium (single line)
+                    if not has_premium:
+                        st.markdown("**💎 Premium:** AI Lab tools • Experimental imprints • Priority assistance")
                 else:
                     # Regular app - show features as bulleted list
                     for feature in features:
@@ -835,21 +835,21 @@ def render_home_page(
             "🎨 Collectiverse",
             "Universe Creation Engine",
             "Build infinite universes from your collections. AGI-proof your collecting.",
-            "Q2 2026",
+            "1Q2026",
             "linear-gradient(135deg, #8B5CF6, #A78BFA)",
         ),
         (
             "📝 ArXiv Paper Writer",
             "Scientific Reality Generator",
             "Transform ideas into peer-reviewed publications with AI research assistance.",
-            "Q3 2026",
+            "1Q2026",
             "linear-gradient(135deg, #A78BFA, #C4B5FD)",
         ),
         (
             "🤖 Algorithmic App Generator",
             "The Meta-Platform",
             "Apps that create apps. New tools generated based on your usage patterns.",
-            "Q4 2026",
+            "2Q2026",
             "linear-gradient(135deg, #C4B5FD, #DDD6FE)",
         ),
     ]

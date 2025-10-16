@@ -221,8 +221,8 @@ def render_imprint_page(imprint_name: str):
     # Render imprint header with branding
     render_dynamic_header(imprint_data)
     
-    # Main content tabs (reordered: About, Focus, Forthcoming, Catalog, Academic Paper, Connect)
-    tabs = ["🎯 About", "📊 Focus", "🚀 Forthcoming Books", "📚 Catalog", "📄 Research Paper", "📧 Connect"]
+    # Main content tabs (reordered: About, Specs, Idea Tournament, Catalog, Academic Paper, Connect)
+    tabs = ["🎯 About", "📊 Specs", "🚀 Idea Tournament", "📚 Catalog", "📄 Research Paper", "📧 Connect"]
 
     tab_objects = st.tabs(tabs)
     current_tab = 0
@@ -232,17 +232,17 @@ def render_imprint_page(imprint_name: str):
         render_imprint_about(imprint_data)
     current_tab += 1
 
-    # Focus tab
+    # Specs tab
     with tab_objects[current_tab]:
         render_publishing_focus(imprint_data)
     current_tab += 1
 
-    # Forthcoming Books tab
+    # Idea Tournament tab
     with tab_objects[current_tab]:
         render_forthcoming_books(imprint_data)
     current_tab += 1
 
-    # Catalog tab
+    # Catalog tab - links to bookstore
     with tab_objects[current_tab]:
         render_imprint_catalog(imprint_name, imprint_data)
     current_tab += 1
@@ -332,9 +332,12 @@ def load_imprint_data(imprint_name: str) -> dict:
                         "editorial_philosophy": getattr(imprint.publisher_persona, 'editorial_philosophy', None)
                     }
 
-                # Check for academic paper
+                # Check for academic paper (prioritize imprints directory)
                 imprint_slug = imprint.slug if hasattr(imprint, 'slug') else imprint_name.lower().replace(' ', '_')
                 academic_paper_paths = [
+                    Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.pdf"),
+                    Path(f"imprints/{imprint_slug}/academic_paper.pdf"),
+                    Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.md"),
                     Path(f"output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf"),
                     imprint.path / "academic_paper.pdf" if imprint.path else None,
                     Path(f"output/academic_papers/{imprint_slug}.pdf")
@@ -431,10 +434,12 @@ def load_imprint_data_fallback(imprint_name: str) -> dict:
             except Exception as e:
                 logger.debug(f"Failed to load catalog {catalog_path}: {e}")
 
-    # Check for academic paper
+    # Check for academic paper (prioritize imprints directory)
     academic_paper_paths = [
-        Path(f"output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf"),
+        Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.pdf"),
         Path(f"imprints/{imprint_slug}/academic_paper.pdf"),
+        Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.md"),
+        Path(f"output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf"),
         Path(f"output/academic_papers/{imprint_slug}.pdf")
     ]
 
@@ -638,55 +643,75 @@ def render_dynamic_header(imprint_data: dict):
 
 
 def render_imprint_catalog(imprint_name: str, imprint_data: dict):
-    """Render catalog for any imprint."""
+    """Render catalog link to bookstore."""
     st.subheader("📚 Our Collection")
-    
+
     catalog = imprint_data.get("catalog", [])
-    
+
     if not catalog:
         st.info("Catalog coming soon. Check back for new releases!")
         return
-    
-    st.markdown(f"*{len(catalog)} titles in our collection*")
-    
-    # Search and filter
-    col1, col2 = st.columns([3, 1])
-    
-    with col1:
-        search_term = st.text_input("🔍 Search collection", 
-                                  placeholder="Enter title, topic, or keyword...",
-                                  key=f"search_{imprint_name}")
-    
+
+    st.markdown(f"*Browse our complete collection of {len(catalog)} titles in the interactive bookstore*")
+
+    # Large, prominent button to the bookstore
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Create bookstore URL with imprint filter
+    imprint_slug = imprint_name.lower().replace(' ', '_')
+    bookstore_url = f"http://localhost:8501?imprint={imprint_slug}"
+
+    st.markdown(f"""
+    <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; margin: 1rem 0;">
+        <h3 style="color: white; margin-bottom: 1rem;">🛒 Visit Our Interactive Bookstore</h3>
+        <p style="color: white; opacity: 0.9; margin-bottom: 1.5rem;">
+            Browse {len(catalog)} titles with full descriptions, reviews, and instant purchase options
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        sort_by = st.selectbox("Sort by", ["Publication Date", "Title", "Price"], 
-                             key=f"sort_{imprint_name}")
-    
-    # Filter catalog
-    filtered_catalog = catalog.copy()
-    
-    if search_term:
-        filtered_catalog = [
-            book for book in catalog
-            if (search_term.lower() in book.get('title', '').lower() or
-                search_term.lower() in book.get('back_cover_text', '').lower() or
-                search_term.lower() in book.get('author', '').lower())
-        ]
-    
-    # Sort catalog
-    if sort_by == "Title":
-        filtered_catalog = sorted(filtered_catalog, key=lambda x: x.get('title', ''))
-    elif sort_by == "Price":
-        filtered_catalog = sorted(filtered_catalog, key=lambda x: float(x.get('price', 0)))
-    # Publication date sorting would need date parsing
-    
-    # Display books
-    if filtered_catalog:
-        st.markdown(f"**{len(filtered_catalog)} books found**")
-        
-        for book in filtered_catalog:
-            render_dynamic_book_card(book)
-    else:
-        st.info("No books match your search criteria.")
+        st.link_button(
+            "🛍️ Browse Full Catalog with Buy Buttons",
+            bookstore_url,
+            use_container_width=True,
+            type="primary"
+        )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Show quick preview of a few titles
+    st.markdown("### 📖 Featured Titles Preview")
+    st.markdown("*See a few highlights from our catalog - visit the bookstore for the complete collection*")
+
+    # Show first 3 books as preview
+    preview_books = catalog[:3] if len(catalog) > 3 else catalog
+
+    for book in preview_books:
+        with st.container(border=True):
+            col1, col2 = st.columns([3, 1])
+
+            with col1:
+                st.markdown(f"**{book.get('title', 'Unknown Title')}**")
+                st.markdown(f"*by {book.get('author', 'Unknown Author')}*")
+                if book.get('back_cover_text'):
+                    st.markdown(f"{book['back_cover_text'][:150]}...")
+
+            with col2:
+                st.markdown(f"**${book.get('price', '0.00')}**")
+                st.markdown(f"📄 {book.get('page_count', 'N/A')} pages")
+
+    # Another button at the bottom
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.link_button(
+            "🛍️ See All Titles & Add to Cart",
+            bookstore_url,
+            use_container_width=True,
+            type="primary"
+        )
 
 
 def render_dynamic_book_card(book: dict):
@@ -987,8 +1012,8 @@ def get_imprint_catalog_for_thumbnail(imprint_name: str) -> list:
 
 
 def render_forthcoming_books(imprint_data: dict):
-    """Render forthcoming books tab with tournament visualization."""
-    st.subheader("🚀 Forthcoming Books")
+    """Render idea tournament tab with tournament visualization."""
+    st.subheader("🚀 Idea Tournament")
 
     forthcoming_books = imprint_data.get("forthcoming_books", [])
 
@@ -1314,72 +1339,44 @@ def render_research_paper(imprint_data: dict):
                 except Exception as e:
                     st.error(f"Could not display paper: {e}")
 
-    # Paper doesn't exist - auto-generate it (with cooldown to prevent loops)
+    # Paper doesn't exist - show static warning message
     else:
         st.markdown("---")
 
-        # Check if we recently attempted generation (cooldown mechanism)
-        generation_timestamp_key = f"paper_gen_timestamp_{imprint_name}"
-        last_gen_time = st.session_state.get(generation_timestamp_key, 0)
-        current_time = datetime.now().timestamp()
+        # Check for expected paper location
+        imprint_slug = imprint_name.lower().replace(' ', '_')
+        expected_path = Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.pdf")
+        expected_md_path = Path(f"imprints/{imprint_slug}/{imprint_slug}_paper.md")
 
-        # 5 minute cooldown to prevent infinite loops
-        cooldown_seconds = 300
-        time_since_gen = current_time - last_gen_time
+        st.warning(f"📝 **Research paper not found**")
 
-        if time_since_gen < cooldown_seconds:
-            # Recently generated - don't try again
-            remaining_time = int(cooldown_seconds - time_since_gen)
-            st.warning(f"⏳ Paper generation attempted recently. Please wait {remaining_time}s before trying again, or check if the paper was created successfully.")
+        st.markdown(f"""
+        The research paper for **{imprint_name}** should be located at:
+        - `imprints/{imprint_slug}/{imprint_slug}_paper.pdf` (PDF format)
+        - `imprints/{imprint_slug}/{imprint_slug}_paper.md` (Markdown format)
 
-            # Show manual retry button
-            if st.button("🔄 Retry Now", key=f"retry_paper_{imprint_name}"):
-                # Clear cooldown and retry
-                st.session_state[generation_timestamp_key] = 0
-                st.rerun()
-        else:
-            # Check if generation is in progress via session state
-            generation_key = f"generating_paper_{imprint_name}"
+        ### To create the research paper:
+        1. Generate the paper using command-line tools
+        2. Place the PDF or Markdown file in `imprints/{imprint_slug}/`
+        3. Refresh this page to view the paper
 
-            if st.session_state.get(generation_key, False):
-                # Generation already triggered
-                st.info("🔄 Paper generation in progress... Please wait.")
-            else:
-                # Trigger auto-generation
-                st.info("📝 Research paper not found. Generating now...")
+        ### Alternative locations checked:
+        - ✗ `imprints/{imprint_slug}/academic_paper.pdf`
+        - ✗ `output/academic_papers/{imprint_slug}/{imprint_slug}_paper.pdf`
+        - ✗ `output/academic_papers/{imprint_slug}.pdf`
 
-                # Mark generation as in progress and set timestamp
-                st.session_state[generation_key] = True
-                st.session_state[generation_timestamp_key] = current_time
+        **Note:** Automatic generation is disabled to prevent generation loops.
+        """)
 
-                with st.spinner("Generating research paper... This may take 2-5 minutes."):
-                    result = generate_research_paper_for_imprint(imprint_name)
-
-                    # Clear generation flag
-                    st.session_state[generation_key] = False
-
-                    if result and result.get("success"):
-                        st.success("✅ Research paper generated successfully!")
-
-                        # Show generation summary
-                        with st.expander("📊 Generation Summary"):
-                            context = result.get("context_data", {})
-                            st.markdown(f"**Complexity Level:** {context.get('configuration_complexity', {}).get('complexity_level', 'Unknown').title()}")
-                            st.markdown(f"**Focus Areas:** {len(context.get('focus_areas', []))}")
-                            st.markdown(f"**Output Directory:** `{result.get('output_directory', 'Unknown')}`")
-
-                        # Clear cooldown on success
-                        st.session_state[generation_timestamp_key] = 0
-
-                        # Auto-reload page to show the paper
-                        st.rerun()
-                    else:
-                        error_msg = result.get("error", "Unknown error") if result else "Generation module not available"
-                        st.error(f"❌ Paper generation failed: {error_msg}")
-
-                        # Show debug info
-                        with st.expander("🔍 Debug Information"):
-                            st.json(result if result else {"error": "No result returned"})
+        # Show status file if it exists
+        status_path = Path(f"imprints/{imprint_slug}/PAPER_STATUS.md")
+        if status_path.exists():
+            with st.expander("📋 View Paper Status Notes"):
+                try:
+                    with open(status_path, 'r', encoding='utf-8') as f:
+                        st.markdown(f.read())
+                except Exception as e:
+                    st.error(f"Could not load status file: {e}")
 
 
 def generate_research_paper_for_imprint(imprint_name: str) -> dict:
