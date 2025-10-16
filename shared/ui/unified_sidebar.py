@@ -164,8 +164,8 @@ def render_auth_section():
 
 
 def render_xtuff_nav():
-    """Render xtuff.ai Cinematic Universe navigation menu."""
-    with st.sidebar.expander("🌐 xtuff.ai Cinematic Universe (xCU)"):
+    """Render xtuff.ai navigation menu with session persistence."""
+    with st.sidebar.expander("🌐 xtuff ai nav"):
         st.markdown("### Apps")
 
         # Updated to match apps_config.json - only showing public_visible apps
@@ -178,27 +178,158 @@ def render_xtuff_nav():
             ("👤 AI Resume Builder", "http://localhost:8512"),
         ]
 
+        # Get session ID if authenticated to maintain session across apps
+        session_id = st.session_state.get('shared_session_id')
+
         for name, url in apps:
-            st.markdown(f"[{name}]({url})")
+            # Add session_id to URL if user is authenticated
+            if session_id:
+                separator = '&' if '?' in url else '?'
+                url_with_session = f"{url}{separator}session_id={session_id}"
+                st.markdown(f"[{name}]({url_with_session})")
+            else:
+                st.markdown(f"[{name}]({url})")
+
+
+def get_page_access_rules() -> Dict[str, List[str]]:
+    """
+    Define page access rules by role.
+
+    Returns:
+        Dictionary mapping page paths to list of allowed roles
+    """
+    return {
+        # Public pages (everyone)
+        "pages/1_Home.py": ["public", "user", "subscriber", "admin"],
+        "pages/6_Bookstore.py": ["public", "user", "subscriber", "admin"],
+        "pages/15_Imprint_Display.py": ["public", "user", "subscriber", "admin"],
+
+        # User pages (logged in)
+        "pages/23_Profile_Home.py": ["user", "subscriber", "admin"],
+        "pages/2_Annotated_Bibliography.py": ["user", "subscriber", "admin"],
+        "pages/3_Manuscript_Enhancement.py": ["user", "subscriber", "admin"],
+        "pages/4_Metadata_and_Distribution.py": ["user", "subscriber", "admin"],
+        "pages/5_Settings_and_Commerce.py": ["user", "subscriber", "admin"],
+
+        # Subscriber pages
+        "pages/10_Book_Pipeline.py": ["subscriber", "admin"],
+        "pages/11_Backmatter_Manager.py": ["subscriber", "admin"],
+        "pages/12_Bibliography_Shopping.py": ["subscriber", "admin"],
+        "pages/15_Ideation_and_Development.py": ["subscriber", "admin"],
+        "pages/16_Stage_Agnostic_UI.py": ["subscriber", "admin"],
+        "pages/17_Marketing_Generator.py": ["subscriber", "admin"],
+        "pages/21_Imprint_Ideas_Tournament.py": ["subscriber", "admin"],
+
+        # Admin pages
+        "pages/7_Admin_Dashboard.py": ["admin"],
+        "pages/18_Imprint_Administration.py": ["admin"],
+        "pages/9_Imprint_Builder.py": ["admin"],
+        "pages/20_Enhanced_Imprint_Creator.py": ["admin"],
+        "pages/24_ISBN_Management.py": ["admin"],
+        "pages/25_Rights_Management.py": ["admin"],
+        "pages/26_Rights_Analytics.py": ["admin"],
+        "pages/27_Max_Bialystok_Financial.py": ["admin"],
+        "pages/28_Leo_Bloom_Analytics.py": ["admin"],
+        "pages/29_Imprint_Financial_Dashboard.py": ["admin"],
+        "pages/30_Sales_Analysis.py": ["admin"],
+        "pages/31_FRO_Diagnostics.py": ["admin"],
+        "pages/Configuration_Management.py": ["admin"],
+    }
+
+
+def get_accessible_pages(user_role: str) -> List[tuple]:
+    """
+    Get list of pages accessible to a given role.
+
+    Args:
+        user_role: User's role (public, user, subscriber, admin)
+
+    Returns:
+        List of (page_name, page_path) tuples
+    """
+    access_rules = get_page_access_rules()
+    accessible = []
+
+    for page_path, allowed_roles in access_rules.items():
+        if user_role in allowed_roles:
+            # Extract friendly name from path (remove pages/, number prefix, .py)
+            page_name = page_path.replace("pages/", "").replace(".py", "")
+            # Remove number prefix (e.g., "1_Home" -> "Home")
+            if "_" in page_name and page_name.split("_")[0].isdigit():
+                page_name = "_".join(page_name.split("_")[1:])
+            # Make it readable
+            page_name = page_name.replace("_", " ").title()
+            accessible.append((page_name, page_path))
+
+    # Sort by name
+    accessible.sort(key=lambda x: x[0])
+    return accessible
 
 
 def render_app_nav(app_name: str, nav_items: Optional[List[tuple]] = None):
     """
-    Render app-specific navigation.
+    Render app-specific navigation with role-based access.
 
     Args:
         app_name: Name of the current application
-        nav_items: List of (label, url/page) tuples for navigation
+        nav_items: Optional list of (label, url/page) tuples for custom navigation
     """
-    st.sidebar.markdown(f"### 📱 {app_name}")
+    # Get user role
+    user_role = st.session_state.get('user_role', 'public')
 
+    # Render app nav expander with role-based page list
+    with st.sidebar.expander("📱 app nav", expanded=False):
+        st.markdown(f"**{app_name}**")
+
+        # Get accessible pages for this user
+        accessible_pages = get_accessible_pages(user_role)
+
+        if accessible_pages:
+            st.markdown(f"*{len(accessible_pages)} pages available*")
+            st.markdown("---")
+
+            # Group pages by category
+            public_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Home", "Bookstore", "Imprint_Display"])]
+            user_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Profile", "Annotated", "Manuscript", "Metadata", "Settings"])]
+            subscriber_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Pipeline", "Backmatter", "Bibliography_Shopping", "Ideation", "Stage_Agnostic", "Marketing", "Tournament"])]
+            admin_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Admin", "Imprint_Administration", "Imprint_Builder", "Enhanced_Imprint", "ISBN", "Rights", "Financial", "Analytics", "Sales", "FRO", "Configuration"])]
+
+            # Render by category
+            if public_pages:
+                st.markdown("**🌐 Public**")
+                for page_name, page_path in public_pages:
+                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
+                        st.switch_page(page_path)
+
+            if user_pages:
+                st.markdown("**👤 My Pages**")
+                for page_name, page_path in user_pages:
+                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
+                        st.switch_page(page_path)
+
+            if subscriber_pages and user_role in ['subscriber', 'admin']:
+                st.markdown("**💎 Subscriber**")
+                for page_name, page_path in subscriber_pages:
+                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
+                        st.switch_page(page_path)
+
+            if admin_pages and user_role == 'admin':
+                st.markdown("**🔧 Admin**")
+                for page_name, page_path in admin_pages:
+                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
+                        st.switch_page(page_path)
+        else:
+            st.info("No pages available. Please log in for access.")
+
+    # Legacy custom nav items support
     if nav_items:
+        st.sidebar.markdown("---")
         for label, target in nav_items:
             if target.startswith('http'):
                 st.sidebar.markdown(f"[{label}]({target})")
             else:
                 # Internal Streamlit page
-                if st.sidebar.button(label, key=f"nav_{label}"):
+                if st.sidebar.button(label, key=f"custom_nav_{label}"):
                     st.switch_page(target)
 
 
@@ -304,9 +435,9 @@ def render_unified_sidebar(
         render_xtuff_nav()
         st.sidebar.markdown("---")
 
-    if nav_items:
-        render_app_nav(app_name, nav_items)
-        st.sidebar.markdown("---")
+    # Always render app nav (now shows role-based pages)
+    render_app_nav(app_name, nav_items)
+    st.sidebar.markdown("---")
 
     if show_version:
         render_version_info()
