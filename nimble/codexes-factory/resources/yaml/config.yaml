@@ -10,7 +10,7 @@ credentials:
     admin:
       email: admin@nimblebooks.com
       name: Admin
-      password: hotdogtoy
+      password: $2b$12$tpkfFoIaVc5suLaAcyCBfOn3cA3OLPHwQ9HuBEj1J8ApDWbAgbZDm
       role: admin
     jsmith:
       email: jsmith@example.com
