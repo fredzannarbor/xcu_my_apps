@@ -288,11 +288,41 @@ def render_app_nav(app_name: str, nav_items: Optional[List[tuple]] = None):
             st.markdown(f"*{len(accessible_pages)} pages available*")
             st.markdown("---")
 
-            # Group pages by category
-            public_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Home", "Bookstore", "Imprint_Display"])]
-            user_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Profile", "Annotated", "Manuscript", "Metadata", "Settings"])]
-            subscriber_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Pipeline", "Backmatter", "Bibliography_Shopping", "Ideation", "Stage_Agnostic", "Marketing", "Tournament"])]
-            admin_pages = [p for p in accessible_pages if any(x in p[1] for x in ["Admin", "Imprint_Administration", "Imprint_Builder", "Enhanced_Imprint", "ISBN", "Rights", "Financial", "Analytics", "Sales", "FRO", "Configuration"])]
+            # Group pages by category - ensure each page appears in only ONE category
+            # Check in priority order: admin > subscriber > user > public
+            admin_pages = []
+            subscriber_pages = []
+            user_pages = []
+            public_pages = []
+            categorized = set()
+
+            for page_name, page_path in accessible_pages:
+                if page_path in categorized:
+                    continue
+
+                # Admin pages (highest priority)
+                if any(x in page_path for x in ["Admin", "Imprint_Administration", "Imprint_Builder", "Enhanced_Imprint", "ISBN", "Rights", "Financial", "Analytics", "Sales", "FRO", "Configuration"]):
+                    admin_pages.append((page_name, page_path))
+                    categorized.add(page_path)
+                # Subscriber pages
+                elif any(x in page_path for x in ["Pipeline", "Backmatter", "Bibliography_Shopping", "Ideation", "Stage_Agnostic", "Marketing", "Tournament"]):
+                    subscriber_pages.append((page_name, page_path))
+                    categorized.add(page_path)
+                # User pages (Profile takes precedence over Home)
+                elif any(x in page_path for x in ["Profile", "Annotated", "Manuscript", "Metadata", "Settings"]):
+                    user_pages.append((page_name, page_path))
+                    categorized.add(page_path)
+                # Public pages (lowest priority)
+                elif any(x in page_path for x in ["1_Home", "Bookstore", "Imprint_Display"]):
+                    public_pages.append((page_name, page_path))
+                    categorized.add(page_path)
+                else:
+                    # Uncategorized pages go to user by default if authenticated, public otherwise
+                    if user_role in ['subscriber', 'admin', 'user']:
+                        user_pages.append((page_name, page_path))
+                    else:
+                        public_pages.append((page_name, page_path))
+                    categorized.add(page_path)
 
             # Render by category
             if public_pages:
