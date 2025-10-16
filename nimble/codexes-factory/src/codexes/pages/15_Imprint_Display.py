@@ -657,9 +657,9 @@ def render_imprint_catalog(imprint_name: str, imprint_data: dict):
     # Large, prominent button to the bookstore
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Create bookstore URL with imprint filter
+    # Create bookstore URL with imprint filter (use relative URL for production compatibility)
     imprint_slug = imprint_name.lower().replace(' ', '_')
-    bookstore_url = f"http://localhost:8501?imprint={imprint_slug}"
+    bookstore_url = f"/Bookstore?imprint={imprint_slug}"
 
     st.markdown(f"""
     <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; margin: 1rem 0;">
@@ -702,7 +702,7 @@ def render_imprint_catalog(imprint_name: str, imprint_data: dict):
                 st.markdown(f"**${book.get('price', '0.00')}**")
                 st.markdown(f"📄 {book.get('page_count', 'N/A')} pages")
 
-    # Another button at the bottom
+    # Another button at the bottom (uses same bookstore_url from above)
     st.markdown("<br>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
