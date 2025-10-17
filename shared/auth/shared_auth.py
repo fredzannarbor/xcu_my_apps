@@ -126,11 +126,13 @@ class SharedAuthSystem:
 
         # Try to get session ID from multiple sources
         session_id = None
+        session_source = None
 
         # 1. First check if already in session state (persists across reruns in same browser tab)
         if 'shared_session_id' in st.session_state and st.session_state.shared_session_id:
             session_id = st.session_state.shared_session_id
-            logger.debug(f"Session ID from session state: {session_id}")
+            session_source = "session_state"
+            logger.info(f"[AUTH CHECK] Found session ID in session_state: {session_id[:16]}...")
 
             # Validate it's still valid in the database
             conn = sqlite3.connect(self.db_path)
@@ -145,43 +147,58 @@ class SharedAuthSystem:
                 expires_at = row[0]
                 if datetime.fromisoformat(expires_at) >= datetime.now():
                     # Session still valid, nothing more to do
-                    logger.debug(f"Existing session still valid")
+                    logger.info(f"[AUTH CHECK] Session still valid from {session_source}")
                     return
                 else:
                     # Session expired
-                    logger.info(f"Session in state expired: {session_id}")
+                    logger.info(f"[AUTH CHECK] Session in state expired: {session_id[:16]}...")
                     self._delete_session(session_id)
                     session_id = None
+                    session_source = None
             else:
                 # Session doesn't exist in database
-                logger.warning(f"Session in state not found in database: {session_id}")
+                logger.warning(f"[AUTH CHECK] Session in state not found in database: {session_id[:16]}...")
                 session_id = None
+                session_source = None
 
         # 2. Check query params (for cross-app navigation)
         if not session_id:
             query_params = st.query_params
+            logger.info(f"[AUTH CHECK] Checking query params. Available params: {list(query_params.keys())}")
             if 'session_id' in query_params:
                 session_id = query_params['session_id']
-                logger.debug(f"Session ID from query params: {session_id}")
+                session_source = "query_params"
+                logger.info(f"[AUTH CHECK] Found session ID in query params: {session_id[:16]}...")
                 # Remove from URL to clean it up
-                del st.query_params['session_id']
+                try:
+                    del st.query_params['session_id']
+                    logger.info(f"[AUTH CHECK] Removed session_id from URL query params")
+                except Exception as e:
+                    logger.warning(f"[AUTH CHECK] Could not remove session_id from query params: {e}")
+            else:
+                logger.info(f"[AUTH CHECK] No session_id in query params")
 
         # 3. Check cookies as fallback (might not work reliably)
         if not session_id:
             try:
                 cookies = self.cookie_manager.get_all()
+                logger.info(f"[AUTH CHECK] Checking cookies. Available cookies: {list(cookies.keys()) if cookies else 'None'}")
                 session_id = cookies.get('xtuff_session_id') if cookies else None
                 if session_id:
-                    logger.debug(f"Session ID from cookie: {session_id}")
+                    session_source = "cookie"
+                    logger.info(f"[AUTH CHECK] Found session ID in cookie: {session_id[:16]}...")
+                else:
+                    logger.info(f"[AUTH CHECK] No session_id in cookies")
             except Exception as e:
-                logger.warning(f"Error reading cookies: {e}")
+                logger.warning(f"[AUTH CHECK] Error reading cookies: {e}")
 
         if not session_id:
-            logger.info("No session_id found in any source, initializing empty session")
+            logger.info("[AUTH CHECK] No session_id found in any source, initializing empty session")
             self._initialize_empty_session()
             return
 
         # Load session from database
+        logger.info(f"[AUTH CHECK] Attempting to load session from database. Source: {session_source}")
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
@@ -200,7 +217,7 @@ class SharedAuthSystem:
 
             # Check if session expired
             if datetime.fromisoformat(expires_at) < datetime.now():
-                logger.info(f"Session expired: {session_id}")
+                logger.info(f"[AUTH CHECK] Session expired: {session_id[:16]}...")
                 self._delete_session(session_id)
                 self._initialize_empty_session()
                 return
@@ -218,9 +235,10 @@ class SharedAuthSystem:
             # Update last accessed time
             self._update_session_access(session_id)
 
-            logger.info(f"Session restored for user: {username}")
+            logger.info(f"[AUTH CHECK] ✅ Session restored for user '{username}' from {session_source}")
         else:
-            # Session ID in cookie but not in database (expired/deleted)
+            # Session ID in cookie/query but not in database (expired/deleted)
+            logger.warning(f"[AUTH CHECK] Session ID from {session_source} not found in database: {session_id[:16]}...")
             self.cookie_manager.delete('xtuff_session_id')
             self._initialize_empty_session()
 

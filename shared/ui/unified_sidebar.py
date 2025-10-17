@@ -197,11 +197,20 @@ def render_xtuff_nav():
         # Get session ID if authenticated to maintain session across apps
         session_id = st.session_state.get('shared_session_id')
 
+        # Log navigation rendering for debugging cross-subdomain SSO
+        import logging
+        logger = logging.getLogger(__name__)
+        if session_id:
+            logger.info(f"[NAVIGATION] Rendering xtuff nav with session_id: {session_id[:16]}...")
+        else:
+            logger.info(f"[NAVIGATION] Rendering xtuff nav without session_id (user not authenticated)")
+
         for name, url in apps:
             # Add session_id to URL if user is authenticated
             if session_id:
                 separator = '&' if '?' in url else '?'
                 url_with_session = f"{url}{separator}session_id={session_id}"
+                logger.info(f"[NAVIGATION] Link '{name}' -> {url_with_session}")
                 st.markdown(f"[{name}]({url_with_session})")
             else:
                 st.markdown(f"[{name}]({url})")
