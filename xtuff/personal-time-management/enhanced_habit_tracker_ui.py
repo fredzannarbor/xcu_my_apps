@@ -703,7 +703,7 @@ if __name__ == "__main__":
     render_unified_sidebar(
         app_name="Time Management",
         show_auth=True,
-        show_nav=True
+        show_xtuff_nav=True
     )
 
     # Initialize the enhanced habit tracker UI

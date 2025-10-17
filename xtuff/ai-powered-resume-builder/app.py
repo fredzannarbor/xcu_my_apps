@@ -683,7 +683,7 @@ def main():
     render_unified_sidebar(
         app_name="AI Resume Builder",
         show_auth=True,
-        show_nav=True
+        show_xtuff_nav=True
     )
 
     # Custom sidebar navigation

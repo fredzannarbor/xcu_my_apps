@@ -2,16 +2,25 @@ cookie:
   expiry_days: 30
   key: random_signature_key
   name: book_builder_cookie
-registration:
-  enabled: true
-  default_role: user
 credentials:
   usernames:
+    a:
+      email: a@nimblebooks.com
+      name: Fred Z
+      password: $2b$12$e2SLRnAo7UqJQ7hlD6hZH.n0ZxNhFYs00H4KUtf7WaRo0hEBDA7D2
     admin:
       email: admin@nimblebooks.com
       name: Admin
       password: $2b$12$tpkfFoIaVc5suLaAcyCBfOn3cA3OLPHwQ9HuBEj1J8ApDWbAgbZDm
       role: admin
+    fredz:
+      created_at: '2025-10-09T03:19:54.780336'
+      email: fredz@nimblebooks.com
+      name: Fred Zimmerman
+      password: $2b$12$2Y39Tvr2fvxZTfpzH6Eioer1V5Etg5dU7tZZ.nO.PFRtok1dP8OQ6
+      role: user
+      subscription_status: inactive
+      subscription_tier: free
     jsmith:
       email: jsmith@example.com
       name: John Smith
@@ -27,32 +36,24 @@ credentials:
       name: Rebecca Roe
       password: $2b$12$rR6JaAzVByA0V/lBSFjxCeEk7Lau73jJmGtHiQlwCV1sfvXn3HW9a
       role: subscriber
+    test_user:
+      email: wfzimmerman@gmail.com
+      name: Fred Zimmerman
+      password: $2b$12$Sfc9WTlWzu1n.elRWndznemwm9GNTnBq1NSbf6rQ2Frha0LIAitH.
+      role: user
     top:
       email: top@nimblebooks.com
       name: Fred
       password: $2b$12$X5o9mn/Q85ADWlTCvFcU3Ouk.ROU150ua68jLet2vX1qKlA4rzmla
       role: admin
-    test_user:
-      name: Fred Zimmerman
-      email: wfzimmerman@gmail.com
-      password: $2b$12$Sfc9WTlWzu1n.elRWndznemwm9GNTnBq1NSbf6rQ2Frha0LIAitH.
-      role: user
     wfz:
-      name: Fred Zimmerman
+      created_at: '2025-10-09T03:11:48.657504'
       email: wfz@nimblebooks.com
+      name: Fred Zimmerman
       password: $2b$12$BDoqY4NrmzypkZdjkWzZJ.POb3oGbxqf.SP5UnImHjA.zLWvCOeAe
       role: user
-      subscription_tier: free
       subscription_status: inactive
-      created_at: '2025-10-09T03:11:48.657504'
-    fredz:
-      name: Fred Zimmerman
-      email: fredz@nimblebooks.com
-      password: $2b$12$2Y39Tvr2fvxZTfpzH6Eioer1V5Etg5dU7tZZ.nO.PFRtok1dP8OQ6
-      role: user
       subscription_tier: free
-      subscription_status: inactive
-      created_at: '2025-10-09T03:19:54.780336'
 imprints:
 - admin
 - axis_and_allies
@@ -61,3 +62,6 @@ imprints:
 pre-authorized:
   emails:
   - wfzimmerman@gmail.com
+registration:
+  default_role: user
+  enabled: true

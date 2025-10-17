@@ -102,7 +102,7 @@ else:
 render_unified_sidebar(
     app_name="Codexes Factory",
     show_auth=True,
-    show_nav=True
+    show_xtuff_nav=True
 )
 
     st.stop()
