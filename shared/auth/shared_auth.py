@@ -16,7 +16,6 @@ from pathlib import Path
 from typing import Dict, Any, Optional, Tuple
 from datetime import datetime, timedelta
 import logging
-import extra_streamlit_components as stx
 
 logger = logging.getLogger(__name__)
 
@@ -65,9 +64,6 @@ class SharedAuthSystem:
         self.config_path = SHARED_CONFIG_PATH
         self._ensure_db_exists()
         self.config = self._load_config()
-
-        # Initialize cookie manager for cross-app SSO
-        self.cookie_manager = stx.CookieManager(key="shared_auth_cookie_manager")
 
         # Initialize session state if needed
         if 'auth_checked' not in st.session_state:
@@ -124,7 +120,7 @@ class SharedAuthSystem:
         """Check if there's an active session using session state or query params and load it into Streamlit session state."""
         st.session_state.auth_checked = True
 
-        # Try to get session ID from multiple sources
+        # Try to get session ID from 2 sources (no cookies)
         session_id = None
         session_source = None
 
@@ -178,22 +174,8 @@ class SharedAuthSystem:
             else:
                 logger.info(f"[AUTH CHECK] No session_id in query params")
 
-        # 3. Check cookies as fallback (might not work reliably)
         if not session_id:
-            try:
-                cookies = self.cookie_manager.get_all()
-                logger.info(f"[AUTH CHECK] Checking cookies. Available cookies: {list(cookies.keys()) if cookies else 'None'}")
-                session_id = cookies.get('xtuff_session_id') if cookies else None
-                if session_id:
-                    session_source = "cookie"
-                    logger.info(f"[AUTH CHECK] Found session ID in cookie: {session_id[:16]}...")
-                else:
-                    logger.info(f"[AUTH CHECK] No session_id in cookies")
-            except Exception as e:
-                logger.warning(f"[AUTH CHECK] Error reading cookies: {e}")
-
-        if not session_id:
-            logger.info("[AUTH CHECK] No session_id found in any source, initializing empty session")
+            logger.info("[AUTH CHECK] No session_id found in session_state or query_params, initializing empty session")
             self._initialize_empty_session()
             return
 
@@ -237,9 +219,8 @@ class SharedAuthSystem:
 
             logger.info(f"[AUTH CHECK] ✅ Session restored for user '{username}' from {session_source}")
         else:
-            # Session ID in cookie/query but not in database (expired/deleted)
+            # Session ID in query/state but not in database (expired/deleted)
             logger.warning(f"[AUTH CHECK] Session ID from {session_source} not found in database: {session_id[:16]}...")
-            self.cookie_manager.delete('xtuff_session_id')
             self._initialize_empty_session()
 
     def _initialize_empty_session(self):
@@ -349,16 +330,7 @@ class SharedAuthSystem:
         st.session_state.subscription_status = subscription_status
         st.session_state.shared_session_id = session_id
 
-        # Set browser cookie for cross-app SSO across all subdomains
-        self.cookie_manager.set(
-            'xtuff_session_id',
-            session_id,
-            max_age=30*24*60*60,  # 30 days in seconds
-            domain='.xtuff.ai',  # Allow cookie to work across all subdomains
-            key=f"set_cookie_{session_id[:8]}"  # Unique key for Streamlit
-        )
-
-        logger.info(f"User {username} authenticated successfully, cookie set")
+        logger.info(f"User {username} authenticated successfully, session stored")
 
         return True, f"Welcome back, {user_name}!"
 
@@ -367,13 +339,10 @@ class SharedAuthSystem:
         if 'shared_session_id' in st.session_state and st.session_state.shared_session_id:
             self._delete_session(st.session_state.shared_session_id)
 
-        # Delete browser cookie
-        self.cookie_manager.delete('xtuff_session_id')
-
         # Clear session state
         self._initialize_empty_session()
 
-        logger.info("User logged out, cookie cleared")
+        logger.info("User logged out, session cleared")
 
     def is_authenticated(self) -> bool:
         """Check if user is authenticated."""

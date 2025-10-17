@@ -26,10 +26,10 @@ def build_sidebar(
         st.title("Codexes Factory")
 
 
-        # 1. Navigation
+        # 1. Navigation (hidden - use custom sidebar instead)
 
         if allowed_pages:
-            pg = st.navigation(allowed_pages, position="sidebar")
+            pg = st.navigation(allowed_pages, position="hidden")
         else:
             st.warning("No pages available for your role.")
             st.stop()

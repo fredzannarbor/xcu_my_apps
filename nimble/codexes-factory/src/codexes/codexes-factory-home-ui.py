@@ -185,7 +185,7 @@ with st.sidebar.expander("ℹ️ App Version"):
     st.json(version_info)
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Run Navigation
+# Run Navigation (with native navigation hidden - use custom sidebar instead)
 # ──────────────────────────────────────────────────────────────────────────────
-pg = st.navigation(allowed_pages)
+pg = st.navigation(allowed_pages, position="hidden")
 pg.run()
