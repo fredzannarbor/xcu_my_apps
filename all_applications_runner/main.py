@@ -21,6 +21,15 @@ from process_manager import ProcessManager
 from auth_integration import get_auth_manager, AuthManager
 from subscription_manager import get_subscription_manager, SubscriptionManager
 
+# Import shared authentication system for cross-subdomain SSO
+try:
+    from shared.auth import get_shared_auth, is_authenticated as shared_is_authenticated
+    SHARED_AUTH_AVAILABLE = True
+except ImportError:
+    SHARED_AUTH_AVAILABLE = False
+    def get_shared_auth(): return None
+    def shared_is_authenticated(): return False
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -659,10 +668,17 @@ def render_home_page(
                             )
                             break
 
-                    session_id = st.session_state.get("shared_session_id", "")
+                    # Get session ID from shared auth system for cross-subdomain SSO
+                    session_id = ""
+                    if SHARED_AUTH_AVAILABLE:
+                        shared_auth = get_shared_auth()
+                        if shared_auth:
+                            session_id = st.session_state.get("shared_session_id", "")
+
                     base_url = get_base_url_for_port(codexes_port)
                     if session_id:
                         base_url += f"?session_id={session_id}"
+                        logger.info(f"[LANDING NAV] Adding session_id to base_url: {base_url}")
 
                     # Quick Links buttons (consolidated)
                     # Xynapse Traces button with bright orange color - using HTML button - MOVED TO TOP
@@ -823,10 +839,17 @@ def render_home_page(
                             type="primary",
                             use_container_width=True,
                         ):
-                            session_id = st.session_state.get("shared_session_id", "")
+                            # Get session ID from shared auth system for cross-subdomain SSO
+                            session_id = ""
+                            if SHARED_AUTH_AVAILABLE:
+                                shared_auth = get_shared_auth()
+                                if shared_auth:
+                                    session_id = st.session_state.get("shared_session_id", "")
+
                             url = get_base_url_for_port(port)
                             if session_id:
                                 url += f"?session_id={session_id}"
+                                logger.info(f"[LANDING LAUNCH] Adding session_id to {name} URL: {url}")
                             st.markdown(
                                 f'<meta http-equiv="refresh" content="0; url={url}" />',
                                 unsafe_allow_html=True,
