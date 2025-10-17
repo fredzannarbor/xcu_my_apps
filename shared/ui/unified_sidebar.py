@@ -350,29 +350,40 @@ def render_app_nav(app_name: str, nav_items: Optional[List[tuple]] = None):
                     categorized.add(page_path)
 
             # Render by category
+            # Use a set to track already-rendered buttons to prevent duplicates
+            rendered_buttons = set()
+
             if public_pages:
                 st.markdown("**🌐 Public**")
                 for page_name, page_path in public_pages:
-                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
-                        st.switch_page(page_path)
+                    if page_path not in rendered_buttons:
+                        if st.button(f"  {page_name}", key=f"nav_public_{page_path}", use_container_width=True):
+                            st.switch_page(page_path)
+                        rendered_buttons.add(page_path)
 
             if user_pages:
                 st.markdown("**👤 My Pages**")
                 for page_name, page_path in user_pages:
-                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
-                        st.switch_page(page_path)
+                    if page_path not in rendered_buttons:
+                        if st.button(f"  {page_name}", key=f"nav_user_{page_path}", use_container_width=True):
+                            st.switch_page(page_path)
+                        rendered_buttons.add(page_path)
 
             if subscriber_pages and user_role in ['subscriber', 'admin']:
                 st.markdown("**💎 Subscriber**")
                 for page_name, page_path in subscriber_pages:
-                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
-                        st.switch_page(page_path)
+                    if page_path not in rendered_buttons:
+                        if st.button(f"  {page_name}", key=f"nav_sub_{page_path}", use_container_width=True):
+                            st.switch_page(page_path)
+                        rendered_buttons.add(page_path)
 
             if admin_pages and user_role == 'admin':
                 st.markdown("**🔧 Admin**")
                 for page_name, page_path in admin_pages:
-                    if st.button(f"  {page_name}", key=f"nav_{page_path}", use_container_width=True):
-                        st.switch_page(page_path)
+                    if page_path not in rendered_buttons:
+                        if st.button(f"  {page_name}", key=f"nav_admin_{page_path}", use_container_width=True):
+                            st.switch_page(page_path)
+                        rendered_buttons.add(page_path)
         else:
             st.info("No pages available. Please log in for access.")
 
