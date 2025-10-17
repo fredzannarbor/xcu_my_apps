@@ -4,32 +4,7 @@ version = "0.1.0"
 description = "AI-powered resume and team profile builder with collaboration features"
 requires-python = ">=3.12"
 dependencies = [
-    # Authentication
-    "bcrypt>=4.0.0",
-
-    # Core framework
-    "streamlit>=1.45.1",
-
-    # LLM Integration
-    "nimble-llm-caller>=0.1.0",
-    "litellm>=1.35.2",
-
-    # Data handling
-    "pandas>=2.0.0",
-    "python-dotenv>=1.1.1",
-
-    # Document processing
-    "pymupdf>=1.26.3",
-    "python-docx>=1.1.0",
-    "pillow>=9.5.0",
-
-    # Utilities
-    "requests>=2.31.0",
-    "pydantic>=2.0.0",
-    "python-dateutil>=2.8.0",
-
-    # Subscription management
-    "stripe>=12.5.1",
+    # All dependencies inherited from workspace root
 ]
 
 [tool.uv]

@@ -37,6 +37,11 @@ dependencies = [
 members = [
     "shared",
     "all_applications_runner",
+    "nimble/codexes-factory",
+    "xtuff/agentic_social_server",
+    "xtuff/trillionsofpeople",
+    "xtuff/personal-time-management",
+    "xtuff/ai-powered-resume-builder",
 ]
 # Note: gridcellhistory and grid_up_history appear to be data science projects, not Streamlit apps
 # ollama-grid-search is Node.js and excluded from workspace
