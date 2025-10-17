@@ -252,6 +252,35 @@ st.markdown(
 )
 
 
+def get_base_url_for_port(port: int) -> str:
+    """
+    Get the correct base URL for a given port based on environment.
+
+    Returns:
+        - Development (localhost): http://localhost:{port}
+        - Production (xtuff.ai): https://{subdomain}.xtuff.ai
+    """
+    import socket
+    hostname = socket.gethostname()
+
+    # Development environment (localhost or Mac)
+    if 'localhost' in hostname or hostname == 'Freds-MacBook-Pro.local':
+        return f"http://localhost:{port}"
+
+    # Production environment - map ports to subdomains
+    port_to_subdomain = {
+        8500: "xtuff.ai",  # Main/Home
+        8501: "social.xtuff.ai",  # Agentic Social
+        8502: "codexes.xtuff.ai",  # Codexes Factory
+        8504: "trillions.xtuff.ai",  # Trillions of People
+        8509: "daily.xtuff.ai",  # Daily Engine
+        8512: "resume.xtuff.ai",  # AI Resume Builder
+    }
+
+    subdomain = port_to_subdomain.get(port, f"app{port}.xtuff.ai")
+    return f"https://{subdomain}"
+
+
 def get_managers():
     """Initialize manager instances."""
     try:
@@ -631,14 +660,14 @@ def render_home_page(
                             break
 
                     session_id = st.session_state.get("shared_session_id", "")
-                    base_url = f"http://localhost:{codexes_port}"
+                    base_url = get_base_url_for_port(codexes_port)
                     if session_id:
                         base_url += f"?session_id={session_id}"
 
                     # Quick Links buttons (consolidated)
                     # Xynapse Traces button with bright orange color - using HTML button - MOVED TO TOP
                     # Use Streamlit's multi-page URL format: /Imprint_Display?imprint=xynapse_traces
-                    xynapse_url = f"http://localhost:{codexes_port}/Imprint_Display?imprint=xynapse_traces"
+                    xynapse_url = f"{get_base_url_for_port(codexes_port)}/Imprint_Display?imprint=xynapse_traces"
                     if session_id:
                         xynapse_url += f"&session_id={session_id}"
 
@@ -678,7 +707,7 @@ def render_home_page(
                         use_container_width=True,
                     ):
                         # Use Streamlit's multi-page URL format with custom url_path
-                        url = f"http://localhost:{codexes_port}/annotated_bibliography_alt"
+                        url = f"{get_base_url_for_port(codexes_port)}/annotated_bibliography_alt"
                         if session_id:
                             url += f"?session_id={session_id}"
                         st.markdown(
@@ -693,7 +722,7 @@ def render_home_page(
                     ):
                         # Longform Prospectus is a section within the Home page
                         # Just link to the Home page (root)
-                        url = f"http://localhost:{codexes_port}/"
+                        url = f"{get_base_url_for_port(codexes_port)}/"
                         if session_id:
                             url += f"?session_id={session_id}"
                         st.markdown(
@@ -708,7 +737,7 @@ def render_home_page(
                     ):
                         # Link to Bookstore page with xynapse_traces imprint
                         # Use Streamlit's multi-page URL format: /Bookstore?imprint=xynapse_traces
-                        url = f"http://localhost:{codexes_port}/Bookstore?imprint=xynapse_traces"
+                        url = f"{get_base_url_for_port(codexes_port)}/Bookstore?imprint=xynapse_traces"
                         if session_id:
                             url += f"&session_id={session_id}"
                         st.markdown(
@@ -795,7 +824,7 @@ def render_home_page(
                             use_container_width=True,
                         ):
                             session_id = st.session_state.get("shared_session_id", "")
-                            url = f"http://localhost:{port}"
+                            url = get_base_url_for_port(port)
                             if session_id:
                                 url += f"?session_id={session_id}"
                             st.markdown(
