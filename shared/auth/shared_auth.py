@@ -331,11 +331,12 @@ class SharedAuthSystem:
         st.session_state.subscription_status = subscription_status
         st.session_state.shared_session_id = session_id
 
-        # Set browser cookie for cross-app SSO
+        # Set browser cookie for cross-app SSO across all subdomains
         self.cookie_manager.set(
             'xtuff_session_id',
             session_id,
             max_age=30*24*60*60,  # 30 days in seconds
+            domain='.xtuff.ai',  # Allow cookie to work across all subdomains
             key=f"set_cookie_{session_id[:8]}"  # Unique key for Streamlit
         )
 
