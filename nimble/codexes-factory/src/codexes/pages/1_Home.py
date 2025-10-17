@@ -1,10 +1,64 @@
+import logging
 import streamlit as st
 import sys
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    import streamlit as st
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
+
+
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+
+
+
 from codexes.core.utils import read_markdown_file
 
+
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
+
+
 st.set_page_config(page_title="AI Lab for Book-Lovers", layout="wide")
+
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
+
+
+
 
 # Note: Unified sidebar is rendered by the main entry point (codexes-factory-home-ui.py)
 # No need to call here
@@ -35,7 +89,8 @@ with st.expander("Mission Statement", expanded=True):
 - Browse the Nimble Books catalog, which combines both traditional and AI-assisted publications.
 - Check out my AI-powered imprints, **Text Hip Global** and **xynapse traces**.
 - Try out some of my Lab tools, or share some of your own.  [Join the Substack](https://fredzannarbor.substack.com/) and drop me a note.
-    """)
+    """
+)
 with st.expander("The Longform Prospectus (January 2021)", expanded=False):
     longform_article = read_markdown_file("docs/resources/longform_prospectus.md")
     st.markdown(longform_article)
