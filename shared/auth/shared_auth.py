@@ -11,6 +11,7 @@ import sqlite3
 import bcrypt
 import yaml
 import json
+import os
 from pathlib import Path
 from typing import Dict, Any, Optional, Tuple
 from datetime import datetime, timedelta
@@ -19,10 +20,36 @@ import extra_streamlit_components as stx
 
 logger = logging.getLogger(__name__)
 
+
+def get_monorepo_root() -> Path:
+    """
+    Detect the monorepo root directory.
+
+    Checks for MONOREPO_ROOT env var first, then searches for .git directory
+    going up from current file location.
+    """
+    # Check environment variable first
+    if 'MONOREPO_ROOT' in os.environ:
+        return Path(os.environ['MONOREPO_ROOT'])
+
+    # Search for .git directory going up from current file
+    current = Path(__file__).resolve().parent
+    while current != current.parent:  # Stop at filesystem root
+        if (current / '.git').exists():
+            return current
+        current = current.parent
+
+    # Fallback: assume we're in shared/auth and go up two levels
+    return Path(__file__).resolve().parent.parent.parent
+
+
+# Get monorepo root
+MONOREPO_ROOT = get_monorepo_root()
+
 # Shared database location - accessible by all apps
-SHARED_AUTH_DB = Path("/Users/fred/xcu_my_apps/shared/auth/auth_sessions.db")
+SHARED_AUTH_DB = MONOREPO_ROOT / "shared/auth/auth_sessions.db"
 # Shared config location
-SHARED_CONFIG_PATH = Path("/Users/fred/xcu_my_apps/nimble/codexes-factory/resources/yaml/config.yaml")
+SHARED_CONFIG_PATH = MONOREPO_ROOT / "nimble/codexes-factory/resources/yaml/config.yaml"
 
 
 class SharedAuthSystem:
