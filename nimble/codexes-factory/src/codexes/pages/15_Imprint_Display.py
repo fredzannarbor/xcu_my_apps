@@ -93,13 +93,8 @@ else:
 
 
 
-    render_unified_sidebar(
-    app_name="Codexes Factory",
-    show_auth=True,
-    show_xtuff_nav=True
-)
-    
     # Get imprint parameter from URL or selection
+    # NOTE: render_unified_sidebar is called from main app, not from individual pages
     selected_imprint = get_selected_imprint()
     
     if selected_imprint:
