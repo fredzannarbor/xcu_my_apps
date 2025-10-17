@@ -1,3 +1,8 @@
+"""
+Philately Collection Management System - Streamlit UI
+Version 1.1.0 - Migrated to shared authentication system
+"""
+
 import streamlit as st
 import sys
 from pathlib import Path
@@ -7,8 +12,27 @@ import pandas as pd
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
 from philately.processor_v2 import PhilatelyProcessor
-from shared.ui import render_unified_sidebar
+
+# Configure logging
+logger = logging.getLogger(__name__)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
 
 # --- Logging Handler for Streamlit ---
 class StreamlitLogHandler(logging.Handler):
@@ -35,10 +59,29 @@ def main():
         layout="wide",
     )
 
+    # Sync session state from shared auth
+    if is_authenticated():
+        user_info = get_user_info()
+        st.session_state.username = user_info.get('username')
+        st.session_state.user_name = user_info.get('user_name')
+        st.session_state.user_email = user_info.get('user_email')
+        logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+    else:
+        if "username" not in st.session_state:
+            st.session_state.username = None
+
+    # Hide native Streamlit navigation
+    st.markdown("""
+    <style>
+        [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
+
     # Render unified sidebar
     render_unified_sidebar(
         app_name="Philately Collection Manager",
-        nav_items=[]
+        show_auth=True,
+        show_nav=True
     )
 
     st.title("Philately Collection Management System 🤖 🖼️")
@@ -90,7 +133,7 @@ def main():
             )
         with c2:
             high_value_threshold = st.number_input(
-                "High-Value Threshold ($")",
+                "High-Value Threshold ($)",
                 min_value=0,
                 value=1000,
                 help="USD threshold to consider a stamp as high-value for reporting.",

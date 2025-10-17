@@ -2,6 +2,7 @@
 """
 AI-Powered Resume Builder - Team Resume Builder & Collaborative Professional Profiles
 Integrated with xcu_my_apps framework
+Version 1.1.0 - Migrated to shared authentication system
 
 Features:
 - Individual and team resume generation
@@ -33,20 +34,21 @@ project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 sys.path.insert(0, str(project_root / 'all_applications_runner'))
 
-# Import xcu_my_apps framework components
+# Import shared authentication system
 try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
     from shared.ui import render_unified_sidebar
-    from shared.logging_utils import get_logger
-    from auth_integration import get_auth_manager
     AUTH_AVAILABLE = True
-    SHARED_LOGGING_AVAILABLE = True
 except ImportError as e:
-    # Fallback for development (logger not yet configured, so using pass)
-    def render_unified_sidebar(**kwargs):
-        pass  # Silent fallback
-    def get_auth_manager():
-        return None
-    AUTH_AVAILABLE = False
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
+# Import logging utilities
+try:
+    from shared.logging_utils import get_logger
+    SHARED_LOGGING_AVAILABLE = True
+except ImportError:
     SHARED_LOGGING_AVAILABLE = False
 
 # Import nimble-llm-caller
@@ -90,6 +92,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    if SHARED_LOGGING_AVAILABLE:
+        logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
 
 # Team Types (for categorization)
 TEAM_TYPES = [
@@ -197,23 +208,23 @@ def init_session_state():
         st.session_state.username = None
     if 'user_email' not in st.session_state:
         st.session_state.user_email = None
+    if 'user_name' not in st.session_state:
+        st.session_state.user_name = None
     if 'is_registered' not in st.session_state:
         st.session_state.is_registered = False
     if 'subscription_tier' not in st.session_state:
         st.session_state.subscription_tier = 'free'
 
-    # Sync with central auth if available
-    if AUTH_AVAILABLE:
-        try:
-            auth_manager = get_auth_manager()
-            user = auth_manager.get_current_user()
-            if user:
-                st.session_state.username = user.get('username')
-                st.session_state.user_email = user.get('email')
-                st.session_state.is_registered = True
-                st.session_state.subscription_tier = user.get('subscription_tier', 'free')
-        except Exception as e:
-            logger.error(f"Error syncing with central auth: {e}")
+    # Sync session state from shared auth
+    if is_authenticated():
+        user_info = get_user_info()
+        st.session_state.username = user_info.get('username')
+        st.session_state.user_name = user_info.get('user_name')
+        st.session_state.user_email = user_info.get('user_email')
+        st.session_state.is_registered = True
+        st.session_state.subscription_tier = user_info.get('subscription_tier', 'free')
+        if SHARED_LOGGING_AVAILABLE:
+            logger.info(f"User authenticated via shared auth: {st.session_state.username}")
     if 'conversation_history' not in st.session_state:
         st.session_state.conversation_history = []
     if 'generated_resume' not in st.session_state:
@@ -661,30 +672,18 @@ def main():
     # Initialize session state
     init_session_state()
 
-    # Use central authentication if available
-    if AUTH_AVAILABLE:
-        try:
-            auth_manager = get_auth_manager()
-            auth_manager.render_login_widget(location="sidebar")
+    # Hide native Streamlit navigation
+    st.markdown("""
+    <style>
+        [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
 
-            # Update session state with auth info
-            user = auth_manager.get_current_user()
-            if user:
-                st.session_state.username = user.get('username')
-                st.session_state.user_email = user.get('email')
-                st.session_state.is_registered = True
-                st.session_state.subscription_tier = user.get('subscription_tier', 'free')
-        except Exception as e:
-            logger.error(f"Error with central auth: {e}")
-
-    # Render unified sidebar from xcu_my_apps framework
+    # Render unified sidebar with shared authentication
     render_unified_sidebar(
         app_name="AI Resume Builder",
-        nav_items=[],
-        show_auth=False,  # Auth widget rendered above
-        show_xtuff_nav=True,
-        show_version=True,
-        show_contact=True
+        show_auth=True,
+        show_nav=True
     )
 
     # Custom sidebar navigation

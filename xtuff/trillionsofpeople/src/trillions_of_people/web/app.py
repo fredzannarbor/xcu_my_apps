@@ -1,5 +1,6 @@
 """
 Modern Streamlit web application for Trillions of People.
+Version 1.1.0 - Migrated to shared authentication system
 Refactored from the legacy trillionsofpeople.py monolith.
 """
 
@@ -17,6 +18,15 @@ import pandas as pd
 import fitz  # PyMuPDF
 from gibberish import Gibberish
 
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
 from ..core.logging_config import get_logger
 from ..modules.people_utilities import PeopleManager
 from .components import (
@@ -27,9 +37,16 @@ from .components import (
     render_upload_section
 )
 from .utils import create_api_key_manager
-from shared.ui import render_unified_sidebar
 
 logger = get_logger(__name__)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
 
 
 class TrillionsWebApp:
@@ -44,6 +61,17 @@ class TrillionsWebApp:
         """Initialize Streamlit session state variables."""
         if "openai_key" not in st.session_state:
             st.session_state.openai_key = None
+
+        # Sync session state from shared auth
+        if is_authenticated():
+            user_info = get_user_info()
+            st.session_state.username = user_info.get('username')
+            st.session_state.user_name = user_info.get('user_name')
+            st.session_state.user_email = user_info.get('user_email')
+            logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+        else:
+            if "username" not in st.session_state:
+                st.session_state.username = None
 
     def submit_guard(self) -> Optional[str]:
         """Validate API key before form submission."""
@@ -84,9 +112,17 @@ _A tool to explore the human story._""")
 
     def _render_unified_sidebar(self):
         """Render the unified sidebar."""
+        # Hide native Streamlit navigation
+        st.markdown("""
+        <style>
+            [data-testid="stSidebarNav"] {display: none;}
+        </style>
+        """, unsafe_allow_html=True)
+
         render_unified_sidebar(
             app_name="Trillions of People",
-            nav_items=[]
+            show_auth=True,
+            show_nav=True
         )
 
     def _render_main_content(self):
