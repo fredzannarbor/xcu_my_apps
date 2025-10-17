@@ -6,13 +6,23 @@ from __future__ import annotations
 
 # Standard library imports
 import logging
+import sys
 from pathlib import Path
+
+# Add monorepo root for shared imports
+sys.path.insert(0, '/Users/fred/xcu_my_apps')
+
+# Import shared authentication and UI
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout, register_user as shared_register
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    import streamlit as st
+    st.error(f"Failed to import shared authentication: {e}")
+    st.stop()
 
 # Third-party imports
 import streamlit as st
-
-# Local application imports
-from social_server.core.simple_auth import get_auth
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Global objects and Setup
@@ -84,8 +94,9 @@ else:
         col1, col2 = st.columns([2, 1])
 
         with col1:
-            st.success(f"🎉 Welcome back, **{auth.get_user_name()}**!")
-            st.markdown(f"**Role:** {get_user_info().get('user_role', 'user').capitalize()}")
+            user_info = get_user_info()
+            st.success(f"🎉 Welcome back, **{user_info.get('user_name', user_info.get('username'))}**!")
+            st.markdown(f"**Role:** {user_info.get('user_role', 'user').capitalize()}")
 
             st.markdown("---")
             st.markdown("### 🚀 Ready to dive into your personalized feed?")
@@ -94,8 +105,8 @@ else:
             col_feed, col_profile = st.columns(2)
 
             with col_feed:
-                if st.button("📱 Go to Social Xtuff", type="primary", use_container_width=True):
-                    st.switch_page("Social_Xtuff.py")
+                if st.button("📱 Go to Social Feed", type="primary", use_container_width=True):
+                    st.switch_page("pages/22_AI_Social_Feed.py")
 
             with col_profile:
                 if st.button("👤 View Profile", use_container_width=True):
@@ -105,13 +116,14 @@ else:
             st.markdown("### Account Actions")
 
             if st.button("🚪 Logout", type="secondary", use_container_width=True):
-                auth.logout()
+                shared_logout()
                 st.rerun()
 
             # Show current session info
             with st.expander("Session Info", expanded=False):
-                st.write(f"**Username:** {get_user_info().get('username')}")
-                st.write(f"**Role:** {get_user_info().get('user_role', 'user')}")
+                user_info = get_user_info()
+                st.write(f"**Username:** {user_info.get('username')}")
+                st.write(f"**Role:** {user_info.get('user_role', 'user')}")
 
         # Show features overview for logged-in users
         st.markdown("---")
@@ -165,12 +177,44 @@ else:
 
             with login_tab:
                 st.markdown("### Login to Your Account")
-                auth.render_login_form()
+
+                with st.form("login_form"):
+                    username = st.text_input("Username")
+                    password = st.text_input("Password", type="password")
+                    submit = st.form_submit_button("Login", use_container_width=True)
+
+                    if submit:
+                        success, message = shared_authenticate(username, password)
+                        if success:
+                            st.success(message)
+                            logger.info(f"User logged in: {username}")
+                            st.rerun()
+                        else:
+                            st.error(message)
 
             with register_tab:
                 st.markdown("### Create a New Account")
-                if auth.render_registration_form():
-                    st.balloons()  # Celebrate successful registration
+
+                with st.form("register_form"):
+                    new_username = st.text_input("Username", key="reg_username")
+                    new_email = st.text_input("Email", key="reg_email")
+                    new_name = st.text_input("Full Name", key="reg_name")
+                    new_password = st.text_input("Password", type="password", key="reg_password")
+                    confirm_password = st.text_input("Confirm Password", type="password", key="reg_confirm")
+                    register_submit = st.form_submit_button("Register", use_container_width=True)
+
+                    if register_submit:
+                        if new_password != confirm_password:
+                            st.error("Passwords do not match")
+                        elif len(new_password) < 6:
+                            st.error("Password must be at least 6 characters")
+                        else:
+                            if shared_register(new_username, new_password, new_email, new_name):
+                                st.success("Registration successful! Please login.")
+                                st.balloons()
+                                logger.info(f"New user registered: {new_username}")
+                            else:
+                                st.error("Username already exists")
 
             with guest_tab:
                 st.markdown("### Browse Without an Account")

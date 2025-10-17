@@ -207,18 +207,20 @@ class SubstackPostGenerator:
         return template
     
     def _create_amazon_link(self, isbn13: str) -> str:
-        """Create Amazon buy link from ISBN-13"""
+        """Create Amazon buy link from ISBN-13, always using ISBN-10 format"""
         try:
-            # Convert ISBN-13 to ISBN-10 for Amazon link
+            # Convert ISBN-13 to ISBN-10 for Amazon link (required)
             isbn10 = self._isbn13_to_isbn10(isbn13)
             if isbn10:
-                return f"https://www.amazon.com/dp/{isbn10}?tag=internetbo00a-20"
+                return f"https://www.amazon.com/dp/{isbn10}?tag=internetbookinfo-20"
             else:
-                # Fallback to ISBN-13 if conversion fails
-                return f"https://www.amazon.com/dp/{isbn13}?tag=internetbo00a-20"
-        except Exception:
-            # Fallback to ISBN-13 if any error occurs
-            return f"https://www.amazon.com/dp/{isbn13}?tag=internetbo00a-20"
+                # Log warning but still return a link (though it may not work correctly)
+                print(f"Warning: Could not convert ISBN-13 to ISBN-10: {isbn13}")
+                return f"https://www.amazon.com/dp/{isbn13}?tag=internetbookinfo-20"
+        except Exception as e:
+            # Log error but still return a link
+            print(f"Error creating Amazon link for {isbn13}: {e}")
+            return f"https://www.amazon.com/dp/{isbn13}?tag=internetbookinfo-20"
     
     def _isbn13_to_isbn10(self, isbn13: str) -> Optional[str]:
         """Convert ISBN-13 to ISBN-10"""

@@ -142,7 +142,7 @@ def load_spreadsheet(filename):
 
 
 def add_amazon_buy_links(df):
-    df['amazon_buy_link'] = 'https://www.amazon.com/dp/' + df['isbn_10_bak'].astype(str) + '?tag=ai4bookloversgpt-20'
+    df['amazon_buy_link'] = 'https://www.amazon.com/dp/' + df['isbn_10_bak'].astype(str) + '?tag=internetbookinfo-20'
     return df
 
 

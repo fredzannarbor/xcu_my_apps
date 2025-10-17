@@ -15,6 +15,17 @@ import sys
 from pathlib import Path
 import json
 
+# Add monorepo root for shared imports
+sys.path.insert(0, '/Users/fred/xcu_my_apps')
+
+# Import shared authentication and UI
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.stop()
+
 # Add the project root to Python path for proper imports
 project_root = Path(__file__).resolve().parent.parent.parent
 if str(project_root) not in sys.path:
@@ -23,14 +34,19 @@ if str(project_root) not in sys.path:
 try:
     from social_server.modules.ai_personas import AIPersonaManager
     from social_server.modules.generate_social_feed import SocialFeedManager, UserInteraction, UserAction, FeedPreferences
-    from social_server.core.simple_auth import get_auth
     from social_server.core.paths import get_data_path
 except ImportError:
     # Fallback for direct execution
     from src.social_server.modules.ai_personas import AIPersonaManager
     from src.social_server.modules.generate_social_feed import SocialFeedManager, UserInteraction, UserAction, FeedPreferences
-    from src.social_server.core.simple_auth import get_auth
     from src.social_server.core.paths import get_data_path
+
+# Initialize logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Page configuration
 st.set_page_config(
@@ -86,9 +102,10 @@ def init_managers():
 def get_user_id():
     """Get current user ID from authentication system."""
     try:
-        # Shared auth initialized in header
-        user_id = get_user_info().get('username')
-        return user_id or "anonymous"
+        if is_authenticated():
+            user_id = get_user_info().get('username')
+            return user_id or "anonymous"
+        return "anonymous"
     except:
         return "anonymous"
 
@@ -273,35 +290,9 @@ def main():
     user_id = get_user_id()
     is_logged_in = user_id != "anonymous"
 
-    # Sidebar Navigation
+    # Sidebar Navigation (unified sidebar handles auth, this is for page-specific nav)
     with st.sidebar:
-        # Authentication section
-        st.header("👤 Account")
-        # Shared auth initialized in header
 
-        if is_authenticated():
-            st.success(f"Welcome, **{auth.get_user_name()}**!")
-            st.caption(f"Role: {get_user_info().get('user_role', 'user').capitalize()}")
-
-            col1, col2 = st.columns(2)
-            with col1:
-                if st.button("📱 Feed", use_container_width=True):
-                    st.switch_page("pages/22_AI_Social_Feed.py")
-            with col2:
-                if st.button("🚪 Logout", use_container_width=True):
-                    auth.logout()
-                    st.rerun()
-        else:
-            st.info("Not logged in")
-            col1, col2 = st.columns(2)
-            with col1:
-                if st.button("🔐 Login", use_container_width=True):
-                    st.switch_page("pages/24_Login_Register.py")
-            with col2:
-                if st.button("📝 Register", use_container_width=True):
-                    st.switch_page("pages/24_Login_Register.py")
-
-        st.markdown("---")
         st.header("🧭 Profile Navigation")
 
         view_type = st.radio(
