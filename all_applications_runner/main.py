@@ -669,16 +669,15 @@ def render_home_page(
                             break
 
                     # Get session ID from shared auth system for cross-subdomain SSO
-                    session_id = ""
-                    if SHARED_AUTH_AVAILABLE:
-                        shared_auth = get_shared_auth()
-                        if shared_auth:
-                            session_id = st.session_state.get("shared_session_id", "")
+                    # The auth_manager already uses shared auth, so we can get session from it
+                    session_id = st.session_state.get("shared_session_id", "")
 
                     base_url = get_base_url_for_port(codexes_port)
                     if session_id:
                         base_url += f"?session_id={session_id}"
-                        logger.info(f"[LANDING NAV] Adding session_id to base_url: {base_url}")
+                        logger.info(f"[LANDING NAV] Adding session_id {session_id[:16]}... to base_url")
+                    else:
+                        logger.warning(f"[LANDING NAV] No session_id found in session_state")
 
                     # Quick Links buttons (consolidated)
                     # Xynapse Traces button with bright orange color - using HTML button - MOVED TO TOP
@@ -840,16 +839,15 @@ def render_home_page(
                             use_container_width=True,
                         ):
                             # Get session ID from shared auth system for cross-subdomain SSO
-                            session_id = ""
-                            if SHARED_AUTH_AVAILABLE:
-                                shared_auth = get_shared_auth()
-                                if shared_auth:
-                                    session_id = st.session_state.get("shared_session_id", "")
+                            # The auth_manager already uses shared auth, so we can get session from it
+                            session_id = st.session_state.get("shared_session_id", "")
 
                             url = get_base_url_for_port(port)
                             if session_id:
                                 url += f"?session_id={session_id}"
-                                logger.info(f"[LANDING LAUNCH] Adding session_id to {name} URL: {url}")
+                                logger.info(f"[LANDING LAUNCH] Adding session_id {session_id[:16]}... to {name} URL")
+                            else:
+                                logger.warning(f"[LANDING LAUNCH] No session_id found when launching {name}")
                             st.markdown(
                                 f'<meta http-equiv="refresh" content="0; url={url}" />',
                                 unsafe_allow_html=True,
