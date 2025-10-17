@@ -715,7 +715,30 @@ def display_cart():
                     "quantity": 1
                 } for item in user_cart]
 
-                base_url = os.getenv("STREAMLIT_SERVER_BASE_URL", "http://localhost:8501")
+                # Dynamically determine base URL for Stripe redirects
+                base_url = os.getenv("STREAMLIT_SERVER_BASE_URL")
+                if not base_url:
+                    # Try to get from Streamlit's runtime config
+                    try:
+                        from streamlit import runtime
+                        from streamlit.runtime.scriptrunner import get_script_run_ctx
+                        ctx = get_script_run_ctx()
+                        if ctx:
+                            session_info = runtime.get_instance()._session_mgr.list_active_sessions()[0]
+                            base_url = f"http://{session_info.client.request.host}"
+                    except:
+                        pass
+
+                # Final fallback: use current page URL from query params or hostname
+                if not base_url:
+                    import socket
+                    hostname = socket.gethostname()
+                    # Check if we're on production by hostname
+                    if "book-publisher-agi" in hostname or "34.172.181.254" in hostname:
+                        base_url = "https://codexes.xtuff.ai"
+                    else:
+                        base_url = "http://localhost:8502"
+
                 session = stripe.checkout.Session.create(
                     payment_method_types=["card"],
                     line_items=line_items,
