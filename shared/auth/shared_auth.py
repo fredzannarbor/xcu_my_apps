@@ -67,7 +67,7 @@ class SharedAuthSystem:
         self.config = self._load_config()
 
         # Initialize cookie manager for cross-app SSO
-        self.cookie_manager = stx.CookieManager()
+        self.cookie_manager = stx.CookieManager(key="shared_auth_cookie_manager")
 
         # Initialize session state if needed
         if 'auth_checked' not in st.session_state:
