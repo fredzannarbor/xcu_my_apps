@@ -79,24 +79,21 @@ def main():
         page_icon="🏢"
     )
 
-# Sync session state from shared auth
-if is_authenticated():
-    user_info = get_user_info()
-    st.session_state.username = user_info.get('username')
-    st.session_state.user_name = user_info.get('user_name')
-    st.session_state.user_email = user_info.get('user_email')
-    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
-else:
-    if "username" not in st.session_state:
-        st.session_state.username = None
-
-
-
+    # Sync session state from shared auth
+    if is_authenticated():
+        user_info = get_user_info()
+        st.session_state.username = user_info.get('username')
+        st.session_state.user_name = user_info.get('user_name')
+        st.session_state.user_email = user_info.get('user_email')
+        logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+    else:
+        if "username" not in st.session_state:
+            st.session_state.username = None
 
     # Get imprint parameter from URL or selection
     # NOTE: render_unified_sidebar is called from main app, not from individual pages
     selected_imprint = get_selected_imprint()
-    
+
     if selected_imprint:
         render_imprint_page(selected_imprint)
     else:
