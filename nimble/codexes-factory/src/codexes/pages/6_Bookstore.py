@@ -1,5 +1,5 @@
 # src/codexes/pages/6_Pilsa_Bookstore.py
-# version 1.3.4
+# version 1.3.5
 import streamlit as st
 import pandas as pd
 import stripe
@@ -15,6 +15,7 @@ import secrets
 import string
 import dotenv
 import sys
+import logging
 from pathlib import Path
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
@@ -22,6 +23,13 @@ sys.path.insert(0, '/Users/fred/xcu_my_apps')
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Configure logging for Stripe transactions
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 
 # --- Helper function to get CLI arguments ---
 def get_cli_arg(arg_name, default_value=None):
@@ -739,6 +747,20 @@ def display_cart():
                     else:
                         base_url = "http://localhost:8502"
 
+                # Log Stripe checkout session details for debugging
+                stripe_key = stripe.api_key or "not_set"
+                masked_key = f"...{stripe_key[-4:]}" if len(stripe_key) > 4 else "****"
+                total_amount = sum(item["price"] for item in user_cart)
+                logger.info(
+                    f"Creating Stripe checkout session - "
+                    f"base_url: {base_url}, "
+                    f"stripe_account: {masked_key}, "
+                    f"session_id: {st.session_state.session_id}, "
+                    f"username: {st.session_state.username or 'guest'}, "
+                    f"cart_total: ${total_amount:.2f}, "
+                    f"items_count: {len(user_cart)}"
+                )
+
                 session = stripe.checkout.Session.create(
                     payment_method_types=["card"],
                     line_items=line_items,
@@ -749,8 +771,21 @@ def display_cart():
                               "username": st.session_state.username or "guest"}
                 )
                 st.session_state.stripe_session_id = session.id
+
+                # Log successful session creation
+                logger.info(
+                    f"Stripe checkout session created successfully - "
+                    f"stripe_session_id: {session.id}, "
+                    f"checkout_url: {session.url}"
+                )
                 st.markdown(f"[{get_translation(st.session_state.language, 'complete_payment')}]({session.url})")
             except Exception as e:
+                logger.error(
+                    f"Error creating Stripe checkout session - "
+                    f"error: {str(e)}, "
+                    f"session_id: {st.session_state.session_id}, "
+                    f"username: {st.session_state.username or 'guest'}"
+                )
                 st.error(get_translation(st.session_state.language, "checkout_error", error=e))
 
         if st.button(get_translation(st.session_state.language, "back_to_catalog"),
