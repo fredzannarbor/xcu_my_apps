@@ -1,4 +1,6 @@
 """
+version 1.1.0 - Migrated to shared authentication system
+
 Books In Print with Enhanced Financial Metadata
 
 Comprehensive view of all books in print using the FullMetadataEnhanced approach.
@@ -24,22 +26,35 @@ import numpy as np
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
+
 # Import following current patterns
 try:
     from codexes.modules.finance.core.user_data_manager import UserDataManager
     from codexes.modules.finance.core.fro_coordinator import FROCoordinator
     from codexes.modules.finance.core.enhanced_metadata_processor import EnhancedMetadataProcessor
     from codexes.modules.finance.ui.source_display import DataSourceDisplay
-    from codexes.core.auth import get_user_role
-    from codexes.core.simple_auth import get_auth
 except ModuleNotFoundError:
     from src.codexes.modules.finance.core.user_data_manager import UserDataManager
     from src.codexes.modules.finance.core.fro_coordinator import FROCoordinator
     from src.codexes.modules.finance.core.enhanced_metadata_processor import EnhancedMetadataProcessor
     from src.codexes.modules.finance.ui.source_display import DataSourceDisplay
-    from src.codexes.core.auth import get_user_role
-    from src.codexes.core.simple_auth import get_auth
-
+    
 logger = logging.getLogger(__name__)
 
 # Page configuration
@@ -50,13 +65,13 @@ st.set_page_config(
 )
 
 # Authentication check
-auth = get_auth()
-if not auth.is_authenticated():
+# Shared auth initialized in header
+if not is_authenticated():
     st.error("🔒 Please log in to access financial data.")
     st.stop()
 
-current_username = auth.get_current_user()
-user_role = auth.get_user_role()
+current_username = get_user_info().get('username')
+user_role = get_user_info().get('user_role', 'user')
 
 if user_role not in ['admin', 'subscriber']:
     st.error("🚫 This page requires subscriber or admin access.")

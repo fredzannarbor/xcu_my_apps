@@ -11,6 +11,23 @@ import sys
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
+
 # Third-party imports
 import streamlit as st
 import streamlit_authenticator as stauth
@@ -27,7 +44,6 @@ project_root = script_path.parent.parent.parent.parent
 from src.codexes.core.auth import get_allowed_pages, get_user_role
 from src.codexes.core.translations import get_translation
 from src.codexes.core.utils import setup_logging
-from src.codexes.core.simple_auth import get_auth
 
 setup_logging(level="INFO")
 logger = logging.getLogger("codexes_factory")
@@ -37,6 +53,8 @@ logger = logging.getLogger("codexes_factory")
 # ──────────────────────────────────────────────────────────────────────────────
 def _unique_key(base: str) -> str:
     """
+version 1.1.0 - Migrated to shared authentication system
+
     Return an application-wide unique widget key by prefixing `base`
     with the current page name (or 'global' if not yet set).
     """
@@ -131,13 +149,13 @@ st.session_state['user_role'] = user_role
 # ──────────────────────────────────────────────────────────────────────────────
 
 # Get authentication instance
-auth = get_auth()
+# Shared auth initialized in header
 
 # If user is already logged in, show a welcome message and a logout button.
-if auth.is_authenticated():
+if is_authenticated():
 
     st.write(T("welcome_message", name=auth.get_user_name()))
-    st.write(T("role_display", role=auth.get_user_role()))
+    st.write(T("role_display", role=get_user_info().get('user_role', 'user')))
     st.info("You are logged in.")
 
     if st.button(T('logout_button', 'Logout')):

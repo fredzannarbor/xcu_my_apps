@@ -1,5 +1,6 @@
 """
 AI Social Feed - Book-Lover's Social Media Experience
+version 1.1.0 - Migrated to shared authentication system
 
 Delivers dopamine (social connection) and synaptic rush (learning) through
 AI persona interactions focused on books, reading, and literary culture.
@@ -9,11 +10,28 @@ import streamlit as st
 from datetime import datetime, timedelta
 from typing import List, Optional
 import sys
+import logging
 from pathlib import Path
 
 # Add paths for imports
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
 
 # Import with fallback pattern
 try:
@@ -23,11 +41,6 @@ except ImportError:
     st.error("social_server.modules not available")
     st.stop()
 
-try:
-    from codexes.core.simple_auth import get_auth
-except ImportError:
-    from src.codexes.core.simple_auth import get_auth
-
 # Page configuration
 st.set_page_config(
     page_title="AI Social Feed Server - AI Lab for Book-Lovers",
@@ -35,6 +48,39 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Hide native Streamlit navigation
+st.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+
+# Render unified sidebar
+render_unified_sidebar(
+    app_name="Codexes Factory",
+    show_auth=True,
+    show_nav=True
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
+
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
 
 # Initialize managers
 @st.cache_resource
@@ -47,12 +93,10 @@ def init_managers():
 
 def get_user_id():
     """Get current user ID from authentication system."""
-    try:
-        auth = get_auth()
-        user_id = auth.get_current_user()
-        return user_id or "anonymous"
-    except:
-        return "anonymous"
+    if is_authenticated():
+        user_info = get_user_info()
+        return user_info.get('username', 'anonymous')
+    return "anonymous"
 
 def display_persona_card(persona):
     """Display a persona info card."""

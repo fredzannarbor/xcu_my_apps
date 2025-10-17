@@ -1,5 +1,6 @@
 """
 Max Bialystok Financial Analysis
+version 1.1.0 - Migrated to shared authentication system
 
 Financial analysis dashboard for book publishers inspired by "The Producers".
 Provides comprehensive financial reporting, royalty calculation, and performance analytics.
@@ -8,12 +9,29 @@ Provides comprehensive financial reporting, royalty calculation, and performance
 import pandas as pd
 import streamlit as st
 import os
+import logging
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import glob
 import sys
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
+
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
 
 # Optional imports
 try:
@@ -29,7 +47,6 @@ try:
     from codexes.modules.finance.core.fro_coordinator import FROCoordinator
     from codexes.modules.finance.ui.unified_uploader import UnifiedFinanceUploader
     from codexes.modules.finance.ui.source_display import DataSourceDisplay
-    from codexes.core.simple_auth import get_auth
     # Keep some legacy imports for compatibility during transition
     from codexes.modules.finance.leo_bloom.integrations.imprint_finance_integration import ImprintFinanceIntegration
 except ModuleNotFoundError:
@@ -37,7 +54,6 @@ except ModuleNotFoundError:
     from src.codexes.modules.finance.core.fro_coordinator import FROCoordinator
     from src.codexes.modules.finance.ui.unified_uploader import UnifiedFinanceUploader
     from src.codexes.modules.finance.ui.source_display import DataSourceDisplay
-    from src.codexes.core.simple_auth import get_auth
     try:
         from src.codexes.modules.finance.leo_bloom.integrations.imprint_finance_integration import ImprintFinanceIntegration
     except ModuleNotFoundError:
@@ -49,22 +65,49 @@ st.set_page_config(
     layout="wide"
 )
 
-# Page header
-st.title("💰 Max Bialystok Financial Analysis")
-st.markdown("*Financial Analysis Software for Book Publishers*")
+# Hide native Streamlit navigation
+st.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
 
-# Authentication and user setup - NEW ARCHITECTURE
-auth = get_auth()
-if not auth.is_authenticated():
-    st.error("🔒 Please log in to access financial data.")
+# Render unified sidebar
+render_unified_sidebar(
+    app_name="Codexes Factory",
+    show_auth=True,
+    show_nav=True
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
     st.stop()
 
-current_username = auth.get_current_user()
-user_role = auth.get_user_role()
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    current_username = user_info.get('username')
+    user_role = user_info.get('user_role', 'user')
+    logger.info(f"User authenticated via shared auth: {current_username}")
+else:
+    st.error("🔒 Please log in to access financial data.")
+    st.stop()
 
 if user_role not in ['admin']:
     st.error("🚫 This page requires admin access.")
     st.stop()
+
+# Page header
+st.title("💰 Max Bialystok Financial Analysis")
+st.markdown("*Financial Analysis Software for Book Publishers*")
 
 # Initialize new architecture components
 udm = UserDataManager(current_username)

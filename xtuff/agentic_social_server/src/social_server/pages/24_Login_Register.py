@@ -27,7 +27,9 @@ logger = logging.getLogger("social_server")
 # ──────────────────────────────────────────────────────────────────────────────
 
 def main():
-    """Main login/register page for Social Xtuff."""
+    """
+version 1.1.0 - Migrated to shared authentication system
+Main login/register page for Social Xtuff."""
 
     st.set_page_config(
         page_title="Social Xtuff - Login",
@@ -35,20 +37,55 @@ def main():
         layout="wide"
     )
 
+
+# Hide native Streamlit navigation
+st.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+
+# Render unified sidebar
+render_unified_sidebar(
+    app_name="Social Server",
+    show_auth=True,
+    show_nav=True
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
+
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
+
+
     # Header
     st.title("⚡ Social Xtuff - Login")
     st.markdown("### *Access Your Personalized Book-Focused Social Experience*")
 
     # Get authentication instance
-    auth = get_auth()
+    # Shared auth initialized in header
 
     # If user is already logged in, show a welcome message and logout option
-    if auth.is_authenticated():
+    if is_authenticated():
         col1, col2 = st.columns([2, 1])
 
         with col1:
             st.success(f"🎉 Welcome back, **{auth.get_user_name()}**!")
-            st.markdown(f"**Role:** {auth.get_user_role().capitalize()}")
+            st.markdown(f"**Role:** {get_user_info().get('user_role', 'user').capitalize()}")
 
             st.markdown("---")
             st.markdown("### 🚀 Ready to dive into your personalized feed?")
@@ -73,8 +110,8 @@ def main():
 
             # Show current session info
             with st.expander("Session Info", expanded=False):
-                st.write(f"**Username:** {auth.get_current_user()}")
-                st.write(f"**Role:** {auth.get_user_role()}")
+                st.write(f"**Username:** {get_user_info().get('username')}")
+                st.write(f"**Role:** {get_user_info().get('user_role', 'user')}")
 
         # Show features overview for logged-in users
         st.markdown("---")

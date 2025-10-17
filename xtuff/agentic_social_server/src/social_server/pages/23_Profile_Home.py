@@ -1,4 +1,6 @@
 """
+version 1.1.0 - Migrated to shared authentication system
+
 User Profile Home Page - AI Personas & Users
 
 A comprehensive profile page showcasing AI personas and user statistics,
@@ -6,6 +8,7 @@ preferences, and activity within the AI Lab for Book-Lovers community.
 """
 
 import streamlit as st
+import logging
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import sys
@@ -37,6 +40,41 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
+# Hide native Streamlit navigation
+st.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+
+# Render unified sidebar
+render_unified_sidebar(
+    app_name="Social Server",
+    show_auth=True,
+    show_nav=True
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
+
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
+
+
 # Initialize managers
 @st.cache_resource
 def init_managers():
@@ -48,8 +86,8 @@ def init_managers():
 def get_user_id():
     """Get current user ID from authentication system."""
     try:
-        auth = get_auth()
-        user_id = auth.get_current_user()
+        # Shared auth initialized in header
+        user_id = get_user_info().get('username')
         return user_id or "anonymous"
     except:
         return "anonymous"
@@ -239,11 +277,11 @@ def main():
     with st.sidebar:
         # Authentication section
         st.header("👤 Account")
-        auth = get_auth()
+        # Shared auth initialized in header
 
-        if auth.is_authenticated():
+        if is_authenticated():
             st.success(f"Welcome, **{auth.get_user_name()}**!")
-            st.caption(f"Role: {auth.get_user_role().capitalize()}")
+            st.caption(f"Role: {get_user_info().get('user_role', 'user').capitalize()}")
 
             col1, col2 = st.columns(2)
             with col1:

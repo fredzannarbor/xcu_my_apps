@@ -1,5 +1,6 @@
 """
 User Profile Home Page - AI Personas & Users
+version 1.1.0 - Migrated to shared authentication system
 
 A comprehensive profile page showcasing AI personas and user statistics,
 preferences, and activity within the AI Lab for Book-Lovers community.
@@ -9,6 +10,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import sys
+import logging
 from pathlib import Path
 import json
 
@@ -19,13 +21,27 @@ project_root = Path(__file__).resolve().parent.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
+# Configure logging
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    from shared.ui import render_unified_sidebar
+except ImportError as e:
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
+
 try:
     from social_server.modules import AIPersonaManager, SocialFeedManager, UserInteraction, UserAction, FeedPreferences
-    from codexes.core.simple_auth import get_auth
 except ImportError:
     # Fallback for direct execution
     from social_server.modules import AIPersonaManager, SocialFeedManager, UserInteraction, UserAction, FeedPreferences
-    from src.codexes.core.simple_auth import get_auth
 
 # Page configuration
 st.set_page_config(
@@ -34,6 +50,39 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Hide native Streamlit navigation
+st.markdown("""
+<style>
+    [data-testid="stSidebarNav"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+
+# Render unified sidebar
+render_unified_sidebar(
+    app_name="Codexes Factory",
+    show_auth=True,
+    show_nav=True
+)
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable.")
+
+# Sync session state from shared auth
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
 
 # Initialize managers
 @st.cache_resource
@@ -45,12 +94,10 @@ def init_managers():
 
 def get_user_id():
     """Get current user ID from authentication system."""
-    try:
-        auth = get_auth()
-        user_id = auth.get_current_user()
-        return user_id or "anonymous"
-    except:
-        return "anonymous"
+    if is_authenticated():
+        user_info = get_user_info()
+        return user_info.get('username', 'anonymous')
+    return "anonymous"
 
 def get_user_stats(feed_manager, user_id):
     """Get user activity statistics."""
