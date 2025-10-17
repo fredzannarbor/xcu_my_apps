@@ -1,5 +1,5 @@
 # src/codexes/pages/6_Pilsa_Bookstore.py
-# version 1.3.5
+# version 1.3.6 - Migrated to shared authentication system
 import streamlit as st
 import pandas as pd
 import stripe
@@ -23,6 +23,15 @@ sys.path.insert(0, '/Users/fred/xcu_my_apps')
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Import shared authentication system
+try:
+    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+except ImportError as e:
+    import streamlit as st
+    st.error(f"Failed to import shared authentication: {e}")
+    st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
+    st.stop()
 
 # Configure logging for Stripe transactions
 logger = logging.getLogger(__name__)
@@ -71,6 +80,14 @@ else:
 
 # Configure Stripe API key
 stripe.api_key = os.getenv("STRIPE_SECRET_KEY", "your_stripe_secret_key_here")
+
+# Initialize shared authentication system
+try:
+    shared_auth = get_shared_auth()
+    logger.info("Shared authentication system initialized")
+except Exception as e:
+    logger.error(f"Failed to initialize shared auth: {e}")
+    st.error("Authentication system unavailable. Some features may not work.")
 
 # Load and validate user configuration from YAML
 try:
@@ -264,14 +281,23 @@ if "cart" not in st.session_state:
     st.session_state.cart = {}
 if "page" not in st.session_state:
     st.session_state.page = "catalog"
-if "username" not in st.session_state:
-    st.session_state.username = None
 if "language" not in st.session_state:
     st.session_state.language = "en"
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
 if "stripe_session_id" not in st.session_state:
     st.session_state.stripe_session_id = None
+
+# Sync authentication state from shared auth system
+if is_authenticated():
+    user_info = get_user_info()
+    st.session_state.username = user_info.get('username')
+    st.session_state.user_name = user_info.get('user_name')
+    st.session_state.user_email = user_info.get('user_email')
+    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+else:
+    if "username" not in st.session_state:
+        st.session_state.username = None
 
 # Language selector
 def get_translation(lang, key, **kwargs):
@@ -360,14 +386,18 @@ def display_auth_forms():
 
         if submit_login:
             if username and password:
-                # Check credentials manually
-                user_data = config["credentials"]["usernames"].get(username)
-                if user_data and bcrypt.checkpw(password.encode("utf-8"), user_data["password"].encode("utf-8")):
-                    st.session_state.username = username
-                    transfer_cart_to_user(username)
+                # Use shared authentication system
+                success, message = shared_authenticate(username, password)
+                if success:
+                    # Update local session state from shared auth
+                    user_info = get_user_info()
+                    st.session_state.username = user_info.get('username')
+                    st.session_state.user_name = user_info.get('user_name')
+                    st.session_state.user_email = user_info.get('user_email')
+                    transfer_cart_to_user(st.session_state.username)
                     st.session_state.page = "cart"
-                    st.success(
-                        get_translation(st.session_state.language, "welcome", name=user_data.get("name", username)))
+                    st.success(get_translation(st.session_state.language, "welcome", name=user_info.get('user_name', username)))
+                    logger.info(f"User {username} logged in via Bookstore")
                     st.rerun()
                 else:
                     st.error(get_translation(st.session_state.language, "login_error"))
@@ -387,33 +417,23 @@ def display_auth_forms():
 
         if submit_register:
             if new_email and new_username and new_name and new_password:
-                # Check if username already exists
-                if new_username in config["credentials"]["usernames"]:
-                    st.error("Username already exists. Please choose a different username.")
-                else:
-                    try:
-                        # Hash the password
-                        hashed_password = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
-
-                        # Add new user to config
-                        config["credentials"]["usernames"][new_username] = {
-                            "email": new_email,
-                            "name": new_name,
-                            "password": hashed_password
-                        }
-
-                        # Save updated config
-                        with open(Path("resources/yaml/config.yaml"), "w") as file:
-                            yaml.dump(config, file, default_flow_style=False)
-
-                        st.session_state.username = new_username
+                # Use shared authentication system for registration
+                success = shared_auth.register_user(new_username, new_password, new_email, new_name)
+                if success:
+                    # Auto-login after successful registration
+                    auth_success, message = shared_authenticate(new_username, new_password)
+                    if auth_success:
+                        user_info = get_user_info()
+                        st.session_state.username = user_info.get('username')
+                        st.session_state.user_name = user_info.get('user_name')
+                        st.session_state.user_email = user_info.get('user_email')
                         transfer_cart_to_user(new_username)
                         st.session_state.page = "cart"
-                        st.success(get_translation(st.session_state.language, "register_success", username=new_username,
-                                                   password="[your chosen password]"))
+                        st.success(get_translation(st.session_state.language, "account_created", username=new_username, password="[your chosen password]"))
+                        logger.info(f"New user registered and logged in: {new_username}")
                         st.rerun()
-                    except Exception as e:
-                        st.error(get_translation(st.session_state.language, "registration_error", error=str(e)))
+                else:
+                    st.error("Registration failed. Username or email may already exist.")
             else:
                 st.warning("Please fill in all registration fields.")
 
@@ -832,10 +852,10 @@ with header_cols[2]:
             st.rerun()
     else:
         if st.button(get_translation(st.session_state.language, "logout"), key="header_logout_button", use_container_width=True):
-            st.session_state.username = None
+            shared_logout()  # Clear shared session and cookie
             st.session_state.page = "catalog"
-            st.session_state.session_id = str(uuid.uuid4())
             st.success(get_translation(st.session_state.language, "logout_success"))
+            logger.info("User logged out via Bookstore")
             st.rerun()
 st.markdown("---")
 
