@@ -66,7 +66,7 @@ ALL_PAGES = [
     st.Page("pages/1_Home.py", title="Home", icon="🏠"),
     st.Page("pages/2_Annotated_Bibliography.py", title="Annotated Bibliography", icon="📚", url_path="annotated_bibliography_alt"),
     st.Page("pages/22_AI_Social_Feed.py", title="AI Social Feed", icon="🧠"),
-    st.Page("pages/6_Bookstore.py", title="Bookstore", icon="🛍️"),
+    st.Page("pages/6_Bookstore.py", title="Bookstore", icon="🛍️", url_path="6_Bookstore"),
     st.Page("pages/8_Login_Register.py", title="Login/Register", icon="🔐"),
     st.Page("pages/15_Ideation_and_Development.py", title="Ideation & Development", icon="💡"),
     st.Page("pages/ideation_dashboard.py", title="Ideation Dashboard", icon="💡"),
@@ -160,6 +160,11 @@ try:
         show_version=True,
         show_contact=True
     )
+
+    # Mark sidebar as rendered to prevent child pages from duplicating it
+    st.session_state.sidebar_rendered = True
+    logger.debug("Main app rendered sidebar, set sidebar_rendered flag")
+
 except ImportError as e:
     logger.warning(f"Could not import render_unified_sidebar: {e}")
     # Fallback to simple auth display
@@ -169,6 +174,9 @@ except ImportError as e:
         st.sidebar.caption(f"Role: {user_role}")
     else:
         st.sidebar.info("Not logged in")
+
+    # Mark sidebar as rendered even in fallback mode
+    st.session_state.sidebar_rendered = True
 
 # Add separator before app navigation
 st.sidebar.markdown("---")
