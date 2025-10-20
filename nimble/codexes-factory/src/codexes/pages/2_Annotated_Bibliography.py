@@ -64,12 +64,20 @@ except ModuleNotFoundError:
         process_zotero_results = None
         st.stop()
 
-st.set_page_config(
-    layout="wide",
-    initial_sidebar_state="auto",
-    page_title="Bibliography",
-    page_icon="📚",
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+
+# Import and use page utilities for consistent sidebar and auth
+try:
+    from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+    # Ensure auth has been checked for this session
+    ensure_auth_checked()
+
+    # Render the full sidebar with all sections
+    render_page_sidebar()
+except ImportError as e:
+    logger.warning(f"Could not import page_utils: {e}")
+    # Fallback continues with existing code
 
 # Sync session state from shared auth
 if is_authenticated():

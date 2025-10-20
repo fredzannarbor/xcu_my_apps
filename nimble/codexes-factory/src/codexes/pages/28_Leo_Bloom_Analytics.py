@@ -40,7 +40,6 @@ sys.path.insert(0, '/Users/fred/xcu_my_apps')
 # Import shared authentication system
 try:
     from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
-    from shared.ui import render_unified_sidebar
 except ImportError as e:
     import streamlit as st
     st.error(f"Failed to import shared authentication: {e}")
@@ -84,11 +83,7 @@ except ModuleNotFoundError:
     from src.codexes.modules.finance.leo_bloom.FinancialReportingObjects import FinancialReportingObjects as FRO
     from src.codexes.modules.finance.leo_bloom.utilities import classes_utilities as Leo
 
-st.set_page_config(
-    page_title="Leo Bloom Analytics",
-    page_icon="📊",
-    layout="wide"
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

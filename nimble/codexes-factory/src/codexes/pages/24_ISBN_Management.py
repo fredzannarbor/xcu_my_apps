@@ -33,7 +33,6 @@ sys.path.insert(0, '/Users/fred/xcu_my_apps')
 # Import shared authentication system
 try:
     from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
-    from shared.ui import render_unified_sidebar
 except ImportError as e:
     import streamlit as st
     st.error(f"Failed to import shared authentication: {e}")
@@ -64,11 +63,7 @@ except ImportError:
     from codexes.modules.distribution.isbn_integration import get_isbn_integration
     from codexes.modules.distribution.isbn_database import ISBNStatus
 
-st.set_page_config(
-    page_title="ISBN Management",
-    page_icon="📖",
-    layout="wide"
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -86,6 +81,19 @@ else:
 
 def main():
     """Main ISBN Management interface"""
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback continues with existing code
+
     st.title("📖 ISBN Management")
     st.markdown("**Unified ISBN management using your existing database with 1150+ records**")
     

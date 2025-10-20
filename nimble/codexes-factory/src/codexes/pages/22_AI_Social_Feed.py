@@ -27,7 +27,6 @@ logging.basicConfig(
 # Import shared authentication system
 try:
     from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
-    from shared.ui import render_unified_sidebar
 except ImportError as e:
     st.error(f"Failed to import shared authentication: {e}")
     st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
@@ -41,13 +40,7 @@ except ImportError:
     st.error("social_server.modules not available")
     st.stop()
 
-# Page configuration
-st.set_page_config(
-    page_title="AI Social Feed Server - AI Lab for Book-Lovers",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Hide native Streamlit navigation
 st.markdown("""
@@ -55,13 +48,6 @@ st.markdown("""
     [data-testid="stSidebarNav"] {display: none;}
 </style>
 """, unsafe_allow_html=True)
-
-# Render unified sidebar
-render_unified_sidebar(
-    app_name="Codexes Factory",
-    show_auth=True,
-    show_xtuff_nav=True
-)
 
 # Initialize shared authentication system
 try:
@@ -303,6 +289,18 @@ def filter_posts_by_hashtag(posts, hashtag):
 
 def main():
     """Main application function."""
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback continues with existing code
 
     # Check for hashtag filter in query params
     query_params = st.query_params

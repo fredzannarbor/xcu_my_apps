@@ -29,15 +29,12 @@ except ImportError as e:
     st.stop()
 
 
-
-
+# Configure logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-
-
 
 
 # Import enhanced imprint management
@@ -50,48 +47,32 @@ except ImportError:
     ImprintCore = None
 
 
-
-# Configure logging
-logger = logging.getLogger(__name__)
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
-# Initialize shared authentication system
-try:
-    shared_auth = get_shared_auth()
-    logger.info("Shared authentication system initialized")
-except Exception as e:
-    logger.error(f"Failed to initialize shared auth: {e}")
-    st.error("Authentication system unavailable.")
-
-
-
-logger = logging.getLogger(__name__)
-
-
 def main():
     """Main dynamic imprint display interface."""
-    st.set_page_config(
-        page_title="Imprint Showcase",
-        layout="wide",
-        page_icon="🏢"
-    )
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
 
-    # Sync session state from shared auth
-    if is_authenticated():
-        user_info = get_user_info()
-        st.session_state.username = user_info.get('username')
-        st.session_state.user_name = user_info.get('user_name')
-        st.session_state.user_email = user_info.get('user_email')
-        logger.info(f"User authenticated via shared auth: {st.session_state.username}")
-    else:
-        if "username" not in st.session_state:
-            st.session_state.username = None
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback: sync session state manually
+        if is_authenticated():
+            user_info = get_user_info()
+            st.session_state.username = user_info.get('username')
+            st.session_state.user_name = user_info.get('user_name')
+            st.session_state.user_email = user_info.get('user_email')
+            st.session_state.user_role = user_info.get('user_role', 'public')
+        else:
+            if "username" not in st.session_state:
+                st.session_state.username = None
+            st.session_state.user_role = 'public'
 
     # Get imprint parameter from URL or selection
-    # NOTE: render_unified_sidebar is called from main app, not from individual pages
     selected_imprint = get_selected_imprint()
 
     if selected_imprint:
@@ -703,9 +684,15 @@ def render_imprint_catalog(imprint_name: str, imprint_data: dict):
     # Large, prominent button to the bookstore
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Create bookstore URL with imprint filter (use relative URL for production compatibility)
+    # Create bookstore URL with imprint filter and session_id for cross-page SSO
     imprint_slug = imprint_name.lower().replace(' ', '_')
     bookstore_url = f"/Bookstore?imprint={imprint_slug}"
+
+    # Add session_id to URL to maintain authentication
+    session_id = st.session_state.get("shared_session_id", "")
+    if session_id:
+        bookstore_url += f"&session_id={session_id}"
+        logger.info(f"[CATALOG LINK] Adding session_id {session_id[:16]}... to bookstore URL")
 
     st.markdown(f"""
     <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; margin: 1rem 0;">
