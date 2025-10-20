@@ -684,9 +684,15 @@ def render_imprint_catalog(imprint_name: str, imprint_data: dict):
     # Large, prominent button to the bookstore
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Create bookstore URL with imprint filter (use relative URL for production compatibility)
+    # Create bookstore URL with imprint filter and session_id for cross-page SSO
     imprint_slug = imprint_name.lower().replace(' ', '_')
     bookstore_url = f"/Bookstore?imprint={imprint_slug}"
+
+    # Add session_id to URL to maintain authentication
+    session_id = st.session_state.get("shared_session_id", "")
+    if session_id:
+        bookstore_url += f"&session_id={session_id}"
+        logger.info(f"[CATALOG LINK] Adding session_id {session_id[:16]}... to bookstore URL")
 
     st.markdown(f"""
     <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; margin: 1rem 0;">
