@@ -744,6 +744,10 @@ def display_cart():
                 } for item in user_cart]
 
                 # Dynamically determine base URL for Stripe redirects
+                import socket
+                hostname = socket.gethostname()
+                is_production = "book-publisher-agi" in hostname or "34.172.181.254" in hostname
+
                 base_url = os.getenv("STREAMLIT_SERVER_BASE_URL")
                 if not base_url:
                     # Try to get from Streamlit's runtime config
@@ -753,16 +757,16 @@ def display_cart():
                         ctx = get_script_run_ctx()
                         if ctx:
                             session_info = runtime.get_instance()._session_mgr.list_active_sessions()[0]
-                            base_url = f"http://{session_info.client.request.host}"
+                            host = session_info.client.request.host
+                            # Force HTTPS on production
+                            protocol = "https" if is_production else "http"
+                            base_url = f"{protocol}://{host}"
                     except:
                         pass
 
-                # Final fallback: use current page URL from query params or hostname
+                # Final fallback
                 if not base_url:
-                    import socket
-                    hostname = socket.gethostname()
-                    # Check if we're on production by hostname
-                    if "book-publisher-agi" in hostname or "34.172.181.254" in hostname:
+                    if is_production:
                         base_url = "https://codexes.xtuff.ai"
                     else:
                         base_url = "http://localhost:8502"
