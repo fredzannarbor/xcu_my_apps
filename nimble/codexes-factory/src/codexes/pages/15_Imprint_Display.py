@@ -49,26 +49,10 @@ except ImportError:
 
 def main():
     """Main dynamic imprint display interface."""
-    st.set_page_config(
-        page_title="Imprint Showcase",
-        layout="wide",
-        page_icon="🏢"
-    )
+    # NOTE: Don't call st.set_page_config() in multi-page apps - it's handled by main app
+    # NOTE: Don't call render_unified_sidebar() - it's handled by main app (codexes-factory-home-ui.py)
 
-    # Render unified sidebar for consistent auth across all pages
-    try:
-        render_unified_sidebar(
-            app_name="Codexes Factory",
-            nav_items=[],  # App-specific nav handled by main app
-            show_auth=True,
-            show_xtuff_nav=True,
-            show_version=True,
-            show_contact=True
-        )
-    except Exception as e:
-        logger.error(f"Failed to render unified sidebar: {e}")
-
-    # Sync session state from shared auth
+    # Sync session state from shared auth (in case user navigated directly to this page)
     if is_authenticated():
         user_info = get_user_info()
         st.session_state.username = user_info.get('username')
