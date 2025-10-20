@@ -29,15 +29,12 @@ except ImportError as e:
     st.stop()
 
 
-
-
+# Configure logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-
-
 
 
 # Import enhanced imprint management
@@ -50,27 +47,6 @@ except ImportError:
     ImprintCore = None
 
 
-
-# Configure logging
-logger = logging.getLogger(__name__)
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
-# Initialize shared authentication system
-try:
-    shared_auth = get_shared_auth()
-    logger.info("Shared authentication system initialized")
-except Exception as e:
-    logger.error(f"Failed to initialize shared auth: {e}")
-    st.error("Authentication system unavailable.")
-
-
-
-logger = logging.getLogger(__name__)
-
-
 def main():
     """Main dynamic imprint display interface."""
     st.set_page_config(
@@ -79,19 +55,34 @@ def main():
         page_icon="🏢"
     )
 
+    # Render unified sidebar for consistent auth across all pages
+    try:
+        render_unified_sidebar(
+            app_name="Codexes Factory",
+            nav_items=[],  # App-specific nav handled by main app
+            show_auth=True,
+            show_xtuff_nav=True,
+            show_version=True,
+            show_contact=True
+        )
+    except Exception as e:
+        logger.error(f"Failed to render unified sidebar: {e}")
+
     # Sync session state from shared auth
     if is_authenticated():
         user_info = get_user_info()
         st.session_state.username = user_info.get('username')
         st.session_state.user_name = user_info.get('user_name')
         st.session_state.user_email = user_info.get('user_email')
-        logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+        st.session_state.user_role = user_info.get('user_role', 'public')
+        logger.info(f"Imprint Display - User authenticated: {st.session_state.username}, Role: {st.session_state.user_role}")
     else:
         if "username" not in st.session_state:
             st.session_state.username = None
+        st.session_state.user_role = 'public'
+        logger.info("Imprint Display - User not authenticated, role: public")
 
     # Get imprint parameter from URL or selection
-    # NOTE: render_unified_sidebar is called from main app, not from individual pages
     selected_imprint = get_selected_imprint()
 
     if selected_imprint:
