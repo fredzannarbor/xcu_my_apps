@@ -85,7 +85,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     """Main imprint administration interface."""
-    st.set_page_config(page_title="Imprint Administration", layout="wide")
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -97,15 +97,6 @@ if is_authenticated():
 else:
     if "username" not in st.session_state:
         st.session_state.username = None
-
-
-
-
-    render_unified_sidebar(
-    app_name="Codexes Factory",
-    show_auth=True,
-    show_xtuff_nav=True
-)
 
     st.title("🏢 Imprint Administration")
     st.markdown("Comprehensive management interface for all publishing imprints")

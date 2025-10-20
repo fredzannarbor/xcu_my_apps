@@ -71,11 +71,7 @@ except ImportError as e:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-st.set_page_config(
-    page_title="Publication Manager",
-    page_icon="📚",
-    layout="wide"
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

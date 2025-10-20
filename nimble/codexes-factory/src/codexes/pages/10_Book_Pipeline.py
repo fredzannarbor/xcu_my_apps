@@ -95,7 +95,7 @@ except ImportError:
         ENHANCED_PROMPTS_AVAILABLE = False
         EnhancedPromptsUI = None
 
-st.set_page_config(page_title="Book Pipeline Runner", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

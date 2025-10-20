@@ -65,7 +65,7 @@ except ImportError:
         st.error("Failed to import required modules. Make sure you're running from the correct directory.")
         st.stop()
 
-st.set_page_config(page_title="Backmatter Manager", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

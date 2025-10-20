@@ -44,7 +44,7 @@ except Exception as e:
     st.error("Authentication system unavailable.")
 
 
-st.set_page_config(page_title="AI Lab for Book-Lovers", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

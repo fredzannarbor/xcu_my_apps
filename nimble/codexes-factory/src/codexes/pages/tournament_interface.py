@@ -13,10 +13,11 @@ import sys
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+
 # Import shared authentication system
 try:
     from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
-    from shared.ui import render_unified_sidebar
 except ImportError as e:
     import streamlit as st
     st.error(f"Failed to import shared authentication: {e}")

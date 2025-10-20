@@ -113,8 +113,7 @@ if 'language' not in st.session_state:
 
 T = lambda key, **kwargs: get_translation(st.session_state.language, key, **kwargs)
 
-# --- UI Layout ---
-st.set_page_config(page_title="Metadata & Distribution", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

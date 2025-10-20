@@ -124,7 +124,7 @@ except ImportError:
         safe_components = None
     safe_display = None
 
-st.set_page_config(page_title="Ideation and Development", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

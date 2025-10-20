@@ -70,11 +70,7 @@ except Exception as e:
 
 def main():
     """Main function for the Stage-Agnostic UI page."""
-    st.set_page_config(
-        page_title="Stage-Agnostic UI",
-        page_icon="🎯",
-        layout="wide"
-    )
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

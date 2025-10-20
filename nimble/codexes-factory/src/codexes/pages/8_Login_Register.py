@@ -159,7 +159,7 @@ if is_authenticated():
     st.info("You are logged in.")
 
     if st.button(T('logout_button', 'Logout')):
-        auth.logout()
+        shared_logout()
         st.rerun()
 
 # If user is not logged in, display the login form
@@ -169,10 +169,10 @@ else:
         login_tab, register_tab = st.tabs(["Login", "Register"])
         
         with login_tab:
-            auth.render_login_form()
+            shared_auth.render_login_form()
         
         with register_tab:
-            auth.render_registration_form()
+            shared_auth.render_registration_form()
 
     except Exception as e:
         st.error(f"Authentication error: {e}")

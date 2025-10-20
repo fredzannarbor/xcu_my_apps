@@ -64,12 +64,7 @@ except ModuleNotFoundError:
         process_zotero_results = None
         st.stop()
 
-st.set_page_config(
-    layout="wide",
-    initial_sidebar_state="auto",
-    page_title="Bibliography",
-    page_icon="📚",
-)
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():

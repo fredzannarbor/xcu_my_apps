@@ -817,8 +817,7 @@ def display_cart():
             st.session_state.page = "catalog"
             st.rerun()
 
-# Main app logic
-st.set_page_config(page_title="Bookstore", layout="wide")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Load imprint-specific data
 imprint_title = "Bookstore"

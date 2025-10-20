@@ -50,8 +50,7 @@ except Exception as e:
     st.error("Authentication system unavailable.")
 
 
-# --- Page Configuration ---
-st.set_page_config(layout="wide", page_title="Admin Dashboard")
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -272,7 +271,7 @@ def user_management_tab():
 
 def main():
     """Main function to render the Admin Dashboard page."""
-    st.set_page_config(page_title="Admin Dashboard", layout="wide")
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
     # Ensure session state is initialized for this page
     if 'language' not in st.session_state:
