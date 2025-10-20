@@ -444,6 +444,13 @@ def get_shared_auth() -> SharedAuthSystem:
     global _shared_auth
     if _shared_auth is None:
         _shared_auth = SharedAuthSystem()
+
+    # IMPORTANT: Check session for each request, not just once globally!
+    # Streamlit session_state is per-user, but this global instance is shared across all users.
+    # So we need to check auth for each user's session on every page load.
+    if 'auth_checked' not in st.session_state:
+        _shared_auth._check_active_session()
+
     return _shared_auth
 
 
