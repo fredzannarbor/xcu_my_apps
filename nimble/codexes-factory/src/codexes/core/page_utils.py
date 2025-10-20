@@ -21,7 +21,16 @@ def render_page_sidebar():
     In Streamlit multi-page apps, the main app file only runs once at startup.
     When navigating directly to a page via URL, only that page's code runs,
     so each page needs to set up its own sidebar.
+
+    NOTE: This function checks if the sidebar has already been rendered by the main app
+    to avoid duplicate widgets. The main app (codexes-factory-home-ui.py) renders the
+    sidebar once, and child pages skip rendering if already done.
     """
+    # Check if sidebar has already been rendered by the main app
+    if "sidebar_rendered" in st.session_state and st.session_state.sidebar_rendered:
+        logger.debug("Sidebar already rendered by main app, skipping")
+        return
+
     try:
         from shared.ui import render_unified_sidebar
         from shared.auth import is_authenticated, get_user_info
@@ -36,6 +45,8 @@ def render_page_sidebar():
             show_contact=True
         )
 
+        # Mark sidebar as rendered to prevent duplication
+        st.session_state.sidebar_rendered = True
         logger.debug("Rendered unified sidebar successfully")
 
     except ImportError as e:
@@ -50,6 +61,8 @@ def render_page_sidebar():
             st.sidebar.caption(f"Role: {user_info.get('user_role', 'public')}")
         else:
             st.sidebar.info("Not logged in")
+
+        st.session_state.sidebar_rendered = True
 
     except Exception as e:
         logger.error(f"Error rendering page sidebar: {e}", exc_info=True)

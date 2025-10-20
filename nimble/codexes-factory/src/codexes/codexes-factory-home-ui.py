@@ -160,6 +160,11 @@ try:
         show_version=True,
         show_contact=True
     )
+
+    # Mark sidebar as rendered to prevent child pages from duplicating it
+    st.session_state.sidebar_rendered = True
+    logger.debug("Main app rendered sidebar, set sidebar_rendered flag")
+
 except ImportError as e:
     logger.warning(f"Could not import render_unified_sidebar: {e}")
     # Fallback to simple auth display
@@ -169,6 +174,9 @@ except ImportError as e:
         st.sidebar.caption(f"Role: {user_role}")
     else:
         st.sidebar.info("Not logged in")
+
+    # Mark sidebar as rendered even in fallback mode
+    st.session_state.sidebar_rendered = True
 
 # Add separator before app navigation
 st.sidebar.markdown("---")

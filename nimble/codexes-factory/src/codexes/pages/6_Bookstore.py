@@ -771,6 +771,9 @@ def display_cart():
                     else:
                         base_url = "http://localhost:8502"
 
+                # Get auth session_id for SSO continuity
+                auth_session_id = st.session_state.get("shared_session_id", "")
+
                 # Log Stripe checkout session details for debugging
                 stripe_key = stripe.api_key or "not_set"
                 masked_key = f"...{stripe_key[-4:]}" if len(stripe_key) > 4 else "****"
@@ -780,18 +783,26 @@ def display_cart():
                     f"base_url: {base_url}, "
                     f"stripe_account: {masked_key}, "
                     f"session_id: {st.session_state.session_id}, "
+                    f"auth_session_id: {auth_session_id[:16] if auth_session_id else 'none'}..., "
                     f"username: {st.session_state.username or 'guest'}, "
                     f"cart_total: ${total_amount:.2f}, "
                     f"items_count: {len(user_cart)}"
                 )
 
+                # Build success URL with both auth session_id and Stripe checkout session ID
+                success_url = f"{base_url}/6_Bookstore?success=true&stripe_session_id={{CHECKOUT_SESSION_ID}}"
+                if auth_session_id:
+                    success_url += f"&session_id={auth_session_id}"
+                    logger.info(f"[STRIPE] Added auth session_id to success URL: {auth_session_id[:16]}...")
+
                 session = stripe.checkout.Session.create(
                     payment_method_types=["card"],
                     line_items=line_items,
                     mode="payment",
-                    success_url=f"{base_url}/6_Bookstore?success=true&session_id={{CHECKOUT_SESSION_ID}}",
+                    success_url=success_url,
                     cancel_url=f"{base_url}/6_Bookstore?success=false",
                     metadata={"session_id": st.session_state.session_id,
+                              "auth_session_id": auth_session_id,
                               "username": st.session_state.username or "guest"}
                 )
                 st.session_state.stripe_session_id = session.id
@@ -879,11 +890,14 @@ st.markdown("---")
 query_params = st.query_params
 if "success" in query_params:
     success_value = query_params.get("success")
-    stripe_checkout_session_id = query_params.get("session_id")
+    # Extract both session IDs - auth session for SSO, Stripe session for payment verification
+    auth_session_id = query_params.get("session_id")  # Auth system session ID
+    stripe_checkout_session_id = query_params.get("stripe_session_id")  # Stripe checkout session ID
 
     logger.info(
         f"Processing Stripe redirect - "
         f"success: {success_value}, "
+        f"auth_session_id: {auth_session_id[:16] if auth_session_id else 'none'}..., "
         f"stripe_session_id: {stripe_checkout_session_id}, "
         f"stored_session_id: {st.session_state.stripe_session_id}"
     )
@@ -916,8 +930,10 @@ if "success" in query_params:
                 st.error("Stripe session ID mismatch. Payment verification failed.")
         except stripe.error.StripeError as e:
             st.error(f"Stripe API error processing payment: {e}")
+            logger.error(f"Stripe API error: {e}")
         except Exception as e:
             st.error(f"Error processing payment: {e}")
+            logger.error(f"Payment processing error: {e}")
     elif success_value == "false":
         st.error(get_translation(st.session_state.language, "payment_canceled"))
 
