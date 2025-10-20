@@ -72,21 +72,29 @@ except ImportError:
 
 def main():
     """Rights tracking and analytics dashboard."""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback continues with existing code
 
     # Sync session state from shared auth
-if is_authenticated():
-    user_info = get_user_info()
-    st.session_state.username = user_info.get('username')
-    st.session_state.user_name = user_info.get('user_name')
-    st.session_state.user_email = user_info.get('user_email')
-    logger.info(f"User authenticated via shared auth: {st.session_state.username}")
-else:
-    if "username" not in st.session_state:
-        st.session_state.username = None
-
-
-
+    if is_authenticated():
+        user_info = get_user_info()
+        st.session_state.username = user_info.get('username')
+        st.session_state.user_name = user_info.get('user_name')
+        st.session_state.user_email = user_info.get('user_email')
+        logger.info(f"User authenticated via shared auth: {st.session_state.username}")
+    else:
+        if "username" not in st.session_state:
+            st.session_state.username = None
 
     st.title("📈 Rights Tracking and Analytics")
     st.markdown("Comprehensive rights management for international publishing")

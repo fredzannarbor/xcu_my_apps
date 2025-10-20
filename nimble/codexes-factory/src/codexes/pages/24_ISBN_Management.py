@@ -81,6 +81,19 @@ else:
 
 def main():
     """Main ISBN Management interface"""
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback continues with existing code
+
     st.title("📖 ISBN Management")
     st.markdown("**Unified ISBN management using your existing database with 1150+ records**")
     

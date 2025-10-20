@@ -256,6 +256,18 @@ def display_user_profile(user_id, feed_manager):
 
 def main():
     """Main application function."""
+    # Import and use page utilities for consistent sidebar and auth
+    try:
+        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+
+        # Ensure auth has been checked for this session
+        ensure_auth_checked()
+
+        # Render the full sidebar with all sections
+        render_page_sidebar()
+    except ImportError as e:
+        logger.warning(f"Could not import page_utils: {e}")
+        # Fallback continues with existing code
 
     # Header
     st.title("👤 Profile Home")
