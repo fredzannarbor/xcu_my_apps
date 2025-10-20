@@ -785,8 +785,8 @@ def display_cart():
                     payment_method_types=["card"],
                     line_items=line_items,
                     mode="payment",
-                    success_url=f"{base_url}?success=true&session_id={{CHECKOUT_SESSION_ID}}",
-                    cancel_url=f"{base_url}?success=false",
+                    success_url=f"{base_url}/6_Bookstore?success=true&session_id={{CHECKOUT_SESSION_ID}}",
+                    cancel_url=f"{base_url}/6_Bookstore?success=false",
                     metadata={"session_id": st.session_state.session_id,
                               "username": st.session_state.username or "guest"}
                 )
@@ -865,9 +865,17 @@ if "success" in query_params:
     success_value = query_params.get("success")
     stripe_checkout_session_id = query_params.get("session_id")
 
+    logger.info(
+        f"Processing Stripe redirect - "
+        f"success: {success_value}, "
+        f"stripe_session_id: {stripe_checkout_session_id}, "
+        f"stored_session_id: {st.session_state.stripe_session_id}"
+    )
+
     if success_value == "true":
         try:
             if stripe_checkout_session_id and stripe_checkout_session_id == st.session_state.stripe_session_id:
+                logger.info(f"Session IDs match - processing payment success for {stripe_checkout_session_id}")
                 session = stripe.checkout.Session.retrieve(stripe_checkout_session_id)
                 email = session.customer_details.email if session.customer_details else None
                 if email and not st.session_state.username:
@@ -882,10 +890,13 @@ if "success" in query_params:
                 if cart_key_after_payment in st.session_state.cart:
                     st.session_state.cart[cart_key_after_payment] = []
                 st.session_state.stripe_session_id = None
+                logger.info(f"Payment successful - cart cleared for user: {cart_key_after_payment}")
                 st.success(get_translation(st.session_state.language, "payment_success"))
             elif not stripe_checkout_session_id:
+                logger.warning("Stripe session ID missing from success URL")
                 st.warning("Stripe session ID missing from success URL. Cannot verify payment fully.")
             else:
+                logger.error(f"Stripe session ID mismatch - URL: {stripe_checkout_session_id}, Stored: {st.session_state.stripe_session_id}")
                 st.error("Stripe session ID mismatch. Payment verification failed.")
         except stripe.error.StripeError as e:
             st.error(f"Stripe API error processing payment: {e}")
