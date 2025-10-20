@@ -1,0 +1,30 @@
+{
+  "name": "The Redaction Bureau",
+  "slug": "the_redaction_bureau",
+  "publisher": "Nimble Books LLC",
+  "charter": "AI Generated Charter",
+  "branding": {
+    "display_name": "The Redaction Bureau",
+    "tagline": "Declassifying the Past. Illuminating the Future.",
+    "mission_statement": "",
+    "brand_values": [],
+    "primary_color": "#2F4F4F",
+    "secondary_color": "#A52A2A",
+    "font_family": "Adobe Caslon Pro",
+    "logo_url": null
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History",
+      "Political Science",
+      "Military",
+      "Young Adult Fiction"
+    ],
+    "target_audience": "Academics, intelligence professionals, history enthusiasts, and curious young readers.",
+    "price_point": null,
+    "books_per_year": null
+  },
+  "status": "draft",
+  "created_at": "2025-10-20T04:21:43.268215",
+  "modified_at": "2025-10-20T04:21:43.268220"
+}

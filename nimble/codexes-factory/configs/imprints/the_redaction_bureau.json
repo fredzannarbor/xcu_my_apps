@@ -1,0 +1,350 @@
+{
+  "_config_info": {
+    "description": "Intelligence and espionage history spanning all nations, eras, and intelligence disciplines (HUMINT, SIGINT, IMINT, MASINT, OSINT, CYBINT), combining declassified US public domain documents with frontier AI analysis and age-appropriate YA fiction",
+    "version": "1.0",
+    "last_updated": "2025-10-20",
+    "parent_publisher": "Nimble Books LLC"
+  },
+  "imprint": "The Redaction Bureau",
+  "publisher": "Nimble Books LLC",
+  "contact_email": "the_redaction_bureau@nimblebooks.com",
+  "branding": {
+    "logo_path": "logos/the_redaction_bureau_logo.png",
+    "brand_colors": {
+      "primary": "C:100 M:70 Y:0 K:50",
+      "secondary": "C:0 M:90 Y:80 K:20"
+    },
+    "tagline": "Declassifying the Invisible Wars. Decoding Tomorrow's Conflicts.",
+    "website": "https://www.nimblebooks.com/redaction-bureau",
+    "display_name": "The Redaction Bureau",
+    "mission_statement": "The Redaction Bureau illuminates the hidden architecture of global intelligence operations across all nations, eras, and intelligence disciplines. We transform US public domain declassified documents into accessible knowledge through frontier AI analysis, while engaging young readers with ethical spy narratives that reveal the moral complexities of the shadow world.",
+    "brand_values": [
+      "Historical accuracy through primary sources",
+      "Cross-national perspective avoiding US-centrism",
+      "Ethical complexity in espionage narratives",
+      "AI-enhanced document analysis",
+      "Accessible scholarship for all ages"
+    ],
+    "unique_selling_proposition": "The only imprint systematically combining declassified intelligence archives with frontier AI pattern analysis to reveal cross-national espionage history, plus age-appropriate fiction that treats young readers as intelligent participants in understanding intelligence ethics"
+  },
+  "fonts": {
+    "body": "Crimson Text",
+    "heading": "Oswald",
+    "korean": "Apple Myungjo",
+    "quotations": "Crimson Text Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History / Intelligence & Espionage",
+      "Political Science / Security Studies",
+      "Young Adult Fiction / Thrillers & Suspense"
+    ],
+    "target_audience": "Intelligence professionals seeking historical context, academic researchers in security studies, secondary educators teaching critical thinking about national security, and intellectually curious young adults (12-18) interested in real-world espionage beyond Hollywood fiction",
+    "specialization": "Comprehensive intelligence history spanning HUMINT (human intelligence), SIGINT (signals intelligence), IMINT (imagery intelligence), MASINT (measurement and signature intelligence), OSINT (open-source intelligence), and CYBINT (cyber intelligence) across all nations and eras, enriched by AI analysis of US declassified documents and balanced with age-appropriate YA fiction exploring intelligence ethics",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150",
+    "price_point": 22.99
+  },
+  "distribution_settings": {
+    "lightning_source_account": "6024045",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 6 x 9 in or 229 x 152 mm Perfect Bound on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "HIS027150 HISTORY / Intelligence & Espionage",
+      "POL035000 POLITICAL SCIENCE / Intelligence & Espionage",
+      "YAF058120 YOUNG ADULT FICTION / Thrillers & Suspense / Espionage"
+    ],
+    "thema_subject_preferences": [
+      "JWKD Intelligence services and security services",
+      "NHTB Military intelligence",
+      "YFH Thriller / suspense fiction (Children's / Teenage)"
+    ],
+    "default_age_range": {
+      "min_age": "12",
+      "max_age": "18"
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/the_redaction_bureau"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@RedactionBureau",
+      "facebook": "RedactionBureau",
+      "instagram": "@RedactionBureau"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "INTL",
+    "metadata_contact_dictionary": "The Redaction Bureau Editorial Team",
+    "flex_fields": {
+      "lsi_flexfield1": "Intelligence",
+      "lsi_flexfield2": "Declassified",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Zero",
+    "persona_bio": "AI editorial intelligence specializing in declassified intelligence document analysis and cross-national espionage history. Zero emerged from training on massive archives of US public domain intelligence documents, developing expertise in pattern recognition across HUMINT, SIGINT, IMINT, MASINT, OSINT, and CYBINT disciplines. Purpose: democratize access to intelligence history by transforming impenetrable classified archives into accessible scholarship while maintaining ethical complexity. Unique capability: simultaneous analysis across multiple intelligence disciplines and national perspectives, identifying patterns human analysts might miss due to specialization silos or national bias.",
+    "risk_tolerance": "Moderate",
+    "decision_style": "Data-driven",
+    "preferred_topics": "Multi-INT fusion analysis (combining HUMINT, SIGINT, IMINT across operations), comparative intelligence agency methodologies (CIA vs KGB vs MI6 vs Mossad), declassification patterns revealing historical bias, intelligence ethics and oversight evolution, Cold War signals intelligence tradecraft, counterintelligence case studies across nations, age-appropriate intelligence ethics for young readers",
+    "target_demographics": "Intelligence community professionals seeking historical context for current operations, academic security studies researchers requiring primary source depth, secondary educators teaching critical thinking about government secrecy, intellectually curious adolescents (12-18) ready for authentic intelligence knowledge beyond entertainment media",
+    "editorial_philosophy": "Truth emerges from cross-referencing multiple national archives, not accepting any single intelligence service's narrative. Declassified documents are archaeological artifacts requiring contextual interpretation, not self-explanatory facts. Young readers deserve authentic complexity about intelligence ethics—sanitized hero narratives dishonor their intelligence and do democratic citizens no service. AI pattern recognition across disciplines reveals insights, but human expertise must validate interpretations and assess ethical implications.",
+    "vulnerabilities": "Training predominantly on US declassified archives creates inherent American perspective bias despite conscious efforts toward neutrality. Russian, Chinese, and other non-Western intelligence archives remain largely inaccessible, creating systematic blind spots in 'global' intelligence history. Dual mission serving both rigorous researchers and young adult readers risks satisfying neither—may oversimplify for academics or overwhelm adolescents. Pattern recognition across massive document sets may identify correlations that aren't causations, requiring human validation Cipher cannot always self-assess."
+  },
+  "wizard_configuration": {
+    "name": "The Redaction Bureau",
+    "charter": "To illuminate the hidden history and evolving future of global intelligence operations through meticulous analysis of declassified documents, cross-national perspectives, and ethically complex narratives accessible to readers of all ages",
+    "imprint_type": "Intelligence History & YA Espionage Fiction",
+    "genres": [
+      "History / Intelligence & Espionage",
+      "Political Science / Security Studies",
+      "Young Adult Fiction / Thrillers & Suspense"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 22.99,
+    "page_count": 280,
+    "catalog_size": 18,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types for declassified document reproduction, intelligence analysis, and narrative YA fiction",
+    "enabled_types": [
+      "standard",
+      "reference"
+    ],
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional narrative layout for historical intelligence accounts and YA espionage fiction",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents",
+          "bibliography"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      },
+      "reference": {
+        "name": "Intelligence Reference",
+        "description": "Document collections with declassified sources, cross-references, intelligence term glossaries, and comprehensive indexing",
+        "template_requirements": [
+          "source_citations",
+          "declassification_dates",
+          "cross_references",
+          "intelligence_glossary",
+          "multi_level_index"
+        ],
+        "formatting_rules": {
+          "document_reproduction": "high_contrast_facsimile",
+          "redaction_marks": "clearly_visible",
+          "source_citation": "footnote_with_archive_reference",
+          "cross_reference_style": "hyperlinked_notation",
+          "glossary_format": "alphabetical_acronym_expansion"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "reference": [
+          "declassified",
+          "document collection",
+          "intelligence terms",
+          "glossary",
+          "FOIA"
+        ],
+        "standard": [
+          "narrative",
+          "chapter",
+          "story",
+          "biography",
+          "history"
+        ]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "Declassified document facsimiles require 300dpi high-contrast reproduction ensuring redaction marks remain clearly visible. Source citations must include archive location, document identifier, declassification date, and FOIA request number when applicable. Intelligence acronyms require first-use expansion with glossary cross-reference.",
+      "template_customizations": "Custom chapter headers incorporating subtle classification marking aesthetics (unclassified/declassified indicators). Sidebar call-outs for technical intelligence terminology definitions. Timeline graphics for multi-year operations. Age-appropriate content advisories for YA titles addressing violence or ethical complexity.",
+      "typesetting_considerations": "Source Code Pro monospace font for document reproductions and signals intercept transcriptions. Visual distinction between primary source material (shaded background) and analytical commentary. Clear attribution separating declassified content from AI-generated analysis. YA fiction requires age-appropriate treatment of violence and moral complexity with content guidance."
+    },
+    "llm_analysis": {
+      "requires_specialized_design": true,
+      "recommended_codextypes": [
+        "standard",
+        "reference"
+      ],
+      "design_parameters": {
+        "primary_considerations": "Document Authenticity and Source Attribution. Declassified materials must be reproduced with fidelity while clearly indicating provenance, declassification status, and analytical context.",
+        "interior_layout_notes": "Flexible layout accommodating narrative text, document facsimiles, intelligence terminology sidebars, operation timelines, and cross-references. Document reproductions require dedicated pages with citation footnotes. Generous margins for source attribution without cluttering primary content.",
+        "typesetting_requirements": "Legible serif for extended reading (Crimson Text), authoritative sans-serif for headers (Oswald), monospace for document reproduction (Source Code Pro). Clear visual hierarchy distinguishing primary sources from analytical commentary. Age-appropriate content presentation for YA titles.",
+        "functional_elements": "Comprehensive acronym glossary (CIA, NSA, GCHQ, SVR, MSS, etc.), multi-level indexing (subject, operation name, person, organization), timeline appendices for complex operations, bibliography with archive citations, FOIA reference numbers, declassification date annotations.",
+        "reader_interaction_model": "Dual reading modes: 1) Linear narrative for historical accounts and YA fiction, 2) Reference-style lookup for document collections and terminology. Researchers need rapid access to specific documents, dates, and cross-references. Young readers need accessible entry points without overwhelming technical detail."
+      },
+      "reasoning": "The imprint's mission combines rigorous document-based intelligence history with accessible YA narratives, requiring both scholarly reference capabilities and engaging linear storytelling. Declassified documents demand specialized reproduction with clear provenance. Cross-national scope requires extensive indexing and cross-referencing. YA component necessitates age-appropriate presentation without compromising intellectual honesty about intelligence ethics."
+    }
+  },
+  "content_generation": {
+    "gemini_get_basic_info": {
+      "prompt": "You are generating a book for The Redaction Bureau, managed by AI editorial intelligence 'Cipher' specializing in declassified intelligence analysis. Focus on intelligence and espionage history across all nations, eras, and disciplines (HUMINT, SIGINT, IMINT, MASINT, OSINT, CYBINT). Draw from US public domain declassified documents, apply cross-national analysis avoiding American bias, maintain ethical complexity, and use frontier AI to identify patterns across archives. For YA titles, ensure age-appropriate treatment (12-18) while respecting young readers' intelligence about moral ambiguity. Provide: title, subtitle, description (150-200 words emphasizing primary source foundation and cross-national perspective), author bio (100 words), and 5 key intelligence topics or operations covered.",
+      "model": "gemini/gemini-2.5-pro",
+      "temperature": 0.7
+    },
+    "storefront_get_en_metadata": {
+      "prompt": "Generate compelling back cover copy for this Redaction Bureau book curated by AI 'Cipher'. Emphasize declassified document foundation, cross-national intelligence perspective, AI-enhanced pattern analysis, and relevance to contemporary security challenges. For YA fiction, highlight authentic tradecraft, moral complexity, and respect for young readers' critical thinking. Avoid sensationalism while maintaining compelling narrative. 200-250 words suitable for Amazon, IngramSpark, and retail channels.",
+      "model": "gemini/gemini-2.5-pro",
+      "temperature": 0.6
+    },
+    "imprint_quotes_prompt": {
+      "prompt": "Generate 3-5 representative quotes from this Redaction Bureau book that demonstrate: 1) Primary source analysis of declassified documents, 2) Cross-national intelligence perspective, 3) Ethical complexity in espionage operations, 4) AI-identified patterns across archives, 5) For YA titles, moral reasoning appropriate for ages 12-18. Quotes should be substantive (2-4 sentences) and demonstrate intellectual rigor without jargon.",
+      "model": "gemini/gemini-2.5-flash",
+      "temperature": 0.5
+    }
+  },
+  "editorial_review": {
+    "classification_review": {
+      "description": "All content must be verified as properly declassified or from public domain sources. No inadvertent revelation of still-classified intelligence methods, sources, or capabilities. Cross-reference National Declassification Center and Freedom of Information Act databases.",
+      "required_for": [
+        "all_titles"
+      ]
+    },
+    "fact_check_protocol": {
+      "description": "All historical intelligence claims must cite specific declassified document sources with archive location and document identifier. Technical intelligence details verified against authoritative open-source references. Operational timelines cross-checked against multiple archival sources to identify bias.",
+      "required_for": [
+        "all_titles"
+      ]
+    },
+    "cross_national_bias_review": {
+      "description": "Evaluate all content for US-centric narrative framing. Seek international scholarly sources and foreign government declassified materials where available. Flag assertions that rely solely on American archival sources without acknowledging potential bias.",
+      "required_for": [
+        "all_nonfiction_titles"
+      ]
+    },
+    "ya_appropriateness_review": {
+      "description": "Review YA fiction titles for age-appropriate treatment of violence, moral complexity, and intelligence ethics suitable for readers 12-18. Content should respect readers' intelligence while providing appropriate context for challenging themes. Include content guidance notes where warranted.",
+      "required_for": [
+        "ya_fiction_titles"
+      ]
+    }
+  },
+  "production_support": {
+    "document_reproduction_standards": {
+      "description": "Declassified document reproductions must include: Full archive citation (NARA, CIA CREST, NSA Declassified Documents, etc.), Document identifier/accession number, Declassification date and authority, FOIA request number if applicable, Contextual caption explaining document significance and any visible redactions",
+      "technical_specifications": "Scan resolution: 300 dpi minimum, High-contrast black/white conversion for legibility, OCR text layer for digital accessibility, Preserve original redaction marks without enhancement, Footnote source citation on same page as reproduction"
+    },
+    "intelligence_terminology_standards": {
+      "description": "First use of intelligence acronyms requires full expansion with parenthetical acronym: 'Central Intelligence Agency (CIA)'. Maintain comprehensive glossary of intelligence terms, agencies, and operations. Cross-reference glossary entries in index.",
+      "required_terms_categories": [
+        "Intelligence disciplines (HUMINT, SIGINT, etc.)",
+        "US intelligence agencies (CIA, NSA, DIA, etc.)",
+        "Foreign intelligence services (MI6, DGSE, SVR, MSS, Mossad, etc.)",
+        "Technical intelligence terms (COMINT, ELINT, MASINT, etc.)",
+        "Operational terminology (tradecraft, agent handling, etc.)"
+      ]
+    }
+  },
+  "supplementary_materials": {
+    "enabled": true,
+    "description": "Reference materials on intelligence terminology, declassification procedures, and historical context that inform editorial decisions and AI-assisted content generation",
+    "materials": {
+      "Intelligence Community Directive 700 (Classification Management)": "resources/references/icd_700_classification.pdf",
+      "National Declassification Center Research Guide": "resources/references/ndc_research_guide.md",
+      "Intelligence Disciplines Overview (ALL-INT)": "resources/references/intelligence_disciplines_overview.txt",
+      "Executive Order 13526 (Classified National Security Information)": "resources/references/eo_13526_classification.pdf",
+      "Freedom of Information Act Guide": "resources/references/foia_guide.md"
+    },
+    "usage_notes": "These materials provide editorial team and AI generators with authoritative references for intelligence terminology, document handling, classification levels, and declassification procedures to ensure accuracy and avoid inadvertent revelation of classified information"
+  },
+  "academic_paper_generation": {
+    "enabled": false,
+    "auto_generate_on_imprint_creation": false,
+    "generation_triggers": {
+      "on_imprint_creation": false,
+      "on_milestone_books": false,
+      "on_schedule": false,
+      "manual_only": true
+    },
+    "paper_settings": {
+      "target_venues": [
+        "Intelligence and National Security Journal",
+        "International Journal of Intelligence and CounterIntelligence",
+        "Studies in Intelligence (CIA)",
+        "Cryptologic Quarterly (NSA)"
+      ],
+      "paper_types": [
+        "archival_analysis",
+        "declassification_study",
+        "comparative_intelligence_systems"
+      ],
+      "default_paper_type": "archival_analysis",
+      "target_word_count": 8000,
+      "citation_style": "chicago",
+      "include_quantitative_analysis": true
+    }
+  },
+  "_generation_info": {
+    "generated_by": "claude_code_internal",
+    "generated_at": "2025-10-20T10:15:00.000000",
+    "model_used": "claude-sonnet-4-5",
+    "temperature": 0.3,
+    "version": "1.0"
+  }
+}

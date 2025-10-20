@@ -87,9 +87,36 @@ def create_oneshot_prompt(
     imprint_description: str,
     partial_config: Optional[Dict[str, Any]] = None
 ) -> str:
-    """Create the one-shot prompt for imprint generation."""
+    """Create the one-shot prompt for imprint generation using external prompts config."""
 
-    prompt = f"""You are an expert publishing consultant tasked with creating a complete imprint configuration for a new publishing brand. Your job is to generate a comprehensive, internally consistent JSON configuration that defines all aspects of this imprint's operations.
+    # Load prompts from external JSON config
+    try:
+        prompts_config = load_prompts_config()
+        generation_prompt_config = prompts_config["prompts"]["imprint_generation"]
+
+        # Get the user prompt template from JSON
+        user_prompt_template = generation_prompt_config["user_prompt_template"]
+
+        # Prepare template variables
+        template_json = json.dumps(template, indent=2)
+        exemplar_json = json.dumps(exemplar, indent=2)
+        partial_config_section = ""
+
+        if partial_config:
+            partial_config_section = f"## PARTIAL CONFIGURATION PROVIDED:\n{json.dumps(partial_config, indent=2)}\n\n"
+
+        # Replace placeholders using string replacement to avoid issues with nested braces
+        prompt = user_prompt_template.replace("{template_json}", template_json)
+        prompt = prompt.replace("{exemplar_json}", exemplar_json)
+        prompt = prompt.replace("{imprint_description}", imprint_description)
+        prompt = prompt.replace("{partial_config_section}", partial_config_section)
+
+        return prompt
+
+    except Exception as e:
+        logger.error(f"Failed to load prompts config, using fallback: {e}")
+        # Fallback to inline prompt if loading fails
+        prompt = f"""You are an expert publishing consultant tasked with creating a complete imprint configuration for a new publishing brand. Your job is to generate a comprehensive, internally consistent JSON configuration that defines all aspects of this imprint's operations.
 
 ## INPUT SPECIFICATION
 You will be provided with:
@@ -111,43 +138,6 @@ Generate a complete JSON configuration that:
 {json.dumps(template, indent=2)}
 ```
 
-## ENHANCED TEMPLATE - ADD THESE ADDITIONAL SECTIONS
-Your generated configuration MUST also include these sections for wizard compatibility:
-
-```json
-{{
-  "publisher_persona": {{
-    "persona_name": "Editorial decision maker name",
-    "persona_bio": "Professional background and expertise",
-    "risk_tolerance": "Conservative|Moderate|Aggressive",
-    "decision_style": "Data-driven|Intuitive|Collaborative|Authoritative",
-    "preferred_topics": "Areas of editorial focus and passion",
-    "target_demographics": "Specific reader segments",
-    "vulnerabilities": "Areas needing validation or blind spots"
-  }},
-  "wizard_configuration": {{
-    "name": "Full imprint name",
-    "charter": "Mission and editorial philosophy",
-    "imprint_type": "Primary focus area",
-    "genres": ["Primary", "Genre", "Areas"],
-    "book_format": "Standard book physical format",
-    "price_point": 24.99,
-    "page_count": 200,
-    "catalog_size": 12,
-    "enable_ideation": true
-  }},
-  "codextypes": {{
-    "description": "Specialized content types requiring custom interior design and formatting",
-    "enabled_types": ["standard", "detected_specialized_types"],
-    "specialized_requirements": {{
-      "interior_design_notes": "Special formatting needs based on content type",
-      "template_customizations": "Required template modifications",
-      "typesetting_considerations": "Unique typesetting requirements"
-    }}
-  }}
-}}
-```
-
 ## EXEMPLAR CONFIGURATION (Xynapse Traces - Technology/Science Focus)
 ```json
 {json.dumps(exemplar, indent=2)}
@@ -159,64 +149,10 @@ Your generated configuration MUST also include these sections for wizard compati
 {'## PARTIAL CONFIGURATION PROVIDED:' if partial_config else ''}
 {json.dumps(partial_config, indent=2) if partial_config else ''}
 
-## SPECIFIC REQUIREMENTS
-1. **Brand Identity**: Create cohesive branding (colors, tagline, focus) that supports the imprint's mission
-2. **Publisher Persona**: Define a realistic editorial persona with decision-making style, preferences, and strategic approach
-3. **Publishing Focus**: Define realistic genres, target audience, and specialization aligned with publisher persona
-4. **Business Configuration**: Include realistic book formats, pricing, catalog planning, and operational settings
-5. **Technical Settings**: Specify production quality standards and file handling
-6. **Academic Integration**: If appropriate for this imprint, configure academic paper generation settings
-7. **Workflow Automation**: Set up practical automation and notification settings
-
-## CRITICAL: PUBLISHER PERSONA INTEGRATION
-The publisher persona is central to the imprint's identity. Create a realistic editorial decision-maker with:
-- Specific professional background and expertise
-- Clear content preferences and blind spots
-- Realistic risk tolerance for controversial topics
-- Consistent decision-making style
-- Target demographic knowledge and vulnerabilities
-- Strategic business approach aligned with editorial vision
-
-## ENHANCED METADATA REQUIREMENTS
-Based on the wizard workflow, ensure your configuration includes these additional fields:
-
-### Basic Information
-- **Imprint Name**: Professional, memorable, relevant to focus area
-- **Publisher**: Parent company name
-- **Editorial Charter**: Mission and editorial philosophy
-- **Tagline**: Memorable phrase for the imprint
-- **Contact Email**: Use realistic domain structure
-
-### Publisher Persona (Critical for Content Strategy)
-- **Publisher Name**: Key decision maker or editorial persona
-- **Publisher Biography**: Background and professional reputation
-- **Risk Tolerance**: Conservative, Moderate, or Aggressive content approach
-- **Decision Style**: Data-driven, Intuitive, Collaborative, or Authoritative
-- **Preferred Topics**: Areas of editorial interest and passion
-- **Target Demographics**: Specific reader segments to focus on
-- **Vulnerabilities/Concerns**: Areas requiring validation or having blind spots
-
-### Business Configuration
-- **Primary Genres**: Specific genre focus areas
-- **Target Audience**: Main readership demographic
-- **Supported Languages**: Publishing language capabilities
-- **Standard Book Format**: Physical book specifications
-- **Standard Price Point**: Typical book pricing strategy
-- **Standard Page Count**: Typical book length
-- **Initial Catalog Size**: Launch catalog planning
-- **Enable Continuous Ideation**: AI-powered content generation settings
-
-### Technical Requirements
-- **Brand Colors**: Provide hex codes that work well together
-- **BISAC/Thema Codes**: Research-appropriate subject classification codes
-- **Pricing**: Industry-standard wholesale discounts and markup percentages
-- **LSI Settings**: Realistic Lightning Source configurations
-- **Territorial Rights**: Appropriate geographic and currency settings
-
 ## OUTPUT FORMAT
 Return ONLY the complete JSON configuration, properly formatted and valid. Do not include any explanatory text before or after the JSON."""
 
-    return prompt
+        return prompt
 
 
 def generate_imprint_config(
