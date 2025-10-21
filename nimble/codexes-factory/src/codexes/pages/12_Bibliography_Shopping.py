@@ -6,7 +6,6 @@ import json
 import os
 import sys
 
-
 # Configure logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -22,7 +21,6 @@ except Exception as e:
     logger.error(f"Failed to initialize shared auth: {e}")
     st.error("Authentication system unavailable.")
 
-
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
 # Import shared authentication system
@@ -35,32 +33,17 @@ except ImportError as e:
     st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
     st.stop()
 
-
-
-
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 
-
-
-
 # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Import and use page utilities for consistent sidebar and auth
-try:
-    from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
-
-    # Ensure auth has been checked for this session
-    ensure_auth_checked()
-
-    # Render the full sidebar with all sections
-    render_page_sidebar()
-except ImportError as e:
-    logger.warning(f"Could not import page_utils: {e}")
-    # Fallback continues with existing code
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -72,9 +55,6 @@ if is_authenticated():
 else:
     if "username" not in st.session_state:
         st.session_state.username = None
-
-
-
 
 st.title("📚 Shop for Works Mentioned")
 st.markdown("Find and purchase books referenced in the quotations.")

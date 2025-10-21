@@ -2,7 +2,6 @@ from typing import List, Dict
 import sys
 from pathlib import Path
 
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -10,8 +9,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
-
-
 
 # Add paths for imports
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
@@ -26,7 +23,6 @@ except ImportError as e:
     st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
     st.stop()
 
-
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import streamlit as st
@@ -36,7 +32,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
-
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -52,7 +47,6 @@ try:
 except Exception as e:
     logger.error(f"Failed to initialize shared auth: {e}")
     st.error("Authentication system unavailable.")
-
 
 # Load environment variables
 load_dotenv()
@@ -127,17 +121,8 @@ except ImportError:
 # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Import and use page utilities for consistent sidebar and auth
-try:
-    from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
-
-    # Ensure auth has been checked for this session
-    ensure_auth_checked()
-
-    # Render the full sidebar with all sections
-    render_page_sidebar()
-except ImportError as e:
-    logger.warning(f"Could not import page_utils: {e}")
-    # Fallback continues with existing code
+# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -149,9 +134,6 @@ if is_authenticated():
 else:
     if "username" not in st.session_state:
         st.session_state.username = None
-
-
-
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
