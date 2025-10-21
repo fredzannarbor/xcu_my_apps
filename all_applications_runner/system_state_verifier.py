@@ -68,8 +68,14 @@ class SystemStateVerifier:
     def __init__(self, config_path: str = "apps_config.json"):
         self.config_path = Path(config_path)
         self.config = self._load_config()
-        self.shared_path = Path("/Users/fred/xcu_my_apps/shared")
-        self.workspace_root = Path("/Users/fred/xcu_my_apps")
+
+        # Auto-detect environment: use current working directory's parent as workspace root
+        # This works on both Mac (/Users/fred/xcu_my_apps) and Linux (/home/wfzimmerman/xcu_my_apps)
+        if Path.cwd().name == "all_applications_runner":
+            self.workspace_root = Path.cwd().parent
+        else:
+            self.workspace_root = Path("/Users/fred/xcu_my_apps")
+        self.shared_path = self.workspace_root / "shared"
 
     def _load_config(self) -> Dict[str, Any]:
         """Load apps configuration."""
@@ -101,7 +107,15 @@ class SystemStateVerifier:
             domain_name=app_config.get("domain_name")
         )
 
-        app_path = Path(app_config.get("path", ""))
+        # Convert Mac paths to current environment paths
+        raw_path = app_config.get("path", "")
+        if raw_path.startswith("/Users/fred/xcu_my_apps/"):
+            # Replace Mac path prefix with workspace root
+            relative_path = raw_path.replace("/Users/fred/xcu_my_apps/", "")
+            app_path = self.workspace_root / relative_path
+        else:
+            app_path = Path(raw_path)
+
         entry_file = app_config.get("entry", "")
 
         # Run all verification checks
