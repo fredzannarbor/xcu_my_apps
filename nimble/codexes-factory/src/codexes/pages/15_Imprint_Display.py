@@ -49,28 +49,24 @@ except ImportError:
 
 def main():
     """Main dynamic imprint display interface."""
-    # Import and use page utilities for consistent sidebar and auth
-    try:
-        from codexes.core.page_utils import render_page_sidebar, ensure_auth_checked
+    # Sync session state from shared auth
+    if is_authenticated():
+        user_info = get_user_info()
+        st.session_state.username = user_info.get('username')
+        st.session_state.user_name = user_info.get('user_name')
+        st.session_state.user_email = user_info.get('user_email')
+        st.session_state.user_role = user_info.get('user_role', 'public')
+    else:
+        if "username" not in st.session_state:
+            st.session_state.username = None
+        st.session_state.user_role = 'public'
 
-        # Ensure auth has been checked for this session
-        ensure_auth_checked()
-
-        # Render the full sidebar with all sections
-        render_page_sidebar()
-    except ImportError as e:
-        logger.warning(f"Could not import page_utils: {e}")
-        # Fallback: sync session state manually
-        if is_authenticated():
-            user_info = get_user_info()
-            st.session_state.username = user_info.get('username')
-            st.session_state.user_name = user_info.get('user_name')
-            st.session_state.user_email = user_info.get('user_email')
-            st.session_state.user_role = user_info.get('user_role', 'public')
-        else:
-            if "username" not in st.session_state:
-                st.session_state.username = None
-            st.session_state.user_role = 'public'
+    # Render unified sidebar (not the old Codexes-specific sidebar)
+    render_unified_sidebar(
+        app_name="Codexes Factory",
+        show_auth=True,
+        show_xtuff_nav=True
+    )
 
     # Get imprint parameter from URL or selection
     selected_imprint = get_selected_imprint()
