@@ -15,6 +15,9 @@ if str(project_root) not in sys.path:
 # Add xcu_my_apps to path for shared imports
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
+# Import shared auth for SSO
+from shared.auth import get_shared_auth, is_authenticated
+
 # Import and run the modern web application
 from src.trillions_of_people.web.app import TrillionsWebApp
 

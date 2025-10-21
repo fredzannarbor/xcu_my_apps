@@ -15,7 +15,7 @@ import threading
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Tuple
 import requests
 import psutil
 
@@ -50,14 +50,16 @@ class AppProcess:
     max_restarts: int = 5
 
 class ProcessManager:
-    """Manages multiple Streamlit application processes."""
+    """Manages multiple Streamlit application processes with system state enforcement."""
 
-    def __init__(self, config_path: str = "apps_config.json"):
+    def __init__(self, config_path: str = "apps_config.json", enforce_compliance: bool = True):
         self.config_path = Path(config_path)
         self.config = self._load_config()
         self.processes: Dict[str, AppProcess] = {}
         self._running = False
         self._health_check_thread = None
+        self.enforce_compliance = enforce_compliance
+        self._compliance_violations: Dict[str, List[str]] = {}
 
     def _load_config(self) -> Dict[str, Any]:
         """Load configuration from JSON file."""
@@ -104,13 +106,74 @@ class ProcessManager:
                 self.processes[process_key] = app_process
                 logger.info(f"Initialized process config for {app_process.name}")
 
-    def start_process(self, process_key: str) -> bool:
-        """Start a specific application process."""
+    def _check_app_compliance(self, org_id: str, app_id: str, app_config: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        """
+        Check if an app meets compliance requirements before starting.
+        Returns (is_compliant, list_of_violations)
+        """
+        violations = []
+
+        # Check 1: Port binding to 0.0.0.0
+        startup_command = app_config.get("startup_command", "")
+        if "streamlit run" in startup_command and "--server.address=0.0.0.0" not in startup_command:
+            violations.append("CRITICAL: Must bind to 0.0.0.0 (add --server.address=0.0.0.0)")
+
+        # Check 2: Domain name configured
+        if not app_config.get("domain_name"):
+            violations.append("WARNING: No domain_name configured for GCP mapping")
+
+        # Check 3: Health endpoint configured
+        if not app_config.get("health_endpoint"):
+            violations.append("WARNING: No health_endpoint configured")
+
+        # Check 4: Check for shared auth import (critical for production)
+        app_path = Path(app_config.get("path", ""))
+        if app_path.exists():
+            try:
+                # Quick check for shared auth in main entry file
+                entry_file = app_path / app_config.get("entry", "")
+                if entry_file.exists():
+                    content = entry_file.read_text()
+                    if "from shared.auth import" not in content and "from shared.auth.shared_auth import" not in content:
+                        violations.append("WARNING: Entry file does not import shared.auth")
+            except Exception as e:
+                violations.append(f"WARNING: Could not verify shared auth: {e}")
+
+        is_compliant = len([v for v in violations if v.startswith("CRITICAL")]) == 0
+        return is_compliant, violations
+
+    def start_process(self, process_key: str, skip_compliance_check: bool = False) -> bool:
+        """
+        Start a specific application process.
+
+        Args:
+            process_key: The org.app key for the process
+            skip_compliance_check: If True, skip compliance enforcement (for testing)
+        """
         if process_key not in self.processes:
             logger.error(f"Process {process_key} not found")
             return False
 
         app = self.processes[process_key]
+
+        # Enforce compliance checks if enabled
+        if self.enforce_compliance and not skip_compliance_check:
+            org_id, app_id = process_key.split(".")
+            app_config = self.config["organizations"][org_id]["apps"][app_id]
+            is_compliant, violations = self._check_app_compliance(org_id, app_id, app_config)
+
+            if violations:
+                self._compliance_violations[process_key] = violations
+                logger.warning(f"Compliance issues for {app.name}:")
+                for violation in violations:
+                    logger.warning(f"  - {violation}")
+
+            if not is_compliant:
+                logger.error(f"CRITICAL compliance violations prevent starting {app.name}")
+                logger.error("Use skip_compliance_check=True to override (not recommended for production)")
+                return False
+            elif violations:
+                logger.warning(f"Starting {app.name} with non-critical compliance warnings")
 
         # Check if already running
         if app.process and app.process.poll() is None:
@@ -357,7 +420,8 @@ class ProcessManager:
                 "last_health_check": app.last_health_check.isoformat() if app.last_health_check else None,
                 "last_restart_time": app.last_restart_time.isoformat() if app.last_restart_time else None,
                 "restart_count": app.restart_count,
-                "pid": app.pid
+                "pid": app.pid,
+                "compliance_violations": self._compliance_violations.get(process_key, [])
             }
 
             status["organizations"][org_id]["apps"][app_id] = app_status
@@ -371,6 +435,46 @@ class ProcessManager:
                 status["summary"]["stopped"] += 1
 
         return status
+
+    def get_compliance_report(self) -> Dict[str, Any]:
+        """Get compliance status for all apps."""
+        report = {
+            "timestamp": datetime.now().isoformat(),
+            "enforcement_enabled": self.enforce_compliance,
+            "apps": {},
+            "summary": {
+                "total": 0,
+                "compliant": 0,
+                "with_warnings": 0,
+                "with_critical": 0
+            }
+        }
+
+        for org_id, org_config in self.config["organizations"].items():
+            for app_id, app_config in org_config.get("apps", {}).items():
+                process_key = f"{org_id}.{app_id}"
+                is_compliant, violations = self._check_app_compliance(org_id, app_id, app_config)
+
+                critical_count = len([v for v in violations if v.startswith("CRITICAL")])
+                warning_count = len([v for v in violations if v.startswith("WARNING")])
+
+                report["apps"][process_key] = {
+                    "name": app_config.get("name", app_id),
+                    "is_compliant": is_compliant,
+                    "violations": violations,
+                    "critical_count": critical_count,
+                    "warning_count": warning_count
+                }
+
+                report["summary"]["total"] += 1
+                if not violations:
+                    report["summary"]["compliant"] += 1
+                if warning_count > 0:
+                    report["summary"]["with_warnings"] += 1
+                if critical_count > 0:
+                    report["summary"]["with_critical"] += 1
+
+        return report
 
 def main():
     """Main entry point for process manager."""

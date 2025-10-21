@@ -12,10 +12,14 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Add src to path for imports
+# Add src to path for imports and shared modules
+sys.path.insert(0, '/Users/fred/xcu_my_apps')
 src_path = Path(__file__).parent / "src"
 if str(src_path) not in sys.path:
     sys.path.insert(0, str(src_path))
+
+# Import shared auth for SSO (actual auth handled in Social_Xtuff.py)
+from shared.auth import get_shared_auth, is_authenticated
 
 def main():
     """Main entry point for the social server."""
@@ -35,7 +39,7 @@ def main():
         "run",
         page_file,
         "--server.port=8501",
-        "--server.address=localhost"
+        "--server.address=0.0.0.0"
     ]
 
     stcli.main()

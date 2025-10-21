@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from process_manager import ProcessManager
 from auth_integration import get_auth_manager, AuthManager
 from subscription_manager import get_subscription_manager, SubscriptionManager
+from system_state_verifier import SystemStateVerifier
 
 # Import shared authentication system for cross-subdomain SSO
 try:
@@ -375,7 +376,7 @@ def render_sidebar(auth_manager: AuthManager, user_role: str):
     if user_role in ["admin", "superadmin"]:
         page = st.sidebar.selectbox(
             "Navigate:",
-            ["🏠 Home", "💳 Pricing", "🔧 Management", "📊 Monitoring", "⚙️ Settings"],
+            ["🏠 Home", "💳 Pricing", "🔧 Management", "📊 Monitoring", "🔍 System State", "⚙️ Settings"],
         )
     else:
         page = st.sidebar.selectbox("Navigate:", ["🏠 Home", "💳 Pricing"])
@@ -637,6 +638,9 @@ def render_home_page(
             else:
                 continue
         elif not app_config.get("public_visible", False):
+            continue
+        # Hide disabled apps from users (admins can still see them in System State dashboard)
+        elif app_config.get("status") == "disabled":
             continue
 
         # Determine if this is featured and get default expanded state
@@ -1219,6 +1223,208 @@ def render_monitoring_page():
     st.info("Monitoring interface - see original main.py for full implementation")
 
 
+def render_system_state_page():
+    """System State Verification Dashboard - Admin only."""
+    st.title("🔍 System State Verification")
+    st.markdown("### Verify all apps comply with architecture requirements")
+
+    # Initialize verifier
+    verifier = SystemStateVerifier()
+
+    # Add controls
+    col1, col2, col3 = st.columns([2, 2, 2])
+    with col1:
+        if st.button("🔄 Run Full Verification", type="primary", use_container_width=True):
+            st.session_state['verification_reports'] = None  # Force refresh
+    with col2:
+        show_compliant = st.checkbox("Show Compliant Apps", value=True)
+    with col3:
+        auto_fix_enabled = st.checkbox("Enable Auto-Fix", value=False)
+
+    st.markdown("---")
+
+    # Run verification
+    with st.spinner("Running system verification..."):
+        if 'verification_reports' not in st.session_state or st.session_state['verification_reports'] is None:
+            reports = verifier.verify_all_apps()
+            st.session_state['verification_reports'] = reports
+        else:
+            reports = st.session_state['verification_reports']
+
+    # Get summary
+    summary = verifier.get_system_summary(reports)
+
+    # Display summary metrics
+    st.markdown("### 📊 System Overview")
+    metric_cols = st.columns(5)
+
+    with metric_cols[0]:
+        st.metric("Total Apps", summary['total_apps'])
+    with metric_cols[1]:
+        st.metric("Fully Compliant", summary['fully_compliant'],
+                 delta=f"{summary['fully_compliant']/summary['total_apps']*100:.0f}%" if summary['total_apps'] > 0 else "0%")
+    with metric_cols[2]:
+        st.metric("Critical Issues", summary['apps_with_critical_issues'],
+                 delta=f"-{summary['apps_with_critical_issues']}" if summary['apps_with_critical_issues'] > 0 else "0",
+                 delta_color="inverse")
+    with metric_cols[3]:
+        st.metric("Warnings", summary['apps_with_warnings'],
+                 delta=f"-{summary['apps_with_warnings']}" if summary['apps_with_warnings'] > 0 else "0",
+                 delta_color="inverse")
+    with metric_cols[4]:
+        compliance_color = "🟢" if summary['average_compliance_score'] >= 80 else "🟡" if summary['average_compliance_score'] >= 60 else "🔴"
+        st.metric(f"{compliance_color} Avg Compliance", f"{summary['average_compliance_score']:.1f}%")
+
+    st.markdown("---")
+
+    # Check-specific statistics
+    st.markdown("### 📋 Compliance by Check Type")
+
+    check_stats_df = []
+    for check_name, stats in summary['check_statistics'].items():
+        check_stats_df.append({
+            "Check": check_name,
+            "Passed": stats['passed'],
+            "Failed": stats['failed'],
+            "Total": stats['total'],
+            "Pass Rate": f"{stats['pass_rate']:.1f}%"
+        })
+
+    st.dataframe(check_stats_df, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+
+    # Detailed app reports
+    st.markdown("### 🔍 Detailed App Reports")
+
+    # Filter and sort reports
+    sorted_reports = sorted(reports, key=lambda r: (r.has_critical_issues, r.has_warnings, -r.compliance_score), reverse=True)
+
+    for report in sorted_reports:
+        # Skip fully compliant apps if checkbox is unchecked
+        if not show_compliant and not report.has_critical_issues and not report.has_warnings:
+            continue
+
+        # Determine status color and icon
+        if report.has_critical_issues:
+            status_color = "🔴"
+            border_color = "#FF4444"
+        elif report.has_warnings:
+            status_color = "🟡"
+            border_color = "#FFAA00"
+        else:
+            status_color = "🟢"
+            border_color = "#44FF44"
+
+        # Create expandable card for each app
+        with st.expander(
+            f"{status_color} **{report.app_name}** ({report.org_id}.{report.app_id}) - Compliance: {report.compliance_score:.0f}%",
+            expanded=report.has_critical_issues
+        ):
+            # App info
+            info_col1, info_col2, info_col3 = st.columns(3)
+            with info_col1:
+                st.markdown(f"**Port:** {report.port}")
+            with info_col2:
+                st.markdown(f"**Domain:** {report.domain_name or 'N/A'}")
+            with info_col3:
+                st.markdown(f"**Score:** {report.compliance_score:.1f}%")
+
+            st.markdown("---")
+
+            # Group results by severity
+            critical_results = [r for r in report.results if r.severity == "critical"]
+            warning_results = [r for r in report.results if r.severity == "warning"]
+            info_results = [r for r in report.results if r.severity == "info"]
+
+            # Display critical issues
+            if critical_results:
+                st.markdown("#### 🔴 Critical Issues")
+                for result in critical_results:
+                    icon = "✓" if result.passed else "✗"
+                    color = "green" if result.passed else "red"
+                    st.markdown(f":{color}[{icon}] **{result.check_name}:** {result.message}")
+                    if not result.passed and result.fix_suggestion:
+                        st.info(f"💡 **Fix:** {result.fix_suggestion}")
+
+            # Display warnings
+            if warning_results:
+                st.markdown("#### 🟡 Warnings")
+                for result in warning_results:
+                    icon = "✓" if result.passed else "✗"
+                    color = "green" if result.passed else "orange"
+                    st.markdown(f":{color}[{icon}] **{result.check_name}:** {result.message}")
+                    if not result.passed and result.fix_suggestion:
+                        st.caption(f"💡 {result.fix_suggestion}")
+
+            # Display info (collapsed)
+            if info_results:
+                with st.expander("ℹ️ Additional Info", expanded=False):
+                    for result in info_results:
+                        icon = "✓" if result.passed else "✗"
+                        st.markdown(f"{icon} **{result.check_name}:** {result.message}")
+
+            # Auto-fix button for apps with issues
+            if auto_fix_enabled and (report.has_critical_issues or report.has_warnings):
+                st.markdown("---")
+                if st.button(f"🔧 Auto-Fix Issues", key=f"fix_{report.org_id}_{report.app_id}"):
+                    with st.spinner("Applying fixes..."):
+                        config = verifier.config
+                        app_config = config['organizations'][report.org_id]['apps'][report.app_id]
+                        fixes = verifier.auto_fix_app(report.org_id, report.app_id, app_config)
+
+                        if fixes:
+                            # Save updated config
+                            with open(verifier.config_path, 'w') as f:
+                                json.dump(config, f, indent=2)
+
+                            st.success(f"✓ Applied {len(fixes)} fix(es):")
+                            for fix in fixes:
+                                st.markdown(f"  - {fix}")
+                            st.info("Config updated. Re-run verification to see changes.")
+                        else:
+                            st.warning("No automatic fixes available for this app.")
+
+    # Export report option
+    st.markdown("---")
+    st.markdown("### 📥 Export Report")
+    if st.button("Download Verification Report as JSON"):
+        report_data = {
+            "timestamp": datetime.now().isoformat(),
+            "summary": summary,
+            "apps": [
+                {
+                    "org_id": r.org_id,
+                    "app_id": r.app_id,
+                    "app_name": r.app_name,
+                    "port": r.port,
+                    "domain_name": r.domain_name,
+                    "compliance_score": r.compliance_score,
+                    "has_critical_issues": r.has_critical_issues,
+                    "has_warnings": r.has_warnings,
+                    "results": [
+                        {
+                            "check_name": res.check_name,
+                            "passed": res.passed,
+                            "severity": res.severity,
+                            "message": res.message,
+                            "fix_suggestion": res.fix_suggestion
+                        }
+                        for res in r.results
+                    ]
+                }
+                for r in reports
+            ]
+        }
+
+        st.download_button(
+            label="Download JSON Report",
+            data=json.dumps(report_data, indent=2),
+            file_name=f"system_state_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+            mime="application/json"
+        )
+
+
 def render_settings_page():
     """Admin settings page."""
     st.title("⚙️ Settings")
@@ -1268,6 +1474,12 @@ def main():
     elif page == "📊 Monitoring":
         if user_role in ["admin", "superadmin"]:
             render_monitoring_page()
+        else:
+            st.error("Access denied. Administrator privileges required.")
+
+    elif page == "🔍 System State":
+        if user_role in ["admin", "superadmin"]:
+            render_system_state_page()
         else:
             st.error("Access denied. Administrator privileges required.")
 

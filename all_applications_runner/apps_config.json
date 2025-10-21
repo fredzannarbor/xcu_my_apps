@@ -13,7 +13,7 @@
           "auth_level": "public",
           "status": "development",
           "health_endpoint": "/",
-          "startup_command": "uv run streamlit run daily_engine.py --server.port=8509",
+          "startup_command": "uv run streamlit run daily_engine.py --server.port=8509 --server.address=0.0.0.0",
           "environment": {
             "PYTHONPATH": "/Users/fred/xcu_my_apps"
           },
@@ -67,7 +67,7 @@
           "auth_level": "subscriber",
           "status": "disabled",
           "health_endpoint": "/",
-          "startup_command": "streamlit run app.py --server.port=8503",
+          "startup_command": "streamlit run app.py --server.port=8503 --server.address=0.0.0.0",
           "public_visible": false,
           "minimum_role": "admin",
           "subscription_tier": "free",
@@ -82,7 +82,7 @@
           "auth_level": "public",
           "status": "development",
           "health_endpoint": "/",
-          "startup_command": "uv run streamlit run trillionsofpeople.py --server.port=8504",
+          "startup_command": "uv run streamlit run trillionsofpeople.py --server.port=8504 --server.address=0.0.0.0",
           "environment": {
             "PYTHONPATH": "src:/Users/fred/xcu_my_apps"
           },
@@ -100,7 +100,7 @@
           "auth_level": "subscriber",
           "status": "disabled",
           "health_endpoint": "/",
-          "startup_command": "streamlit run cfr_document_analyzer/streamlit_app.py --server.port=8505",
+          "startup_command": "streamlit run cfr_document_analyzer/streamlit_app.py --server.port=8505 --server.address=0.0.0.0",
           "public_visible": false,
           "minimum_role": "admin",
           "subscription_tier": "free",
@@ -115,7 +115,7 @@
           "auth_level": "public",
           "status": "development",
           "health_endpoint": "/",
-          "startup_command": "uv run streamlit run app.py --server.port=8512",
+          "startup_command": "uv run streamlit run app.py --server.port=8512 --server.address=0.0.0.0",
           "environment": {
             "PYTHONPATH": "/Users/fred/xcu_my_apps"
           },
@@ -144,7 +144,7 @@
           "auth_level": "subscriber",
           "status": "production",
           "health_endpoint": "/",
-          "startup_command": "uv run streamlit run src/codexes/codexes-factory-home-ui.py --server.port=8502",
+          "startup_command": "uv run streamlit run src/codexes/codexes-factory-home-ui.py --server.port=8502 --server.address=0.0.0.0",
           "environment": {
             "PYTHONPATH": "src:/Users/fred/xcu_my_apps"
           },
@@ -168,7 +168,7 @@
           "auth_level": "public",
           "status": "disabled",
           "health_endpoint": "/",
-          "startup_command": "uv run streamlit run app.py --server.port=8508",
+          "startup_command": "uv run streamlit run app.py --server.port=8508 --server.address=0.0.0.0",
           "public_visible": true,
           "minimum_role": "anonymous",
           "subscription_tier": "free",
