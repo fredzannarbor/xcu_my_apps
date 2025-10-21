@@ -1,0 +1,87 @@
+{
+  "imprint_name": "nimble_ultra",
+  "codex_types": {
+    "declassified_intelligence_report": {
+      "description": "Declassified intelligence documents with AI analysis and contextual front/back matter",
+      "front_matter": {
+        "sections": [
+          {
+            "type": "prompt",
+            "name": "bibliographic_key_phrases",
+            "prompt_key": "bibliographic_key_phrases",
+            "description": "Generate bibliographic keywords and subject headings"
+          },
+          {
+            "type": "prompt",
+            "name": "basic_info",
+            "prompt_key": "gemini_get_basic_info_from_public_domain",
+            "description": "Extract basic bibliographic metadata from public domain document"
+          },
+          {
+            "type": "prompt",
+            "name": "motivation",
+            "prompt_key": "motivation",
+            "description": "Publisher's motivation and context for releasing this document"
+          },
+          {
+            "type": "prompt",
+            "name": "historical_context",
+            "prompt_key": "place_in_historical_context",
+            "description": "Place document in historical context"
+          },
+          {
+            "type": "prompt",
+            "name": "abstracts_x4",
+            "prompt_key": "abstracts_x4",
+            "description": "Four different abstracts of the document"
+          },
+          {
+            "type": "prompt",
+            "name": "mnemonics",
+            "prompt_key": "mnemonics_prompt",
+            "description": "Memory aids for key concepts"
+          },
+          {
+            "type": "prompt",
+            "name": "important_passages",
+            "prompt_key": "most_important_passages_with_reasoning",
+            "description": "Highlight most important passages with reasoning"
+          }
+        ]
+      },
+      "body": {
+        "sections": [
+          {
+            "type": "static_file",
+            "name": "main_document",
+            "source_type": "pdf",
+            "source_path": "{book_data.source_pdf}",
+            "description": "Insert the declassified PDF as main body"
+          }
+        ]
+      },
+      "back_matter": {
+        "sections": [
+          {
+            "type": "prompt",
+            "name": "index_persons",
+            "prompt_key": "index_of_persons",
+            "description": "Index of persons mentioned in the document"
+          },
+          {
+            "type": "prompt",
+            "name": "index_places",
+            "prompt_key": "index_of_places",
+            "description": "Index of places mentioned in the document"
+          }
+        ]
+      }
+    }
+  },
+  "default_codex_type": "declassified_intelligence_report",
+  "prompt_defaults": {
+    "model": "gemini/gemini-2.0-flash-exp",
+    "temperature": 0.7,
+    "max_tokens": 8000
+  }
+}

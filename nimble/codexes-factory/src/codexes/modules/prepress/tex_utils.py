@@ -34,16 +34,144 @@ def escape_latex(text: str) -> str:
     return text
 
 
-def markdown_to_latex(text: str) -> str:
+def _process_inline_markdown(text: str) -> str:
     """
-    A simple converter for basic Markdown to LaTeX that escapes text
-    and handles newlines for use in simple text blocks.
+    Process inline markdown formatting: **bold**, *italic*, etc.
+    """
+    import re
+
+    # Escape LaTeX special characters first, but preserve markdown markers temporarily
+    text = escape_latex(text)
+
+    # Un-escape the markdown markers we want to process
+    text = text.replace('\\textbackslash{}*', '*')
+    text = text.replace('\\textbackslash{}\\_', '_')
+
+    # Convert **bold** to \textbf{}
+    text = re.sub(r'\*\*(.+?)\*\*', r'\\textbf{\1}', text)
+
+    # Convert *italic* or _italic_ to \textit{}
+    text = re.sub(r'\*(.+?)\*', r'\\textit{\1}', text)
+    text = re.sub(r'_(.+?)_', r'\\textit{\1}', text)
+
+    return text
+
+
+def markdown_to_latex(text: str, skip_first_heading_if_matches: str = None) -> str:
+    """
+    Converts Markdown to LaTeX, handling common markdown syntax.
+    Processes in order: headings, bold, italic, blockquotes, lists, paragraphs.
+
+    Args:
+        text: Markdown text to convert
+        skip_first_heading_if_matches: If provided, skip the first heading if it matches this text
     """
     if not isinstance(text, str):
         text = str(text)
-    escaped = escape_latex(text)
-    # Convert newlines to LaTeX newlines
-    return escaped.replace('\n', '\\\\ \n')
+
+    import re
+
+    lines = text.split('\n')
+    result_lines = []
+    in_blockquote = False
+    in_list = False
+    first_heading_seen = False
+    consecutive_empty_lines = 0
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Handle empty lines with limiting
+        if not stripped:
+            if in_blockquote:
+                result_lines.append('\\end{quotation}')
+                in_blockquote = False
+                consecutive_empty_lines = 0
+            elif in_list:
+                result_lines.append('\\end{itemize}')
+                in_list = False
+                consecutive_empty_lines = 0
+            else:
+                # Limit consecutive empty lines to 1
+                if consecutive_empty_lines < 1:
+                    result_lines.append('')
+                    consecutive_empty_lines += 1
+            continue
+        else:
+            consecutive_empty_lines = 0
+
+        # Handle markdown headings (# Header)
+        heading_match = re.match(r'^(#{1,6})\s+(.+)$', stripped)
+        if heading_match:
+            # Skip first heading if it matches the provided title
+            if not first_heading_seen and skip_first_heading_if_matches:
+                heading_text_raw = heading_match.group(2)
+                if heading_text_raw.strip().lower() == skip_first_heading_if_matches.strip().lower():
+                    first_heading_seen = True
+                    continue
+
+            first_heading_seen = True
+
+            if in_blockquote:
+                result_lines.append('\\end{quotation}')
+                in_blockquote = False
+            if in_list:
+                result_lines.append('\\end{itemize}')
+                in_list = False
+            level = len(heading_match.group(1))
+            heading_text = escape_latex(heading_match.group(2))
+            # Convert to subsection for level 2+
+            if level == 1:
+                result_lines.append(f'\\section*{{{heading_text}}}')
+            elif level == 2:
+                result_lines.append(f'\\subsection*{{{heading_text}}}')
+            else:
+                result_lines.append(f'\\subsubsection*{{{heading_text}}}')
+            continue
+
+        # Handle blockquotes (> text)
+        if stripped.startswith('> '):
+            if not in_blockquote:
+                if in_list:
+                    result_lines.append('\\end{itemize}')
+                    in_list = False
+                result_lines.append('\\begin{quotation}')
+                in_blockquote = True
+            quote_text = stripped[2:]
+            # Process inline formatting in quote
+            quote_text = _process_inline_markdown(quote_text)
+            result_lines.append(quote_text)
+            continue
+        else:
+            if in_blockquote:
+                result_lines.append('\\end{quotation}')
+                in_blockquote = False
+
+        # Handle unordered lists (- item or * item)
+        if re.match(r'^[-*]\s+', stripped):
+            if not in_list:
+                result_lines.append('\\begin{itemize}')
+                in_list = True
+            item_text = re.sub(r'^[-*]\s+', '', stripped)
+            item_text = _process_inline_markdown(item_text)
+            result_lines.append(f'    \\item {item_text}')
+            continue
+        else:
+            if in_list:
+                result_lines.append('\\end{itemize}')
+                in_list = False
+
+        # Regular paragraph text
+        processed_line = _process_inline_markdown(stripped)
+        result_lines.append(processed_line + '\\\\ ')
+
+    # Close any open environments
+    if in_blockquote:
+        result_lines.append('\\end{quotation}')
+    if in_list:
+        result_lines.append('\\end{itemize}')
+
+    return '\n'.join(result_lines)
 
 
 def compile_tex_to_pdf(tex_file: Path, build_dir: Path, compiler: str = "lualatex", page_type: str = "interior") -> Optional[Path]:
