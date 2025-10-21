@@ -1,0 +1,4 @@
+PyMuPDF>=1.23.0
+tqdm>=4.65.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
