@@ -1,0 +1,30 @@
+{
+  "name": "Aperture Intelligence",
+  "slug": "aperture_intelligence",
+  "publisher": "Nimble Books LLC",
+  "charter": "AI Generated Charter",
+  "branding": {
+    "display_name": "Aperture Intelligence",
+    "tagline": "Declassifying the Past, Analyzing the Future.",
+    "mission_statement": "",
+    "brand_values": [],
+    "primary_color": "#2F4F4F",
+    "secondary_color": "#B8860B",
+    "font_family": "Garamond Premier Pro",
+    "logo_url": null
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History",
+      "Political Science",
+      "Espionage",
+      "Young Adult Fiction"
+    ],
+    "target_audience": "Academic, professional, and general readers interested in intelligence history; young adult readers seeking historically-grounded thrillers.",
+    "price_point": null,
+    "books_per_year": null
+  },
+  "status": "draft",
+  "created_at": "2025-10-20T04:26:44.445607",
+  "modified_at": "2025-10-20T04:26:44.445608"
+}

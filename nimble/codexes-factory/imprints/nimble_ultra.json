@@ -1,0 +1,53 @@
+{
+  "name": "Nimble Ultra",
+  "slug": "nimble_ultra",
+  "publisher": "Nimble Books LLC",
+  "charter": "AI Generated Charter",
+  "branding": {
+    "display_name": "Nimble Ultra",
+    "tagline": "Declassifying History. Decoding the Future.",
+    "mission_statement": "",
+    "brand_values": [],
+    "primary_color": "#2B303A",
+    "secondary_color": "#D08770",
+    "font_family": "Garamond Premier Pro",
+    "logo_url": null
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History",
+      "Political Science",
+      "Military",
+      "Young Adult Fiction"
+    ],
+    "target_audience": "History enthusiasts, intelligence professionals, researchers, and young adult readers interested in espionage.",
+    "price_point": null,
+    "books_per_year": null
+  },
+  "status": "draft",
+  "created_at": "2025-10-20T05:19:19.503606",
+  "modified_at": "2025-10-20T05:19:19.503608",
+  "persona": {
+    "name": "Elias Vance",
+    "bio": "Elias Vance is a former intelligence analyst and historian with over two decades of experience in geopolitical analysis and archival research. After a career focused on leveraging historical data to predict future trends, he founded Nimble Ultra to bring the hidden narratives of global intelligence into the public sphere, using AI to uncover patterns in declassified archives.",
+    "risk_tolerance": "moderate",
+    "decision_style": "collaborative",
+    "preferred_topics": [
+      "Cold War-era espionage",
+      "signals intelligence (SIGINT) history",
+      "the evolution of covert operations",
+      "and fictional narratives that accurately portray the moral complexities of intelligence work for a YA audience."
+    ],
+    "target_demographics": [
+      "Academics",
+      "policy makers",
+      "armchair historians",
+      "and intellectually curious young adults. Readers who enjoy non-fiction from authors like Ben Macintyre and YA fiction from authors like Alan Gratz."
+    ],
+    "vulnerabilities": [
+      "A potential over-reliance on US-centric public domain documents could create a biased perspective. The transition from non-fiction analysis to compelling YA fiction requires a different editorial skillset",
+      "representing a potential blind spot."
+    ],
+    "glyph": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Noctua Press",
+  "slug": "noctua_press",
+  "publisher": "Nimble Books LLC",
+  "charter": "AI Generated Charter",
+  "branding": {
+    "display_name": "Noctua Press",
+    "tagline": "Declassifying Knowledge.",
+    "mission_statement": "",
+    "brand_values": [],
+    "primary_color": "#34495E",
+    "secondary_color": "#D4AC0D",
+    "font_family": "Garamond Premier Pro",
+    "logo_url": null
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "History",
+      "Political Science",
+      "Military",
+      "Young Adult Fiction"
+    ],
+    "target_audience": "Academic, professional, and general readers with an interest in history and intelligence; secondary market of young adult readers (12-18).",
+    "price_point": null,
+    "books_per_year": null
+  },
+  "status": "draft",
+  "created_at": "2025-10-20T02:59:38.843978",
+  "modified_at": "2025-10-20T02:59:38.843981"
+}

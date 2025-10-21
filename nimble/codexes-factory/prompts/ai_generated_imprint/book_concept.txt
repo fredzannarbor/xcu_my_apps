@@ -1,0 +1,7 @@
+Generate a book concept for the {imprint_name} imprint.
+
+Charter: {charter}
+
+Focus: {focus}
+
+Create an innovative book concept that aligns with the imprint's mission.

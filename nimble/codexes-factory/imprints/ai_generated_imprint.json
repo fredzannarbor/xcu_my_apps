@@ -1,0 +1,30 @@
+{
+  "name": "AI Generated Imprint",
+  "slug": "ai_generated_imprint",
+  "publisher": "AI Generated",
+  "charter": "Generated from: The history and future of intelligence and espionage, all nations, all eras, all branches, all INTs.\n- US public domain documents\n- analysis by frontier models\n- occasional middle school & YA fiction",
+  "branding": {
+    "display_name": "AI Generated Imprint",
+    "tagline": "AI generated tagline",
+    "mission_statement": "AI generated mission",
+    "brand_values": [
+      "Innovation",
+      "Quality"
+    ],
+    "primary_color": null,
+    "secondary_color": null,
+    "font_family": null,
+    "logo_url": null
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "General Fiction"
+    ],
+    "target_audience": "General readers",
+    "price_point": null,
+    "books_per_year": null
+  },
+  "status": "draft",
+  "created_at": "2025-10-20T02:30:17.893107",
+  "modified_at": "2025-10-20T02:30:17.893114"
+}

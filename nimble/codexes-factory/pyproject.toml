@@ -11,6 +11,8 @@ dependencies = [
     "jsonschema>=4.24.0",
     "matplotlib>=3.10.6",
     "seaborn>=0.13.2",
+    "json-repair>=0.51.0",
+    "litellm>=1.72.0",
 ]
 
 [tool.setuptools.packages.find]

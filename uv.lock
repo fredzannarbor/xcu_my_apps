@@ -666,7 +666,9 @@ version = "0.2.0"
 source = { virtual = "nimble/codexes-factory" }
 dependencies = [
     { name = "isbnlib" },
+    { name = "json-repair" },
     { name = "jsonschema" },
+    { name = "litellm" },
     { name = "matplotlib" },
     { name = "python-barcode" },
     { name = "seaborn" },
@@ -681,7 +683,9 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "isbnlib" },
+    { name = "json-repair", specifier = ">=0.51.0" },
     { name = "jsonschema", specifier = ">=4.24.0" },
+    { name = "litellm", specifier = ">=1.72.0" },
     { name = "matplotlib", specifier = ">=3.10.6" },
     { name = "python-barcode", specifier = ">=0.15.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
