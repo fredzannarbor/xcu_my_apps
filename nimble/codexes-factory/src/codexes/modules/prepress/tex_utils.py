@@ -59,119 +59,87 @@ def _process_inline_markdown(text: str) -> str:
 
 def markdown_to_latex(text: str, skip_first_heading_if_matches: str = None) -> str:
     """
-    Converts Markdown to LaTeX, handling common markdown syntax.
-    Processes in order: headings, bold, italic, blockquotes, lists, paragraphs.
+    Converts Markdown to LaTeX using Pandoc for high-fidelity conversion.
 
     Args:
         text: Markdown text to convert
         skip_first_heading_if_matches: If provided, skip the first heading if it matches this text
+
+    Returns:
+        LaTeX formatted text
     """
     if not isinstance(text, str):
         text = str(text)
 
     import re
+    import tempfile
 
-    lines = text.split('\n')
-    result_lines = []
-    in_blockquote = False
-    in_list = False
-    first_heading_seen = False
-    consecutive_empty_lines = 0
+    # Handle skip_first_heading_if_matches before conversion
+    if skip_first_heading_if_matches:
+        lines = text.split('\n')
+        first_heading_pattern = re.compile(r'^#\s+(.+)$')
+        found_first = False
+        filtered_lines = []
 
-    for line in lines:
-        stripped = line.strip()
+        for line in lines:
+            match = first_heading_pattern.match(line.strip())
+            if match and not found_first:
+                heading_text = match.group(1).strip()
+                if heading_text.lower() == skip_first_heading_if_matches.strip().lower():
+                    found_first = True
+                    continue  # Skip this heading
+            filtered_lines.append(line)
 
-        # Handle empty lines with limiting
-        if not stripped:
-            if in_blockquote:
-                result_lines.append('\\end{quotation}')
-                in_blockquote = False
-                consecutive_empty_lines = 0
-            elif in_list:
-                result_lines.append('\\end{itemize}')
-                in_list = False
-                consecutive_empty_lines = 0
-            else:
-                # Limit consecutive empty lines to 1
-                if consecutive_empty_lines < 1:
-                    result_lines.append('')
-                    consecutive_empty_lines += 1
-            continue
-        else:
-            consecutive_empty_lines = 0
+        text = '\n'.join(filtered_lines)
 
-        # Handle markdown headings (# Header)
-        heading_match = re.match(r'^(#{1,6})\s+(.+)$', stripped)
-        if heading_match:
-            # Skip first heading if it matches the provided title
-            if not first_heading_seen and skip_first_heading_if_matches:
-                heading_text_raw = heading_match.group(2)
-                if heading_text_raw.strip().lower() == skip_first_heading_if_matches.strip().lower():
-                    first_heading_seen = True
-                    continue
+    # Use Pandoc for conversion with optimized settings for book content
+    try:
+        # Write markdown to temp file
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False, encoding='utf-8') as tmp:
+            tmp.write(text)
+            tmp_path = tmp.name
 
-            first_heading_seen = True
+        # Run pandoc with options optimized for book typesetting
+        result = subprocess.run(
+            [
+                'pandoc',
+                '--from=markdown',
+                '--to=latex',
+                '--wrap=preserve',           # Preserve line wrapping
+                '--no-highlight',            # Disable syntax highlighting
+                tmp_path
+            ],
+            capture_output=True,
+            text=True,
+            encoding='utf-8',
+            check=True
+        )
 
-            if in_blockquote:
-                result_lines.append('\\end{quotation}')
-                in_blockquote = False
-            if in_list:
-                result_lines.append('\\end{itemize}')
-                in_list = False
-            level = len(heading_match.group(1))
-            heading_text = escape_latex(heading_match.group(2))
-            # Convert to subsection for level 2+
-            if level == 1:
-                result_lines.append(f'\\section*{{{heading_text}}}')
-            elif level == 2:
-                result_lines.append(f'\\subsection*{{{heading_text}}}')
-            else:
-                result_lines.append(f'\\subsubsection*{{{heading_text}}}')
-            continue
+        # Clean up temp file
+        Path(tmp_path).unlink()
 
-        # Handle blockquotes (> text)
-        if stripped.startswith('> '):
-            if not in_blockquote:
-                if in_list:
-                    result_lines.append('\\end{itemize}')
-                    in_list = False
-                result_lines.append('\\begin{quotation}')
-                in_blockquote = True
-            quote_text = stripped[2:]
-            # Process inline formatting in quote
-            quote_text = _process_inline_markdown(quote_text)
-            result_lines.append(quote_text)
-            continue
-        else:
-            if in_blockquote:
-                result_lines.append('\\end{quotation}')
-                in_blockquote = False
+        latex_output = result.stdout
 
-        # Handle unordered lists (- item or * item)
-        if re.match(r'^[-*]\s+', stripped):
-            if not in_list:
-                result_lines.append('\\begin{itemize}')
-                in_list = True
-            item_text = re.sub(r'^[-*]\s+', '', stripped)
-            item_text = _process_inline_markdown(item_text)
-            result_lines.append(f'    \\item {item_text}')
-            continue
-        else:
-            if in_list:
-                result_lines.append('\\end{itemize}')
-                in_list = False
+        # Post-process to ensure proper spacing after headings
+        # Pandoc uses \section{}, \subsection{}, etc. - convert to starred versions
+        latex_output = re.sub(r'\\(sub)*section\{', r'\\\1section*{', latex_output)
+        latex_output = re.sub(r'\\(sub)*subsection\{', r'\\\1subsection*{', latex_output)
 
-        # Regular paragraph text
-        processed_line = _process_inline_markdown(stripped)
-        result_lines.append(processed_line + '\\\\ ')
+        return latex_output
 
-    # Close any open environments
-    if in_blockquote:
-        result_lines.append('\\end{quotation}')
-    if in_list:
-        result_lines.append('\\end{itemize}')
-
-    return '\n'.join(result_lines)
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Pandoc conversion failed: {e.stderr}")
+        # Fallback to simple escape if pandoc fails
+        logger.warning("Falling back to simple LaTeX escaping")
+        return escape_latex(text)
+    except FileNotFoundError:
+        logger.error("Pandoc not found. Please install pandoc: brew install pandoc")
+        logger.warning("Falling back to simple LaTeX escaping")
+        return escape_latex(text)
+    except Exception as e:
+        logger.error(f"Unexpected error in markdown_to_latex: {e}")
+        logger.warning("Falling back to simple LaTeX escaping")
+        return escape_latex(text)
 
 
 def compile_tex_to_pdf(tex_file: Path, build_dir: Path, compiler: str = "lualatex", page_type: str = "interior") -> Optional[Path]:

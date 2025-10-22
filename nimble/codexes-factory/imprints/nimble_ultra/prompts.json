@@ -1,59 +1,59 @@
 {
   "imprint_name": "nimble_ultra",
-  "imprint_intro": "Nimble Ultra  publishes high-quality books.",
+  "imprint_intro": "Nimble Ultra publishes declassified intelligence documents, Cold War operations analysis, signals intelligence reports, and historical governmental records with expert AI-generated contextual analysis.",
   "prompt_keys": [
-    "gemini_get_basic_info",
+    "gemini_get_basic_info_from_public_domain",
     "bibliographic_key_phrases",
-    "storefront_get_en_metadata",
-    "storefront_get_en_motivation",
-    "analytic_toc",
-    "back_cover_text",
-    "mnemonics_prompt"
-  ],
-  "reprompt_keys": [
+    "motivation",
+    "place_in_historical_context",
+    "abstracts_x4",
+    "most_important_passages_with_reasoning",
+    "index_of_persons",
+    "index_of_places",
     "mnemonics_prompt"
   ],
   "_metadata": {
     "imprint": "Nimble Ultra",
-    "generated_at": "2025-09-26T06:36:10.978510",
+    "generated_at": "2025-10-21T00:00:00.000000",
     "specialization": "Cold War operations, signals intelligence (SIGINT), declassified commission reports, and the history of covert action.",
-    "extracted_from_oneshot": true,
-    "fixed_by_script": true,
-    "fixed_at": "2025-09-26T07:00:00.000000"
+    "fixed_for_intelligence_documents": true,
+    "fixed_at": "2025-10-21T00:00:00.000000"
   },
-  "gemini_get_basic_info": {
+  "gemini_get_basic_info_from_public_domain": {
     "params": {
       "temperature": 0.3,
-      "max_tokens": 1000
+      "max_tokens": 1500
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+        "content": "You are a specialist in declassified intelligence documents and government records. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
       },
       {
         "role": "user",
-        "content": "Please review the book concept provided and identify the following values as accurately as possible. Provide the response as a single, valid JSON object.\n\nContext:\n{book_content}\n\nKeys required:\n\n'bisac_categories' (provide 2-3 relevant BISAC categories as a semicolon-separated string)"
+        "content": "Please analyze the declassified document provided and extract accurate bibliographic metadata. Provide the response as a single, valid JSON object.\n\nDocument:\n{book_content}\n\nRequired JSON keys:\n\n'document_title' (official title from the document header or cover page)\n'original_classification' (e.g., 'SECRET', 'TOP SECRET', 'CONFIDENTIAL', 'UNCLASSIFIED')\n'declassification_date' (date document was declassified, if available)\n'original_date' (date document was originally created/published)\n'issuing_agency' (CIA, NSA, State Department, etc.)\n'document_type' (e.g., 'Intelligence Assessment', 'Field Report', 'Commission Report', 'Memorandum')\n'bisac_categories' (2-3 relevant BISAC categories as semicolon-separated string, focus on Political Science, History, Military categories)\n'subject_headings' (5-7 Library of Congress subject headings as semicolon-separated string)"
       }
     ],
     "tags": [
       "metadata",
+      "declassified",
+      "intelligence",
       "json"
     ]
   },
   "bibliographic_key_phrases": {
     "params": {
       "temperature": 0.5,
-      "max_tokens": 500
+      "max_tokens": 600
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are a professional bibliographic specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+        "content": "You are a specialist in intelligence document cataloging and bibliographic classification. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
       },
       {
         "role": "user",
-        "content": "Please generate ten to twelve unique bibliographic key phrases for the book concept provided below. Each phrase should be two to three words long. The output should be a single JSON object with a single key 'keywords' whose value is a semicolon-separated string.\n\nConcept:\n{book_content}"
+        "content": "Generate twelve to fifteen unique bibliographic keywords and subject headings for the declassified intelligence document provided. Focus on specific operations, geographic locations, time periods, agencies, intelligence methods, and historical contexts. Each phrase should be two to four words. Output as a single JSON object with key 'keywords' whose value is a semicolon-separated string.\n\nDocument:\n{book_content}"
       }
     ],
     "tags": [
@@ -61,117 +61,169 @@
       "bibliographic",
       "keywords",
       "metadata",
+      "intelligence",
       "json"
     ]
   },
-  "storefront_get_en_metadata": {
-    "params": {
-      "temperature": 0.3,
-      "max_tokens": 1000
-    },
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
-      },
-      {
-        "role": "user",
-        "content": "Based on the book concept below, generate key metadata in English for an online bookstore. Provide the response as a single, valid JSON object with the following keys: 'storefront_title_en', 'storefront_author_en', 'storefront_description_en'. The description should be a compelling, marketing-oriented summary, approximately 100-150 words.\n\nConcept:\n{book_content}"
-      }
-    ],
-    "tags": [
-      "metadata",
-      "storefront",
-      "english",
-      "json"
-    ]
-  },
-  "storefront_get_en_motivation": {
+  "motivation": {
     "params": {
       "temperature": 0.7,
-      "max_tokens": 1000
+      "max_tokens": 1200
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are a professional book metadata specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+        "content": "You are {persona_name}, {persona_bio_summary}. Write from your personal perspective as the publisher. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
       },
       {
         "role": "user",
-        "content": "Based on the book concept below, create an English \"Publisher's Note\" (or 'motivation') paragraph of no more than 100 words. This note should explain to the reader the benefits of engaging with this collection of high-quality, thought-provoking quotes via the Korean practice of \ud544\uc0ac pilsa, or transcriptive meditation. The note should be engaging and articulate why this book is relevant and important today. Respond with a single, valid JSON object with one key: 'storefront_publishers_note_en'.\n\nConcept:\n{book_content}"
+        "content": "Write a Publisher's Note (150-250 words) in first person from your perspective as {persona_name}, publisher at {imprint}. Explain WHY you are publishing this declassified intelligence document.\n\nAddress (in first person):\n1. Why this document caught your attention\n2. What historical significance or insights drew you to publish it\n3. What you hope contemporary readers will learn or understand\n4. Your perspective on why declassification and transparency matter\n5. What unique value this document provides to researchers, students, and the general public\n6. **How this document connects to present-day issues and contemporary reader concerns**\n\nThe tone should be personal, thoughtful, and scholarly - like you're speaking directly to the reader about why this document matters. **Avoid hype, breathless language, or superlatives.**\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with this structure:\n{\n  \"publishers_note\": {\n    \"title\": \"Publisher's Note\",\n    \"content\": \"[Your complete first-person note text here, including signature line at the end formatted as: double newline, emdash, your name, comma, your location]\"\n  }\n}"
       }
     ],
     "tags": [
-      "metadata",
-      "storefront",
-      "english",
-      "json",
-      "motivation"
+      "motivation",
+      "publishers_note",
+      "intelligence",
+      "declassified",
+      "first_person",
+      "json"
     ]
   },
-  "analytic_toc": {
+  "place_in_historical_context": {
+    "params": {
+      "temperature": 0.6,
+      "max_tokens": 2500
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a historian specializing in Cold War intelligence operations, geopolitical strategy, and declassified government records. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Provide comprehensive historical context for this declassified document.\n\nFormat your response as markdown with the following sections (do NOT repeat the section headings as part of the body text):\n\n### Time Period and Geopolitical Situation\n\nDiscuss when this document was created, major geopolitical events or crises occurring at the time, the state of US-Soviet relations (if relevant), and regional conflicts or tensions that were active.\n\n### Intelligence Context\n\nExplain the intelligence priorities that drove this document's creation, collection methods or sources likely used, and how this fits into broader intelligence operations of the period.\n\n### Strategic Significance\n\nAnalyze what policy decisions or military operations this might have informed, key decision-makers who would have read it, and strategic questions it was trying to answer.\n\n### Long-term Impact\n\nDescribe how events in this document unfolded, what we can learn with hindsight about the accuracy of assessments, and how this document informs our understanding of this historical period.\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'historical_context' containing the complete markdown-formatted text starting directly with the first ### heading (do NOT include a top-level # heading)."
+      }
+    ],
+    "tags": [
+      "historical_context",
+      "intelligence",
+      "cold_war",
+      "analysis",
+      "json"
+    ]
+  },
+  "abstracts_x4": {
+    "params": {
+      "temperature": 0.4,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a specialist in intelligence document analysis and academic summarization. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Create four different abstracts/summaries of this declassified intelligence document.\n\nFormat exactly as follows:\n\n# Abstracts\n\n## TLDR (five words or less)\n\n[Your 3-5 word summary here]\n\n## Executive Summary\n\n[Your 100-150 word executive summary paragraph here - write as if briefing a policymaker, focus on key findings, strategic implications, and actionable intelligence]\n\n## Academic Abstract\n\n[Your 150-200 word academic abstract paragraph here - write in scholarly style, include document type, issuing agency, date, scope, methodology if discussed, main arguments, and historical significance]\n\n## General Reader Summary\n\n[Your 100-150 word general reader summary paragraph here - explain the document's content and importance in accessible language for non-specialist readers interested in history and intelligence]\n\nDocument:\n{book_content}\n\nIMPORTANT: Ensure there are TWO newlines after each ## heading before the content begins. Do NOT include the heading text as part of the body paragraph.\n\nReturn as a single JSON object with key 'abstracts_x4' containing all formatted markdown text."
+      }
+    ],
+    "tags": [
+      "abstract",
+      "tldr",
+      "intelligence",
+      "summary",
+      "json"
+    ]
+  },
+  "most_important_passages_with_reasoning": {
     "params": {
       "temperature": 0.5,
-      "max_tokens": 800
+      "max_tokens": 3000
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are a professional book formatting specialist. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+        "content": "You are an intelligence analyst and historian expert at identifying the most significant passages in declassified documents. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
       },
       {
         "role": "user",
-        "content": "Based on the book concept below, create a plausible analytic table of contents for the book with chapter titles and a one-sentence description for each. Output as a single JSON object with the key 'table_of_contents' whose value is a single formatted string with markdown headings.\n\nConcept:\n{book_content}"
+        "content": "Identify the 8-12 most important passages from this declassified intelligence document.\n\nFor each passage, provide:\n1. A brief descriptive title\n2. Page number or section reference if available\n3. The exact quoted text (keep under 150 words)\n4. WHY this passage is significant (50-100 words)\n\nSignificance criteria:\n- Reveals previously unknown intelligence assessments\n- Shows strategic thinking or decision-making processes\n- Contains surprising or counterintuitive findings\n- Demonstrates intelligence methods or sources\n- Has proven prescient or notably inaccurate with hindsight\n- Illuminates key historical events or geopolitical dynamics\n- Shows evolution of intelligence capabilities or limitations\n\nFormat exactly as follows (start directly with # heading, ensure TWO newlines after each ## heading):\n\n# Most Important Passages\n\n## Passage 1: [Brief descriptive title]\n\n**Location:** [Page/section reference]\n\n**Quote:**\n> [Exact quotation]\n\n**Significance:**\n\n[Your explanation paragraph here - do NOT repeat \"Significance:\" as part of the paragraph text]\n\n## Passage 2: [Brief descriptive title]\n\n[Continue pattern...]\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'important_passages' containing the complete markdown-formatted text."
       }
     ],
     "tags": [
-      "table of contents",
-      "front matter",
-      "book structure",
+      "analysis",
+      "passages",
+      "intelligence",
+      "significance",
       "json"
     ]
   },
-  "back_cover_text": {
+  "index_of_persons": {
     "params": {
-      "temperature": 0.7,
-      "max_tokens": 500
+      "temperature": 0.3,
+      "max_tokens": 2000
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are a professional book marketing copywriter."
+        "content": "You are a professional indexer specializing in intelligence and historical documents. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
       },
       {
         "role": "user",
-        "content": "Generate back cover text for the book described below. The text should be engaging. The text should explain that this book is intended to help users explore the Korean practice of pilsa, or transcriptive meditation. The text should mention that the book contains {quotes_per_book} quotations that are displayed on verso (even) pages with 5 mm dot grid transcription area on matching recto (odd) pages. MAXIMUM 100 WORDS. Return clean, final text with no variables or placeholders as a JSON object with the key 'back_cover_text'.\n\nBook Details:\n{book_content}"
+        "content": "Create a comprehensive alphabetized index of persons mentioned in this declassified document.\n\nFor each person:\n1. List full name (with titles/ranks if given)\n2. Include brief identifier (role, nationality, or significance)\n3. Note if name is redacted or partially redacted\n4. Alphabetize by last name\n\nEach person listed MUST be mentioned on a specific page in the document.  N\n\nFormat exactly as follows (start with # heading followed by TWO newlines, then list entries directly - do NOT repeat the heading text in the body):\n\n# Index of Persons\n\n- **Andropov, Yuri** (KGB Chairman, Soviet Union)\n- **Casey, William** (CIA Director, United States) - oversaw intelligence operations during...\n- **[REDACTED]** (Soviet military officer)\n\nONLY include  persons who are mentioned in the document.\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'index_of_persons' containing the complete markdown-formatted index."
       }
     ],
     "tags": [
-      "back cover",
-      "back matter",
-      "pilsa"
+      "index",
+      "persons",
+      "intelligence",
+      "back_matter",
+      "json"
+    ]
+  },
+  "index_of_places": {
+    "params": {
+      "temperature": 0.3,
+      "max_tokens": 2000
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a professional indexer specializing in intelligence and historical documents. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
+      },
+      {
+        "role": "user",
+        "content": "Create a comprehensive alphabetized index of places mentioned in this declassified document.\n\nFor each location:\n1. List geographic name (city, region, country, or facility)\n2. Include brief identifier (country, geographic context, or significance)\n3. Note if location is redacted or uses codename\n4. Use standard modern place names but note historical names if different\n\nFormat exactly as follows (start with # heading followed by TWO newlines, then list entries directly - do NOT repeat the heading text in the body):\n\n# Index of Places\n\n- **Baikonur Cosmodrome** (Kazakhstan, Soviet space facility)\n- **Berlin** (divided city, Cold War flashpoint)\n- **Hanoi** (North Vietnam) - site of peace negotiations\n- **[REDACTED FACILITY]** (Soviet naval base)\n- **Saigon** (South Vietnam, now Ho Chi Minh City)\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'index_of_places' containing the complete markdown-formatted index."
+      }
+    ],
+    "tags": [
+      "index",
+      "places",
+      "intelligence",
+      "back_matter",
+      "json"
     ]
   },
   "mnemonics_prompt": {
     "params": {
       "temperature": 0.7,
-      "max_tokens": 8000
+      "max_tokens": 4000
     },
     "messages": [
       {
         "role": "system",
-        "content": "You are an expert in creating mnemonics to help readers remember key concepts from books. Your task is to create three creative mnemonics based on the book content provided by the user. Focus specifically on the book's content, not on the art of mnemonics itself. The mnemonics should help readers remember the key themes, concepts, and insights from the book's quotations."
+        "content": "You are an expert in creating mnemonics to help readers remember key concepts from declassified intelligence documents. Focus on intelligence terminology, operations, analytical frameworks, and historical context specific to the document."
       },
       {
         "role": "user",
-        "content": "Based on the following book content and its quotations, generate a list of three creative mnemonics that specifically help readers remember the key themes, concepts, and insights from THIS SPECIFIC BOOK'S QUOTATIONS. DO NOT create generic mnemonics about learning or memory techniques. Instead, focus on the actual subject matter and content of the book's quotations.\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.\n\nExample format:\n\n% Mnemonics for Key Themes in This Book\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\n\\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)\n\n\\begin{itemize}\n    \\item \\textbf{C}hallenge assumptions\n    \\item \\textbf{L}ook for evidence\n    \\item \\textbf{E}valuate alternatives\n    \\item \\textbf{A}pply reasoning\n    \\item \\textbf{R}eflect on outcomes\n\\end{itemize}\n\nBook Content:\n$book_content$"
+        "content": "Based on THIS SPECIFIC declassified intelligence document, create 3-5 creative mnemonics that help readers remember the ACTUAL key concepts, events, locations, persons, or operational details that appear in the document below.\n\n**CRITICAL INSTRUCTIONS:**\n- READ the document carefully and identify its SPECIFIC content (operations, locations, persons, dates, agencies mentioned)\n- Create mnemonics based on WHAT IS ACTUALLY IN THIS DOCUMENT, not generic intelligence concepts\n- If the document discusses Cuba, create Cuba-related mnemonics. If it discusses Soviet submarines, create submarine-related mnemonics\n- Each mnemonic should be instantly recognizable as belonging to THIS document, not any other intelligence document\n- Do NOT create generic mnemonics about \"SIGINT\" or \"HUMINT\" unless those are the primary focus of this specific document\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready for inclusion in the document. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the chapter content.\n\nFormat example:\n\n% Mnemonics for [Document-Specific Topic]\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\nThese memory aids help readers retain key concepts, events, and operational details from this document.\n\n\\textbf{[ACRONYM]} ([Document-Specific Title])\n\n\\begin{itemize}\n    \\item \\textbf{[Letter]} - [specific detail from the document]\n    \\item \\textbf{[Letter]} - [specific detail from the document]\n    \\item [continue with actual document content]\n\\end{itemize}\n\n[Repeat for 2-4 more document-specific mnemonics]\n\n\\cleardoublepage\n\nDocument Content:\n{book_content}"
       }
     ],
     "tags": [
       "returns_tex",
-      "pilsa",
-      "back matter",
-      "content-generation",
+      "mnemonics",
+      "back_matter",
+      "intelligence",
       "json"
     ]
   }

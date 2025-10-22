@@ -2,6 +2,7 @@
 import logging
 import json
 import os
+import subprocess
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
@@ -13,6 +14,7 @@ load_dotenv()
 
 from codexes.core.llm_integration import get_responses_from_multiple_models
 from codexes.core import prompt_manager
+from codexes.core import file_handler
 from codexes.modules.distribution.accurate_reporting_system import AccurateReportingSystem
 
 logging.basicConfig(level=logging.INFO,
@@ -135,25 +137,94 @@ def reprompt_and_update(
     prompt_key: str,
     prompt_template_file: str,
     model_name: str,
-    per_model_params: Dict
+    per_model_params: Dict,
+    imprint_config: Optional[Dict[str, Any]] = None
 ) -> Optional[Dict[str, Any]]:
     """
     Reprompts with a specific key and returns the updated data.
     """
     title = book_data.get("title", "Untitled")
     description = book_data.get('description', 'No description provided')
-    quotes = book_data.get("quotes", [])
 
-    quotes_text = ""
-    if quotes:
-        quotes_text = "\n\nQuotations in this book:\n"
-        for i, quote in enumerate(quotes, 1):
-            q_text = quote.get("quote", "")
-            q_author = quote.get("author", "Unknown")
-            q_source = quote.get("source", "Unknown")
-            quotes_text += f"{i}. \"{q_text}\" - {q_author}, {q_source}\n"
+    # Check if body_source (PDF file) is provided - extract text from it
+    body_source = book_data.get("body_source", "")
+    if body_source:
+        body_source_path = os.path.expanduser(body_source)
+        if os.path.exists(body_source_path):
+            logger.info(f"📄 Processing body_source PDF for reprompt: {body_source_path}")
+            try:
+                pdf_text = file_handler.load_document(body_source_path)
 
-    book_content = f"Title: {title}\n\nDescription: {description}{quotes_text}"
+                # Check if PDF is scanned (no extractable text)
+                if not pdf_text or len(pdf_text.strip()) < 100:
+                    logger.info(f"📸 PDF appears to be scanned - checking for OCR cache...")
+
+                    # Check for cached OCR version
+                    ocr_cache_dir = Path("output/ocr_cache")
+                    pdf_filename = Path(body_source_path).stem
+                    ocr_output = ocr_cache_dir / f"{pdf_filename}_ocr.pdf"
+
+                    if ocr_output.exists():
+                        logger.info(f"✅ Using cached OCR'd PDF for reprompt: {ocr_output}")
+                        pdf_text = file_handler.load_document(str(ocr_output))
+                    else:
+                        logger.warning(f"⚠️  No OCR cache found, falling back to description")
+                        logger.info(f"💡 Tip: Run full pipeline (stage 1) first to generate OCR cache")
+                        book_content = f"Title: {title}\n\nDescription: {description}"
+                        pdf_text = None
+
+                # If we have text
+                if pdf_text and len(pdf_text.strip()) > 100:
+                    max_chars = 50000
+                    if len(pdf_text) > max_chars:
+                        pdf_text = pdf_text[:max_chars] + "\n\n[...truncated for length...]"
+                    book_content = f"Title: {title}\n\nDocument Content:\n{pdf_text}"
+                    logger.info(f"✅ Using PDF content for reprompt")
+                elif 'book_content' not in locals():
+                    logger.warning(f"⚠️  No text extracted, falling back to description")
+                    book_content = f"Title: {title}\n\nDescription: {description}"
+
+            except Exception as e:
+                logger.error(f"❌ Failed to process PDF: {e}")
+                book_content = f"Title: {title}\n\nDescription: {description}"
+        else:
+            logger.warning(f"⚠️  body_source file not found: {body_source_path}, using description")
+            book_content = f"Title: {title}\n\nDescription: {description}"
+    else:
+        # Original logic for quote-based books
+        quotes = book_data.get("quotes", [])
+        quotes_text = ""
+        if quotes:
+            quotes_text = "\n\nQuotations in this book:\n"
+            for i, quote in enumerate(quotes, 1):
+                q_text = quote.get("quote", "")
+                q_author = quote.get("author", "Unknown")
+                q_source = quote.get("source", "Unknown")
+                quotes_text += f"{i}. \"{q_text}\" - {q_author}, {q_source}\n"
+
+        book_content = f"Title: {title}\n\nDescription: {description}{quotes_text}"
+
+    # Extract persona data from imprint config
+    persona_name = "Unknown Publisher"
+    persona_bio_summary = "Publisher"
+    persona_location = "Earth"
+    imprint_name = "Unknown Imprint"
+
+    if imprint_config:
+        persona = imprint_config.get("persona", {})
+        if persona:
+            persona_name = persona.get("name", "Unknown Publisher")
+            # Get bio and create a short summary (first sentence or ~100 chars)
+            full_bio = persona.get("bio", "Publisher")
+            # Extract first sentence as summary
+            bio_parts = full_bio.split('. ')
+            persona_bio_summary = bio_parts[0] + '.' if bio_parts else full_bio[:100]
+            # Get location from persona config
+            persona_location = persona.get("location", "Virtual Editorial Office")
+        imprint_name = imprint_config.get("name", "Unknown Imprint")
+        logger.info(f"✅ Persona loaded in reprompt: {persona_name} from {imprint_name}")
+    else:
+        logger.warning(f"⚠️ No imprint_config provided to reprompt_and_update, using defaults")
 
     substitutions = {
         "book_content": book_content,
@@ -163,7 +234,11 @@ def reprompt_and_update(
         "description": description,
         "quotes_per_book": len(quotes),
         "special_requests": book_data.get("special_requests", ""),
-        "recommended_sources": book_data.get("recommended_sources", "")
+        "recommended_sources": book_data.get("recommended_sources", ""),
+        "persona_name": persona_name,
+        "persona_bio_summary": persona_bio_summary,
+        "persona_location": persona_location,
+        "imprint": imprint_name
     }
 
     formatted_prompts = prompt_manager.load_and_prepare_prompts(
@@ -201,7 +276,8 @@ def process_book(
         build_dir: Optional[Path] = None,
         save_responses: bool = False,
         reporting_system: Optional[AccurateReportingSystem] = None,
-        enable_metadata_discovery: bool = False
+        enable_metadata_discovery: bool = False,
+        imprint_config: Optional[Dict[str, Any]] = None
 ) -> tuple[Optional[Dict[str, Any]], Dict[str, int]]:
     """
     Processes a single book entry, generates all required data, and returns stats.
@@ -225,28 +301,148 @@ def process_book(
     
     # Handle metadata discovery setting
     if enable_metadata_discovery:
-        # Replace gemini_get_basic_info with gemini_get_basic_info_from_public_domain for metadata discovery
+        # Ensure gemini_get_basic_info_from_public_domain is in the list for metadata discovery
         if "gemini_get_basic_info" in prompt_keys:
             prompt_keys = [k if k != "gemini_get_basic_info" else "gemini_get_basic_info_from_public_domain" for k in prompt_keys]
+            logger.info("✅ Metadata discovery enabled: swapped to gemini_get_basic_info_from_public_domain prompt")
+        elif "gemini_get_basic_info_from_public_domain" in prompt_keys:
             logger.info("✅ Metadata discovery enabled: using gemini_get_basic_info_from_public_domain prompt")
+        else:
+            # Neither exists, try to add the metadata discovery version if it exists in the prompt file
+            logger.info("✅ Metadata discovery enabled: will attempt to load gemini_get_basic_info_from_public_domain if available")
     else:
         # Ensure we're using the standard prompt that doesn't discover metadata
         if "gemini_get_basic_info_from_public_domain" in prompt_keys:
             prompt_keys = [k if k != "gemini_get_basic_info_from_public_domain" else "gemini_get_basic_info" for k in prompt_keys]
+            logger.info("✅ Metadata discovery disabled: swapped to standard gemini_get_basic_info prompt")
+        elif "gemini_get_basic_info" in prompt_keys:
             logger.info("✅ Metadata discovery disabled: using standard gemini_get_basic_info prompt")
 
-    quotes = book_data.get("quotes", [])
-    quotes_text = ""
-    if quotes:
-        quotes_text = "\n\nQuotations in this book:\n"
-        for i, quote in enumerate(quotes, 1):
-            q_text = quote.get("quote", "")
-            q_author = quote.get("author", "Unknown")
-            q_source = quote.get("source", "Unknown")
-            quotes_text += f"{i}. \"{q_text}\" - {q_author}, {q_source}\n"
+    # Check if body_source (PDF file) is provided - extract text from it
+    body_source = book_data.get("body_source", "")
+    if body_source:
+        # Expand ~ to home directory
+        body_source_path = os.path.expanduser(body_source)
+        if os.path.exists(body_source_path):
+            logger.info(f"📄 Processing body_source PDF: {body_source_path}")
 
-    book_content = f"Title: {title}\n\nDescription: {description}{quotes_text}"
-    
+            # Try to extract text
+            try:
+                pdf_text = file_handler.load_document(body_source_path)
+
+                # Check if PDF is scanned (no extractable text)
+                if not pdf_text or len(pdf_text.strip()) < 100:
+                    logger.info(f"📸 PDF appears to be scanned (no extractable text) - running OCR...")
+
+                    # Create OCR cache directory
+                    ocr_cache_dir = Path(raw_output_dir) / "ocr_cache" if raw_output_dir else Path("output/ocr_cache")
+                    ocr_cache_dir.mkdir(parents=True, exist_ok=True)
+
+                    # Generate OCR output path
+                    pdf_filename = Path(body_source_path).stem
+                    ocr_output = ocr_cache_dir / f"{pdf_filename}_ocr.pdf"
+
+                    # Check if OCR version already exists
+                    if ocr_output.exists():
+                        logger.info(f"✅ Using cached OCR'd PDF: {ocr_output}")
+                    else:
+                        logger.info(f"🔄 Running ocrmypdf (this may take a few minutes)...")
+                        try:
+                            # Run ocrmypdf with optimizations for speed
+                            result = subprocess.run(
+                                ['ocrmypdf',
+                                 '--skip-text',  # Skip pages that already have text
+                                 '--optimize', '0',  # Faster, no compression
+                                 '--output-type', 'pdf',
+                                 body_source_path,
+                                 str(ocr_output)],
+                                capture_output=True,
+                                text=True,
+                                timeout=600  # 10 minute timeout
+                            )
+
+                            if result.returncode == 0:
+                                logger.info(f"✅ OCR completed successfully: {ocr_output}")
+                            else:
+                                logger.error(f"❌ OCR failed: {result.stderr}")
+                                logger.warning(f"⚠️  Falling back to description due to OCR failure")
+                                book_content = f"Title: {title}\n\nDescription: {description}"
+                                ocr_output = None
+                        except subprocess.TimeoutExpired:
+                            logger.error(f"❌ OCR timed out after 10 minutes")
+                            book_content = f"Title: {title}\n\nDescription: {description}"
+                            ocr_output = None
+                        except FileNotFoundError:
+                            logger.error(f"❌ ocrmypdf not found. Install with: brew install ocrmypdf (macOS) or pip install ocrmypdf")
+                            logger.warning(f"⚠️  Falling back to description")
+                            book_content = f"Title: {title}\n\nDescription: {description}"
+                            ocr_output = None
+
+                    # Extract text from OCR'd PDF
+                    if ocr_output and ocr_output.exists():
+                        pdf_text = file_handler.load_document(str(ocr_output))
+                        if pdf_text and len(pdf_text.strip()) > 100:
+                            logger.info(f"✅ Successfully extracted {len(pdf_text)} chars from OCR'd PDF")
+                        else:
+                            logger.warning(f"⚠️  OCR'd PDF still has no text, using description")
+                            book_content = f"Title: {title}\n\nDescription: {description}"
+                            pdf_text = None
+
+                # If we have text (either from original or OCR'd PDF)
+                if pdf_text and len(pdf_text.strip()) > 100:
+                    # Use first 50,000 characters to avoid token limits
+                    max_chars = 50000
+                    if len(pdf_text) > max_chars:
+                        logger.info(f"📊 PDF text truncated from {len(pdf_text)} to {max_chars} chars for prompts")
+                        pdf_text = pdf_text[:max_chars] + "\n\n[...truncated for length...]"
+                    book_content = f"Title: {title}\n\nDocument Content:\n{pdf_text}"
+                    logger.info(f"✅ Using {len(book_content)} chars of PDF content as book_content")
+                elif 'book_content' not in locals():
+                    logger.warning(f"⚠️  No text extracted, falling back to description")
+                    book_content = f"Title: {title}\n\nDescription: {description}"
+
+            except Exception as e:
+                logger.error(f"❌ Failed to process PDF: {e}")
+                book_content = f"Title: {title}\n\nDescription: {description}"
+        else:
+            logger.warning(f"⚠️  body_source file not found: {body_source_path}, using description")
+            book_content = f"Title: {title}\n\nDescription: {description}"
+    else:
+        # Original logic for books without body_source (quote-based books)
+        quotes = book_data.get("quotes", [])
+        quotes_text = ""
+        if quotes:
+            quotes_text = "\n\nQuotations in this book:\n"
+            for i, quote in enumerate(quotes, 1):
+                q_text = quote.get("quote", "")
+                q_author = quote.get("author", "Unknown")
+                q_source = quote.get("source", "Unknown")
+                quotes_text += f"{i}. \"{q_text}\" - {q_author}, {q_source}\n"
+
+        book_content = f"Title: {title}\n\nDescription: {description}{quotes_text}"
+
+    # Extract persona data from imprint config
+    persona_name = "Unknown Publisher"
+    persona_bio_summary = "Publisher"
+    persona_location = "Earth"
+    imprint_name = "Unknown Imprint"
+
+    if imprint_config:
+        persona = imprint_config.get("persona", {})
+        if persona:
+            persona_name = persona.get("name", "Unknown Publisher")
+            # Get bio and create a short summary (first sentence or ~100 chars)
+            full_bio = persona.get("bio", "Publisher")
+            # Extract first sentence as summary
+            bio_parts = full_bio.split('. ')
+            persona_bio_summary = bio_parts[0] + '.' if bio_parts else full_bio[:100]
+            # Get location from persona config
+            persona_location = persona.get("location", "Virtual Editorial Office")
+        imprint_name = imprint_config.get("name", "Unknown Imprint")
+        logger.info(f"✅ Persona loaded: {persona_name} from {imprint_name}")
+    else:
+        logger.warning(f"⚠️ No imprint_config provided, using defaults")
+
     substitutions = {
         "book_content": book_content,
         "topic": title,
@@ -254,7 +450,11 @@ def process_book(
         "description": description,
         "quotes_per_book": book_data.get("quotes_per_book", 90),
         "special_requests": book_data.get("special_requests", ""),
-        "recommended_sources": book_data.get("recommended_sources", "")
+        "recommended_sources": book_data.get("recommended_sources", ""),
+        "persona_name": persona_name,
+        "persona_bio_summary": persona_bio_summary,
+        "persona_location": persona_location,
+        "imprint": imprint_name
     }
     
     formatted_prompts = prompt_manager.load_and_prepare_prompts(
@@ -379,11 +579,18 @@ def process_book(
                 if not isinstance(data_dict, dict): return
                 for key, value in data_dict.items():
                     if value is not None:
+                        # Map document_title to title for metadata discovery
+                        if key == 'document_title' and enable_metadata_discovery:
+                            final_book_json['title'] = value
+                            final_book_json['storefront_title_en'] = value
+                            logger.info(f"✅ Updated title from document_title: '{value}'")
+                            continue
+
                         # Protect configured values when metadata discovery is disabled
                         if not enable_metadata_discovery and key in ['author', 'publisher', 'imprint']:
                             logger.debug(f"Metadata discovery disabled: ignoring LLM-provided {key}='{value}'")
                             continue
-                        
+
                         if key in final_book_json and isinstance(final_book_json[key], list) and isinstance(value, list):
                             final_book_json[key].extend(value)
                         elif key in final_book_json:
