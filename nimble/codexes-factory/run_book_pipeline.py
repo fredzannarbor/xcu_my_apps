@@ -833,11 +833,17 @@ def main():
     build_dir = base_dir / ".build"
     build_dir.mkdir(exist_ok=True, parents=True)
 
+    # Create output subdirectories
+    raw_json_dir = base_dir / 'raw_json_responses'
+    processed_json_dir = base_dir / 'processed_json'
+    raw_json_dir.mkdir(exist_ok=True, parents=True)
+    processed_json_dir.mkdir(exist_ok=True, parents=True)
+
     config = {
         'base_dir': base_dir,
         'build_dir': build_dir,
-        'raw_llm_output_dir': base_dir / 'raw_json_responses',
-        'processed_llm_output_dir': base_dir / 'processed_json',
+        'raw_llm_output_dir': raw_json_dir,
+        'processed_llm_output_dir': processed_json_dir,
         'prepress_output_dir': base_dir,
         'lsi_output_dir': base_dir / 'lsi_csv',
         'templates_dir': imprint_dir,
