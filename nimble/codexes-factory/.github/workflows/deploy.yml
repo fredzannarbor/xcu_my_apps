@@ -1,0 +1,68 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - clean-production
+
+jobs:
+  deploy:
+    name: Deploy to xynapse.com
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to production server
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+          DEPLOY_HOST: xynapse.com
+          DEPLOY_USER: fred
+          DEPLOY_PATH: ~/my-apps
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          # Setup SSH
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+          # Deploy via SSH - all variables are from env, not user input
+          ssh -i ~/.ssh/deploy_key "$DEPLOY_USER@$DEPLOY_HOST" << 'ENDSSH'
+            set -e
+            cd ~/my-apps
+
+            # Show current state
+            echo "📍 Current branch and commit:"
+            git branch --show-current
+            git log -1 --oneline
+
+            # Pull latest changes
+            echo "📥 Pulling latest changes from clean-production..."
+            git fetch origin clean-production
+            git checkout clean-production
+            git pull origin clean-production
+
+            # Show new state
+            echo "✅ Updated to:"
+            git log -1 --oneline
+
+            # Optional: Restart services if needed
+            # systemctl --user restart your-service-name
+
+            echo "🎉 Deployment complete!"
+          ENDSSH
+
+          # Cleanup
+          rm -f ~/.ssh/deploy_key
+
+      - name: Deployment summary
+        if: success()
+        env:
+          DEPLOY_HOST: xynapse.com
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          echo "✅ Successfully deployed to production"
+          echo "Server: $DEPLOY_HOST"
+          echo "Commit: $COMMIT_SHA"
