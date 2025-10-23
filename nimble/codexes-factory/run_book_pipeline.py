@@ -383,7 +383,8 @@ def process_single_book(book_data: pd.Series, config: dict, args: argparse.Names
                     catalog_only=args.catalog_only,
                     build_dir=config['build_dir'],
                     reporting_system=reporting_system,
-                    enable_metadata_discovery=args.enable_metadata_discovery
+                    enable_metadata_discovery=args.enable_metadata_discovery,
+                    imprint_config=config.get('imprint_config', {})
                 )
                 logger.info(f"Per-model params were passed: {config['model_params']}")
 
@@ -399,7 +400,8 @@ def process_single_book(book_data: pd.Series, config: dict, args: argparse.Names
                             prompt_key=reprompt_key,
                             prompt_template_file=config['prompt_template_file'],
                             model_name=config['model'],
-                            per_model_params=config['model_params']
+                            per_model_params=config['model_params'],
+                            imprint_config=config.get('imprint_config', {})
                         )
                         if reprompt_data:
                             book_json_data.update(reprompt_data)
@@ -850,6 +852,26 @@ def main():
         'generate_bibliography': args.generate_bibliography
     }
 
+    # --- Load imprint configuration with persona data ---
+    imprint_config_path = Path('configs') / 'imprints' / f'{args.imprint}.json'
+    print(f"DEBUG: Checking for imprint config at: {imprint_config_path}")
+    print(f"DEBUG: File exists: {imprint_config_path.exists()}")
+    if imprint_config_path.exists():
+        try:
+            with open(imprint_config_path, 'r', encoding='utf-8') as f:
+                imprint_config = json.load(f)
+                config['imprint_config'] = imprint_config
+                print(f"DEBUG: Successfully loaded config with persona: {imprint_config.get('persona', {}).get('name', 'NO PERSONA')}")
+                logger.info(f"✅ Loaded imprint configuration from {imprint_config_path}")
+        except Exception as e:
+            print(f"DEBUG: Exception loading config: {e}")
+            logger.warning(f"⚠️ Could not load imprint config from {imprint_config_path}: {e}")
+            config['imprint_config'] = {}
+    else:
+        print(f"DEBUG: Config file not found!")
+        logger.warning(f"⚠️ Imprint config not found at {imprint_config_path}")
+        config['imprint_config'] = {}
+
     # --- Dynamically load the imprint's prepress module ---
     try:
         prepress_module_path = imprint_dir / 'prepress.py'
@@ -944,10 +966,14 @@ def main():
                 sys.exit(1)
 
         else:
-            logger.warning("Enhanced prompts mode enabled but no prompts files specified")
+            logger.warning("Enhanced prompts mode enabled but no prompts files specified - falling back to traditional imprint prompts")
+            # Initialize empty lists to prevent UnboundLocalError
+            prompt_keys = []
+            reprompt_keys = []
 
     # --- Load imprint prompt configuration (traditional mode) ---
-    if not enhanced_prompts_enabled:
+    # Fall back to traditional mode if enhanced mode is disabled OR if no prompts were loaded
+    if not enhanced_prompts_enabled or not prompt_keys:
         try:
             with open(config['prompt_template_file'], 'r') as f:
                 imprint_prompts = json.load(f)
@@ -986,6 +1012,9 @@ def main():
         logger.info("📝 No schedule file provided. Will extract metadata from responses and body text.")
         from codexes.core.logging_filters import log_success
         log_success(logger, "✅ Operating in metadata extraction mode - will derive book info from content.")
+        # Auto-enable metadata discovery when no schedule file is provided
+        args.enable_metadata_discovery = True
+        logger.info("✅ Auto-enabled metadata discovery for schedule-less build.")
 
         # Create a default book entry when no schedule is provided
         # The pipeline will extract metadata from body source or generate content
