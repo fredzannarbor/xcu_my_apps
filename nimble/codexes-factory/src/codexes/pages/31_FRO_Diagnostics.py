@@ -24,44 +24,18 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 
-# Initialize shared authentication system
-try:
-    shared_auth = get_shared_auth()
-    logger.info("Shared authentication system initialized")
-except Exception as e:
-    logger.error(f"Failed to initialize shared auth: {e}")
-    st.error("Authentication system unavailable.")
-
-
+# Import shared authentication system
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
-# Import shared authentication system
 try:
     from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
     from shared.ui import render_unified_sidebar
+    logger.info("Shared authentication system imported successfully")
 except ImportError as e:
     import streamlit as st
     st.error(f"Failed to import shared authentication: {e}")
     st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
     st.stop()
-
-
-
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
-
-
-# Configure logging
-logger = logging.getLogger(__name__)
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
 
 
 
@@ -84,11 +58,7 @@ except ModuleNotFoundError:
     from src.codexes.modules.finance.leo_bloom.FinancialReportingObjects.LifetimePaidCompensation import LifetimePaidCompensation
     from src.codexes.modules.finance.leo_bloom.FinancialReportingObjects.KDP_Financial_Reporting_Objects import Ingest_KDP_by_Month
 
-st.set_page_config(
-    page_title="FRO Diagnostics",
-    page_icon="🔬",
-    layout="wide"
-)
+# NOTE: st.set_page_config() handled by main app (codexes-factory-home-ui.py)
 
 # Sync session state from shared auth
 if is_authenticated():
@@ -96,10 +66,21 @@ if is_authenticated():
     st.session_state.username = user_info.get('username')
     st.session_state.user_name = user_info.get('user_name')
     st.session_state.user_email = user_info.get('user_email')
+    st.session_state.user_role = user_info.get('user_role', 'public')
     logger.info(f"User authenticated via shared auth: {st.session_state.username}")
 else:
     if "username" not in st.session_state:
         st.session_state.username = None
+    st.session_state.user_role = 'public'
+
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    render_unified_sidebar(
+        app_name="Codexes Factory",
+        show_auth=True,
+        show_xtuff_nav=True
+    )
 
 
 
