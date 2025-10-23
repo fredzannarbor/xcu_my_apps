@@ -111,36 +111,32 @@ def render_auth_section():
     key_prefix = f"auth_{int(time.time() * 1000) % 100000}"
 
     if not is_authenticated():
-        # Not authenticated - show expanded Account section
+        # Not authenticated - show expanded Account section with Login
         st.sidebar.title("🔐 Account")
-        tab1, tab2, tab3 = st.sidebar.tabs(["Login", "Register", "Subscribe"])
 
-        with tab1:
-            # Use unique form key to avoid collisions when multiple pages use unified_sidebar
-            form_key = f"{key_prefix}_login_form"
-            with st.form(form_key):
-                username = st.text_input("Username", key=f"{form_key}_username")
-                password = st.text_input("Password", type="password", key=f"{form_key}_password")
-                submit = st.form_submit_button("Login")
+        # Use unique form key to avoid collisions when multiple pages use unified_sidebar
+        form_key = f"{key_prefix}_login_form"
+        with st.form(form_key):
+            username = st.text_input("Username", key=f"{form_key}_username")
+            password = st.text_input("Password", type="password", key=f"{form_key}_password")
 
-                if submit:
-                    success, message = authenticate(username, password)
-                    if success:
-                        st.success(message)
-                        st.rerun()
-                    else:
-                        st.error(message)
+            col1, col2 = st.columns(2)
+            with col1:
+                login_submit = st.form_submit_button("Login", use_container_width=True)
+            with col2:
+                create_submit = st.form_submit_button("Create Account", use_container_width=True)
 
-        with tab2:
-            st.info("📝 Registration coming soon!")
-            st.markdown("Contact admin@nimblebooks.com for account creation")
+            if login_submit:
+                success, message = authenticate(username, password)
+                if success:
+                    st.success(message)
+                    st.rerun()
+                else:
+                    st.error(message)
 
-        with tab3:
-            st.markdown("**Subscription Plans**")
-            st.markdown("- 🆓 Free: Basic access")
-            st.markdown("- 💎 Pro: Full features")
-            st.markdown("- 🌟 Enterprise: Custom solutions")
-            st.info("💳 Subscription management coming soon!")
+            if create_submit:
+                st.info("📝 Account creation coming soon!")
+                st.markdown("Contact admin@nimblebooks.com for account creation")
     else:
         # Authenticated - show collapsed Account section
         user_info = get_user_info()
