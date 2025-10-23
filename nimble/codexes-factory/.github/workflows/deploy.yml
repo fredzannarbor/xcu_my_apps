@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to xynapse.com
+    name: Deploy to Production GCP
     runs-on: ubuntu-latest
 
     steps:
@@ -17,9 +17,9 @@ jobs:
       - name: Deploy to production server
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
-          DEPLOY_HOST: xynapse.com
-          DEPLOY_USER: fred
-          DEPLOY_PATH: ~/my-apps
+          DEPLOY_HOST: 34.172.181.254
+          DEPLOY_USER: wfzimmerman
+          DEPLOY_PATH: /home/wfzimmerman/xcu_my_apps
           COMMIT_SHA: ${{ github.sha }}
         run: |
           # Setup SSH
@@ -31,7 +31,7 @@ jobs:
           # Deploy via SSH - all variables are from env, not user input
           ssh -i ~/.ssh/deploy_key "$DEPLOY_USER@$DEPLOY_HOST" << 'ENDSSH'
             set -e
-            cd ~/my-apps
+            cd /home/wfzimmerman/xcu_my_apps
 
             # Show current state
             echo "📍 Current branch and commit:"
@@ -60,7 +60,7 @@ jobs:
       - name: Deployment summary
         if: success()
         env:
-          DEPLOY_HOST: xynapse.com
+          DEPLOY_HOST: 34.172.181.254
           COMMIT_SHA: ${{ github.sha }}
         run: |
           echo "✅ Successfully deployed to production"
