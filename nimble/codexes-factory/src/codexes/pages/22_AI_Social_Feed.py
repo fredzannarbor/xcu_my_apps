@@ -40,14 +40,17 @@ except ImportError:
     st.error("social_server.modules not available")
     st.stop()
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Hide native Streamlit navigation
-st.markdown("""
-<style>
-    [data-testid="stSidebarNav"] {display: none;}
-</style>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+        [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
 
 # Initialize shared authentication system
 try:
@@ -289,12 +292,15 @@ def filter_posts_by_hashtag(posts, hashtag):
 
 def main():
     """Main application function."""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
     # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
     # Check for hashtag filter in query params
-    query_params = st.query_params
-    selected_hashtag = query_params.get('tag', None)
+        query_params = st.query_params
+        selected_hashtag = query_params.get('tag', None)
 
     # Header
     st.title("🧠 AI Social Feed")

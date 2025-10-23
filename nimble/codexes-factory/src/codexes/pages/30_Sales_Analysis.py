@@ -77,11 +77,14 @@ except ModuleNotFoundError:
     from src.codexes.modules.finance.ui.source_display import DataSourceDisplay
     from src.codexes.core.dataframe_utils import safe_dataframe_display
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
-if is_authenticated():
-    user_info = get_user_info()
+    if is_authenticated():
+        user_info = get_user_info()
     st.session_state.username = user_info.get('username')
     st.session_state.user_name = user_info.get('user_name')
     st.session_state.user_email = user_info.get('user_email')

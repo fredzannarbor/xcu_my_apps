@@ -60,11 +60,14 @@ try:
 except ImportError:
     from src.codexes.modules.distribution.isbn_scheduler import ISBNScheduler, ISBNStatus, ISBNAssignment
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Sync session state from shared auth
-if is_authenticated():
-    user_info = get_user_info()
+    if is_authenticated():
+        user_info = get_user_info()
     st.session_state.username = user_info.get('username')
     st.session_state.user_name = user_info.get('user_name')
     st.session_state.user_email = user_info.get('user_email')
@@ -78,10 +81,13 @@ else:
 
 def main():
     """Main ISBN Schedule Manager interface"""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
     # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
-    st.title("📚 ISBN Schedule Manager")
+        st.title("📚 ISBN Schedule Manager")
     st.markdown("Manage ISBN assignments across your publishing schedule")
 
     if 'isbn_scheduler' not in st.session_state:

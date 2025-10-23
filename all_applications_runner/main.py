@@ -271,10 +271,18 @@ def get_base_url_for_port(port: int) -> str:
         - Production (xtuff.ai): https://{subdomain}.xtuff.ai
     """
     import socket
+    import os
     hostname = socket.gethostname()
 
-    # Development environment (localhost or Mac)
-    if 'localhost' in hostname or hostname == 'Freds-MacBook-Pro.local':
+    # Development environment - check for localhost or .local (macOS default) or explicit env var
+    is_dev = (
+        'localhost' in hostname.lower() or
+        hostname.endswith('.local') or
+        os.getenv('ENV') == 'development' or
+        os.getenv('STREAMLIT_ENV') == 'development'
+    )
+
+    if is_dev:
         return f"http://localhost:{port}"
 
     # Production environment - map ports to subdomains

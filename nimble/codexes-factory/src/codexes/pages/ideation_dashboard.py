@@ -13,14 +13,17 @@ import sys
 
 sys.path.insert(0, '/Users/fred/xcu_my_apps')
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Import shared authentication system
-try:
-    from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
-except ImportError as e:
-    import streamlit as st
-    st.error(f"Failed to import shared authentication: {e}")
+    try:
+        from shared.auth import get_shared_auth, is_authenticated, get_user_info, authenticate as shared_authenticate, logout as shared_logout
+    except ImportError as e:
+        import streamlit as st
+        st.error(f"Failed to import shared authentication: {e}")
     st.error("Please ensure /Users/fred/xcu_my_apps/shared/auth is accessible")
     st.stop()
 
@@ -410,12 +413,15 @@ def render_recent_collaboration():
 
 def main():
     """Main function for Streamlit page compatibility."""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
     # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
     # Sync session state from shared auth
-    if is_authenticated():
-        user_info = get_user_info()
+        if is_authenticated():
+            user_info = get_user_info()
         st.session_state.username = user_info.get('username')
         st.session_state.user_name = user_info.get('user_name')
         st.session_state.user_email = user_info.get('user_email')

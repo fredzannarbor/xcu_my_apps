@@ -829,19 +829,25 @@ def display_cart():
             st.session_state.page = "catalog"
             st.rerun()
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
 # Load imprint-specific data
-imprint_title = "Bookstore"
-imprint_intro = ""
-if st.session_state.get("imprint"):
-    try:
-        imprint_config_path = Path("imprints") / st.session_state.get("imprint", "default") / "prompts.json"
-        with open(imprint_config_path, "r", encoding="utf-8") as f:
-            imprint_config = json.load(f)
+    imprint_title = "Bookstore"
+    imprint_intro = ""
+    if st.session_state.get("imprint"):
+        try:
+            imprint_config_path = Path("imprints") / st.session_state.get("imprint", "default") / "prompts.json"
+            with open(imprint_config_path, "r", encoding="utf-8") as f:
+                imprint_config = json.load(f)
             # Assuming title and intro are in the prompts file for now
             imprint_title = imprint_config.get("imprint_name", st.session_state.get("imprint", "default").replace("_", " ").title())
             imprint_intro = imprint_config.get("pilsa_intro", "Welcome to our bookstore!") # Still uses pilsa_intro key

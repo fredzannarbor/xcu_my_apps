@@ -42,14 +42,17 @@ except ImportError:
     # Fallback for direct execution
     from social_server.modules import AIPersonaManager, SocialFeedManager, UserInteraction, UserAction, FeedPreferences
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 # Hide native Streamlit navigation
-st.markdown("""
-<style>
-    [data-testid="stSidebarNav"] {display: none;}
-</style>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+        [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
 
 # Initialize shared authentication system
 try:
@@ -256,11 +259,14 @@ def display_user_profile(user_id, feed_manager):
 
 def main():
     """Main application function."""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
     # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
     # Header
-    st.title("👤 Profile Home")
+        st.title("👤 Profile Home")
     st.markdown("### *AI Personas & User Profiles - AI Lab for Book-Lovers*")
 
     # Initialize everything

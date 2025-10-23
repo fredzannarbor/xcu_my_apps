@@ -61,12 +61,14 @@ def main():
             st.session_state.username = None
         st.session_state.user_role = 'public'
 
-    # Render unified sidebar (not the old Codexes-specific sidebar)
-    render_unified_sidebar(
-        app_name="Codexes Factory",
-        show_auth=True,
-        show_xtuff_nav=True
-    )
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        render_unified_sidebar(
+            app_name="Codexes Factory",
+            show_auth=True,
+            show_xtuff_nav=True
+        )
 
     # Get imprint parameter from URL or selection
     selected_imprint = get_selected_imprint()

@@ -64,23 +64,26 @@ except ImportError as e:
     st.error(f"Import error: {e}")
     st.stop()
 
-# NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+# Render unified sidebar only if not already rendered by main app
+# Main app sets sidebar_rendered=True to prevent duplication
+if not st.session_state.get('sidebar_rendered', False):
+    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
 
 
 
 
 # Initialize session state
-if 'isbn_manager' not in st.session_state:
-    st.session_state.isbn_manager = None
-if 'schedule_data' not in st.session_state:
-    st.session_state.schedule_data = None
-if 'schedule_path' not in st.session_state:
-    st.session_state.schedule_path = None
+    if 'isbn_manager' not in st.session_state:
+        st.session_state.isbn_manager = None
+    if 'schedule_data' not in st.session_state:
+        st.session_state.schedule_data = None
+    if 'schedule_path' not in st.session_state:
+        st.session_state.schedule_path = None
 
-def load_schedule_manager():
-    """Load the ISBN manager."""
-    try:
-        isbn_db_path = st.session_state.get('isbn_db_path', 'data/isbn_database.json')
+    def load_schedule_manager():
+        """Load the ISBN manager."""
+        try:
+            isbn_db_path = st.session_state.get('isbn_db_path', 'data/isbn_database.json')
         st.session_state.isbn_manager = ScheduleISBNManager(isbn_db_path)
         return True
     except Exception as e:
@@ -426,12 +429,15 @@ def display_bulk_assignment_form():
 
 def main():
     """Main Streamlit app."""
-    # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
+    # Render unified sidebar only if not already rendered by main app
+    # Main app sets sidebar_rendered=True to prevent duplication
+    if not st.session_state.get('sidebar_rendered', False):
+        # NOTE: st.set_page_config() and render_unified_sidebar() handled by main app
     # DO NOT render sidebar here - it's already rendered by codexes-factory-home-ui.py
 
     # Sync session state from shared auth
-    if is_authenticated():
-        user_info = get_user_info()
+        if is_authenticated():
+            user_info = get_user_info()
         st.session_state.username = user_info.get('username')
         st.session_state.user_name = user_info.get('user_name')
         st.session_state.user_email = user_info.get('user_email')
