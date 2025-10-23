@@ -116,7 +116,7 @@ def render_auth_section():
 
         # Use unique form key to avoid collisions when multiple pages use unified_sidebar
         form_key = f"{key_prefix}_login_form"
-        with st.form(form_key):
+        with st.sidebar.form(form_key):
             username = st.text_input("Username", key=f"{form_key}_username")
             password = st.text_input("Password", type="password", key=f"{form_key}_password")
 
