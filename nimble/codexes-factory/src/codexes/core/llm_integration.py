@@ -66,6 +66,88 @@ class CodexesLLMIntegration:
         """Get the default model from configuration."""
         # Always default to gemini/gemini-2.5-flash
         return "gemini/gemini-2.5-flash"
+
+    def _detect_markdown_request(self, messages: List[Dict[str, str]]) -> bool:
+        """
+        Detect if the prompt is requesting markdown-formatted output.
+
+        Args:
+            messages: List of message dicts with role and content
+
+        Returns:
+            True if markdown output is likely requested
+        """
+        # Check for markdown indicators in prompt content
+        markdown_indicators = [
+            'markdown',
+            '###',
+            '##',
+            '# ',
+            'format your response',
+            'format as markdown',
+            'markdown-formatted',
+            'with the following sections',
+            'section heading'
+        ]
+
+        for message in messages:
+            content = message.get('content', '').lower()
+            if any(indicator in content for indicator in markdown_indicators):
+                return True
+
+        return False
+
+    def _enhance_messages_for_markdown(self, messages: List[Dict[str, str]]) -> List[Dict[str, str]]:
+        """
+        Add markdown formatting requirements to system message.
+
+        Args:
+            messages: Original list of messages
+
+        Returns:
+            Enhanced messages with markdown formatting requirements
+        """
+        MARKDOWN_FORMATTING_REQUIREMENTS = """
+
+**CRITICAL MARKDOWN FORMATTING REQUIREMENTS:**
+- Each heading (#, ##, ###) MUST be on its own line
+- There MUST be a blank line (two newlines) after EVERY heading before body text begins
+- Paragraphs MUST be separated by blank lines
+- Do NOT merge headings and body text on the same line
+
+Example correct format:
+### Section Heading
+
+First paragraph of body text here.
+
+Second paragraph here.
+
+Example INCORRECT format:
+### Section Heading This is wrong because text immediately follows heading."""
+
+        enhanced_messages = []
+        system_message_found = False
+
+        for message in messages:
+            role = message.get('role', 'user')
+            content = message.get('content', '')
+
+            # Enhance the first system message, or add one if none exists
+            if role == 'system' and not system_message_found:
+                enhanced_content = content + MARKDOWN_FORMATTING_REQUIREMENTS
+                enhanced_messages.append({'role': 'system', 'content': enhanced_content})
+                system_message_found = True
+            else:
+                enhanced_messages.append(message)
+
+        # If no system message found, add one at the beginning
+        if not system_message_found:
+            enhanced_messages.insert(0, {
+                'role': 'system',
+                'content': f"You are a helpful assistant.{MARKDOWN_FORMATTING_REQUIREMENTS}"
+            })
+
+        return enhanced_messages
     
     def call_model_with_prompt(
         self,
@@ -89,7 +171,12 @@ class CodexesLLMIntegration:
             # Convert old format to new format
             messages = prompt_config.get("messages", [])
             model_params = prompt_config.get("params", {}).copy()
-            
+
+            # Detect and enhance markdown requests automatically
+            if self._detect_markdown_request(messages):
+                messages = self._enhance_messages_for_markdown(messages)
+                logger.debug("Enhanced messages with markdown formatting requirements")
+
             # Handle ensure_min_tokens
             if ensure_min_tokens:
                 current_max_tokens = model_params.get('max_tokens', 0)
