@@ -567,27 +567,27 @@ This section contains supplementary materials including indices to help readers 
 \\end{{center}}
 \\end{{titlingpage}}
 
-% --- Copyright page (ii) - unnumbered ---
+% --- Copyright page (ii - verso) - unnumbered ---
 {copyright_content}
 
-% --- Table of Contents (iii-iv) - unnumbered, ends on even page ---
+% --- Table of Contents (iii - recto) - unnumbered ---
 {toc_content}
 
-% --- Start roman numerals at page v for front matter ---
+% --- Start roman numerals at page v (recto) for front matter ---
 \\pagenumbering{{roman}}
 \\setcounter{{page}}{{5}}
 \\pagestyle{{mypagestyle}}
 
 {front_matter_sections}
 
-% --- Main matter - switch to arabic numerals with BODY-N format ---
+% --- Main matter - switch to arabic numerals ---
 \\mainmatter
 \\pagenumbering{{arabic}}
 \\setcounter{{page}}{{1}}
 
-% Custom footer for body with "BODY-N" format
-\\makeoddfoot{{mypagestyle}}{{}}{{BODY~-~}}{{\\thepage}}
-\\makeevenfoot{{mypagestyle}}{{\\thepage}}{{BODY~-~}}{{}}
+% Reset footer to show only page numbers (remove "BODY - " prefix)
+\\makeoddfoot{{mypagestyle}}{{}}{{}}{{\\thepage}}
+\\makeevenfoot{{mypagestyle}}{{\\thepage}}{{}}{{}}
 
 \\IfFileExists{{pdf_body_source.pdf}}{{%
   \\includepdf[pages=-,pagecommand={{}}]{{pdf_body_source.pdf}}
@@ -963,12 +963,13 @@ This section contains supplementary materials including indices to help readers 
         else:
             latex_content = content
 
+        # Ensure chapter starts on recto (odd) page
+        # Don't add cleardoublepage at end to avoid creating extra blank pages
         return f"""\\cleardoublepage
 \\chapter*{{{escaped_title}}}
 \\addcontentsline{{toc}}{{chapter}}{{{escaped_title}}}
 
 {latex_content}
-\\cleardoublepage
 """
 
     def _generate_cover(self, metadata: Dict[str, Any], output_dir: Path) -> Optional[str]:
