@@ -772,6 +772,24 @@ This section contains supplementary materials including indices to help readers 
         Returns:
             Preprocessed markdown
         """
+        import re
+
+        # Fix LLM responses that smash headings and body text together on one line
+        # Pattern: ### Heading Text (capital letter starting new sentence)
+        # Solution: Insert \n\n before headings and after headings
+
+        # First, ensure headings are on their own lines (add newlines before ###)
+        content = re.sub(r'([^\n])(#{1,6}\s+)', r'\1\n\n\2', content)
+
+        # Second, split heading text from body text
+        # Look for: "### Heading Words" followed by sentence-starting words
+        # Common sentence starters: This, The, With, In, etc.
+        content = re.sub(
+            r'(#{1,6}\s+[^\n]+?)\s+((?:This|The|With|In|A|An|By|For|After|During|Following|Before|It)\s)',
+            r'\1\n\n\2',
+            content
+        )
+
         # Fix missing spaces after bold/italic markers followed by capital letter
         # E.g., "**Context**This document" -> "**Context** This document"
         content = re.sub(r'\*\*([A-Z])', r'** \1', content)
