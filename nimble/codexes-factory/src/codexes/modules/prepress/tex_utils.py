@@ -57,13 +57,102 @@ def _process_inline_markdown(text: str) -> str:
     return text
 
 
-def markdown_to_latex(text: str, skip_first_heading_if_matches: str = None) -> str:
+def validate_and_fix_markdown(text: str, use_llm: bool = True) -> str:
+    """
+    Validate and fix markdown formatting issues using LLM-based correction.
+
+    This function detects and fixes common formatting issues in LLM-generated markdown:
+    - Headings merged with body text (e.g., "### Heading Text body starts here...")
+    - Missing blank lines after headings
+    - Inconsistent paragraph spacing
+
+    Args:
+        text: Markdown text to validate and fix
+        use_llm: If True, use LLM to fix formatting. If False, use regex only.
+
+    Returns:
+        Corrected markdown text
+    """
+    if not text or len(text.strip()) < 10:
+        return text
+
+    # Quick check: if markdown looks properly formatted, skip LLM call
+    import re
+    heading_pattern = re.compile(r'^#{1,6}\s+.+$', re.MULTILINE)
+    headings = heading_pattern.findall(text)
+
+    # Check if headings have proper spacing (blank line after them)
+    needs_fixing = False
+    for heading in headings:
+        # Find heading in text and check what follows
+        idx = text.find(heading)
+        if idx >= 0:
+            after_heading = text[idx + len(heading):idx + len(heading) + 3]
+            # Should be \n\n (blank line), not just \n or immediate text
+            if not after_heading.startswith('\n\n'):
+                needs_fixing = True
+                break
+
+    if not needs_fixing:
+        logger.debug("Markdown appears properly formatted, skipping validation")
+        return text
+
+    if not use_llm:
+        logger.debug("LLM validation disabled, returning original markdown")
+        return text
+
+    # Use LLM to fix formatting
+    try:
+        from codexes.core.llm_integration import call_llm_simple
+    except ImportError:
+        try:
+            from src.codexes.core.llm_integration import call_llm_simple
+        except ImportError:
+            logger.warning("Cannot import LLM integration, skipping markdown validation")
+            return text
+
+    validation_prompt = f"""Fix the markdown formatting in the text below. Ensure:
+1. Each heading (###) is on its own line
+2. There is exactly ONE blank line after each heading before body text
+3. Paragraphs are separated by blank lines
+4. Do NOT change the content, only fix formatting
+
+Return ONLY the corrected markdown text, with no explanations or extra commentary.
+
+TEXT TO FIX:
+{text}
+
+CORRECTED MARKDOWN:"""
+
+    try:
+        # Use a fast, cheap model for this task
+        corrected = call_llm_simple(
+            prompt=validation_prompt,
+            model="gemini/gemini-2.0-flash-exp",
+            max_tokens=len(text) + 500,  # Give some buffer
+            temperature=0.1  # Low temperature for consistent formatting
+        )
+
+        if corrected and len(corrected.strip()) > len(text) * 0.5:
+            logger.info(f"✅ LLM corrected markdown formatting ({len(text)} -> {len(corrected)} chars)")
+            return corrected
+        else:
+            logger.warning("LLM correction produced suspiciously short output, using original")
+            return text
+
+    except Exception as e:
+        logger.warning(f"Markdown validation failed: {e}. Using original text.")
+        return text
+
+
+def markdown_to_latex(text: str, skip_first_heading_if_matches: str = None, validate_markdown: bool = True) -> str:
     """
     Converts Markdown to LaTeX using Pandoc for high-fidelity conversion.
 
     Args:
         text: Markdown text to convert
         skip_first_heading_if_matches: If provided, skip the first heading if it matches this text
+        validate_markdown: If True, validate and fix markdown formatting before conversion
 
     Returns:
         LaTeX formatted text
@@ -73,6 +162,10 @@ def markdown_to_latex(text: str, skip_first_heading_if_matches: str = None) -> s
 
     import re
     import tempfile
+
+    # Validate and fix markdown formatting before conversion
+    if validate_markdown:
+        text = validate_and_fix_markdown(text, use_llm=True)
 
     # Handle skip_first_heading_if_matches before conversion
     if skip_first_heading_if_matches:

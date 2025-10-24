@@ -382,3 +382,41 @@ def get_responses_from_multiple_models(
         response_format_type=response_format_type,
         per_model_params=per_model_params
     )
+
+
+def call_llm_simple(
+    prompt: str,
+    model: str = "gemini/gemini-2.0-flash-exp",
+    max_tokens: int = 4096,
+    temperature: float = 0.7
+) -> str:
+    """
+    Simple helper function for one-off LLM calls with a text prompt.
+
+    Args:
+        prompt: Text prompt to send to the model
+        model: Model name (default: gemini-2.0-flash-exp)
+        max_tokens: Maximum tokens in response
+        temperature: Temperature for generation
+
+    Returns:
+        Model response as text
+    """
+    prompt_config = {
+        "messages": [{"role": "user", "content": prompt}],
+        "params": {
+            "max_tokens": max_tokens,
+            "temperature": temperature
+        }
+    }
+
+    try:
+        result = call_model_with_prompt(
+            model_name=model,
+            prompt_config=prompt_config,
+            response_format_type="text"
+        )
+        return result.get("content", "")
+    except Exception as e:
+        logger.error(f"call_llm_simple failed: {e}")
+        raise
