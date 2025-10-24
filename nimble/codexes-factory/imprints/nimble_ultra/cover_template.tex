@@ -1,8 +1,8 @@
-% /Users/fred/my-organizations/nimble/repos/codexes-factory/templates/pilsa_cover_template.tex
-\documentclass[12pt]{article}
+% Nimble Ultra Cover Template
+% Professional cover design for academic, government, and intelligence publications
+% Trim size: 8.5" x 11"
 
-% This template creates a full-bleed book cover.
-% It is populated and compiled by the Python script.
+\documentclass[12pt]{article}
 
 % Required packages
 \usepackage{fontspec}
@@ -10,208 +10,121 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{ifthen} % NEW: Add package for conditional logic
+\usepackage{ifthen}
 \usepackage{luaquotes}
-% In the preamble of pilsa_cover_template.tex
-\newfontfamily\koreanfont{AppleMyungjo}
-\newfontfamily\xynapselogo{LuloOne-Bold.otf}[
-  Path=/Users/fred/Library/Fonts/,
-  Extension=.otf,
-  UprightFont=*,
-  BoldFont=*,
-  FontFace={b}{n}{Font=* One Bold}
-]
-\newfontfamily\booktitlefont{LuloOne-Bold.otf}[
-  Path=/Users/fred/Library/Fonts/,
-  Extension=.otf,
-  UprightFont=*,
-  BoldFont=*,
-  FontFace={b}{n}{Font=* One Bold}
-]
-\newcommand{\backcoverfont}{\fontspec{Adobe Caslon Pro}}
 
-% --- These values are replaced by the Python script using safe, unique names ---
-\newcommand{\coverPageHeight}{9in}
-\newcommand{\coverPageWidth}{12in}
-\newcommand{\coverBookTitle}{Global Renewables}
-\newcommand{\coverBookAuthor}{AI Lab for Book-Lovers}
-\newcommand{\coverImprint}{xynapse traces}
-\newcommand{\coverPilsaLineOne}{필사}
-\newcommand{\coverPilsaLineTwo}{Korean transcriptive meditation}
+% Font setup
+\setmainfont{Adobe Caslon Pro}
+\setsansfont{Neulis Sans}
 
-% Structural placeholders. Python will fill these with formatted LaTeX code.
-\newcommand{\coverBookSubtitleChunk}{} % For conditional subtitle
+% --- These values are replaced by the Python script ---
+\newcommand{\coverPageHeight}{11in}
+\newcommand{\coverPageWidth}{17.125in}
+\newcommand{\coverBookTitle}{Book Title}
+\newcommand{\coverBookAuthor}{Author Name}
+\newcommand{\coverImprint}{Nimble Ultra}
+\newcommand{\coverBookSubtitleChunk}{}
 \newcommand{\coverDrawBarcode}{}
 
-% Add placeholders for all dynamic values used in debug drawing.
-\newcommand{\coverTrimWidth}{6.0in}
-\newcommand{\coverTrimHeight}{9.0in}
-\newcommand{\coverSpineWidth}{0.5in}
+% Placeholders for dynamic values
+\newcommand{\coverTrimWidth}{8.5in}
+\newcommand{\coverTrimHeight}{11.0in}
+\newcommand{\coverSpineWidth}{0.125in}
 \newcommand{\coverBleedIn}{0.125in}
-\newcommand{\coverFrontCoverXShift}{3.25in}
-\newcommand{\coverDebugMode}{false} % NEW: Add placeholder for the debug flag
-\newcommand{\coverBackCoverXShift}{-3.25in} % This will be replaced by Python
-\newcommand{\coverBackCoverText}{Back cover text goes here.} % This will be replaced by Python
-% --- End of replaceable values ---
+\newcommand{\coverFrontCoverXShift}{4.3125in}
+\newcommand{\coverBackCoverXShift}{-4.3125in}
+\newcommand{\coverBackCoverText}{Back cover text goes here.}
+\newcommand{\coverDebugMode}{false}
 
-% Define some colors (optional)
-% FIX: The following line is a placeholder that will be replaced by the Python script.
-\definecolor{coverbackground}{cmyk}{0.05, 0.10, 0.25, 0.02} % Default: Jeonju Hanji
-\definecolor{covertext}{RGB}{20, 20, 20} % Changed text to dark for contrast
-\definecolor{spinetext}{RGB}{20, 20, 20}  % Changed text to dark for contrast
+% Define professional colors for Nimble Ultra
+\definecolor{coverbackground}{RGB}{240, 240, 240}
+\definecolor{coveraccent}{RGB}{0, 51, 102}
+\definecolor{covertext}{RGB}{20, 20, 20}
+\definecolor{spinetext}{RGB}{255, 255, 255}
 
-% Set the exact page dimensions for the full cover spread
+% Set page dimensions
 \geometry{
   paperheight=\coverPageHeight,
   paperwidth=\coverPageWidth,
   margin=0in
 }
 
-% Set a default sans-serif font for English text
-\setsansfont{Lulo}
-
-% IMPORTANT: Prevent page numbers or other styles from being added to the cover
+% No page numbers
 \pagestyle{empty}
 
 \begin{document}
 
 \begin{tikzpicture}[remember picture, overlay]
 
-    % Background and Spine (unchanged)
+    % Background
     \fill[coverbackground] (current page.south west) rectangle (current page.north east);
+
+    % Spine background (accent color)
+    \fill[coveraccent] ([xshift=-\coverSpineWidth/2]current page.south) rectangle ([xshift=\coverSpineWidth/2]current page.north);
+
+    % Spine text (rotated)
     \node[
         rotate=270,
         anchor=center,
         text=spinetext,
-        text=white,
-        font=\booktitlefont\raggedright
-    ] at (current page.center) {\coverBookTitle{} };
+        font=\Large\sffamily\bfseries
+    ] at (current page.center) {\coverBookTitle};
 
-    % --- Front Cover Content ---
-    % Define a coordinate for the horizontal center of the front cover
-    \coordinate (covercenter) at ([xshift=\coverFrontCoverXShift]current page.center);
+    % --- FRONT COVER ---
+    \coordinate (frontcenter) at ([xshift=\coverFrontCoverXShift]current page.center);
 
-    % --- FRONT COVER TEXT LAYOUT (REVISED FOR PRECISION) ---
-    % First, define anchor points for the top and bottom of our content area.
-    \coordinate (toptextanchor) at ([yshift={(\coverTrimHeight/2) - 1.25in}]covercenter);
-    \coordinate (bottomtextanchor) at ([yshift={-(\coverTrimHeight/2) + 1.25in}]covercenter);
+    % Front cover accent bar (top)
+    \fill[coveraccent] ([yshift=4.5in, xshift=-4.25in]frontcenter) rectangle ([yshift=5.5in, xshift=4.25in]frontcenter);
 
-    % --- TOP TEXT BLOCK (Title & Subtitle) ---
-    \node[
-        anchor=north,
-        text centered,
-        text width=5in,
-        text=white
-    ] at (toptextanchor) {
-        {\booktitlefont\Large\raggedright \coverBookTitle\par}
-        \coverBookSubtitleChunk
-    };
-
-    % --- MIDDLE BRANDING BLOCK ---
+    % Title (centered in upper portion)
     \node[
         anchor=center,
-        text centered,
-        text width=5in,
-        text=white
-    ] at (covercenter) {
-        {\koreanfont\fontsize{144}{172}\selectfont\bfseries \coverPilsaLineOne\par}
-        \vspace{3em}
-        {\booktitlefont\Large\itshape\raggedright \coverPilsaLineTwo\par}
-    };
+        text width=7in,
+        align=center,
+        text=covertext,
+        font=\Huge\sffamily\bfseries
+    ] at ([yshift=2.5in]frontcenter) {\coverBookTitle};
 
-    % --- BOTTOM TEXT BLOCK (Author & Imprint) ---
+    % Subtitle (if provided)
+    \coverBookSubtitleChunk
+
+    % Author name (lower portion)
     \node[
-        anchor=south,
-        text centered,
-        text width=5in,
-        text=white
-    ] at (bottomtextanchor) {
-        {\booktitlefont\Large\raggedright \coverBookAuthor\par}
-        \vspace{2em}
-        {\xynapselogo\Large\raggedright \coverImprint\par}
-    };
+        anchor=center,
+        text=covertext,
+        font=\Large\sffamily
+    ] at ([yshift=-3.5in]frontcenter) {\coverBookAuthor};
 
-    % --- Back Cover ---
+    % Imprint name (bottom)
+    \node[
+        anchor=center,
+        text=coveraccent,
+        font=\large\sffamily\bfseries
+    ] at ([yshift=-4.75in]frontcenter) {\coverImprint};
+
+    % --- BACK COVER ---
+    \coordinate (backcenter) at ([xshift=\coverBackCoverXShift]current page.center);
+
+    % Back cover text block
+    \node[
+        anchor=north,
+        text width=7in,
+        align=justify,
+        text=covertext,
+        font=\normalsize\rmfamily
+    ] at ([yshift=4in]backcenter) {\coverBackCoverText};
+
+    % Barcode area (if provided)
     \coverDrawBarcode
-    \coordinate (backcovercenter) at ([xshift=\coverBackCoverXShift]current page.center);
-\node[
-    anchor=center,
-    text width=4in,
-    align=justify,
-    font=\backcoverfont,
-        text=white,
-] at (backcovercenter) {\coverBackCoverText};
 
-% MODIFIED: Wrap the entire debug block in a conditional
-\ifthenelse{\equal{\coverDebugMode}{true}}{
-    % --- DEBUG: COMPREHENSIVE VISUALIZATION WITH LEGEND ---
-    \begin{scope}[
-        font=\sffamily\tiny,
-        every node/.style={
-            fill=white,
-            fill opacity=0.8,
-            text opacity=1.0,
-            inner sep=2pt,
-            align=left
-        }
-    ]
-        % --- Define Key Coordinates ---
-        \coordinate (spineleft) at ([xshift=-0.5*\coverSpineWidth]current page.center);
-        \coordinate (spineright) at ([xshift=0.5*\coverSpineWidth]current page.center);
-        \coordinate (trim_top_left) at ([xshift={-0.5*\coverSpineWidth - \coverTrimWidth}, yshift=0.5*\coverTrimHeight]current page.center);
-        \coordinate (trim_bottom_right) at ([xshift={0.5*\coverSpineWidth + \coverTrimWidth}, yshift=-0.5*\coverTrimHeight]current page.center);
-        \coordinate (fc_left_margin) at ([xshift=-2.5in]covercenter);
-        \coordinate (fc_right_margin) at ([xshift=2.5in]covercenter);
-
-        % --- Draw Guides ---
-        % Spine (Green)
-        \draw[green, thick] (spineleft) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Left};
-        \draw[green, thick, dashed] (current page.center) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Center};
-        \draw[green, thick] (spineright) -- ++(0, \coverPageHeight) node[midway, sloped, anchor=south] {Spine Right};
-
-        % Trim Box (Blue, Dashed)
-        \draw[blue, thick, dashed] (trim_top_left) rectangle (trim_bottom_right) node[pos=0.01, anchor=north west] {Trim Box};
-
-        % Bleed Box (Red, Dotted)
-        \draw[red, thick, dotted] (current page.north west) rectangle (current page.south east) node[pos=0.01, anchor=north west] {Bleed Box};
-
-        % Front Cover Text Margins (Magenta)
-        \draw[magenta, thick] (toptextanchor) -- ++(-\textwidth, 0) node[pos=0.9, anchor=south east] {Top Text Margin};
-        \draw[magenta, thick] (bottomtextanchor) -- ++(-\textwidth, 0) node[pos=0.9, anchor=north east] {Bottom Text Margin};
-        \draw[magenta, thick] (fc_left_margin) -- ++(0, \coverPageHeight);
-        \draw[magenta, thick] (fc_right_margin) -- ++(0, \coverPageHeight);
-
-        % Barcode Area (Cyan)
-        \coordinate (barcode_anchor) at ([xshift={-\coverFrontCoverXShift}, yshift=0.5in]current page.south);
-        \draw[cyan, thick, ->] (barcode_anchor) -- ++(0, -0.5in) node[midway, right] {Barcode Y-Shift};
-        \draw[cyan, thick, ->] (barcode_anchor) -- ++(2in, 0); % Show width
-
-        % Back Cover Text Box (Orange)
-\draw[orange, thick] ([xshift=-2in, yshift=3in]backcovercenter) rectangle ([xshift=2in, yshift=-3in]backcovercenter) node[midway] {Back Cover Text Area};
-
-        % --- Legend Node ---
-        \node[anchor=north west, draw, rounded corners] at ([xshift=0.25in, yshift=-0.25in]current page.north west) {
-            \begin{tabular}{@{}l l l@{}}
-                \multicolumn{3}{c}{\textbf{Layout Legend}} \\
-                \hline
-                \textbf{Element} & \textbf{Value} & \textbf{Python Variable} \\
-                \hline
-                \textcolor{red}{Bleed} & \coverBleedIn & \texttt{bleed\_in} \\
-                \textcolor{blue}{Trim Width} & \coverTrimWidth & \texttt{book\_width\_in} \\
-                \textcolor{blue}{Trim Height} & \coverTrimHeight & \texttt{book\_height\_in} \\
-                \textcolor{green}{Spine Width} & \coverSpineWidth & \texttt{spine\_width\_in} \\
-                \hline
-                \multicolumn{3}{c}{\textbf{Calculated Margins}} \\
-                \hline
-                \textcolor{magenta}{Top Margin} & 1.25in & (in \texttt{.tex}) \\
-                \textcolor{magenta}{Bottom Margin} & 1.25in & (in \texttt{.tex}) \\
-                \textcolor{magenta}{Side Margin} & 0.5in & (in \texttt{.tex}) \\
-                \textcolor{cyan}{Barcode Y-Shift} & 0.5in & (in \texttt{barcode\_draw\_command}) \\
-            \end{tabular}
-        };
-    \end{scope}
-    % --- END DEBUG ---
-}{} % End of \ifthenelse
+    % Debug mode guides (if enabled)
+    \ifthenelse{\equal{\coverDebugMode}{true}}{
+        \draw[red, thick] ([xshift=\coverFrontCoverXShift-4.25in]current page.south) -- ([xshift=\coverFrontCoverXShift-4.25in]current page.north);
+        \draw[red, thick] ([xshift=\coverFrontCoverXShift+4.25in]current page.south) -- ([xshift=\coverFrontCoverXShift+4.25in]current page.north);
+        \draw[red, thick] ([xshift=\coverBackCoverXShift-4.25in]current page.south) -- ([xshift=\coverBackCoverXShift-4.25in]current page.north);
+        \draw[red, thick] ([xshift=\coverBackCoverXShift+4.25in]current page.south) -- ([xshift=\coverBackCoverXShift+4.25in]current page.north);
+    }{}
 
 \end{tikzpicture}
+
 \end{document}
