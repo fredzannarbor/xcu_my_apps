@@ -1,0 +1,21 @@
+{# Template for list of dicts (e.g., index of persons, places) #}
+{# Usage: For content like [{"name": "X", "details": "Y"}, ...] #}
+\chapter*{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+\addcontentsline{toc}{chapter}{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+
+\begin{description}
+{% for item in items %}
+{% if item.place_name %}
+  \item[{{ item.place_name|escape_latex }}] {% if item.identifier %}({{ item.identifier|escape_latex }}){% endif %}
+  {{ item.note|escape_latex }}
+{% elif item.person_name %}
+  \item[{{ item.person_name|escape_latex }}] {% if item.identifier %}({{ item.identifier|escape_latex }}){% endif %}
+  {{ item.note|escape_latex }}
+{% elif item.name %}
+  \item[{{ item.name|escape_latex }}] {% if item.description %}{{ item.description|escape_latex }}{% endif %}
+{% else %}
+  \item[{{ item|first_value|escape_latex }}]
+{% endif %}
+{% endfor %}
+\end{description}
+\cleardoublepage

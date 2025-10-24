@@ -1,0 +1,8 @@
+{# Template for plain markdown content #}
+{# Usage: For content that is a markdown string #}
+\cleardoublepage
+\chapter*{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+\addcontentsline{toc}{chapter}{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+
+{{ content|preprocess_markdown|markdown_to_latex_skip_first(title) }}
+\cleardoublepage

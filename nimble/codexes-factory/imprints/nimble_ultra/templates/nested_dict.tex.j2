@@ -1,0 +1,20 @@
+{# Template for nested dict structures (e.g., historical_context with subsections) #}
+{# Usage: For complex nested structures with multiple levels #}
+\chapter*{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+\addcontentsline{toc}{chapter}{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+
+{% for section_key, section_value in content.items() %}
+\section*{{ '{' }}{{ section_key|replace('_', ' ')|title|escape_latex }}{{ '}' }}
+
+{% if section_value is mapping %}
+{% for subsection_key, subsection_value in section_value.items() %}
+\subsection*{{ '{' }}{{ subsection_key|escape_latex }}{{ '}' }}
+{{ subsection_value|escape_latex }}
+
+{% endfor %}
+{% else %}
+{{ section_value|escape_latex }}
+{% endif %}
+
+{% endfor %}
+\cleardoublepage

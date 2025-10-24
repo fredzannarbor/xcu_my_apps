@@ -37,12 +37,6 @@
           },
           {
             "type": "prompt",
-            "name": "mnemonics",
-            "prompt_key": "mnemonics_prompt",
-            "description": "Memory aids for key concepts"
-          },
-          {
-            "type": "prompt",
             "name": "important_passages",
             "prompt_key": "most_important_passages_with_reasoning",
             "description": "Highlight most important passages with reasoning"
@@ -73,6 +67,12 @@
             "name": "index_places",
             "prompt_key": "index_of_places",
             "description": "Index of places mentioned in the document"
+          },
+          {
+            "type": "prompt",
+            "name": "mnemonics",
+            "prompt_key": "mnemonics_prompt",
+            "description": "Memory aids for key concepts - placed at end of document"
           }
         ]
       }

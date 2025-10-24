@@ -181,8 +181,11 @@
 % --- Frontmatter Inputs ---
 \frontmatter
 \input{title_page.tex}
+\clearpage  % Copyright on page ii (verso after title)
 \input{copyright_page.tex}
+\cleardoublepage  % TOC starts on page iii (recto)
 \input{table_of_contents.tex}
+\cleardoublepage  % Publisher's note on recto
 \input{publishers_note.tex}
 
 % --- Mainmatter Inputs ---

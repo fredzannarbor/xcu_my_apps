@@ -1,0 +1,7 @@
+{# Template for sections with title/content dict structure #}
+{# Usage: For content like {"title": "Publisher's Note", "content": "Text here..."} #}
+\chapter*{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+\addcontentsline{toc}{chapter}{{ '{' }}{{ title|escape_latex }}{{ '}' }}
+
+{{ content|markdown_to_latex }}
+\cleardoublepage
