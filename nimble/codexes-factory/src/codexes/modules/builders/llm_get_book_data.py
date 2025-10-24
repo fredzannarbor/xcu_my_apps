@@ -175,11 +175,9 @@ def reprompt_and_update(
 
                 # If we have text
                 if pdf_text and len(pdf_text.strip()) > 100:
-                    max_chars = 50000
-                    if len(pdf_text) > max_chars:
-                        pdf_text = pdf_text[:max_chars] + "\n\n[...truncated for length...]"
+                    # No truncation - modern LLMs have large context windows
                     book_content = f"Title: {title}\n\nDocument Content:\n{pdf_text}"
-                    logger.info(f"✅ Using PDF content for reprompt")
+                    logger.info(f"✅ Using PDF content for reprompt ({len(pdf_text)} chars)")
                 elif 'book_content' not in locals():
                     logger.warning(f"⚠️  No text extracted, falling back to description")
                     book_content = f"Title: {title}\n\nDescription: {description}"
@@ -390,11 +388,7 @@ def process_book(
 
                 # If we have text (either from original or OCR'd PDF)
                 if pdf_text and len(pdf_text.strip()) > 100:
-                    # Use first 50,000 characters to avoid token limits
-                    max_chars = 50000
-                    if len(pdf_text) > max_chars:
-                        logger.info(f"📊 PDF text truncated from {len(pdf_text)} to {max_chars} chars for prompts")
-                        pdf_text = pdf_text[:max_chars] + "\n\n[...truncated for length...]"
+                    # No truncation - modern LLMs have large context windows
                     book_content = f"Title: {title}\n\nDocument Content:\n{pdf_text}"
                     logger.info(f"✅ Using {len(book_content)} chars of PDF content as book_content")
                 elif 'book_content' not in locals():
