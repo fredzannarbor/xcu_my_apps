@@ -440,6 +440,11 @@ Version: {version}
 \\addcontentsline{toc}{chapter}{Back Matter}
 
 This section contains supplementary materials including indices to help readers navigate the document.
+
+\\section*{Information}
+
+Indexes are generated with reference to the current document's pagination, not the original.
+
 \\cleardoublepage
 
 % Custom footer for back matter with "Back Matter - N" format
@@ -580,14 +585,14 @@ This section contains supplementary materials including indices to help readers 
 
 {front_matter_sections}
 
-% --- Main matter - switch to arabic numerals ---
+% --- Main matter - switch to arabic numerals with BODY:N format ---
 \\mainmatter
 \\pagenumbering{{arabic}}
 \\setcounter{{page}}{{1}}
 
-% Reset footer to show only page numbers (remove "BODY - " prefix)
-\\makeoddfoot{{mypagestyle}}{{}}{{}}{{\\thepage}}
-\\makeevenfoot{{mypagestyle}}{{\\thepage}}{{}}{{}}
+% Custom footer for body with "BODY:N" format
+\\makeoddfoot{{mypagestyle}}{{}}{{BODY:}}{{\\thepage}}
+\\makeevenfoot{{mypagestyle}}{{\\thepage}}{{BODY:}}{{}}
 
 \\IfFileExists{{pdf_body_source.pdf}}{{%
   \\includepdf[pages=-,pagecommand={{}}]{{pdf_body_source.pdf}}
