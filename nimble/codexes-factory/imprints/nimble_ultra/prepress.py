@@ -424,10 +424,12 @@ Version: {version}
                         use_markdown=True
                     )
 
-            # Important Passages - markdown string content
+            # Important Passages - markdown string content with special formatting
             if "important_passages" in front_matter_data:
                 passages_content = self._extract_content(front_matter_data["important_passages"])
                 if passages_content:
+                    # Apply special formatting for quoted text (italics)
+                    passages_content = self._format_passages_quotes(passages_content)
                     front_matter_sections += self._format_section(
                         "Important Passages",
                         passages_content,
@@ -767,6 +769,49 @@ Indexes are generated with reference to the current document's pagination, not t
 
         return str(content)
 
+    def _format_passages_quotes(self, content: str) -> str:
+        """
+        Format quoted text in Important Passages section with italics.
+
+        Converts:
+          Quoted text: The actual quote here.
+        To:
+          Quoted text: *The actual quote here.*
+
+        Also reverses any italics within the quote (italic becomes roman).
+
+        Args:
+            content: Markdown content with passages
+
+        Returns:
+            Content with formatted quotes
+        """
+        import re
+
+        # Pattern: "Quoted text:" followed by newline(s) then the actual quote paragraph
+        # We need to wrap the quote in * markers for italics
+        def italicize_quote(match):
+            label = match.group(1)  # "Quoted text:"
+            whitespace = match.group(2)  # Newlines/spaces
+            quote = match.group(3)  # The actual quote text
+
+            # Reverse any existing italics (*text*) to roman (plain text)
+            # This handles nested italics
+            quote = re.sub(r'\*([^*]+?)\*', r'\1', quote)
+
+            # Wrap entire quote in italics
+            return f"{label}{whitespace}*{quote}*"
+
+        # Match "Quoted text:" (case insensitive) followed by paragraph
+        content = re.sub(
+            r'(Quoted text:)(\s+)([^\n]+(?:\n(?!###|Location:|Quoted text:|Significance:)[^\n]+)*)',
+            italicize_quote,
+            content,
+            flags=re.IGNORECASE
+        )
+
+        return content
+
     def _preprocess_markdown(self, content: str) -> str:
         """
         Preprocess markdown to fix common LLM-generated formatting issues.
@@ -794,6 +839,14 @@ Indexes are generated with reference to the current document's pagination, not t
             r'\1\n\n\2',
             content
         )
+
+        # Fix LLM quirk: bold/italic/emoji within bullets
+        # E.g., "• ** Economic analysis**" -> "• Economic analysis"
+        # Remove formatting markers from bullet items
+        content = re.sub(r'^(\s*[-*•]\s+)\*\*\s*(.+?)\s*\*\*', r'\1\2', content, flags=re.MULTILINE)
+        content = re.sub(r'^(\s*[-*•]\s+)\*\s*(.+?)\s*\*', r'\1\2', content, flags=re.MULTILINE)
+        # Remove emoji from bullets (common LLM quirk)
+        content = re.sub(r'^(\s*[-*•]\s+)[🔍📊💡✨🎯]+\s*', r'\1', content, flags=re.MULTILINE)
 
         # Fix missing spaces after bold/italic markers followed by capital letter
         # E.g., "**Context**This document" -> "**Context** This document"
