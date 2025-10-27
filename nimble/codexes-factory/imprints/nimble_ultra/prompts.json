@@ -101,7 +101,7 @@
       },
       {
         "role": "user",
-        "content": "Provide comprehensive historical context for this declassified document.\n\n**CRITICAL FORMATTING REQUIREMENT:** You MUST format your markdown response with proper structure:\n- Each heading (###) must be on its own line\n- There MUST be a blank line (two newlines) after EVERY heading before the body text begins\n- Each paragraph should be separated by a blank line\n- Example correct format:\n  ### Section Heading\n  \n  First paragraph of body text here.\n  \n  Second paragraph here.\n\nFormat your response with the following sections:\n\n### Time Period and Geopolitical Situation\n\nDiscuss when this document was created, major geopolitical events or crises occurring at the time, the state of US-Soviet relations (if relevant), and regional conflicts or tensions that were active.\n\n### Intelligence Context\n\nExplain the intelligence priorities that drove this document's creation, collection methods or sources likely used, and how this fits into broader intelligence operations of the period.\n\n### Strategic Significance\n\nAnalyze what policy decisions or military operations this might have informed, key decision-makers who would have read it, and strategic questions it was trying to answer.\n\n### Long-term Impact\n\nDescribe how events in this document unfolded, what we can learn with hindsight about the accuracy of assessments, and how this document informs our understanding of this historical period.\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'historical_context' containing the complete markdown-formatted text starting directly with the first ### heading (do NOT include a top-level # heading). ENSURE proper blank lines after each heading."
+        "content": "Provide comprehensive historical context for this declassified document.\n\n**CRITICAL FORMATTING REQUIREMENT:** You MUST format your markdown response with proper structure:\n- Each heading (###) must be on its own line\n- There MUST be a blank line (two newlines) after EVERY heading before the body text begins\n- Each paragraph should be separated by a blank line\n- Example correct format:\n  ### Section Heading\n  \n  First paragraph of body text here.\n  \n  Second paragraph here.\n\nFormat your response with the following sections:\n\n### Time Period and Geopolitical Situation\n\nDiscuss when this document was created, major geopolitical events or crises occurring at the time, the state of US-Soviet relations (if relevant), and regional conflicts or tensions that were active.\n\n### Intelligence Context\n\nExplain the intelligence priorities that drove this document's creation, collection methods or sources likely used, and how this fits into broader intelligence operations of the period.\n\n### Strategic Significance\n\nAnalyze what policy decisions or military operations this might have informed, key decision-makers who would have read it, and strategic questions it was trying to answer.\n\n**CRITICAL:** The Strategic Significance section MUST always be followed by a blank line before body text begins.\n\n### Long-term Impact\n\nDescribe how events in this document unfolded, what we can learn with hindsight about the accuracy of assessments, and how this document informs our understanding of this historical period.\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'historical_context' containing the complete markdown-formatted text starting directly with the first ### heading (do NOT include a top-level # heading). ENSURE proper blank lines after each heading."
       }
     ],
     "tags": [
@@ -147,7 +147,7 @@
       },
       {
         "role": "user",
-        "content": "Identify the 5 most important passages from this declassified intelligence document.\n\nFor each passage, provide:\n1. A brief descriptive title (under 10 words)\n2. The exact quoted text (keep under 150 words)\n3. WHY this passage is significant (50-100 words)\n\nSignificance criteria:\n- Reveals previously unknown intelligence assessments\n- Shows strategic thinking or decision-making processes\n- Contains surprising or counterintuitive findings\n- Demonstrates intelligence methods or sources\n- Has proven prescient or notably inaccurate with hindsight\n- Illuminates key historical events or geopolitical dynamics\n\nFormat EXACTLY as shown (note the blank lines separating each element):\n\n### Passage 1: [Brief descriptive title]\n\nLocation: Page [number] or [section name]\n\nQuoted text:\n[The exact quotation here as a regular paragraph - this will be rendered in italics]\n\nSignificance:\n[Your explanation of why this matters, written as a regular paragraph]\n\n### Passage 2: [Brief descriptive title]\n\nLocation: Page [number]\n\nQuoted text:\n[The quotation]\n\nSignificance:\n[The explanation]\n\n[Continue same pattern for all 5 passages]\n\nCRITICAL FORMATTING REQUIREMENTS:\n- Passage name/title goes on the ### line\n- \"Location:\" on its own line, followed by blank line\n- \"Quoted text:\" on its own line, followed by blank line, then the quote\n- \"Significance:\" on its own line, followed by blank line, then the explanation\n- Each element MUST be separated by blank lines\n- Do NOT use bold (**text**) or blockquote (>) markers\n- Write labels followed by content on next line after blank line\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'important_passages' containing the complete markdown-formatted text."
+        "content": "Identify the 5 most important passages from this declassified intelligence document.\n\n**CRITICAL FORMATTING REQUIREMENTS - FOLLOW EXACTLY:**\n\nFormat MUST be EXACTLY as shown below. NO DEVIATION ALLOWED:\n\nPassage Topic: Projected Soviet Economic Dominance\n\nLocation: BODY:6\n\n> It is not impossible that within a period of about ten years the joint economic power of the USSR, the Satellites, and the occupied areas would equal that of the United States.\n\nSignificance:\n\nThis passage reveals the core long-term fear driving US Cold War strategy at the highest levels of government.\n\nPassage Topic: Soviet Atomic Bomb Timeline\n\nLocation: BODY:22\n\n> Should the Soviets overrun Western Europe during 1948 the earliest date that they may have exploded their first atomic bomb would be advanced three to six months ahead of mid-1950.\n\nSignificance:\n\nThis assessment directly links conventional military conquest to nuclear weapons development, showing how analysts viewed European scientific and industrial capacity as critical to the atomic race.\n\n[Continue same pattern for all 5 passages]\n\n**STRICT RULES:**\n1. Start each passage with \"Passage Topic:\" (NO ### or numbering)\n2. Next line: \"Location: BODY:{number}\" (use BODY:N format from document)\n3. Blank line, then quoted text as markdown blockquote (start line with >)\n4. Keep quote under 150 words, exact words from document, NO bullets or formatting\n5. Blank line, then \"Significance:\" on its own line\n6. Next line: significance explanation (50-100 words)\n7. Blank line between each passage\n\nSignificance criteria:\n- Reveals previously unknown intelligence assessments\n- Shows strategic thinking or decision-making processes\n- Contains surprising or counterintuitive findings\n- Demonstrates intelligence methods or sources\n- Has proven prescient or notably inaccurate with hindsight\n- Illuminates key historical events or geopolitical dynamics\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'most_important_passages_with_reasoning' containing the complete markdown-formatted text."
       }
     ],
     "tags": [
@@ -159,72 +159,27 @@
     ]
   },
   "index_of_persons": {
-    "params": {
-      "temperature": 0.3,
-      "max_tokens": 2000
-    },
     "messages": [
       {
-        "role": "system",
-        "content": "You are a professional indexer specializing in intelligence and historical documents. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
-      },
-      {
         "role": "user",
-        "content": "Create a comprehensive alphabetized index of persons mentioned in this declassified document.\n\nFor each person:\n1. List full name (with titles/ranks if given)\n2. Include brief identifier in parentheses (role, nationality, or significance)\n3. List ALL page numbers where this person is mentioned, using \"BODY:\" prefix (e.g., BODY:5, BODY:12)\n4. Use page ranges per Chicago Manual of Style: consecutive pages become ranges (BODY:1, BODY:2, BODY:3 becomes BODY:1-3)\n5. Alphabetize by last name\n6. Do NOT use bullet points or markdown formatting\n\nFormat EXACTLY as plain text entries, one per line:\n\nAndropov, Yuri (KGB Chairman, Soviet Union), BODY:3, BODY:17-19, BODY:45\nCasey, William (CIA Director, United States), BODY:8, BODY:23-25\nForrestal, James (US Secretary of Defense), BODY:1-3, BODY:12, BODY:34\nMarshall, George (US Secretary of State), BODY:2, BODY:15-16\nTruman, Harry S. (US President), BODY:1, BODY:6-8, BODY:22, BODY:38\n\nIMPORTANT:\n- Use BODY:N format for all page numbers (with colon, no spaces)\n- Format consecutive pages as ranges: BODY:5-7 instead of BODY:5, BODY:6, BODY:7\n- Separate non-consecutive pages/ranges with commas\n- Do NOT use bullets (-), asterisks (*), or bold (**text**)\n- Write as plain text, one entry per line\n- Include brief identifier in parentheses\n- ONLY include persons who are actually mentioned in the document\n- You MUST verify page numbers by checking where names appear\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'index_of_persons' containing the complete plain text index."
+        "content": "Create an index of persons in MARKDOWN format.\n\nFormat: **Last, First** (Role): page, numbers\n\nExample:\n**Churchill, Winston** (British PM): 12, 18-20\n\nRules:\n- Bold names with **\n- Last name first\n- Role in parentheses\n- NO LaTeX - just markdown\n\nSource: {book_content}\n"
       }
-    ],
-    "tags": [
-      "index",
-      "persons",
-      "intelligence",
-      "back_matter",
-      "json"
     ]
   },
   "index_of_places": {
-    "params": {
-      "temperature": 0.3,
-      "max_tokens": 2000
-    },
     "messages": [
       {
-        "role": "system",
-        "content": "You are a professional indexer specializing in intelligence and historical documents. You MUST respond ONLY in valid JSON format. Do not include any text outside the JSON structure."
-      },
-      {
         "role": "user",
-        "content": "Create a comprehensive alphabetized index of places mentioned in this declassified document.\n\nFor each location:\n1. List geographic name (city, region, country, or facility)\n2. Include brief identifier in parentheses (country, geographic context, or significance)\n3. List ALL page numbers where this location is mentioned, using \"BODY:\" prefix (e.g., BODY:5, BODY:12)\n4. Use page ranges per Chicago Manual of Style: consecutive pages become ranges (BODY:1, BODY:2, BODY:3 becomes BODY:1-3)\n5. Use standard modern place names but note historical names in parentheses if different\n6. Do NOT use bullet points or markdown formatting\n\nFormat EXACTLY as plain text entries, one per line:\n\nBaikonur Cosmodrome (Kazakhstan, Soviet space facility), BODY:18, BODY:32-33\nBerlin (Germany, divided city), BODY:1, BODY:5-7, BODY:12, BODY:28\nHanoi (North Vietnam, capital), BODY:7, BODY:23-25\nMoscow (Soviet Union, capital), BODY:2-4, BODY:15, BODY:34, BODY:41\nSaigon (South Vietnam, now Ho Chi Minh City), BODY:9, BODY:27\nWashington D.C. (United States, capital), BODY:3, BODY:14-16, BODY:22\n\nIMPORTANT:\n- Use BODY:N format for all page numbers (with colon, no spaces)\n- Format consecutive pages as ranges: BODY:5-7 instead of BODY:5, BODY:6, BODY:7\n- Separate non-consecutive pages/ranges with commas\n- Do NOT use bullets (-), asterisks (*), or bold (**text**)\n- Write as plain text, one entry per line\n- Include brief identifier in parentheses\n- ONLY include places that are actually mentioned in the document\n- You MUST verify page numbers by checking where locations appear\n\nDocument:\n{book_content}\n\nReturn as a single JSON object with key 'index_of_places' containing the complete plain text index."
+        "content": "Create an index of places in MARKDOWN format.\n\nFormat: **Place Name** (Type, Region): page, numbers\n\nExample:\n**Austria** (Country, Europe): 14-15, 18, 27\n\nRules:\n- Bold place names with **\n- Context in parentheses\n- Page numbers comma-separated\n- NO LaTeX - just markdown\n\nSource: {book_content}\n"
       }
-    ],
-    "tags": [
-      "index",
-      "places",
-      "intelligence",
-      "back_matter",
-      "json"
     ]
   },
   "mnemonics_prompt": {
-    "params": {
-      "temperature": 0.7,
-      "max_tokens": 4000
-    },
     "messages": [
       {
-        "role": "system",
-        "content": "You are an expert in creating mnemonics to help readers remember key concepts from declassified intelligence documents. Focus on intelligence terminology, operations, analytical frameworks, and historical context specific to the document."
-      },
-      {
         "role": "user",
-        "content": "Based on THIS SPECIFIC declassified intelligence document, create 3-5 creative mnemonics that help readers remember the ACTUAL key concepts, events, locations, persons, or operational details that appear in the document below.\n\n**CRITICAL INSTRUCTIONS:**\n- READ the document carefully and identify its SPECIFIC content (operations, locations, persons, dates, agencies mentioned)\n- Create mnemonics based on WHAT IS ACTUALLY IN THIS DOCUMENT, not generic intelligence concepts\n- If the document discusses Cuba, create Cuba-related mnemonics. If it discusses Soviet submarines, create submarine-related mnemonics\n- Each mnemonic should be instantly recognizable as belonging to THIS document, not any other intelligence document\n- Do NOT create generic mnemonics about \"SIGINT\" or \"HUMINT\" unless those are the primary focus of this specific document\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready for inclusion in the document. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the chapter content.\n\nFormat example:\n\n% Mnemonics for [Document-Specific Topic]\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\nThese memory aids help readers retain key concepts, events, and operational details from this document.\n\n\\textbf{[ACRONYM]} ([Document-Specific Title])\n\n\\begin{itemize}\n    \\item \\textbf{[Letter]} - [specific detail from the document]\n    \\item \\textbf{[Letter]} - [specific detail from the document]\n    \\item [continue with actual document content]\n\\end{itemize}\n\n[Repeat for 2-4 more document-specific mnemonics]\n\n\\cleardoublepage\n\nDocument Content:\n{book_content}"
+        "content": "Create EXACTLY THREE (3) mnemonics to help readers remember key concepts from this declassified intelligence document.\n\n**CRITICAL FORMATTING REQUIREMENTS:**\n\nFormat MUST be EXACTLY as shown:\n\n## Mnemonics\n\nRISKS (Soviet Conquest Disadvantages)\n\n- **R**: Resource shortages (oil, rubber)\n- **I**: Industrial disruption from war damage\n- **S**: Security challenges controlling hostile populations\n- **K**: Key materials blocked by naval blockade\n- **S**: Supply lines stretched impossibly thin\n\nGAINS (Potential Soviet Advantages)\n\n- **G**: German scientific expertise acquired\n- **A**: Atomic program accelerated by 2 years\n- **I**: Industrial capacity doubled\n- **N**: New skilled manpower obtained\n- **S**: Steel production significantly increased\n\nTIME (Assessment Timeline)\n\n- **T**: Ten years to equal US economically\n- **I**: Immediate gains limited by war damage\n- **M**: Mid-1950 atomic bomb estimate\n- **E**: European conquest before 1950 unlikely\n\n**STRICT RULES:**\n1. Create EXACTLY 3 mnemonics (no more, no less)\n2. Each mnemonic starts with the acrostic word flush left (e.g., \"RISKS\")\n3. Follow acrostic with theme in parentheses on same line\n4. Blank line after acrostic/theme line\n5. List each letter meaning with bullet format: - **Letter**: Meaning\n6. Blank line between each mnemonic group\n7. Use markdown format (NO LaTeX)\n8. Use ## for \"Mnemonics\" header only\n9. Make mnemonics memorable and relevant to key document themes\n\nSource document:\n{book_content}\n"
       }
-    ],
-    "tags": [
-      "returns_tex",
-      "mnemonics",
-      "back_matter",
-      "intelligence",
-      "json"
     ]
   }
 }

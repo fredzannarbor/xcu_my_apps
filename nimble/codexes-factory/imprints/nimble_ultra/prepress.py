@@ -20,11 +20,19 @@ from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 # Import base prepress utilities
 try:
     from codexes.modules.prepress.tex_utils import compile_tex_to_pdf, escape_latex, markdown_to_latex
+    from codexes.modules.prepress.markdown_to_latex import (
+        convert_index_markdown_to_latex,
+        convert_mnemonics_markdown_to_latex
+    )
     from codexes.modules.covers.cover_generator import create_cover_latex
     from codexes.modules.prepress.partsofthebook_processor import PartsOfTheBookProcessor
     from codexes.modules.distribution.quote_processor import QuoteProcessor
 except ModuleNotFoundError:
     from src.codexes.modules.prepress.tex_utils import compile_tex_to_pdf, escape_latex, markdown_to_latex
+    from src.codexes.modules.prepress.markdown_to_latex import (
+        convert_index_markdown_to_latex,
+        convert_mnemonics_markdown_to_latex
+    )
     from src.codexes.modules.covers.cover_generator import create_cover_latex
     from src.codexes.modules.prepress.partsofthebook_processor import PartsOfTheBookProcessor
     from src.codexes.modules.distribution.quote_processor import QuoteProcessor
@@ -393,6 +401,8 @@ Version: {version}
                 else:
                     content_to_format = self._extract_content(raw_content)
                 if content_to_format:
+                    # Apply signature formatting before section formatting
+                    content_to_format = self._format_publishers_note_signature(content_to_format)
                     front_matter_sections += self._format_section(
                         "Motivation",
                         content_to_format,
@@ -428,12 +438,16 @@ Version: {version}
             if "important_passages" in front_matter_data:
                 passages_content = self._extract_content(front_matter_data["important_passages"])
                 if passages_content:
-                    # Apply special formatting for quoted text (italics)
-                    passages_content = self._format_passages_quotes(passages_content)
+                    # First apply structural fixes (line breaks)
+                    passages_content = self._format_passages_structure(passages_content)
+                    # Convert markdown to LaTeX
+                    passages_latex = markdown_to_latex(passages_content, skip_first_heading_if_matches="Important Passages")
+                    # Then convert blockquotes to italic quote environments (post-conversion)
+                    passages_latex = self._format_passages_quotes_latex(passages_latex)
                     front_matter_sections += self._format_section(
                         "Important Passages",
-                        passages_content,
-                        use_markdown=True
+                        passages_latex,
+                        use_markdown=False  # Already converted
                     )
 
         # --- Back Matter Intro Page ---
@@ -459,7 +473,7 @@ Indexes are generated with reference to the current document's pagination, not t
         if has_pipeline_content:
             back_matter_data = pipeline_content.get("back_matter", {})
 
-            # Index of Persons - can be markdown or list - ONLY include if non-empty
+            # Index of Persons - markdown that needs conversion to LaTeX - ONLY include if non-empty
             if "index_persons" in back_matter_data:
                 raw_content = back_matter_data["index_persons"]
                 # Extract the actual content
@@ -472,13 +486,15 @@ Indexes are generated with reference to the current document's pagination, not t
                     # Check if content is substantive (not just error messages or placeholders)
                     content_str = str(persons_content).strip().lower()
                     if content_str and not content_str.startswith('no ') and not content_str.startswith('none'):
+                        # Convert markdown to LaTeX using new converter
+                        persons_content = convert_index_markdown_to_latex(persons_content)
                         back_matter_sections += self._format_section(
                             "Index of Persons",
                             persons_content,
-                            use_markdown=True
+                            use_markdown=False  # Already converted to LaTeX
                         )
 
-            # Index of Places - can be markdown or list of dicts - ONLY include if non-empty
+            # Index of Places - markdown that needs conversion to LaTeX - ONLY include if non-empty
             if "index_places" in back_matter_data:
                 raw_content = back_matter_data["index_places"]
                 # Extract the actual content (could be list or string)
@@ -491,37 +507,28 @@ Indexes are generated with reference to the current document's pagination, not t
                     # Check if content is substantive (not just error messages or placeholders)
                     content_str = str(places_content).strip().lower()
                     if content_str and not content_str.startswith('no ') and not content_str.startswith('none'):
+                        # Convert markdown to LaTeX using new converter
+                        places_content = convert_index_markdown_to_latex(places_content)
                         back_matter_sections += self._format_section(
                             "Index of Places",
                             places_content,
-                            use_markdown=True
+                            use_markdown=False  # Already converted to LaTeX
                         )
 
-            # Mnemonics (special handling for LaTeX) - at end of back matter
+            # Mnemonics (markdown that needs conversion to LaTeX) - at end of back matter
             if "mnemonics" in back_matter_data:
                 logger.info("🔍 DEBUG: Found mnemonics in back_matter_data, extracting...")
-                mnemonics_content = self._extract_mnemonics(back_matter_data["mnemonics"])
-                logger.info(f"🔍 DEBUG: Extracted mnemonics content: {len(mnemonics_content)} chars")
-                if mnemonics_content:
-                    # Mnemonics already contain LaTeX
-                    # Just ensure proper spacing around major structural elements
-                    import re
-
-                    # Add line breaks only around major structural elements
-                    mnemonics_content = re.sub(r'(\\chapter\*\{[^}]+\})\s*', r'\1\n', mnemonics_content)
-                    mnemonics_content = re.sub(r'(\\addcontentsline\{[^}]+\}\{[^}]+\}\{[^}]+\})\s*', r'\1\n\n', mnemonics_content)
-                    mnemonics_content = re.sub(r'\\begin\{itemize\}', r'\n\\begin{itemize}\n', mnemonics_content)
-                    mnemonics_content = re.sub(r'\\end\{itemize\}', r'\n\\end{itemize}\n\n', mnemonics_content)
-                    mnemonics_content = re.sub(r'\\item\s+', r'\n    \\item ', mnemonics_content)
-
-                    # Ensure it ends with cleardoublepage
-                    if not mnemonics_content.strip().endswith("\\cleardoublepage"):
-                        mnemonics_content = mnemonics_content.rstrip() + "\n\n\\cleardoublepage\n"
+                mnemonics_markdown = self._extract_content(back_matter_data["mnemonics"])
+                logger.info(f"🔍 DEBUG: Extracted mnemonics markdown: {len(mnemonics_markdown)} chars")
+                if mnemonics_markdown:
+                    # Convert markdown to LaTeX using new converter
+                    mnemonics_content = convert_mnemonics_markdown_to_latex(mnemonics_markdown)
+                    logger.info(f"✅ DEBUG: Converted mnemonics to LaTeX: {len(mnemonics_content)} chars")
 
                     back_matter_sections += f"\n{mnemonics_content}\n"
                     logger.info("✅ DEBUG: Added formatted mnemonics to back_matter_sections")
                 else:
-                    logger.warning("⚠️  DEBUG: mnemonics_content was empty after extraction")
+                    logger.warning("⚠️  DEBUG: mnemonics_markdown was empty after extraction")
             else:
                 logger.warning("⚠️  DEBUG: 'mnemonics' not found in back_matter_data")
 
@@ -552,10 +559,11 @@ Indexes are generated with reference to the current document's pagination, not t
 \\usepackage{{microtype}}
 \\usepackage{{xcolor}}
 \\usepackage{{graphicx}}
+\\usepackage[bookmarks=true,bookmarksopen=true,bookmarksnumbered=false,hidelinks]{{hyperref}}
 
 % --- Page Style Setup ---
 \\makepagestyle{{mypagestyle}}
-\\makeoddhead{{mypagestyle}}{{}}{{}}{{\\large\\scshape\\sffamily {title}}}
+\\makeoddhead{{mypagestyle}}{{}}{{}}{{\\small\\textit{{{title}}}}}
 \\makeevenhead{{mypagestyle}}{{\\small\\textit{{{author}}}}}{{}}{{}}
 \\makeoddfoot{{mypagestyle}}{{}}{{}}{{\\thepage}}
 \\makeevenfoot{{mypagestyle}}{{\\thepage}}{{}}{{}}
@@ -592,9 +600,9 @@ Indexes are generated with reference to the current document's pagination, not t
 \\pagenumbering{{arabic}}
 \\setcounter{{page}}{{1}}
 
-% Custom footer for body with "BODY:N" format
-\\makeoddfoot{{mypagestyle}}{{}}{{BODY:}}{{\\thepage}}
-\\makeevenfoot{{mypagestyle}}{{\\thepage}}{{BODY:}}{{}}
+% Custom footer for body with "BODY:N" format in outside slot
+\\makeoddfoot{{mypagestyle}}{{}}{{}}{{BODY:\\thepage}}
+\\makeevenfoot{{mypagestyle}}{{BODY:\\thepage}}{{}}{{}}
 
 \\IfFileExists{{pdf_body_source.pdf}}{{%
   \\includepdf[pages=-,pagecommand={{}}]{{pdf_body_source.pdf}}
@@ -617,13 +625,17 @@ Indexes are generated with reference to the current document's pagination, not t
 
         Args:
             section_data: Section data from pipeline (either parsed_content dict directly,
-                         or a dict with 'content' key)
+                         a dict with 'content' key, or a plain string)
 
         Returns:
             Extracted content string, or empty string if extraction fails
         """
         if not section_data:
             return ""
+
+        # CRITICAL FIX: Handle plain string content (markdown from text-formatted LLM responses)
+        if isinstance(section_data, str):
+            return section_data
 
         # Handle case where section_data is the parsed_content dict directly
         # (which has keys like 'keywords', 'publishers_note', 'historical_context', etc.)
@@ -637,7 +649,7 @@ Indexes are generated with reference to the current document's pagination, not t
             content_keys_to_try = [
                 "keywords", "publishers_note", "historical_context", "abstracts_x4",
                 "important_passages", "index_of_persons", "index_of_places",
-                "passages", "persons", "places", "text", "content", "motivation", "context"
+                "passages", "persons", "places", "mnemonics", "text", "content", "motivation", "context"
             ]
             for key in content_keys_to_try:
                 if key in section_data:
@@ -769,16 +781,152 @@ Indexes are generated with reference to the current document's pagination, not t
 
         return str(content)
 
+    def _collapse_page_ranges(self, page_refs: str) -> str:
+        """Collapse consecutive page numbers into ranges (e.g., '1, 2, 3' -> '1-3')"""
+        import re
+
+        # Extract all page numbers
+        pages = re.findall(r'\d+', page_refs)
+        if not pages:
+            return page_refs
+
+        pages = [int(p) for p in pages]
+        pages.sort()
+
+        # Group consecutive pages
+        ranges = []
+        start = pages[0]
+        end = pages[0]
+
+        for i in range(1, len(pages)):
+            if pages[i] == end + 1:
+                end = pages[i]
+            else:
+                # Add previous range
+                if start == end:
+                    ranges.append(str(start))
+                else:
+                    ranges.append(f"{start}-{end}")
+                start = end = pages[i]
+
+        # Add final range
+        if start == end:
+            ranges.append(str(start))
+        else:
+            ranges.append(f"{start}-{end}")
+
+        return ', '.join(ranges)
+
+    def _format_publishers_note_signature(self, content: str) -> str:
+        """
+        Format the publisher's note signature block to be flush right with empty line before.
+
+        Args:
+            content: Publisher's note markdown content
+
+        Returns:
+            Content with formatted signature
+        """
+        import re
+
+        # Pattern: em-dash followed by name, location (typical signature format)
+        # Example: "—Zero, Ann Arbor" or "— Zero, Ann Arbor"
+        # We want to add empty line before and flush right
+
+        def format_signature(match):
+            # Get the signature line
+            sig_line = match.group(0).strip()
+            # Return with empty line before and flush right LaTeX command
+            return f"\n\n\\begin{{flushright}}\n{sig_line}\n\\end{{flushright}}"
+
+        # Match signature line (em-dash followed by text, possibly with comma)
+        content = re.sub(
+            r'\n\s*[—–-]\s*([A-Za-z\s]+,\s*[A-Za-z\s]+)\s*$',
+            format_signature,
+            content,
+            flags=re.MULTILINE
+        )
+
+        return content
+
+    def _format_passages_structure(self, content: str) -> str:
+        """
+        Fix structural formatting issues in Important Passages (line breaks).
+
+        Args:
+            content: Markdown content with passages
+
+        Returns:
+            Content with proper line breaks
+        """
+        import re
+
+        # Fix LLM quirk: everything running together on one line
+        # Insert newlines before key labels to create proper structure
+        content = re.sub(r'(?<!\n)(Passage Topic:)', r'\n\n\1', content)
+        content = re.sub(r'(?<!\n)(Location:)', r'\n\n\1', content)
+        content = re.sub(r'(?<!\n)(Significance:)', r'\n\n\1', content)
+
+        # Insert newline before blockquote if it follows Location on same line
+        content = re.sub(r'(Location: BODY:\d+)\s+(>)', r'\1\n\n\2', content)
+
+        # Insert newline before Significance if it follows blockquote text
+        content = re.sub(r'(\.)(\s+)(Significance:)', r'\1\n\n\3', content)
+
+        # Clean up multiple blank lines (3+ newlines become 2 newlines)
+        content = re.sub(r'\n{3,}', '\n\n', content)
+
+        return content
+
+    def _format_passages_quotes_latex(self, latex_content: str) -> str:
+        r"""
+        Convert quote blocks in Important Passages to italic after LaTeX conversion.
+        Also adds \par to label lines for proper paragraph closure.
+
+        Args:
+            latex_content: LaTeX content after markdown conversion
+
+        Returns:
+            LaTeX with italic quote blocks and proper paragraph breaks
+        """
+        import re
+
+        # Find quote environments and add italic formatting
+        latex_content = re.sub(
+            r'\\begin\{quote\}(.*?)\\end\{quote\}',
+            r'\\begin{quote}\\textit{\1}\\end{quote}',
+            latex_content,
+            flags=re.DOTALL
+        )
+
+        # Add \noindent and \par to label lines for flush left alignment and proper paragraph closure
+        # This prevents hanging indent or parindent from bleeding through
+        latex_content = re.sub(r'^(Passage Topic:.*?)$', r'\\noindent \1\\par', latex_content, flags=re.MULTILINE)
+        latex_content = re.sub(r'^(Location:.*?)$', r'\\noindent \1\\par', latex_content, flags=re.MULTILINE)
+        latex_content = re.sub(r'^(Significance:)$', r'\\noindent \1', latex_content, flags=re.MULTILINE)
+
+        # Add blank line before subsequent "Passage Topic:" entries (not the first one)
+        # Simple approach: add vspace before each noindent Passage Topic except at start
+        lines = latex_content.split('\n')
+        result_lines = []
+        first_passage = True
+
+        for i, line in enumerate(lines):
+            if line.strip().startswith('\\noindent Passage Topic:') or line.strip().startswith('\\noindentPassage Topic:'):
+                if not first_passage:
+                    # Add spacing before this passage (but not the first one)
+                    result_lines.append('\\vspace{12pt}')
+                first_passage = False
+            result_lines.append(line)
+
+        return '\n'.join(result_lines)
+
     def _format_passages_quotes(self, content: str) -> str:
         """
-        Format quoted text in Important Passages section with italics.
+        Format quoted text in Important Passages section.
 
-        Converts:
-          Quoted text: The actual quote here.
-        To:
-          Quoted text: *The actual quote here.*
-
-        Also reverses any italics within the quote (italic becomes roman).
+        New format uses blockquotes (>) for passages, which will be rendered as italic
+        blockquotes in LaTeX.
 
         Args:
             content: Markdown content with passages
@@ -788,26 +936,42 @@ Indexes are generated with reference to the current document's pagination, not t
         """
         import re
 
-        # Pattern: "Quoted text:" followed by newline(s) then the actual quote paragraph
-        # We need to wrap the quote in * markers for italics
-        def italicize_quote(match):
-            label = match.group(1)  # "Quoted text:"
-            whitespace = match.group(2)  # Newlines/spaces
-            quote = match.group(3)  # The actual quote text
+        # Fix LLM quirk: everything running together on one line
+        # Insert newlines before key labels to create proper structure
+        content = re.sub(r'(?<!\n)(Passage Topic:)', r'\n\n\1', content)
+        content = re.sub(r'(?<!\n)(Location:)', r'\n\n\1', content)
+        content = re.sub(r'(?<!\n)(Significance:)', r'\n\n\1', content)
 
-            # Reverse any existing italics (*text*) to roman (plain text)
-            # This handles nested italics
-            quote = re.sub(r'\*([^*]+?)\*', r'\1', quote)
+        # Insert newline before blockquote if it follows Location on same line
+        content = re.sub(r'(Location: BODY:\d+)\s+(>)', r'\1\n\n\2', content)
 
-            # Wrap entire quote in italics
-            return f"{label}{whitespace}*{quote}*"
+        # Insert newline before Significance if it follows blockquote text
+        content = re.sub(r'(\.)(\s+)(Significance:)', r'\1\n\n\3', content)
 
-        # Match "Quoted text:" (case insensitive) followed by paragraph
+        # Clean up multiple blank lines (3+ newlines become 2 newlines)
+        content = re.sub(r'\n{3,}', '\n\n', content)
+
+        # Convert blockquoted text to LaTeX quote environment with italics
+        # Pattern: > followed by text (possibly multiline)
+        def convert_blockquote_to_latex(match):
+            quote_text = match.group(1).strip()
+
+            # Remove any existing italic markers to avoid double-italics
+            quote_text = re.sub(r'\*([^*]+?)\*', r'\1', quote_text)
+
+            # Remove bullets if any (common LLM quirk)
+            quote_text = re.sub(r'^\s*[•\-]\s+', '', quote_text)
+
+            # Return LaTeX quote environment with italics
+            return f"\\begin{{quote}}\\textit{{{quote_text}}}\\end{{quote}}"
+
+        # Match blockquote sections (> marker followed by text)
+        # Handle both single-line and multi-line blockquotes
         content = re.sub(
-            r'(Quoted text:)(\s+)([^\n]+(?:\n(?!###|Location:|Quoted text:|Significance:)[^\n]+)*)',
-            italicize_quote,
+            r'^>\s*(.+?)(?=\n\n[A-Z]|\n\nSignificance:|\Z)',
+            convert_blockquote_to_latex,
             content,
-            flags=re.IGNORECASE
+            flags=re.MULTILINE | re.DOTALL
         )
 
         return content
@@ -1042,6 +1206,7 @@ Indexes are generated with reference to the current document's pagination, not t
         # Ensure chapter starts on recto (odd) page
         # Don't add cleardoublepage at end to avoid creating extra blank pages
         return f"""\\cleardoublepage
+\\pdfbookmark[0]{{{escaped_title}}}{{sec:{escaped_title.replace(' ', '_')}}}
 \\chapter*{{{escaped_title}}}
 \\addcontentsline{{toc}}{{chapter}}{{{escaped_title}}}
 
@@ -1053,7 +1218,23 @@ Indexes are generated with reference to the current document's pagination, not t
         try:
             cover_template = self.template_dir / "cover_template.tex"
             if cover_template.exists():
-                return create_cover_latex(metadata, str(cover_template), str(output_dir))
+                # create_cover_latex expects: json_path, output_dir, template_path, build_dir, replacements, debug_mode, data
+                # We're passing metadata directly as data parameter
+                replacements = {
+                    "title": metadata.get("title", "Untitled"),
+                    "author": metadata.get("author", "Unknown Author"),
+                    "subtitle": metadata.get("subtitle", ""),
+                    "imprint": metadata.get("imprint", "Nimble Ultra Global")
+                }
+                return create_cover_latex(
+                    json_path=None,  # Not using JSON file
+                    output_dir=Path(output_dir),
+                    template_path=Path(cover_template),
+                    build_dir=Path(output_dir),  # Use output_dir as build_dir
+                    replacements=replacements,
+                    debug_mode=False,
+                    data=metadata  # Pass metadata directly
+                )
         except Exception as e:
             logger.warning(f"Cover generation failed: {e}")
         return None
@@ -1118,14 +1299,46 @@ def process_single_book(
         logger.info(f"📄 Processing with body source: {body_source}")
 
         # Transform LLM responses into _pipeline_content structure for prepress
-        logger.info(f"🔍 DEBUG: Checking for responses in data. Keys in data: {list(data.keys())}")
-        logger.info(f"🔍 DEBUG: 'responses' in data: {'responses' in data}")
+        logger.info(f"🔍 DEBUG: Checking for content in data. Keys in data: {list(data.keys())}")
 
-        if 'responses' in data:
-            try:
-                logger.info("🔍 DEBUG: Starting _pipeline_content transformation")
-                # Build _pipeline_content from responses
-                pipeline_content = {"front_matter": {}, "back_matter": {}}
+        try:
+            logger.info("🔍 DEBUG: Starting _pipeline_content transformation")
+            # Build _pipeline_content from either top-level fields (new) or responses array (legacy)
+            pipeline_content = {"front_matter": {}, "back_matter": {}}
+
+            # PREFERRED METHOD: Check for top-level markdown fields first (new behavior after llm_get_book_data.py fixes)
+            # This allows us to use markdown content directly without parsing responses
+            top_level_front_matter = {
+                'bibliographic_key_phrases': 'keywords',  # Map to actual top-level key
+                'motivation': 'motivation',
+                'historical_context': 'historical_context',
+                'abstracts_x4': 'abstracts_x4',
+                'important_passages': 'most_important_passages_with_reasoning'
+            }
+
+            top_level_back_matter = {
+                'index_persons': 'index_of_persons',
+                'index_places': 'index_of_places',
+                'mnemonics': 'mnemonics'
+            }
+
+            # Check if we have top-level fields with content
+            has_top_level_content = False
+            for mapped_key, json_key in top_level_back_matter.items():
+                if json_key in data and data[json_key]:
+                    pipeline_content['back_matter'][mapped_key] = data[json_key]
+                    logger.info(f"✅ DEBUG: Using top-level field '{json_key}' for back_matter[{mapped_key}]")
+                    has_top_level_content = True
+
+            for mapped_key, json_key in top_level_front_matter.items():
+                if json_key in data and data[json_key]:
+                    pipeline_content['front_matter'][mapped_key] = data[json_key]
+                    logger.info(f"✅ DEBUG: Using top-level field '{json_key}' for front_matter[{mapped_key}]")
+                    has_top_level_content = True
+
+            # FALLBACK METHOD: Use responses array if top-level fields not found (backward compatibility)
+            if not has_top_level_content and 'responses' in data:
+                logger.info("🔍 DEBUG: No top-level content found, falling back to responses array")
 
                 # Find the response list (may be under model name key)
                 responses_data = data['responses']
@@ -1166,23 +1379,23 @@ def process_single_book(
                         # Map to expected key name for template
                         mapped_key = front_matter_mappings[prompt_key]
                         pipeline_content['front_matter'][mapped_key] = parsed_content
-                        logger.info(f"✅ DEBUG: Added to front_matter[{mapped_key}]")
+                        logger.info(f"✅ DEBUG: Added to front_matter[{mapped_key}] from responses")
                     elif prompt_key in back_matter_mappings:
                         # Map to expected key name for template
                         mapped_key = back_matter_mappings[prompt_key]
                         pipeline_content['back_matter'][mapped_key] = parsed_content
-                        logger.info(f"✅ DEBUG: Added to back_matter[{mapped_key}]")
+                        logger.info(f"✅ DEBUG: Added to back_matter[{mapped_key}] from responses")
                     else:
                         logger.warning(f"⚠️ DEBUG: prompt_key '{prompt_key}' not mapped")
 
-                # Add to data
-                data['_pipeline_content'] = pipeline_content
-                logger.info(f"✅ Built _pipeline_content with {len(pipeline_content['front_matter'])} front matter and {len(pipeline_content['back_matter'])} back matter sections")
-                logger.info(f"🔍 DEBUG: Front matter keys: {list(pipeline_content['front_matter'].keys())}")
-                logger.info(f"🔍 DEBUG: Back matter keys: {list(pipeline_content['back_matter'].keys())}")
+            # Add to data
+            data['_pipeline_content'] = pipeline_content
+            logger.info(f"✅ Built _pipeline_content with {len(pipeline_content['front_matter'])} front matter and {len(pipeline_content['back_matter'])} back matter sections")
+            logger.info(f"🔍 DEBUG: Front matter keys: {list(pipeline_content['front_matter'].keys())}")
+            logger.info(f"🔍 DEBUG: Back matter keys: {list(pipeline_content['back_matter'].keys())}")
 
-            except Exception as e:
-                logger.error(f"❌ DEBUG: Exception building _pipeline_content: {e}", exc_info=True)
+        except Exception as e:
+            logger.error(f"❌ DEBUG: Exception building _pipeline_content: {e}", exc_info=True)
 
         # Use the processor's process_manuscript method which handles PDFs
         try:

@@ -249,9 +249,12 @@ def reprompt_and_update(
         logger.error(f"Could not load or prepare the prompt for key '{prompt_key}' for book '{title}'.")
         return None
 
+    # Determine response format from prompt config or default to json_object
+    response_format = formatted_prompts[0].get("prompt_config", {}).get("response_format", "json_object")
+
     responses = get_responses_from_multiple_models(
         prompt_configs=formatted_prompts, models=[model_name],
-        response_format_type="json_object", per_model_params=per_model_params
+        response_format_type=response_format, per_model_params=per_model_params
     )
 
     for model_name, model_responses in responses.items():
@@ -498,14 +501,16 @@ def process_book(
         final_book_json = {
             "title": title, "stream": stream, "description": description,
             "schedule_month_year": book_data.get("schedule_month_year", "Unknown"),
-            "subtitle": "", "author": "", "publisher": "", "imprint": "", 
+            "subtitle": "", "author": "", "publisher": "", "imprint": "",
             "publication_date": datetime.now().strftime('%Y-%m-%d'),
             "language": "English", "bisac_codes": "", "series_name": "", "series_number": "",
             "keywords": "", "storefront_title_en": title, "storefront_author_en": "",
             "storefront_description_en": description, "storefront_title_ko": "", "storefront_author_ko": "",
             "storefront_description_ko": "", "storefront_publishers_note_en": "", "storefront_publishers_note_ko": "",
             "table_of_contents": "", "quotes": [], "custom_transcription_note": "",
-            "mnemonics": "", "mnemonics_tex": "", "bibliography": "", "isbn13": "", "back_cover_text": "", "formatted_prompts": formatted_prompts
+            "mnemonics": "", "mnemonics_tex": "", "bibliography": "", "isbn13": "", "back_cover_text": "",
+            "most_important_passages_with_reasoning": "", "index_of_persons": "", "index_of_places": "",
+            "formatted_prompts": formatted_prompts
         }
         logger.info("✅ Metadata discovery enabled: using minimal defaults that can be overridden by LLM")
     else:
@@ -520,7 +525,9 @@ def process_book(
             "storefront_description_en": description, "storefront_title_ko": "", "storefront_author_ko": "",
             "storefront_description_ko": "", "storefront_publishers_note_en": "", "storefront_publishers_note_ko": "",
             "table_of_contents": "", "quotes": [], "custom_transcription_note": "",
-            "mnemonics": "", "mnemonics_tex": "", "bibliography": "", "isbn13": "", "back_cover_text": "", "formatted_prompts": formatted_prompts
+            "mnemonics": "", "mnemonics_tex": "", "bibliography": "", "isbn13": "", "back_cover_text": "",
+            "most_important_passages_with_reasoning": "", "index_of_persons": "", "index_of_places": "",
+            "formatted_prompts": formatted_prompts
         }
         logger.info("✅ Metadata discovery disabled: using configured publisher/imprint/author values")
 
@@ -549,8 +556,16 @@ def process_book(
                 logger.error(f"Failed to write raw response for {prompt_key}: {e}")
 
             # Determine if prompt was successful
-            prompt_success = bool(parsed_content and not (isinstance(parsed_content, dict) and 'error' in parsed_content))
-            
+            # For text/markdown responses, fallback to raw_content if parsed_content has an error
+            has_parse_error = isinstance(parsed_content, dict) and 'error' in parsed_content
+            if has_parse_error and raw_content:
+                # Use raw content for text-formatted responses (markdown, plain text, etc.)
+                parsed_content = raw_content
+                prompt_success = True
+                logger.info(f"Using raw_content for text-formatted prompt '{prompt_key}' (JSON parsing not needed)")
+            else:
+                prompt_success = bool(parsed_content and not has_parse_error)
+
             # Track prompt execution in reporting system
             reporting_system.track_prompt_execution(
                 prompt_name=prompt_key,
@@ -590,11 +605,54 @@ def process_book(
                         elif key in final_book_json:
                             final_book_json[key] = value
 
+            # Define field mapping for top-level markdown/text fields
+            field_mapping = {
+                'index_of_persons': 'index_of_persons',
+                'index_of_places': 'index_of_places',
+                'mnemonics_prompt': 'mnemonics',
+                'mnemonics': 'mnemonics',
+                'abstracts_x4': 'abstracts_x4',
+                'motivation': 'motivation',
+                'place_in_historical_context': 'historical_context',
+                'most_important_passages_with_reasoning': 'most_important_passages_with_reasoning',
+                'bibliographic_key_phrases': 'keywords'
+            }
+
             if isinstance(parsed_content, dict):
-                process_dict(parsed_content)
+                # Check if this is a single-key dict with markdown content (common pattern for these prompts)
+                # Example: {"abstracts_x4": "markdown content"} or {"publishers_note": {...}}
+                target_field = field_mapping.get(prompt_key)
+                if target_field and len(parsed_content) == 1:
+                    # Check if the dict has a key that matches what we expect
+                    dict_key = list(parsed_content.keys())[0]
+                    # Try common variations including publishers_note for motivation
+                    valid_keys = [target_field, prompt_key, 'content', 'text', 'publishers_note', 'historical_context']
+                    if dict_key in valid_keys:
+                        content_value = parsed_content[dict_key]
+                        # If it's a string, save directly; if it's a nested dict with 'content', extract that
+                        if isinstance(content_value, str):
+                            final_book_json[target_field] = content_value
+                            logger.info(f"Saved dict content for '{prompt_key}' to field '{target_field}' (extracted from key '{dict_key}')")
+                        elif isinstance(content_value, dict) and 'content' in content_value:
+                            final_book_json[target_field] = content_value['content']
+                            logger.info(f"Saved nested dict content for '{prompt_key}' to field '{target_field}'")
+                        else:
+                            # Fall back to normal dict processing
+                            process_dict(parsed_content)
+                    else:
+                        # Normal dict processing
+                        process_dict(parsed_content)
+                else:
+                    # Normal dict processing
+                    process_dict(parsed_content)
             elif isinstance(parsed_content, list):
                 for item in parsed_content:
                     process_dict(item)
+            elif isinstance(parsed_content, str):
+                # Handle text/markdown responses - map directly to the field
+                target_field = field_mapping.get(prompt_key, prompt_key)
+                final_book_json[target_field] = parsed_content
+                logger.info(f"Saved text content for '{prompt_key}' to field '{target_field}'")
             else:
                 logger.warning(f"Unexpected content type '{type(parsed_content)}' for prompt '{prompt_key}'.")
 

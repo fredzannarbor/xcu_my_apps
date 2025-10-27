@@ -1,9 +1,0 @@
-\contentsline {chapter}{Foreword}{3}{}%
-\contentsline {chapter}{Preface}{5}{}%
-\contentsline {chapter}{Acknowledgments}{7}{}%
-\contentsline {chapter}{\numberline {1}Scott-Paine Design and the Elco Seventy-Foot Boat}{11}{}%
-\contentsline {chapter}{\numberline {2}Elco's Seventy-Seven-Footers Design}{67}{}%
-\contentsline {chapter}{\numberline {3}Elco Eighty-Footers}{123}{}%
-\contentsline {chapter}{\numberline {4}The Workers That Made It Happen}{197}{}%
-\contentsline {chapter}{\numberline {5}The Lighter Side of War}{269}{}%
-\contentsline {chapter}{\numberline {6}End of an Era}{341}{}%
