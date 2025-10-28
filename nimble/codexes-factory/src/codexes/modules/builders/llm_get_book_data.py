@@ -612,7 +612,8 @@ def process_book(
                 'mnemonics_prompt': 'mnemonics',
                 'mnemonics': 'mnemonics',
                 'abstracts_x4': 'abstracts_x4',
-                'motivation': 'motivation',
+                'abstracts': 'abstracts_x4',  # Handle new structured format key
+                'publishers_note': 'publishers_note',
                 'place_in_historical_context': 'historical_context',
                 'most_important_passages_with_reasoning': 'most_important_passages_with_reasoning',
                 'bibliographic_key_phrases': 'keywords'
@@ -625,8 +626,8 @@ def process_book(
                 if target_field and len(parsed_content) == 1:
                     # Check if the dict has a key that matches what we expect
                     dict_key = list(parsed_content.keys())[0]
-                    # Try common variations including publishers_note for motivation
-                    valid_keys = [target_field, prompt_key, 'content', 'text', 'publishers_note', 'historical_context']
+                    # Try common variations including publishers_note and abstracts
+                    valid_keys = [target_field, prompt_key, 'content', 'text', 'publishers_note', 'abstracts', 'historical_context']
                     if dict_key in valid_keys:
                         content_value = parsed_content[dict_key]
                         # If it's a string, save directly; if it's a nested dict with 'content', extract that

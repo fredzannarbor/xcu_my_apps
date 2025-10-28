@@ -4,7 +4,7 @@
   "prompt_keys": [
     "gemini_get_basic_info_from_public_domain",
     "bibliographic_key_phrases",
-    "motivation",
+    "publishers_note",
     "place_in_historical_context",
     "abstracts_x4",
     "most_important_passages_with_reasoning",
@@ -65,7 +65,7 @@
       "json"
     ]
   },
-  "motivation": {
+  "publishers_note": {
     "params": {
       "temperature": 0.7,
       "max_tokens": 1200
@@ -81,7 +81,6 @@
       }
     ],
     "tags": [
-      "motivation",
       "publishers_note",
       "intelligence",
       "declassified",
@@ -124,7 +123,7 @@
       },
       {
         "role": "user",
-        "content": "Create four different abstracts/summaries of this declassified intelligence document.\n\nFormat exactly as follows:\n\n# Abstracts\n\n## TLDR (five words or less)\n[^ MUST be followed by a new line]\n[Your 3-5 word summary here - MUST be on a new line]\n\n## Executive Summary\n\n[Your 100-150 word executive summary paragraph here - write as if briefing a policymaker, focus on key findings, strategic implications, and actionable intelligence]\n\n## Academic Abstract\n\n[Your 150-200 word academic abstract paragraph here - write in scholarly style, include document type, issuing agency, date, scope, methodology if discussed, main arguments, and historical significance]\n\n## General Reader Summary\n\n[Your 100-150 word general reader summary paragraph here - explain the document's content and importance in accessible language for non-specialist readers interested in history and intelligence]\n\nDocument:\n{book_content}\n\nIMPORTANT: Ensure there are TWO newlines after each ## heading before the content begins. Do NOT include the heading text as part of the body paragraph.\n\nReturn as a single JSON object with key 'abstracts_x4' containing all formatted markdown text."
+        "content": "Create four different abstracts/summaries of this declassified intelligence document.\n\nReturn a structured JSON object with the following format:\n\n{\n  \"abstracts\": {\n    \"tldr\": \"Five words or less summarizing the document\",\n    \"executive_summary\": \"100-150 word executive summary - write as if briefing a policymaker, focus on key findings, strategic implications, and actionable intelligence\",\n    \"academic_abstract\": \"150-200 word academic abstract - write in scholarly style, include document type, issuing agency, date, scope, methodology if discussed, main arguments, and historical significance\",\n    \"general_reader_summary\": \"100-150 word general reader summary - explain the document's content and importance in accessible language for non-specialist readers interested in history and intelligence\"\n  }\n}\n\nDocument:\n{book_content}\n\nIMPORTANT: Return ONLY the JSON structure above with the four abstract types as object keys. Do NOT return markdown text."
       }
     ],
     "tags": [
@@ -162,7 +161,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "Create an index of persons in MARKDOWN format.\n\nFormat: **Last, First** (Role): page, numbers\n\nExample:\n**Churchill, Winston** (British PM): 12, 18-20\n\nRules:\n- Bold names with **\n- Last name first\n- Role in parentheses\n- NO LaTeX - just markdown\n\nSource: {book_content}\n"
+        "content": "Create an index of persons in MARKDOWN format.\n\nFormat: **Last, First** (Role): page, numbers\n\nExample:\n**Churchill, Winston** (British PM): 12, 18-20\n\nRules:\n- Bold names with **\n- Last name first\n- Role in parentheses\n- NO LaTeX - just markdown\n- Do NOT include heading (###) - just the entries\n- One entry per line\n\nSource: {book_content}\n"
       }
     ]
   },
@@ -170,7 +169,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "Create an index of places in MARKDOWN format.\n\nFormat: **Place Name** (Type, Region): page, numbers\n\nExample:\n**Austria** (Country, Europe): 14-15, 18, 27\n\nRules:\n- Bold place names with **\n- Context in parentheses\n- Page numbers comma-separated\n- NO LaTeX - just markdown\n\nSource: {book_content}\n"
+        "content": "Create an index of places in MARKDOWN format.\n\nFormat: **Place Name** (Type, Region): page, numbers\n\nExample:\n**Austria** (Country, Europe): 14-15, 18, 27\n\nRules:\n- Bold place names with **\n- Context in parentheses\n- Page numbers comma-separated\n- NO LaTeX - just markdown\n- Do NOT include heading (###) - just the entries\n- One entry per line\n\nSource: {book_content}\n"
       }
     ]
   },
@@ -178,7 +177,7 @@
     "messages": [
       {
         "role": "user",
-        "content": "Create EXACTLY THREE (3) mnemonics to help readers remember key concepts from this declassified intelligence document.\n\n**CRITICAL FORMATTING REQUIREMENTS:**\n\nFormat MUST be EXACTLY as shown:\n\n## Mnemonics\n\nRISKS (Soviet Conquest Disadvantages)\n\n- **R**: Resource shortages (oil, rubber)\n- **I**: Industrial disruption from war damage\n- **S**: Security challenges controlling hostile populations\n- **K**: Key materials blocked by naval blockade\n- **S**: Supply lines stretched impossibly thin\n\nGAINS (Potential Soviet Advantages)\n\n- **G**: German scientific expertise acquired\n- **A**: Atomic program accelerated by 2 years\n- **I**: Industrial capacity doubled\n- **N**: New skilled manpower obtained\n- **S**: Steel production significantly increased\n\nTIME (Assessment Timeline)\n\n- **T**: Ten years to equal US economically\n- **I**: Immediate gains limited by war damage\n- **M**: Mid-1950 atomic bomb estimate\n- **E**: European conquest before 1950 unlikely\n\n**STRICT RULES:**\n1. Create EXACTLY 3 mnemonics (no more, no less)\n2. Each mnemonic starts with the acrostic word flush left (e.g., \"RISKS\")\n3. Follow acrostic with theme in parentheses on same line\n4. Blank line after acrostic/theme line\n5. List each letter meaning with bullet format: - **Letter**: Meaning\n6. Blank line between each mnemonic group\n7. Use markdown format (NO LaTeX)\n8. Use ## for \"Mnemonics\" header only\n9. Make mnemonics memorable and relevant to key document themes\n\nSource document:\n{book_content}\n"
+        "content": "Create EXACTLY THREE (3) mnemonics to help readers remember key concepts from this declassified intelligence document.\n\nReturn a structured JSON object with the following format:\n\n{\n  \"mnemonics\": [\n    {\n      \"acronym\": \"RISKS\",\n      \"theme\": \"Soviet Conquest Disadvantages\",\n      \"items\": [\n        {\"letter\": \"R\", \"meaning\": \"Resource shortages (oil, rubber)\"},\n        {\"letter\": \"I\", \"meaning\": \"Industrial disruption from war damage\"},\n        {\"letter\": \"S\", \"meaning\": \"Security challenges controlling hostile populations\"},\n        {\"letter\": \"K\", \"meaning\": \"Key materials blocked by naval blockade\"},\n        {\"letter\": \"S\", \"meaning\": \"Supply lines stretched impossibly thin\"}\n      ]\n    },\n    {\n      \"acronym\": \"GAINS\",\n      \"theme\": \"Potential Soviet Advantages\",\n      \"items\": [\n        {\"letter\": \"G\", \"meaning\": \"German scientific expertise acquired\"},\n        {\"letter\": \"A\", \"meaning\": \"Atomic program accelerated by 2 years\"},\n        {\"letter\": \"I\", \"meaning\": \"Industrial capacity doubled\"},\n        {\"letter\": \"N\", \"meaning\": \"New skilled manpower obtained\"},\n        {\"letter\": \"S\", \"meaning\": \"Steel production significantly increased\"}\n      ]\n    },\n    {\n      \"acronym\": \"TIME\",\n      \"theme\": \"Assessment Timeline\",\n      \"items\": [\n        {\"letter\": \"T\", \"meaning\": \"Ten years to equal US economically\"},\n        {\"letter\": \"I\", \"meaning\": \"Immediate gains limited by war damage\"},\n        {\"letter\": \"M\", \"meaning\": \"Mid-1950 atomic bomb estimate\"},\n        {\"letter\": \"E\", \"meaning\": \"European conquest before 1950 unlikely\"}\n      ]\n    }\n  ]\n}\n\n**REQUIREMENTS:**\n1. Create EXACTLY 3 mnemonics (no more, no less)\n2. Each mnemonic must have: acronym, theme, and array of items\n3. Each item must have: letter and meaning\n4. Make mnemonics memorable and relevant to key document themes\n5. Return ONLY the JSON structure - no markdown text\n\nSource document:\n{book_content}\n"
       }
     ]
   }

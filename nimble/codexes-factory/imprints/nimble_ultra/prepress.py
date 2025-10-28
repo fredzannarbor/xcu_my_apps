@@ -12,7 +12,7 @@ import uuid
 import textwrap
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Optional, Any
+from typing import Dict, Optional, Any, List
 
 import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
@@ -302,7 +302,13 @@ class NimbleUltraGlobalProcessor:
 
     def _generate_latex_with_pdf_body(self, metadata: Dict[str, Any]) -> str:
         """Generate LaTeX document that includes PDF body and AI-generated content."""
-        title = escape_latex(metadata.get("title", "Untitled"))
+        raw_title = metadata.get("title", "Untitled")
+        # Split title at colon if present for line break on title page
+        if ':' in raw_title:
+            title_parts = raw_title.split(':', 1)
+            title = escape_latex(title_parts[0].strip()) + ':\\\\[0.5cm]' + escape_latex(title_parts[1].strip())
+        else:
+            title = escape_latex(raw_title)
         author = escape_latex(metadata.get("author", "Unknown Author"))
 
         # Check if we have pipeline content
@@ -381,8 +387,8 @@ Version: {version}
 \\end{{center}}
 {keywords_section}"""
 
-        # --- Table of Contents - must start on odd page (recto) ---
-        toc_content = """\\cleardoublepage
+        # --- Table of Contents - page iii (recto), unnumbered, no blank before ---
+        toc_content = """\\clearpage
 \\thispagestyle{{empty}}
 \\tableofcontents*
 \\cleardoublepage"""
@@ -392,9 +398,9 @@ Version: {version}
         if has_pipeline_content:
             front_matter_data = pipeline_content.get("front_matter", {})
 
-            # Motivation - pass raw parsed_content for template detection
-            if "motivation" in front_matter_data:
-                raw_content = front_matter_data["motivation"]
+            # Publisher's Note - pass raw parsed_content for template detection
+            if "publishers_note" in front_matter_data:
+                raw_content = front_matter_data["publishers_note"]
                 # Extract the actual dict if it's nested in parsed_content
                 if isinstance(raw_content, dict) and 'publishers_note' in raw_content:
                     content_to_format = raw_content['publishers_note']
@@ -404,7 +410,7 @@ Version: {version}
                     # Apply signature formatting before section formatting
                     content_to_format = self._format_publishers_note_signature(content_to_format)
                     front_matter_sections += self._format_section(
-                        "Motivation",
+                        "Publisher's Note",
                         content_to_format,
                         use_markdown=True
                     )
@@ -424,15 +430,27 @@ Version: {version}
                         use_markdown=True
                     )
 
-            # Abstracts - markdown string content
+            # Abstracts - check for structured dict or fallback to markdown
             if "abstracts_x4" in front_matter_data:
-                abstracts_content = self._extract_content(front_matter_data["abstracts_x4"])
-                if abstracts_content:
+                raw_abstracts = front_matter_data["abstracts_x4"]
+                # Check if it's structured JSON (dict with 'abstracts' key containing tldr, executive_summary, etc.)
+                if isinstance(raw_abstracts, dict) and 'abstracts' in raw_abstracts:
+                    # Use structured renderer
+                    abstracts_latex = self._render_structured_abstracts(raw_abstracts['abstracts'])
                     front_matter_sections += self._format_section(
                         "Abstracts",
-                        abstracts_content,
-                        use_markdown=True
+                        abstracts_latex,
+                        use_markdown=False  # Already LaTeX
                     )
+                else:
+                    # Fallback to markdown (legacy format)
+                    abstracts_content = self._extract_content(raw_abstracts)
+                    if abstracts_content:
+                        front_matter_sections += self._format_section(
+                            "Abstracts",
+                            abstracts_content,
+                            use_markdown=True
+                        )
 
             # Important Passages - markdown string content with special formatting
             if "important_passages" in front_matter_data:
@@ -463,9 +481,9 @@ Indexes are generated with reference to the current document's pagination, not t
 
 \\cleardoublepage
 
-% Custom footer for back matter with "Back Matter - N" format
-\\makeoddfoot{mypagestyle}{}{Back Matter~-~}{\\thepage}
-\\makeevenfoot{mypagestyle}{\\thepage}{Back Matter~-~}{}
+% Custom footer for back matter - just page numbers
+\\makeoddfoot{mypagestyle}{}{}{\\thepage}
+\\makeevenfoot{mypagestyle}{\\thepage}{}{}
 """
 
         # --- Build Back Matter Sections ---
@@ -515,20 +533,53 @@ Indexes are generated with reference to the current document's pagination, not t
                             use_markdown=False  # Already converted to LaTeX
                         )
 
-            # Mnemonics (markdown that needs conversion to LaTeX) - at end of back matter
+            # Mnemonics - check for structured list or fallback to markdown
             if "mnemonics" in back_matter_data:
                 logger.info("🔍 DEBUG: Found mnemonics in back_matter_data, extracting...")
-                mnemonics_markdown = self._extract_content(back_matter_data["mnemonics"])
-                logger.info(f"🔍 DEBUG: Extracted mnemonics markdown: {len(mnemonics_markdown)} chars")
-                if mnemonics_markdown:
-                    # Convert markdown to LaTeX using new converter
-                    mnemonics_content = convert_mnemonics_markdown_to_latex(mnemonics_markdown)
-                    logger.info(f"✅ DEBUG: Converted mnemonics to LaTeX: {len(mnemonics_content)} chars")
+                raw_mnemonics = back_matter_data["mnemonics"]
 
-                    back_matter_sections += f"\n{mnemonics_content}\n"
-                    logger.info("✅ DEBUG: Added formatted mnemonics to back_matter_sections")
+                # Check if it's already a list (structured format directly)
+                if isinstance(raw_mnemonics, list) and len(raw_mnemonics) > 0:
+                    # Check if first item has expected structure
+                    if all(isinstance(m, dict) and 'acronym' in m and 'items' in m for m in raw_mnemonics):
+                        # Use structured renderer
+                        mnemonics_latex = self._render_structured_mnemonics(raw_mnemonics)
+                        back_matter_sections += self._format_section(
+                            "Mnemonics",
+                            mnemonics_latex,
+                            use_markdown=False  # Already LaTeX
+                        )
+                        logger.info(f"✅ DEBUG: Rendered {len(raw_mnemonics)} structured mnemonics to LaTeX")
+                    else:
+                        logger.warning("⚠️  DEBUG: List format not recognized, using markdown fallback")
+                        mnemonics_markdown = str(raw_mnemonics)
+                        mnemonics_content = convert_mnemonics_markdown_to_latex(mnemonics_markdown)
+                        back_matter_sections += f"\n{mnemonics_content}\n"
+                # Check if it's a dict with 'mnemonics' key containing the array
+                elif isinstance(raw_mnemonics, dict) and 'mnemonics' in raw_mnemonics:
+                    mnemonics_list = raw_mnemonics['mnemonics']
+                    if isinstance(mnemonics_list, list) and len(mnemonics_list) > 0:
+                        mnemonics_latex = self._render_structured_mnemonics(mnemonics_list)
+                        back_matter_sections += self._format_section(
+                            "Mnemonics",
+                            mnemonics_latex,
+                            use_markdown=False  # Already LaTeX
+                        )
+                        logger.info(f"✅ DEBUG: Rendered {len(mnemonics_list)} structured mnemonics from dict to LaTeX")
+                    else:
+                        logger.warning("⚠️  DEBUG: mnemonics list is empty")
                 else:
-                    logger.warning("⚠️  DEBUG: mnemonics_markdown was empty after extraction")
+                    # Fallback to markdown (legacy format - string)
+                    mnemonics_markdown = self._extract_content(raw_mnemonics)
+                    logger.info(f"🔍 DEBUG: Extracted mnemonics markdown: {len(mnemonics_markdown)} chars")
+                    if mnemonics_markdown:
+                        # Convert markdown to LaTeX using converter
+                        mnemonics_content = convert_mnemonics_markdown_to_latex(mnemonics_markdown)
+                        logger.info(f"✅ DEBUG: Converted mnemonics to LaTeX: {len(mnemonics_content)} chars")
+                        back_matter_sections += f"\n{mnemonics_content}\n"
+                        logger.info("✅ DEBUG: Added formatted mnemonics to back_matter_sections")
+                    else:
+                        logger.warning("⚠️  DEBUG: mnemonics_markdown was empty after extraction")
             else:
                 logger.warning("⚠️  DEBUG: 'mnemonics' not found in back_matter_data")
 
@@ -649,7 +700,7 @@ Indexes are generated with reference to the current document's pagination, not t
             content_keys_to_try = [
                 "keywords", "publishers_note", "historical_context", "abstracts_x4",
                 "important_passages", "index_of_persons", "index_of_places",
-                "passages", "persons", "places", "mnemonics", "text", "content", "motivation", "context"
+                "passages", "persons", "places", "mnemonics", "text", "content", "context"
             ]
             for key in content_keys_to_try:
                 if key in section_data:
@@ -668,7 +719,7 @@ Indexes are generated with reference to the current document's pagination, not t
                 logger.warning(f"Skipping section with error: {content.get('error', 'Unknown error')}")
                 return ""
             # Try common content keys
-            for key in ["keywords", "text", "content", "motivation", "context", "passages", "persons", "places"]:
+            for key in ["keywords", "text", "content", "publishers_note", "context", "passages", "persons", "places"]:
                 if key in content:
                     return str(content[key])
             # If no specific key found, return the whole dict as string (will be ugly but visible)
@@ -685,7 +736,7 @@ Indexes are generated with reference to the current document's pagination, not t
                 # If it's a dict with specific content keys, extract them
                 if isinstance(content_json, dict):
                     # Try common content keys
-                    for key in ["keywords", "text", "content", "motivation", "context", "passages", "persons", "places"]:
+                    for key in ["keywords", "text", "content", "publishers_note", "context", "passages", "persons", "places"]:
                         if key in content_json:
                             return str(content_json[key])
                     # If no specific key found, return the whole JSON as string
@@ -849,6 +900,80 @@ Indexes are generated with reference to the current document's pagination, not t
 
         return content
 
+    def _render_structured_abstracts(self, abstracts_dict: Dict[str, str]) -> str:
+        """
+        Render structured abstracts dict to LaTeX with proper formatting.
+
+        Note: This returns ONLY the section content (subsections).
+        The chapter heading will be added by _format_section().
+
+        Args:
+            abstracts_dict: Dict with keys: tldr, executive_summary, academic_abstract, general_reader_summary
+
+        Returns:
+            LaTeX-formatted abstracts (subsections only, no chapter heading)
+        """
+        latex = ""
+
+        # TLDR - guaranteed line break
+        if 'tldr' in abstracts_dict:
+            latex += "\\subsection*{TLDR (five words or less)}\\label{tldr}\n\n"
+            latex += f"{escape_latex(abstracts_dict['tldr'])}\n\n"
+
+        # Executive Summary
+        if 'executive_summary' in abstracts_dict:
+            latex += "\\subsection*{Executive Summary}\\label{executive-summary}\n\n"
+            latex += f"{escape_latex(abstracts_dict['executive_summary'])}\n\n"
+
+        # Academic Abstract
+        if 'academic_abstract' in abstracts_dict:
+            latex += "\\subsection*{Academic Abstract}\\label{academic-abstract}\n\n"
+            latex += f"{escape_latex(abstracts_dict['academic_abstract'])}\n\n"
+
+        # General Reader Summary
+        if 'general_reader_summary' in abstracts_dict:
+            latex += "\\subsection*{General Reader Summary}\\label{general-reader-summary}\n\n"
+            latex += f"{escape_latex(abstracts_dict['general_reader_summary'])}\n\n"
+
+        return latex
+
+    def _render_structured_mnemonics(self, mnemonics_list: List[Dict]) -> str:
+        """
+        Render structured mnemonics list to LaTeX with proper formatting.
+
+        Args:
+            mnemonics_list: List of dicts, each with: acronym, theme, items[{letter, meaning}]
+
+        Returns:
+            LaTeX-formatted mnemonics
+        """
+        latex = ""
+
+        for i, mnemonic in enumerate(mnemonics_list):
+            acronym = mnemonic.get('acronym', '')
+            theme = mnemonic.get('theme', '')
+            items = mnemonic.get('items', [])
+
+            # Acronym and theme on one line, flush left
+            latex += f"\\noindent\\textbf{{{escape_latex(acronym)}}} ({escape_latex(theme)})\\par\n\n"
+            latex += "\\vspace{6pt}\n\n"
+
+            # Items as unnumbered list
+            latex += "\\begin{itemize}\n"
+            latex += "\\setlength{\\itemsep}{0pt}\n"
+            latex += "\\setlength{\\parskip}{0pt}\n"
+            for item in items:
+                letter = item.get('letter', '')
+                meaning = item.get('meaning', '')
+                latex += f"  \\item \\textbf{{{escape_latex(letter)}}}: {escape_latex(meaning)}\n"
+            latex += "\\end{itemize}\n\n"
+
+            # Add spacing between mnemonic groups (but not after last one)
+            if i < len(mnemonics_list) - 1:
+                latex += "\\vspace{12pt}\n\n"
+
+        return latex
+
     def _format_passages_structure(self, content: str) -> str:
         """
         Fix structural formatting issues in Important Passages (line breaks).
@@ -901,8 +1026,8 @@ Indexes are generated with reference to the current document's pagination, not t
 
         # Add \noindent and \par to label lines for flush left alignment and proper paragraph closure
         # This prevents hanging indent or parindent from bleeding through
-        latex_content = re.sub(r'^(Passage Topic:.*?)$', r'\\noindent \1\\par', latex_content, flags=re.MULTILINE)
-        latex_content = re.sub(r'^(Location:.*?)$', r'\\noindent \1\\par', latex_content, flags=re.MULTILINE)
+        latex_content = re.sub(r'^(Passage Topic:.*?)$', r'\\noindent \1\\par\\vspace{6pt}', latex_content, flags=re.MULTILINE)
+        latex_content = re.sub(r'^(Location:.*?)$', r'\\noindent \1\\par\\vspace{6pt}', latex_content, flags=re.MULTILINE)
         latex_content = re.sub(r'^(Significance:)$', r'\\noindent \1', latex_content, flags=re.MULTILINE)
 
         # Add blank line before subsequent "Passage Topic:" entries (not the first one)
@@ -1310,7 +1435,7 @@ def process_single_book(
             # This allows us to use markdown content directly without parsing responses
             top_level_front_matter = {
                 'bibliographic_key_phrases': 'keywords',  # Map to actual top-level key
-                'motivation': 'motivation',
+                'publishers_note': 'publishers_note',
                 'historical_context': 'historical_context',
                 'abstracts_x4': 'abstracts_x4',
                 'important_passages': 'most_important_passages_with_reasoning'
@@ -1357,7 +1482,7 @@ def process_single_book(
                 front_matter_mappings = {
                     'bibliographic_key_phrases': 'bibliographic_key_phrases',
                     'gemini_get_basic_info_from_public_domain': 'basic_info',
-                    'motivation': 'motivation',
+                    'publishers_note': 'publishers_note',
                     'place_in_historical_context': 'historical_context',
                     'abstracts_x4': 'abstracts_x4',
                     'most_important_passages_with_reasoning': 'important_passages'
