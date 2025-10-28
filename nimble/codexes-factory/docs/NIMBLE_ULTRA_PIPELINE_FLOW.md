@@ -53,9 +53,9 @@ imprints/nimble_ultra/content_pipeline.json
   },
   "default_codex_type": "declassified_intelligence_report",
   "prompt_defaults": {
-    "model": "gemini/gemini-2.0-flash-exp",
+    "model": "gemini/gemini-2.5-pro",
     "temperature": 0.7,
-    "max_tokens": 8000
+    "max_tokens": 65536
   }
 }
 ```

@@ -666,47 +666,21 @@
     ]
   },
   "index_of_persons": {
-    "params": {
-      "temperature": 0.3,
-      "max_tokens": 3000
-    },
+    "response_format": "text",
     "messages": [
       {
-        "role": "system",
-        "content": "You are a professional book indexer."
-      },
-      {
         "role": "user",
-        "content": "Your task is to create a back-of-the-book Index of Persons for this book. Proceed through the manuscript one page at a time, reading every page carefully while still bearing in mind the relevant context of the entire book. Create an alphabetical index in pandoc markdown format. Output begins: # Index of Persons. No letter headings. Names in the following format: **{last name, prefix, first name, initial, suffix, rank}**. Omit any elements not present. Consolidate and harmonize entries with minor inconsistencies. For each entry provide the page numbers on which it was found. Roman numbers first, then arabic. Contiguous pages expressed as a range. Each index entry MUST be on its own line followed by TWO new line characters."
+        "content": "You are a professional book indexer.\n\nCreate an index of persons mentioned in this document in MARKDOWN format.\n\n# Format Requirements\n\nEach entry should follow this format:\n**Person Name** (Role, Context): page, numbers\n\n# Examples\n\n**Churchill, Winston** (British Prime Minister): 12, 18-20\n**Roosevelt, Franklin D.** (US President): 5, 22-24\n**Stalin, Joseph** (Soviet Leader): 1, 15-17, 28\n\n# Important Rules\n\n1. Use **bold** for person names (double asterisks)\n2. Last name first format (Churchill, Winston)\n3. Include role/context in parentheses\n4. List page numbers as: single pages (20), ranges (14-15), or comma-separated (6, 20, 27)\n5. One entry per line\n6. NO LaTeX formatting - just plain markdown\n7. NO document preamble or structure\n8. Sort alphabetically by last name\n\n# Source Document\n\n{book_content}\n"
       }
-    ],
-    "tags": [
-      "back matter",
-      "index",
-      "persons",
-      "book organization"
     ]
   },
   "index_of_places": {
-    "params": {
-      "temperature": 0.3,
-      "max_tokens": 3000
-    },
+    "response_format": "text",
     "messages": [
       {
-        "role": "system",
-        "content": "You are a professional book indexer."
-      },
-      {
         "role": "user",
-        "content": "Your task is to create a back-of-the-book Index of Places for this book. Proceed through the manuscript one page at a time, reading every page carefully while still bearing in mind the relevant context of the entire book. Create an alphabetical index in pandoc markdown format. Output begins: # Index of Places. No letter headings. You must consolidate and harmonize index entries so that each index entry has only one line that includes all its page references. You must also harmonize minor inconsistencies such as apparent typos or variant spellings. For each entry provide the page numbers on which it was found. Roman numbers first, then arabic. Contiguous pages expressed as a range. Each index entry MUST be on its own line followed by TWO new line characters."
+        "content": "You are a professional book indexer.\n\nCreate an index of places mentioned in this document in MARKDOWN format.\n\n# Format Requirements\n\nEach entry should follow this format:\n**Place Name** (Type, Region): page, numbers\n\n# Examples\n\n**Atlantic Ocean** (Geographic feature): 6, 20\n**Austria** (Country, Europe): 14-15, 18, 27\n**Berlin** (City, Germany): 5-7, 12\n\n# Important Rules\n\n1. Use **bold** for place names (double asterisks)\n2. Include context in parentheses (type, region, country, etc.)\n3. List page numbers as: single pages (20), ranges (14-15), or comma-separated (6, 20, 27)\n4. One entry per line\n5. NO LaTeX formatting - just plain markdown\n6. NO document preamble or structure\n7. Sort alphabetically\n\n# Source Document\n\n{book_content}\n"
       }
-    ],
-    "tags": [
-      "back matter",
-      "index",
-      "places",
-      "book organization"
     ]
   },
   "mnemonics_abstract": {
@@ -737,26 +711,12 @@
     ]
   },
   "mnemonics_prompt": {
-    "params": {
-      "temperature": 0.7,
-      "max_tokens": 8000
-    },
+    "response_format": "text",
     "messages": [
       {
-        "role": "system",
-        "content": "You are an expert in creating mnemonics to help readers remember key concepts from books. Your task is to create three creative mnemonics based on the book content provided by the user. Focus specifically on the book's content, not on the art of mnemonics itself. The mnemonics should help readers remember the key themes, concepts, and insights from the book's quotations."
-      },
-      {
         "role": "user",
-        "content": "Based on the following book content and its quotations, generate a list of three creative mnemonics that specifically help readers remember the key themes, concepts, and insights from THIS SPECIFIC BOOK'S QUOTATIONS. DO NOT create generic mnemonics about learning or memory techniques. Instead, focus on the actual subject matter and content of the book's quotations.\n\nReturn as a valid JSON object with one key 'mnemonics_tex' containing complete LaTeX code ready to be saved as a .tex file. The LaTeX should NOT include \\documentclass, \\begin{document}, or \\end{document} - just the content that will be included in the main document. Each mnemonic acronym and its explanation should total no more than 80 tokens.\n\nExample format:\n\n% Mnemonics for Key Themes in This Book\n\\chapter*{Mnemonics}\n\\addcontentsline{toc}{chapter}{Mnemonics}\n\n\\textbf{C.L.E.A.R. Thinking} (from the critical thinking quotations)\n\n\\begin{itemize}\n    \\item \\textbf{C}hallenge assumptions\n    \\item \\textbf{L}ook for evidence\n    \\item \\textbf{E}valuate alternatives\n    \\item \\textbf{A}pply reasoning\n    \\item \\textbf{R}eflect on outcomes\n\\end{itemize}\n\nBook Content:\n$book_content$"
+        "content": "You are an expert in creating memory aids to help readers remember key concepts from books.\n\nCreate mnemonics in MARKDOWN format based on the book content provided.\n\n# Format Requirements\n\nUse this markdown structure:\n\n## Mnemonics\n\n**ACRONYM** (Theme Description)\n\n- **Letter**: Meaning or concept\n- **Letter**: Meaning or concept\n- **Letter**: Meaning or concept\n\n# Example\n\n## Mnemonics\n\n**S.A.F.E.** (Security Framework)\n\n- **S**: Secure all entry points\n- **A**: Assess potential threats\n- **F**: Follow established protocols\n- **E**: Evaluate and improve continuously\n\n# Important Rules\n\n1. Use ## for section headers\n2. Use **bold** for acronyms and emphasized text (double asterisks)\n3. Use bullet lists with - (dash) for list items\n4. Create 2-3 different mnemonics covering different themes from the book\n5. Make acronyms meaningful and memorable\n6. NO LaTeX formatting - just plain markdown\n7. NO document preamble (no \\documentclass, \\begin{{document}}, etc.)\n\n# Source Content\n\n{book_content}\n"
       }
-    ],
-    "tags": [
-      "returns_tex",
-      "pilsa",
-      "back matter",
-      "content-generation",
-      "json"
     ]
   },
   "most_important_passages_no_reasoning": {

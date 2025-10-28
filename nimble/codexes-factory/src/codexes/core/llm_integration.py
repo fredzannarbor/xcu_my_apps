@@ -185,13 +185,16 @@ Example INCORRECT format:
             
             # Determine response format
             response_format = ResponseFormat.JSON if response_format_type == "json_object" else ResponseFormat.TEXT
-            
+
+            # Log the format conversion for debugging
+            logger.debug(f"Converting response_format_type '{response_format_type}' to {response_format}")
+
             # Create a temporary prompt key for this call
             temp_prompt_key = f"temp_prompt_{hash(str(messages))}"
-            
+
             # Use content generator with direct message passing
             from nimble_llm_caller.models.request import LLMRequest
-            
+
             request = LLMRequest(
                 prompt_key=temp_prompt_key,
                 model=model_name,
@@ -199,6 +202,8 @@ Example INCORRECT format:
                 model_params=model_params,
                 metadata={"messages": messages}
             )
+
+            logger.debug(f"Created LLMRequest with response_format: {request.response_format} (type: {type(request.response_format)})")
             
             response = self.content_generator.llm_caller.call(request)
             
@@ -241,28 +246,31 @@ Example INCORRECT format:
             for i, config_wrapper in enumerate(prompt_configs):
                 prompt_config = config_wrapper.get("prompt_config", {})
                 prompt_key = config_wrapper.get("key", f"temp_prompt_{i}")
-                
+
                 # Determine which model to use
                 model_to_use = prompt_config.get("params", {}).get("model")
                 if not model_to_use:
                     model_to_use = models[0] if models else self._get_default_model()
-                
+
                 # Initialize response list for this model
                 if model_to_use not in all_responses:
                     all_responses[model_to_use] = []
-                
+
                 # Merge per-model parameters if provided
                 final_prompt_config = prompt_config.copy()
                 if per_model_params and model_to_use in per_model_params:
                     final_prompt_config.setdefault("params", {}).update(
                         per_model_params[model_to_use]
                     )
-                
+
+                # Determine response format - use per-prompt override if available, else use global
+                prompt_response_format = prompt_config.get("response_format", response_format_type)
+
                 # Make the call using the single model function
                 response_data = self.call_model_with_prompt(
                     model_name=model_to_use,
                     prompt_config=final_prompt_config,
-                    response_format_type=response_format_type
+                    response_format_type=prompt_response_format
                 )
                 
                 # Add prompt key to response

@@ -9,10 +9,11 @@ logger = logging.getLogger(__name__)
 def load_and_prepare_prompts(
         prompt_file_path: str,
         prompt_keys: List[str],
-        substitutions: Dict[str, Any]
+        substitutions: Dict[str, Any],
+        base_prompt_files: Optional[List[str]] = None
 ) -> Optional[List[Dict[str, Any]]]:
     """
-    Loads prompts from JSON files, filters by keys, and prepares them for the LLM caller.
+    Loads prompts from JSON files with hierarchical override support, filters by keys, and prepares them for the LLM caller.
 
     This function handles two prompt formats in the source JSON:
     1. A simple "prompt" key with a string value.
@@ -20,26 +21,63 @@ def load_and_prepare_prompts(
 
     It performs placeholder substitution on the content for both formats.
 
+    Prompts are loaded in priority order: base < publisher < imprint < series
+    Later files override prompts from earlier files with the same key.
+
     Args:
         prompt_file_path: The path to the main prompt configuration file.
         prompt_keys: A list of prompt keys to load and prepare.
         substitutions: A dictionary of placeholder keys and their values.
+        base_prompt_files: Optional list of base prompt files to load first (in priority order).
+                          If None, will attempt to load from prompts/combined_prompts.json
 
     Returns:
         A list of prepared prompt configurations ready for the LLM caller, or None on error.
     """
-    if not os.path.exists(prompt_file_path):
-        logging.error(f"Prompt file not found: {prompt_file_path}")
-        return None
-
     all_prompts = {}
-    try:
-        with open(prompt_file_path, 'r', encoding='utf-8') as f:
-            all_prompts.update(json.load(f))
-        logger.info(f"✅ Successfully loaded prompts from: {prompt_file_path}")
-        # You could add logic here to load from multiple files if needed
-    except (IOError, json.JSONDecodeError) as e:
-        logging.error(f"Could not load or parse prompt file {prompt_file_path}: {e}", exc_info=True)
+
+    # Determine base files to load
+    files_to_load = []
+    if base_prompt_files:
+        files_to_load.extend(base_prompt_files)
+    else:
+        # Default base file - compute path relative to the imprint file's directory
+        if prompt_file_path:
+            prompt_dir = os.path.dirname(os.path.abspath(prompt_file_path))
+            # Go up from imprints/xxx to project root
+            project_root = os.path.dirname(os.path.dirname(prompt_dir))
+            base_file = os.path.join(project_root, "prompts", "combined_prompts.json")
+        else:
+            # Fallback to current working directory
+            base_file = "prompts/combined_prompts.json"
+
+        if os.path.exists(base_file):
+            files_to_load.append(base_file)
+        else:
+            logger.info(f"Base prompts file not found at: {base_file}")
+
+    # Add the main prompt file (highest priority)
+    if prompt_file_path:
+        files_to_load.append(prompt_file_path)
+
+    # Load all files in priority order (earlier = lower priority)
+    for file_path in files_to_load:
+        if not os.path.exists(file_path):
+            logger.info(f"Prompt file not found, skipping: {file_path}")
+            continue
+
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                file_prompts = json.load(f)
+                # Update (override) with prompts from this file
+                all_prompts.update(file_prompts)
+            logger.info(f"✅ Successfully loaded prompts from: {file_path}")
+        except (IOError, json.JSONDecodeError) as e:
+            logging.error(f"Could not load or parse prompt file {file_path}: {e}", exc_info=True)
+            continue
+
+    if not all_prompts:
+        logging.error("No prompts were loaded from any file")
         return None
 
     prepared_prompts = []
@@ -83,6 +121,10 @@ def load_and_prepare_prompts(
         # Carry over any other parameters, like 'params' for model-specific settings
         if "params" in prompt_data:
             prompt_config["params"] = prompt_data["params"]
+
+        # Carry over response_format if specified in the prompt
+        if "response_format" in prompt_data:
+            prompt_config["response_format"] = prompt_data["response_format"]
 
         prepared_prompts.append({
             "key": key,

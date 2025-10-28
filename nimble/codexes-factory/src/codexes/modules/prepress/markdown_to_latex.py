@@ -176,10 +176,10 @@ def convert_index_markdown_to_latex(markdown: str) -> str:
             formatted_lines.append("")  # Blank line after heading
             current_letter = first_char
 
-        # Add hanging indent command with explicit paragraph end
-        # CRITICAL: Use \par to end paragraph and reset hanging indent for next entry
-        formatted_lines.append(f"\\hangindent=0.2in\\hangafter=1 {line}\\par")
-        formatted_lines.append("\\vspace{6pt}")  # Vertical space between entries
+        # CRITICAL: Entries must be flush left with NO hanging indent
+        # Use \noindent to ensure flush left, \par to close paragraph
+        formatted_lines.append(f"\\noindent {line}\\par")
+        formatted_lines.append("\\vspace{12pt}")  # Visible empty line between entries
 
     return '\n'.join(formatted_lines)
 
@@ -269,11 +269,10 @@ def convert_mnemonics_markdown_to_latex(markdown: str) -> str:
     # Convert **bold** to \textbf{}
     content = re.sub(r'\*\*([^*]+?)\*\*', r'\\textbf{\1}', content)
 
-    # Convert bullet lists to itemize environments
-    # This is more complex - need to find bullet groups
+    # Convert bullet lists to plain text with bullet character (•)
+    # User wants simple format, not LaTeX itemize
     lines = content.split('\n')
     result_lines = []
-    in_list = False
 
     for i, line in enumerate(lines):
         stripped = line.strip()
@@ -281,40 +280,30 @@ def convert_mnemonics_markdown_to_latex(markdown: str) -> str:
         # Check if line is a bullet
         is_bullet = stripped.startswith('-') or stripped.startswith('*') or stripped.startswith('•')
 
-        if is_bullet and not in_list:
-            # Start of list
-            result_lines.append('\n\\begin{itemize}')
-            in_list = True
-        elif not is_bullet and in_list and stripped:
-            # End of list (non-empty non-bullet line)
-            result_lines.append('\\end{itemize}\n')
-            in_list = False
-
         if is_bullet:
-            # Convert bullet line to \item
+            # Convert bullet line to plain text with hyphen (markdown-safe)
             # Remove leading bullet marker
             item_text = re.sub(r'^\s*[-*•]\s+', '', stripped)
-            result_lines.append(f'    \\item {item_text}')
-        elif stripped or not in_list:
-            # Non-bullet lines (like acrostic headings) need \par to close paragraph
-            if stripped and not in_list and not line.startswith('\\'):
-                # This is a content line (like "BLOCK (...)"), add \par
+            # Add hyphen as bullet and \par
+            result_lines.append(f"\\noindent - {item_text}\\par")
+        elif stripped:
+            # Non-bullet lines (like acrostic headings) need \par and empty line after
+            if not line.startswith('\\'):
+                # This is a content line (like "COSTS (...)"), add \par and empty line
                 result_lines.append(f"{line}\\par")
+                result_lines.append("")  # Empty line after acrostic
             else:
-                # Keep LaTeX commands and empty lines as-is
+                # Keep LaTeX commands as-is
                 result_lines.append(line)
-
-    # Close list if still open at end
-    if in_list:
-        result_lines.append('\\end{itemize}\n')
+        else:
+            # Keep empty lines
+            result_lines.append(line)
 
     content = '\n'.join(result_lines)
 
     # Add proper spacing around structural elements
     content = re.sub(r'(\\chapter\*\{[^}]+\})\s*', r'\1\n', content)
     content = re.sub(r'(\\addcontentsline\{[^}]+\}\{[^}]+\}\{[^}]+\})\s*', r'\1\n\n', content)
-    content = re.sub(r'\\begin\{itemize\}', r'\n\\begin{itemize}\n', content)
-    content = re.sub(r'\\end\{itemize\}', r'\n\\end{itemize}\n\n', content)
 
     # Ensure it ends with cleardoublepage
     if not content.strip().endswith("\\cleardoublepage"):
