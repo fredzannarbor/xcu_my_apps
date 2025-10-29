@@ -1,0 +1,183 @@
+%
+% Nimitz Graybook Cover Template
+% For 8.5x11 color hardcover
+%
+
+\documentclass[12pt]{article}
+
+% Required packages
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Font setup
+\newfontfamily\titlefont{Helvetica Neue Bold}
+\newfontfamily\subtitlefont{Helvetica Neue}
+\newfontfamily\imprintfont{Adobe Caslon Pro}
+
+% Cover dimensions for 8.5x11 hardcover with 0.625" spine
+% Total cover width = front (8.5) + spine (0.625) + back (8.5) + bleed = ~18.25"
+% Total cover height = 11 + bleed = ~11.25"
+
+% --- These values are replaced by the Python script ---
+\newcommand{\coverPageHeight}{11.25in}
+\newcommand{\coverPageWidth}{18.25in}
+\newcommand{\coverVolumeNumber}{1}
+\newcommand{\coverVolumeSubtitle}{7 December 1941 to 31 August 1942}
+\newcommand{\coverPeriodCovered}{Pearl Harbor through Early Guadalcanal}
+\newcommand{\coverSpineWidth}{0.625in}
+\newcommand{\coverISBN}{978-1-234567-89-0}
+
+% Page geometry
+\geometry{
+    paperwidth=\coverPageWidth,
+    paperheight=\coverPageHeight,
+    margin=0in
+}
+
+% Naval blue color scheme
+\definecolor{navyblue}{RGB}{27,58,95}
+\definecolor{lightblue}{RGB}{139,157,195}
+\definecolor{gold}{RGB}{218,165,32}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+
+% Background - naval blue
+\fill[navyblue] (current page.south west) rectangle (current page.north east);
+
+% Front cover design
+\begin{scope}[shift={(12.125in, 0)}]  % Position on front cover
+
+    % Title area with subtle texture
+    \fill[lightblue,opacity=0.1] (0, 7in) rectangle (8.5in, 10.5in);
+
+    % Main title
+    \node[
+        text width=7.5in,
+        align=center,
+        text=white
+    ] at (4.25in, 9in) {
+        {\Huge\titlefont COMMAND SUMMARY OF}\\[0.2cm]
+        {\Huge\titlefont FLEET ADMIRAL}\\[0.2cm]
+        {\huge\titlefont CHESTER W. NIMITZ, USN}
+    };
+
+    % Graybook subtitle
+    \node[
+        text=gold,
+        align=center
+    ] at (4.25in, 7.5in) {
+        {\LARGE\titlefont The Nimitz ``Graybook''}
+    };
+
+    % Volume number - large and prominent
+    \node[
+        text=white,
+        align=center
+    ] at (4.25in, 5.5in) {
+        {\fontsize{72}{86}\selectfont\titlefont VOLUME \coverVolumeNumber}
+    };
+
+    % Volume subtitle
+    \node[
+        text width=7in,
+        text=lightblue,
+        align=center
+    ] at (4.25in, 4in) {
+        {\Large\subtitlefont \coverVolumeSubtitle}
+    };
+
+    % Period covered
+    \node[
+        text width=7in,
+        text=white,
+        align=center
+    ] at (4.25in, 3in) {
+        {\large\subtitlefont \coverPeriodCovered}
+    };
+
+    % Decorative naval element - anchor or compass rose
+    \draw[gold, line width=2pt] (4.25in, 1.5in) circle (0.75in);
+    \draw[gold, line width=1pt] (4.25in, 0.75in) -- (4.25in, 2.25in);
+    \draw[gold, line width=1pt] (3.5in, 1.5in) -- (5in, 1.5in);
+
+    % Imprint at bottom
+    \node[
+        text=lightblue,
+        align=center
+    ] at (4.25in, 0.5in) {
+        {\large\imprintfont Warships \& Navies}
+    };
+
+\end{scope}
+
+% Spine design
+\begin{scope}[shift={(9in, 0)}]  % Position on spine
+
+    % Spine text (rotated)
+    \node[
+        rotate=90,
+        text=white,
+        anchor=south
+    ] at (0.3125in, 5.5in) {
+        {\large\titlefont NIMITZ GRAYBOOK Vol. \coverVolumeNumber\quad\quad\coverPeriodCovered}
+    };
+
+\end{scope}
+
+% Back cover design
+\begin{scope}
+
+    % Description area
+    \node[
+        text width=7.5in,
+        text=white,
+        align=justify
+    ] at (4.25in, 7.5in) {
+        {\large\subtitlefont
+        The Nimitz ``Graybook'' is one of the most important primary source documents of World War II in the Pacific. This Command Summary contains CINCPAC staff's running estimate of the situation, summaries of command decisions, and key dispatches from Admiral Nimitz's headquarters at Pearl Harbor.
+
+        \vspace{0.3cm}
+
+        This volume covers \coverPeriodCovered, preserving the original page layout, formatting, and colors from the digitized documents maintained by the Naval History and Heritage Command.
+        }
+    };
+
+    % Barcode area
+    \fill[white] (5.5in, 0.75in) rectangle (7.5in, 2in);
+    \node at (6.5in, 1.375in) {\includegraphics[width=1.75in]{barcode_\coverISBN.png}};
+
+    % ISBN below barcode
+    \node[text=white] at (6.5in, 0.4in) {ISBN: \coverISBN};
+
+    % Imprint
+    \node[
+        text=lightblue,
+        align=left
+    ] at (1.5in, 1in) {
+        {\large\imprintfont Warships \& Navies}\\
+        {\normalsize\imprintfont Nimble Books LLC}
+    };
+
+    % Public domain notice
+    \node[
+        text width=7in,
+        text=lightblue,
+        align=center,
+        font=\small
+    ] at (4.25in, 3.5in) {
+        Original documents are in the public domain.\\
+        Source: Naval History and Heritage Command,\\
+        Papers of Fleet Admiral Chester W. Nimitz, USN
+    };
+
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

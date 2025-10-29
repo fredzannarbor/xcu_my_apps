@@ -1,0 +1,247 @@
+%
+% Nimitz Graybook Interior Template
+% For 8.5x11 color hardcover with centered 8x10.5 original content
+%
+
+\documentclass[11pt]{book}
+
+% Page geometry for 8.5x11
+\usepackage[
+    paperwidth=8.5in,
+    paperheight=11in,
+    margin=0in,
+    includeheadfoot
+]{geometry}
+
+% Required packages
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% Font setup
+\setmainfont{Adobe Caslon Pro}
+\newfontfamily\dispatchfont{Courier New}
+\newfontfamily\headingfont{Helvetica Neue}
+
+% Define colors for original page backgrounds
+\definecolor{pinkpage}{RGB}{255,240,245}
+\definecolor{greenpage}{RGB}{240,255,245}
+\definecolor{whitepage}{RGB}{255,255,255}
+
+% Hyperref setup for bookmarks
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    pdftitle={Command Summary of Fleet Admiral Chester W. Nimitz, USN},
+    pdfauthor={CINCPAC Staff},
+    pdfsubject={WWII Pacific Theater Naval History},
+    pdfkeywords={Nimitz, CINCPAC, Pacific War, WWII, Naval History}
+}
+
+% Command to include original pages centered with background color
+% Usage: \includegraybook[color]{page_number}{pdf_file}
+\newcommand{\includegraybook}[3][white]{
+    \newpage
+    \thispagestyle{empty}
+    % Set background color to fill entire page
+    \pagecolor{#1}
+    % Center the original 8x10.5 content on 8.5x11 page
+    % Original content will have 0.25" margin on left/right, 0.25" on top/bottom
+    \vspace*{0.25in}
+    \begin{center}
+        \includegraphics[
+            width=8in,
+            height=10.5in,
+            keepaspectratio,
+            page=#2
+        ]{#3}
+    \end{center}
+    \vfill
+}
+
+% Alternative command for including with automatic centering
+\newcommand{\includegraypage}[2]{
+    \newpage
+    \thispagestyle{empty}
+    \vspace*{\fill}
+    \begin{center}
+        \includegraphics[
+            width=8in,
+            height=10.5in,
+            keepaspectratio,
+            page=#1
+        ]{#2}
+    \end{center}
+    \vfill
+}
+
+% Header/footer style for front matter
+\fancypagestyle{frontmatter}{
+    \fancyhf{}
+    \fancyhead[LE,RO]{\headingfont\thepage}
+    \fancyhead[LO,RE]{\headingfont\nouppercase{\leftmark}}
+    \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% Header/footer style for main content (minimal - let original pages show)
+\fancypagestyle{maincontent}{
+    \fancyhf{}
+    \fancyfoot[C]{\tiny\color{gray}Nimitz Graybook - Warships \& Navies}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+% Start document
+\begin{document}
+
+% Front matter uses default white background
+\frontmatter
+\pagestyle{frontmatter}
+
+% Title page
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2in}
+
+        {\Huge\headingfont Command Summary of\\[0.3cm]
+        Fleet Admiral Chester W. Nimitz, USN}
+
+        \vspace{0.5in}
+
+        {\LARGE\headingfont The Nimitz ``Graybook''}
+
+        \vspace{0.5in}
+
+        {\Large\headingfont Volume \VAR{VOLUME_NUMBER}}
+
+        \vspace{0.3in}
+
+        {\large\VAR{VOLUME_SUBTITLE}}
+
+        \vfill
+
+        {\large\VAR{PERIOD_COVERED}}
+
+        \vspace{0.5in}
+
+        {\large CINCPAC Staff}\\[0.2cm]
+        {\normalsize Pearl Harbor, Hawaii}
+
+        \vspace{1in}
+
+        {\large\headingfont Warships \& Navies}\\
+        {\normalsize Nimble Books LLC}\\
+        {\normalsize 2025}
+    \end{center}
+\end{titlepage}
+
+% Copyright page
+\newpage
+\thispagestyle{empty}
+\vspace*{5in}
+
+\noindent
+\textbf{Command Summary of Fleet Admiral Chester W. Nimitz, USN}\\
+\textbf{Volume \VAR{VOLUME_NUMBER}: \VAR{VOLUME_SUBTITLE}}
+
+\vspace{0.3in}
+
+\noindent
+This document is in the public domain.
+
+\vspace{0.2in}
+
+\noindent
+Published by Warships \& Navies, an imprint of Nimble Books LLC\\
+www.nimblebooks.com
+
+\vspace{0.2in}
+
+\noindent
+ISBN: \VAR{ISBN}
+
+\vspace{0.2in}
+
+\noindent
+Original source: Papers of Fleet Admiral Chester W. Nimitz, USN, Coll. 505, Series I, Subseries A, Naval History and Heritage Command, Washington, DC.
+
+\vspace{0.2in}
+
+\noindent
+Digitized in 2012 by the Naval War College and Naval History and Heritage Command.
+
+\vspace{0.2in}
+
+\noindent
+This edition prepared and published in 2025 by Nimble Books LLC.
+
+% Publisher's note
+\chapter*{Publisher's Note}
+
+The Nimitz ``Graybook'' is one of the most important primary source documents of World War II in the Pacific. This Command Summary contains CINCPAC staff's running estimate of the situation, summaries of command decisions, and key dispatches from Admiral Nimitz's headquarters at Pearl Harbor.
+
+\vspace{0.2in}
+
+This volume preserves the original page layout, formatting, and colors from the digitized documents. Pages appear in their original sizes (approximately 8×10.5 inches) centered on these 8.5×11 inch pages. Original background colors—including pink, green, and white pages—have been preserved.
+
+\vspace{0.2in}
+
+The original documents contain OCR text generated during the 2012 digitization. While useful for searching, this OCR is uncorrected and should not be relied upon as an accurate transcript.
+
+\vspace{0.2in}
+
+\noindent
+\textbf{About This Edition}
+
+This is Volume \VAR{VOLUME_NUMBER} of a 9-volume set:
+\begin{itemize}
+    \item Volume 0: Master Table of Contents and Index
+    \item Volume 1: 7 December 1941 -- 31 August 1942
+    \item Volume 2: 1 September 1942 -- 31 December 1942
+    \item Volume 3: 1 January 1943 -- 30 June 1943
+    \item Volume 4: 1 July 1943 -- 31 December 1943
+    \item Volume 5: 1 January 1944 -- 31 December 1944
+    \item Volume 6: 1 January 1945 -- 1 July 1945
+    \item Volume 7: 1 July 1945 -- 31 August 1945
+    \item Volume 8: Selected Dispatches (Midway and Early War)
+\end{itemize}
+
+\vspace{0.2in}
+
+For a comprehensive table of contents covering all volumes, please refer to Volume 0.
+
+% Table of contents for this volume
+\tableofcontents
+
+% Main matter - switch to minimal page style
+\mainmatter
+\pagestyle{maincontent}
+
+% CONTENT WILL BE INSERTED HERE BY BUILD SCRIPT
+% Using \includegraypage{page_num}{source_pdf} commands
+
+\VAR{MAIN_CONTENT}
+
+% Back matter
+\backmatter
+
+\chapter*{About Warships \& Navies}
+
+Warships \& Navies is dedicated to preserving and publishing naval history from all navies, all oceans, and all years. We focus on out-of-copyright, out-of-print, or never-printed technical naval materials, making these important historical documents accessible to researchers, enthusiasts, and the general public.
+
+\vspace{0.2in}
+
+Our mission is preservation over profit. Every naval document tells a story worth saving.
+
+\vspace{0.2in}
+
+\noindent
+For more information, visit: www.nimblebooks.com/warships-and-navies
+
+\end{document}
