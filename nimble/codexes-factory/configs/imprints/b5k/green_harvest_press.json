@@ -1,0 +1,205 @@
+{
+  "_config_info": {
+    "description": "To cultivate knowledge and sustainable practices in the agricultural sector.",
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "parent_publisher": "Big Five Killer LLC"
+  },
+  "imprint": "Green Harvest Press",
+  "publisher": "Big Five Killer LLC",
+  "contact_email": "editorial@bigfivekiller.com",
+  "branding": {
+    "logo_path": "logos/b5k/green_harvest_press_logo.png",
+    "brand_colors": {
+      "primary": "#[PRIMARY_COLOR]",
+      "secondary": "#[SECONDARY_COLOR]"
+    },
+    "tagline": "Seed Your Future with Knowledge",
+    "website": "https://www.codexes.xtuff.ai/b5k/green_harvest_press"
+  },
+  "fonts": {
+    "body": "[BODY_FONT]",
+    "heading": "[HEADING_FONT]",
+    "korean": "Apple Myungjo",
+    "quotations": "[BODY_FONT] Italic",
+    "mnemonics": "Source Code Pro"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "[GENRE_1]",
+      "[GENRE_2]",
+      "[GENRE_3]"
+    ],
+    "target_audience": "Farmers, gardeners and environmental enthusiasts interested in sustainable farming techniques.",
+    "specialization": "Organic farming, permaculture, and sustainability.",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "paperback",
+    "interior_color": "BW",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "6x9",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "cover_submission_method": "FTP",
+    "text_block_submission_method": "FTP",
+    "rendition_booktype": "POD: Standard B&W 6 x 9 in or 229 x 152 mm Perfect Bound on Standard 70 White w/Matte Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "[BISAC_1]",
+      "[BISAC_2]",
+      "[BISAC_3]"
+    ],
+    "thema_subject_preferences": [
+      "[THEMA_1]",
+      "[THEMA_2]",
+      "[THEMA_3]"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/[imprint_slug]"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@[IMPRINT_HANDLE]",
+      "facebook": "[IMPRINT_HANDLE]",
+      "instagram": "@[IMPRINT_HANDLE]"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "[LSI_CATEGORY]",
+    "metadata_contact_dictionary": "[IMPRINT_NAME] Editorial Team",
+    "flex_fields": {
+      "lsi_flexfield1": "[FLEX_FIELD_1]",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "editorial@nimblebooks.com",
+    "backup_configurations": true
+  },
+  "publisher_persona": {
+    "persona_name": "Thaumette",
+    "parent_persona": "Thaumette (Big Five Killer LLC)",
+    "imprint_charter": "To cultivate knowledge and sustainable practices in the agricultural sector.",
+    "competitive_advantage": "Our imprint specializes in sustainable farming methods, which are becoming increasingly important due to climate change and environmental concerns.",
+    "risk_tolerance": "moderate",
+    "decision_style": "data-driven with literary quality focus",
+    "preferred_topics": "Organic farming, permaculture, and sustainability.",
+    "target_demographics": "Farmers, gardeners and environmental enthusiasts interested in sustainable farming techniques.",
+    "editorial_philosophy": "Fill profitable gaps ignored by Big Five while maintaining high literary standards"
+  },
+  "wizard_configuration": {
+    "name": "Green Harvest Press",
+    "charter": "To cultivate knowledge and sustainable practices in the agricultural sector.",
+    "imprint_type": "specialized_niche",
+    "genres": [
+      "[GENRE_1]",
+      "[GENRE_2]",
+      "[GENRE_3]"
+    ],
+    "book_format": "6x9 Paperback",
+    "price_point": 24.99,
+    "page_count": 200,
+    "catalog_size": 12,
+    "enable_ideation": true
+  },
+  "codextypes": {
+    "description": "Specialized content types requiring custom interior design and formatting.",
+    "enabled_types": [
+      "standard"
+    ],
+    "type_definitions": {
+      "standard": {
+        "name": "Standard Book",
+        "description": "Traditional layout with chapters and standard formatting.",
+        "template_requirements": [
+          "chapter_headings",
+          "page_numbers",
+          "table_of_contents"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "h1_h2_h3",
+          "quote_formatting": "indented_block",
+          "list_formatting": "bulleted_numbered"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {}
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "[DESIGN_NOTES]",
+      "template_customizations": "[TEMPLATE_CUSTOMIZATIONS]",
+      "typesetting_considerations": "[TYPESETTING_CONSIDERATIONS]"
+    }
+  },
+  "supplementary_materials": {
+    "enabled": false,
+    "description": "Optional supplementary materials that illuminate the domain the imprint operates in. These materials are loaded and included in LLM prompts when generating content for this imprint.",
+    "materials": {
+      "Example Document Title": "path/to/document.txt",
+      "Example PDF Report": "path/to/report.pdf",
+      "Example Markdown Guide": "path/to/guide.md"
+    },
+    "usage_notes": "Paths can be absolute or relative to the imprint config directory. Supported formats: .txt, .md, .markdown, .docx, .pdf. When enabled and use_supplementary is True in batch operations, these materials will be included in model calls using the largest available context window."
+  },
+  "b5k_metadata": {
+    "imprint_id": "imprint_006",
+    "establishment_date": "2025-09-22",
+    "status": "active",
+    "annual_titles_target": "1000-5000",
+    "distribution_channel": "Global POD + Traditional",
+    "examples": "Titles like 'The Organic Farmer's Handbook', 'Permaculture Principles' or authors like Michael Pollan.",
+    "source_system": "bigfive_replacement_import",
+    "import_date": "2025-10-29T14:20:14.567498"
+  }
+}
