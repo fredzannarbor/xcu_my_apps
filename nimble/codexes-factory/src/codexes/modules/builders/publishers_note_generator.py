@@ -1,4 +1,5 @@
-ollama run gpt-oss:20b"""
+# ollama run gpt-oss:20b
+"""
 Publisher's Note Generator - Enhanced Publisher's Note generation with structured formatting
 """
 

@@ -261,7 +261,7 @@ def create_cover_latex(
         for key, value in replacements.items():
             for item in value:
                 # if the value contains Korean characters, we need to escape it first
-               if 'r\korean' in item:
+               if r'\korean' in item:
                     tex_content = _replace_latex_command(tex_content, key, _escape_latex_preserve_korean(item))
             else:
                     tex_content = _replace_latex_command(tex_content, key, _escape_latex(item))
