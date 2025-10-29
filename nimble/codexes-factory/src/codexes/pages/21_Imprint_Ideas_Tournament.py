@@ -126,7 +126,58 @@ def main():
 def render_tournament_setup():
     """Set up a new tournament of imprint ideas."""
     st.subheader("🎯 Tournament Setup")
-    
+
+    # Publisher and Template Selection (Phase 3 Enhancement)
+    with st.expander("🏢 Publisher & Template Selection", expanded=True):
+        col1, col2 = st.columns(2)
+
+        with col1:
+            publisher_options = ["Nimble Books LLC", "Big Five Killer LLC"]
+            selected_publisher = st.selectbox("Publisher", publisher_options, key="tournament_publisher")
+
+            if selected_publisher == "Big Five Killer LLC":
+                st.info("🔮 Thaumette will review all B5K tournament finals")
+                # Load imprints for B5K
+                imprint_path = Path("configs/imprints")
+                if imprint_path.exists():
+                    imprint_files = list(imprint_path.glob("*.json"))
+                    imprint_names = ["All Imprints (Publisher-Level)"] + [f.stem.replace("_", " ").title() for f in imprint_files]
+                else:
+                    imprint_names = ["All Imprints (Publisher-Level)"]
+
+                selected_scope = st.selectbox("Tournament Scope", imprint_names, key="tournament_scope")
+
+                if selected_scope == "All Imprints (Publisher-Level)":
+                    st.success("📚 Running publisher-level tournament across all 575 B5K imprints")
+                    st.session_state.tournament_level = "publisher"
+                else:
+                    st.session_state.tournament_level = "imprint"
+                    st.session_state.tournament_imprint = selected_scope
+            else:
+                st.session_state.tournament_level = "imprint"
+
+        with col2:
+            template_options = ["Idea Generation", "Manuscript Evaluation", "Cover Design"]
+            selected_template = st.selectbox("Tournament Template", template_options, key="tournament_template")
+
+            template_map = {
+                "Idea Generation": "idea_generation.json",
+                "Manuscript Evaluation": "manuscript_evaluation.json",
+                "Cover Design": "cover_design.json"
+            }
+
+            template_file = Path(f"templates/tournament_configs/{template_map[selected_template]}")
+            if template_file.exists():
+                st.success(f"✅ Template loaded: {selected_template}")
+                with open(template_file) as f:
+                    template_config = json.load(f)
+                st.session_state.tournament_template = template_config
+            else:
+                st.warning(f"⚠️ Template not found: {template_file}")
+                st.session_state.tournament_template = None
+
+    st.markdown("---")
+
     # Check for existing tournament
     tournament_file = Path("tournaments/current_imprint_tournament.json")
     

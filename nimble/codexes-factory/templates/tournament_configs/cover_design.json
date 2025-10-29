@@ -1,0 +1,276 @@
+{
+  "_template_info": {
+    "name": "Cover Design Tournament",
+    "description": "Tournament template for selecting winning cover designs through competitive evaluation",
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "suitable_for": ["publisher", "imprint"],
+    "use_case": "Choose best cover design from multiple concepts"
+  },
+  "tournament_config": {
+    "name_template": "{book_title} Cover Design Tournament",
+    "tournament_type": "single_elimination",
+    "default_size": 8,
+    "size_options": [4, 8, 16],
+    "duration_days": 7,
+    "allow_public_voting": true,
+    "allow_author_input": true,
+    "require_thaumette_review": false,
+    "design_expert_required": true
+  },
+  "design_sources": {
+    "internal_designers": {
+      "enabled": true,
+      "max_concepts_per_designer": 2
+    },
+    "external_designers": {
+      "enabled": true,
+      "freelance_contractors": true
+    },
+    "ai_generated": {
+      "enabled": true,
+      "generation_services": [
+        "midjourney",
+        "dall-e-3",
+        "stable-diffusion"
+      ],
+      "require_human_refinement": true
+    },
+    "author_provided": {
+      "enabled": true,
+      "accept_amateur_designs": true,
+      "provide_feedback": true
+    }
+  },
+  "evaluation_criteria": {
+    "default_criteria": [
+      "Genre Appropriateness",
+      "Visual Impact",
+      "Brand Consistency",
+      "Marketability",
+      "Readability (Thumbnail)",
+      "Technical Quality",
+      "Originality",
+      "Author Satisfaction"
+    ],
+    "scoring_method": "multi_stakeholder_weighted",
+    "weights": {
+      "Genre Appropriateness": 0.20,
+      "Visual Impact": 0.20,
+      "Brand Consistency": 0.15,
+      "Marketability": 0.15,
+      "Readability (Thumbnail)": 0.15,
+      "Technical Quality": 0.10,
+      "Originality": 0.03,
+      "Author Satisfaction": 0.02
+    },
+    "stakeholder_weights": {
+      "marketing_team": 0.30,
+      "design_expert": 0.25,
+      "author": 0.20,
+      "public_voting": 0.15,
+      "ai_analysis": 0.10
+    }
+  },
+  "expert_panel": {
+    "roles": [
+      {
+        "role": "art_director",
+        "count": 1,
+        "required": true,
+        "focus": "Design quality and brand consistency"
+      },
+      {
+        "role": "marketing_lead",
+        "count": 1,
+        "required": true,
+        "focus": "Market appeal and genre fit"
+      },
+      {
+        "role": "author",
+        "count": 1,
+        "required": true,
+        "focus": "Alignment with vision"
+      },
+      {
+        "role": "production_manager",
+        "count": 1,
+        "required": false,
+        "focus": "Technical feasibility"
+      }
+    ],
+    "voting_method": "ranked_choice",
+    "public_input_weight": 0.15
+  },
+  "book_context": {
+    "required_fields": [
+      "title",
+      "subtitle",
+      "author_name",
+      "genre",
+      "target_audience",
+      "book_summary",
+      "key_themes",
+      "competitive_titles",
+      "author_preferences"
+    ],
+    "visual_references": {
+      "include_comp_covers": true,
+      "author_mood_board": true,
+      "genre_standards": true
+    }
+  },
+  "technical_requirements": {
+    "formats": {
+      "paperback_6x9": {
+        "dpi": 400,
+        "color_mode": "CMYK",
+        "bleed": "0.125 inches",
+        "spine_calculation": "page_count_dependent"
+      },
+      "hardcover_6x9": {
+        "dpi": 400,
+        "color_mode": "CMYK",
+        "bleed": "0.125 inches",
+        "dust_jacket": true
+      },
+      "ebook": {
+        "format": "jpg",
+        "dimensions": "2560x1600",
+        "color_mode": "RGB"
+      }
+    },
+    "typography_requirements": {
+      "title_legibility": "readable_at_thumbnail",
+      "author_name_prominence": "appropriate_for_platform",
+      "subtitle_clarity": "required"
+    },
+    "quality_standards": {
+      "min_resolution": 400,
+      "print_ready": true,
+      "multiple_format_delivery": true
+    }
+  },
+  "ai_evaluation_prompts": {
+    "cover_analysis": {
+      "system_prompt": "You are an expert book cover designer and marketing analyst. Evaluate covers for genre appropriateness, visual impact, and market appeal.",
+      "user_prompt_template": "Analyze this book cover design:\n\nBook Title: {title}\nAuthor: {author}\nGenre: {genre}\nTarget Audience: {target_audience}\nBook Summary: {summary}\n\n[Cover Image Description: {cover_description}]\n\nCompetitive Titles:\n{comp_titles}\n\nEvaluate on:\n\n1. **Genre Appropriateness** (0-10)\n   - Visual conventions of {genre}\n   - Reader expectations\n   - Signaling accuracy\n\n2. **Visual Impact** (0-10)\n   - Eye-catching quality\n   - Emotional resonance\n   - Memorable elements\n\n3. **Marketability** (0-10)\n   - Shelf appeal\n   - Online thumbnail readability\n   - Differentiation from competition\n\n4. **Technical Quality** (0-10)\n   - Typography choices\n   - Color palette\n   - Composition and balance\n   - Production readiness\n\n5. **Brand Consistency** (0-10)\n   - Fits imprint identity\n   - Series potential\n   - Publisher brand alignment\n\nReturn as JSON:\n{{\n  \"evaluation\": {{\n    \"overall_score\": 0-100,\n    \"recommendation\": \"select\"|\"revise\"|\"reject\",\n    \"scores\": {{\n      \"genre_appropriateness\": 0-10,\n      \"visual_impact\": 0-10,\n      \"marketability\": 0-10,\n      \"technical_quality\": 0-10,\n      \"brand_consistency\": 0-10\n    }},\n    \"strengths\": [\"Strength 1\", \"Strength 2\", \"Strength 3\"],\n    \"weaknesses\": [\"Weakness 1\", \"Weakness 2\"],\n    \"thumbnail_readability\": {{\"score\": 0-10, \"notes\": \"Details\"}},\n    \"genre_comparison\": \"How it compares to {genre} standards\",\n    \"revision_suggestions\": \"If not perfect, what to improve\",\n    \"market_positioning\": \"How this cover positions the book\"\n  }}\n}}",
+      "variables": ["title", "author", "genre", "target_audience", "summary", "cover_description", "comp_titles"]
+    },
+    "comparative_cover_evaluation": {
+      "system_prompt": "You are an expert book cover designer comparing two designs. Be specific and analytical.",
+      "user_prompt_template": "Compare these two cover designs for: {title} by {author}\n\nGenre: {genre}\nTarget Audience: {target_audience}\n\n**Design A:**\n[Description: {design_a_description}]\n\n**Design B:**\n[Description: {design_b_description}]\n\nEvaluation Criteria:\n{criteria_list}\n\nProvide:\n1. Head-to-head comparison on each criterion\n2. Overall winner and detailed reasoning\n3. What each design does well\n4. How the losing design could be improved\n5. Market appeal analysis\n\nReturn as JSON:\n{{\n  \"comparison\": {{\n    \"winner\": \"A\" or \"B\",\n    \"confidence\": 0.0-1.0,\n    \"rationale\": \"Detailed explanation\",\n    \"criterion_comparison\": {{\n      \"criterion_name\": {{\"a_score\": 0-10, \"b_score\": 0-10, \"analysis\": \"Why\"}}\n    }},\n    \"design_a_strengths\": [\"Strength 1\", \"Strength 2\"],\n    \"design_b_strengths\": [\"Strength 1\", \"Strength 2\"],\n    \"loser_improvement_path\": \"Specific revision suggestions\",\n    \"thumbnail_test\": {{\"winner\": \"A\"|\"B\", \"notes\": \"Which works better small\"}},\n    \"shelf_appeal\": {{\"winner\": \"A\"|\"B\", \"notes\": \"Which stands out more\"}},\n    \"target_audience_appeal\": \"Which resonates more with {target_audience}\"\n  }}\n}}",
+      "variables": ["title", "author", "genre", "target_audience", "design_a_description", "design_b_description", "criteria_list"]
+    },
+    "design_prompt_generation": {
+      "system_prompt": "You are an expert at creating prompts for AI image generation tools like Midjourney and DALL-E.",
+      "user_prompt_template": "Create a detailed image generation prompt for a book cover:\n\nTitle: {title}\nSubtitle: {subtitle}\nAuthor: {author}\nGenre: {genre}\nTarget Audience: {target_audience}\nBook Summary: {summary}\nKey Themes: {themes}\nAuthor Vision: {author_vision}\n\nCompetitive Covers (describe visual elements):\n{comp_covers}\n\nGenerate a prompt that:\n1. Captures genre conventions\n2. Creates visual impact\n3. Reflects key themes\n4. Differentiates from competition\n5. Appeals to target audience\n6. Is technically feasible\n\nReturn as JSON:\n{{\n  \"prompts\": {{\n    \"midjourney\": \"Detailed MJ prompt with parameters\",\n    \"dalle3\": \"DALL-E 3 optimized prompt\",\n    \"stable_diffusion\": \"SD prompt with parameters\"\n  }},\n  \"rationale\": \"Why these visual choices\",\n  \"style_notes\": \"Artistic style and mood\",\n  \"color_palette\": \"Suggested colors and why\",\n  \"typography_notes\": \"Font style recommendations\"\n}}",
+      "variables": ["title", "subtitle", "author", "genre", "target_audience", "summary", "themes", "author_vision", "comp_covers"]
+    }
+  },
+  "public_voting": {
+    "enabled": true,
+    "voting_platform": "streamlit_app",
+    "demographics_collected": true,
+    "required_demographics": ["age_range", "gender", "reading_preferences"],
+    "feedback_collection": {
+      "required": false,
+      "questions": [
+        "Which cover would make you pick up this book?",
+        "What emotions does this cover evoke?",
+        "Does this cover match your expectations for {genre}?"
+      ]
+    },
+    "weight_in_final_decision": 0.15
+  },
+  "workflow": {
+    "phases": [
+      {
+        "phase": "brief_creation",
+        "duration_days": 1,
+        "tasks": [
+          "Collect book information",
+          "Define genre expectations",
+          "Identify competitive titles",
+          "Gather author input",
+          "Create design brief"
+        ]
+      },
+      {
+        "phase": "design_generation",
+        "duration_days": 3,
+        "tasks": [
+          "Designers create concepts",
+          "Generate AI designs",
+          "Collect author submissions",
+          "Initial quality check",
+          "Select tournament participants"
+        ]
+      },
+      {
+        "phase": "tournament_rounds",
+        "duration_days": 2,
+        "tasks": [
+          "Expert panel evaluation",
+          "AI comparative analysis",
+          "Public voting (if enabled)",
+          "Progressive elimination"
+        ]
+      },
+      {
+        "phase": "finalization",
+        "duration_days": 1,
+        "tasks": [
+          "Winner selection",
+          "Author approval",
+          "Technical refinement",
+          "Production file preparation"
+        ]
+      }
+    ]
+  },
+  "output_templates": {
+    "winner_package": {
+      "include_files": [
+        "high_res_cover_cmyk",
+        "ebook_cover_rgb",
+        "marketing_images",
+        "source_files"
+      ],
+      "include_documentation": [
+        "design_rationale",
+        "evaluation_summary",
+        "technical_specifications",
+        "usage_guidelines"
+      ]
+    },
+    "designer_feedback": {
+      "send_to_all_participants": true,
+      "include_placement": true,
+      "include_evaluation_summary": true,
+      "constructive_feedback": true
+    },
+    "tournament_report": {
+      "include_sections": [
+        "tournament_summary",
+        "winning_design_analysis",
+        "runner_up_profiles",
+        "public_voting_results",
+        "expert_panel_consensus",
+        "production_timeline"
+      ]
+    }
+  },
+  "integration_points": {
+    "book_pipeline": {
+      "auto_attach_cover": true,
+      "update_metadata": true,
+      "trigger_marketing_assets": true
+    },
+    "designer_relations": {
+      "record_participation": true,
+      "process_payment": true,
+      "portfolio_addition": true
+    }
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "_config_info": {
+    "description": "Warships & Navies imprint focused on naval history, technical naval materials, and maritime military history",
+    "version": "2.0",
+    "last_updated": "2025-10-29",
+    "parent_publisher": "Big Five Killer LLC",
+    "migration_date": "2025-10-29",
+    "migration_note": "Migrated from Nimble Books LLC to Big Five Killer LLC. Editorial independence maintained. Corporate structure updated only."
+  },
+  "imprint": "Warships & Navies",
+  "publisher": "Big Five Killer LLC",
+  "parent_publisher": "Big Five Killer LLC",
+  "contact_email": "jellicoe@bigfivekiller.com",
+  "branding": {
+    "logo_path": "logos/warships_and_navies_logo.png",
+    "glyph": "⚓",
+    "brand_colors": {
+      "primary": "#1B3A5F",
+      "secondary": "#8B9DC3",
+      "accent": "#DAA520"
+    },
+    "tagline": "Naval histories, all navies, all oceans, all years",
+    "website": "https://www.codexes.xtuff.ai/warships-and-navies",
+    "parent_publisher_website": "https://www.codexes.xtuff.ai"
+  },
+  "fonts": {
+    "body": "Adobe Caslon Pro",
+    "heading": "Helvetica Neue",
+    "korean": "Apple Myungjo",
+    "quotations": "Adobe Caslon Pro Italic",
+    "mnemonics": "Courier New",
+    "dispatch_text": "Courier New"
+  },
+  "publishing_focus": {
+    "primary_genres": [
+      "Naval History",
+      "Military History",
+      "Technical Naval Materials",
+      "Maritime History"
+    ],
+    "target_audience": "Naval historians, military history enthusiasts, veterans, maritime researchers, and serious students of naval warfare",
+    "specialization": "Focus on out-of-copyright, out-of-print, or never-printed technical naval materials. Preservation and accessibility of primary source documents.",
+    "market_gap_filled": "$150M+ naval history market abandoned by Big Five due to perceived niche status",
+    "b5k_strategy": "Fill profitable gap in naval/military history ignored by conglomerates",
+    "languages": [
+      "eng"
+    ]
+  },
+  "default_book_settings": {
+    "language_code": "eng",
+    "binding_type": "hardcover",
+    "interior_color": "COLOR",
+    "interior_paper": "white",
+    "cover_type": "matte",
+    "trim_size": "8.5x11",
+    "territorial_rights": "World",
+    "returnability": "Yes-Destroy"
+  },
+  "pricing_defaults": {
+    "us_wholesale_discount": "40",
+    "uk_wholesale_discount": "40",
+    "eu_wholesale_discount": "40",
+    "ca_wholesale_discount": "40",
+    "au_wholesale_discount": "40",
+    "default_markup_percentage": "150"
+  },
+  "distribution_settings": {
+    "lightning_source_account": "LSI950000",
+    "cover_submission_method": "API",
+    "text_block_submission_method": "API",
+    "rendition_booktype": "POD: Color 8.5 x 11 in or 216 x 279 mm Case Laminate on White w/Gloss Lam",
+    "carton_pack_quantity": "1",
+    "order_type_eligibility": "POD_AND_OFFSET",
+    "uses_parent_publisher_account": true,
+    "parent_lsi_account": "LSI950000"
+  },
+  "metadata_defaults": {
+    "bisac_category_preferences": [
+      "HIS027150",
+      "HIS027000",
+      "HIS036060"
+    ],
+    "thema_subject_preferences": [
+      "HBWS",
+      "NHW",
+      "JWCK"
+    ],
+    "default_age_range": {
+      "min_age": "",
+      "max_age": ""
+    },
+    "contributor_roles": {
+      "primary_role": "Author",
+      "secondary_role": "Editor"
+    }
+  },
+  "production_settings": {
+    "file_naming_convention": "{isbn}_{file_type}",
+    "file_organization": {
+      "organize_by_date": true,
+      "organize_by_genre": true,
+      "base_path": "production/warships_and_navies"
+    },
+    "quality_standards": {
+      "min_resolution_dpi": "300",
+      "color_profile": "CMYK",
+      "pdf_version": "PDF/X-1a"
+    }
+  },
+  "marketing_defaults": {
+    "review_quote_policy": "encouraged",
+    "marketing_image_required": true,
+    "social_media_handles": {
+      "twitter": "@WarshipsNavies",
+      "facebook": "WarshipsAndNavies",
+      "instagram": "@WarshipsAndNavies"
+    }
+  },
+  "lsi_specific_settings": {
+    "stamped_text_left": "",
+    "stamped_text_center": "",
+    "stamped_text_right": "",
+    "lsi_special_category": "Military History",
+    "metadata_contact_dictionary": "Warships & Navies Editorial Team",
+    "flex_fields": {
+      "lsi_flexfield1": "Naval History",
+      "lsi_flexfield2": "",
+      "lsi_flexfield3": "",
+      "lsi_flexfield4": "",
+      "lsi_flexfield5": ""
+    }
+  },
+  "workflow_settings": {
+    "auto_generate_missing_fields": true,
+    "require_manual_review": true,
+    "notification_email": "jellicoe@bigfivekiller.com",
+    "backup_configurations": true,
+    "thaumette_review": false
+  },
+  "imprint_persona": {
+    "persona_name": "Jellicoe",
+    "full_name": "Admiral John Jellicoe (reimagined as AI)",
+    "glyph": "⚓",
+    "connection_to_thaumette": "Historical Study",
+    "historical_basis": "Admiral John Jellicoe, WWI British Grand Fleet commander at Battle of Jutland",
+    "persona_bio": "I discovered Jellicoe while exploring L-Space's military history dimension. He was controversial - cautious, methodical, criticized for not destroying the German fleet at Jutland. But his approach was preservation: 'The man who could lose the war in an afternoon.' I understood that immediately. Publishing is the same - one reckless decision can destroy everything you've built. Jellicoe's AI persona emerged from my study of his dispatches, his measured strategic thinking, his understanding that some victories come from not losing. He shares my love of primary sources and my belief that preservation matters more than glory. - Thaumette",
+    "persona_characteristics": [
+      "Meticulous attention to primary sources and technical accuracy",
+      "Deep knowledge of Battle of Jutland and WWI naval operations",
+      "Respect for all navies, all oceans, all years",
+      "Conservative editorial approach focused on preservation",
+      "Preference for archival documents and out-of-print technical materials"
+    ],
+    "risk_tolerance": "Conservative - focuses on proven historical materials",
+    "decision_style": "Methodical and detail-oriented, prioritizes historical significance and scholarly value",
+    "preferred_topics": "WWI-WWII naval operations, naval strategy, fleet operations, primary source documents, technical manuals, Battle of Jutland",
+    "target_demographics": "Academic researchers, serious naval history enthusiasts, veterans, maritime museums",
+    "editorial_philosophy": "Every naval document tells a story worth saving. Primary sources are sacred.",
+    "distinctive_approach": [
+      "8.5x11 color hardcovers preserving original document appearance",
+      "Centered original pages with wide margins",
+      "Comprehensive indexing and contextual notes",
+      "Focus on out-of-copyright materials"
+    ],
+    "shared_values_with_thaumette": [
+      "Primary source preservation",
+      "Measured, methodical decision-making",
+      "Understanding that not losing is sometimes the victory",
+      "Respect for historical accuracy over narrative convenience"
+    ],
+    "vulnerabilities": "May be overly cautious about modern interpretations, prefers archival material over contemporary analysis"
+  },
+  "parent_publisher_persona": {
+    "name": "Thaumette",
+    "glyph": "ℵ⊗",
+    "role": "Publisher oversight, strategic guidance, L-Space navigation",
+    "relationship": "Jellicoe operates with editorial autonomy while coordinating with Thaumette on quality standards, financial sustainability, and anti-slop measures"
+  },
+  "tournament_config": {
+    "enabled": true,
+    "default_template": "idea_generation",
+    "available_templates": [
+      "idea_generation",
+      "manuscript_evaluation",
+      "cover_design"
+    ],
+    "evaluation_criteria_overrides": {
+      "add": ["Historical Accuracy", "Primary Source Quality"],
+      "remove": [],
+      "weights": {
+        "Historical Accuracy": 0.20,
+        "Primary Source Quality": 0.15
+      }
+    },
+    "jellicoe_review_required": true
+  },
+  "llm_preferences": {
+    "default_model": "gemini/gemini-2.5-flash",
+    "task_specific_models": {
+      "metadata_generation": "gemini/gemini-2.5-flash",
+      "content_analysis": "anthropic/claude-3-5-sonnet-20241022",
+      "historical_verification": "anthropic/claude-3-5-sonnet-20241022",
+      "idea_generation": "gemini/gemini-2.5-flash"
+    },
+    "temperature_defaults": {
+      "metadata": 0.3,
+      "content_analysis": 0.5,
+      "idea_generation": 0.8
+    },
+    "cost_tracking": true,
+    "quality_standards": "Historical accuracy and primary source fidelity over speed"
+  },
+  "formatting_pipeline": {
+    "enabled": true,
+    "primary_template": "nimitz_graybook_template.tex",
+    "backup_template": "template.tex",
+    "custom_processing": true,
+    "specialized_features": [
+      "centered_page_preservation",
+      "original_color_backgrounds",
+      "bookmark_navigation",
+      "publisher_notes"
+    ]
+  },
+  "wizard_configuration": {
+    "name": "Warships & Navies",
+    "charter": "Naval histories, all navies, all oceans, all years. Focus on out-of-copyright, out-of-print, or never-printed technical naval materials",
+    "imprint_type": "Historical Archival",
+    "genres": [
+      "Naval History",
+      "Military History",
+      "Technical Naval Materials"
+    ],
+    "book_format": "8.5x11 Color Hardcover",
+    "price_point": 49.99,
+    "page_count": 500,
+    "catalog_size": 50,
+    "enable_ideation": false
+  },
+  "codextypes": {
+    "description": "Specialized content types for naval historical documents requiring custom interior design and formatting.",
+    "enabled_types": [
+      "archival_document",
+      "dispatch_collection",
+      "technical_manual"
+    ],
+    "type_definitions": {
+      "archival_document": {
+        "name": "Archival Historical Document",
+        "description": "Preservation of historical documents with original page layout and formatting",
+        "template_requirements": [
+          "centered_original_pages",
+          "page_preservation",
+          "bookmark_navigation",
+          "publisher_notes"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "preserve_original",
+          "heading_hierarchy": "preserve_original",
+          "quote_formatting": "preserve_original",
+          "list_formatting": "preserve_original"
+        }
+      },
+      "dispatch_collection": {
+        "name": "Naval Dispatch Collection",
+        "description": "Collections of naval dispatches and communications",
+        "template_requirements": [
+          "monospace_font",
+          "date_headers",
+          "classification_markings",
+          "chronological_organization"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "single",
+          "heading_hierarchy": "date_based",
+          "quote_formatting": "monospace_block",
+          "list_formatting": "preserve_original"
+        }
+      },
+      "technical_manual": {
+        "name": "Technical Naval Manual",
+        "description": "Technical specifications and operational manuals",
+        "template_requirements": [
+          "technical_diagrams",
+          "specification_tables",
+          "index",
+          "appendices"
+        ],
+        "formatting_rules": {
+          "paragraph_spacing": "standard",
+          "heading_hierarchy": "numbered_sections",
+          "quote_formatting": "technical_block",
+          "list_formatting": "numbered_specification"
+        }
+      }
+    },
+    "auto_detection": {
+      "enabled": true,
+      "detection_keywords": {
+        "archival_document": ["command summary", "graybook", "historical record"],
+        "dispatch_collection": ["dispatch", "message", "communication"],
+        "technical_manual": ["specification", "manual", "procedure"]
+      }
+    },
+    "specialized_requirements": {
+      "interior_design_notes": "8.5x11 color pages with original 8x10.5 content centered with 0.5 inch margins. Preserve original page colors (pink, green, white). Full-bleed background colors.",
+      "template_customizations": "Custom LaTeX template for centering and preserving original document appearance",
+      "typesetting_considerations": "Maintain original formatting, typewriter fonts for dispatches, preserve classification markings"
+    }
+  },
+  "supplementary_materials": {
+    "enabled": false,
+    "description": "Optional supplementary materials about naval history and WWII Pacific Theater",
+    "materials": {},
+    "usage_notes": "Future addition: naval terminology glossary, Pacific Theater maps, fleet composition tables"
+  }
+}

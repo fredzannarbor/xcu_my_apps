@@ -1,0 +1,176 @@
+{
+  "_template_info": {
+    "name": "Idea Generation Tournament",
+    "description": "Tournament template for generating and evaluating new book/imprint ideas",
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "suitable_for": ["publisher", "imprint"],
+    "based_on": "Nimitz Volume 9 Tournament - proven 16-32 idea generation model"
+  },
+  "tournament_config": {
+    "name_template": "{entity_name} Idea Tournament {date}",
+    "tournament_type": "single_elimination",
+    "default_size": 16,
+    "size_options": [8, 16, 32, 64],
+    "duration_days": 14,
+    "allow_public_voting": true,
+    "require_thaumette_review": true
+  },
+  "idea_sources": {
+    "user_contributed": {
+      "enabled": true,
+      "min_fields_required": ["title", "logline", "synopsis"],
+      "upload_formats": ["csv", "xlsx", "json"],
+      "completeness_threshold": 0.8
+    },
+    "ai_generated": {
+      "enabled": true,
+      "model_preference": "gemini/gemini-2.5-flash",
+      "temperature": 0.8,
+      "max_tokens": 2000,
+      "generation_batch_size": 5
+    },
+    "hybrid": {
+      "enabled": true,
+      "description": "User provides partial ideas, AI enhances them"
+    }
+  },
+  "evaluation_criteria": {
+    "default_criteria": [
+      "Commercial Viability",
+      "Editorial Innovation",
+      "Market Gap",
+      "Brand Fit",
+      "Audience Appeal",
+      "Production Feasibility"
+    ],
+    "scoring_method": "comparative_ranking",
+    "weights": {
+      "Commercial Viability": 0.25,
+      "Editorial Innovation": 0.20,
+      "Market Gap": 0.20,
+      "Brand Fit": 0.15,
+      "Audience Appeal": 0.15,
+      "Production Feasibility": 0.05
+    },
+    "include_ai_evaluation": true,
+    "include_human_voting": true,
+    "thaumette_final_review": true
+  },
+  "ai_generation_prompts": {
+    "idea_generation": {
+      "system_prompt": "You are a creative publishing strategist helping to generate innovative book or imprint concepts. Focus on commercial viability, editorial innovation, and market gaps.",
+      "user_prompt_template": "Generate {count} innovative {type} concepts for {entity_name}. Each should have:\n\n1. A compelling, unique name\n2. A clear editorial charter or concept (50-100 words)\n3. A specific market focus or niche\n4. Commercial viability potential\n5. Distinctive positioning in the market\n\nFocus Area(s): {focus_areas}\nTarget Market: {target_market}\nInnovation Level: {innovation_level} (0.0=traditional, 1.0=experimental)\n\nConsider emerging trends, underserved markets, and innovative approaches. Focus on concepts that could succeed in today's publishing landscape.\n\nReturn as JSON with this structure:\n{{\n  \"ideas\": [\n    {{\n      \"name\": \"Idea Name\",\n      \"charter\": \"Editorial mission and philosophy\",\n      \"focus\": \"Target market and positioning\",\n      \"rationale\": \"Why this would succeed\",\n      \"commercial_assessment\": \"Market size and viability\"\n    }}\n  ]\n}}",
+      "variables": ["count", "type", "entity_name", "focus_areas", "target_market", "innovation_level"]
+    },
+    "idea_enhancement": {
+      "system_prompt": "You are an expert publishing consultant helping to enhance and complete partial book or imprint concepts.",
+      "user_prompt_template": "Enhance this partial {type} concept for {entity_name}:\n\nName: {name}\nExisting Description: {description}\n\nProvide:\n1. Enhanced editorial charter (50-100 words)\n2. Specific market positioning\n3. Target audience analysis\n4. Commercial viability assessment\n5. Unique value proposition\n6. Production considerations\n\nReturn as JSON:\n{{\n  \"enhanced_idea\": {{\n    \"name\": \"{name}\",\n    \"charter\": \"Enhanced charter\",\n    \"focus\": \"Market positioning\",\n    \"target_audience\": \"Audience description\",\n    \"commercial_assessment\": \"Viability\",\n    \"value_proposition\": \"Unique advantages\",\n    \"production_notes\": \"Considerations\"\n  }}\n}}",
+      "variables": ["type", "entity_name", "name", "description"]
+    },
+    "comparative_evaluation": {
+      "system_prompt": "You are an expert publishing analyst evaluating and comparing book or imprint concepts.",
+      "user_prompt_template": "Evaluate these two {type} concepts and determine which is stronger:\n\nConcept A: {idea_a_name}\n{idea_a_description}\n\nConcept B: {idea_b_name}\n{idea_b_description}\n\nEvaluation Criteria:\n{criteria_list}\n\nProvide:\n1. Comparative analysis for each criterion\n2. Overall winner and reasoning\n3. Strengths of both concepts\n4. Potential improvements for the weaker concept\n\nReturn as JSON:\n{{\n  \"evaluation\": {{\n    \"winner\": \"A\" or \"B\",\n    \"rationale\": \"Explanation\",\n    \"criterion_scores\": {{\n      \"criterion_name\": {{\"a_score\": 0-10, \"b_score\": 0-10, \"analysis\": \"Why\"}}\n    }},\n    \"strengths_a\": [\"Strength 1\", \"Strength 2\"],\n    \"strengths_b\": [\"Strength 1\", \"Strength 2\"],\n    \"improvements\": \"Suggestions for loser\"\n  }}\n}}",
+      "variables": ["type", "idea_a_name", "idea_a_description", "idea_b_name", "idea_b_description", "criteria_list"]
+    }
+  },
+  "workflow": {
+    "phases": [
+      {
+        "phase": "setup",
+        "duration_days": 1,
+        "tasks": [
+          "Create tournament structure",
+          "Define evaluation criteria",
+          "Set voting rules",
+          "Configure AI assistance"
+        ]
+      },
+      {
+        "phase": "idea_collection",
+        "duration_days": 5,
+        "tasks": [
+          "Collect user-submitted ideas",
+          "Generate AI ideas",
+          "Enhance partial ideas",
+          "Validate completeness",
+          "Fill tournament bracket"
+        ]
+      },
+      {
+        "phase": "round_1",
+        "duration_days": 3,
+        "tasks": [
+          "Present matchups",
+          "Collect votes",
+          "Run AI evaluations",
+          "Determine winners",
+          "Advance to round 2"
+        ]
+      },
+      {
+        "phase": "elimination_rounds",
+        "duration_days": 4,
+        "tasks": [
+          "Continue bracket progression",
+          "Narrow field",
+          "Increase evaluation depth"
+        ]
+      },
+      {
+        "phase": "finals",
+        "duration_days": 1,
+        "tasks": [
+          "Final matchup",
+          "Thaumette review (if applicable)",
+          "Declare winner",
+          "Generate winner report"
+        ]
+      }
+    ]
+  },
+  "integration_points": {
+    "imprint_system": {
+      "can_create_imprint_from_winner": true,
+      "fields_to_migrate": [
+        "name",
+        "charter",
+        "focus",
+        "target_audience",
+        "commercial_assessment"
+      ]
+    },
+    "book_pipeline": {
+      "can_create_book_from_winner": true,
+      "fields_to_migrate": [
+        "title",
+        "logline",
+        "synopsis",
+        "target_audience",
+        "word_count"
+      ]
+    },
+    "publisher_oversight": {
+      "notify_publisher": true,
+      "require_publisher_approval": false,
+      "thaumette_review_for_b5k": true
+    }
+  },
+  "output_templates": {
+    "winner_report": {
+      "include_sections": [
+        "tournament_summary",
+        "winning_idea_details",
+        "evaluation_history",
+        "runner_up_analysis",
+        "implementation_recommendations",
+        "next_steps"
+      ]
+    },
+    "participant_feedback": {
+      "send_to_contributors": true,
+      "include_placement": true,
+      "include_evaluation_summary": true
+    }
+  }
+}
