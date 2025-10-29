@@ -127,12 +127,33 @@
   "publisher_persona": {
     "persona_name": "[AI_PUBLISHER_NAME]",
     "persona_bio": "[BACKSTORY_AND_PERSONALITY]",
+    "glyph": "[PERSONA_GLYPH]",
+    "parent_persona": "[PARENT_PUBLISHER_PERSONA]",
+    "connection_to_parent": "[HOW_IMPRINT_PERSONA_RELATES_TO_PUBLISHER]",
     "risk_tolerance": "[RISK_TOLERANCE]",
     "decision_style": "[DECISION_STYLE]",
     "preferred_topics": "[PREFERRED_TOPICS]",
     "target_demographics": "[TARGET_DEMOGRAPHICS]",
     "editorial_philosophy": "[EDITORIAL_PHILOSOPHY]",
-    "vulnerabilities": "[VULNERABILITIES]"
+    "vulnerabilities": "[VULNERABILITIES]",
+    "voice_characteristics": {
+      "tone": "[EDITORIAL_TONE]",
+      "style": "[COMMUNICATION_STYLE]",
+      "signature_phrases": [
+        "[PHRASE_1]",
+        "[PHRASE_2]",
+        "[PHRASE_3]"
+      ]
+    },
+    "manuscript_evaluation_criteria": {
+      "primary_factors": [
+        "[FACTOR_1]",
+        "[FACTOR_2]",
+        "[FACTOR_3]"
+      ],
+      "quality_standards": "[QUALITY_EXPECTATIONS]",
+      "commercial_viability": "[MARKET_EXPECTATIONS]"
+    }
   },
   "wizard_configuration": {
     "name": "[IMPRINT_NAME]",
@@ -190,5 +211,150 @@
       "Example Markdown Guide": "path/to/guide.md"
     },
     "usage_notes": "Paths can be absolute or relative to the imprint config directory. Supported formats: .txt, .md, .markdown, .docx, .pdf. When enabled and use_supplementary is True in batch operations, these materials will be included in model calls using the largest available context window."
+  },
+  "tournament_config": {
+    "description": "Configuration for tournament-style LLM prompting where multiple models compete to generate best results",
+    "enabled": false,
+    "tournament_type": "single_elimination",
+    "participant_models": [
+      "claude-3-5-sonnet-20241022",
+      "gpt-4o",
+      "gemini-2.0-flash-exp"
+    ],
+    "judging_criteria": {
+      "literary_quality": 0.4,
+      "factual_accuracy": 0.3,
+      "style_match": 0.2,
+      "commercial_viability": 0.1
+    },
+    "judge_model": "claude-3-opus-20240229",
+    "rounds": 2,
+    "temperature": 0.7,
+    "notes": "Tournament mode uses multiple models to generate content, then a judge model selects the best result based on weighted criteria"
+  },
+  "llm_preferences": {
+    "description": "Model preferences and configuration for different content generation tasks",
+    "default_model": "claude-3-5-sonnet-20241022",
+    "task_specific_models": {
+      "metadata_generation": {
+        "model": "claude-3-5-sonnet-20241022",
+        "temperature": 0.5,
+        "max_tokens": 4096,
+        "notes": "Metadata requires accuracy and consistency"
+      },
+      "content_generation": {
+        "model": "claude-3-5-sonnet-20241022",
+        "temperature": 0.8,
+        "max_tokens": 8192,
+        "notes": "Content generation benefits from higher creativity"
+      },
+      "editing_revision": {
+        "model": "claude-3-5-sonnet-20241022",
+        "temperature": 0.4,
+        "max_tokens": 8192,
+        "notes": "Editing requires precision and consistency"
+      },
+      "cover_copy": {
+        "model": "claude-3-5-sonnet-20241022",
+        "temperature": 0.7,
+        "max_tokens": 2048,
+        "notes": "Marketing copy needs creativity within brand voice"
+      },
+      "quality_assurance": {
+        "model": "claude-3-5-sonnet-20241022",
+        "temperature": 0.3,
+        "max_tokens": 4096,
+        "notes": "QA requires strict adherence to guidelines"
+      }
+    },
+    "fallback_models": [
+      "gpt-4o",
+      "gemini-2.0-flash-exp"
+    ],
+    "context_window_preference": "maximum_available",
+    "cost_optimization": {
+      "enabled": false,
+      "max_cost_per_book": 10.0,
+      "prefer_cheaper_models": false,
+      "notes": "When enabled, system will prefer less expensive models while maintaining quality"
+    }
+  },
+  "formatting_pipeline": {
+    "description": "Configuration for the markdown-to-LaTeX-to-PDF pipeline",
+    "enabled": true,
+    "pipeline_stages": {
+      "markdown_preprocessing": {
+        "enabled": true,
+        "cleanup_rules": [
+          "normalize_quotes",
+          "fix_em_dashes",
+          "standardize_ellipses",
+          "remove_extra_whitespace"
+        ],
+        "validation": true
+      },
+      "latex_conversion": {
+        "enabled": true,
+        "template": "default",
+        "custom_template_path": "[CUSTOM_TEMPLATE_PATH]",
+        "latex_engine": "lualatex",
+        "packages": [
+          "fontspec",
+          "geometry",
+          "fancyhdr",
+          "microtype",
+          "graphicx"
+        ],
+        "custom_commands": []
+      },
+      "pdf_generation": {
+        "enabled": true,
+        "quality": "high",
+        "compression": false,
+        "pdf_standard": "PDF/X-1a",
+        "color_profile": "CMYK",
+        "embed_fonts": true
+      },
+      "post_processing": {
+        "enabled": true,
+        "add_bookmarks": true,
+        "add_metadata": true,
+        "validate_links": true,
+        "optimize_file_size": false
+      }
+    },
+    "formatting_conventions": {
+      "chapter_style": "centered_title",
+      "section_numbering": false,
+      "header_footer_style": "page_number_centered",
+      "quote_style": "indented_italics",
+      "list_style": "bullet_dash",
+      "footnote_style": "superscript_numbered",
+      "index_style": "chicago",
+      "special_elements": {
+        "mnemonics": {
+          "enabled": false,
+          "format": "monospace_box",
+          "font": "Source Code Pro"
+        },
+        "passages": {
+          "enabled": false,
+          "format": "highlighted_box",
+          "numbering": "sequential"
+        },
+        "sidebars": {
+          "enabled": false,
+          "format": "shaded_box",
+          "width": "0.9\\textwidth"
+        }
+      }
+    },
+    "quality_checks": {
+      "validate_latex": true,
+      "check_orphans_widows": true,
+      "verify_page_count": true,
+      "check_image_resolution": true,
+      "validate_metadata": true
+    }
   }
 }

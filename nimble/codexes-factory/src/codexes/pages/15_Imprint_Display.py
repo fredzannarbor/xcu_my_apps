@@ -621,6 +621,23 @@ def render_dynamic_header(imprint_data: dict):
     heading_font = fonts.get("heading", "Helvetica, Arial, sans-serif")
     body_font = fonts.get("body", "Georgia, serif")
 
+    # Get parent publisher info (Phase 5 enhancement)
+    parent_publisher = config.get("parent_publisher") or config.get("publisher")
+    publisher_glyph = ""
+    imprint_glyph = config.get("branding", {}).get("glyph", "")
+
+    # Load parent publisher persona if available
+    if parent_publisher:
+        try:
+            publisher_config_path = Path(f"configs/publishers/{parent_publisher.replace(' ', '')}.json")
+            if publisher_config_path.exists():
+                with open(publisher_config_path) as f:
+                    publisher_data = json.load(f)
+                    if "thaumette_persona" in publisher_data:
+                        publisher_glyph = publisher_data["thaumette_persona"].get("glyph", "")
+        except Exception as e:
+            logger.warning(f"Could not load parent publisher config: {e}")
+
     st.markdown(f"""
     <style>
     .dynamic-imprint-header {{
@@ -645,6 +662,12 @@ def render_dynamic_header(imprint_data: dict):
         opacity: 0.95;
         margin-top: 0.8rem;
     }}
+    .publisher-info {{
+        font-family: {body_font};
+        font-size: 0.9rem;
+        opacity: 0.85;
+        margin-top: 1rem;
+    }}
     .imprint-special-practice {{
         font-size: 0.9rem;
         margin-top: 0.5rem;
@@ -658,11 +681,19 @@ def render_dynamic_header(imprint_data: dict):
     if "special_practice" in agent_config:
         special_practice_html = f'<div class="imprint-special-practice">Featuring {agent_config["special_practice"]}</div>'
 
+    # Add parent publisher info (Phase 5 enhancement)
+    publisher_html = ""
+    if parent_publisher:
+        glyph_display = f"{imprint_glyph} " if imprint_glyph else ""
+        parent_glyph_display = f" {publisher_glyph}" if publisher_glyph else ""
+        publisher_html = f'<div class="publisher-info">{glyph_display}An imprint of {parent_publisher}{parent_glyph_display}</div>'
+
     st.markdown(f"""
     <div class="dynamic-imprint-header">
         <h1 class="dynamic-imprint-title">🏢 {display_name}</h1>
         <div class="dynamic-tagline">{tagline}</div>
         {special_practice_html}
+        {publisher_html}
     </div>
     """, unsafe_allow_html=True)
 

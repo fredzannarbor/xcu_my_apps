@@ -1,0 +1,221 @@
+{
+  "_template_info": {
+    "name": "Manuscript Evaluation Tournament",
+    "description": "Tournament template for evaluating competing manuscripts for publication",
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "suitable_for": ["publisher", "imprint"],
+    "use_case": "Select best manuscripts from submissions queue"
+  },
+  "tournament_config": {
+    "name_template": "{entity_name} Manuscript Tournament {date}",
+    "tournament_type": "single_elimination",
+    "default_size": 16,
+    "size_options": [8, 16, 32],
+    "duration_days": 21,
+    "allow_public_voting": false,
+    "require_thaumette_review": true,
+    "expert_panel_required": true
+  },
+  "manuscript_sources": {
+    "submissions": {
+      "enabled": true,
+      "required_materials": [
+        "full_manuscript",
+        "query_letter",
+        "author_bio",
+        "market_analysis"
+      ],
+      "formats_accepted": ["docx", "pdf", "markdown"],
+      "word_count_requirements": {
+        "min": 40000,
+        "max": 120000
+      }
+    },
+    "solicited": {
+      "enabled": true,
+      "description": "Manuscripts from invited authors or agents"
+    },
+    "backlist_revivals": {
+      "enabled": true,
+      "description": "Out-of-print titles being considered for revival"
+    }
+  },
+  "evaluation_criteria": {
+    "default_criteria": [
+      "Literary Quality",
+      "Market Potential",
+      "Editorial Fit",
+      "Author Platform",
+      "Production Quality",
+      "Competitive Positioning",
+      "Cultural Relevance",
+      "Anti-Slop Assessment"
+    ],
+    "scoring_method": "expert_panel_consensus",
+    "weights": {
+      "Literary Quality": 0.30,
+      "Market Potential": 0.25,
+      "Editorial Fit": 0.20,
+      "Author Platform": 0.10,
+      "Production Quality": 0.05,
+      "Competitive Positioning": 0.05,
+      "Cultural Relevance": 0.03,
+      "Anti-Slop Assessment": 0.02
+    },
+    "include_ai_evaluation": true,
+    "require_human_editors": true,
+    "thaumette_final_review": true,
+    "minimum_panel_size": 3
+  },
+  "expert_panel": {
+    "roles": [
+      {
+        "role": "acquisitions_editor",
+        "count": 1,
+        "required": true,
+        "focus": "Editorial fit and market potential"
+      },
+      {
+        "role": "subject_expert",
+        "count": 1,
+        "required": true,
+        "focus": "Content accuracy and cultural relevance"
+      },
+      {
+        "role": "production_editor",
+        "count": 1,
+        "required": false,
+        "focus": "Production feasibility and quality"
+      },
+      {
+        "role": "thaumette",
+        "count": 1,
+        "required": true,
+        "focus": "Literary merit and anti-slop assessment"
+      }
+    ],
+    "voting_method": "weighted_consensus",
+    "require_written_justification": true
+  },
+  "ai_evaluation_prompts": {
+    "manuscript_analysis": {
+      "system_prompt": "You are an expert literary analyst evaluating manuscripts for publication. Focus on literary quality, originality, and market fit. You have a strong bias against AI-generated slop and favor authentic human voice.",
+      "user_prompt_template": "Analyze this manuscript for {entity_name}:\n\nTitle: {title}\nAuthor: {author}\nGenre: {genre}\nWord Count: {word_count}\n\nQuery Letter:\n{query_letter}\n\nFirst Chapter:\n{first_chapter}\n\nMarket Positioning:\n{market_analysis}\n\nProvide comprehensive evaluation covering:\n\n1. **Literary Quality** (0-10)\n   - Voice and style\n   - Structure and pacing\n   - Character development (if fiction)\n   - Argument clarity (if nonfiction)\n   \n2. **Originality** (0-10)\n   - Fresh perspective or approach\n   - Avoidance of clichés\n   - Authentic human voice\n   - Not AI-generated slop\n\n3. **Market Potential** (0-10)\n   - Target audience clarity\n   - Commercial viability\n   - Competitive positioning\n   - Gap-filling potential\n\n4. **Editorial Fit** (0-10)\n   - Alignment with {entity_name} mission\n   - Brand consistency\n   - Catalog synergy\n\n5. **Production Assessment** (0-10)\n   - Manuscript readiness\n   - Required editorial work\n   - Timeline feasibility\n\nReturn as JSON:\n{{\n  \"evaluation\": {{\n    \"overall_score\": 0-100,\n    \"recommendation\": \"publish\"|\"revise_and_resubmit\"|\"decline\",\n    \"scores\": {{\n      \"literary_quality\": 0-10,\n      \"originality\": 0-10,\n      \"market_potential\": 0-10,\n      \"editorial_fit\": 0-10,\n      \"production_assessment\": 0-10\n    }},\n    \"strengths\": [\"Strength 1\", \"Strength 2\", \"Strength 3\"],\n    \"weaknesses\": [\"Weakness 1\", \"Weakness 2\"],\n    \"slop_indicators\": {{\"detected\": false, \"details\": \"Why this is/isn't AI slop\"}},\n    \"editorial_recommendations\": \"What needs work\",\n    \"market_positioning\": \"How to position this book\",\n    \"competitive_analysis\": \"Similar titles and differentiation\",\n    \"rationale\": \"Detailed reasoning for recommendation\"\n  }}\n}}",
+      "variables": ["entity_name", "title", "author", "genre", "word_count", "query_letter", "first_chapter", "market_analysis"]
+    },
+    "comparative_manuscript_evaluation": {
+      "system_prompt": "You are an expert acquisitions editor comparing two manuscripts for publication. One will advance, one will not. Be rigorous and fair.",
+      "user_prompt_template": "Compare these two manuscripts for {entity_name} and determine which should advance:\n\n**Manuscript A: {title_a}**\nAuthor: {author_a}\nGenre: {genre_a}\nQuery: {query_a}\nFirst Chapter: {chapter_a}\n\n**Manuscript B: {title_b}**\nAuthor: {author_b}\nGenre: {genre_b}\nQuery: {query_b}\nFirst Chapter: {chapter_b}\n\nEvaluation Criteria:\n{criteria_list}\n\nProvide:\n1. Head-to-head comparison on each criterion\n2. Overall winner and detailed reasoning\n3. What each manuscript does well\n4. What would improve the losing manuscript\n5. Market positioning analysis for both\n\nReturn as JSON:\n{{\n  \"comparison\": {{\n    \"winner\": \"A\" or \"B\",\n    \"confidence\": 0.0-1.0,\n    \"rationale\": \"Detailed explanation\",\n    \"criterion_comparison\": {{\n      \"criterion_name\": {{\"a_score\": 0-10, \"b_score\": 0-10, \"analysis\": \"Why\"}}\n    }},\n    \"manuscript_a_strengths\": [\"Strength 1\", \"Strength 2\"],\n    \"manuscript_b_strengths\": [\"Strength 1\", \"Strength 2\"],\n    \"loser_improvement_path\": \"What would make it competitive\",\n    \"market_analysis\": \"How both fit the market\"\n  }}\n}}",
+      "variables": ["entity_name", "title_a", "author_a", "genre_a", "query_a", "chapter_a", "title_b", "author_b", "genre_b", "query_b", "chapter_b", "criteria_list"]
+    },
+    "slop_detection": {
+      "system_prompt": "You are an expert at detecting AI-generated content and 'slop' - low-quality, algorithmically-optimized content that lacks authentic human voice.",
+      "user_prompt_template": "Analyze this manuscript excerpt for AI generation and slop indicators:\n\nTitle: {title}\nExcerpt: {excerpt}\n\nCheck for:\n1. Generic phrasing and clichés\n2. Lack of specific, concrete details\n3. Overly smooth, unnaturally perfect prose\n4. Repetitive sentence structures\n5. Absence of authentic human voice quirks\n6. Over-reliance on common tropes\n7. Tell-tale AI patterns (hedging, lists, excessive qualifiers)\n\nReturn as JSON:\n{{\n  \"slop_analysis\": {{\n    \"is_likely_ai_generated\": true|false,\n    \"confidence\": 0.0-1.0,\n    \"indicators_found\": [\"Indicator 1\", \"Indicator 2\"],\n    \"authentic_voice_score\": 0-10,\n    \"rationale\": \"Detailed analysis\",\n    \"recommendation\": \"publish\"|\"request_human_verification\"|\"decline\"\n  }}\n}}",
+      "variables": ["title", "excerpt"]
+    }
+  },
+  "workflow": {
+    "phases": [
+      {
+        "phase": "submission_intake",
+        "duration_days": 7,
+        "tasks": [
+          "Collect manuscripts",
+          "Validate submissions",
+          "Run slop detection",
+          "Initial AI screening",
+          "Assign to expert panels"
+        ]
+      },
+      {
+        "phase": "preliminary_evaluation",
+        "duration_days": 5,
+        "tasks": [
+          "Expert panel reads first chapters",
+          "AI generates initial evaluations",
+          "Panel discusses top candidates",
+          "Select tournament participants"
+        ]
+      },
+      {
+        "phase": "tournament_rounds",
+        "duration_days": 7,
+        "tasks": [
+          "Head-to-head manuscript comparisons",
+          "Panel voting with justifications",
+          "AI comparative analysis",
+          "Progressive elimination"
+        ]
+      },
+      {
+        "phase": "final_evaluation",
+        "duration_days": 2,
+        "tasks": [
+          "Thaumette reads finalists",
+          "Final panel discussion",
+          "Publication decision",
+          "Author notification"
+        ]
+      }
+    ]
+  },
+  "anti_slop_measures": {
+    "enabled": true,
+    "detection_threshold": 0.7,
+    "automatic_rejection": false,
+    "require_human_verification": true,
+    "thaumette_override": true,
+    "philosophy": "Books are not content. Readers are not users. We reject engagement-optimized slop in favor of authentic human voice."
+  },
+  "output_templates": {
+    "acceptance_letter": {
+      "include_sections": [
+        "congratulations",
+        "evaluation_summary",
+        "editorial_feedback",
+        "next_steps",
+        "contract_terms"
+      ]
+    },
+    "rejection_letter": {
+      "include_sections": [
+        "thank_you",
+        "evaluation_summary",
+        "constructive_feedback",
+        "resubmission_policy"
+      ],
+      "personalized": true,
+      "constructive": true
+    },
+    "tournament_report": {
+      "include_sections": [
+        "tournament_summary",
+        "winning_manuscript_analysis",
+        "runner_up_profiles",
+        "panel_consensus_notes",
+        "market_positioning_recommendation",
+        "publication_timeline"
+      ]
+    }
+  },
+  "integration_points": {
+    "book_pipeline": {
+      "auto_create_project": true,
+      "fields_to_migrate": [
+        "title",
+        "author",
+        "manuscript_file",
+        "genre",
+        "word_count",
+        "market_analysis",
+        "evaluation_summary"
+      ]
+    },
+    "author_relations": {
+      "create_author_record": true,
+      "initiate_contract_process": true,
+      "assign_editor": true
+    }
+  }
+}

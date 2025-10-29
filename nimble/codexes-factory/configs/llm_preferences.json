@@ -1,0 +1,156 @@
+{
+  "_config_info": {
+    "description": "Centralized LLM preferences for Codexes Factory publishing system",
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "usage": "Define model preferences by task, publisher, and imprint"
+  },
+  "default_models": {
+    "fast_cheap": "gemini/gemini-2.5-flash",
+    "balanced": "anthropic/claude-3-5-sonnet-20241022",
+    "high_quality": "anthropic/claude-3-5-sonnet-20241022",
+    "creative": "gemini/gemini-2.5-flash",
+    "analytical": "anthropic/claude-3-5-sonnet-20241022"
+  },
+  "task_specific_models": {
+    "metadata_generation": {
+      "model": "gemini/gemini-2.5-flash",
+      "temperature": 0.3,
+      "max_tokens": 2000,
+      "rationale": "Cost-effective for structured metadata, good JSON adherence"
+    },
+    "content_analysis": {
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "temperature": 0.5,
+      "max_tokens": 4000,
+      "rationale": "High-quality analysis, nuanced understanding"
+    },
+    "idea_generation": {
+      "model": "gemini/gemini-2.5-flash",
+      "temperature": 0.8,
+      "max_tokens": 2000,
+      "rationale": "Fast, creative, good for brainstorming"
+    },
+    "manuscript_evaluation": {
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "temperature": 0.5,
+      "max_tokens": 8000,
+      "rationale": "Deep literary analysis, anti-slop detection"
+    },
+    "historical_verification": {
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "temperature": 0.3,
+      "max_tokens": 4000,
+      "rationale": "Accuracy-critical, fact-checking"
+    },
+    "marketing_copy": {
+      "model": "gemini/gemini-2.5-flash",
+      "temperature": 0.7,
+      "max_tokens": 1500,
+      "rationale": "Engaging, creative, cost-effective"
+    },
+    "slop_detection": {
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "temperature": 0.2,
+      "max_tokens": 2000,
+      "rationale": "Critical quality control, anti-AI-slop"
+    },
+    "tournament_evaluation": {
+      "model": "gemini/gemini-2.5-flash",
+      "temperature": 0.6,
+      "max_tokens": 3000,
+      "rationale": "Comparative analysis, structured outputs"
+    }
+  },
+  "publisher_overrides": {
+    "Big Five Killer LLC": {
+      "default_model": "gemini/gemini-2.5-flash",
+      "quality_standards": "High - prioritize authenticity over speed",
+      "cost_tracking": true,
+      "anti_slop_measures": true,
+      "thaumette_review_threshold": 0.7,
+      "task_overrides": {
+        "slop_detection": {
+          "model": "anthropic/claude-3-5-sonnet-20241022",
+          "temperature": 0.1,
+          "note": "Zero tolerance for AI slop"
+        }
+      }
+    },
+    "Nimble Books LLC": {
+      "default_model": "gemini/gemini-2.5-flash",
+      "quality_standards": "Balanced - quality with cost awareness",
+      "cost_tracking": true
+    }
+  },
+  "imprint_overrides": {
+    "warships_and_navies": {
+      "historical_verification": {
+        "model": "anthropic/claude-3-5-sonnet-20241022",
+        "temperature": 0.2,
+        "note": "Jellicoe requires highest accuracy for naval history"
+      }
+    },
+    "xynapse_traces": {
+      "content_analysis": {
+        "model": "anthropic/claude-3-5-sonnet-20241022",
+        "temperature": 0.4,
+        "note": "Seon requires deep contemplative understanding"
+      }
+    },
+    "nimble_ultra": {
+      "slop_detection": {
+        "model": "anthropic/claude-3-5-sonnet-20241022",
+        "temperature": 0.1,
+        "note": "Zero requires political neutrality detection"
+      }
+    }
+  },
+  "cost_management": {
+    "tracking_enabled": true,
+    "budget_alerts": {
+      "monthly_threshold": 1000,
+      "per_book_threshold": 10,
+      "alert_email": "operations@codexes.xtuff.ai"
+    },
+    "cost_optimization": {
+      "use_cache_when_available": true,
+      "batch_similar_requests": true,
+      "fallback_to_cheaper_model": false
+    }
+  },
+  "quality_standards": {
+    "anti_slop_philosophy": "Books are not content. Readers are not users.",
+    "minimum_quality_threshold": 0.7,
+    "require_human_review_for": [
+      "manuscript_evaluation",
+      "slop_detection",
+      "historical_verification"
+    ],
+    "auto_reject_if_slop_score_above": 0.8
+  },
+  "response_format_preferences": {
+    "default_format": "json_object",
+    "structured_outputs": true,
+    "validation_schemas": {
+      "metadata": "schemas/metadata_schema.json",
+      "tournament_evaluation": "schemas/tournament_evaluation_schema.json",
+      "manuscript_analysis": "schemas/manuscript_analysis_schema.json"
+    }
+  },
+  "fallback_strategy": {
+    "on_model_unavailable": "use_backup_model",
+    "backup_models": {
+      "primary_backup": "gemini/gemini-2.5-flash",
+      "secondary_backup": "anthropic/claude-3-5-haiku-20241022"
+    },
+    "max_retries": 3,
+    "retry_delay_seconds": 2
+  },
+  "integration_notes": {
+    "nimble_llm_caller": "Primary interface to litellm",
+    "prompt_registry": "Use src/codexes/modules/prompts/prompt_registry.py",
+    "cost_tracker": "Automatic via nimble-llm-caller",
+    "tournament_system": "Inherits from tournament template configs"
+  }
+}
