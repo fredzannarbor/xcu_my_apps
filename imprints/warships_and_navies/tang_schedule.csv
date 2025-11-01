@@ -1,0 +1,2 @@
+book_id,title,subtitle,author,genre,target_audience,page_count,price,format,publication_date,status,imprint,notes,body_source
+WN_TANG_001,USS TANG (SS-306),Complete War Patrol Reports,U.S. Navy,Military History,"General Adult and Military Enthusiasts",206,27.99,6x9 Paperback,3/1/26,in_production,Warships and Navies,Complete war patrol reports from Richard O'Kane's famous submarine - OCR'd from maritime.org,input_files_by_imprint/warships_and_navies/submarine_patrol_reports/SS-306_TANG/SS-306_TANG_complete.txt

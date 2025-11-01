@@ -1,0 +1,372 @@
+{
+  "SS-197_SEAWOLF": {
+    "hull_number": "SS-197",
+    "name": "SEAWOLF",
+    "parts": [
+      {
+        "filename": "SS-197_SEAWOLF_Part1.pdf",
+        "page_count": 300,
+        "file_size_mb": 40.26,
+        "avg_dimensions": [
+          570.2,
+          764.2
+        ],
+        "estimated_dpi": 5001,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-197_SEAWOLF_Part2.pdf",
+        "page_count": 289,
+        "file_size_mb": 29.33,
+        "avg_dimensions": [
+          604.8,
+          723.2
+        ],
+        "estimated_dpi": 4733,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 589,
+    "total_size_mb": 69.59
+  },
+  "SS-212_GATO": {
+    "hull_number": "SS-212",
+    "name": "GATO",
+    "parts": [
+      {
+        "filename": "SS-212_GATO_Part1.pdf",
+        "page_count": 250,
+        "file_size_mb": 79.36,
+        "avg_dimensions": [
+          1534.1,
+          1563.5
+        ],
+        "estimated_dpi": 10233,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-212_GATO_Part2.pdf",
+        "page_count": 250,
+        "file_size_mb": 77.21,
+        "avg_dimensions": [
+          1534.1,
+          1514.9
+        ],
+        "estimated_dpi": 9915,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-212_GATO_Part3.pdf",
+        "page_count": 52,
+        "file_size_mb": 12.9,
+        "avg_dimensions": [
+          1534.1,
+          1403.5
+        ],
+        "estimated_dpi": 9186,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 552,
+    "total_size_mb": 169.47
+  },
+  "SS-220_BARB": {
+    "hull_number": "SS-220",
+    "name": "BARB",
+    "parts": [
+      {
+        "filename": "SS-220_BARB_Part1.pdf",
+        "page_count": 300,
+        "file_size_mb": 72.18,
+        "avg_dimensions": [
+          1047.7,
+          1211.5
+        ],
+        "estimated_dpi": 7929,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-220_BARB_Part2.pdf",
+        "page_count": 203,
+        "file_size_mb": 54.65,
+        "avg_dimensions": [
+          1087.4,
+          1265.3
+        ],
+        "estimated_dpi": 8281,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 503,
+    "total_size_mb": 126.83
+  },
+  "SS-236_SILVERSIDES": {
+    "hull_number": "SS-236",
+    "name": "SILVERSIDES",
+    "parts": [
+      {
+        "filename": "SS-236_SILVERSIDES_Part1.pdf",
+        "page_count": 428,
+        "file_size_mb": 91.29,
+        "avg_dimensions": [
+          874.9,
+          1068.2
+        ],
+        "estimated_dpi": 6991,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-236_SILVERSIDES_Part2.pdf",
+        "page_count": 38,
+        "file_size_mb": 8.12,
+        "avg_dimensions": [
+          874.9,
+          1073.3
+        ],
+        "estimated_dpi": 7025,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 466,
+    "total_size_mb": 99.41
+  },
+  "SS-238_WAHOO": {
+    "hull_number": "SS-238",
+    "name": "WAHOO",
+    "parts": [
+      {
+        "filename": "SS-238_WAHOO.pdf",
+        "page_count": 165,
+        "file_size_mb": 24.85,
+        "avg_dimensions": [
+          688.0,
+          739.8
+        ],
+        "estimated_dpi": 4842,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 165,
+    "total_size_mb": 24.85
+  },
+  "SS-249_FLASHER": {
+    "hull_number": "SS-249",
+    "name": "FLASHER",
+    "parts": [
+      {
+        "filename": "SS-249_FLASHER.pdf",
+        "page_count": 265,
+        "file_size_mb": 51.16,
+        "avg_dimensions": [
+          858.2,
+          1118.7
+        ],
+        "estimated_dpi": 7322,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 265,
+    "total_size_mb": 51.16
+  },
+  "SS-257_HARDER": {
+    "hull_number": "SS-257",
+    "name": "HARDER",
+    "parts": [
+      {
+        "filename": "SS-257_HARDER.pdf",
+        "page_count": 325,
+        "file_size_mb": 40.88,
+        "avg_dimensions": [
+          823.7,
+          985.0
+        ],
+        "estimated_dpi": 6447,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 325,
+    "total_size_mb": 40.88
+  },
+  "SS-287_BOWFIN": {
+    "hull_number": "SS-287",
+    "name": "BOWFIN",
+    "parts": [
+      {
+        "filename": "SS-287_BOWFIN_Part1.pdf",
+        "page_count": 275,
+        "file_size_mb": 61.92,
+        "avg_dimensions": [
+          880.0,
+          1034.9
+        ],
+        "estimated_dpi": 6773,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      },
+      {
+        "filename": "SS-287_BOWFIN_Part2.pdf",
+        "page_count": 248,
+        "file_size_mb": 51.21,
+        "avg_dimensions": [
+          1083.5,
+          1237.8
+        ],
+        "estimated_dpi": 8101,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 523,
+    "total_size_mb": 113.13
+  },
+  "SS-306_TANG": {
+    "hull_number": "SS-306",
+    "name": "TANG",
+    "parts": [
+      {
+        "filename": "SS-306_TANG.pdf",
+        "page_count": 206,
+        "file_size_mb": 23.93,
+        "avg_dimensions": [
+          740.5,
+          985.0
+        ],
+        "estimated_dpi": 6447,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 206,
+    "total_size_mb": 23.93
+  },
+  "SS-383_PAMPANITO": {
+    "hull_number": "SS-383",
+    "name": "PAMPANITO",
+    "parts": [
+      {
+        "filename": "SS-383_PAMPANITO.pdf",
+        "page_count": 238,
+        "file_size_mb": 31.7,
+        "avg_dimensions": [
+          751.4,
+          1006.7
+        ],
+        "estimated_dpi": 6589,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 238,
+    "total_size_mb": 31.7
+  },
+  "SS-384_PARCHE": {
+    "hull_number": "SS-384",
+    "name": "PARCHE",
+    "parts": [
+      {
+        "filename": "SS-384_PARCHE.pdf",
+        "page_count": 274,
+        "file_size_mb": 68.38,
+        "avg_dimensions": [
+          1507.2,
+          1233.3
+        ],
+        "estimated_dpi": 8072,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 274,
+    "total_size_mb": 68.38
+  },
+  "SS-393_QUEENFISH": {
+    "hull_number": "SS-393",
+    "name": "QUEENFISH",
+    "parts": [
+      {
+        "filename": "SS-393_QUEENFISH.pdf",
+        "page_count": 248,
+        "file_size_mb": 31.75,
+        "avg_dimensions": [
+          808.3,
+          1110.4
+        ],
+        "estimated_dpi": 7268,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 248,
+    "total_size_mb": 31.75
+  },
+  "SS-411_SPADEFISH": {
+    "hull_number": "SS-411",
+    "name": "SPADEFISH",
+    "parts": [
+      {
+        "filename": "SS-411_SPADEFISH.pdf",
+        "page_count": 308,
+        "file_size_mb": 62.9,
+        "avg_dimensions": [
+          1093.8,
+          1227.5
+        ],
+        "estimated_dpi": 8034,
+        "has_text": false,
+        "avg_text_length": 0,
+        "avg_images_per_page": 1.0,
+        "status": "success"
+      }
+    ],
+    "total_pages": 308,
+    "total_size_mb": 62.9
+  }
+}
